@@ -8,15 +8,21 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 
 ## 1. 选择安装包
 
-在路由器管理页进入「软件中心」，按软件中心识别的平台下载对应安装包：
+在路由器管理页进入「软件中心」，确认识别的平台后，点击下表中的安装包直接下载，无需打开 GitHub：
+
+<div class="oixclash-downloads">
 
 | 平台 | 安装包 | 常见机型 |
 | --- | --- | --- |
-| hnd | `oixclash_hnd.tar.gz` | RT-AX86U、RT-AX88U、GT-AX6000、GT-AX11000 等大多数机型 |
-| mtk | `oixclash_mtk.tar.gz` | TUF-AX4200Q、TX-AX6000、RT-AX57 Go 等 |
-| qca | `oixclash_qca.tar.gz` | RT-AX89X |
-| ipq32 | `oixclash_ipq32.tar.gz` | ZenWiFi BD4 |
-| ipq64 | `oixclash_ipq64.tar.gz` | 型号代码 TUF_6500 |
+| hnd | [下载](https://dl.dler.io/oixclash_hnd.tar.gz) | RT-AX86U、RT-AX88U、GT-AX6000、GT-AX11000 等大多数机型 |
+| mtk | [下载](https://dl.dler.io/oixclash_mtk.tar.gz) | TUF-AX4200Q、TX-AX6000、RT-AX57 Go 等 |
+| qca | [下载](https://dl.dler.io/oixclash_qca.tar.gz) | RT-AX89X |
+| ipq32 | [下载](https://dl.dler.io/oixclash_ipq32.tar.gz) | ZenWiFi BD4 |
+| ipq64 | [下载](https://dl.dler.io/oixclash_ipq64.tar.gz) | 型号代码 TUF_6500 |
+
+</div>
+
+下载地址会跟随最新正式版本更新，也可下载 [SHA256 校验文件](https://dl.dler.io/oixclash-SHA256SUMS) 核对文件完整性
 
 安装包约 18MB，需要 JFFS 有足够空间；运行时内核约占 48MB 内存，另加代理本身的占用，建议 512MB 内存以上的机型
 

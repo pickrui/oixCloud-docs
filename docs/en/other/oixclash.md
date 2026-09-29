@@ -8,15 +8,21 @@ For Merlin firmware with the KoolCenter software center (Merlin mods and modifie
 
 ## 1. Choose the package
 
-Open **软件中心** (Software Center) in the router admin page and download the package for the platform it reports:
+Open **软件中心** (Software Center) in the router admin page, check the platform it reports, then click the matching package below to download it directly. You do not need to open GitHub:
+
+<div class="oixclash-downloads">
 
 | Platform | Package | Common models |
 | --- | --- | --- |
-| hnd | `oixclash_hnd.tar.gz` | Most models, such as RT-AX86U, RT-AX88U, GT-AX6000 and GT-AX11000 |
-| mtk | `oixclash_mtk.tar.gz` | TUF-AX4200Q, TX-AX6000, RT-AX57 Go and similar |
-| qca | `oixclash_qca.tar.gz` | RT-AX89X |
-| ipq32 | `oixclash_ipq32.tar.gz` | ZenWiFi BD4 |
-| ipq64 | `oixclash_ipq64.tar.gz` | Model code TUF_6500 |
+| hnd | [Download](https://dl.dler.io/oixclash_hnd.tar.gz) | Most models, such as RT-AX86U, RT-AX88U, GT-AX6000 and GT-AX11000 |
+| mtk | [Download](https://dl.dler.io/oixclash_mtk.tar.gz) | TUF-AX4200Q, TX-AX6000, RT-AX57 Go and similar |
+| qca | [Download](https://dl.dler.io/oixclash_qca.tar.gz) | RT-AX89X |
+| ipq32 | [Download](https://dl.dler.io/oixclash_ipq32.tar.gz) | ZenWiFi BD4 |
+| ipq64 | [Download](https://dl.dler.io/oixclash_ipq64.tar.gz) | Model code TUF_6500 |
+
+</div>
+
+These links follow the latest stable release. You can also download the [SHA256 checksums](https://dl.dler.io/oixclash-SHA256SUMS) to verify file integrity.
 
 The package is about 18 MB and needs room on JFFS. At run time the core takes about 48 MB of memory plus what the proxy itself uses, so a model with 512 MB of RAM or more is recommended.
 

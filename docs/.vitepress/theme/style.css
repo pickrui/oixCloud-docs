@@ -28,3 +28,6 @@
 .guide-figure img { width: 100%; height: auto; margin: 0; }
 .guide-figure figcaption { margin-top: 8px; color: var(--vp-c-text-2); font-size: 13px; line-height: 1.7; text-align: center; }
 .guide-figure a:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 4px; }
+
+.oixclash-downloads th:nth-child(2),
+.oixclash-downloads td:nth-child(2) { white-space: nowrap; }
