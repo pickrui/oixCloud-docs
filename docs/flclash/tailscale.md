@@ -6,6 +6,13 @@ description: "Tailscale、子网与出口节点的操作步骤、适用范围与
 
 ## 添加并登录
 
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-tailscale-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 授权 Tailscale 网络">
+    <img src="/illustrations/flclash-tailscale-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 授权 Tailscale 网络" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
 1. 进入「工具 → Tailscale → 添加网络」
 2. 设置网络名和设备名，选择交互式登录或认证密钥
 3. 点「保存并登录」，完成浏览器授权或等待密钥注册
@@ -33,3 +40,5 @@ description: "Tailscale、子网与出口节点的操作步骤、适用范围与
 ## 功能边界
 
 客户端主动访问 Tailnet，不接受来自 Tailnet 的入站连接，也不会把本机发布成子网路由器或出口节点。权限、设备审批、子网与出口授权仍在控制服务中管理
+
+远端子网与出口节点的部署和授权可参考 [Tailscale 子网路由](https://tailscale.com/docs/features/subnet-routers) 与 [出口节点](https://tailscale.com/docs/features/exit-nodes) 官方文档；官方应用中的全局接管选项与这里的策略路由不同

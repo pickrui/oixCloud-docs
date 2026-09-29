@@ -8,6 +8,13 @@ description: "请求记录与诊断的操作步骤、适用范围与常见问题
 
 ## 找到走错路线的请求
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-requests-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 查看请求的路由判定">
+    <img src="/illustrations/oixcloud-requests-zh.svg?v=20260929-2" alt="oixCloud · 查看请求的路由判定" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
 1. 保持 VPN 连接，只重现一次目标操作
 2. 打开请求记录，按域名筛选对应请求
 3. 查看请求详情中的命中规则、来源、路由与出口

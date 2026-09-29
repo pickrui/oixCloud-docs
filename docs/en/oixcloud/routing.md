@@ -8,13 +8,16 @@ For iPhone / iPad. Apple TV mainly consumes synced rules and allows rule-set des
 
 ## Illustrated steps
 
-[![oixCloud · Routing rule](/illustrations/oixcloud-rules-zh.svg)](/illustrations/oixcloud-rules-zh.svg)
-
-*Simulated interface in Chinese, with fictional nodes and data. Layout varies by version; open the image for a larger view.*
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-rules-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Add a routing rule">
+    <img src="/illustrations/oixcloud-rules-zh.svg?v=20260929-2" alt="Add a routing rule" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+</figure>
 
 ## Route a website
 
-1. Keep **Rule** mode and open **Proxies → Routing Rules**.
+1. Keep **Rule** mode and open **Proxies → Policies → Routing Rules**.
 2. Add a custom rule, such as domain suffix `example.com`.
 3. Choose Direct, Reject, the current proxy, or a particular node, chain or policy group.
 4. Save, create a new request and inspect its matched rule and outbound.

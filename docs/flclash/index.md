@@ -23,3 +23,5 @@ Windows、macOS、Android 与 Linux 的配置、流量接管与网络工具
 - [局域网代理与网络排除](/flclash/networks)
 
 - [网络自检与连接记录](/flclash/diagnostics)
+
+- [FlClash for oixCloud 缺少 DLL 修复](/flclash/windows-dll)

@@ -8,6 +8,13 @@ For iPhone / iPad.
 
 ## Inspect the wrong route
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-requests-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Inspect a request and routing decision">
+    <img src="/illustrations/oixcloud-requests-zh.svg?v=20260929-2" alt="Inspect a request and routing decision" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+</figure>
+
 1. Keep the VPN connected and reproduce the target operation once.
 2. Filter request records by its domain.
 3. Open details and inspect the matched rule, source, route and outbound.

@@ -17,6 +17,13 @@ description: "系统代理与虚拟网卡的操作步骤、适用范围与常见
 
 ## 桌面系统代理
 
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-capture-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 设置桌面接管方式">
+    <img src="/illustrations/flclash-capture-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 设置桌面接管方式" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
 启动连接，开启「系统代理」，检查系统 HTTP / HTTPS 代理是否指向客户端的本地端口。另一个代理软件、自动代理脚本或组织策略可能覆盖此设置
 
 有独立代理设置的软件需要单独核对。退出客户端后仍无法联网时，检查系统是否遗留了指向已停止端口的代理
@@ -34,3 +41,9 @@ TUN 开启后仍应检查应用排除、路由、DNS 与其他 VPN。MTU 或协�
 ## 验证
 
 对同一目标分别检查应用表现与连接记录。Windows / macOS 可运行 [网络自检](/flclash/diagnostics)，确认本地监听、系统代理和虚拟网卡状态
+
+## 代理冲突与端口占用
+
+Windows / macOS 启动时可能提示「可能存在代理冲突」，列出已有系统代理、自动配置脚本或其他 VPN / 虚拟网卡。先确认这些设置的用途，可从提示进入「网络自检」；这是冲突线索，不代表已经证明它就是故障原因
+
+混合端口被占用时，端口对话框会在找到可用端口后给出建议。核对后「保存并重试」，并同步更新手动配置了代理地址的应用。端口检查通过不保证其他程序之后不会占用它

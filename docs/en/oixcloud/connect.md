@@ -8,11 +8,21 @@ For iPhone / iPad. See the separate [Apple TV guide](/en/oixcloud/apple-tv).
 
 ## Illustrated steps
 
-[![oixCloud · First connection](/illustrations/oixcloud-connect-zh.svg)](/illustrations/oixcloud-connect-zh.svg)
-
-*Simulated interface in Chinese, with fictional nodes and data. Layout varies by version; open the image for a larger view.*
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-connect-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="First connection">
+    <img src="/illustrations/oixcloud-connect-zh.svg?v=20260929-2" alt="First connection" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+</figure>
 
 ## Managed account
+
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-login-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Sign in to oixCloud">
+    <img src="/illustrations/oixcloud-login-zh.svg?v=20260929-2" alt="Sign in to oixCloud" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+</figure>
 
 1. Open the App Store or TestFlight link in our download center to install oixCloud, then sign in on the app's oixCloud account page.
 2. Use an Access Token from the website, or switch to email and password sign-in. Once your plan is active, wait for the client to load your managed nodes.

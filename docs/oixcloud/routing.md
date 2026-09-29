@@ -8,14 +8,17 @@ description: "分流规则与匹配顺序的操作步骤、适用范围与常见
 
 ## 操作示意
 
-[![oixCloud · 分流规则](/illustrations/oixcloud-rules-zh.svg)](/illustrations/oixcloud-rules-zh.svg)
-
-*模拟界面，节点与数据均为示例；具体布局以所用版本为准，点击图片可查看大图*
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-rules-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 为网站添加路由规则">
+    <img src="/illustrations/oixcloud-rules-zh.svg?v=20260929-2" alt="oixCloud · 为网站添加路由规则" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
 
 ## 给网站指定出口
 
-1. 保持「规则」模式，进入「代理」中的「分流规则」
-2. 添加自定义规则，选择域名匹配类型，例如域名后缀 `example.com`
+1. 保持「规则」模式，进入「代理 → 策略 → 路由规则」
+2. 添加自定义规则，选择域名匹配类型，例如「域名尾缀」并填写 `example.com`
 3. 选择直连、拒绝、当前代理，或指定节点、代理链、策略组
 4. 保存后重新打开目标网站，在请求详情中核对命中的规则和实际出口
 

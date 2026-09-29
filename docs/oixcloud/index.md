@@ -24,7 +24,7 @@ iPhone、iPad 与 Apple TV 的连接、分流、模块和同步教程
 
 - [自动化与按需连接](/oixcloud/automation)
 
-- [网络配置、直连与局域网代理](/oixcloud/networks)
+- [网络预设、直连与局域网代理](/oixcloud/networks)
 
 - [请求记录与诊断](/oixcloud/diagnostics)
 

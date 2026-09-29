@@ -6,11 +6,21 @@ description: "覆写、策略组与附加规则的操作步骤、适用范围与
 
 ## 操作示意
 
-[![FlClash for oixCloud · 分流规则](/illustrations/flclash-rules-zh.svg)](/illustrations/flclash-rules-zh.svg)
-
-*模拟界面，节点与数据均为示例；具体布局以所用版本为准，点击图片可查看大图*
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-rules-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 添加域名后缀规则">
+    <img src="/illustrations/flclash-rules-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 添加域名后缀规则" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
 
 ## 选择覆写模式
+
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-override-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 选择配置覆写模式">
+    <img src="/illustrations/flclash-override-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 选择配置覆写模式" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
 
 打开配置操作菜单中的「覆写」
 
@@ -40,3 +50,13 @@ description: "覆写、策略组与附加规则的操作步骤、适用范围与
 「工具 → 高级配置 → 脚本」用于修改生成配置，不是网页 HTTP 重写脚本入口。使用可信脚本，先保存可恢复的配置，发生问题时停用脚本并对照
 
 改动应放在长期保留的覆写入口，直接编辑下载来的订阅文件可能在下次同步时丢失
+
+规则类型与匹配语法可参考 [mihomo 路由规则文档](https://wiki.metacubex.one/config/rules/)。具体目标名称以当前配置里的节点和策略组为准，不能直接照抄示例中的组名
+
+## 叠加示例：只改一个域名的出口
+
+先在代理页确认已有「工作」策略组，再在当前配置的叠加覆写中添加域名后缀 `example.com`，目标选择「工作」。保存并检查配置，使用规则模式访问一个测试目标
+
+如果规则没有生效，按以下顺序检查：流量是否进入客户端、是否仍为规则模式、优先级更高的附加规则是否先匹配、组名是否存在，以及是否用旧连接验证。删除示例规则后重新应用，可恢复原订阅对此域名的处理
+
+全局附加规则会影响不同配置，配置覆写中的个人规则只属于该配置。希望一个例外只用于一份订阅时，优先放在该配置的覆写里

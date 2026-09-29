@@ -20,7 +20,7 @@ Separate three questions: does traffic reach the client, which route should it t
 - **Global:** uses the selected outbound for most captured traffic. Local-network handling still depends on the client.
 - **Direct:** accesses destinations without a proxy node; it does not test whether a remote node works.
 
-PROXY usually follows the current proxy selection rather than naming one fixed server. A rule pointing to a particular node or group overrides that selection for its matching traffic.
+In oixCloud, the Proxy rule target follows the current proxy selection; a specific node or group uses that outbound. In FlClash for oixCloud, targets must exist in the active profile. `PROXY` may simply be a group name in one profile, not a universal keyword for the current proxy. Do not copy targets across clients without checking.
 
 ## Credentials
 

@@ -8,10 +8,27 @@ description: "MITM 证书与 HTTPS 重写的操作步骤、适用范围与常见
 
 ## 准备证书
 
-1. 进入「设置 → MITM」，打开证书管理
-2. 按应用提供的安装入口获取证书描述文件，在 iOS 设置中完成安装
-3. 在系统的「通用 → 关于本机 → 证书信任设置」中，对这张根证书启用完全信任
-4. 返回应用，按提示开启 MITM，并核对需要处理的主机与规则
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-mitm-generate-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 首次生成 MITM 证书">
+    <img src="/illustrations/oixcloud-mitm-generate-zh.svg?v=20260929-2" alt="oixCloud · 首次生成 MITM 证书" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
+1. 进入「设置 → MITM → MITM 证书」，检查「此设备」是否已有证书
+2. 首次使用且没有证书时，先点「生成证书」；若需要与已有设备使用同一张账户证书，可按页面的账户证书入口获取
+3. 点「安装信任描述文件」，在 iOS 设置中完成描述文件安装
+4. 在系统的「通用 → 关于本机 → 证书信任设置」中，对这张根证书启用完全信任
+5. 返回应用，按提示开启 MITM，并核对需要处理的主机与规则
+
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-mitm-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 生成并安装 MITM 证书">
+    <img src="/illustrations/oixcloud-mitm-zh.svg?v=20260929-2" alt="oixCloud · 生成并安装 MITM 证书" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
+替换本机证书后，旧的已安装描述文件不能信任新证书，需要重新安装并信任；普通连接失败时不要把重新生成证书当作通用修复
 
 安装描述文件与信任根证书是两步，缺少信任时 HTTPS 重写不能正常工作，系统操作可参照 [Apple 的证书信任说明](https://support.apple.com/102390)
 

@@ -23,3 +23,5 @@ Profiles, traffic capture and network tools for Windows, macOS, Android and Linu
 - [LAN proxy and network exclusions](/en/flclash/networks)
 
 - [Network checks and connections](/en/flclash/diagnostics)
+
+- [FlClash for oixCloud: missing DLL repair](/en/flclash/windows-dll)

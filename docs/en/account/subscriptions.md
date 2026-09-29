@@ -1,23 +1,59 @@
 ---
-description: "Subscriptions and filters \u2014 setup, practical steps and troubleshooting"
+description: Choose a subscription format, filter nodes, restore defaults and understand shared settings
 ---
 
 # Subscriptions and filters
 
-## Account sign-in versus subscription import
+## Choose how to connect
 
-oixCloud, FlClash for oixCloud, OpenClash with account integration, and the Surge helper can fetch configurations through your account. For other compatible clients, choose a subscription URL in the matching format in your account dashboard. After importing, you still need to enable the configuration, start the proxy, and select a node in the client.
+oixCloud, FlClash for oixCloud, the integrated OpenClash build and oixCloud Helper can sign in to retrieve managed profiles. For another compatible client, select its format in [Subscription management](https://oixcloud.com/user/sub_manage) and import that URL.
 
-## Manage subscriptions and options
+A full profile and a Provider node list serve different purposes. A Provider must be referenced by an existing client configuration; it is not a complete runnable profile. An Access Token is a sign-in credential, not a subscription URL.
 
-When creating or editing a subscription in your account dashboard, use the available options to choose nodes, routing rules, and features supported by the client. Then copy the new URL and update the client. Clash, Surge, and other formats are not interchangeable. Avoid copying query parameters from old documentation. Managed updates may overwrite direct edits to generated content, so use the provided settings for customization whenever possible.
+## Configure a filter
 
-## Which subscription options should I choose?
+1. Open **oixCloud → Node Filter** in the client, or **Connection → Node filter…** in Helper. You can also edit the corresponding address on the website.
+2. Click a line or region to cycle through **Any → Only → Exclude**. Line and region conditions apply together.
+3. Optionally enter name-inclusion or exclusion patterns. Wait for the preview and check the retained count and intended nodes.
+4. Save, check the refresh result below, then select an available node and connect.
 
-All Nodes shows only nodes your current plan is entitled to use; it does not grant additional access. Overseas Network is for networks outside mainland China. Emergency Mode uses backup nodes on eligible plans only. Choose region filters, name filters, and simplified rules according to the page instructions. After saving, refresh nodes or sync the configuration in your client.
+| Client | Applying a saved filter |
+| --- | --- |
+| oixCloud | Managed nodes refresh automatically; check the result and selected outbound. |
+| FlClash for oixCloud | Starts an account refresh and managed-profile sync automatically. Wait for completion; if it fails, resolve the error and use **Sync** on the account page. |
+| oixCloud Helper | Fetches nodes and updates mappings. Run **Apply in Surge** again when using Surge. |
+| OpenClash | After saving in the web editor, restart OpenClash to fetch immediately or wait for the core's next subscription update. |
+| Other subscription clients | Update the imported address and confirm the updated profile is selected. |
 
-## How do I enter other advanced parameters?
+Names support case-insensitive regular expressions: `香港|日本` matches either word. Node names remain Chinese even in an English interface. Search within the preview only locates entries; it does not add a filter. Pending previews, invalid expressions and zero retained nodes prevent saving.
 
-Leave the field empty to use defaults. Use &key=value and join multiple options with &, for example &simplerules=true&tfo=false to enable simplified rules and disable TCP Fast Open. Boolean options use true / false and only affect clients that support the feature. Use the filters above that field for regions, names and nodes instead of entering them again here.
+See the illustrations for [oixCloud](/en/oixcloud/proxies) and [FlClash for oixCloud](/en/flclash/profiles).
 
-[Open your account](https://oixcloud.com/user)
+## Empty filters and restoring defaults
+
+| Address type | Without custom conditions |
+| --- | --- |
+| Official-client smart subscription | Uses Smart Selection's default lines, excluding dedicated IPs by default. Only if that default set is empty does it fall back to permitted nodes. |
+| Ordinary personal subscription URL | Returns nodes permitted for the account and subscription format, without an additional custom filter. |
+
+In oixCloud, resetting a saved custom filter asks for confirmation and resets it on the server; an unsaved draft can simply be cleared. FlClash for oixCloud's **Restore default** submits the reset and starts sync. Helper clears the draft first, so you must still click **Save**.
+
+Resetting does not increase plan permissions or make every node compatible with every subscription format. Visual filters replace the old All Nodes, Overseas Network and Emergency Mode controls.
+
+## Which devices share a filter?
+
+Filters belong to subscription addresses. Devices using the same official client and account normally share that client's sign-in token and bound address; they apply the same conditions on their next refresh. Different clients can have different settings.
+
+The first official-client save creates and binds a dedicated client address when necessary without overwriting the main subscription's conditions. If you manually bind a personal address to the token, the client uses that address's filter instead.
+
+## Troubleshooting
+
+| Symptom | Check |
+| --- | --- |
+| No filter entry | Check the client source/version and plan eligibility (rank 20 or higher). |
+| Preview works but saving is rejected | Read the error. A manually created token may lack a writable personal-address binding; bind it on the website or sign in with the official client account flow. |
+| Old nodes after saving | Check sync completion, selected profile and whether another device changed the shared filter. |
+| Dedicated IP absent | Confirm it is retained in the preview; an empty official-client filter does not mean every node. |
+| Old region parameters have no effect | Official smart subscriptions use visual filters; ordinary addresses with a filter also ignore legacy region, name and mode parameters. |
+
+Adjust other options, such as simplified rules and TCP Fast Open, through the client. A subscription supporting those parameters can use `&simplerules=true&tfo=false`; formats and options are not interchangeable between clients.

@@ -12,7 +12,7 @@ Choose your device and app for setup, connection and feature instructions. If yo
 | Apple TV | [oixCloud TV: setup and sync](/en/oixcloud/apple-tv) |
 | Windows / macOS / Android / Linux | [FlClash for oixCloud](/en/flclash/) |
 | OpenWrt router | [OpenClash](/en/other/openclash) |
-| Mac running Surge | [Surge Mac helper](/en/other/surge) |
+| Mac running Surge | [oixCloud Helper and Surge](/en/other/surge) |
 
 ## Find an operation
 
@@ -22,3 +22,7 @@ Choose your device and app for setup, connection and feature instructions. If yo
 - Connected but unable to browse: [Connection and speed troubleshooting](/en/help/troubleshooting)
 
 Features vary by app and platform; follow the matching guide. For plans, traffic and account settings, see [Account & service](/en/account/).
+
+- [FlClash for oixCloud: missing DLL repair](/en/flclash/windows-dll)
+- [Helper local ports and LAN access](/en/other/helper-mapping)
+- [Helper on Linux and runtime diagnostics](/en/other/helper-linux)

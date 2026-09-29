@@ -8,11 +8,21 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 
 ## 操作示意
 
-[![FlClash for oixCloud · 首次连接](/illustrations/flclash-connect-zh.svg)](/illustrations/flclash-connect-zh.svg)
-
-*模拟界面，节点与数据均为示例；具体布局以所用版本为准，点击图片可查看大图*
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-connect-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 仪表盘启动与接管">
+    <img src="/illustrations/flclash-connect-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 仪表盘启动与接管" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
 
 ## 导入账户配置
+
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-login-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 登录账户">
+    <img src="/illustrations/flclash-login-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 登录账户" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
 
 1. 从软件中心下载 FlClash for oixCloud，选择适合设备系统与架构的安装包，打开应用中的「oixCloud」页面登录
 2. 使用 Access Token，或邮箱和密码登录；套餐生效后，客户端会自动导入托管配置，等待节点出现后启动连接
@@ -30,3 +40,5 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 在「代理」选中一个有权限且可用的节点，打开目标网站，并在连接页面核对流量。套餐或节点变化后更新托管配置，不要反复退出登录来更新节点
 
 登录失败时保留原始报错与客户端版本，先排查网络、系统时间及账户状态
+
+Windows 启动提示找不到 DLL 时，先按 [缺少 DLL 修复](/flclash/windows-dll) 核对具体文件和运行库

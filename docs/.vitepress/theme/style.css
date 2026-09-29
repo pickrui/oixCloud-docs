@@ -21,5 +21,10 @@
 .VPFeature { border-radius: 16px !important; }
 .vp-doc { overflow-wrap: anywhere; }
 .vp-doc li + li { margin-top: 9px; }
-.vp-doc table { width: 100%; }
+.vp-doc table { width: 100%; overflow-wrap: normal; }
 .VPSidebarItem.level-1 .text { line-height: 1.7; }
+.guide-figure { margin: 24px 0 28px; }
+.guide-figure a { display: block; border: 1px solid var(--vp-c-divider); border-radius: 12px; overflow: hidden; }
+.guide-figure img { width: 100%; height: auto; margin: 0; }
+.guide-figure figcaption { margin-top: 8px; color: var(--vp-c-text-2); font-size: 13px; line-height: 1.7; text-align: center; }
+.guide-figure a:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 4px; }

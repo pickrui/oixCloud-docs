@@ -6,9 +6,12 @@ description: "节点、策略组与代理链的操作步骤、适用范围与常
 
 ## 操作示意
 
-[![FlClash for oixCloud · 选择节点](/illustrations/flclash-proxies-zh.svg)](/illustrations/flclash-proxies-zh.svg)
-
-*模拟界面，节点与数据均为示例；具体布局以所用版本为准，点击图片可查看大图*
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-proxies-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 在策略组中选择节点">
+    <img src="/illustrations/flclash-proxies-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 在策略组中选择节点" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
 
 ## 手动选择节点
 
@@ -30,6 +33,13 @@ description: "节点、策略组与代理链的操作步骤、适用范围与常
 
 ## 代理链
 
-打开配置菜单中的「代理链」，按界面添加入口与出口，并选择实际使用这条链的策略或规则。链中每段都应先独立验证
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-chains-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
+    <img src="/illustrations/flclash-chains-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
+打开配置菜单中的「链式代理」，按顺序添加至少两个节点，第一个为入口，最后一个为出口。保存后在相应策略组中选择这条链的**出口节点**，或让规则指向该出口，才能使用链路；不是选择一个新生成的独立“链节点”。链中每段都应先独立验证
 
 代理链是逐段转发，负载均衡是把不同连接分配给不同成员，两者不能互相替代。连接出现问题时先恢复单节点对照，再检查每一段

@@ -8,7 +8,14 @@ description: "策略组、自动选择与代理链的操作步骤、适用范围
 
 ## 选择策略组
 
-在「代理」的策略组区域添加策略组，填写名称、选择类型并添加成员。保存后，还要在首页或对应分流规则中选择它，流量才会使用该组
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-policies-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 创建策略组">
+    <img src="/illustrations/oixcloud-policies-zh.svg?v=20260929-2" alt="oixCloud · 创建策略组" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
+在「代理 → 策略」中添加策略组，填写名称、选择类型并添加成员。保存后，还要在首页或对应分流规则中选择它，流量才会使用该组
 
 | 类型 | 适合的需求 |
 | --- | --- |
@@ -17,7 +24,7 @@ description: "策略组、自动选择与代理链的操作步骤、适用范围
 | 负载均衡 | 将不同连接分配给可用成员 |
 | 智能 | 根据实际连接表现学习路线，在建立连接失败时尝试其他成员 |
 
-首页的「最佳可用」是内置自动组；你创建的策略组会作为独立出口供选择。没有可用成员时，先检查成员来源、筛选条件与测试结果
+首页的「自动优选」是内置自动组；你创建的策略组会作为独立出口供选择。没有可用成员时，先检查成员来源、筛选条件与测试结果
 
 ## 调整测速与优先级
 
@@ -26,6 +33,13 @@ description: "策略组、自动选择与代理链的操作步骤、适用范围
 自动切换通常影响新建连接，正在进行的下载或视频不应被当作切换验证依据。关闭目标应用的旧连接后再复测
 
 ## 创建代理链
+
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-chains-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 按顺序创建代理链">
+    <img src="/illustrations/oixcloud-chains-zh.svg?v=20260929-2" alt="oixCloud · 按顺序创建代理链" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
 
 1. 在「代理」切换到代理链区域，添加至少两个节点
 2. 按实际转发顺序排列入口与后续节点

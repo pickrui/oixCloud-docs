@@ -20,4 +20,27 @@ Upgrades and exchanges currently apply only between annual plans. An active annu
 
 Manually switching plans deducts 24 hours from the original plan's validity, then preserves its remaining time and traffic according to the rules. A plan with too little left to preserve ends, and saved traffic is rounded down to whole GiB. Only eligible unused plans that show a refund option can be refunded to account balance. This is not a refund to the original payment method or a withdrawal. Read the confirmation dialog before proceeding.
 
-[Open your account](https://oixcloud.com/user)
+[Open Plan Management](https://oixcloud.com/user/bought)
+
+## Choose the operation for your goal
+
+| Goal | Operation | Verify afterwards |
+| --- | --- | --- |
+| Start service | Add funds, then buy a plan | An active record plus tier, expiry and allowance in the user center |
+| Prepare the next period | Buy another plan or use eligible early renewal | A queued plan; current traffic does not immediately increase |
+| Use the next plan now | Manually activate a queued plan | Read the old plan's deduction/retention preview, then check the newly active record |
+| Raise an active annual tier | Upgrade when eligible | Price difference, fee, remaining validity and resulting allowance |
+| Stop automatic renewal charges | Disable automatic renewal | Read the irreversible-disable and renewal-price notice first |
+
+## Confirm a purchase
+
+1. Check period, total allowance, tier and price in the [plan store](https://oixcloud.com/user/shop).
+2. Verify the charge in the confirmation dialog, then read back the actual order in [Plan Management](https://oixcloud.com/user/bought).
+3. If a plan is already active, check whether the new one is queued. Do not buy again merely because the current allowance is unchanged.
+4. Once it becomes active, refresh account information and the managed client profile to update node permissions.
+
+If the payment provider charged you but the page did not confirm success, check both funding and plan records first. Keep the order ID and time for support: funding an account and purchasing a plan are separate steps.
+
+## If automatic continuation did not happen
+
+Check for an eligible queued plan, the renewal switch, sufficient funds and whether the product currently permits renewal. Activation, upgrade and refund controls depend on order state; creating a new order does not reproduce those operations.

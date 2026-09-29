@@ -8,9 +8,12 @@ description: "节点与订阅管理的操作步骤、适用范围与常见问题
 
 ## 操作示意
 
-[![oixCloud · 选择节点](/illustrations/oixcloud-proxies-zh.svg)](/illustrations/oixcloud-proxies-zh.svg)
-
-*模拟界面，节点与数据均为示例；具体布局以所用版本为准，点击图片可查看大图*
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-proxies-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 选择节点与自动优选">
+    <img src="/illustrations/oixcloud-proxies-zh.svg?v=20260929-2" alt="oixCloud · 选择节点与自动优选" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
 
 ## 添加自有节点或订阅
 
@@ -23,9 +26,16 @@ description: "节点与订阅管理的操作步骤、适用范围与常见问题
 
 ## 更新与筛选
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-filter-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 筛选线路、地区与名称">
+    <img src="/illustrations/oixcloud-filter-zh.svg?v=20260929-2" alt="oixCloud · 筛选线路、地区与名称" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
 在订阅的操作菜单中使用「更新」。托管 oixCloud 节点使用账户页的「刷新节点」，账户信息下拉刷新并不等于重新获取节点
 
-节点不足时先查看套餐权限与地区、名称筛选。开启「所有节点」只展示当前套餐有权使用的节点，不会增加权限
+在「oixCloud → 节点筛选」按线路、地区和名称设置条件，查看预览后保存，客户端会重新获取托管节点。恢复默认会回到智能优选；筛选不会增加套餐权限，同一账户的同款客户端会共享设置，详见 [订阅与筛选](/account/subscriptions)
 
 ## 测试延迟
 

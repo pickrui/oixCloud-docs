@@ -12,8 +12,15 @@ description: "iCloud 同步与最近删除的操作步骤、适用范围与常�
 
 ## 开启同步
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-sync-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 选择 iCloud 同步内容">
+    <img src="/illustrations/oixcloud-sync-zh.svg?v=20260929-2" alt="oixCloud · 选择 iCloud 同步内容" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
 1. 在各设备使用同一 Apple 账户，确认 iCloud 可用
-2. 进入「设置 → iCloud 同步」，开启需要的类别
+2. 先在「设置」首页开启 iCloud 同步开关，再进入「iCloud 同步」选择需要的类别
 3. 使用「立即同步」，等待状态完成后在另一台设备检查
 4. 先新增一条易识别的普通配置验证，再整理大量规则或节点
 
@@ -34,3 +41,12 @@ Apple 账户变化或云端数据被删除后，应用会要求选择如何处�
 开启「同步到 Apple TV」后，还需在电视端开启 iCloud 同步。它传递节点、订阅、代理链、策略组、规则集和账户状态，电视保留自己的连接与路由设置，不接收模块
 
 详见 [Apple TV](/oixcloud/apple-tv)
+
+## 同步检查顺序
+
+1. 在有完整数据的设备添加一个能辨认的普通节点或规则，再点击「立即同步」
+2. 在另一台设备确认相同 Apple 账户、同步总开关和该数据类别已启用，再执行同步
+3. 先核对条目内容，再验证本机连接；同步配置不代表另一台设备的系统 VPN 权限或 Tailscale 授权已经完成
+4. 某类别缺失时检查该类别开关；仅电视缺失时检查「同步到 Apple TV」及电视自己的开关
+
+「最近删除」适合找回本机误删节点或订阅，不能恢复整个云端账户，也不能替代修改大量内容前保留副本。涉及「使用 iCloud 数据」等替换操作时，先确认哪台设备持有需要保留的版本

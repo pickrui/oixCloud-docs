@@ -8,6 +8,13 @@ Open **Tools → Access Control**. This application list is Android-specific.
 
 ## Choose which apps enter VPN
 
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-android-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Select Android apps for VPN access">
+    <img src="/illustrations/flclash-android-zh.svg?v=20260929-2" alt="Select Android apps for VPN access" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+</figure>
+
 | Mode | Meaning |
 | --- | --- |
 | Allow selected apps only | Only selected apps enter the VPN |

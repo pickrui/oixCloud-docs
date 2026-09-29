@@ -8,11 +8,21 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 
 ## 操作示意
 
-[![oixCloud · 首次连接](/illustrations/oixcloud-connect-zh.svg)](/illustrations/oixcloud-connect-zh.svg)
-
-*模拟界面，节点与数据均为示例；具体布局以所用版本为准，点击图片可查看大图*
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-connect-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 首页连接与当前出口">
+    <img src="/illustrations/oixcloud-connect-zh.svg?v=20260929-2" alt="oixCloud · 首页连接与当前出口" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
 
 ## 登录托管账户
+
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-login-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 登录账户">
+    <img src="/illustrations/oixcloud-login-zh.svg?v=20260929-2" alt="oixCloud · 登录账户" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
 
 1. 从软件中心进入 App Store 或 TestFlight 安装 oixCloud，打开应用中的「oixCloud」账户页登录
 2. 可以使用网站的 Access Token（访问令牌），或切换到邮箱和密码登录；套餐生效后，客户端会获取托管节点，等待加载完成

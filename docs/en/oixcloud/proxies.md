@@ -8,9 +8,12 @@ For iPhone / iPad.
 
 ## Illustrated steps
 
-[![oixCloud · Node selection](/illustrations/oixcloud-proxies-zh.svg)](/illustrations/oixcloud-proxies-zh.svg)
-
-*Simulated interface in Chinese, with fictional nodes and data. Layout varies by version; open the image for a larger view.*
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-proxies-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Select a node">
+    <img src="/illustrations/oixcloud-proxies-zh.svg?v=20260929-2" alt="Select a node" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+</figure>
 
 ## Import
 
@@ -23,9 +26,16 @@ A single-node link is different from a subscription. Importing a Surge profile o
 
 ## Update and filter
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-filter-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Filter managed nodes">
+    <img src="/illustrations/oixcloud-filter-zh.svg?v=20260929-2" alt="Filter managed nodes" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+</figure>
+
 Use **Update** from a subscription's menu. For managed oixCloud nodes, use **Refresh Nodes** on the account page. Refreshing account information alone does not redownload nodes.
 
-If nodes are missing, check plan access, region and name filters. **All Nodes** includes only nodes your plan permits.
+Open **oixCloud → Node Filter**, choose lines, regions and names, inspect the preview and save to refresh managed nodes. Restore Default returns to Smart Selection. Filters do not expand plan access and are shared by the same client type on your account; see [subscriptions and filters](/en/account/subscriptions).
 
 ## Latency
 

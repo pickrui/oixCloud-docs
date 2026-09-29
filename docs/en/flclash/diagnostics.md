@@ -6,6 +6,13 @@ description: "Network checks and connections \u2014 setup, practical steps and t
 
 ## Windows / macOS network check
 
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-diagnostics-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Read network-check results">
+    <img src="/illustrations/flclash-diagnostics-zh.svg?v=20260929-2" alt="Read network-check results" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+</figure>
+
 1. Keep the failing profile and network environment.
 2. Open **Tools → Network Check** and run it.
 3. Review failures and attention items before taking their suggested actions.

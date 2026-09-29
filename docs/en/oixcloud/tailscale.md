@@ -8,7 +8,14 @@ For iPhone / iPad. Apple TV provides a simpler device-authorization page.
 
 ## Authorize this device
 
-1. Open **Settings → Network → Tailscale** and add a network.
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-tailscale-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Add and authorize a Tailscale network">
+    <img src="/illustrations/oixcloud-tailscale-zh.svg?v=20260929-2" alt="Add and authorize a Tailscale network" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+</figure>
+
+1. Open **Settings → Tailscale** in the Network section and add a network.
 2. Choose interactive login and authorize in the browser, or provide an auth key for the Tailnet.
 3. Return to the app. Approve the device in the Tailnet console if required.
 4. Start the VPN, check network status and visit a peer address or MagicDNS name.
@@ -30,3 +37,9 @@ Choose an online, approved exit node in the network settings, then direct the in
 Authorize each device separately. Syncing configuration does not copy local identity. Use your administrator's control URL for Headscale and recheck sign-in after changing control servers or network identity.
 
 For failures, check VPN state, authorization, peers, access rules, subnet approval and exit-node status. Start a fresh login when an authorization page expires.
+
+## Capabilities and server-side setup
+
+This integration provides outbound access. It does not advertise this device as a subnet router, exit node or inbound Tailnet service. Removing a network deletes its associated policies and local identity; check old device records separately in the admin console.
+
+Remote subnets require advertised routes, approval and access permissions; see [Tailscale subnet routers](https://tailscale.com/docs/features/subnet-routers). Internet egress also requires an approved exit node and permission to use it; see [exit nodes](https://tailscale.com/docs/features/exit-nodes). This client still selects the traffic through its routing policies as described above.

@@ -70,7 +70,7 @@
               "link": "/oixcloud/automation"
             },
             {
-              "text": "网络配置、直连与局域网代理",
+              "text": "网络预设、直连与局域网代理",
               "link": "/oixcloud/networks"
             },
             {
@@ -127,16 +127,28 @@
             {
               "text": "网络自检与连接记录",
               "link": "/flclash/diagnostics"
+            },
+            {
+              "text": "Windows 缺少 DLL 修复",
+              "link": "/flclash/windows-dll"
             }
           ]
         },
         {
-          "text": "OpenClash 路由器",
+          "text": "OpenClash 安装与配置指南",
           "link": "/other/openclash"
         },
         {
-          "text": "Surge Mac 助手",
+          "text": "oixCloud Helper 与 Surge",
           "link": "/other/surge"
+        },
+        {
+          "text": "Helper 本地端口与局域网",
+          "link": "/other/helper-mapping"
+        },
+        {
+          "text": "Helper Linux 与诊断",
+          "link": "/other/helper-linux"
         }
       ]
     },
@@ -187,6 +199,10 @@
         {
           "text": "连接与速度排查",
           "link": "/help/troubleshooting"
+        },
+        {
+          "text": "Windows 缺少 DLL 修复",
+          "link": "/flclash/windows-dll"
         },
         {
           "text": "提交有效的服务单",
@@ -323,16 +339,28 @@
             {
               "text": "Network checks and connections",
               "link": "/en/flclash/diagnostics"
+            },
+            {
+              "text": "Windows missing DLL repair",
+              "link": "/en/flclash/windows-dll"
             }
           ]
         },
         {
-          "text": "OpenClash on a router",
+          "text": "OpenClash installation and setup",
           "link": "/en/other/openclash"
         },
         {
-          "text": "Surge Mac helper",
+          "text": "oixCloud Helper and Surge",
           "link": "/en/other/surge"
+        },
+        {
+          "text": "Helper local ports and LAN",
+          "link": "/en/other/helper-mapping"
+        },
+        {
+          "text": "Helper Linux and diagnostics",
+          "link": "/en/other/helper-linux"
         }
       ]
     },
@@ -383,6 +411,10 @@
         {
           "text": "Connection and speed troubleshooting",
           "link": "/en/help/troubleshooting"
+        },
+        {
+          "text": "Windows missing DLL repair",
+          "link": "/en/flclash/windows-dll"
         },
         {
           "text": "Contact support with useful details",

@@ -2,7 +2,8 @@ import { defineConfig } from 'vitepress'
 import navigation from './navigation.json' with { type: 'json' }
 
 export default defineConfig({
-  title: 'oixCloud Docs',
+  title: 'oixCloud',
+  titleTemplate: ':title | oixCloud',
   description: '连接、客户端设置、账户与故障排查 · Setup, client configuration, accounts and troubleshooting',
   base: '/',
   cleanUrls: false,
@@ -10,8 +11,9 @@ export default defineConfig({
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
   locales: {
     root: {
-      label: '简体中文', lang: 'zh-CN', title: 'oixCloud 使用指南',
+      label: '简体中文', lang: 'zh-CN', title: 'oixCloud',
       themeConfig: {
+        siteTitle: 'oixCloud 使用指南',
         nav: [{ text: '快速开始', link: '/start/' }, { text: '客户端教程', link: '/clients/' }, { text: '账户与服务', link: '/account/' }, { text: '故障排查', link: '/help/' }],
         sidebar: navigation.zh,
         outline: { label: '本页目录', level: [2, 3] },
@@ -22,8 +24,9 @@ export default defineConfig({
       }
     },
     en: {
-      label: 'English', lang: 'en', title: 'oixCloud User Guide',
+      label: 'English', lang: 'en', title: 'oixCloud',
       themeConfig: {
+        siteTitle: 'oixCloud User Guide',
         nav: [{ text: 'Start here', link: '/en/start/' }, { text: 'Client guides', link: '/en/clients/' }, { text: 'Account & service', link: '/en/account/' }, { text: 'Troubleshooting', link: '/en/help/' }],
         sidebar: navigation.en,
         outline: { label: 'On this page', level: [2, 3] },

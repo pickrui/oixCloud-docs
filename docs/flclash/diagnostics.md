@@ -6,6 +6,13 @@ description: "网络自检与连接记录的操作步骤、适用范围与常见
 
 ## Windows / macOS 网络自检
 
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-diagnostics-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 运行网络自检">
+    <img src="/illustrations/flclash-diagnostics-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 运行网络自检" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
 1. 保持出现问题时的配置与网络环境
 2. 进入「工具 → 网络自检」，点「开始自检」
 3. 先看失败和需要关注项，再按具体建议操作

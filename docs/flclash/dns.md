@@ -6,6 +6,13 @@ description: "DNS 覆写与网络设置的操作步骤、适用范围与常见�
 
 ## DNS 先保留默认
 
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-dns-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 配置 DNS 覆写">
+    <img src="/illustrations/flclash-dns-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 配置 DNS 覆写" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
 从「工具 → 高级配置 → DNS」查看设置。「覆写 DNS」开启后，客户端设置会覆盖配置文件中的 DNS 选项；只修改字段但未启用覆写时，实际仍可能跟随原配置
 
 1. 先记录当前配置和覆写状态
@@ -26,3 +33,16 @@ DNS 劫持、追加系统 DNS、自动设置系统 DNS 分属不同环节。公�
 ## 节点域名解析失败
 
 核对系统时间、客户端版本、当前配置与网络状态。Windows / macOS 的网络自检会区分系统 DNS、内核 DNS 与托管节点 DNS；单个解析失败不能直接认定令牌失效
+
+## 先区分需要修改的字段
+
+| 字段或开关 | 处理的环节 |
+| --- | --- |
+| 域名服务器 | 普通目标域名的解析 |
+| 代理域名服务器 | 代理节点自身地址的域名解析 |
+| 遵守规则 | DNS 连接按规则选择出站，需要避免解析与代理互相依赖 |
+| 覆写 DNS | 决定客户端这组 DNS 选项是否覆盖原配置 |
+
+节点域名都解析失败时，先检查代理域名服务器；公司内网域名失败时，先检查内网 DNS 与网络可达性。不要通过反复切换 fake-ip 和真实地址模式代替判断问题所在
+
+更改前记录原值，用同一个域名和同一节点测试。开启 TUN 时，所谓「系统路径」也可能经过 TUN，自检对照结果需要结合当前接管状态阅读

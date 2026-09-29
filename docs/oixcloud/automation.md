@@ -10,9 +10,16 @@ description: "自动化与按需连接的操作步骤、适用范围与常见问
 
 「设置」中的「始终开启」使用系统按需 VPN 行为，让系统按条件建立连接。启用后观察锁屏、切换 Wi-Fi 与蜂窝后的状态
 
-若需要某些网络直连，先查看 [网络配置与受信任网络](/oixcloud/networks)。排查系统按需连接时，临时关闭相关选项并记录结果，避免与其他 VPN 的按需规则同时启用
+若需要某些网络直连，先查看 [网络预设](/oixcloud/networks)。排查系统按需连接时，临时关闭相关选项并记录结果，避免与其他 VPN 的按需规则同时启用
 
 ## 自动化脚本
+
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-automation-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 设置脚本触发方式">
+    <img src="/illustrations/oixcloud-automation-zh.svg?v=20260929-2" alt="oixCloud · 设置脚本触发方式" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
 
 1. 进入「设置 → 自动化」，新建脚本
 2. 填写名称，按脚本原作者要求选择客户端类型

@@ -8,6 +8,13 @@ description: "Android 应用访问与后台运行的操作步骤、适用范围�
 
 ## 选择哪些应用进入 VPN
 
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-android-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 选择进入 VPN 的应用">
+    <img src="/illustrations/flclash-android-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 选择进入 VPN 的应用" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
 | 模式 | 含义 |
 | --- | --- |
 | 只允许所选应用 | 只有选中应用的流量进入 VPN |

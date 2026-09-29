@@ -8,11 +8,18 @@ For iPhone / iPad.
 
 ## Always On
 
-**Always On** uses the system's on-demand VPN behavior. After enabling it, check lock-screen, Wi-Fi and mobile-network transitions. For trusted networks, see [network profiles](/en/oixcloud/networks).
+**Always On** uses the system's on-demand VPN behavior. After enabling it, check lock-screen, Wi-Fi and mobile-network transitions. For network-specific settings, see [network profiles](/en/oixcloud/networks).
 
 When diagnosing on-demand behavior, temporarily disable the relevant setting and compare. Avoid overlapping on-demand rules from multiple VPNs.
 
 ## Automation scripts
+
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-automation-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Choose automation triggers">
+    <img src="/illustrations/oixcloud-automation-zh.svg?v=20260929-2" alt="Choose automation triggers" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+</figure>
 
 1. Open **Settings → Automation** and create a script.
 2. Name it and select the client API expected by its author.
