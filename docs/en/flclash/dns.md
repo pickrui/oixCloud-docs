@@ -7,8 +7,8 @@ description: "DNS overrides and network settings \u2014 setup, practical steps a
 ## Begin with default DNS
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-dns-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Configure DNS overrides">
-    <img src="/illustrations/flclash-dns-zh.svg?v=20260929-2" alt="Configure DNS overrides" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-dns-zh.svg?v=20260929-3" target="_blank" rel="noopener" aria-label="Configure DNS overrides">
+    <img src="/illustrations/flclash-dns-zh.svg?v=20260929-3" alt="Configure DNS overrides" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
@@ -26,7 +26,7 @@ DNS mode affects domain identification and routing. Some LAN services or apps ne
 
 ## Ports and DNS interception
 
-Check the mixed port, listeners and TUN options in advanced network settings. If a port is occupied, choose an unused one and update apps with manually configured proxy ports.
+Check the mixed port under **Tools → Basic configuration → Port**; TUN options are under **Tools → Advanced Configuration → Network**. If a port is occupied, choose an unused one and update apps with manually configured proxy ports.
 
 DNS interception, appending system DNS and changing system DNS are different operations. For company domains, confirm resolver reachability and routing; switching to public DNS may not help.
 

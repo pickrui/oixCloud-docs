@@ -18,8 +18,8 @@ description: "系统代理与虚拟网卡的操作步骤、适用范围与常见
 ## 桌面系统代理
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-capture-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 设置桌面接管方式">
-    <img src="/illustrations/flclash-capture-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 设置桌面接管方式" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-capture-zh.svg?v=20260929-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 设置桌面接管方式">
+    <img src="/illustrations/flclash-capture-zh.svg?v=20260929-3" alt="FlClash for oixCloud · 设置桌面接管方式" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

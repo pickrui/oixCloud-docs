@@ -26,7 +26,7 @@ Keep both languages at the same relative paths so the language switch opens the 
 
 The guide has 41 topics in each language, checked against the maintained clients on 29 September 2026. iPhone/iPad, Apple TV and FlClash for oixCloud have different features; document their actual interfaces separately. This is a user guide, not a promise that every release or platform exposes every option.
 
-Old panel links such as `/guide#subscriptions` redirect to the site root with their fragment. The theme maps these legacy fragments to individual articles in the selected language.
+Old panel links such as `/guide#subscriptions` redirect to the site root with their fragment. The theme maps these legacy fragments to individual articles in the selected language on first load, internal navigation and hash changes; unrelated fragments stay on the current page.
 
 Review findings, source baselines and validation scope are recorded in [REVIEW.md](REVIEW.md).
 

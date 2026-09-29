@@ -7,13 +7,13 @@ description: "DNS 覆写与网络设置的操作步骤、适用范围与常见�
 ## DNS 先保留默认
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-dns-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 配置 DNS 覆写">
-    <img src="/illustrations/flclash-dns-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 配置 DNS 覆写" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-dns-zh.svg?v=20260929-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 配置 DNS 覆写">
+    <img src="/illustrations/flclash-dns-zh.svg?v=20260929-3" alt="FlClash for oixCloud · 配置 DNS 覆写" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
 
-从「工具 → 高级配置 → DNS」查看设置。「覆写 DNS」开启后，客户端设置会覆盖配置文件中的 DNS 选项；只修改字段但未启用覆写时，实际仍可能跟随原配置
+从「工具 → 进阶配置 → DNS」查看设置。「覆写 DNS」开启后，客户端设置会覆盖配置文件中的 DNS 选项；只修改字段但未启用覆写时，实际仍可能跟随原配置
 
 1. 先记录当前配置和覆写状态
 2. 只调整需要验证的一项，使用可从当前网络访问的解析器
@@ -26,7 +26,7 @@ DNS 模式会影响内核如何识别和路由域名。某些局域网或特定�
 
 ## 本地端口与 DNS 劫持
 
-在高级网络配置中查看混合端口、监听与 TUN 相关选项。端口被其他程序占用时更换为未使用的端口，并同步更新手动配置代理的应用
+混合端口在「工具 → 基本配置 → 端口」中查看；TUN 相关选项位于「工具 → 进阶配置 → 网络」。端口被其他程序占用时更换为未使用的端口，并同步更新手动配置代理的应用
 
 DNS 劫持、追加系统 DNS、自动设置系统 DNS 分属不同环节。公司内网解析失败时，确认公司 DNS 的可达性及域名路由，不能只换一个公共 DNS 服务器
 
