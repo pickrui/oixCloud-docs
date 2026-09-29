@@ -6,7 +6,7 @@ description: Choose a subscription format, filter nodes, restore defaults and un
 
 ## Choose how to connect
 
-oixCloud, FlClash for oixCloud, the integrated OpenClash build and oixCloud Helper can sign in to retrieve managed profiles. For another compatible client, select its format in [Subscription management](https://oixcloud.com/user/sub_manage) and import that URL.
+oixCloud, FlClash for oixCloud, the integrated OpenClash build, oixClash on Merlin routers and oixCloud Helper can sign in to retrieve managed profiles. For another compatible client, select its format in [Subscription management](https://oixcloud.com/user/sub_manage) and import that URL.
 
 A full profile and a Provider node list serve different purposes. A Provider must be referenced by an existing client configuration; it is not a complete runnable profile. An Access Token is a sign-in credential, not a subscription URL.
 
@@ -23,6 +23,7 @@ A full profile and a Provider node list serve different purposes. A Provider mus
 | FlClash for oixCloud | Starts an account refresh and managed-profile sync automatically. Wait for completion; if it fails, resolve the error and use **Sync** on the account page. |
 | oixCloud Helper | Fetches nodes and updates mappings. Run **Apply in Surge** again when using Surge. |
 | OpenClash | After saving in the web editor, restart OpenClash to fetch immediately or wait for the core's next subscription update. |
+| oixClash | **订阅管理** (Subscription Management) in the plugin's account row opens the web editor. After saving, click **更新节点** (Update Nodes) in the plugin to fetch immediately, or wait for the daily update. |
 | Other subscription clients | Update the imported address and confirm the updated profile is selected. |
 
 Names support case-insensitive regular expressions: `香港|日本` matches either word. Node names remain Chinese even in an English interface. Search within the preview only locates entries; it does not add a filter. Pending previews, invalid expressions and zero retained nodes prevent saving.

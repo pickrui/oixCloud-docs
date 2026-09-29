@@ -12,6 +12,7 @@ description: 按设备与应用查找连接和设置教程
 | Apple TV | [oixCloud TV：连接与同步](/oixcloud/apple-tv) |
 | Windows / macOS / Android / Linux | [FlClash for oixCloud](/flclash/) |
 | OpenWrt 路由器 | [OpenClash](/other/openclash) |
+| Merlin 路由器 | [oixClash](/other/oixclash) |
 | 使用 Surge 的 Mac | [oixCloud Helper 与 Surge](/other/surge) |
 
 ## 按操作查找

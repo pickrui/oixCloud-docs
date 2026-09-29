@@ -1,8 +1,10 @@
 # Other clients
 
-OpenClash routers and the oixCloud Helper and Surge.
+OpenWrt and Merlin routers, and the oixCloud Helper and Surge.
 
 - [OpenClash on a router](/en/other/openclash)
+
+- [oixClash on a router](/en/other/oixclash)
 
 - [oixCloud Helper and Surge](/en/other/surge)
 

@@ -6,7 +6,7 @@ description: 选择订阅格式、设置节点筛选、恢复默认并确认多�
 
 ## 先选择接入方式
 
-oixCloud、FlClash for oixCloud、集成账户入口的 OpenClash 和 oixCloud Helper 可以登录账户获取托管配置。其他兼容客户端在 [订阅管理](https://oixcloud.com/user/sub_manage) 选择对应格式的地址，再导入客户端
+oixCloud、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路由器的 oixClash 和 oixCloud Helper 可以登录账户获取托管配置。其他兼容客户端在 [订阅管理](https://oixcloud.com/user/sub_manage) 选择对应格式的地址，再导入客户端
 
 完整配置与 Provider 节点列表用途不同；Provider 需要客户端已有配置引用，不能把它当作一份完整配置直接启动。Access Token 是登录凭据，也不是订阅网址
 
@@ -23,6 +23,7 @@ oixCloud、FlClash for oixCloud、集成账户入口的 OpenClash 和 oixCloud H
 | FlClash for oixCloud | 自动发起账户刷新和托管配置同步；等待同步完成，失败时处理报错后在账户页「同步」 |
 | oixCloud Helper | 重新获取节点并更新映射；使用 Surge 时再次「接入 Surge」 |
 | OpenClash | 网站编辑器保存后重启 OpenClash 立即获取，或等待内核下次订阅更新 |
+| oixClash | 插件账号栏「订阅管理」打开网站编辑器，保存后在插件点「更新节点」立即获取，或等待每天自动更新 |
 | 普通订阅客户端 | 更新所导入的那条订阅地址，并确认选中了新配置 |
 
 名称支持不区分大小写的正则表达式，例如 `香港|日本` 表示名称含任一词；节点名不会随界面语言翻译。预览里的搜索只帮助查找，不会改变筛选条件。预览未完成、表达式无效或保留数为零时不能保存

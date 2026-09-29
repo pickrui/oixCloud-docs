@@ -1,8 +1,10 @@
 # 其他客户端
 
-OpenClash 路由器与 oixCloud Helper 与 Surge
+OpenWrt 与 Merlin 路由器，以及 oixCloud Helper 与 Surge
 
 - [OpenClash 路由器](/other/openclash)
+
+- [oixClash 路由器](/other/oixclash)
 
 - [oixCloud Helper 与 Surge](/other/surge)
 

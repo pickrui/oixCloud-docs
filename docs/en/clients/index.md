@@ -12,6 +12,7 @@ Choose your device and app for setup, connection and feature instructions. If yo
 | Apple TV | [oixCloud TV: setup and sync](/en/oixcloud/apple-tv) |
 | Windows / macOS / Android / Linux | [FlClash for oixCloud](/en/flclash/) |
 | OpenWrt router | [OpenClash](/en/other/openclash) |
+| Merlin router | [oixClash](/en/other/oixclash) |
 | Mac running Surge | [oixCloud Helper and Surge](/en/other/surge) |
 
 ## Find an operation

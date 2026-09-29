@@ -22,6 +22,7 @@ description: "第一次使用的操作步骤、适用范围与常见问题"
 | Apple TV | [Apple TV 连接与同步](/oixcloud/apple-tv) |
 | Windows / macOS / Android / Linux | [FlClash for oixCloud 首次连接](/flclash/connect) |
 | OpenWrt 路由器 | [OpenClash](/other/openclash) |
+| Merlin 路由器 | [oixClash](/other/oixclash) |
 | 使用 Surge 的 Mac | [Surge 助手](/other/surge) |
 
 ## 怎么确认已经可用

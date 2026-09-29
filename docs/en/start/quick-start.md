@@ -22,6 +22,7 @@ A credited payment does not by itself confirm an active plan. If checkout was op
 | Apple TV | [Apple TV and sync](/en/oixcloud/apple-tv) |
 | Windows / macOS / Android / Linux | [FlClash for oixCloud setup](/en/flclash/connect) |
 | OpenWrt router | [OpenClash](/en/other/openclash) |
+| Merlin router | [oixClash](/en/other/oixclash) |
 | A Mac using Surge | [Surge helper](/en/other/surge) |
 
 ## Verify

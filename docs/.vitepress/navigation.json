@@ -139,6 +139,10 @@
           "link": "/other/openclash"
         },
         {
+          "text": "oixClash 安装与配置指南",
+          "link": "/other/oixclash"
+        },
+        {
           "text": "oixCloud Helper 与 Surge",
           "link": "/other/surge"
         },
@@ -349,6 +353,10 @@
         {
           "text": "OpenClash installation and setup",
           "link": "/en/other/openclash"
+        },
+        {
+          "text": "oixClash installation and setup",
+          "link": "/en/other/oixclash"
         },
         {
           "text": "oixCloud Helper and Surge",
