@@ -1,0 +1,394 @@
+{
+  "zh": [
+    {
+      "text": "快速开始",
+      "link": "/start/",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "第一次使用",
+          "link": "/start/quick-start"
+        },
+        {
+          "text": "节点、策略组与分流",
+          "link": "/start/concepts"
+        }
+      ]
+    },
+    {
+      "text": "oixCloud",
+      "link": "/oixcloud/",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "登录与首次连接",
+          "link": "/oixcloud/connect"
+        },
+        {
+          "text": "节点与订阅管理",
+          "link": "/oixcloud/proxies"
+        },
+        {
+          "text": "策略组、自动选择与代理链",
+          "link": "/oixcloud/policies"
+        },
+        {
+          "text": "分流规则与匹配顺序",
+          "link": "/oixcloud/routing"
+        },
+        {
+          "text": "模块导入、参数与排序",
+          "link": "/oixcloud/modules"
+        },
+        {
+          "text": "MITM 证书与 HTTPS 重写",
+          "link": "/oixcloud/mitm"
+        },
+        {
+          "text": "DNS 与 IPv6",
+          "link": "/oixcloud/dns"
+        },
+        {
+          "text": "Tailscale、子网与出口节点",
+          "link": "/oixcloud/tailscale"
+        },
+        {
+          "text": "iCloud 同步与最近删除",
+          "link": "/oixcloud/sync"
+        },
+        {
+          "text": "Apple TV 连接与同步",
+          "link": "/oixcloud/apple-tv"
+        },
+        {
+          "text": "自动化与按需连接",
+          "link": "/oixcloud/automation"
+        },
+        {
+          "text": "网络配置、直连与局域网代理",
+          "link": "/oixcloud/networks"
+        },
+        {
+          "text": "请求记录与诊断",
+          "link": "/oixcloud/diagnostics"
+        }
+      ]
+    },
+    {
+      "text": "FlClash",
+      "link": "/flclash/",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "登录与首次连接",
+          "link": "/flclash/connect"
+        },
+        {
+          "text": "配置、订阅与更新",
+          "link": "/flclash/profiles"
+        },
+        {
+          "text": "节点、策略组与代理链",
+          "link": "/flclash/proxies"
+        },
+        {
+          "text": "系统代理与虚拟网卡",
+          "link": "/flclash/capture"
+        },
+        {
+          "text": "覆写、策略组与附加规则",
+          "link": "/flclash/rules"
+        },
+        {
+          "text": "DNS 覆写与网络设置",
+          "link": "/flclash/dns"
+        },
+        {
+          "text": "Tailscale、子网与出口节点",
+          "link": "/flclash/tailscale"
+        },
+        {
+          "text": "备份、恢复与 WebDAV",
+          "link": "/flclash/backup"
+        },
+        {
+          "text": "Android 应用访问与后台运行",
+          "link": "/flclash/android"
+        },
+        {
+          "text": "局域网代理与网络排除",
+          "link": "/flclash/networks"
+        },
+        {
+          "text": "网络自检与连接记录",
+          "link": "/flclash/diagnostics"
+        }
+      ]
+    },
+    {
+      "text": "账户与服务",
+      "link": "/account/",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "购买、续费与切换",
+          "link": "/account/plans"
+        },
+        {
+          "text": "流量与计费",
+          "link": "/account/traffic"
+        },
+        {
+          "text": "节点与连接方式",
+          "link": "/account/nodes"
+        },
+        {
+          "text": "订阅与筛选",
+          "link": "/account/subscriptions"
+        },
+        {
+          "text": "中继与自建落地",
+          "link": "/account/relay"
+        },
+        {
+          "text": "WARP 与流媒体解锁",
+          "link": "/account/unlock"
+        },
+        {
+          "text": "账户与令牌安全",
+          "link": "/account/security"
+        },
+        {
+          "text": "公平使用",
+          "link": "/account/fair-use"
+        }
+      ]
+    },
+    {
+      "text": "其他客户端",
+      "link": "/other/",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "OpenClash 路由器",
+          "link": "/other/openclash"
+        },
+        {
+          "text": "Surge Mac 助手",
+          "link": "/other/surge"
+        }
+      ]
+    },
+    {
+      "text": "故障排查",
+      "link": "/help/",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "连接与速度排查",
+          "link": "/help/troubleshooting"
+        },
+        {
+          "text": "提交有效的服务单",
+          "link": "/help/support"
+        }
+      ]
+    }
+  ],
+  "en": [
+    {
+      "text": "Start here",
+      "link": "/en/start/",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Your first connection",
+          "link": "/en/start/quick-start"
+        },
+        {
+          "text": "Nodes, groups and routing",
+          "link": "/en/start/concepts"
+        }
+      ]
+    },
+    {
+      "text": "oixCloud",
+      "link": "/en/oixcloud/",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "Sign in and connect",
+          "link": "/en/oixcloud/connect"
+        },
+        {
+          "text": "Nodes and subscriptions",
+          "link": "/en/oixcloud/proxies"
+        },
+        {
+          "text": "Policy groups and proxy chains",
+          "link": "/en/oixcloud/policies"
+        },
+        {
+          "text": "Routing rules and priority",
+          "link": "/en/oixcloud/routing"
+        },
+        {
+          "text": "Modules, arguments and order",
+          "link": "/en/oixcloud/modules"
+        },
+        {
+          "text": "MITM certificates and HTTPS rewriting",
+          "link": "/en/oixcloud/mitm"
+        },
+        {
+          "text": "DNS and IPv6",
+          "link": "/en/oixcloud/dns"
+        },
+        {
+          "text": "Tailscale, subnets and exit nodes",
+          "link": "/en/oixcloud/tailscale"
+        },
+        {
+          "text": "iCloud sync and recovery",
+          "link": "/en/oixcloud/sync"
+        },
+        {
+          "text": "Apple TV setup and sync",
+          "link": "/en/oixcloud/apple-tv"
+        },
+        {
+          "text": "Automation and on-demand VPN",
+          "link": "/en/oixcloud/automation"
+        },
+        {
+          "text": "Network profiles and local access",
+          "link": "/en/oixcloud/networks"
+        },
+        {
+          "text": "Requests and diagnostics",
+          "link": "/en/oixcloud/diagnostics"
+        }
+      ]
+    },
+    {
+      "text": "FlClash",
+      "link": "/en/flclash/",
+      "collapsed": false,
+      "items": [
+        {
+          "text": "Sign in and connect",
+          "link": "/en/flclash/connect"
+        },
+        {
+          "text": "Profiles, subscriptions and updates",
+          "link": "/en/flclash/profiles"
+        },
+        {
+          "text": "Nodes, groups and chains",
+          "link": "/en/flclash/proxies"
+        },
+        {
+          "text": "System Proxy and TUN",
+          "link": "/en/flclash/capture"
+        },
+        {
+          "text": "Overrides, groups and added rules",
+          "link": "/en/flclash/rules"
+        },
+        {
+          "text": "DNS overrides and network settings",
+          "link": "/en/flclash/dns"
+        },
+        {
+          "text": "Tailscale, subnets and exit nodes",
+          "link": "/en/flclash/tailscale"
+        },
+        {
+          "text": "Backups, restore and WebDAV",
+          "link": "/en/flclash/backup"
+        },
+        {
+          "text": "Android apps and background operation",
+          "link": "/en/flclash/android"
+        },
+        {
+          "text": "LAN proxy and network exclusions",
+          "link": "/en/flclash/networks"
+        },
+        {
+          "text": "Network checks and connections",
+          "link": "/en/flclash/diagnostics"
+        }
+      ]
+    },
+    {
+      "text": "Account & service",
+      "link": "/en/account/",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Plans, renewals and switching",
+          "link": "/en/account/plans"
+        },
+        {
+          "text": "Traffic and billing",
+          "link": "/en/account/traffic"
+        },
+        {
+          "text": "Nodes and connection options",
+          "link": "/en/account/nodes"
+        },
+        {
+          "text": "Subscriptions and filters",
+          "link": "/en/account/subscriptions"
+        },
+        {
+          "text": "Relays and your own destinations",
+          "link": "/en/account/relay"
+        },
+        {
+          "text": "WARP and streaming regions",
+          "link": "/en/account/unlock"
+        },
+        {
+          "text": "Accounts and access tokens",
+          "link": "/en/account/security"
+        },
+        {
+          "text": "Fair use",
+          "link": "/en/account/fair-use"
+        }
+      ]
+    },
+    {
+      "text": "Other clients",
+      "link": "/en/other/",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "OpenClash on a router",
+          "link": "/en/other/openclash"
+        },
+        {
+          "text": "Surge Mac helper",
+          "link": "/en/other/surge"
+        }
+      ]
+    },
+    {
+      "text": "Troubleshooting",
+      "link": "/en/help/",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Connection and speed troubleshooting",
+          "link": "/en/help/troubleshooting"
+        },
+        {
+          "text": "Contact support with useful details",
+          "link": "/en/help/support"
+        }
+      ]
+    }
+  ]
+}
