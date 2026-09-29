@@ -33,4 +33,6 @@ Push to `main` to build and deploy through `.github/workflows/deploy.yml`. Pull 
 
 DNS: create a DNS-only CNAME `docs` → `pickrui.github.io`. Enable HTTPS enforcement after GitHub provisions the certificate. The VitePress base path is `/` because the site uses its own domain. Keep `docs/public/CNAME`, the sitemap hostname and DNS in agreement.
 
+The custom domain is verified under the `pickrui` GitHub account. Keep the `_github-pages-challenge-pickrui.docs` TXT record in the `dler.io` DNS zone so domain ownership remains verified. The certificate is managed by GitHub Pages; keep the CNAME in DNS-only mode.
+
 Only documentation and public assets belong in this repository. Never include client source trees, runtime configuration, subscription links, tokens or private diagnostic data. The panel repository deploys independently; publishing these docs does not update its `/guide` redirect.
