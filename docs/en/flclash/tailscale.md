@@ -28,4 +28,4 @@ Leave the exit blank, select a device, or enter `auto`, a name or IP as supporte
 
 Settings are backed up, but auth keys and device identity stay on this device. Sign in again after restoring elsewhere or after key expiry. Removing a network clears local identity; inspect stale devices in the console after an offline removal.
 
-FlClash initiates Tailnet access. It does not accept Tailnet inbound connections or advertise itself as a subnet router or exit node. Control-server access policies and approvals still apply.
+FlClash for oixCloud initiates Tailnet access. It does not accept Tailnet inbound connections or advertise itself as a subnet router or exit node. Control-server access policies and approvals still apply.

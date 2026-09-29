@@ -6,6 +6,12 @@ description: "分流规则与匹配顺序的操作步骤、适用范围与常见
 
 适用于 iPhone / iPad。Apple TV 主要使用同步过来的规则，并可调整规则集的去向
 
+## 操作示意
+
+[![oixCloud · 分流规则](/illustrations/oixcloud-rules-zh.svg)](/illustrations/oixcloud-rules-zh.svg)
+
+*模拟界面，节点与数据均为示例；具体布局以所用版本为准，点击图片可查看大图*
+
 ## 给网站指定出口
 
 1. 保持「规则」模式，进入「代理」中的「分流规则」

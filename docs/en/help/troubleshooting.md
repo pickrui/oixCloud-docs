@@ -23,6 +23,6 @@ Check the node actually used by the streaming service's policy group, its exit r
 ## Client-specific tools
 
 - [oixCloud requests, DNS and network events](/en/oixcloud/diagnostics)
-- [FlClash network check and connections](/en/flclash/diagnostics)
+- [FlClash for oixCloud network check and connections](/en/flclash/diagnostics)
 
 Change one setting at a time and record the before-and-after result.

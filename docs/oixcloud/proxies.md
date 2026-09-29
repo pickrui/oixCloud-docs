@@ -6,6 +6,12 @@ description: "节点与订阅管理的操作步骤、适用范围与常见问题
 
 适用于 iPhone / iPad
 
+## 操作示意
+
+[![oixCloud · 选择节点](/illustrations/oixcloud-proxies-zh.svg)](/illustrations/oixcloud-proxies-zh.svg)
+
+*模拟界面，节点与数据均为示例；具体布局以所用版本为准，点击图片可查看大图*
+
 ## 添加自有节点或订阅
 
 1. 打开「代理」，点添加入口

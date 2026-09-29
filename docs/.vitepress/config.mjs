@@ -3,7 +3,7 @@ import navigation from './navigation.json' with { type: 'json' }
 
 export default defineConfig({
   title: 'oixCloud Docs',
-  description: 'oixCloud 与 FlClash 使用指南 · User guides for oixCloud and FlClash',
+  description: '连接、客户端设置、账户与故障排查 · Setup, client configuration, accounts and troubleshooting',
   base: '/',
   cleanUrls: false,
   sitemap: { hostname: 'https://docs.dler.io' },
@@ -12,7 +12,7 @@ export default defineConfig({
     root: {
       label: '简体中文', lang: 'zh-CN', title: 'oixCloud 使用指南',
       themeConfig: {
-        nav: [{ text: 'oixCloud', link: '/oixcloud/' }, { text: 'FlClash', link: '/flclash/' }, { text: '账户与服务', link: '/account/' }, { text: '软件中心', link: 'https://oixcloud.com/client' }],
+        nav: [{ text: '快速开始', link: '/start/' }, { text: '客户端教程', link: '/clients/' }, { text: '账户与服务', link: '/account/' }, { text: '故障排查', link: '/help/' }],
         sidebar: navigation.zh,
         outline: { label: '本页目录', level: [2, 3] },
         docFooter: { prev: '上一篇', next: '下一篇' },
@@ -24,7 +24,7 @@ export default defineConfig({
     en: {
       label: 'English', lang: 'en', title: 'oixCloud User Guide',
       themeConfig: {
-        nav: [{ text: 'oixCloud', link: '/en/oixcloud/' }, { text: 'FlClash', link: '/en/flclash/' }, { text: 'Account & service', link: '/en/account/' }, { text: 'Downloads', link: 'https://oixcloud.com/client' }],
+        nav: [{ text: 'Start here', link: '/en/start/' }, { text: 'Client guides', link: '/en/clients/' }, { text: 'Account & service', link: '/en/account/' }, { text: 'Troubleshooting', link: '/en/help/' }],
         sidebar: navigation.en,
         outline: { label: 'On this page', level: [2, 3] },
         footer: { message: 'Features checked: 29 September 2026 · One topic per page', copyright: 'oixCloud User Guide' }

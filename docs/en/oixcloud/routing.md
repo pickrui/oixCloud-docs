@@ -6,6 +6,12 @@ description: "Routing rules and priority \u2014 setup, practical steps and troub
 
 For iPhone / iPad. Apple TV mainly consumes synced rules and allows rule-set destination changes.
 
+## Illustrated steps
+
+[![oixCloud · Routing rule](/illustrations/oixcloud-rules-zh.svg)](/illustrations/oixcloud-rules-zh.svg)
+
+*Simulated interface in Chinese, with fictional nodes and data. Layout varies by version; open the image for a larger view.*
+
 ## Route a website
 
 1. Keep **Rule** mode and open **Proxies → Routing Rules**.

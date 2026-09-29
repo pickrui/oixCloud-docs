@@ -6,6 +6,12 @@ description: "Sign in and connect \u2014 setup, practical steps and troubleshoot
 
 For iPhone / iPad. See the separate [Apple TV guide](/en/oixcloud/apple-tv).
 
+## Illustrated steps
+
+[![oixCloud · First connection](/illustrations/oixcloud-connect-zh.svg)](/illustrations/oixcloud-connect-zh.svg)
+
+*Simulated interface in Chinese, with fictional nodes and data. Layout varies by version; open the image for a larger view.*
+
 ## Managed account
 
 1. Open the App Store or TestFlight link in our download center to install oixCloud, then sign in on the app's oixCloud account page.

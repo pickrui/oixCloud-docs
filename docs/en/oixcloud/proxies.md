@@ -6,6 +6,12 @@ description: "Nodes and subscriptions \u2014 setup, practical steps and troubles
 
 For iPhone / iPad.
 
+## Illustrated steps
+
+[![oixCloud · Node selection](/illustrations/oixcloud-proxies-zh.svg)](/illustrations/oixcloud-proxies-zh.svg)
+
+*Simulated interface in Chinese, with fictional nodes and data. Layout varies by version; open the image for a larger view.*
+
 ## Import
 
 1. Open **Proxies → Add**.

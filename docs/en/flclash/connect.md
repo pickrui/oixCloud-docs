@@ -6,6 +6,12 @@ description: "Sign in and connect \u2014 setup, practical steps and troubleshoot
 
 This guide is for **FlClash for oixCloud**. The upstream general-purpose client has different account integration. Download from the [software center](https://oixcloud.com/client).
 
+## Illustrated steps
+
+[![FlClash for oixCloud · First connection](/illustrations/flclash-connect-zh.svg)](/illustrations/flclash-connect-zh.svg)
+
+*Simulated interface in Chinese, with fictional nodes and data. Layout varies by version; open the image for a larger view.*
+
 ## Import your account configuration
 
 1. Download FlClash for oixCloud from our download center, choose the package for your operating system and processor architecture, and sign in on the app's oixCloud page.

@@ -1,4 +1,4 @@
-# FlClash
+# FlClash for oixCloud
 
 Profiles, traffic capture and network tools for Windows, macOS, Android and Linux.
 

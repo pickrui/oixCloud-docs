@@ -6,6 +6,12 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 
 适用于 iPhone / iPad，电视端请看 [Apple TV](/oixcloud/apple-tv)
 
+## 操作示意
+
+[![oixCloud · 首次连接](/illustrations/oixcloud-connect-zh.svg)](/illustrations/oixcloud-connect-zh.svg)
+
+*模拟界面，节点与数据均为示例；具体布局以所用版本为准，点击图片可查看大图*
+
 ## 登录托管账户
 
 1. 从软件中心进入 App Store 或 TestFlight 安装 oixCloud，打开应用中的「oixCloud」账户页登录

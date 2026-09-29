@@ -4,6 +4,12 @@ description: "Overrides, groups and added rules \u2014 setup, practical steps an
 
 # Overrides, groups and added rules
 
+## Illustrated steps
+
+[![FlClash for oixCloud · Routing rule](/illustrations/flclash-rules-zh.svg)](/illustrations/flclash-rules-zh.svg)
+
+*Simulated interface in Chinese, with fictional nodes and data. Layout varies by version; open the image for a larger view.*
+
 ## Choose an override mode
 
 Open **Override** from the profile menu.

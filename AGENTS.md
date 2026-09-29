@@ -9,3 +9,4 @@
 - Run `pnpm build`, check internal links and language switching, and inspect relevant desktop/mobile pages before committing
 - Preserve legacy panel fragment mappings in `docs/.vitepress/theme/index.js`
 - GitHub Pages publishes `main`; use `docs.dler.io` with base `/`, local search and no authenticated backend
+- Organize the homepage and primary navigation by user tasks; keep individual apps under Client guides and use the full display name `FlClash for oixCloud`

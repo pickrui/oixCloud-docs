@@ -4,6 +4,12 @@ description: "覆写、策略组与附加规则的操作步骤、适用范围与
 
 # 覆写、策略组与附加规则
 
+## 操作示意
+
+[![FlClash for oixCloud · 分流规则](/illustrations/flclash-rules-zh.svg)](/illustrations/flclash-rules-zh.svg)
+
+*模拟界面，节点与数据均为示例；具体布局以所用版本为准，点击图片可查看大图*
+
 ## 选择覆写模式
 
 打开配置操作菜单中的「覆写」

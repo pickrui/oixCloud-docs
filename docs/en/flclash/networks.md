@@ -6,7 +6,7 @@ description: "LAN proxy and network exclusions \u2014 setup, practical steps and
 
 ## Share a local proxy
 
-1. Keep FlClash running with a working profile.
+1. Keep FlClash for oixCloud running with a working profile.
 2. Enable LAN Proxy and check the listen address and mixed port.
 3. On the other device, enter this computer's LAN IP and the appropriate proxy port.
 4. Allow the trusted LAN through the firewall, then test the target app.

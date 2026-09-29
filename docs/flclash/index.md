@@ -1,4 +1,4 @@
-# FlClash
+# FlClash for oixCloud
 
 Windows、macOS、Android 与 Linux 的配置、流量接管与网络工具
 

@@ -4,6 +4,12 @@ description: "Nodes, groups and chains \u2014 setup, practical steps and trouble
 
 # Nodes, groups and chains
 
+## Illustrated steps
+
+[![FlClash for oixCloud · Node selection](/illustrations/flclash-proxies-zh.svg)](/illustrations/flclash-proxies-zh.svg)
+
+*Simulated interface in Chinese, with fictional nodes and data. Layout varies by version; open the image for a larger view.*
+
 ## Select a node
 
 In **Proxies**, open the group responsible for your destination and select a node. Under Rule mode, a streaming service may use a different group from the default one. Verify the actual chain in connection records.

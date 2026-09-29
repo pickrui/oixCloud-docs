@@ -4,6 +4,12 @@ description: "节点、策略组与代理链的操作步骤、适用范围与常
 
 # 节点、策略组与代理链
 
+## 操作示意
+
+[![FlClash for oixCloud · 选择节点](/illustrations/flclash-proxies-zh.svg)](/illustrations/flclash-proxies-zh.svg)
+
+*模拟界面，节点与数据均为示例；具体布局以所用版本为准，点击图片可查看大图*
+
 ## 手动选择节点
 
 进入「代理」，打开负责目标流量的策略组，选择节点。规则模式下，不同服务可能由不同组处理；只更改默认组，不一定改变流媒体等专用组的出口

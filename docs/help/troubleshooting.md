@@ -23,6 +23,6 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
 ## 客户端专用诊断
 
 - [oixCloud 请求、DNS 与网络事件](/oixcloud/diagnostics)
-- [FlClash 网络自检与连接记录](/flclash/diagnostics)
+- [FlClash for oixCloud 网络自检与连接记录](/flclash/diagnostics)
 
 每次只改变一个条件，记下前后的现象，确认后再继续下一步

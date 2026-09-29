@@ -20,7 +20,7 @@ An account balance is money available to spend. Recharging does not itself purch
 | --- | --- |
 | iPhone / iPad | [oixCloud setup](/en/oixcloud/connect) |
 | Apple TV | [Apple TV and sync](/en/oixcloud/apple-tv) |
-| Windows / macOS / Android / Linux | [FlClash setup](/en/flclash/connect) |
+| Windows / macOS / Android / Linux | [FlClash for oixCloud setup](/en/flclash/connect) |
 | OpenWrt router | [OpenClash](/en/other/openclash) |
 | A Mac using Surge | [Surge helper](/en/other/surge) |
 

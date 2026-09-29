@@ -3,13 +3,9 @@
   "layout": "home",
   "title": "User Guide",
   "hero": {
-    "name": "oixCloud",
-    "text": "A guide for every step",
-    "tagline": "Learn oixCloud and FlClash, from your first connection to routing, modules and diagnostics.",
-    "image": {
-      "src": "/logo.svg",
-      "alt": "oixCloud"
-    },
+    "name": "User guide",
+    "text": "Set up and stay connected",
+    "tagline": "Find help with your first connection, client settings, account management and troubleshooting.",
     "actions": [
       {
         "theme": "brand",
@@ -25,39 +21,27 @@
   },
   "features": [
     {
-      "title": "oixCloud",
-      "details": "Connection, policy groups, routing, modules, MITM, iCloud and Apple TV",
-      "link": "/en/oixcloud/",
+      "title": "Start here",
+      "details": "Choose your device, install a client and make your first connection",
+      "link": "/en/start/",
       "linkText": "Browse guides"
     },
     {
-      "title": "FlClash",
-      "details": "Profiles, System Proxy, TUN, overrides, Tailscale, backups and network checks",
-      "link": "/en/flclash/",
+      "title": "Client guides",
+      "details": "Find connection, routing, sync and advanced settings for your device and app",
+      "link": "/en/clients/",
       "linkText": "Browse guides"
     },
     {
       "title": "Account & service",
-      "details": "Plans, traffic, subscription filters, relays, WARP and token security",
+      "details": "Manage plans, traffic, subscriptions, nodes and account security",
       "link": "/en/account/",
       "linkText": "Browse guides"
     },
     {
       "title": "Troubleshooting",
-      "details": "Investigate sign-in, connections, speed and streaming one step at a time",
+      "details": "Resolve sign-in, connection, speed and streaming issues",
       "link": "/en/help/",
-      "linkText": "Browse guides"
-    },
-    {
-      "title": "Other clients",
-      "details": "Set up an OpenWrt router or the Surge Mac helper",
-      "link": "/en/other/",
-      "linkText": "Browse guides"
-    },
-    {
-      "title": "Core concepts",
-      "details": "Understand traffic capture, nodes, policy groups and routing rules",
-      "link": "/en/start/",
       "linkText": "Browse guides"
     }
   ]

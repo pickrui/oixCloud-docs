@@ -6,6 +6,12 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 
 适用于 FlClash for oixCloud；上游通用版的账户入口与本教程不同，请从 [软件中心](https://oixcloud.com/client) 下载
 
+## 操作示意
+
+[![FlClash for oixCloud · 首次连接](/illustrations/flclash-connect-zh.svg)](/illustrations/flclash-connect-zh.svg)
+
+*模拟界面，节点与数据均为示例；具体布局以所用版本为准，点击图片可查看大图*
+
 ## 导入账户配置
 
 1. 从软件中心下载 FlClash for oixCloud，选择适合设备系统与架构的安装包，打开应用中的「oixCloud」页面登录

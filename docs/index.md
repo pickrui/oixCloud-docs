@@ -3,13 +3,9 @@
   "layout": "home",
   "title": "使用指南",
   "hero": {
-    "name": "oixCloud",
-    "text": "从连接到进阶",
-    "tagline": "从第一次连接到分流、模块、同步与诊断，找到当前需要的操作方法",
-    "image": {
-      "src": "/logo.svg",
-      "alt": "oixCloud"
-    },
+    "name": "使用指南",
+    "text": "连接与日常使用",
+    "tagline": "从第一次连接到客户端设置、账户管理与问题排查，找到当前需要的操作方法",
     "actions": [
       {
         "theme": "brand",
@@ -25,39 +21,27 @@
   },
   "features": [
     {
-      "title": "oixCloud",
-      "details": "连接、策略组、分流、模块、MITM、iCloud 与 Apple TV",
-      "link": "/oixcloud/",
+      "title": "快速开始",
+      "details": "从选择设备、安装应用到完成第一次连接",
+      "link": "/start/",
       "linkText": "查看分类"
     },
     {
-      "title": "FlClash",
-      "details": "配置、系统代理、TUN、覆写、Tailscale、备份与网络自检",
-      "link": "/flclash/",
+      "title": "客户端教程",
+      "details": "按设备和应用查找连接、分流、同步与进阶设置",
+      "link": "/clients/",
       "linkText": "查看分类"
     },
     {
       "title": "账户与服务",
-      "details": "套餐与流量、订阅筛选、中继、WARP 与令牌安全",
+      "details": "管理套餐、流量、订阅、节点与账户安全",
       "link": "/account/",
       "linkText": "查看分类"
     },
     {
       "title": "故障排查",
-      "details": "按登录、连接、速度和流媒体问题逐步检查",
+      "details": "检查登录、连接、速度和流媒体问题",
       "link": "/help/",
-      "linkText": "查看分类"
-    },
-    {
-      "title": "其他客户端",
-      "details": "OpenWrt 路由器与 Surge Mac 助手的连接步骤",
-      "link": "/other/",
-      "linkText": "查看分类"
-    },
-    {
-      "title": "基础概念",
-      "details": "区分流量接管、节点、策略组与分流规则",
-      "link": "/start/",
       "linkText": "查看分类"
     }
   ]
