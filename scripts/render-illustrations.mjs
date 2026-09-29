@@ -67,6 +67,7 @@ for (const [lang,L] of Object.entries(locale)) {
       const notes = L.notes[scene].map(([title,body])=>[title,[...body]])
       if(scene==='proxies') notes[0][1]=mobile?(lang==='zh'?['在首页点当前出口','进入节点或策略组选择列表']:['Tap the current exit on Home','Open the node or policy selection list']):(lang==='zh'?['进入「代理」','找到需要调整的手动策略组']:['Open Proxies','Find the manual group to change'])
       if(scene==='proxies' && mobile) notes[1][1][0]=lang==='zh'?'在出口列表选择一个节点':'Choose a node from the exit list'
+      if(scene==='connect' && mobile) notes[0][1][1]='自有节点可从「代理」导入'
       if(scene==='connect' && !mobile) notes[2][1][0]=lang==='zh'?'按平台允许必要的网络权限':'Allow network permissions for your platform'
       notes.forEach(([title,body],i)=>{
         const top=205+i*167
