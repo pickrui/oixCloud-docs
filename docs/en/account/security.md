@@ -8,6 +8,14 @@ description: "Accounts and access tokens \u2014 setup, practical steps and troub
 
 Official clients of the same type on one account reuse the token issued at sign-in. Signing out of a client does not revoke that token on the server. You can revoke it on the website's token page; all devices using it will then need to sign in again. With iCloud account or Apple TV sync enabled, sign-in state may also change through sync. Manually created tokens expire according to the validity period you chose; they differ from the long-lived tokens issued at sign-in.
 
+## Change your sign-in email
+
+1. Open **Change Email** in [Account Settings](https://oixcloud.com/user/edit#settings-email), enter the new address and request a verification code.
+2. Read the code in the new inbox, enter it together with your current sign-in password, then submit the change.
+3. Confirm the success message and the email shown on your account. Use the new address for later sign-ins.
+
+The security notice uses the contact details from before the change; its email goes to the old address. Contact support immediately if you did not make the change. If too many incorrect-password attempts are reported, wait as instructed before trying again. This action is unavailable when email changes are disabled.
+
 ## What should I keep private?
 
 Do not share passwords, Access Tokens, full subscription URLs, node passwords, or certificate private keys. Redact them from screenshots and logs. If a subscription URL leaks, use Reset on the subscription page, then update subscriptions and connection details on every device. This does not revoke Access Tokens; delete a leaked token separately on the token page.

@@ -65,6 +65,30 @@ Traffic of the router itself and of guest networks does not pass through oixClas
 - **Node filter**: **订阅管理** (Subscription Management) in the account row opens the website editor. After saving, click **更新节点** (Update Nodes) in the plugin to fetch them now, or wait for the daily update. The filter applies to every oixClash signed in to the same account; see [Subscriptions and filters](/en/account/subscriptions).
 - **Update the plugin**: while it is turned on, the plugin checks for a new version daily, or click **检查更新** (Check for Updates) next to the version. When **更新到 x.y.z** (Update to x.y.z) appears, click it; the plugin downloads and verifies the package before installing, and the proxy pauses briefly.
 
+## 7. Edit account custom rules
+
+From oixClash 0.0.2, **自定义规则** (Custom Rules) edits the same [account rules](https://oixcloud.com/user/rule) as the website. These rules precede the defaults. Saving affects other clients that use this account rule list. Saving an empty editor deletes the entire account list, so keep a copy of anything you need first.
+
+1. Sign in and click **读取面板规则** (Read Panel Rules). Wait until the status confirms that the rules are ready to edit.
+2. Enter one standard Surge-format rule per line, without `rules:` or a leading dash. Lines starting with `#` or `//` are comments. Use `DIRECT`, `REJECT`, or a policy group that exists in the configuration.
+3. Click **保存到面板并更新** (Save to Panel and Update), then read the log. A running plugin updates and checks the configuration; a stopped plugin fetches and checks it when next enabled.
+4. Make a new connection from a LAN device and verify the matched rule and outbound in the dashboard.
+
+```text
+DOMAIN-SUFFIX,example.com,DIRECT
+DOMAIN,ads.example.com,REJECT
+```
+
+The router editor handles up to 8192 UTF-8 bytes. Some characters use multiple bytes. Edit longer lists on the website and then click **更新节点** (Update Nodes); do not truncate the list to fit the editor.
+
+| Message or situation | What to do |
+| --- | --- |
+| Another page changed the rules | Keep a separate copy of your draft, read the latest rules, then merge your changes instead of overwriting the newer content. |
+| Saved to the panel, but not applied on the router | The website list has changed. Fix the rule or network problem, then click **更新节点** and verify a connection. |
+| Reading fails, or this version has no editor | Edit account rules on the website, then click **更新节点**. Reading and saving within the plugin also require support from the website. |
+
+Reading again replaces unsaved edits, so review the confirmation first. Account rules and node filters have different sharing scopes; see [Subscriptions and filters](/en/account/subscriptions#account-rules).
+
 ## Troubleshooting
 
 | Symptom | Next step |
