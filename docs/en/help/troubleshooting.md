@@ -20,6 +20,12 @@ Check your remaining high-speed allowance, pay-as-you-go settings, and whether l
 
 Check the node actually used by the streaming service's policy group, its exit region, and your streaming settings. Reconnect, then reopen the app. Account region, platform caches, and the platform's own restrictions can also affect the result. Include the specific platform, node, and time of the error in your support ticket.
 
+## A DNS test lists local resolvers
+
+Distinguish intentional direct lookups, lookups needed for routing and queries that bypass the client. DNS encryption, proxy DNS and VPN / TUN capture address different stages; Global mode does not guarantee zero leaks.
+
+Follow the client-specific steps and verification guidance: [oixCloud DNS and IPv6](/en/oixcloud/dns#dns-leaks-settings-that-help) or [FlClash for oixCloud DNS and capture](/en/flclash/dns#dns-leaks-check-managed-dns-and-traffic-capture-first).
+
 ## Client-specific tools
 
 - [oixCloud requests, DNS and network events](/en/oixcloud/diagnostics)
