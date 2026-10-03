@@ -24,7 +24,7 @@ Open **软件中心** (Software Center) in the router admin page, check the plat
 
 These links follow the latest stable release. You can also download the [SHA256 checksums](https://dl.dler.io/oixclash-SHA256SUMS) to verify file integrity.
 
-The package is about 18 MB and needs room on JFFS. At run time the core takes about 48 MB of memory plus what the proxy itself uses, so a model with 512 MB of RAM or more is recommended.
+The package is about 18 MB and needs room on JFFS. Models with 512 MB of RAM or more can use the defaults; smaller models, including 256 MB routers, can use [low-memory mode](#low-memory), available from 0.0.3. In normal mode, the extracted core occupies about 48 MB of RAM, with additional memory used by the running proxy, GeoIP data and dashboard.
 
 ## 2. Install offline
 
@@ -36,6 +36,13 @@ If the platform does not match, the software center says so and stops; install t
 
 ## 3. Sign in to oixCloud
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixclash-login-zh.svg?v=20261003" target="_blank" rel="noopener" aria-label="oixClash · Sign in">
+    <img src="/illustrations/oixclash-login-zh.svg?v=20261003" alt="oixClash · Sign in" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>Simulated Chinese interface · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 Under **oixCloud 账号** (oixCloud account), choose how to sign in:
 
 - **登录令牌** (sign-in token): paste the access token copied from the oixCloud website or app, not a subscription URL.
@@ -45,11 +52,34 @@ After signing in, the page shows the account, plan, expiry date and traffic. A t
 
 ## 4. Turn on the proxy
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixclash-running-zh.svg?v=20261003" target="_blank" rel="noopener" aria-label="oixClash · Running settings and low-memory mode">
+    <img src="/illustrations/oixclash-running-zh.svg?v=20261003" alt="oixClash · Running settings and low-memory mode" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>Simulated Chinese interface · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 1. Under **运行** (Run), turn on the switch and click **保存并应用** (Save and Apply).
 2. Wait for the log to report a successful start. The first run also downloads GeoIP data and takes a moment.
 3. **运行状态** (Status) shows the core as running with its version.
 
 oixClash takes over TCP and DNS of devices on the main LAN. To proxy UDP such as games and voice calls, tick **UDP 转发** (UDP forwarding) and save; it only works once the status reads that UDP is forwarded. Without UDP forwarding, keep **屏蔽 QUIC** (Block QUIC) on so browsers fall back to TCP, which is proxied.
+
+### Small-memory routers {#low-memory}
+
+From oixClash 0.0.3, **低内存模式** (Low-memory Mode) turns on automatically at first installation when detected total memory is below 384 MB. Upgrades preserve an existing choice. You can also change it under **运行 → 低内存模式**.
+
+1. Enable **低内存模式** and click **保存并应用**. Applying settings stops the proxy before checking the configuration, so LAN traffic temporarily goes direct. It stays direct if the configuration check fails.
+2. After startup, check the text below this option. **内核在 JFFS 上运行** means the core file runs from flash. **JFFS 空间不足，内核仍解压到内存** means it is still extracted to RAM; free space used by unneeded plugins, then save and verify again.
+3. Click **自检** (Self-check), check free JFFS space and available memory, then verify a LAN connection as described below.
+
+| Change | What to consider |
+| --- | --- |
+| Store the core and dashboard on JFFS when space permits | Reduces memory used by files but needs more flash space. The proxy process still uses RAM. |
+| Use a smaller GeoIP database | Covers only CN and a few other regions. Check matching if custom `GEOIP` rules reference other regions. |
+| Reclaim memory more aggressively | Reduces memory peaks but may cost CPU time. It does not guarantee every configuration will run on a 256 MB router. |
+
+After disabling low-memory mode, a core already stored on JFFS stays there. The next plugin update restores the compressed archive for extraction to RAM at run time.
 
 ## 5. Verify with a LAN device
 
@@ -65,9 +95,18 @@ Traffic of the router itself and of guest networks does not pass through oixClas
 - **Node filter**: **订阅管理** (Subscription Management) in the account row opens the website editor. After saving, click **更新节点** (Update Nodes) in the plugin to fetch them now, or wait for the daily update. The filter applies to every oixClash signed in to the same account; see [Subscriptions and filters](/en/account/subscriptions).
 - **Update the plugin**: while it is turned on, the plugin checks for a new version daily, or click **检查更新** (Check for Updates) next to the version. When **更新到 x.y.z** (Update to x.y.z) appears, click it; the plugin downloads and verifies the package before installing, and the proxy pauses briefly.
 
+If the in-plugin updater cannot verify a package, or an older self-check reports missing `sha256sum`, download the matching package from this page and update through **软件中心 → 离线安装** (Software Center → Offline Install). Do not install a package with a checksum mismatch; download it again and verify SHA256.
+
 ## 7. Edit account custom rules
 
 From oixClash 0.0.2, **自定义规则** (Custom Rules) edits the same [account rules](https://oixcloud.com/user/rule) as the website. These rules precede the defaults. Saving affects other clients that use this account rule list. Saving an empty editor deletes the entire account list, so keep a copy of anything you need first.
+
+<figure class="guide-figure">
+  <a href="/illustrations/oixclash-rules-zh.svg?v=20261003" target="_blank" rel="noopener" aria-label="oixClash · Account custom rules">
+    <img src="/illustrations/oixclash-rules-zh.svg?v=20261003" alt="oixClash · Account custom rules" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>Simulated Chinese interface · Fictional data · Click to enlarge</figcaption>
+</figure>
 
 1. Sign in and click **读取面板规则** (Read Panel Rules). Wait until the status confirms that the rules are ready to edit.
 2. Enter one standard Surge-format rule per line, without `rules:` or a leading dash. Lines starting with `#` or `//` are comments. Use `DIRECT`, `REJECT`, or a policy group that exists in the configuration.
@@ -97,6 +136,9 @@ Reading again replaces unsaved edits, so review the confirmation first. Account 
 | **运行状态** shows 登录已失效 (sign-in expired) | Click 退出登录 (Sign out), then sign in again |
 | Status shows 账号没有可用的套餐 (no active plan) | Renew, then click **保存并应用** |
 | Status shows 路由器时间尚未同步 (router time not synchronized), or the log says the time is wrong | Check the time zone and NTP server under **Administration → System**; the plugin starts by itself once the time syncs |
+| Not enough memory; the core cannot start | Enable low-memory mode, close unneeded plugins, then click **保存并应用**. After a memory failure, the watchdog retries every 30 minutes. |
+| Low-memory mode is on, but the core is still extracted to RAM | Check JFFS space and the plugin log, free flash space, then save again. Enabling the option alone does not confirm a successful move. |
+| The in-plugin updater cannot verify a package | Download the package for your platform and install it offline; do not skip integrity verification. |
 | UDP forwarding does not take effect | Click **自检** (Self-check) and look at the TPROXY and policy routing items; firmware without support only loses UDP, TCP stays proxied |
 | Conflict with fancyss or MerlinClash | Turn off the other proxy plugin; only one can run |
 | The router runs but a device still misbehaves | Check the device's gateway, DNS and IPv6, then the dashboard's connection list |

@@ -2,7 +2,7 @@ import { mkdirSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 
-// Chinese simulations drawn from the maintained SwiftUI/Material screen structure.
+// Chinese simulations drawn from the maintained SwiftUI/Material/Merlin screen structure.
 // Data is fictional. Only public UI labels and drawing primitives belong here.
 const out = fileURLToPath(new URL('../docs/public/illustrations/', import.meta.url))
 mkdirSync(out, { recursive: true })
@@ -161,8 +161,34 @@ add('helper','lan','设置本地端口与局域网访问','菜单栏 oixCloud �
  ['先核对端口用途','配置服务和代理是不同端口，填写时不要混用'],['先设置鉴权','局域网访问使用专用用户名与密码，不是账户登录密码'],['再开启局域网访问','其他设备填写这台电脑的局域网 IP，修改后更新配置']
 ],()=>helperDesktop()+helperMenu(155,219,815,[{label:'SOCKS5 + HTTP  127.0.0.1:7100',muted:true},{label:'开机启动'},{label:'本地端口…',n:1},{label:'允许局域网访问',n:3},{label:'局域网访问鉴权…（已开启）',active:true,n:2},{label:'接入模式…（当前：单端口）'},{label:'节点筛选 · 智能优选'},{label:'精简规则'},{label:'复制本机节点列表 URL'},{label:'接入 Surge'},{label:'导出 OpenSurge 配置'}]))
 
-for(const sc of scenes){const phone=sc.client==='oixcloud'||sc.id==='android';const h=phone?982:975;let s=`<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="${h}" viewBox="0 0 1120 ${h}" role="img" aria-labelledby="title desc"><title id="title">${E((sc.client==='oixcloud'?'oixCloud':sc.client==='helper'?'oixCloud Helper':'FlClash for oixCloud')+' · '+sc.title)}</title><desc id="desc">根据当前客户端页面结构模拟渲染；中文界面与虚构数据；界面细节随版本、平台与主题变化</desc><g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',Arial,sans-serif">`
- s+=R(0,0,1120,h,'#f3f5f8',0)+T(34,38,sc.client==='oixcloud'?'oixCloud · iPhone / iPad':sc.client==='helper'?'oixCloud Helper · macOS':'FlClash for oixCloud'+(sc.id==='android'?' · Android':' · 桌面端'),18,'#697386',600)+T(1085,38,'模拟渲染 · 虚构数据',16,'#788392',500,'end')+T(34,87,sc.title,31,'#263245',700)+sc.draw()
+// Merlin software-center layout, checked against the oixClash 0.0.3 page.
+function merlin(section) {
+ let s=R(30,130,1060,653,'#20333e',15)+R(220,149,849,611,'#4d595d',4)
+ s+=T(48,174,'ASUSWRT',20,'#d5e4e8',700)+T(241,181,'软件中心 - oixClash',24,'#fff',600)
+ ;['网络地图','AiMesh','访客网络','流量分析','软件中心','无线网络','内部网络','外部网络','IPv6','系统管理'].forEach((n,i)=>{const y=205+i*51;s+=R(43,y,164,46,n==='软件中心'?'#387aa0':'#354247',3)+T(60,y+29,n,17,'#f2f6f8',n==='软件中心'?600:400)})
+ s+=T(243,216,section,17,'#dbe7eb')
+ return s
+}
+const oxHead=(y,label)=>R(239,y,811,33,'#73838a',0)+T(252,y+23,label,17,'#fff',600)
+const oxRow=(y,label,h=53)=>R(239,y,811,h,'#465960',0,'#293b44')+R(239,y,164,h,'#2e3b41',0,'#293b44')+T(252,y+32,label,17,'#f4f6f8')
+const oxButton=(x,y,w,label,n)=>R(x,y,w,36,'#17272e',7,'#637980')+T(x+w/2,y+24,label,16,'#fff',600,'middle')+(n?mark(x,y,w,36,n):'')
+const oxCheck=(x,y,on=true)=>R(x,y,17,17,on?'#2ba5d0':'#fff',2)+(on?`<path d="M${x+3} ${y+9}l4 4 7-10" fill="none" stroke="#fff" stroke-width="2"/>`:'')
+
+add('oixclash','login','登录 oixCloud 账号','软件中心 → oixClash → oixCloud 账号',[
+ ['选择登录方式','可用登录令牌，也可选择邮箱和密码'],['填写账户凭据','令牌从网站或 App 复制，不是订阅地址'],['登录后再启用','确认套餐信息，再打开开关并保存']
+],()=>merlin('登录后，主局域网设备使用 oixCloud 的节点和分流规则')+oxHead(239,'oixCloud 账号')+oxRow(272,'登录方式')+circ(425,298,8,'#fff')+circ(425,298,4,'#169ccb')+T(443,304,'登录令牌',18,'#fff')+circ(592,298,8,'#fff')+T(610,304,'邮箱和密码',18,'#fff')+mark(415,282,335,32,1)+oxRow(325,'登录令牌',81)+R(420,344,600,41,'#263941',1,'#8ba1a9')+T(434,371,'在 oixCloud 网站或 App 中复制',18,'#aebfc7')+badge(1018,343,2)+oxRow(406,'',53)+oxButton(420,414,105,'登录',3)+oxHead(482,'运行')+oxRow(515,'开启')+toggle(421,529,false)+T(503,547,'插件版本：0.0.3',17,'#e2ecf0')+T(729,547,'检查更新',16,'#41b6d5')+oxRow(568,'运行状态')+T(421,600,'未运行',18,'#ffce55')+oxButton(445,675,150,'保存并应用')+T(242,737,'示例为未登录状态，令牌输入框尚未填写',16,'#c8d7dd'))
+
+add('oixclash','running','开启代理与低内存模式','软件中心 → oixClash → 运行',[
+ ['打开开关并保存','等运行状态显示运行中，再验证局域网连接'],['按需开启 UDP','游戏或语音需 UDP；是否生效以状态为准'],['小内存设备','勾选低内存模式后保存，检查 JFFS 提示']
+],()=>merlin('已登录：reader@example.com  ·  示例套餐')+oxHead(239,'运行')+oxRow(272,'开启')+toggle(421,284,true)+T(502,304,'插件版本：0.0.3',17,'#e2ecf0')+T(733,304,'检查更新',16,'#41b6d5')+oxButton(923,280,112,'查看日志')+badge(474,282,1)+oxRow(325,'运行状态')+T(421,357,'运行中  ·  内核 alpha-oix-示例  ·  UDP 已转发',17,'#b7e46e')+oxRow(378,'节点切换')+oxButton(421,386,150,'打开控制面板')+oxRow(431,'UDP 转发')+oxCheck(421,450)+T(450,462,'游戏、语音通话等 UDP 流量也走代理',17,'#fff')+badge(1017,443,2)+oxRow(484,'屏蔽 QUIC')+oxCheck(421,503,false)+T(450,515,'未开启 UDP 转发时建议开启',17,'#fff')+oxRow(537,'低内存模式',110)+oxCheck(421,557)+T(450,570,'适合 256MB 内存的路由器',17,'#fff')+T(421,599,'内核放在 JFFS 上运行，使用精简 GeoIP 库',16,'#dce6eb')+T(421,628,'本机内存 256MB  ·  内核在 JFFS 上运行',16,'#b7e46e')+badge(1017,549,3)+oxButton(422,681,150,'保存并应用')+oxButton(596,681,133,'更新节点')+oxButton(753,681,107,'自检'))
+
+add('oixclash','rules','读取并保存账号规则','软件中心 → oixClash → 自定义规则',[
+ ['先读取面板规则','读取会替换未保存的草稿，先保留需要的内容'],['每行一条规则','策略使用 DIRECT、REJECT 或已有策略组'],['保存并检查结果','保存影响同账号其他客户端，再验证新连接']
+],()=>merlin('账号规则与网站共用，排在面板默认规则之前')+oxHead(239,'自定义规则')+oxRow(272,'账号规则',385)+R(420,289,609,180,'#22343d',0,'#8fa3ad')+T(435,324,'DOMAIN-SUFFIX,example.com,DIRECT',19,'#e6edf2')+T(435,360,'DOMAIN,ads.example.com,REJECT',19,'#e6edf2')+badge(1018,286,2)+T(420,500,'每行一条，无需 rules: 或行首短横线',16,'#e2ecf0')+T(420,531,'留空并保存可清除面板账号规则',16,'#ffce55')+T(420,562,'管理面板账号规则',17,'#41b6d5')+oxButton(420,589,166,'读取面板规则',1)+oxButton(613,589,211,'保存到面板并更新',3)+T(421,648,'已读取面板规则，可编辑后保存',16,'#b7e46e')+T(242,705,'示例域名不对应真实服务；请按实际需求填写',16,'#c8d7dd')+T(242,737,'保存成功后，检查日志并在控制面板核对规则命中',16,'#c8d7dd'))
+
+
+for(const sc of scenes){const phone=sc.client==='oixcloud'||sc.id==='android';const h=phone?982:975;let s=`<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="${h}" viewBox="0 0 1120 ${h}" role="img" aria-labelledby="title desc"><title id="title">${E((sc.client==='oixcloud'?'oixCloud':sc.client==='helper'?'oixCloud Helper':sc.client==='oixclash'?'oixClash':'FlClash for oixCloud')+' · '+sc.title)}</title><desc id="desc">根据当前客户端页面结构模拟渲染；中文界面与虚构数据；界面细节随版本、平台与主题变化</desc><g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',Arial,sans-serif">`
+ s+=R(0,0,1120,h,'#f3f5f8',0)+T(34,38,sc.client==='oixcloud'?'oixCloud · iPhone / iPad':sc.client==='helper'?'oixCloud Helper · macOS':sc.client==='oixclash'?'oixClash · Merlin 路由器':'FlClash for oixCloud'+(sc.id==='android'?' · Android':' · 桌面端'),18,'#697386',600)+T(1085,38,'模拟渲染 · 虚构数据',16,'#788392',500,'end')+T(34,87,sc.title,31,'#263245',700)+sc.draw()
  if(phone){s+=T(552,175,'操作位置',17,'#748092',600)+lines(552,214,sc.route,21,'#233955',24);sc.notes.forEach(([title,body],i)=>{let y=336+i*176;s+=badge(568,y,i+1)+T(598,y+7,title,24,'#273952',600)+lines(552,y+46,body,20,'#64748b',24)})}
  else{sc.notes.forEach(([title,body],i)=>{let x=42+i*365;s+=badge(x+12,829,i+1)+T(x+38,835,title,21,'#273952',600)+lines(x,868,body,17,'#64748b',19)});s+=T(34,966,'入口：'+sc.route,14,'#7c8797')}
  s+='</g></svg>\n';writeFileSync(path.join(out,`${sc.client}-${sc.id}-zh.svg`),s)

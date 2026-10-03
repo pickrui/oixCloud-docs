@@ -24,7 +24,7 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 
 下载地址会跟随最新正式版本更新，也可下载 [SHA256 校验文件](https://dl.dler.io/oixclash-SHA256SUMS) 核对文件完整性
 
-安装包约 18MB，需要 JFFS 有足够空间；运行时内核约占 48MB 内存，另加代理本身的占用，建议 512MB 内存以上的机型
+安装包约 18MB，需要 JFFS 有足够空间。512MB 及以上内存的机型可按默认设置运行；256MB 等小内存机型可使用 0.0.3 起提供的[低内存模式](#low-memory)。普通模式下，内核解压到内存约占 48MB，代理运行、GeoIP 数据和控制面板还会占用额外内存
 
 ## 2. 离线安装
 
@@ -36,6 +36,13 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 
 ## 3. 登录 oixCloud
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixclash-login-zh.svg?v=20261003" target="_blank" rel="noopener" aria-label="oixClash · 登录账号">
+    <img src="/illustrations/oixclash-login-zh.svg?v=20261003" alt="oixClash · 登录账号" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
 在「oixCloud 账号」选择登录方式：
 
 - 登录令牌：粘贴在 oixCloud 网站或 App 中复制的 Access Token，不是订阅地址
@@ -45,11 +52,34 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 
 ## 4. 开启代理
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixclash-running-zh.svg?v=20261003" target="_blank" rel="noopener" aria-label="oixClash · 运行与低内存模式">
+    <img src="/illustrations/oixclash-running-zh.svg?v=20261003" alt="oixClash · 运行与低内存模式" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
+
 1. 在「运行」打开开关，点「保存并应用」
 2. 等日志显示「启动成功」。首次运行会下载 GeoIP 等数据，需要一些时间
 3. 「运行状态」显示运行中和内核版本即为正常
 
 oixClash 接管主局域网设备的 TCP 与 DNS。需要代理游戏、语音通话等 UDP 流量时，勾选「UDP 转发」后保存，运行状态出现「UDP 已转发」才表示生效；未开启 UDP 转发时，建议保持「屏蔽 QUIC」，浏览器会改用可被代理的 TCP
+
+### 小内存设备 {#low-memory}
+
+oixClash 0.0.3 起提供「低内存模式」。首次安装时，检测到总内存不足 384MB 会自动开启；升级时保留已有选择，也可在「运行 → 低内存模式」手动调整
+
+1. 勾选「低内存模式」，点「保存并应用」；应用期间会先停止代理再检查配置，局域网暂时直连，配置检查不通过时也会保持直连
+2. 启动后检查该选项下方的提示：「内核在 JFFS 上运行」表示内核文件已移到闪存；若提示「JFFS 空间不足，内核仍解压到内存」，先释放不需要的插件占用，再保存并验证
+3. 点「自检」，检查 JFFS 剩余空间和可用内存，再按下一节验证局域网连接
+
+| 调整 | 需要了解 |
+| --- | --- |
+| 空间允许时，内核和控制面板存放在 JFFS | 减少内存文件占用，但需要更多闪存空间；代理进程本身仍使用内存 |
+| 使用精简 GeoIP 库 | 仅覆盖 CN 等少数地区，使用其他地区 `GEOIP` 自定义规则时需留意匹配结果 |
+| 更积极地回收内存 | 降低内存峰值，但可能增加 CPU 开销，不能保证所有配置都能在 256MB 机型运行 |
+
+关闭低内存模式后，已放到 JFFS 的内核仍继续使用；下次更新插件时才恢复为压缩包并在运行时解压到内存
 
 ## 5. 用局域网设备验证
 
@@ -65,9 +95,18 @@ oixClash 接管主局域网设备的 TCP 与 DNS。需要代理游戏、语音�
 - 节点筛选：点账号栏的「订阅管理」打开网站编辑器，保存后在插件点「更新节点」立即获取，或等待每天自动更新。节点筛选对使用同一账户的所有 oixClash 生效，见 [订阅与筛选](/account/subscriptions)
 - 更新插件：开启插件后每天检查一次新版本，也可以点版本号旁的「检查更新」。出现「更新到 x.y.z」后点击，插件会下载并校验安装包再安装，期间代理会短暂中断
 
+若插件内更新提示无法校验安装包，或旧版自检提示缺少 `sha256sum`，请从本页下载对应平台的安装包，通过「软件中心 → 离线安装」更新。安装包校验不通过时不要继续安装，重新下载并核对 SHA256
+
 ## 7. 编辑账号自定义规则
 
 oixClash 0.0.2 起可在插件的「自定义规则」中编辑网站上的同一份 [账号规则](https://oixcloud.com/user/rule)，账号规则排在默认规则之前。保存会影响使用这份规则的其他客户端；清空后保存会删除整份账号规则，操作前先保留需要的内容
+
+<figure class="guide-figure">
+  <a href="/illustrations/oixclash-rules-zh.svg?v=20261003" target="_blank" rel="noopener" aria-label="oixClash · 账号自定义规则">
+    <img src="/illustrations/oixclash-rules-zh.svg?v=20261003" alt="oixClash · 账号自定义规则" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+</figure>
 
 1. 登录后点击「读取面板规则」，确认显示「已读取面板规则，可编辑后保存」
 2. 每行写一条标准 Surge 格式的规则，无需 `rules:` 或行首短横线；`#` 或 `//` 开头的行是注释。策略填写 `DIRECT`、`REJECT` 或配置中已有的策略组名称
@@ -97,6 +136,9 @@ DOMAIN,ads.example.com,REJECT
 | 运行状态提示「登录已失效」 | 点「退出登录」后重新登录 |
 | 提示「账号没有可用的套餐」 | 续费后点「保存并应用」 |
 | 提示「路由器时间尚未同步」或时间不准确 | 在「系统管理 → 系统设置」检查时区和 NTP 服务器；时间同步后插件会自动启动 |
+| 提示内存不足、内核无法启动 | 开启低内存模式，关闭不需要的其他插件后点「保存并应用」；发生内存不足后，看门狗改为每 30 分钟自动重试 |
+| 低内存模式已开启，内核仍解压到内存 | 检查 JFFS 空间和插件日志，释放闪存空间后重新保存；勾选低内存模式本身不代表内核已迁移成功 |
+| 插件内更新提示无法校验安装包 | 按本页的对应平台下载并离线安装，不要跳过完整性校验 |
 | UDP 转发没有生效 | 点「自检」，查看 TPROXY 与策略路由两项；部分固件不支持时只影响 UDP，TCP 照常代理 |
 | 提示与科学上网或 MerlinClash 冲突 | 先关闭另一个代理插件，同时只能开启一个 |
 | 路由器已运行，设备仍异常 | 核对设备的网关、DNS 和 IPv6，再看控制面板的连接记录 |
