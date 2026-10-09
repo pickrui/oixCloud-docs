@@ -4,19 +4,39 @@ Choose the intended traffic path first. Website relay settings and client-side p
 
 | Goal | Feature |
 | --- | --- |
-| Enter through one service node and exit through another | [Internal relay](https://oixcloud.com/user/relay) |
+| Enter through one service node and exit through one or more others | [Internal relay](https://oixcloud.com/user/relay) |
 | Forward from a service entry to your own deployed destination | Protocol-preserving mode in [External relay](https://oixcloud.com/user/cusrelay) |
 | Reach an existing SSH, remote-desktop or game service | External relay's protocol-conversion mode, using an allowed destination port |
 | Combine existing proxies on your device | [oixCloud chains](/en/oixcloud/policies) or [FlClash for oixCloud chains](/en/flclash/proxies) |
 
-## Create an internal relay
+## Internal relay
 
-1. Add a rule on the internal-relay page and select an entry and destination you are permitted to use.
-2. To forward only selected traffic, enter supported domain, IP or port conditions. Leaving conditions empty matches all traffic.
-3. Use hostnames rather than `https://`, paths or query strings. Follow the form's domain-matching guidance when including subdomains.
-4. Save, update the client configuration, select the source node and establish a new connection to verify the exit.
+Internal relay forwards traffic from one service node through other service nodes before it leaves. The relay paths diagram at the top of the page shows your configuration, and the relay rules list below shows each segment of those paths.
 
-Check WARP on both nodes first; a WARP-enabled node cannot simply be used as an ordinary relay endpoint.
+### Add a multihop path
+
+1. Open [Internal relay](https://oixcloud.com/user/relay) and select Add path.
+2. Choose nodes in the order traffic passes through them. The first is the entry node your client connects to; the last is the exit node, where traffic reaches the website. Insert relay nodes in between as needed; a path can include up to 17 nodes.
+3. Use the buttons beside each node to move it earlier, move it later or remove it. Preview path updates as you go.
+4. Choose a priority and select Save path. If the change affects segments shared with your other entry nodes, the page lists the affected entries and rules and saves only after you confirm.
+
+Nothing needs to be configured after the exit node, and there is no "do not forward" option. The service adds a path end automatically only when another system rule could forward traffic from the exit node; it does not appear in your rule list.
+
+### Add an individual rule
+
+To give one source node several destinations, or to forward only some websites, select Add individual rule under Relay rules.
+
+1. Choose the source node and priority, then select one or more destination nodes. Destinations that already exist are marked Added and are not added again.
+2. Destinations at the same priority form a load-balancing group. When the current destination is unavailable, traffic fails over to another available destination in the group or to a lower-priority rule.
+3. To forward only selected traffic, enter one domain or IP per line under Forward only these domains / IPs, such as `example.com`, `+.example.com`, `1.1.1.1` or `example.com:443`. Do not include `https://`, paths or query strings. Leaving it empty matches all traffic.
+
+In the rule list, Edit path opens the whole path that contains the rule, and Edit rule changes only that segment. Editing or deleting a segment affects every path that uses it.
+
+### Status and applying changes
+
+- Active: the node uses this rule now. Standby: not used while a higher-priority rule is available. Unavailable: the source or destination node is currently unavailable. Configuring: just saved and waiting for a status update.
+- After saving, update your subscription or managed configuration, select the entry node, open a new connection and check the actual exit.
+- Check WARP on both nodes first; a WARP-enabled node cannot be used as an ordinary relay node.
 
 ## Create an external relay
 
@@ -35,6 +55,9 @@ Enabling WARP removes internal relays using the logical node as source or destin
 ## Troubleshooting order
 
 - Save rejected: check permissions, endpoint conflicts, WARP and allowed ports.
+- Conflicts with existing relay settings: open the rule named in the message, adjust or delete it with Edit rule, then save the path again.
+- Relay is disabled for all your nodes: delete the rule whose source is All nodes and whose destination is Relay disabled.
+- Conflicts with system forwarding settings: choose different nodes or contact support.
 - Destination unreachable: verify listening address, firewall and service health, starting with a direct test of that service.
-- Path unchanged: update the subscription, reconnect and confirm the source node is selected.
+- Path unchanged: update the subscription, reconnect and confirm the entry node is selected.
 - Website forwarding: external relay is not for forwarding websites or web administration panels; choose an appropriate alternative within the service's usage rules.
