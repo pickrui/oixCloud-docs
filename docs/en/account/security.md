@@ -24,6 +24,16 @@ Apple TV receives the account from your iPhone. Follow the [Apple TV guide](/en/
 
 Website sign-in remains available. To use a new type of client, replace a deleted dedicated token, or obtain a new token after changing or resetting your password, sign in to the website and turn this option off, sign in to the intended client with email/password, then enable it again.
 
+## Refresh a client Access Token {#refresh-client-token}
+
+Refreshing immediately invalidates the old token. Every same-client device sharing it must switch to the new token. The client identity and subscription binding stay the same.
+
+1. Open the [Access Token page](https://oixcloud.com/user/token) and find the intended client under **Issued by client login**.
+2. Click **Refresh**, to the left of **Delete**, review the affected devices, and confirm.
+3. Wait for the page to reload, copy the new token, and update every device using it. If your Apple TV account is synced from an iPhone, sync it again.
+
+You can refresh while Access Token-only sign-in is enabled; there is no need to allow email/password sign-in temporarily. If the request fails or its result is unclear, reload the token page and check the current token before retrying. Manually created tokens do not have this button; delete and recreate them when a replacement is needed.
+
 ## Change your sign-in email
 
 1. Open **Change Email** in [Account Settings](https://oixcloud.com/user/edit#settings-email), enter the new address and request a verification code.
@@ -34,7 +44,7 @@ The security notice uses the contact details from before the change; its email g
 
 ## What should I keep private?
 
-Do not share passwords, Access Tokens, full subscription URLs, node passwords, or certificate private keys. Redact them from screenshots and logs. If a subscription URL leaks, use Reset on the subscription page, then update subscriptions and connection details on every device. This does not revoke Access Tokens; delete a leaked token separately on the token page.
+Do not share passwords, Access Tokens, full subscription URLs, node passwords, or certificate private keys. Redact them from screenshots and logs. If a subscription URL leaks, use Reset on the subscription page, then update subscriptions and connection details on every device. This does not revoke Access Tokens; refresh or delete a leaked token separately on the token page.
 
 ## When are inactive accounts deleted?
 
@@ -57,7 +67,7 @@ Manual tokens have separate expiry dates. Sign-in tokens are not automatically r
 | --- | --- |
 | A personal subscription URL | Delete or replace that address in Subscription Management and update its clients. |
 | Main subscription or connection credentials | Use the page's reset-connection-parameters/main-subscription action, read its impact and update all affected devices. |
-| Access Token | Delete the corresponding token; resetting a subscription cannot replace this step. |
+| Access Token | Refresh a client-issued token or delete the corresponding token; resetting a subscription cannot replace this step. |
 | Sign-in password | Change it and recheck sign-in/token state; changing only a subscription URL is insufficient. |
 
 Retain necessary error and destination information in support material, but hide subscription-path secrets, tokens, node passwords, certificate private keys and full authentication headers.
