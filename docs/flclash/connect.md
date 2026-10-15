@@ -25,7 +25,7 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 </figure>
 
 1. 从软件中心下载 FlClash for oixCloud，选择适合设备系统与架构的安装包，打开应用中的「oixCloud」页面登录
-2. 使用 Access Token，或邮箱和密码登录；套餐生效后，客户端会自动导入托管配置，等待节点出现后启动连接
+2. 首次使用时用邮箱和密码登录，生成 FlClash for oixCloud 专属 Token；之后可使用对应的 Access Token 登录。Google 登录用户获取密码的方法与仅允许 Token 的设置见 [首次登录说明](/account/security#first-client-login)。套餐生效后，等待托管配置与节点加载完成再启动连接
 3. 在「代理」页面选择节点或策略组，日常使用保留「规则」模式；oixCloud 页的「刷新」更新账户信息，「同步」重新获取托管配置，需要更新节点时使用「同步」
 
 ## 让应用使用代理

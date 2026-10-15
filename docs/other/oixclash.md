@@ -43,7 +43,9 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
 
-在「oixCloud 账号」选择登录方式：
+首次在「oixCloud 账号」选择邮箱和密码登录，生成 oixClash 专属 Token；之后可使用对应的 Access Token。Google 登录用户获取密码的方法与仅允许 Token 的设置见 [首次登录说明](/account/security#first-client-login)
+
+登录方式：
 
 - 登录令牌：粘贴在 oixCloud 网站或 App 中复制的 Access Token，不是订阅地址
 - 邮箱和密码：填写 oixCloud 账户的邮箱与密码，密码只用于本次登录，不保存在路由器上

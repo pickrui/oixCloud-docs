@@ -25,7 +25,7 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 </figure>
 
 1. 从软件中心进入 App Store 或 TestFlight 安装 oixCloud，打开应用中的「oixCloud」账户页登录
-2. 可以使用网站的 Access Token（访问令牌），或切换到邮箱和密码登录；套餐生效后，客户端会获取托管节点，等待加载完成
+2. 首次使用时切换到邮箱和密码登录，生成 oixCloud 专属 Token；之后可使用对应的 Access Token 登录。Google 登录用户获取密码的方法与仅允许 Token 的设置见 [首次登录说明](/account/security#first-client-login)。套餐生效后，等待托管节点加载完成
 3. 在首页选择节点或策略组，保持「规则」模式并点「连接」；首次连接时，按系统提示允许添加 VPN 配置
 
 ## 只使用自己的节点

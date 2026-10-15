@@ -14,6 +14,12 @@ Get one normal connection working before enabling advanced features.
 
 A credited payment does not by itself confirm an active plan. If checkout was opened from a plan purchase, the system attempts to complete that purchase after payment; check funding and plan records before ordering again. After a standalone top-up, buy or activate the plan you need. See [Plans, renewals and switching](/en/account/plans).
 
+## First sign-in to a custom client
+
+When first using each type of custom client, sign in once with your email and password to create its dedicated token. If you signed in with Google, check Gmail for the email containing your initial password. If you cannot find it, use **Forgot password** on the website sign-in page.
+
+You can then copy the corresponding token from the [Access Token page](https://oixcloud.com/user/token) and enable **Disable email/password sign-in for clients (Access Token only)**. Website sign-in remains available. For Apple TV, use the sync guide below. See [first sign-in and token-only access](/en/account/security#first-client-login).
+
 ## Choose your device
 
 | Device | Guide |

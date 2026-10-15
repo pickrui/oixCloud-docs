@@ -25,7 +25,7 @@ This guide is for **FlClash for oixCloud**. The upstream general-purpose client 
 </figure>
 
 1. Download FlClash for oixCloud from our download center, choose the package for your operating system and processor architecture, and sign in on the app's oixCloud page.
-2. Sign in with an Access Token or your email and password. Once your plan is active, the client automatically imports the managed configuration. Wait for the nodes to appear, then start the connection.
+2. For your first sign-in, use email and password to create the dedicated FlClash for oixCloud token. You can use that Access Token afterward. See [first sign-in](/en/account/security#first-client-login) for Google account passwords and token-only settings. Once your plan is active, wait for the managed profile and nodes to load before connecting.
 3. Choose a node or policy group on the Proxies page and keep Rule mode for everyday use. On the oixCloud page, Refresh updates account information; Sync fetches the managed configuration again. Use Sync when you need to update nodes.
 
 ## Capture application traffic

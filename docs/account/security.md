@@ -8,6 +8,22 @@ description: "账户与令牌安全的操作步骤、适用范围与常见问题
 
 同账号的同类官方客户端会复用登录签发的令牌；客户端退出不会撤销服务器上的令牌。网页令牌页可以撤销令牌，所有使用该令牌的设备随后都需要重新登录；开启 iCloud 账户或 Apple TV 同步时，登录状态也可能随同步改变。手动创建的令牌按所选有效期到期，不要与登录签发的长期令牌混淆
 
+## 首次登录定制客户端 {#first-client-login}
+
+首次使用每种定制客户端时，请先用邮箱和密码登录一次，生成该客户端的专属 Token。登录后，在 [Access Token 管理](https://oixcloud.com/user/token) 的「客户端登录签发」中找到对应客户端，之后可复制这条 Access Token 登录同类客户端
+
+使用 Google 登录的用户，请查看 Gmail 邮箱是否有包含初始密码的邮件（也检查垃圾邮件）；如果未找到，可在 [网站登录界面](https://oixcloud.com/auth/login) 点击「忘记密码」重置。这里填写的是 oixCloud 账户密码，不是 Google 账户密码
+
+Apple TV 通过 iPhone 同步账户，按 [Apple TV 教程](/oixcloud/apple-tv) 操作，无需在电视上重复邮箱/密码登录
+
+## 仅允许 Access Token 登录客户端 {#token-only}
+
+1. 先完成所需定制客户端的首次邮箱/密码登录，确认对应的专属 Token 已出现在令牌页
+2. 在 [Access Token 管理](https://oixcloud.com/user/token) 勾选「禁止客户端使用邮箱/密码登录（仅允许 Access Token）」，等待页面提示保存成功
+3. 此后客户端和 API 的邮箱/密码登录会被拒绝，使用有效 Access Token 登录；已登录客户端和现有 Token 继续有效
+
+此选项不影响网站登录。首次使用另一种客户端、专属 Token 被删除，或改密/重置密码后需要重新签发时，可先登录网站关闭此选项，用邮箱/密码登录目标客户端，再重新开启
+
 ## 修改登录邮箱
 
 1. 打开 [账户设置](https://oixcloud.com/user/edit#settings-email) 的「修改邮箱」，填写新邮箱并点「获取验证码」

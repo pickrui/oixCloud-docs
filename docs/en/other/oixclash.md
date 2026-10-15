@@ -43,7 +43,9 @@ If the platform does not match, the software center says so and stops; install t
   <figcaption>Simulated Chinese interface · Fictional data · Click to enlarge</figcaption>
 </figure>
 
-Under **oixCloud 账号** (oixCloud account), choose how to sign in:
+For the first sign-in under **oixCloud 账号**, choose email and password to create the dedicated oixClash token. You can use that Access Token afterward. See [first sign-in](/en/account/security#first-client-login) for Google account passwords and token-only settings.
+
+Sign-in methods:
 
 - **登录令牌** (sign-in token): paste the access token copied from the oixCloud website or app, not a subscription URL.
 - **邮箱和密码** (email and password): the password is only used for this sign-in and is not stored on the router.

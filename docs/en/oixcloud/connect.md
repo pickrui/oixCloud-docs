@@ -25,7 +25,7 @@ For iPhone / iPad. See the separate [Apple TV guide](/en/oixcloud/apple-tv).
 </figure>
 
 1. Open the App Store or TestFlight link in our download center to install oixCloud, then sign in on the app's oixCloud account page.
-2. Use an Access Token from the website, or switch to email and password sign-in. Once your plan is active, wait for the client to load your managed nodes.
+2. For your first sign-in, switch to email and password to create the dedicated oixCloud token. You can use that Access Token afterward. See [first sign-in](/en/account/security#first-client-login) for Google account passwords and token-only settings. Once your plan is active, wait for your managed nodes to load.
 3. Select a node or policy group on the home screen, keep Rule mode selected, and tap Connect. Allow the system to add a VPN configuration when prompted on your first connection.
 
 ## Your own nodes

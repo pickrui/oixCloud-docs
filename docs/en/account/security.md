@@ -8,6 +8,22 @@ description: "Accounts and access tokens \u2014 setup, practical steps and troub
 
 Official clients of the same type on one account reuse the token issued at sign-in. Signing out of a client does not revoke that token on the server. You can revoke it on the website's token page; all devices using it will then need to sign in again. With iCloud account or Apple TV sync enabled, sign-in state may also change through sync. Manually created tokens expire according to the validity period you chose; they differ from the long-lived tokens issued at sign-in.
 
+## First sign-in to a custom client {#first-client-login}
+
+When first using each type of custom client, sign in once with your email and password to create its dedicated token. Find that client under **Issued by client login** on the [Access Token page](https://oixcloud.com/user/token). You can then copy its Access Token to sign in to the same type of client.
+
+If you signed in with Google, check Gmail, including spam, for the email containing your initial password. If you cannot find it, click **Forgot password** on the [website sign-in page](https://oixcloud.com/auth/login) to reset it. Use your oixCloud account password, not your Google account password.
+
+Apple TV receives the account from your iPhone. Follow the [Apple TV guide](/en/oixcloud/apple-tv); you do not need to repeat email/password sign-in on the TV.
+
+## Allow only Access Tokens for client sign-in {#token-only}
+
+1. Complete the first email/password sign-in for the custom clients you need, and confirm that their dedicated tokens appear on the token page.
+2. On the [Access Token page](https://oixcloud.com/user/token), enable **Disable email/password sign-in for clients (Access Token only)** and wait for confirmation that it was saved.
+3. Email/password sign-in through clients and the API is then rejected. Use a valid Access Token instead. Existing client sessions and tokens continue to work.
+
+Website sign-in remains available. To use a new type of client, replace a deleted dedicated token, or obtain a new token after changing or resetting your password, sign in to the website and turn this option off, sign in to the intended client with email/password, then enable it again.
+
 ## Change your sign-in email
 
 1. Open **Change Email** in [Account Settings](https://oixcloud.com/user/edit#settings-email), enter the new address and request a verification code.

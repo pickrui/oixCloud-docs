@@ -17,7 +17,7 @@ oixCloud Helper runs alongside Surge Mac and also supports local proxy ports and
 
 1. Download the release matching your macOS version and processor from the [download center](https://oixcloud.com/client/macos) or [public releases](https://github.com/pickrui/oixcloud-external-proxy-program/releases). Use Legacy builds for macOS 12/13 and the matching architecture for macOS 14 or later.
 2. Follow the launcher instructions included in the package. Packages containing `启动 oixCloud.command` offer a persistent launch option.
-3. Open **Account → Sign in…** from the oixCloud menu-bar icon and use email/password or an Access Token.
+3. Open **Account → Sign in…** from the oixCloud menu-bar icon. First sign in with email/password to create the dedicated oixCloud Helper token; you can use that Access Token afterward. See [first sign-in](/en/account/security#first-client-login) for Google account passwords and token-only settings.
 4. Wait for plan and node retrieval. The top of the menu shows progress and results; act on the specific error if an operation fails.
 
 ## Choose an integration mode
