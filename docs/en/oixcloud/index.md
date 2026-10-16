@@ -28,4 +28,6 @@ Connection, routing, modules and sync for iPhone, iPad and Apple TV.
 
 - [Requests and diagnostics](/en/oixcloud/diagnostics)
 
+- [Local Controller](/en/oixcloud/local-control)
+
 Apple TV uses a simpler interface. Check the platform scope of each guide; modules and detailed editing are described for iPhone/iPad.

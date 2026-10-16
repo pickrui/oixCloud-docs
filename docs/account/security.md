@@ -10,19 +10,28 @@ description: "账户与令牌安全的操作步骤、适用范围与常见问题
 
 ## 首次登录定制客户端 {#first-client-login}
 
-首次使用每种定制客户端时，请先用邮箱和密码登录一次，生成该客户端的专属 Token。登录后，在 [Access Token 管理](https://oixcloud.com/user/token) 的「客户端登录签发」中找到对应客户端，之后可复制这条 Access Token 登录同类客户端
+首次使用每种定制客户端时，可用邮箱和密码，或该客户端提供的「使用 Google 登录」，签发对应客户端的专属 Token。已有对应 Access Token 时，也可直接粘贴登录；填写 Token 本身，不是订阅网址
 
-使用 Google 登录的用户，请查看 Gmail 邮箱是否有包含初始密码的邮件（也检查垃圾邮件）；如果未找到，可在 [网站登录界面](https://oixcloud.com/auth/login) 点击「忘记密码」重置。这里填写的是 oixCloud 账户密码，不是 Google 账户密码
+登录后，在 [Access Token 管理](https://oixcloud.com/user/token) 的「客户端登录签发」中找到对应客户端，之后可复制这条 Token 登录同类客户端。同账号同类客户端会复用令牌，不需要为每台设备重复创建
 
-Apple TV 通过 iPhone 同步账户，按 [Apple TV 教程](/oixcloud/apple-tv) 操作，无需在电视上重复邮箱/密码登录
+Google 入口目前适用于支持该功能的 oixCloud iPhone / iPad 版本和 FlClash for oixCloud。Apple TV 继续通过 [iPhone 同步账户](/oixcloud/apple-tv)；Helper、OpenClash、oixClash 按各自教程选择邮箱/密码或 Token，不假定都有 Google 按钮
 
-## 仅允许 Access Token 登录客户端 {#token-only}
+## 使用 Google 登录客户端 {#google-client-login}
 
-1. 先完成所需定制客户端的首次邮箱/密码登录，确认对应的专属 Token 已出现在令牌页
-2. 在 [Access Token 管理](https://oixcloud.com/user/token) 勾选「禁止客户端使用邮箱/密码登录（仅允许 Access Token）」，等待页面提示保存成功
-3. 此后客户端和 API 的邮箱/密码登录会被拒绝，使用有效 Access Token 登录；已登录客户端和现有 Token 继续有效
+1. 在客户端登录页点击「使用 Google 登录」，在系统认证窗口或浏览器中继续
+2. 选择与已有 oixCloud 账户邮箱一致的 Google 账户。此入口只登录已有账户，不会自动注册新账户
+3. 完成验证后允许返回原客户端；若浏览器没有自动返回，点击完成页的「返回 App」
+4. 等待账户信息和托管节点加载，再连接 VPN。超时或返回验证失败时，从客户端重新发起，不重复打开旧完成页
 
-此选项不影响网站登录。首次使用另一种客户端、专属 Token 被删除，或改密/重置密码后需要重新签发时，可先登录网站关闭此选项，用邮箱/密码登录目标客户端，再重新开启
+Google 登录需要客户端和网站同时支持。若当前版本没有入口，继续使用邮箱/密码或 Access Token；不要把 Google 密码填进 oixCloud 的密码框。需要账户密码时，可在 Gmail（包括垃圾邮件）查找初始密码邮件，或在 [网站登录页](https://oixcloud.com/auth/login) 用「忘记密码」重置
+
+## 禁止客户端邮箱/密码登录 {#token-only}
+
+1. 先确认需要的客户端已有可用 Token，或能够通过受支持的 Google 入口登录
+2. 在 [Access Token 管理](https://oixcloud.com/user/token) 开启「禁止客户端使用邮箱/密码登录」，等待保存成功
+3. 此后客户端和 API 的邮箱/密码登录被拒绝；现有 Token、网站登录和受支持的 Google 登录继续有效
+
+旧页面可能把这个选项标为「仅允许 Access Token」，它实际限制的是邮箱/密码方式。如果某客户端没有 Google 入口且需要新签发 Token，可先在网站关闭此选项，用邮箱/密码登录后再开启
 
 ## 刷新客户端 Access Token {#refresh-client-token}
 
@@ -32,7 +41,7 @@ Apple TV 通过 iPhone 同步账户，按 [Apple TV 教程](/oixcloud/apple-tv) 
 2. 点击「删除」左边的「刷新」，确认影响范围后提交
 3. 等待页面重新加载，复制新 Token，并更新所有使用这条 Token 的设备；通过 iPhone 同步到 Apple TV 的账户也需重新同步
 
-开启「仅允许 Access Token」时仍可刷新，无需临时开放邮箱/密码登录。若请求失败或结果不明确，先重新加载令牌页确认当前 Token，再决定是否重试。手动创建的 Token 不提供此按钮，需要更换时请删除后重新创建
+禁止客户端邮箱/密码登录时仍可刷新，无需临时开放邮箱/密码登录。若请求失败或结果不明确，先重新加载令牌页确认当前 Token，再决定是否重试。手动创建的 Token 不提供此按钮，需要更换时请删除后重新创建
 
 ## 修改登录邮箱
 

@@ -46,3 +46,9 @@ Identify the problem the module should solve and preserve your previous settings
 Visit a target the module should handle and inspect activity/module feedback. On failure, disable other modules affecting the same target, then check format, script compatibility and certificate trust. A module without HTTPS rewriting does not require generating a certificate just to import it.
 
 Subscription updates can change rules, hosts and scripts. Recheck the same target after updating and confirm needed local arguments remain correct. A file import does not automatically change when its author updates a remote file.
+
+## Manage module categories
+
+Use a module's action menu to choose an existing category or **New Category**. The category header menu offers **Edit Category Name** and **Delete Category**. Names must be nonempty and unique.
+
+Deleting a category moves its modules to **Uncategorized** without deleting them. Categories and list dragging organize display; adjust runtime conflict priority in **Module Order**. Verify with new connections instead of assuming list placement changes execution order.

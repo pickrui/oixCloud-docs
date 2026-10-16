@@ -28,4 +28,6 @@ iPhone、iPad 与 Apple TV 的连接、分流、模块和同步教程
 
 - [请求记录与诊断](/oixcloud/diagnostics)
 
+- [局域网控制](/oixcloud/local-control)
+
 Apple TV 保持简化界面，请以各篇标注的平台范围为准；模块与复杂编辑教程适用于 iPhone / iPad

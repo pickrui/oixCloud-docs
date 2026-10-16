@@ -1,3 +1,43 @@
+# Documentation update — 16 October 2026
+
+Reviewed the maintained clients and panel for changes since the earlier guide review. Updated 14 paired topic/index pages, added the paired Local Controller article and its navigation, and refreshed the two sign-in illustrations. The guide now contains 43 tutorial topics and 51 pages per language. Earlier review records below remain historical evidence, not a statement of current release availability.
+
+## Source baselines for this update
+
+| Component | Revision examined | Relevant behavior |
+| --- | --- | --- |
+| dler-panel | `7c28cf15` plus this audit's sign-in wording correction | Existing-account Google client sign-in, token reuse, password-only restriction and authorization failure behavior |
+| oixCloud | `d1297aa3` | iPhone/iPad Google sign-in, Strict DNS, independent IPv6 controls, persistent MITM exclusions, module categories and Local Controller |
+| FlClash for oixCloud | `2cf21720d` | Google sign-in, desktop diagnostic actions, recognized local BitTorrent processes using DIRECT, script refresh and restored-script handling |
+| oixCloud Helper | `3daa929` | Existing email/password and token account flow |
+| OpenClash integration | `e2502195` | Existing integrated account flow and dedicated token |
+| oixClash for Merlin | `cf102f3` | Existing integrated account flow and dedicated token |
+
+Client repositories were read only. Source support can precede a stable/App Store binary or a deployed panel. The guide describes available menu entries and does not imply Apple TV, Android, desktop and router feature parity.
+
+## Corrections and additions
+
+- Explain Google client sign-in for existing accounts, browser return and expired-flow recovery. Preserve Apple TV's iPhone sync flow and the actual Helper/router account methods
+- Correct the password restriction: it blocks client/API email-password sign-in, while website sign-in, valid tokens and supported Google sign-in remain available. Preserve the `token-only` anchor and describe the old label for already-deployed pages
+- Replace outdated DNS advice with Strict DNS, effective configuration sources, routing-DNS and fallback behavior, and three independent IPv6 controls. Preserve the old DNS-help anchors in both languages
+- Describe exact-domain MITM exclusions, their persistence and new-connection behavior; distinguish them from ordinary routing and plaintext HTTP
+- Explain module category deletion and the separate Module Order setting
+- Add a Local Controller article for HTTPS access on the same LAN, fingerprint/key checks, node selection, profile conflicts and key reset
+- Document the desktop-only recognized BitTorrent-process DIRECT policy, diagnostic settings shortcuts, script refresh and restoring scripts without automatically activating them
+- Update the two Chinese sign-in simulations and both locales' asset version references; all illustration data remains fictional
+
+## Validation for this update
+
+- `pnpm build` passed; all 103 generated HTML pages and 7,923 internal links, assets and anchors resolved
+- All 51 source paths have corresponding Chinese/English pages; all 37 illustration SVGs parsed successfully
+- Checked 60 desktop/mobile page cases at 1440 px and 390 px, with no horizontal page overflow or browser errors; checked corresponding language switches and local search for the new article
+- Visually inspected the new article on desktop/mobile, mobile account/DNS instructions and both updated sign-in illustrations
+- Reviewed the final bilingual changes and `git diff --check`
+
+No client source, live accounts or network settings were changed. The documentation is committed to `codex/client-guides-20261016`; `main` publishes automatically, so this update does not merge to `main` or deploy GitHub Pages. Actual device connectivity and installed-release behavior were not acceptance-tested.
+
+---
+
 # Documentation review — 29 September 2026
 
 Reviewed all 41 tutorial topics in Simplified Chinese and English, their category pages and navigation (49 pages per language), and 34 shared Chinese illustrations. Instructions were compared with maintained application/server implementations and the primary references below. This was a documentation and source review, not a device-by-device VPN acceptance test.

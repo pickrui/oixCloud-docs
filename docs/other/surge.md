@@ -17,7 +17,7 @@ oixCloud Helper 是与 Surge Mac 配合运行的代理助手，也支持本地�
 
 1. 从 [软件中心](https://oixcloud.com/client/macos) 或 [公开发行页](https://github.com/pickrui/oixcloud-external-proxy-program/releases) 下载对应 macOS 版本与处理器的发行包；macOS 12 / 13 使用 Legacy 包，macOS 14 及以上选择对应架构
 2. 按发行包内启动说明运行；带「启动 oixCloud.command」的包可选择常驻启动
-3. 打开菜单栏 oixCloud 的「账户 → 登录…」，首次用邮箱和密码登录，生成 oixCloud Helper 专属 Token；之后可使用对应的 Access Token。Google 登录用户获取密码的方法与仅允许 Token 的设置见 [首次登录说明](/account/security#first-client-login)
+3. 打开菜单栏 oixCloud 的「账户 → 登录…」，首次用邮箱和密码登录，生成 oixCloud Helper 专属 Token；之后可使用对应的 Access Token。Google 登录用户获取账户密码的方法与禁止客户端邮箱/密码登录的设置见 [首次登录说明](/account/security#first-client-login)
 4. 等待套餐和节点获取完成。菜单顶部有操作进度和结果，失败时查看具体原因后再处理
 
 ## 选择接入模式

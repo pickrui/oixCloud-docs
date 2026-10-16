@@ -54,8 +54,8 @@ function modal(title,w=490,h=410){let x=(1120-w)/2,y=235;return {x,y,s:R(30,165,
 function chips(x,y,names,selected=0,fl=false){const selectedSet=new Set(Array.isArray(selected)?selected:[selected]);return names.map((v,i)=>{const active=selectedSet.has(i);return R(x+i*123,y,113,36,active?(fl?'#f0d9df':'#dfebff'):'#f4f5f8',18,active?(fl?'#bd8d9b':'#8db7ff'):'#dbdce2')+T(x+i*123+56,y+24,v,15,active?(fl?'#794c59':'#0068d8'):'#646771',500,'middle')}).join('')}
 
 add('oixcloud','login','登录账户','oixCloud → 登录',[
- ['选择登录方式','按实际凭据选择 Access Token 或邮箱与密码'],['填写凭据','图中邮箱为虚构示例，密码不展示'],['完成登录','登录后等待托管节点载入，再返回首页连接']
-],()=>ios('oixCloud',{large:true,tab:'oixCloud'})+segmented(69,262,402,['Access Token','邮箱与密码'],1)+mark(69,262,402,39,1)+group(351,[{label:'reader@example.com'},{label:'••••••••',n:2},{label:'忘记密码？',blue:true}],{title:'账户'})+group(549,[{label:'登录',blue:true,n:3}])+group(630,[{label:'创建账户',blue:true}]))
+ ['选择登录方式','支持 Access Token、邮箱密码及已有账户的 Google 登录'],['填写凭据','图中邮箱为虚构示例，密码不展示'],['完成登录','登录后等待托管节点载入，再返回首页连接']
+],()=>ios('oixCloud',{large:true,tab:'oixCloud'})+segmented(69,262,402,['Access Token','邮箱与密码'],1)+mark(69,262,402,39,1)+group(351,[{label:'reader@example.com'},{label:'••••••••',n:2},{label:'忘记密码？',blue:true}],{title:'账户'})+group(549,[{label:'登录',blue:true,n:3}])+group(630,[{label:'使用 Google 登录',blue:true}])+group(711,[{label:'创建账户',blue:true}]))
 add('oixcloud','connect','首页连接与当前出口','首页',[
  ['点圆形电源按钮','已有节点时启动 VPN，首次使用允许系统添加 VPN 配置'],['点当前出口','打开节点选择页，选择节点或自动优选'],['核对运行状态','连接成功后再看活动记录，确认目标网站实际走向']
 ],()=>ios('首页',{large:true,tab:'首页'})+R(67,264,406,226,'#fff',22)+T(89,298,'● 连接',15,'#82838c')+T(89,334,'未连接',29,'#202124',700)+T(89,365,'规则',18,'#7b7c85')+power(407,325)+badge(450,279,1)+R(85,396,370,69,'#f4f6fa',15)+T(104,425,'香港 · 示例 A',20,'#25262d',600)+T(104,448,'oixCloud',15,'#8b8c95')+chevron(431,423)+badge(449,397,2)+group(529,[{label:'运行模式',value:'规则',chev:true},{label:'兜底路由',value:'当前代理'},{label:'DNS',value:'默认'}],{title:'运行摘要'})+badge(451,541,3))
@@ -103,8 +103,8 @@ add('oixcloud','mitm-generate','首次生成 MITM 证书','设置 → MITM → M
 ],()=>ios('MITM 证书',{back:'MITM'})+group(287,[{label:'生成证书',blue:true,n:2}],{title:'此设备'})+badge(469,268,1)+T(83,377,'此处的更改仅影响此设备',16,'#85858d')+group(454,[{label:'状态',value:'尚未获取'},{label:'将 PKCS#12 导入账号',blue:true}],{title:'oixCloud'}))
 
 add('flclash','login','登录账户','侧栏 oixCloud → 登录',[
- ['选择凭据方式','支持 Access Token 与邮箱密码'],['填写后登录','示例不含真实账户或令牌'],['继续同步配置','返回账户页，等待配置同步完成']
-],()=>{let m=modal('登录',490,424);return material('oixCloud','oixCloud')+m.s+segmented(m.x+28,m.y+82,434,['Access Token','邮箱与密码'],1,true)+mark(m.x+28,m.y+82,434,39,1)+field(m.x+28,m.y+156,434,'邮箱','reader@example.com',{n:2})+field(m.x+28,m.y+239,434,'密码','••••••••')+T(m.x+302,m.y+380,'取消',17,'#885461')+button(m.x+348,m.y+352,107,'登录',3)})
+ ['选择凭据方式','支持 Google、Access Token 与邮箱密码'],['填写后登录','示例不含真实账户或令牌'],['继续同步配置','返回账户页，等待配置同步完成']
+],()=>{let m=modal('登录',490,504);return material('oixCloud','oixCloud')+m.s+button(m.x+28,m.y+68,434,'使用 Google 登录')+segmented(m.x+28,m.y+151,434,['Access Token','邮箱与密码'],1,true)+mark(m.x+28,m.y+151,434,39,1)+field(m.x+28,m.y+225,434,'邮箱','reader@example.com',{n:2})+field(m.x+28,m.y+308,434,'密码','••••••••')+T(m.x+302,m.y+460,'取消',17,'#885461')+button(m.x+348,m.y+432,107,'登录',3)})
 add('flclash','connect','仪表盘启动与接管','仪表盘',[
  ['确认接管方式','桌面可用系统代理或虚拟网卡'],['选择规则模式','节点在代理页的策略组中选择'],['点右下角播放按钮','启动后打开网站，并检查连接记录']
 ],()=>{let s=material('仪表盘','仪表盘');s+=R(151,235,901,145,'#f5e8ee',25)+T(178,273,'网络速度',18,'#6e555f')+T(183,322,'↓  0 B/s',32,'#483940',500)+T(625,322,'↑  0 B/s',32,'#483940',500)+T(185,353,'下载',15,'#8e7b83')+T(628,353,'上传',15,'#8e7b83');s+=R(151,396,438,110,'#f7edf1',24)+T(176,436,'系统代理',22)+toggle(510,429,true,true)+R(607,396,445,110,'#f7edf1',24)+T(633,436,'虚拟网卡',22)+toggle(972,429,false,true)+badge(577,410,1);s+=R(151,523,438,140,'#f7edf1',24)+T(175,562,'出站模式',21)+segmented(168,585,404,['规则','全局','直连'],0,true)+badge(578,588,2)+R(607,523,445,140,'#f7edf1',24)+T(633,562,'流量统计',21)+T(634,611,'↑ 0 B     ↓ 0 B',25,'#71515d');s+=R(975,695, 60,60,'#efd4df',19)+T(1005,735,'▶',29,'#6b4150',600,'middle')+badge(1040,697,3);return s})

@@ -47,3 +47,11 @@ Connect the VPN, reopen the service and inspect request details or MITM diagnost
 Pinned applications may reject interception. Do not disable global certificate verification; exclude unsuitable hosts and retain their original TLS connection.
 
 To stop, disable MITM or the relevant set and recreate connections. Remove the profile in system settings if no longer needed. Never share its private key.
+
+## Never decrypt a particular domain {#never-decrypt}
+
+For certificate pinning or a service incompatible with rewriting, open **Settings → MITM → Never Decrypt**, enter the exact hostname, then choose **Never Decrypt This Domain**. Request details and the MITM Inspector offer the same action.
+
+The exclusion applies to that exact domain on this device, across all TLS ports. Add subdomains separately. Module and subscription updates cannot override it. Reconnect after changing it; existing connections keep their previous behavior. Use **Allow MITM for This Domain** in the list to restore interception.
+
+Excluded domains retain their original TLS connection. HTTPS rewrites, scripts and HTTP-based routing stop applying, while ordinary routing and plain HTTP rules remain unchanged. Current versions also skip domains with no applicable HTTPS rules automatically. A connection that is not decrypted is not necessarily a certificate failure; inspect its reason first.

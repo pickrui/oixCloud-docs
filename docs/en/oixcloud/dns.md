@@ -1,16 +1,40 @@
 ---
-description: "DNS and IPv6 \u2014 setup, practical steps and troubleshooting"
+description: "Strict DNS, split DNS and three independent IPv6 controls"
 ---
 
 # DNS and IPv6
 
-For iPhone / iPad.
+For iPhone/iPad versions of oixCloud that expose these controls. See the separate [Apple TV guide](/en/oixcloud/apple-tv). Check your installed version if a setting is missing.
 
-## Start with defaults
+## Check the effective source first
 
-Change **Settings → DNS** only for a specific need, such as private domains, a chosen resolver or a reproducible lookup failure.
+Open **Settings → DNS** and read the Automatic, Custom or Strict DNS summary and its source. A network profile or module can override global DNS. When the page reports an override, editing the global address may not change the resolver used on this network.
 
-Custom DNS accepts the formats listed in the interface: plain IP, DoH, DoH3, DoQ, DoT and TCP. Separate multiple servers with commas; leave the field empty for automatic defaults. This setting serves lookups outside the tunnel and related cases, not necessarily every DNS request.
+**Custom DNS** accepts the displayed plain-IP, DoH, DoH3, DoQ, DoT and TCP formats. Separate servers with commas. Correct invalid input before leaving the field; an empty field restores the default selection for the current mode.
+
+<span id="dns-leaks-settings-that-help"></span>
+
+## Strict DNS {#strict-dns}
+
+To prevent public DNS queries handled by the VPN from falling back to system DNS:
+
+1. Connect the VPN, then enable **Strict DNS** in **Settings → DNS**.
+2. Check the effective servers and source at the top. With no configured servers, the default is Cloudflare DoH. Only encrypted custom servers are eligible for public queries, and proxied queries require `https://` DoH.
+3. **Skip DNS Lookups for Routing** is forced on and **Allow System DNS Fallback** is forced off. These controls cannot be changed independently while Strict DNS is active.
+4. Make a new connection and check resolution and outbound in [requests and DNS diagnostics](/en/oixcloud/diagnostics). For failures, check the effective resolver, proxy and rules before treating a timeout as an invalid account token.
+
+Strict DNS skips DNS lookups used for IP-based classification. Domain rules and the final route still apply, so routes depending on IP, GeoIP or ASN classification may change. Disabling Strict DNS restores the saved choices for the other two controls.
+
+Its scope is DNS captured by the VPN. Local names and proxy bootstrap use dedicated paths. App-provided DoH/DoT, excluded traffic and requests outside the VPN are not all controlled by this switch. Captured public TCP/53 queries are refused rather than allowed as a plaintext fallback.
+
+## Two separate compatibility options
+
+| Control | Effect |
+| --- | --- |
+| Skip DNS Lookups for Routing | Avoids local lookups for IP-based routing; direct connections and DNS exceptions can still resolve locally. It does not force every query through a proxy |
+| Allow System DNS Fallback | Allows the system resolver when configured servers cannot answer. Valid negative answers do not trigger fallback; Strict DNS always disables it |
+
+Encryption protects the connection to the resolver; it does not select a proxy outbound by itself. In ordinary mode, changing an address to `https://` does not prove there are no local DNS queries.
 
 ## Add a domain-specific DNS rule
 
@@ -22,63 +46,28 @@ Custom DNS accepts the formats listed in the interface: plain IP, DoH, DoH3, DoQ
 </figure>
 
 1. Open **Settings → DNS → Add DNS Rule**.
-2. Choose Exact, Suffix or Wildcard and enter a domain.
-3. Choose Addresses, Alias, Split DNS or Always Real IP.
-4. Save and order rules; the first match wins.
-5. Make a new request and inspect the DNS result.
+2. Choose exact, suffix or wildcard matching and enter a domain, such as your own `corp.example.com`.
+3. Choose addresses, alias, split DNS or **Always Real IP**, and supply the actual reachable resolver or address.
+4. Save and reorder. The first match from top to bottom wins. Make a new request and verify both the answer and the route to it.
 
-For example, send your private company domain to a reachable company resolver rather than sending all public names there. Check the route to that resolver first.
+The illustrated `192.0.2.53` is a documentation address, not a usable resolver. Confirm access to the corporate network before assigning its DNS. A correct answer does not establish a route to that address.
 
-## IPv6
+## Check three independent IPv6 controls {#ipv6-controls}
 
-Inspect **Settings → IPv6**. Device networking, the node and the destination all affect availability. Compare one change at a time, then restore what you need.
-
-Modules can contribute DNS settings too. Check [module order](/en/oixcloud/modules) when results differ from expectations. Avoid changing DNS, nodes and routing simultaneously.
-
-## Example: send only an internal domain to company DNS
-
-Suppose you own `corp.example.com` and the company resolver is reachable from the current network:
-
-1. Add a suffix match for `corp.example.com` with the split-DNS action.
-2. Enter the company's actual resolver. The illustration's `192.0.2.53` is a documentation address, not a usable service.
-3. Enable and save it before any broader rule that would match first.
-4. Request a real internal hostname, verify its answer, then check VPN, routing or subnet permissions needed to reach that address.
-
-A DNS answer does not establish a route to its address. Alias and address-record settings cannot replace network connectivity.
-
-| Symptom | Next step |
+| Location | Scope |
 | --- | --- |
-| Every domain fails | Check resolver reachability and current network; revert the recent change for comparison. |
-| Only internal domains fail | Check match type, order, company DNS and company-network access. |
-| Correct address but failed connection | Check routing, node, IPv4/IPv6 and destination port. |
-| Unexpected rule behavior | Check network-profile overrides and module-provided DNS settings. |
+| Settings → IPv6 → Auto IPv6 / App IPv6 Traffic | Whether the VPN captures application IPv6. The summary shows the effective state and source. Turn Auto off to choose manually |
+| Settings → DNS → IPv6 DNS Resolution | Whether local hostname lookups request IPv6 answers. It does not enable the VPN IPv6 interface or control remote DNS and literal IPv6 addresses |
+| Settings → IPv6 → Proxy Connection → Server IP Version | Default address family for connecting to proxy-server hostnames. A node menu/editor can override it; changes apply to new connections |
 
-## DNS leaks: settings that help
+Network profiles can override global IPv6 settings. **Hide VPN Icon** and Reflection's **Local Device Compatibility** can cause IPv6 to bypass the VPN; check the effective summary first. Disabling IPv6 DNS resolution neither disables system IPv6 nor proves it is captured.
 
-A DNS test lists resolvers, which need not share the proxy exit's IP or country. Check whether a domain intended for the proxy was also sent by your device to an ISP or another unexpected resolver.
+## Verify and troubleshoot
 
-The current client captures system queries with an in-tunnel resolver and fake-IP. Direct connections, excluded-route checks, IP / GeoIP / ASN routing and real-IP exceptions can still require lookups outside the tunnel. A connection may use the proxy after a local DNS query has already occurred; Global mode does not guarantee that these queries disappear.
+- Test with fresh random domains to reduce cache effects. A DNS test shows resolvers; a country or IP differing from the proxy node is not proof of a leak.
+- Check IPv4 and IPv6 separately, along with the selected node, DNS source, network profile and modules. Retest after Wi-Fi/cellular changes or reconnecting.
+- Check app-provided secure DNS, system DNS profiles and other VPNs separately. Port 53 checks do not cover every encrypted DNS path.
+- **Include All Networks** affects system traffic capture and does not replace DNS outbound policy. Read its compatibility and update guidance before enabling it.
+- For one failing domain, inspect its DNS rule and local/Tailscale route. If all public lookups fail in Strict DNS, check usable HTTPS DNS servers and the proxy first.
 
-1. Confirm that oixCloud is connected and inspect the destination's actual outbound. Check [network profiles](/en/oixcloud/networks) and modules for DNS or routing overrides.
-2. To avoid ordinary plaintext DNS, enter a reachable, certificate-valid DoH / DoT or other encrypted resolver under **Settings → DNS → Custom DNS Server**, such as `https://1.1.1.1/dns-query`. Save and make a new request. This encrypts the device-to-resolver connection; it **does not mean DNS is sent through the proxy**, and the resolver may still see your device's public IP.
-3. Review Always Real IP and split-DNS rules and keep exceptions narrow. Domain rules can reduce lookups needed for routing, but higher-priority conditions such as excluded routes may still require resolution. Do not remove LAN rules just to change a test result.
-4. Check browser Secure DNS, system encrypted-DNS profiles and other network extensions. Record the original settings and temporarily disable separately selected resolvers when testing client-managed DNS. If you retain an app's own DoH / DoT, verify that its connection uses the intended proxy; port-53 interception cannot control these encrypted queries.
-5. Turn off **Settings → Advanced Settings → Hide VPN Icon**, then check actual IPv6 capture under **Settings → IPv6**. Suppressing AAAA answers does not disable IPv6 on the device. Verify both IPv4 and IPv6 exits.
-
-### Include All Networks: scope and limits
-
-For stronger system traffic capture, consider **Settings → Advanced Settings → Tunnel → Include All Networks**. It is mutually exclusive with Enhanced Compatibility Mode and may affect HomeKit, connection or reconnection, and app updates. Disconnect oixCloud before updating it.
-
-This switch controls system traffic entering the tunnel. It does not automatically turn the client's own out-of-tunnel DNS into proxied DNS. Review local-network and excluded-route settings separately; this is not a guarantee of zero DNS leaks.
-
-**If destination DNS must always use the proxy and must never fall back to direct access when the proxy fails, the current Custom DNS setting cannot guarantee that requirement.** The client needs a separate proxy DNS outbound and a fail-closed policy covering routing lookups, real-IP exceptions and other DNS record types. Changing a resolver address alone cannot provide it.
-
-These menu paths apply to iPhone / iPad, not necessarily Apple TV.
-
-## Verify the DNS path
-
-1. Record the client version, mode, node, DNS settings and current Wi-Fi or cellular network.
-2. Run a DNS test that generates fresh random hostnames before and after connecting, avoiding cached answers. Compare listed resolvers with your configured upstreams; their country or IP need not match the node.
-3. Check domains, matched rules and outbounds in [request and DNS diagnostics](/en/oixcloud/diagnostics). A manual DNS check actively resolves a name; its result alone does not establish the DNS path of an ordinary proxied connection.
-4. If an ISP resolver still appears, inspect routing lookups, direct rules, modules, app-specific DNS and IPv6 separately. Where possible, capture traffic on your own router or upstream network to establish whether queries leave directly.
-5. Repeat after Wi-Fi / cellular changes and reconnections. Checking only UDP / TCP port 53 cannot exclude direct DoH / DoT / DoQ traffic. A successful normal connection does not establish protection during disconnection.
+Capture traffic on your own router or network when you need to verify the physical path. One successful web DNS test does not prove coverage of every app or disconnected periods.

@@ -18,14 +18,14 @@ This guide is for **FlClash for oixCloud**. The upstream general-purpose client 
 ## Import your account configuration
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-login-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Sign in with an account">
-    <img src="/illustrations/flclash-login-zh.svg?v=20260929-2" alt="Sign in with an account" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-login-zh.svg?v=20261016" target="_blank" rel="noopener" aria-label="Sign in with an account">
+    <img src="/illustrations/flclash-login-zh.svg?v=20261016" alt="Sign in with an account" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
 
 1. Download FlClash for oixCloud from our download center, choose the package for your operating system and processor architecture, and sign in on the app's oixCloud page.
-2. For your first sign-in, use email and password to create the dedicated FlClash for oixCloud token. You can use that Access Token afterward. See [first sign-in](/en/account/security#first-client-login) for Google account passwords and token-only settings. Once your plan is active, wait for the managed profile and nodes to load before connecting.
+2. Choose email/password, an existing Access Token, or **Sign in with Google** when available. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Wait for the active plan and managed profile and nodes to load before connecting.
 3. Choose a node or policy group on the Proxies page and keep Rule mode for everyday use. On the oixCloud page, Refresh updates account information; Sync fetches the managed configuration again. Use Sync when you need to update nodes.
 
 ## Capture application traffic
@@ -40,3 +40,7 @@ Select an available node in Proxies, open the target service and inspect connect
 For sign-in failures, retain the exact error and version, then check networking, system time and account status.
 
 For a missing-DLL error at Windows startup, identify the file and runtime using [Missing DLL repair](/en/flclash/windows-dll).
+
+## Google sign-in troubleshooting
+
+If the button is missing, check your installed version; a feature in the maintained source may not yet be in your stable build. If the browser remains open, use its Return to App link. Restart an expired flow from the client. For an unregistered-email message, sign in with the Google account matching your existing account or complete website registration first. Do not repeatedly reset tokens to troubleshoot a browser return.

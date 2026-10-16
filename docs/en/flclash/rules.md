@@ -58,3 +58,15 @@ First confirm a group named `Work` exists on the proxy page. In the selected pro
 If it does not match, check capture, Rule mode, higher-priority added rules, the existence of the target group and whether you tested an old connection, in that order. Remove the example rule and reapply to restore the subscription's handling of that domain.
 
 Global added rules affect multiple profiles; personal rules in a profile override belong to that profile. Put an exception in the profile override when it should apply only to one subscription.
+
+## Desktop BitTorrent applications use Direct {#bittorrent-direct}
+
+The maintained Windows, macOS and Linux versions force recognized local BitTorrent applications, such as qBittorrent, Transmission, Deluge, aria2c and Motrix, to `DIRECT`. This policy precedes Rule and Global modes and cannot be disabled through subscriptions, personal rules or the process-lookup setting.
+
+Those recognized connections use the local network's exit and can expose its public IP to peers. Check the process and outbound in connection records; Global mode alone does not establish that BitTorrent uses a proxy. This is not a guarantee of identifying all P2P traffic and does not describe Android or other devices connecting through a LAN proxy.
+
+## Script options and restore
+
+Refresh script options manually when needed, check unsaved inputs, and review additions, changes and removals in the preview. Resolve missing-script or application errors before applying again.
+
+Restored scripts need inspection and manual enabling. A successful profile restore does not mean its script is already affecting routing. See [backup and restore](/en/flclash/backup).

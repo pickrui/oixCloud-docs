@@ -17,7 +17,7 @@ LuCI 插件和代理内核可单独更新。找不到新菜单时，仅更新内
 
 ## 2. 登录 oixCloud
 
-进入「服务 → OpenClash → 插件设置 → oixCloud」，首次选择邮箱密码登录，生成 OpenClash 专属 Token；之后可选择 Token 登录，填写对应 Access Token 本身，不是订阅网址。Google 登录用户获取密码的方法与仅允许 Token 的设置见 [首次登录说明](/account/security#first-client-login)
+进入「服务 → OpenClash → 插件设置 → oixCloud」，首次选择邮箱密码登录，生成 OpenClash 专属 Token；之后可选择 Token 登录，填写对应 Access Token 本身，不是订阅网址。Google 登录用户获取账户密码的方法与禁止客户端邮箱/密码登录的设置见 [首次登录说明](/account/security#first-client-login)
 
 等待账户信息、配置和内核处理完成。插件会创建或更新 `oixCloud - smart` 订阅；能看到套餐与流量仅表示账户信息获取成功，还需检查正在使用的配置
 

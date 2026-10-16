@@ -76,6 +76,10 @@
             {
               "text": "请求记录与诊断",
               "link": "/oixcloud/diagnostics"
+            },
+            {
+              "text": "局域网控制",
+              "link": "/oixcloud/local-control"
             }
           ]
         },
@@ -292,6 +296,10 @@
             {
               "text": "Requests and diagnostics",
               "link": "/en/oixcloud/diagnostics"
+            },
+            {
+              "text": "Local Controller",
+              "link": "/en/oixcloud/local-control"
             }
           ]
         },

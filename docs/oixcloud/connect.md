@@ -18,14 +18,14 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 ## 登录托管账户
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-login-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 登录账户">
-    <img src="/illustrations/oixcloud-login-zh.svg?v=20260929-2" alt="oixCloud · 登录账户" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-login-zh.svg?v=20261016" target="_blank" rel="noopener" aria-label="oixCloud · 登录账户">
+    <img src="/illustrations/oixcloud-login-zh.svg?v=20261016" alt="oixCloud · 登录账户" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
 
 1. 从软件中心进入 App Store 或 TestFlight 安装 oixCloud，打开应用中的「oixCloud」账户页登录
-2. 首次使用时切换到邮箱和密码登录，生成 oixCloud 专属 Token；之后可使用对应的 Access Token 登录。Google 登录用户获取密码的方法与仅允许 Token 的设置见 [首次登录说明](/account/security#first-client-login)。套餐生效后，等待托管节点加载完成
+2. 选择邮箱/密码、已有 Access Token，或当前版本提供的「使用 Google 登录」。Google 只登录已有账户，并需客户端和网站同时支持，步骤见 [Google 登录说明](/account/security#google-client-login)。确认套餐生效，等待托管节点加载完成再连接
 3. 在首页选择节点或策略组，保持「规则」模式并点「连接」；首次连接时，按系统提示允许添加 VPN 配置
 
 ## 只使用自己的节点
@@ -41,3 +41,7 @@ oixCloud 账户页下拉刷新用于更新账户信息，「刷新节点」用�
 ## 退出账户
 
 客户端退出只清理本机登录状态，不撤销同类设备共用的登录令牌。需要撤销时，到网站令牌页操作；账户同步开启时，也应核对其他设备的同步状态
+
+## Google 登录排查
+
+没有按钮时先核对安装版本；维护源码中的新功能不一定已经进入当前 App Store 或稳定版。浏览器未返回时使用「返回 App」，超时后从客户端重新开始。提示邮箱未注册时，选择已有账户对应的 Google 邮箱，或先在网站完成注册；不要为排查浏览器跳转而反复刷新 Token

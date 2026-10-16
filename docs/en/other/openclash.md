@@ -17,7 +17,7 @@ The LuCI plugin and proxy core update separately. Updating only the core cannot 
 
 ## 2. Sign in to oixCloud
 
-Open **Services → OpenClash → Plugin Settings → oixCloud**. First use email/password to create the dedicated OpenClash token. You can then use **Token Login** with that Access Token itself, not a subscription URL. See [first sign-in](/en/account/security#first-client-login) for Google account passwords and token-only settings.
+Open **Services → OpenClash → Plugin Settings → oixCloud**. First use email/password to create the dedicated OpenClash token. You can then use **Token Login** with that Access Token itself, not a subscription URL. See [first sign-in](/en/account/security#first-client-login) for obtaining an oixCloud password after Google registration and restricting client password sign-in.
 
 Wait for account information, profile download and core processing. The plugin creates or updates the `oixCloud - smart` subscription. Visible plan and traffic data proves account retrieval, not that the correct profile is active.
 

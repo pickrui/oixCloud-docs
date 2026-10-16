@@ -10,19 +10,28 @@ Official clients of the same type on one account reuse the token issued at sign-
 
 ## First sign-in to a custom client {#first-client-login}
 
-When first using each type of custom client, sign in once with your email and password to create its dedicated token. Find that client under **Issued by client login** on the [Access Token page](https://oixcloud.com/user/token). You can then copy its Access Token to sign in to the same type of client.
+For the first sign-in to each custom client, use email and password or its **Sign in with Google** option, if available, to issue that client's dedicated token. If you already have the corresponding Access Token, paste the token itself, not a subscription URL.
 
-If you signed in with Google, check Gmail, including spam, for the email containing your initial password. If you cannot find it, click **Forgot password** on the [website sign-in page](https://oixcloud.com/auth/login) to reset it. Use your oixCloud account password, not your Google account password.
+After signing in, find the client under **Issued by client login** on the [Access Token page](https://oixcloud.com/user/token). The same account and client type reuse a token; you do not need to create one per device.
 
-Apple TV receives the account from your iPhone. Follow the [Apple TV guide](/en/oixcloud/apple-tv); you do not need to repeat email/password sign-in on the TV.
+Google sign-in is available in supporting iPhone/iPad versions of oixCloud and FlClash for oixCloud. Apple TV continues to [receive the account from an iPhone](/en/oixcloud/apple-tv). Follow the email/password or token instructions for Helper, OpenClash and oixClash; do not assume they have a Google button.
 
-## Allow only Access Tokens for client sign-in {#token-only}
+## Sign in to a client with Google {#google-client-login}
 
-1. Complete the first email/password sign-in for the custom clients you need, and confirm that their dedicated tokens appear on the token page.
-2. On the [Access Token page](https://oixcloud.com/user/token), enable **Disable email/password sign-in for clients (Access Token only)** and wait for confirmation that it was saved.
-3. Email/password sign-in through clients and the API is then rejected. Use a valid Access Token instead. Existing client sessions and tokens continue to work.
+1. Select **Sign in with Google** in the client, then continue in the system authentication window or browser.
+2. Choose the Google account matching the email of your existing oixCloud account. This entry signs in existing accounts; it does not register new ones.
+3. Complete verification and allow the browser to return to the original client. Use **Return to App** on the completion page if it does not return automatically.
+4. Wait for account information and managed nodes before connecting. If the flow expires or return verification fails, start again from the client instead of reopening an old completion page.
 
-Website sign-in remains available. To use a new type of client, replace a deleted dedicated token, or obtain a new token after changing or resetting your password, sign in to the website and turn this option off, sign in to the intended client with email/password, then enable it again.
+Both the client and website must support this flow. If the button is unavailable, use email/password or an Access Token. Never enter your Google password into the oixCloud password field. To obtain an oixCloud password, check Gmail, including spam, for the initial-password email, or use **Forgot password** on the [website sign-in page](https://oixcloud.com/auth/login).
+
+## Disable client email/password sign-in {#token-only}
+
+1. Confirm that the clients you need have a usable token or support Google sign-in.
+2. Enable **Disable email/password sign-in for clients** on the [Access Token page](https://oixcloud.com/user/token), and wait for the saved confirmation.
+3. Client/API email/password sign-in is then rejected. Existing tokens, website sign-in and supported Google sign-in remain available.
+
+Older pages may label this option **Access Token only**. Its actual scope is email/password sign-in. If a client has no Google option and needs a new token, temporarily disable the restriction on the website, sign in with email/password, then enable it again.
 
 ## Refresh a client Access Token {#refresh-client-token}
 
@@ -32,7 +41,7 @@ Refreshing immediately invalidates the old token. Every same-client device shari
 2. Click **Refresh**, to the left of **Delete**, review the affected devices, and confirm.
 3. Wait for the page to reload, copy the new token, and update every device using it. If your Apple TV account is synced from an iPhone, sync it again.
 
-You can refresh while Access Token-only sign-in is enabled; there is no need to allow email/password sign-in temporarily. If the request fails or its result is unclear, reload the token page and check the current token before retrying. Manually created tokens do not have this button; delete and recreate them when a replacement is needed.
+You can refresh while client email/password sign-in is disabled; there is no need to allow email/password sign-in temporarily. If the request fails or its result is unclear, reload the token page and check the current token before retrying. Manually created tokens do not have this button; delete and recreate them when a replacement is needed.
 
 ## Change your sign-in email
 

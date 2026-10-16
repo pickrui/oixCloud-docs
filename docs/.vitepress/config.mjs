@@ -20,7 +20,7 @@ export default defineConfig({
         docFooter: { prev: '上一篇', next: '下一篇' },
         sidebarMenuLabel: '分类目录', returnToTopLabel: '返回顶部', darkModeSwitchLabel: '外观',
         langMenuLabel: '语言', skipToContentLabel: '跳转到正文',
-        footer: { message: '功能核对：2026-09-29 · 每个主题独立成篇', copyright: 'oixCloud 使用指南' }
+        footer: { message: '最近核对：2026-10-16 · 每个主题独立成篇', copyright: 'oixCloud 使用指南' }
       }
     },
     en: {
@@ -30,7 +30,7 @@ export default defineConfig({
         nav: [{ text: 'Start here', link: '/en/start/' }, { text: 'Client guides', link: '/en/clients/' }, { text: 'Account & service', link: '/en/account/' }, { text: 'Troubleshooting', link: '/en/help/' }],
         sidebar: navigation.en,
         outline: { label: 'On this page', level: [2, 3] },
-        footer: { message: 'Features checked: 29 September 2026 · One topic per page', copyright: 'oixCloud User Guide' }
+        footer: { message: 'Last checked: 16 October 2026 · One topic per page', copyright: 'oixCloud User Guide' }
       }
     }
   },

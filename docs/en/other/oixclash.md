@@ -43,7 +43,7 @@ If the platform does not match, the software center says so and stops; install t
   <figcaption>Simulated Chinese interface · Fictional data · Click to enlarge</figcaption>
 </figure>
 
-For the first sign-in under **oixCloud 账号**, choose email and password to create the dedicated oixClash token. You can use that Access Token afterward. See [first sign-in](/en/account/security#first-client-login) for Google account passwords and token-only settings.
+For the first sign-in under **oixCloud 账号**, choose email and password to create the dedicated oixClash token. You can use that Access Token afterward. See [first sign-in](/en/account/security#first-client-login) for obtaining an oixCloud password after Google registration and restricting client password sign-in.
 
 Sign-in methods:
 

@@ -24,7 +24,7 @@ pnpm preview
 
 Keep both languages at the same relative paths so the language switch opens the corresponding article. Add new articles to both category indexes and the sidebar. Builds reject broken Markdown links. Search uses local indexes with Chinese word segmentation; no search service is required.
 
-The guide has 41 topics in each language, checked against the maintained clients on 29 September 2026. iPhone/iPad, Apple TV and FlClash for oixCloud have different features; document their actual interfaces separately. This is a user guide, not a promise that every release or platform exposes every option.
+The guide has 43 topics in each language. The latest client and account update was checked against maintained source on 16 October 2026; source support does not imply availability in every public binary or a deployed panel. iPhone/iPad, Apple TV and FlClash for oixCloud have different features; document their actual interfaces separately. This is a user guide, not a promise that every release or platform exposes every option.
 
 Old panel links such as `/guide#subscriptions` redirect to the site root with their fragment. The theme maps these legacy fragments to individual articles in the selected language on first load, internal navigation and hash changes; unrelated fragments stay on the current page.
 
