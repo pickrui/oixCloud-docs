@@ -18,6 +18,34 @@ Temporary automatic-purchase failures may be retried. If a notice says the autom
 
 When a purchased record is activated, its saved plan type is applied; regular plans also use the allowance saved on that record. Pay-as-you-go availability is still calculated from balance, commission and the current unit price. Changing the same store product to pay-as-you-go or another type does not turn an existing regular plan into pay-as-you-go. For a new purchase, renewal or upgrade, check the plan and price on that operation's confirmation page.
 
+## Sold out and automatic restocking {#stock}
+
+Some plans have limited inventory. “Sold out” means no stock is currently available for a new purchase. **We normally do not replenish these plans manually.** Availability mainly returns when existing plans expire and release stock; there is no fixed restocking time or quantity.
+
+Stopping renewal does not release stock immediately. Disabling automatic renewal leaves the existing plan usable until expiry. Stock is returned when the plan expires without renewal or an eligible queued replacement, and the system completes termination. If a user buys again in that expired state with no eligible queued plan, the purchase process also retires the old expired active records and returns their stock.
+
+**Switching to another plan does not itself return the original plan's stock.** Manual or automatic activation of a queued plan, an upgrade or an exchange does not immediately create a new purchase slot for the old product. Retained benefits also mean the old plan has not simply been released.
+
+| Operation or state | Inventory effect |
+| --- | --- |
+| New purchase or early renewal | Deducts one unit of the corresponding plan, including purchases placed in the activation queue |
+| Normal automatic renewal | Neither deducts again nor returns stock; funding and renewal eligibility still apply |
+| Disable automatic renewal | No immediate return; eligible expiry termination or cleanup must follow |
+| Activate or switch to an already purchased queued plan | No second deduction and no return of the original plan's stock merely from switching |
+| Upgrade or exchange | Deducts stock from the destination plan; original stock is not returned |
+| Eligible refund to account balance | Does not return stock |
+| Expiry without renewal or an eligible queued replacement, followed by completed termination/cleanup | Returns the corresponding limited stock |
+
+A sold-out new-purchase page therefore does not by itself prevent normal automatic renewal for an existing customer. **Early renewal still checks inventory** and differs from normal automatic renewal. Returning stock does not relist a product that has been taken off sale.
+
+Refresh the store later or choose another available plan. Adding funds, opening checkout or submitting an unpaid order does not reserve plan inventory; stock may change before the purchase completes. Do not repeatedly top up or disable an existing renewal just to wait for stock.
+
+## Plan thresholds and permitted use {#threshold}
+
+Before buying, check the Threshold and personal/team use alongside traffic, validity and speed. The threshold multiplies fair-use scoring bands; it is neither a signed-in-device limit nor permission to share an account. Activity across devices and nodes is combined for the account.
+
+See [Fair use](/en/account/fair-use) for request bands, Working nodes bands, off-peak hours and recovery. A newly purchased plan in the activation queue does not make its limits apply to the current account before activation.
+
 ## Renewal and automatic switching
 
 You can reorder queued plans. When the current plan expires or runs out of traffic, queued plans are tried in that order before automatic renewal. Automatic renewal is attempted only when enabled and no queued plan is available. Early renewal pays for the next period and adds a queued plan; it does not immediately add traffic to the current plan. It requires automatic renewal to be enabled and must meet the product, stock, and billing-period conditions shown on the page. Turning off automatic renewal forfeits the renewal price and cannot be undone. Check the confirmation before proceeding.

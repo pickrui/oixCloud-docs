@@ -18,6 +18,18 @@ Pay-as-you-go is a separate plan type. You must buy the corresponding plan and m
 
 [Open your account](https://oixcloud.com/user)
 
+## Distinguish limits and recovery conditions {#limits}
+
+| Situation | What to check | What restores service |
+| --- | --- | --- |
+| Low-speed mode after high-speed allowance runs out | Current allowance, expiry, activation queue and automatic renewal | Available traffic on a valid active plan, followed by a system check; adding funds alone does not add traffic to an ordinary plan |
+| Insufficient funds on pay-as-you-go | Balance, commission and billing conditions | Sufficient funds and current plan conditions, followed by a check; points alone are not enough |
+| Fair-use points cap | Points, activity requests and Working nodes | Normal use raises points above 10, then the system removes this cap |
+| Evening rate adjustment | 19:00–24:00 Beijing time and whether the plan is covered | The evening schedule; a score of 50 does not exempt the plan |
+| Plan expiry or an account restriction/ban | Expiry, account state and notices | Continue the plan or contact support according to the cause; points recovery alone does not restore service |
+
+More than one restriction can apply. Unlimited low-speed traffic remains subject to expiry, request/node resource limits and service terms. It is not unlimited speed or permission for sustained abnormal use. See [Fair use](/en/account/fair-use) for the complete scoring and evening rules.
+
 ## A multiplier example
 
 Suppose a node has a `2×` multiplier and a connection uploads `100 MiB` and downloads `400 MiB`. The charged amount is `1000 MiB`, not just the `400 MiB` download. Instantaneous client speed is not remaining allowance.

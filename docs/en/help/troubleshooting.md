@@ -16,6 +16,14 @@ Pause other VPNs or proxies and check that your network works. Then verify that 
 
 Check your remaining high-speed allowance, pay-as-you-go settings, and whether low-speed or fair-use restrictions apply. Compare a few nodes on the same network and at roughly the same time. Speed tests consume traffic. Assess latency, bandwidth, and streaming access separately, and avoid changing every setting based on one test.
 
+## Why am I limited with traffic still remaining? {#limits}
+
+Traffic allowance, points, plan speed and evening adjustments apply separately. Use the [limit comparison](/en/account/traffic#limits), then inspect activity requests and Working nodes in [Account Profile](https://oixcloud.com/user/profile). Few currently open connections do not mean few new requests over a minute; repeated speed tests add activity too.
+
+For a points-limit notice, reduce abnormal activity and observe subsequent points using the [fair-use recovery rules](/en/account/fair-use#recovery). Disconnecting completely leaves no activity records and does not guarantee points will rise. Avoid guessing by repeatedly changing nodes, reinstalling the client or buying plans.
+
+If the account shows a suspension or ban, stop abnormal use and follow [the support instructions](/en/help/support#restrictions). Do not treat it as temporary throttling that points recovery will automatically remove.
+
 ## The node works, but the streaming region is wrong
 
 Check the node actually used by the streaming service's policy group, its exit region, and your streaming settings. Reconnect, then reopen the app. Account region, platform caches, and the platform's own restrictions can also affect the result. Include the specific platform, node, and time of the error in your support ticket.

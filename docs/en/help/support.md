@@ -8,6 +8,23 @@ description: "Contact support with useful details \u2014 setup, practical steps 
 
 Include your device and operating system version, client name and version, the time of the issue, network, node name, exact steps, full error message, and what you have already tried. Attach only redacted screenshots and logs. Contact us through this website's support tickets for account, plan, and node issues. Problems with Surge or OpenClash itself can also be reported to its developer.
 
+## Speed limits, points or account restrictions {#restrictions}
+
+First check [Fair use](/en/account/fair-use) and the [limit comparison](/en/account/traffic#limits). Include:
+
+- The exact restriction message or notice, time and time zone
+- Current plan, expiry, remaining traffic and changes in points; also funding status for pay-as-you-go
+- Activity requests, Working nodes and node names for that period, plus the applications or tasks running then
+- Which abnormal activities you stopped and how points and restrictions changed afterwards
+
+Provide redacted records, not passwords, full subscriptions or access tokens. Specific ban criteria and detection details are not public, and automatic reinstatement is not promised. Submit the actual circumstances for support to review.
+
+## Sold-out plans {#stock}
+
+Read [Sold out and automatic restocking](/en/account/plans#stock). Limited plans are normally not replenished manually and have no fixed restocking time. Stopping renewal must be followed by eligible expiry release; switching alone does not immediately return stock. Repeated tickets requesting restocking are unnecessary.
+
+If you have paid but the plan is not active, separately provide the order ID, payment time, funding record and Plan Management state. Credited funds do not mean plan stock was reserved. Do not pay again for the same issue.
+
 ## UHD redemption is still being confirmed
 
 Use the UHD refresh button in the [Benefits Center](https://oixcloud.com/user/benefits) to check the status. Do not redeem again while it is pending.
