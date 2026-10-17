@@ -24,6 +24,26 @@ For iPhone / iPad.
 
 A single-node link is different from a subscription. Importing a Surge profile only imports supported items; success does not promise full compatibility with the original client.
 
+### One-tap import links {#add-proxy-link}
+
+Supporting versions can open `oixcloud://add-proxy?link=…` or `anywhere://add-proxy?link=…` links. From 2.1.6 (520), the Add Proxy page also accepts the complete wrapper link by paste, scan or text entry. The ellipsis illustrates the format and is not a usable import link.
+
+Check whether the enclosed content is a single node or a subscription, confirm the import, and verify the new list entry. These links may contain node credentials or subscription secrets; do not send them to public conversion services. If the entry is missing or the link is unrecognized, check your installed version or use the provider's original node/subscription link.
+
+## Organize standalone nodes in folders {#folders}
+
+These folder operations apply to iPhone / iPad in 2.1.6 (520) and later supporting builds; availability depends on your release channel. Older illustrations may omit the controls. This does not imply an equivalent management interface on Apple TV.
+
+1. In **Proxies**, select **Servers**, then choose **New Folder** from the toolbar's additional actions.
+2. Enter a name, use **Add Proxy** to select standalone nodes not already in other folders, finish selection and save.
+3. Long-press a node and choose **Move to Folder**. A filed node can be moved to another folder or taken out with **Remove from Folder**.
+4. Long-press a folder and choose **Edit** to rename it, add members or drag members into order. Use **Reorder Proxies** to change the order of folders.
+5. Expand the folder to verify its members and order, then check the selected outbound on Home. Organizing folders does not itself switch the connection.
+
+Folders organize standalone nodes, not nodes inside subscriptions. They are neither policy groups nor proxy chains. Each node appears in only one folder.
+
+**Deleting a folder keeps its nodes**, returning them to the ungrouped list. Removing a member in the editor also only takes it out of the folder. Deleting a node itself is a separate action; check rule references first. Folders sync through the **Proxies** category; see [sync compatibility](/en/oixcloud/sync#folder-sync).
+
 ## Update and filter
 
 <figure class="guide-figure">

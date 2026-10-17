@@ -30,6 +30,14 @@ In **Proxies → Policies**, create a named group, choose its type and add membe
 
 Use a reachable test URL and keep the default interval initially. For Smart priority, lower values are preferred and 1.0 is neutral. Automatic changes normally affect new connections; reopen the target connection when checking a switch.
 
+### Why Auto Select latency may stay unchanged {#retesting}
+
+In the maintained version, the built-in **Auto Select** skips a scheduled background retest if no proxied traffic has occurred since the previous check. An interval does not imply continuous idle testing. Network changes, failed connections or relevant configuration changes can still trigger a check. Do not generalize this behavior to every custom group or another client.
+
+To compare nodes immediately, long-press one under **Proxies → Servers** and choose **Test Latency**. Use **Test All** in the toolbar for a batch, or a folder's menu to test its members. Tap an existing latency result to view details.
+
+After testing finishes, check Auto Select's current choice on Home and create a new request to inspect the outbound. A low manual result does not guarantee automatic selection or service availability. An unchanged number alone is not a connection failure.
+
 ## Proxy chains
 
 <figure class="guide-figure">

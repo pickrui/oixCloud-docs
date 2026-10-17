@@ -1,8 +1,8 @@
 ---
-description: "Automation and on-demand VPN \u2014 setup, practical steps and troubleshooting"
+description: "Automation and on-demand connections \u2014 setup, practical steps and troubleshooting"
 ---
 
-# Automation and on-demand VPN
+# Automation and on-demand connections
 
 For iPhone / iPad.
 

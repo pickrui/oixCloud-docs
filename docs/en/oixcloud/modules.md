@@ -39,6 +39,14 @@ Start with one related module, verify, then enable others individually. Recreate
 
 Scripts can read matching request/response data and make their own network requests. Use trusted authors and keep private arguments out of public reports.
 
+### A host excluded by another module {#module-exclusions}
+
+In versions supporting this behavior, loaded modules share MITM hostname exclusion decisions. If one loaded module excludes a host, the other modules do not decrypt HTTPS for it either. Moving the desired module earlier cannot override that exclusion.
+
+For example, if one loaded module excludes `api.example.com`, another module declaring the host may be unable to run its HTTPS scripts. Check the reason in **Activity → MITM**, then disable relevant modules one at a time and retest with new connections.
+
+Native MITM rule-set exclusions and the device's **Never Decrypt** list have different scopes. See [exclusion scopes](/en/oixcloud/mitm#exclusion-scope). A module containing only exclusions and no loadable content should not be used as a global exclusion switch.
+
 ## Verify a complete import
 
 Identify the problem the module should solve and preserve your previous settings. After import, inspect parsing notices, enabled state, argument values and required MITM hosts. A module name in the list does not prove its script ran.
@@ -52,3 +60,5 @@ Subscription updates can change rules, hosts and scripts. Recheck the same targe
 Use a module's action menu to choose an existing category or **New Category**. The category header menu offers **Edit Category Name** and **Delete Category**. Names must be nonempty and unique.
 
 Deleting a category moves its modules to **Uncategorized** without deleting them. Categories and list dragging organize display; adjust runtime conflict priority in **Module Order**. Verify with new connections instead of assuming list placement changes execution order.
+
+See [External Resources](/en/oixcloud/routing#external-resources) for centralized updates. **Update All** is not limited to search results.

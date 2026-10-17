@@ -25,6 +25,14 @@ Read [Sold out and automatic restocking](/en/account/plans#stock). Limited plans
 
 If you have paid but the plan is not active, separately provide the order ID, payment time, funding record and Plan Management state. Credited funds do not mean plan stock was reserved. Do not pay again for the same issue.
 
+## Payment missing or plan not active {#payment}
+
+Check funding records and Plan Management separately. For crypto orders, follow the [uncredited-payment steps](/en/account/plans#crypto-payment-feedback) on the original order.
+
+Provide the original order ID, payment time and time zone, method, actual amount, funding/plan states and the exact feedback result. For crypto, include the network and transaction hash. Share necessary details only in a private ticket; never send wallet private keys, seed phrases, login passwords or verification codes.
+
+State whether you need a payment-credit check or help with a purchase/activation after credit. Keep the original record while a lookup or manual review is pending. If the feedback entry expired or is missing, say so instead of paying again.
+
 ## UHD redemption is still being confirmed
 
 Use the UHD refresh button in the [Benefits Center](https://oixcloud.com/user/benefits) to check the status. Do not redeem again while it is pending.

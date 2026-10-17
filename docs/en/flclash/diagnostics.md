@@ -41,3 +41,7 @@ Review personal data before copying reports. Include version, time, network type
 Current Windows/macOS versions can copy the local proxy address from diagnostic results, open port, DNS or TUN settings, and show manual system-proxy setup guidance. Read the result's explanation, make one change, return to rerun diagnostics, then retest the original application.
 
 The copied value is the current local listener address, not a subscription URL or a guarantee of access from other LAN devices. Update applications with manually configured proxy addresses after changing the port.
+
+## Connection records without process names
+
+First check capture, the applied profile and whether process rules are needed. Current versions can look up processes only when rules require them, so ordinary records without a process name are not necessarily faulty. See [process lookup](/en/flclash/rules#process-lookup) for the setting and checks.

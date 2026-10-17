@@ -7,7 +7,7 @@ description: Share a LAN proxy, configure local credentials and pause on Wi-Fi o
 ## Share a local proxy
 
 1. Keep FlClash for oixCloud running with a working profile.
-2. Enable **LAN Proxy** under **Tools → Basic configuration**, then check the mixed port in **Port**.
+2. Enable **LAN Proxy** under **Tools → General**, then check the mixed port in **Port**.
 3. On the other device, enter this computer's LAN IP and mixed port, using HTTP or SOCKS as supported by that device's app.
 4. Allow the trusted LAN through the firewall, then test the target app and inspect connection records.
 
@@ -15,7 +15,7 @@ The other device cannot use `127.0.0.1` to refer to this computer. Sharing a lis
 
 ### Local proxy authentication
 
-Enable local proxy authentication under **Tools → Basic configuration**, then open **Account / Password** to view or change the credentials. Enter the same credentials in the other device's proxy settings. These protect the local listener and are separate from your oixCloud account password.
+Enable local proxy authentication under **Tools → General**, then open **Account / Password** to view or change the credentials. Enter the same credentials in the other device's proxy settings. These protect the local listener and are separate from your oixCloud account password.
 
 With authentication enabled, the client does not automatically set the system HTTP proxy. Apps using an explicit proxy must support a username and password. Whether this computer needs TUN depends on how traffic should be captured; see [System Proxy and TUN](/en/flclash/capture).
 

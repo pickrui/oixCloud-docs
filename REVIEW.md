@@ -1,3 +1,17 @@
+# Documentation update — 17 October 2026
+
+Completed the eight follow-up topics in paired Chinese/English articles: password-change consequences and Passkey/TOTP management; module/native/device MITM exclusion scopes; folder sync compatibility; folder operations and wrapped imports; uncredited crypto payment feedback; activity-driven Auto Select retesting; rule-driven process lookup; and centralized external-resource updates. Added concrete Activity and diagnostic-export paths, corrected the nonexistent diagnostic-range selection step, aligned FlClash for oixCloud's current General menu paths, and refined ordinary connection terminology.
+
+Source checks used oixCloud `21587040`, FlClash for oixCloud `c008592c7` and dler-panel `f4a1e4ed`. Verified the folder editor/store and sync schema, import parser, Auto Select scheduler, MITM policy and inspector, external-resource view, Activity/export UI, process-lookup configuration and translations, password/token/main-link handling, Passkey registration, TOTP validation, payment timing and feedback UI. Other repositories contain unrelated local work; no client or panel files were changed. Public prose contains no private implementation code or real credentials.
+
+Folder instructions explicitly start at 2.1.6 (520) on supporting iPhone/iPad builds, with release-channel availability left to the installed version. The guide does not assume equivalent Apple TV management or claim current App Store approval. Payment submission, review, credit and plan activation remain separate outcomes.
+
+Validation: `pnpm build` passed; 103 generated HTML pages and 8,021 internal references resolved. All 51 locale paths, navigation structure and explicit paired section anchors matched. Checked 32 relevant pages at 390 and 1440 pixels (64 cases), without horizontal page overflow or browser warnings/errors. Visually inspected password-change instructions, the MITM comparison table, folder steps and payment feedback. Desktop/mobile language switches preserved the paired article and section; local search found the new folder and sync sections. `git diff --check` passed. Legacy fragment mappings are unchanged.
+
+This is source-backed documentation and local-site validation. No live password changes, Passkey registration, payments, production account tests or client release/deployment checks were performed. Pushing `main` triggers the repository's GitHub Pages publication workflow; its result is separate from these local checks.
+
+---
+
 # Fair-use and inventory documentation — 16 October 2026
 
 Updated five paired topics: Fair use, Plans, Traffic, Troubleshooting and Support. Fair use now documents account-wide activity aggregation, the plan multiplier, both scoring tables with exact boundaries, Beijing-time off-peak hours, score clamping, warnings, recovery and separate evening limits. Ban criteria and detection details remain undisclosed.

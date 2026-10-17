@@ -15,8 +15,8 @@ For iPhone / iPad.
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
 
-1. Keep the VPN connected and reproduce the target operation once.
-2. Filter request records by its domain.
+1. Keep the connection active and reproduce the target operation once.
+2. Open **Activity → Requests** (the network icon) and search for the domain.
 3. Open details and inspect the matched rule, source, route and outbound.
 4. Compare these with the current mode, active network profile, rule priority and policy group.
 
@@ -26,15 +26,17 @@ If the request is absent, check capture, excluded routes and reused connections 
 
 | Symptom | Start with |
 | --- | --- |
-| Wrong or missing DNS answer | DNS inspector and rules |
-| Wrong node | Route diagnostics and request details |
-| HTTPS rewrite not applied | MITM diagnostics, trust and modules |
-| Disconnects after network changes | Network events |
-| Support investigation | Diagnostic Package in Settings |
+| Wrong or missing DNS answer | **Activity → DNS** and DNS rules |
+| Wrong node | **Activity → Routing** and request details |
+| HTTPS rewrite not applied | **Activity → MITM**, trust and modules |
+| Disconnects after network changes | **Activity → Events** |
+| Support investigation | **Settings → Diagnostic Package** |
 
 ## Export
 
-Choose the relevant range in **Settings → Diagnostic Package**, export and inspect it before sharing through a ticket. A diagnostic package describes that session, not every application or node.
+Open **Settings → Diagnostic Package**, select **Export Diagnostic Package**, and wait for the system share sheet. Save and inspect the file before attaching it to a ticket. If export fails, retain the error and retry.
+
+The app generates anonymized diagnostics designed to exclude server addresses, subscription URLs, credentials, certificates and traffic content. Review separately added screenshots and logs yourself. The package describes the state at export; it does not validate every application or node.
 
 Network events help correlate disconnects and reconnects with the time of a network change. Include the time zone and reproduction steps.
 

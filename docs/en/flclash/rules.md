@@ -59,6 +59,20 @@ If it does not match, check capture, Rule mode, higher-priority added rules, the
 
 Global added rules affect multiple profiles; personal rules in a profile override belong to that profile. Put an exception in the profile override when it should apply only to one subscription.
 
+## Process lookup and rule-driven detection {#process-lookup}
+
+Check the switch and its explanation under **Tools → General → Connection → Find process**. The maintained version behaves as follows; check your version if an older build lacks the explanation.
+
+| State | Behavior |
+| --- | --- |
+| Process lookup enabled | Actively looks up processes, with potential overhead |
+| Disabled, but current rules need process information | Still looks up processes when checking those rules; the explanation says “Process rules look up the process only when they are checked” |
+| Disabled and ordinary rules need no process information | Does not actively look up processes for ordinary rules; connection records may lack a process name |
+
+A referenced classical rule provider that could contain process rules can also enable rule-driven detection. Turning off the switch does not prohibit all process identification. The desktop download-application Direct policy below is separate.
+
+When diagnosing a process rule, first confirm that the application's traffic reaches the client. Save and apply the profile, then check the matched rule and outbound on a new connection. A missing process name alone does not prove a rule failed. Do not assume this device can identify processes on another device using its LAN proxy.
+
 ## Desktop BitTorrent applications use Direct {#bittorrent-direct}
 
 The maintained Windows, macOS and Linux versions force recognized local BitTorrent applications, such as qBittorrent, Transmission, Deluge, aria2c and Motrix, to `DIRECT`. This policy precedes Rule and Global modes and cannot be disabled through subscriptions, personal rules or the process-lookup setting.

@@ -79,6 +79,18 @@ Manually switching plans deducts 24 hours from the original plan's validity, the
 
 If the payment provider charged you but the page did not confirm success, check both funding and plan records first. Keep the order ID and time for support: credited funds and a completed plan purchase are separate states, even when the purchase flow handles them automatically.
 
+## Crypto top-up not credited {#crypto-payment-feedback}
+
+These steps apply to cryptocurrency top-up orders shown in checkout. Follow the order page for other payment methods.
+
+1. Open [Checkout](https://oixcloud.com/user/v2/counter), find the original crypto order, and check its ID, creation time and credit status before paying again.
+2. Eligible records offer **Missing Credit Feedback** five minutes after order creation. The entry remains available until 48 hours after creation; use the button shown for that record.
+3. Enter the complete transaction hash and describe the actual payment time, network and problem. TRC20 hashes have 64 hexadecimal characters; Polygon/BSC hashes have 66, including the `0x` prefix. A transaction hash is not an order ID, wallet address or private key.
+4. Read the lookup result. If asked to confirm the credited amount, a shortfall or a network issue, check the explanation before deciding. Keep the message and contact support if unsure.
+5. Confirm credit in the funding records, then check purchase/activation in **Plan Management**. Submission success or a review status does not mean funds were credited or a plan became active.
+
+A missing transaction or mismatched network/recipient may require you to correct the details rather than enter manual review. Do not repeatedly submit the same payment while under review. If the entry is unavailable, its time window has passed or the result remains unclear, provide the original order details in a [payment support ticket](/en/help/support#payment). Do not create duplicate orders to recover an earlier payment, and never provide wallet private keys, seed phrases or verification codes.
+
 ## If automatic continuation did not happen
 
 Check for an eligible queued plan, the renewal switch, sufficient funds and whether the product currently permits renewal. Activation, upgrade and refund controls depend on order state; creating a new order does not reproduce those operations.

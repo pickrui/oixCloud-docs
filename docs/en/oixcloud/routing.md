@@ -41,3 +41,16 @@ Import supported `.arrs`, `.list` or `.conf` files, or subscribe by URL. Review 
 Tap a built-in set name to search or edit its contents. The separate destination control changes routing. **Restore Default** discards local content overrides; an empty override is different from restoring defaults.
 
 GeoIP/ASN needs its database. HTTPS path/header matching needs readable HTTP data and may require [MITM](/en/oixcloud/mitm).
+
+## Check external resource updates together {#external-resources}
+
+On iPhone / iPad, **Settings → External Resources** brings routing rules, modules, MITM rule sets and GeoIP/ASN databases together. Managed account nodes still refresh from the account page.
+
+1. Search by name or source host, then open an entry for details. Resources with a remote source can be updated from their action menu.
+2. Choose **Update All** for all remotely sourced resources and databases. It is not limited to the currently filtered search results.
+3. Wait for completion and inspect success markers and failure messages separately. One failure does not stop other updates; partial completion is not complete success.
+4. Check enabled state, routing destinations, module arguments and MITM hosts, then make a new request to verify the matched rule and outbound. Download completion does not mean a resource is enabled.
+
+Local imports without a remote source do not become the author's newer version automatically. Deleting a resource removes its contributed content and cannot be undone from this entry. Disable it for comparison first and retain its source or a copy for reimport before deletion.
+
+See [modules](/en/oixcloud/modules) and [MITM](/en/oixcloud/mitm) for runtime checks. Builds without **External Resources** can use each resource's own management page.

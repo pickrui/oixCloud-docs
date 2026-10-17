@@ -43,6 +43,36 @@ Refreshing immediately invalidates the old token. Every same-client device shari
 
 You can refresh while client email/password sign-in is disabled; there is no need to allow email/password sign-in temporarily. If the request fails or its result is unclear, reload the token page and check the current token before retrying. Manually created tokens do not have this button; delete and recreate them when a replacement is needed.
 
+## Before changing your password {#change-password}
+
+Changing your password revokes the account's Access Tokens, clears existing Passkeys and deletes the old main subscription URL. Clients using those credentials need a new sign-in or URL. Existing Passkeys can no longer sign in to the website and must be added again.
+
+1. Open [Account Settings → Change Password](https://oixcloud.com/user/edit#settings-password) and enter the current password, new password and confirmation.
+2. Confirm you can update the other devices, submit, and wait for success.
+3. Sign in to the website again if prompted, obtain new client tokens on the token page, and update devices using the old main subscription URL.
+4. Add the Passkeys you still need again. With account sync enabled, check the resulting sign-in state on other devices and Apple TV.
+
+If client email/password sign-in is disabled, follow the [sign-in restriction guidance](#token-only) when obtaining new tokens. Also check each leaked item separately; personal subscription URLs and other items still need the actions in the table below.
+
+## Add and manage Passkeys {#passkey}
+
+A Passkey signs in to the website. It is neither a client Access Token nor a TOTP code.
+
+1. Open [Account Settings → Passkey and Two-step Verification](https://oixcloud.com/user/edit#settings-security) and choose **Add New Passkey**.
+2. Enter your current account password. If TOTP is enabled, also enter the authenticator's current six-digit code, then choose **Continue**.
+3. Follow the browser's face, fingerprint or PIN verification prompt. Wait for the website's success message and confirm the new entry appears in the list.
+4. Rename entries to identify them. Before deleting one, confirm you retain another sign-in method; the deleted Passkey can no longer sign in to this account.
+
+After cancellation or timeout, start again from **Add New Passkey**. Do not reuse a TOTP code already submitted and consumed; wait for a new code. Completing the system prompt alone does not confirm that the website saved the credential. If unsupported, use a browser with Passkey support and check that the page uses HTTPS.
+
+## Enable TOTP two-step verification {#totp}
+
+1. Find **TOTP** on the same settings page. Scan its QR code with your authenticator, or enter the displayed secret manually.
+2. Enter the authenticator's six-digit code, submit activation, and wait for confirmation that TOTP is enabled.
+3. Keep a secure way to recover your authenticator. The QR code and secret generate login codes; never include them in screenshots, logs or support tickets.
+
+Disabling TOTP also requires a valid code. If verification fails, check device time and the selected account, then try a newly generated code. Follow the stated wait period after too many attempts. If you lost the authenticator and cannot verify, explain the situation in a [support ticket](/en/help/support) instead of repeatedly deleting sign-in credentials.
+
 ## Change your sign-in email
 
 1. Open **Change Email** in [Account Settings](https://oixcloud.com/user/edit#settings-email), enter the new address and request a verification code.
@@ -77,6 +107,6 @@ Manual tokens have separate expiry dates. Sign-in tokens are not automatically r
 | A personal subscription URL | Delete or replace that address in Subscription Management and update its clients. |
 | Main subscription or connection credentials | Use the page's reset-connection-parameters/main-subscription action, read its impact and update all affected devices. |
 | Access Token | Refresh a client-issued token or delete the corresponding token; resetting a subscription cannot replace this step. |
-| Sign-in password | Change it and recheck sign-in/token state; changing only a subscription URL is insufficient. |
+| Sign-in password | Follow [password-change guidance](#change-password) to update tokens, the main subscription and Passkeys; changing only a subscription URL is insufficient. |
 
 Retain necessary error and destination information in support material, but hide subscription-path secrets, tokens, node passwords, certificate private keys and full authentication headers.

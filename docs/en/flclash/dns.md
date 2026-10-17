@@ -26,7 +26,7 @@ DNS mode affects domain identification and routing. Some LAN services or apps ne
 
 ## Ports and DNS interception
 
-Check the mixed port under **Tools → Basic configuration → Port**; TUN options are under **Tools → Advanced Configuration → Network**. If a port is occupied, choose an unused one and update apps with manually configured proxy ports.
+Check the mixed port under **Tools → General → Port**; TUN options are under **Tools → Advanced Configuration → Network**. If a port is occupied, choose an unused one and update apps with manually configured proxy ports.
 
 DNS interception, appending system DNS and changing system DNS are different operations. For company domains, confirm resolver reachability and routing; switching to public DNS may not help.
 
@@ -52,7 +52,7 @@ Record original values and test the same domain through the same node. With TUN 
 The current maintained server implementation generates a FlClash for oixCloud profile that sends ordinary default DNS through DoH via the `Proxy` group. It keeps separate resolvers for proxy startup and direct destinations. Domain-specific policies can still take precedence. Older local profiles, custom subscriptions, scripts and DNS overrides may change this behavior; a Connected status alone does not verify it.
 
 1. Use **Sync** on the account page, confirm the managed profile updated successfully, and select it.
-2. Leave **Tools → Advanced Configuration → DNS → Override DNS** off while checking the managed settings. Turn off **Append System DNS** under **Tools → Basic configuration** so ordinary upstream DNS does not also include system resolvers.
+2. Leave **Tools → Advanced Configuration → DNS → Override DNS** off while checking the managed settings. Turn off **Append System DNS** under **Tools → General** so ordinary upstream DNS does not also include system resolvers.
 3. Confirm that `Proxy` ultimately selects a working proxy node, not `DIRECT`. Group names are case-sensitive; other subscriptions may not contain this group.
 4. Enable **TUN** on desktop and confirm authorization and routes. On Android, authorize VPN access and ensure access control includes the test app. System HTTP / HTTPS proxy settings alone cannot guarantee capture of system DNS or every app.
 5. Reopen the target app and use fresh test hostnames to check resolvers and outbounds. Inspect personal overrides and scripts if an updated profile still behaves unexpectedly.
