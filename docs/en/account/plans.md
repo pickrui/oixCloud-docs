@@ -4,6 +4,12 @@ description: "Plans, renewals and switching \u2014 setup, practical steps and tr
 
 # Plans, renewals and switching
 
+::: warning Plans are limited by both time and traffic
+Each plan has a validity period and a traffic allowance. **The plan is exhausted when either its validity ends or its traffic runs out, whichever happens first.** If you use all the traffic before the expiry date, you need to place a new plan order; remaining time alone does not let you keep using the original plan's high-speed allowance.
+
+If you have a queued plan or automatic renewal enabled, the continuation rules below apply. Check [Plan Management](https://oixcloud.com/user/bought) first, then place an order in the [plan store](https://oixcloud.com/user/shop) if no replacement has taken effect, to avoid duplicate purchases.
+:::
+
 ## Add funds, buy, and activate
 
 Adding funds increases your account balance; buying creates a plan order. A new plan can take effect immediately when you have no current plan. If you already have one, the new plan enters the activation queue. Before buying, check the billing period, tier, total traffic, and final price. After payment, open Plan Management to confirm which plan is active.

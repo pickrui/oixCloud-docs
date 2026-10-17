@@ -10,7 +10,9 @@ Uploads and downloads both count toward usage, adjusted by the billing multiplie
 
 ## When does the allowance renew?
 
-Your allowance covers the selected plan period; it does not reset automatically each calendar month. Plan validity and remaining traffic are separate conditions. When an ordinary plan runs out of traffic, the service first tries queued plans or automatic renewal according to your settings. If neither provides a replacement, the plan enters a low-speed state and remains subject to its expiry date.
+Your allowance covers the selected plan period; it does not reset automatically each calendar month. **The plan is exhausted when either its validity ends or its traffic runs out, whichever happens first.** A future expiry date does not mean traffic remains available. Once the traffic runs out, you need to place a new plan order.
+
+When an ordinary plan runs out of traffic, the service first tries already purchased queued plans or automatic renewal according to your settings. Check the result before buying again. If neither provides a replacement, the plan enters a low-speed state and remains subject to its expiry date; low-speed access does not mean the original allowance has been restored. To restore high-speed access, follow [Plans, renewals and switching](/en/account/plans) to complete a purchase and confirm that the new plan is active. Adding funds alone does not add traffic to an ordinary plan.
 
 ## Pay-as-you-go and low-speed mode
 
