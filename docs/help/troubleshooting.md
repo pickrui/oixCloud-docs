@@ -18,7 +18,7 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
 
 ## 流量还有剩余，为什么仍被限速？ {#limits}
 
-剩余流量、积分、套餐速率和晚高峰调整分别生效，先按 [限速类型对照表](/account/traffic#limits) 判断原因，再检查 [账户信息](https://oixcloud.com/user/profile) 的活动请求与 Working nodes。长连接数量少不代表一分钟内建立的新请求少，重复测速也会增加用量
+剩余流量、积分和套餐速率分别生效，先按 [限速类型对照表](/account/traffic#limits) 判断原因，再检查 [账户信息](https://oixcloud.com/user/profile) 的活动请求与 Working nodes。长连接数量少不代表一分钟内建立的新请求少，重复测速也会增加用量
 
 若收到积分限速通知，按 [公平使用算法与恢复条件](/account/fair-use#recovery) 减少异常活动并观察后续积分；完全断开后没有活动记录，不保证积分上涨。不要通过反复更换节点、重装客户端或购买套餐来猜测解决办法
 

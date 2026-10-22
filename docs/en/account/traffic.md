@@ -20,6 +20,28 @@ Pay-as-you-go is a separate plan type. You must buy the corresponding plan and m
 
 [Open your account](https://oixcloud.com/user)
 
+## Low-speed traffic limits {#low-speed}
+
+When an ordinary plan exhausts its high-speed allowance without a replacement plan taking effect, these low-speed tiers apply while the plan remains valid. Check your active plan in the [user center](https://oixcloud.com/user) first.
+
+| Active plan | Low-speed rate cap |
+| --- | --- |
+| Pass Iron, Pass Alu, Pass Bronze | 32&nbsp;KiB/s |
+| Pass Silver, Pass Gold | 128&nbsp;KiB/s |
+| Pass Platinum, Pass Diamond, Pass Titanium, Developer Licenses, Team License, Enterprise Licenses | 256&nbsp;KiB/s |
+
+`1 KiB/s = 1024 bytes per second`. These are rate caps, not guaranteed download speeds. Uploads and downloads are both limited, and connections belonging to the same account within the same node service share the rate; each device or connection does not receive a separate allowance. Routes, protocols and any lower applicable caps also affect actual throughput.
+
+The following conditions also apply:
+
+- **Further reduction**: once cumulative uploads and downloads exceed the plan allowance by **more than 1 TiB (1024 GiB)**, the cap drops to **16 KiB/s**. A lower existing limit still takes precedence.
+- **Gaming nodes**: low-speed mode is capped at **1 B/s**, making normal use impractical. Restore high-speed traffic first.
+- **Pay-as-you-go plans**: the table does not apply. The restricted state is capped at **1 B/s**; meet the current plan's funding requirements and wait for a system check.
+- **Connection count**: in low-speed mode, new connections are refused when the same account already has more than 20 active connections within the same node service. Close unnecessary concurrent tasks before trying again.
+- **Validity and permitted use**: unlimited low-speed traffic remains subject to plan expiry and service terms. It does not mean unlimited speed, unlimited connections or permission for sustained abnormal resource use.
+
+To restore high-speed access, confirm that a new plan is active with available traffic, then allow the system and nodes to synchronize. If an existing connection remains slow, disconnect, reconnect and check again. Adding funds alone does not restore an ordinary plan's traffic, and points recovery does not remove the exhausted-allowance restriction.
+
 ## Distinguish limits and recovery conditions {#limits}
 
 | Situation | What to check | What restores service |
@@ -27,10 +49,9 @@ Pay-as-you-go is a separate plan type. You must buy the corresponding plan and m
 | Low-speed mode after high-speed allowance runs out | Current allowance, expiry, activation queue and automatic renewal | Available traffic on a valid active plan, followed by a system check; adding funds alone does not add traffic to an ordinary plan |
 | Insufficient funds on pay-as-you-go | Balance, commission and billing conditions | Sufficient funds and current plan conditions, followed by a check; points alone are not enough |
 | Fair-use points cap | Points, activity requests and Working nodes | Normal use raises points above 10, then the system removes this cap |
-| Evening rate adjustment | 19:00–24:00 Beijing time and whether the plan is covered | The evening schedule; a score of 50 does not exempt the plan |
 | Plan expiry or an account restriction/ban | Expiry, account state and notices | Continue the plan or contact support according to the cause; points recovery alone does not restore service |
 
-More than one restriction can apply. Unlimited low-speed traffic remains subject to expiry, request/node resource limits and service terms. It is not unlimited speed or permission for sustained abnormal use. See [Fair use](/en/account/fair-use) for the complete scoring and evening rules.
+More than one restriction can apply. Unlimited low-speed traffic remains subject to expiry, request/node resource limits and service terms. It is not unlimited speed or permission for sustained abnormal use. See [Fair use](/en/account/fair-use) for scoring and recovery conditions.
 
 ## A multiplier example
 

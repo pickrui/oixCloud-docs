@@ -18,7 +18,7 @@ Check your remaining high-speed allowance, pay-as-you-go settings, and whether l
 
 ## Why am I limited with traffic still remaining? {#limits}
 
-Traffic allowance, points, plan speed and evening adjustments apply separately. Use the [limit comparison](/en/account/traffic#limits), then inspect activity requests and Working nodes in [Account Profile](https://oixcloud.com/user/profile). Few currently open connections do not mean few new requests over a minute; repeated speed tests add activity too.
+Traffic allowance, points and plan speed apply separately. Use the [limit comparison](/en/account/traffic#limits), then inspect activity requests and Working nodes in [Account Profile](https://oixcloud.com/user/profile). Few currently open connections do not mean few new requests over a minute; repeated speed tests add activity too.
 
 For a points-limit notice, reduce abnormal activity and observe subsequent points using the [fair-use recovery rules](/en/account/fair-use#recovery). Disconnecting completely leaves no activity records and does not guarantee points will rise. Avoid guessing by repeatedly changing nodes, reinstalling the client or buying plans.
 

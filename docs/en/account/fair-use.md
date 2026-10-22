@@ -95,16 +95,9 @@ Reduce the abnormal requests and unnecessary node use, then observe points durin
 
 10 Mbps is a rate cap, theoretically about 1.25 MB/s; actual throughput also depends on the route, protocol and other restrictions. Points recovery removes only this cap. It does not automatically resolve exhausted traffic, expiry, insufficient funds or an account ban.
 
-## Evening peak and other limits {#other-limits}
+## Other limits {#other-limits}
 
-Evening speed adjustments are separate from points and from the early-morning scoring bands. For plans covered by an enabled evening policy, **19:00–24:00 Beijing time** uses these rules:
-
-- For a plan with a speed cap, multiply the plan rate by the configured factor, round down to whole Mbps and use at least 1 Mbps. The default factor is 0.5; enablement, covered plans and the actual factor depend on current service settings.
-- For a plan with unlimited speed, the evening target cap is 600 Mbps.
-- If the calculated evening target is exactly 10 Mbps, use 11 Mbps.
-- Keep a lower existing cap. At midnight, restore rates lowered by this adjustment; intervening plan changes or other restrictions follow their own rules.
-
-The evening adjustment itself does not deduct points. See [Traffic and billing](/en/account/traffic#limits) for exhausted high-speed allowance, pay-as-you-go funding and expiry. Unlimited low-speed traffic does not mean unlimited requests, nodes, validity or permitted uses.
+See [Low-speed traffic limits](/en/account/traffic#low-speed) for rate tiers, further reductions and scope after high-speed traffic runs out, and [Traffic and billing](/en/account/traffic#limits) for pay-as-you-go funding and expiry. These conditions are separate from fair-use points; points recovery does not automatically remove other restrictions.
 
 ## Violations and account bans {#restrictions}
 

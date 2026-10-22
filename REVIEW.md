@@ -1,3 +1,13 @@
+# Low-speed traffic documentation — 22 October 2026
+
+Added paired 32/128/256 KiB/s low-speed rate tables and scope, further reductions, gaming-node and pay-as-you-go restrictions, connection limits and recovery steps. Updated Fair use and Troubleshooting cross-references while preserving existing section anchors and legacy panel fragment mappings.
+
+Source checks used dler-server `f7a000b` (rate selection, shared upload/download limiter, connection admission and UDP handling) and dler-panel `b30e4b6a` (plan names/ranks, node category and traffic-state recovery). Public pages contain user-facing behavior only, with no private source code or account data.
+
+Validation: `pnpm build` and `git diff --check` passed. All 103 generated HTML pages and 6,980 internal links resolved; all 51 locale paths matched. The six edited pages were checked at 390px and 1440px, with no horizontal page overflow or browser errors. Desktop/mobile language switching retained the paired traffic article, and both language rate tables were visually inspected. Speed values and restrictions were verified against maintained source, not measured on production accounts. The paired server change passed race-enabled tests for ratelimit, rate-limiter, repo, tunnel and Snell; the severe tier is 16 KiB/s after more than 1 TiB beyond quota. Source publication does not confirm deployment to running nodes.
+
+---
+
 # Documentation update — 17 October 2026
 
 Completed the eight follow-up topics in paired Chinese/English articles: password-change consequences and Passkey/TOTP management; module/native/device MITM exclusion scopes; folder sync compatibility; folder operations and wrapped imports; uncredited crypto payment feedback; activity-driven Auto Select retesting; rule-driven process lookup; and centralized external-resource updates. Added concrete Activity and diagnostic-export paths, corrected the nonexistent diagnostic-range selection step, aligned FlClash for oixCloud's current General menu paths, and refined ordinary connection terminology.
@@ -14,7 +24,7 @@ This is source-backed documentation and local-site validation. No live password 
 
 # Fair-use and inventory documentation — 16 October 2026
 
-Updated five paired topics: Fair use, Plans, Traffic, Troubleshooting and Support. Fair use now documents account-wide activity aggregation, the plan multiplier, both scoring tables with exact boundaries, Beijing-time off-peak hours, score clamping, warnings, recovery and separate evening limits. Ban criteria and detection details remain undisclosed.
+Updated five paired topics: Fair use, Plans, Traffic, Troubleshooting and Support. Fair use now documents account-wide activity aggregation, the plan multiplier, both scoring tables with exact boundaries, Beijing-time off-peak hours, score clamping, warnings and recovery. Ban criteria and detection details remain undisclosed.
 
 Inventory wording follows the implementation: disabling renewal does not immediately return stock, and switching, upgrading or refunding does not return the original stock. Eligible expired-plan termination/cleanup returns stock; normal automatic renewal does not deduct again, while early renewal does. The operator's policy is normally not to replenish limited plans manually, with no fixed restocking schedule.
 
@@ -22,7 +32,7 @@ Source basis: dler-panel `0d733f60` (`UserJob`, `Tools`, `Boot`, `FinanceJob`, `
 
 Validation: `pnpm build` passed; 103 generated pages and 7,967 internal references resolved. Ten numerical examples and time/threshold boundaries matched the current PHP methods without loading runtime configuration or a database. Both changed Smarty templates compiled under PHP 7.4.33; new translation keys resolved. Checked the ten guide pages and two fictional panel previews at 390 and 1440 pixels (24 cases), without horizontal page overflow or browser console warnings/errors. Visually inspected both language tables, the stock explanation and panel snippets; the language switch retained the paired article and section.
 
-Pre-push review: generated 516 quantity and time-boundary cases from the bilingual scoring tables; all matched the maintained PHP implementation. Rebuilt the site and rechecked 103 pages, 7,967 internal references, paired section anchors, translation keys and Smarty compilation. The panel documentation patch is isolated on a branch based on remote `2fa6532e`, leaving 24 existing local commits unpublished. The guide describes maintained `0d733f60`; deployment must include its lower-speed preservation and evening restoration changes, which are outside this documentation patch. Neither documentation push publishes the site or deploys the panel.
+Pre-push review: generated 516 quantity and time-boundary cases from the bilingual scoring tables; all matched the maintained PHP implementation. Rebuilt the site and rechecked 103 pages, 7,967 internal references, paired section anchors, translation keys and Smarty compilation. The panel documentation patch is isolated on a branch based on remote `2fa6532e`, leaving 24 existing local commits unpublished. The guide describes maintained `0d733f60`; deployment must include its lower-speed preservation changes, which are outside this documentation patch. Neither documentation push publishes the site or deploys the panel.
 
 Checks used a temporary source copy and fictional panel data. No live account, database, production configuration, purchase, notification or deployment was used. This record confirms local documentation validation only; GitHub Pages and the panel are published separately.
 
