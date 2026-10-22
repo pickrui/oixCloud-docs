@@ -43,3 +43,9 @@ For streaming-region requirements, see [streaming settings](/en/account/unlock);
 4. Verify the exit in your actual application and allow time to resolve balance or plan eligibility before renewal.
 
 Dedicated IPs and plans have separate expiry requirements. A long queued plan can make a single 30-day automatic IP extension insufficient; follow the renewal dialog's eligibility details.
+
+## Check service status {#service-status}
+
+After signing in, open [Service status](https://oixcloud.com/status) to check status and update times for nodes visible to your account. The page refreshes automatically and reports refresh failures before retrying. Node status is not an end-to-end connection test from your current network to the destination service.
+
+If status is normal but access still fails, update the client configuration and compare against the same destination. Follow [Troubleshooting](/en/help/troubleshooting) and include the node, time and exact error.

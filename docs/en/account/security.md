@@ -38,10 +38,28 @@ Older pages may label this option **Access Token only**. Its actual scope is ema
 Refreshing immediately invalidates the old token. Every same-client device sharing it must switch to the new token. The client identity and subscription binding stay the same.
 
 1. Open the [Access Token page](https://oixcloud.com/user/token) and find the intended client under **Issued by client login**.
-2. Click **Refresh**, to the left of **Delete**, review the affected devices, and confirm.
+2. Click **Regenerate** on that entry, review the affected devices, and confirm.
 3. Wait for the page to reload, copy the new token, and update every device using it. If your Apple TV account is synced from an iPhone, sync it again.
 
 You can refresh while client email/password sign-in is disabled; there is no need to allow email/password sign-in temporarily. If the request fails or its result is unclear, reload the token page and check the current token before retrying. Manually created tokens do not have this button; delete and recreate them when a replacement is needed.
+
+## Create a manual token {#manual-token}
+
+1. On [Access Token Management](https://oixcloud.com/user/token), choose **New Token**, select its validity, add a recognizable note and check the subscription binding.
+2. Submit and wait for success. After the page reloads, find the new entry under **Tokens you created**.
+3. An account can retain up to 10 manual tokens. Client sign-in tokens are listed separately and do not use this quota.
+4. Read any failure message. If the outcome is unclear, reload the list to see whether a token was created before submitting again.
+
+Manual tokens stop authenticating at expiry and do not renew automatically through use. A subscription URL is not a token. Do not publish token screenshots.
+
+## Telegram binding and daily notifications {#notifications}
+
+1. Open [Account Settings → Basic Account Settings](https://oixcloud.com/user/edit#settings-basic) and check the Telegram card. If unbound, use its binding link and follow the bot's instructions.
+2. **No Telegram username set** under **Bound Account** still means the account is bound. You do not need to bind it again just to add a username.
+3. Set email and Telegram independently under **Daily Notification Subscription**, then wait for the status text to confirm the state. Telegram notifications are unavailable until the account is bound.
+4. If saving fails or is unconfirmed, reload the page to check the actual state before retrying. Do not click repeatedly while a save is pending.
+
+These switches control daily notifications only; they do not establish whether security, payment or service notices are disabled. Confirm you no longer need the Telegram binding before removing it.
 
 ## Before changing your password {#change-password}
 
@@ -66,6 +84,8 @@ A Passkey signs in to the website. It is neither a client Access Token nor a TOT
 After cancellation or timeout, start again from **Add New Passkey**. Do not reuse a TOTP code already submitted and consumed; wait for a new code. Completing the system prompt alone does not confirm that the website saved the credential. If unsupported, use a browser with Passkey support and check that the page uses HTTPS.
 
 ## Enable TOTP two-step verification {#totp}
+
+Once enabled, password sign-in to the website also requires a six-digit code. Follow verification prompts for sensitive actions that request it. A Passkey is a separate sign-in method, not a one-time password.
 
 1. Find **TOTP** on the same settings page. Scan its QR code with your authenticator, or enter the displayed secret manually.
 2. Enter the authenticator's six-digit code, submit activation, and wait for confirmation that TOTP is enabled.

@@ -22,7 +22,7 @@ Traffic allowance, points and plan speed apply separately. Use the [limit compar
 
 For a points-limit notice, reduce abnormal activity and observe subsequent points using the [fair-use recovery rules](/en/account/fair-use#recovery). Disconnecting completely leaves no activity records and does not guarantee points will rise. Avoid guessing by repeatedly changing nodes, reinstalling the client or buying plans.
 
-If the account shows a suspension or ban, stop abnormal use and follow [the support instructions](/en/help/support#restrictions). Do not treat it as temporary throttling that points recovery will automatically remove.
+Automated abnormal-use detection is active. If the account shows a suspension or ban, stop abnormal use and follow [the support instructions](/en/help/support#restrictions). Do not treat it as temporary throttling that points recovery will automatically remove.
 
 ## The node works, but the streaming region is wrong
 

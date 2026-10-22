@@ -8,6 +8,8 @@ Personal plans are for your own devices and must not be lent, jointly purchased,
 
 Fair-use points measure request and node resource use separately from traffic allowance, account balance and benefit credits. Having traffic left does not prevent a resource-use restriction.
 
+**Automated abnormal-use detection and account protection are active.** The platform continually checks for abnormal use, with human review where needed. The points rules explain resource use and recovery; ban criteria and detection details for prohibited sharing and other violations are not public.
+
 ## Find your threshold and points {#check}
 
 1. Find the **Threshold** (临界值) of your current purchased plan in the [plan store](https://oixcloud.com/user/shop). This guide calls it `K`.
@@ -97,13 +99,13 @@ Reduce the abnormal requests and unnecessary node use, then observe points durin
 
 ## Other limits {#other-limits}
 
-See [Low-speed traffic limits](/en/account/traffic#low-speed) for rate tiers, further reductions and scope after high-speed traffic runs out, and [Traffic and billing](/en/account/traffic#limits) for pay-as-you-go funding and expiry. These conditions are separate from fair-use points; points recovery does not automatically remove other restrictions.
+See [Low-speed traffic](/en/account/traffic#low-speed) for rate tiers and scope after high-speed traffic runs out, and [Traffic and billing](/en/account/traffic#limits) for pay-as-you-go funding and expiry. These conditions are separate from fair-use points; points recovery does not automatically remove other restrictions.
 
 ## Violations and account bans {#restrictions}
 
 Sharing, jointly purchasing or reselling a personal account, unauthorized P2P/BitTorrent, sustained abnormal resource use, scanning, attacks and other service-term violations may result in restricted service, suspension or an account ban. **A normal score or a score above the speed-limit threshold does not authorize prohibited activity or guarantee protection from a ban.**
 
-Bans are handled separately from temporary points-based throttling, with no promise of automatic reinstatement. To prevent circumvention, specific ban criteria, detection methods and enforcement details are not public. Contact support if you believe an account decision needs review.
+Bans are handled separately from temporary points-based throttling, with no promise of automatic reinstatement. To prevent circumvention, specific ban criteria, detection methods and enforcement details are not public. If you believe a decision is incorrect, submit a [support ticket](/en/help/support#restrictions) describing the actual use and steps already taken to request human review.
 
 ## What to do when restricted {#help}
 

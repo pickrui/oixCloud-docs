@@ -1,10 +1,20 @@
+# Panel guidance and account protection — 23 October 2026
+
+Updated six paired topics: account security, nodes, traffic, fair use, troubleshooting and support. The guides now match the panel's token creation/regeneration labels, Telegram binding without a username, daily-notification save states, TOTP wording and member service-status page. Published points tables, calculation examples and recovery conditions remain available. The account-protection notice explains automated abnormal-use detection and human review without publishing ban criteria or detection details. Current low-speed rate tiers remain documented; additional resource restrictions are described without internal trigger values.
+
+Validation: `pnpm build` passed in an isolated source copy using the repository's installed dependencies. All 103 generated HTML pages, 6,990 internal links and 51 locale pairs passed link/anchor checks. The 12 edited guide pages were checked at 390px and 1440px without horizontal page overflow or browser script errors; desktop and mobile language switching retained the fair-use article and recovery section. A temporary PHP 8.5.12 check compared 888 boundary cases from the bilingual points tables with the maintained implementation. Low-speed rate tiers were checked against current server source. No live account, production configuration, payment, database or notification was used.
+
+These checks establish local source and documentation behavior only. They do not verify production deployment, live network speeds or GitHub Pages publication. No commit, push or deployment was performed in this pass.
+
+---
+
 # Low-speed traffic documentation — 22 October 2026
 
 Added paired 32/128/256 KiB/s low-speed rate tables and scope, further reductions, gaming-node and pay-as-you-go restrictions, connection limits and recovery steps. Updated Fair use and Troubleshooting cross-references while preserving existing section anchors and legacy panel fragment mappings.
 
 Source checks used dler-server `f7a000b` (rate selection, shared upload/download limiter, connection admission and UDP handling) and dler-panel `b30e4b6a` (plan names/ranks, node category and traffic-state recovery). Public pages contain user-facing behavior only, with no private source code or account data.
 
-Validation: `pnpm build` and `git diff --check` passed. All 103 generated HTML pages and 6,980 internal links resolved; all 51 locale paths matched. The six edited pages were checked at 390px and 1440px, with no horizontal page overflow or browser errors. Desktop/mobile language switching retained the paired traffic article, and both language rate tables were visually inspected. Speed values and restrictions were verified against maintained source, not measured on production accounts. The paired server change passed race-enabled tests for ratelimit, rate-limiter, repo, tunnel and Snell; the severe tier is 16 KiB/s after more than 1 TiB beyond quota. Source publication does not confirm deployment to running nodes.
+Validation: `pnpm build` and `git diff --check` passed. All 103 generated HTML pages and 6,980 internal links resolved; all 51 locale paths matched. The six edited pages were checked at 390px and 1440px, with no horizontal page overflow or browser errors. Desktop/mobile language switching retained the paired traffic article, and both language rate tables were visually inspected. Speed values and restrictions were verified against maintained source, not measured on production accounts. The paired server change passed race-enabled tests for ratelimit, rate-limiter, repo, tunnel and Snell; additional restrictions apply to severe overuse. Source publication does not confirm deployment to running nodes.
 
 ---
 

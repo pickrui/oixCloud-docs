@@ -17,7 +17,7 @@ First check [Fair use](/en/account/fair-use) and the [limit comparison](/en/acco
 - Activity requests, Working nodes and node names for that period, plus the applications or tasks running then
 - Which abnormal activities you stopped and how points and restrictions changed afterwards
 
-Provide redacted records, not passwords, full subscriptions or access tokens. Specific ban criteria and detection details are not public, and automatic reinstatement is not promised. Submit the actual circumstances for support to review.
+Provide redacted records, not passwords, full subscriptions or access tokens. Automated abnormal-use detection and account protection are active. Specific criteria and detection details are not published, and automatic reinstatement is not promised. If you believe an action is incorrect, explain the actual use and circumstances and request human review.
 
 ## Sold-out plans {#stock}
 
