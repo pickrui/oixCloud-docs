@@ -14,6 +14,8 @@ Your allowance covers the selected plan period; it does not reset automatically 
 
 When an ordinary plan runs out of traffic, the service first tries already purchased queued plans or automatic renewal according to your settings. Check the result before buying again. If neither provides a replacement, the plan enters a low-speed state and remains subject to its expiry date; low-speed access does not mean the original allowance has been restored. To restore high-speed access, follow [Plans, renewals and switching](/en/account/plans) to complete a purchase and confirm that the new plan is active. Adding funds alone does not add traffic to an ordinary plan.
 
+Ordinary plans earn no benefit credits once their traffic runs out, even if low-speed access continues until expiry. See [Benefit credits](/en/account/plans#benefit-credits) for eligibility and amounts.
+
 ## Pay-as-you-go and low-speed mode
 
 Pay-as-you-go is a separate plan type. You must buy the corresponding plan and meet the balance requirement shown on its page; traffic charges come from your account balance first, then from commission for any shortfall. Check the store and account dashboard for plan fees, traffic prices, and speed-limit conditions. An ordinary plan entering low-speed mode does not automatically enable pay-as-you-go. Check your renewal or plan-switching options to restore high-speed access.

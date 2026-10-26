@@ -56,6 +56,21 @@ See [Fair use](/en/account/fair-use) for request bands, Working nodes bands, off
 
 You can reorder queued plans. When the current plan expires or runs out of traffic, queued plans are tried in that order before automatic renewal. Automatic renewal is attempted only when enabled and no queued plan is available. Early renewal pays for the next period and adds a queued plan; it does not immediately add traffic to the current plan. It requires automatic renewal to be enabled and must meet the product, stock, and billing-period conditions shown on the page. Turning off automatic renewal forfeits the renewal price and cannot be undone. Check the confirmation before proceeding.
 
+## Benefit credits {#benefit-credits}
+
+Annual Pass Gold plans or above, including annual pay-as-you-go plans, earn benefit credits at expiry. Developer accounts are excluded:
+
+| Plan state at expiry | Credits awarded |
+| --- | --- |
+| Ordinary plan with more than 0 but less than 50% of traffic remaining | 5 |
+| Ordinary plan with at least 50% of traffic remaining | 10 |
+| Ordinary plan with exhausted traffic | None |
+| Pay-as-you-go plan meeting the eligibility requirements above | Fixed 5 |
+
+**Ordinary plans earn no benefit credits once their traffic runs out, even if low-speed access continues until expiry.** After renewal or switching, the new plan is assessed separately under the conditions above. Plans ended early, refunded or not yet activated earn no credits.
+
+Check your balance and redemption options in the [Benefits Center](https://oixcloud.com/user/benefits).
+
 ## Upgrade or use your next plan early
 
 Upgrades and exchanges currently apply only between annual plans. An active annual plan can only be upgraded to a higher tier and must have at least 60 days remaining. An unused queued annual plan may be exchanged under the conditions shown on the page. Check the preview in Plan Management for eligibility, the price difference, fees, and remaining benefits.
