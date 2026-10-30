@@ -12,7 +12,7 @@ description: OpenWrt 上安装 OpenClash、登录账户、选择专用配置并�
 | --- | --- |
 | 固件 | OpenWrt / LuCI，且软件源能提供所需内核模块与依赖；不能只凭路由器型号判断 |
 | 包管理器 | `opkg` 选 `.ipk`，`apk` 选 `.apk`；LuCI 插件包标记为 `all`，代理内核仍须匹配 CPU 架构 |
-| 防火墙 | 按 Firewall4 / nftables 或 Firewall3 / iptables 选择依赖，见 [维护仓库的安装说明](https://github.com/pickrui/OpenClash#快速开始) |
+| 防火墙 | 按 Firewall4 / nftables 或 Firewall3 / iptables 选择依赖，见 [维护仓库的安装说明](https://github.com/pickrui/OpenClash/tree/dev#快速开始) |
 | 空间与内存 | 为插件、代理内核、配置和运行缓存预留空间；缺少对应固件版本的内核模块时应先解决软件源匹配问题 |
 
 ## 1. 安装或更新插件
@@ -68,4 +68,4 @@ UDP 转发开启后仍受端口范围限制。端口过滤不等于识别所有 
 | 登录成功却没有配置 | 检查配置订阅中的 `oixCloud - smart`，更新成功后明确切换到该配置 |
 | 路由器已运行，设备仍异常 | 核对设备网关、DNS、访问控制和 IPv6，再看连接记录 |
 
-反馈前在「运行日志 → 生成日志」导出调试信息，附插件与内核版本、运行模式和复现时间，并隐藏凭据。参考 [维护中的 OpenClash 集成](https://github.com/pickrui/OpenClash) 与 [OpenClash 上游安装说明](https://github.com/vernesong/OpenClash#快速开始)
+反馈前在「运行日志 → 生成日志」导出调试信息，附插件与内核版本、运行模式和复现时间，并隐藏凭据。参考 [维护中的 OpenClash 集成](https://github.com/pickrui/OpenClash/tree/dev) 与 [OpenClash 上游安装说明](https://github.com/vernesong/OpenClash#快速开始)

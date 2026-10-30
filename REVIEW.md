@@ -1,3 +1,21 @@
+# External link audit — 2026-10-30
+
+Inventoried 65 distinct external links in the rendered site, including article links, homepage actions and the shared GitHub navigation. Eleven installer/archive links were covered by the preceding download audit; this pass fetched the other 54 destinations with GET requests and inspected final URLs, titles, page content and fragment targets. Localhost diagnostic commands, DNS endpoint examples and XML namespaces are not website links and were not treated as dead pages.
+
+| Finding | Correction / evidence |
+| --- | --- |
+| OpenClash maintained installation link points to a missing fragment | The public `pickrui/OpenClash` default branch is `master`, whose README has no `快速开始` section. The public `dev` branch contains the maintained installation instructions and the live `user-content-快速开始` anchor. Both locale guides now use `/tree/dev#快速开始`; the maintained-integration reference also uses `/tree/dev` instead of the older default branch. The upstream installation link has a working section and stays unchanged. |
+| English rule reference opens the Chinese mihomo page | Use the official English `/en/config/rules/` counterpart, verified by the Chinese page's language link and the English page title/content. The Chinese reference remains on the Chinese page and its label identifies the official source. |
+| Apple certificate guide selects a locale by redirect | Both pages use article 102390, the current manual certificate-trust guide. Link directly to `/zh-cn/102390` in Chinese and `/en-us/102390` in English instead of relying on the locale-neutral redirect. Both official localized pages were verified with GET/content checks. |
+
+Retained working Tailscale subnet-router/exit-node guides, mihomo DNS/TUN pages and strict-route anchors, the DirectX repair author's article, Surge site/update feed, public Helper/Docker guides and their English fragments, GitHub release entry points, the public site terms and homepage/software-center sections. Rolling `/releases/latest` links intentionally redirect to current tags; they should not be pinned to today's version. Microsoft's version-selector redirect also preserves the intended current runtime documentation.
+
+Twenty protected oixCloud URLs (including four settings fragments) correctly redirect unauthenticated visitors to sign-in. All corresponding GET routes and all four settings target IDs were verified against committed panel source `7fc1c5785c6cee4977e0b6bfe3b75a730c6c47b9`; no account operations, credential handling or authenticated page changes were performed. A login redirect alone was not taken as proof of a valid account destination.
+
+Apple App Store remains region-dependent: curl in this environment redirected even the explicit US URL to the China storefront homepage, while the web reader retrieved the intended oixCloud app at the existing US URL. The download instructions already require an Apple Account outside mainland China, so the documented link was preserved rather than replaced on the strength of a region-specific probe. This audit does not establish universal availability across regions or logged-in account permissions.
+
+Validation: `pnpm build` and `git diff --check` passed. The generated site has 103 HTML pages, 7,106 valid internal references, 172 wrapped tables and 51 matching locale pairs. The six edited pages passed desktop (1440 px) and mobile (390 px) inspection: no horizontal page overflow or broken images across 12 cases. Desktop and mobile language switching retained the matching article and common-ports anchor. All five new external URLs returned HTTP 200; the maintained OpenClash section fragment was found in the served page. Locale-specific references increase the final inventory to 67 distinct external URLs. No client, navigation, illustration or legacy fragment-mapping files were changed.
+
 # Download and system requirement audit — 2026-10-30
 
 Audited all Markdown pages in both locales for download links and platform requirements. Updated nine paired pages: client index, first-use guide, FlClash connection guide, Apple connection/TV guides, Helper Mac/Linux guides, OpenClash and oixClash. Existing navigation, legacy fragment mappings and illustrations were preserved.

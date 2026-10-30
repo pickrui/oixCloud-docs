@@ -32,7 +32,7 @@ For iPhone / iPad. Ordinary proxy access does not require MITM.
 Replacing the local certificate requires installing and trusting the new one; an old installed profile will not trust it. Regenerating certificates is not a general fix for connection failures.
 :::
 
-Installing the profile and trusting its root are separate steps. See [Apple's certificate-trust instructions](https://support.apple.com/102390).
+Installing the profile and trusting its root are separate steps. See [Apple's certificate-trust instructions](https://support.apple.com/en-us/102390).
 
 ## Enable and verify rules
 

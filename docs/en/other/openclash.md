@@ -12,7 +12,7 @@ For OpenWrt / LuCI. The [download center](https://oixcloud.com/client#router) li
 | --- | --- |
 | Firmware | OpenWrt / LuCI with feeds supplying the required kernel modules and dependencies; the router model alone is insufficient. |
 | Package manager | `.ipk` for `opkg`, `.apk` for `apk`. The LuCI plugin package is marked `all`; the proxy core still needs the correct CPU architecture. |
-| Firewall | Match dependencies to Firewall4 / nftables or Firewall3 / iptables; see the [maintained repository's installation instructions](https://github.com/pickrui/OpenClash#快速开始). |
+| Firewall | Match dependencies to Firewall4 / nftables or Firewall3 / iptables; see the [maintained repository's installation instructions](https://github.com/pickrui/OpenClash/tree/dev#快速开始). |
 | Storage and memory | Reserve space for the plugin, core, configurations and runtime cache. Resolve firmware/feed mismatches if matching kernel modules are unavailable. |
 
 ## 1. Install or update the plugin
@@ -68,4 +68,4 @@ An account card, latency result or Running status alone does not prove that devi
 | Signed in but no profile | Check and update `oixCloud - smart` under Config Subscribe, then explicitly switch to it. |
 | Router running but device fails | Check device gateway, DNS, access controls and IPv6, then inspect connections. |
 
-Before reporting, generate debug logs from **Running Log → Generate Log** and include plugin/core versions, mode and reproduction time, with credentials removed. References: [maintained OpenClash integration](https://github.com/pickrui/OpenClash) and [OpenClash upstream installation guide](https://github.com/vernesong/OpenClash#快速开始).
+Before reporting, generate debug logs from **Running Log → Generate Log** and include plugin/core versions, mode and reproduction time, with credentials removed. References: [maintained OpenClash integration](https://github.com/pickrui/OpenClash/tree/dev) and [OpenClash upstream installation guide](https://github.com/vernesong/OpenClash#快速开始).

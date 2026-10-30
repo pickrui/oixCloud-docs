@@ -49,7 +49,7 @@ Create named groups with valid members before referencing them. Recheck rule tar
 
 Direct edits to a downloaded subscription may disappear on sync. Keep lasting changes in the appropriate override controls.
 
-For rule types and matching syntax, see the [mihomo routing-rule reference](https://wiki.metacubex.one/config/rules/). Use node or group names that exist in your active profile rather than copying example targets blindly.
+For rule types and matching syntax, see the [mihomo routing-rule reference](https://wiki.metacubex.one/en/config/rules/). Use node or group names that exist in your active profile rather than copying example targets blindly.
 
 ## Merge example: change one domain's outbound
 
