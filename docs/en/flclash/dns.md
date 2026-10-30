@@ -7,18 +7,20 @@ description: "DNS overrides and network settings \u2014 setup, practical steps a
 ## Begin with default DNS
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-dns-zh.svg?v=20260929-3" target="_blank" rel="noopener" aria-label="Configure DNS overrides">
-    <img src="/illustrations/flclash-dns-zh.svg?v=20260929-3" alt="Configure DNS overrides" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-dns-zh.svg?v=20261030" target="_blank" rel="noopener" aria-label="Configure DNS overrides">
+    <img src="/illustrations/flclash-dns-zh.svg?v=20261030" alt="Configure DNS overrides" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
 
-Open **Tools → Advanced Configuration → DNS**. When Override DNS is enabled, these settings replace the profile's DNS options. Editing fields without enabling the override may leave the original profile in control.
+Open **Tools → Advanced Configuration → DNS**. The current interface uses **Add override entry** to choose individual fields. Added entries replace the corresponding DNS fields across profiles; fields not added inherit each profile's own settings. There is no longer one master switch replacing the whole DNS section.
 
-1. Record the current profile and override state.
-2. Change only the setting being tested, using a reachable resolver.
+A custom profile's own DNS settings take precedence over app-level overrides. Scripts may change the effective configuration further. Check the selected profile and its personal settings before diagnosing.
+
+1. Record the current profile, added override entries and original values.
+2. Use **Add override entry** for the field being tested, using a reachable resolver.
 3. Reapply the profile and test the same domain.
-4. Restore the original value if it does not help, then investigate nodes or rules.
+4. Restore the original value if it does not help. Remove a newly added entry to restore inheritance for that field, then investigate nodes or rules.
 
 ## Fake-IP and real addresses
 
@@ -41,7 +43,7 @@ Check system time, client version, profile and networking. Windows/macOS diagnos
 | Nameservers | Resolve ordinary destination domains |
 | Proxy nameservers | Resolve proxy servers' own hostnames |
 | Respect rules | Routes DNS connections according to rules; avoid circular DNS/proxy dependencies |
-| Override DNS | Determines whether these client options replace the profile's DNS settings |
+| Add / remove override entries | Selects which fields replace the profile's values; fields not added remain inherited |
 
 For failed node-hostname resolution, inspect proxy nameservers first. For internal company domains, check internal DNS and network reachability. Repeatedly switching fake-IP and real-address modes is not a substitute for identifying the failing stage.
 
@@ -52,7 +54,7 @@ Record original values and test the same domain through the same node. With TUN 
 The current maintained server implementation generates a FlClash for oixCloud profile that sends ordinary default DNS through DoH via the `Proxy` group. It keeps separate resolvers for proxy startup and direct destinations. Domain-specific policies can still take precedence. Older local profiles, custom subscriptions, scripts and DNS overrides may change this behavior; a Connected status alone does not verify it.
 
 1. Use **Sync** on the account page, confirm the managed profile updated successfully, and select it.
-2. Leave **Tools → Advanced Configuration → DNS → Override DNS** off while checking the managed settings. Turn off **Append System DNS** under **Tools → General** so ordinary upstream DNS does not also include system resolvers.
+2. Record and remove personal DNS override entries under **Tools → Advanced Configuration → DNS** while checking the managed settings. Turn off **Append System DNS** under **Tools → General** so ordinary upstream DNS does not also include system resolvers.
 3. Confirm that `Proxy` ultimately selects a working proxy node, not `DIRECT`. Group names are case-sensitive; other subscriptions may not contain this group.
 4. Enable **TUN** on desktop and confirm authorization and routes. On Android, authorize VPN access and ensure access control includes the test app. System HTTP / HTTPS proxy settings alone cannot guarantee capture of system DNS or every app.
 5. Reopen the target app and use fresh test hostnames to check resolvers and outbounds. Inspect personal overrides and scripts if an updated profile still behaves unexpectedly.
@@ -62,7 +64,7 @@ The current maintained server implementation generates a FlClash for oixCloud pr
 | Platform | Action and limits |
 | --- | --- |
 | macOS | Keep **Tools → Advanced Configuration → Network → Auto Set System DNS** enabled with TUN and verify that the system DNS change succeeded. Queries to a LAN router may bypass TUN; do not test only public resolver addresses. |
-| Windows | Enable TUN and inspect multiple adapters, other VPNs and system DNS. For strict routing, a trusted override script can set `tun.strict-route: true`; see below. |
+| Windows | Enable TUN and inspect multiple adapters, other VPNs and system DNS. Add the Strict route override in the network settings' TUN section when needed; see below. |
 | Android | Enable **DNS Hijacking** and disable **Allow Bypass** under **Tools → Advanced Configuration → Network**; include the target app in VPN access control. Turn system **Private DNS** off while diagnosing. Always-on VPN and blocking connections without VPN are separate Android settings, subject to OS support. |
 | Linux | Check TUN automatic routes, the system resolver and competing network managers. Confirm queries enter the core, not merely that the local proxy port responds. |
 
@@ -70,14 +72,13 @@ Browser Secure DNS and app-owned DoH / DoT are not intercepted as ordinary port-
 
 ### Strict routing on Windows
 
-The current interface has no separate Strict Route switch. Users familiar with configuration scripts can add these lines inside their existing `main(config)` under **Tools → Advanced Configuration → Script**, preserving existing logic and returning `config`:
+The current Windows / Linux interface offers this setting without a separate override script.
 
-```js
-config.tun = config.tun || {};
-config.tun['strict-route'] = true;
-```
+1. Open **Tools → Advanced Configuration → Network** and choose **Add override entry** in the **TUN** section.
+2. Add **Strict route** and enable it, or check its value if already added.
+3. Reapply the profile, confirm TUN is enabled, and inspect the effective configuration and DNS path. A custom profile's own TUN settings take precedence over app-level overrides, so check those too.
 
-This is not a complete script and does not enable TUN for you. Save and apply it, connect with TUN enabled, then inspect the effective configuration and DNS path. On Windows the setting suppresses DNS leaks from multi-adapter resolution and may affect software such as VirtualBox. Revert the added setting and reapply if compatibility problems occur. It does not choose the DNS upstream's proxy and is not system protection after the client exits. See the [mihomo TUN reference](https://wiki.metacubex.one/en/config/inbound/tun/#strict-route).
+On Windows the setting suppresses DNS leaks from multi-adapter resolution and may affect software such as VirtualBox. Remove the added entry or restore its previous value and reapply if compatibility problems occur. It does not choose the DNS upstream's proxy and is not system protection after the client exits. With IPv6 disabled, strict routing also blocks this device's IPv6 connections. See the [mihomo TUN reference](https://wiki.metacubex.one/en/config/inbound/tun/#strict-route).
 
 ## Custom DNS also needs an outbound choice
 

@@ -27,3 +27,9 @@ Tailscale device authorization is separate and cannot sign into the managed oixC
 Use the remote to choose a node or group and inspect latency and connection status. Perform complex node, chain and rule organization on the phone/tablet before syncing.
 
 If sync fails, check Apple Accounts, versions and both switches first. If nodes exist but streaming fails, inspect the chosen exit and service region rather than repeatedly syncing the same data.
+
+## Inspect and select from a LAN browser {#local-control}
+
+Supporting TV versions offer **Settings → Local Control Panel** for temporary browser access from a phone or computer on the same network. TV displays separate QR codes for the address and access key. Follow [Local control on Apple TV](/en/oixcloud/local-control#apple-tv).
+
+The TV connection must already be running. The controller cannot start a disconnected TV connection remotely and does not provide full configuration editing.

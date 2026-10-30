@@ -113,7 +113,9 @@ Do not share passwords, Access Tokens, full subscription URLs, node passwords, o
 
 ## When are inactive accounts deleted?
 
-Only accounts without an active plan are eligible for cleanup. If both balance and commission are zero or negative, the account is deleted after 30 days without login activity; if either is positive, the period is 90 days. Signing in on the website or a client, or making authenticated requests while signed in, restarts the clock.
+Eligible accounts without an active plan have a 30-day cleanup period when both balance and commission are zero or negative, or 90 days when either is positive. The clock starts from the later of the most recent login activity and plan expiry, so a long absence does not by itself cause deletion on the day a plan expires.
+
+Website/client sign-ins and authenticated activity can update login activity. Active or valid queued plans, pending withdrawals, payments and other unsettled items can defer cleanup. Banned accounts are not automatically deleted under this inactivity rule. Check account notices and the current state.
 
 [Open Access Tokens](https://oixcloud.com/user/token)
 

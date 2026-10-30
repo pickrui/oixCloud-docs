@@ -16,6 +16,18 @@ description: "Contact support with useful details \u2014 setup, practical steps 
 
 Use this website's support tickets for account, plan and node issues. Problems with Surge or OpenClash itself can also be reported to its developer.
 
+## Before opening a ticket: checks and annual allowance {#ticket-eligibility}
+
+The creation page requires all confirmations: you followed the relevant guide and checks, retried connection issues with a client from the download center, and checked Edge's suitability for mainland-China access. Complete the required human verification and name the actual client and node for connection issues.
+
+| Current plan | Self-created tickets per calendar year |
+| --- | --- |
+| Pass Silver, Pass Gold | 3 |
+| Pass Platinum, Pass Diamond, Pass Titanium, Developer Licenses, Team License, Enterprise Licenses | 5 |
+| Other plans or no plan | 2 |
+
+The calendar year follows the site's time zone. Check the remaining count shown for your account. Replies and support-created tickets do not consume this allowance. Continue an unresolved ticket before opening another; replies remain available after the new-ticket allowance is exhausted. Titles allow up to 12 characters and bodies up to 10,000 characters.
+
 ## Speed limits, points or account restrictions {#restrictions}
 
 First check [Fair use](/en/account/fair-use) and the [limit comparison](/en/account/traffic#limits). Include:

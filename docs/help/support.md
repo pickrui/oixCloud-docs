@@ -16,6 +16,18 @@ description: "提交有效的服务单的操作步骤、适用范围与常见问
 
 账户、套餐和节点问题可通过本站服务单联系；Surge 或 OpenClash 自身的软件问题也可向相应开发者反馈
 
+## 新建前确认与年度额度 {#ticket-eligibility}
+
+新建页须勾选全部确认项：已阅读并完成相关配置与排查、连接问题先用软件中心提供的客户端重试、已核对中国大陆网络与 Edge 节点的适用范围。按页面要求完成人机验证，连接问题请写明实际客户端与节点
+
+| 当前套餐 | 每自然年主动新建服务单上限 |
+| --- | --- |
+| Pass Silver、Pass Gold | 3 次 |
+| Pass Platinum、Pass Diamond、Pass Titanium、Developer Licenses、Team License、Enterprise Licenses | 5 次 |
+| 其他套餐或无套餐 | 2 次 |
+
+额度按站点时区的自然年统计，以当前账户页面显示的剩余次数为准；回复已有服务单、客服代建不占主动新建额度。有未结案服务单时先继续回复，额度用尽也仍可回复已有服务单。标题最多 12 个字符，正文最多 10,000 个字符
+
 ## 限速、积分或账户限制 {#restrictions}
 
 先按 [公平使用](/account/fair-use) 和 [流量限制对照表](/account/traffic#limits) 检查原因。提交服务单时补充：

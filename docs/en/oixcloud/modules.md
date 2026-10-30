@@ -46,11 +46,13 @@ Scripts can read matching request/response data and make their own network reque
 
 ### A host excluded by another module {#module-exclusions}
 
-In versions supporting this behavior, loaded modules share MITM hostname exclusion decisions. If one loaded module excludes a host, the other modules do not decrypt HTTPS for it either. Moving the desired module earlier cannot override that exclusion.
+Enabled Surge-style modules share MITM hostname exclusions. If one excludes a host, the other Surge-style modules do not decrypt HTTPS for it either. Moving the desired module earlier cannot override that exclusion.
 
-For example, if one loaded module excludes `api.example.com`, another module declaring the host may be unable to run its HTTPS scripts. Check the reason in **Activity → MITM**, then disable relevant modules one at a time and retest with new connections.
+For example, if one enabled Surge-style module excludes `api.example.com`, another Surge-style module declaring the host may be unable to run its HTTPS scripts. Check the reason in **Activity → MITM**, then disable relevant modules one at a time and retest with new connections.
 
-Native MITM rule-set exclusions and the device's **Never Decrypt** list have different scopes. See [exclusion scopes](/en/oixcloud/mitm#exclusion-scope). A module containing only exclusions and no loadable content should not be used as a global exclusion switch.
+A Surge-style module containing only MITM exclusions can still contribute shared exclusions without adding interception targets. MITM sets embedded in native `.amod` modules and standalone native sets exclude only their own matches; they do not participate in the shared exclusions. See [exclusion scopes](/en/oixcloud/mitm#exclusion-scope).
+
+Use device-local **Never Decrypt** when the entire device should leave an exact domain encrypted.
 
 ## Verify a complete import
 

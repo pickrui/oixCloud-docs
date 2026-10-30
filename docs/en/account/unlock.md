@@ -1,6 +1,12 @@
 # WARP and streaming regions
 
-Both features change the outbound behavior of supported remote nodes. Identify the node in the [node list](https://oixcloud.com/user/node) before changing its settings.
+WARP and streaming regions change the outbound behavior of supported remote nodes. Identify the node in the [node list](https://oixcloud.com/user/node) before changing its settings. Account-wide switches on these pages have separate scopes:
+
+| Setting | Scope | Default |
+| --- | --- | --- |
+| WARP and streaming regions | The selected supported node and service | Check that node's page |
+| Block STUN connections | All devices using the account on supported nodes | On |
+| YouTube background playback compatibility | All nodes for the account | Off |
 
 ## Enable WARP for a node
 
@@ -23,6 +29,18 @@ This does not switch your device to Direct mode. Consider the fallback behavior 
 3. Save, establish a new connection through the corresponding node, and verify the region and playback in that service.
 
 This feature is in public beta and supports only some nodes. Unconfigured services follow the node default. Region selection does not replace the platform's account, membership or content requirements.
+
+## Calls, remote access and STUN {#stun}
+
+Check **Block STUN connections** on the [Streaming unlock](https://oixcloud.com/user/unlock) page. It defaults to on. If voice/video calls, remote access or device connectivity fail, record its original value and try turning it off.
+
+After saving, wait for node synchronization, close old connections in the target app and retest. The switch affects all devices using this account on supported nodes, not just the current browser or client. Restore it if there is no improvement, then inspect client UDP settings, rules and traffic capture.
+
+## YouTube background playback compatibility {#youtube-playback}
+
+Enable **YouTube background playback compatibility** on the [Streaming unlock](https://oixcloud.com/user/unlock) page if you have a YouTube membership and need this behavior. It defaults to off and may reduce performance when enabled; leave it off if unnecessary.
+
+After saving, wait for node synchronization and reconnect before testing background playback. This is an account-wide setting for all nodes. It does not replace YouTube membership and is separate from streaming region selection.
 
 ## If the result is unexpected
 

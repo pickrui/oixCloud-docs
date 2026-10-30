@@ -24,7 +24,7 @@ Open **软件中心** (Software Center) in the router admin page, check the plat
 
 These links follow the latest stable release. You can also download the [SHA256 checksums](https://dl.dler.io/oixclash-SHA256SUMS) to verify file integrity.
 
-The package is about 18 MB and needs room on JFFS. Models with 512 MB of RAM or more can use the defaults; smaller models, including 256 MB routers, can use [low-memory mode](#low-memory), available from 0.0.3. In normal mode, the extracted core occupies about 48 MB of RAM, with additional memory used by the running proxy, GeoIP data and dashboard.
+Package size varies by release and platform. Reserve JFFS space for both the uploaded archive and extracted files. Models with 512 MB of RAM or more can use the defaults; smaller models, including 256 MB routers, can use [memory optimization](#low-memory), available from 0.0.3. In normal mode, the extracted core occupies about 48 MB of RAM, with additional memory used by the running proxy, GeoIP data and dashboard.
 
 ## 2. Install offline
 
@@ -55,8 +55,8 @@ After signing in, the page shows the account, plan, expiry date and traffic. A t
 ## 4. Turn on the proxy
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-running-zh.svg?v=20261003" target="_blank" rel="noopener" aria-label="oixClash · Running settings and low-memory mode">
-    <img src="/illustrations/oixclash-running-zh.svg?v=20261003" alt="oixClash · Running settings and low-memory mode" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/oixclash-running-zh.svg?v=20261030" target="_blank" rel="noopener" aria-label="oixClash · Running settings and memory optimization">
+    <img src="/illustrations/oixclash-running-zh.svg?v=20261030" alt="oixClash · Running settings and memory optimization" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Simulated Chinese interface · Fictional data · Click to enlarge</figcaption>
 </figure>
@@ -65,13 +65,17 @@ After signing in, the page shows the account, plan, expiry date and traffic. A t
 2. Wait for the log to report a successful start. The first run also downloads GeoIP data and takes a moment.
 3. **运行状态** (Status) shows the core as running with its version.
 
-oixClash takes over TCP and DNS of devices on the main LAN. To proxy UDP such as games and voice calls, tick **UDP 转发** (UDP forwarding) and save; it only works once the status reads that UDP is forwarded. Without UDP forwarding, keep **屏蔽 QUIC** (Block QUIC) on so browsers fall back to TCP, which is proxied.
+oixClash captures main-LAN DNS and eligible TCP according to device and port settings. From 0.0.14, **运行 → 仅代理常用端口** (Run → Common ports only) is enabled by default: common web/mail destination ports are captured and other ports go direct. An existing disabled setting is preserved.
+
+For a game, call or other service using uncommon ports, disable **仅代理常用端口** if needed and save. UDP also requires **UDP 转发** (UDP forwarding); verify after the status reports it active. Without UDP forwarding, keep **屏蔽 QUIC** (Block QUIC) on for browser TCP fallback.
+
+Port filtering cannot identify every BT/P2P transfer; downloads on common ports can still use the proxy. Device bypass, DNS capture and QUIC blocking retain their own settings, so the UDP switch alone does not establish capture.
 
 ### Small-memory routers {#low-memory}
 
-From oixClash 0.0.3, **低内存模式** (Low-memory Mode) turns on automatically at first installation when detected total memory is below 384 MB. Upgrades preserve an existing choice. You can also change it under **运行 → 低内存模式**.
+From oixClash 0.0.3, **内存优化** (Memory Optimization) turns on automatically at first installation when detected total memory is below 384 MB. Upgrades preserve an existing choice. You can also change it under **运行 → 内存优化**.
 
-1. Enable **低内存模式** and click **保存并应用**. Applying settings stops the proxy before checking the configuration, so LAN traffic temporarily goes direct. It stays direct if the configuration check fails.
+1. Enable **内存优化** and click **保存并应用**. Applying settings stops the proxy before checking the configuration, so LAN traffic temporarily goes direct. If validation fails, inspect the recovery result: current versions attempt to restore the previous settings and running state. Do not assume the new settings were applied.
 2. After startup, check the text below this option. **内核在 JFFS 上运行** means the core file runs from flash. **JFFS 空间不足，内核仍解压到内存** means it is still extracted to RAM; free space used by unneeded plugins, then save and verify again.
 3. Click **自检** (Self-check), check free JFFS space and available memory, then verify a LAN connection as described below.
 
@@ -81,7 +85,7 @@ From oixClash 0.0.3, **低内存模式** (Low-memory Mode) turns on automaticall
 | Use a smaller GeoIP database | Covers only CN and a few other regions. Check matching if custom `GEOIP` rules reference other regions. |
 | Reclaim memory more aggressively | Reduces memory peaks but may cost CPU time. It does not guarantee every configuration will run on a 256 MB router. |
 
-After disabling low-memory mode, a core already stored on JFFS stays there. The next plugin update restores the compressed archive for extraction to RAM at run time.
+After disabling memory optimization, a core already stored on JFFS stays there. The next plugin update restores the compressed archive for extraction to RAM at run time.
 
 ## 5. Verify with a LAN device
 
@@ -138,8 +142,8 @@ Reading again replaces unsaved edits, so review the confirmation first. Account 
 | **运行状态** shows 登录已失效 (sign-in expired) | Click 退出登录 (Sign out), then sign in again |
 | Status shows 账号没有可用的套餐 (no active plan) | Renew, then click **保存并应用** |
 | Status shows 路由器时间尚未同步 (router time not synchronized), or the log says the time is wrong | Check the time zone and NTP server under **Administration → System**; the plugin starts by itself once the time syncs |
-| Not enough memory; the core cannot start | Enable low-memory mode, close unneeded plugins, then click **保存并应用**. After a memory failure, the watchdog retries every 30 minutes. |
-| Low-memory mode is on, but the core is still extracted to RAM | Check JFFS space and the plugin log, free flash space, then save again. Enabling the option alone does not confirm a successful move. |
+| Not enough memory; the core cannot start | Enable memory optimization, close unneeded plugins, then click **保存并应用**. After a memory failure, the watchdog retries every 30 minutes. |
+| Memory optimization is on, but the core is still extracted to RAM | Check JFFS space and the plugin log, free flash space, then save again. Enabling the option alone does not confirm a successful move. |
 | The in-plugin updater cannot verify a package | Download the package for your platform and install it offline; do not skip integrity verification. |
 | UDP forwarding does not take effect | Click **自检** (Self-check) and look at the TPROXY and policy routing items; firmware without support only loses UDP, TCP stays proxied |
 | Conflict with fancyss or MerlinClash | Turn off the other proxy plugin; only one can run |

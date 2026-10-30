@@ -30,6 +30,12 @@ Wait for account information, profile download and core processing. The plugin c
 
 While signed in, the integrated build prioritizes the dedicated core; the separate Smart Core switch is not required. Do not pass the dedicated subscription through a third-party converter, which can discard required settings.
 
+### Common-port capture scope {#common-ports}
+
+The maintained build enables common-port proxying by default: listed destination ports use the proxy, while others go direct. Check the router's actual settings for existing installations. If a game, call or self-hosted service uses uncommon ports, review **Plugin Settings → Traffic Control → Common Ports Proxy Mode**, adjust, restart and verify.
+
+UDP forwarding remains subject to the port range. Port filtering does not identify all BT/P2P traffic and does not authorize downloading or account sharing.
+
 ## 4. Verify from a LAN device
 
 1. Check the device's gateway, DNS and OpenClash access controls for your main-router or secondary-router setup.

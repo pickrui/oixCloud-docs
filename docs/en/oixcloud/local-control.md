@@ -4,9 +4,16 @@ description: "Use HTTPS on the same LAN to inspect oixCloud, select nodes and re
 
 # Local Controller
 
-For iPhone/iPad versions with **Settings → Local Controller**. It lets a device on the same Wi-Fi or Ethernet network control oixCloud on this device. It is separate from [serving proxy traffic to other devices](/en/oixcloud/networks).
+For iPhone/iPad and Apple TV versions offering this feature. It lets a device on the same Wi-Fi or Ethernet network control oixCloud on this device. It is separate from [serving proxy traffic to other devices](/en/oixcloud/networks).
+
+| Device | Settings entry |
+| --- | --- |
+| iPhone / iPad | Settings → Local Controller |
+| Apple TV | Settings → Local Control Panel |
 
 ## Enable and connect
+
+These steps apply to iPhone/iPad; see [Apple TV instructions](#apple-tv) for TV.
 
 1. Establish a connection in oixCloud, open **Settings → Local Controller**, and enable **Allow Local Access**.
 2. The default port is `9091`. To change it, choose an unused port from `1024–65535`, different from the HTTP/SOCKS5 proxy ports, then choose **Apply**.
@@ -15,6 +22,16 @@ For iPhone/iPad versions with **Settings → Local Controller**. It lets a devic
 5. Select **Copy Access Key** in the app and enter it in the controller. This is the device's local-control key, not an account Access Token or password.
 
 The service is available only while oixCloud is connected. Do not assume cellular or hotspot access works. Copy the current address again after a network change.
+
+### Enable on Apple TV {#apple-tv}
+
+1. Open **Settings → Local Control Panel** on TV, enable **Allow Local Access**, and keep oixCloud connected.
+2. Select an HTTPS address under **Local Network Address** to view its QR code. Scan it with a phone on the same network or enter the address on a computer.
+3. View **Certificate Fingerprint** on TV and compare it with the browser certificate.
+4. Open **Access Key** to view its text or scan its QR, then paste it into the browser. The address QR contains no key; the key QR contains only the key text.
+5. Inspect status or select a node, then disable local access when finished.
+
+The TV's switch and key remain local to that Apple TV and do not sync through iCloud. Its default port is also `9091`. Confirm port changes on TV rather than looking for the iPhone/iPad copy controls.
 
 ## Available actions
 

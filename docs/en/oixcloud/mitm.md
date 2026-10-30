@@ -58,15 +58,16 @@ The exclusion applies to that exact domain on this device, across all TLS ports.
 
 Excluded domains retain their original TLS connection. HTTPS rewrites, scripts and HTTP-based routing stop applying, while ordinary routing and plain HTTP rules remain unchanged. Current versions also skip domains with no applicable HTTPS rules automatically. A connection that is not decrypted is not necessarily a certificate failure; inspect its reason first.
 
-## Three exclusion scopes {#exclusion-scope}
+## Exclusion scopes {#exclusion-scope}
 
 | Setting | Effect on HTTPS decryption |
 | --- | --- |
-| A loaded module's hostname exclusion | A match excludes the host from decryption by all modules; native MITM rule sets may still handle it |
+| An enabled Surge-style module's hostname exclusion | Shared across Surge-style modules; native modules and native MITM sets may still handle the host |
+| A hostname exclusion in a native `.amod` module's embedded MITM set | Removes only that embedded set; other applicable sources can still participate |
 | A native MITM rule set's hostname exclusion | Removes only that set; other applicable sets can still participate |
 | Device-local Never Decrypt | Prevents all modules and sets from decrypting that exact domain and survives subscription updates |
 
-Use **Never Decrypt** when the entire device should leave a domain encrypted. An exclusion in one module or native set is not equivalent. Cross-module HTTPS exclusion does not disable plain HTTP rules; plain HTTP still follows each module's own matching and exclusion conditions.
+Use **Never Decrypt** when the entire device should leave a domain encrypted. An exclusion in one module or native set is not equivalent. Shared Surge-style HTTPS exclusions do not disable plain HTTP rules; plain HTTP still follows each module's own matching and exclusion conditions.
 
 Open **Activity → MITM** to inspect the domain's decision and matching sources. Compare changes with new connections; exclusion problems do not require repeatedly generating certificates. Module updates may change hosts, so repeat the [module verification steps](/en/oixcloud/modules) afterwards.
 

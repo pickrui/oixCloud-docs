@@ -55,8 +55,9 @@ Use the managed configuration generated for your client. Avoid copying port and 
 | Check | Requirement |
 | --- | --- |
 | Plan eligibility | A currently active plan is required; queued plans alone are not enough |
-| Dedicated IP expiry | The new expiry must be on or after the expected plan expiry; check the earliest allowed date in the purchase dialog |
+| Dedicated IP expiry | The new expiry must be on or before the expected plan expiry; check Latest dedicated IP expiry in the purchase dialog |
 | Expected plan expiry | Current plan expiry plus the remaining duration of plans that can activate consecutively in the queue |
+| Purchase and manual-renewal term | At most 12 months per operation; a new purchase must meet the product minimum, while manual renewal starts at one month |
 | Billing month | Exactly 30 days |
 
 Edge-tier nodes are designed for international network environments. Connections from certain regions, such as mainland China, are not covered by SLA guarantees.
@@ -67,11 +68,11 @@ Edge-tier nodes are designed for international network environments. Connections
 | --- | --- |
 | Attempt window | Within 24 hours before IP expiry |
 | Extension | 30 days; the system does not automatically increase billed months |
-| Charge conditions | An active plan, sufficient funds including commission, and a new IP expiry on or after the expected plan expiry, including valid queued plans |
+| Charge conditions | An active plan, sufficient funds including commission, and a new IP expiry on or before the expected plan expiry, including valid queued plans |
 | Conditions not met | Charges pause, the setting stays on, and retries continue until expiry |
 
 ::: warning Check the renewal result before expiry
-If 30 more days do not meet the earliest allowed expiry, manually choose more renewal months. An IP not renewed by expiry is reclaimed.
+If 30 more days would exceed the expected plan expiry, extend your plan first, then check renewal eligibility. Adding more IP renewal months cannot solve this. An IP not renewed by expiry is reclaimed.
 :::
 
 [Open your account](https://oixcloud.com/user)
@@ -87,12 +88,18 @@ For streaming-region requirements, see [streaming settings](/en/account/unlock);
 
 ## Verify a dedicated-IP purchase
 
-1. Review the node, billing months, earliest required expiry and total in the purchase dialog.
+1. Review the node, billing months, latest allowed expiry, minimum purchase term and total in the purchase dialog.
 2. Check the allocated address and expiry afterwards; payment success does not update the client by itself.
 3. Ensure the node is retained in the official client's filter preview, then refresh the profile and establish a new connection.
 4. Verify the exit in your actual application and allow time to resolve balance or plan eligibility before renewal.
 
-Dedicated IPs and plans have separate expiry requirements. A long queued plan can make a single 30-day automatic IP extension insufficient; follow the renewal dialog's eligibility details.
+The active plan and consecutively activatable queued plans must cover the dedicated IP term. If the plan term is too short, extend it first or reduce the IP purchase term without going below the product minimum. Follow the latest allowed expiry shown in the purchase or renewal dialog.
+
+## Dedicated IPv6 on supported nodes {#dedicated-ipv6}
+
+Check **Dedicated IPv6** and its supported-node list under [WARP settings](https://oixcloud.com/user/warp) or [Streaming unlock](https://oixcloud.com/user/unlock), then enable it if needed. Only listed supported nodes use the dedicated IPv6 egress assigned to the account; other nodes are unaffected. The setting is hidden when no accessible node supports it.
+
+After saving, wait for node synchronization and use new connections to verify the exit seen by the target service. This controls the remote node's outbound, separately from local IPv6 capture, AAAA queries and the address family used to connect to a node. A client IPv6 switch does not verify this setting.
 
 ## Check service status {#service-status}
 

@@ -33,12 +33,19 @@ Add a group with valid members in a profile's Override settings, then point pers
 ## Proxy chains
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-chains-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Set a proxy chain in forwarding order">
-    <img src="/illustrations/flclash-chains-zh.svg?v=20260929-2" alt="Set a proxy chain in forwarding order" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-chains-zh.svg?v=20261030" target="_blank" rel="noopener" aria-label="Set a proxy chain in forwarding order">
+    <img src="/illustrations/flclash-chains-zh.svg?v=20261030" alt="Set a proxy chain in forwarding order" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
 
-Open **Proxy Chains** from the profile menu and add at least two nodes in forwarding order: entry first, exit last. After saving, select the chain's **exit node** in the relevant group or rule. The feature does not create a separate selectable chain node.
+Open **Proxy Chains** from the profile menu and add at least two members in forwarding order: entry first, exit last. Current versions accept nodes and supported policy groups listed in the editor. The Apple oixCloud client's first-hop-only group restriction does not apply here.
+
+| Last hop | How to use it after saving |
+| --- | --- |
+| Node | Select the derived `Node name (via Previous hop name)` entry; the original node keeps its original route |
+| Policy group | Select or target that group; its strategy chooses the actual node |
+
+Save and apply the profile, select the correct entry in the relevant group or rule, then check the complete path in connection records. Derived entries appear in applicable manual groups. Selecting the original exit node alone no longer applies the chain.
 
 Test each member independently. A chain forwards through several stages; load balancing distributes different connections across members. If a chain fails, compare a single node, then check each segment.
