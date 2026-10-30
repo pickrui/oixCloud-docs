@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import navigation from './navigation.json' with { type: 'json' }
+import { renderSearch, tokenizeSearch } from './search.mjs'
 
 export default defineConfig({
   title: 'oixCloud',
@@ -55,12 +56,15 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
+        _render: renderSearch,
         miniSearch: {
           options: {
-            tokenize: (text) => {
-              if (typeof Intl.Segmenter === 'function') return Array.from(new Intl.Segmenter('zh', { granularity: 'word' }).segment(text)).filter(item => item.isWordLike).map(item => item.segment)
-              return text.match(/[a-z0-9]+|[\u3400-\u9fff]/gi) || []
-            }
+            tokenize: tokenizeSearch
+          },
+          searchOptions: {
+            combineWith: 'AND',
+            boost: { title: 6, text: 1, titles: 1 },
+            fuzzy: term => term.length > 4 ? 0.15 : false
           }
         },
         locales: {

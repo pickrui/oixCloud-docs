@@ -1,0 +1,580 @@
+[
+  {
+    "terms": [
+      "节点筛选",
+      "Node Filter",
+      "NodeFilter",
+      "节点过滤"
+    ],
+    "targets": [
+      "/account/subscriptions.html",
+      "/oixcloud/proxies.html",
+      "/other/openclash.html"
+    ]
+  },
+  {
+    "terms": [
+      "代理链",
+      "Proxy chains",
+      "ProxyChain"
+    ],
+    "targets": [
+      "/flclash/proxies.html",
+      "/oixcloud/policies.html"
+    ]
+  },
+  {
+    "terms": [
+      "自动优选",
+      "Best Available",
+      "BestAvailable"
+    ],
+    "targets": [
+      "/oixcloud/policies.html",
+      "/oixcloud/proxies.html"
+    ]
+  },
+  {
+    "terms": [
+      "网络自检",
+      "Network self-check",
+      "NetworkSelfCheck"
+    ],
+    "targets": [
+      "/flclash/diagnostics.html"
+    ]
+  },
+  {
+    "terms": [
+      "DNS 泄漏",
+      "DNS leak"
+    ],
+    "targets": [
+      "/flclash/dns.html",
+      "/help/troubleshooting.html"
+    ]
+  },
+  {
+    "terms": [
+      "系统代理",
+      "System proxy",
+      "SystemProxy"
+    ],
+    "targets": [
+      "/flclash/capture.html"
+    ]
+  },
+  {
+    "terms": [
+      "备份",
+      "Backup",
+      "BACKUP",
+      "Ｂａｃｋｕｐ"
+    ],
+    "targets": [
+      "/flclash/backup.html"
+    ]
+  },
+  {
+    "terms": [
+      "恢复默认",
+      "Restore Default"
+    ],
+    "targets": [
+      "/account/subscriptions.html",
+      "/oixcloud/routing.html"
+    ]
+  },
+  {
+    "terms": [
+      "严格 DNS",
+      "Strict DNS",
+      "StrictDNS"
+    ],
+    "targets": [
+      "/oixcloud/dns.html"
+    ]
+  },
+  {
+    "terms": [
+      "应用访问控制",
+      "App access control",
+      "AccessControl"
+    ],
+    "targets": [
+      "/flclash/android.html",
+      "/flclash/capture.html"
+    ]
+  },
+  {
+    "terms": [
+      "局域网控制",
+      "Local Controller",
+      "LocalController"
+    ],
+    "targets": [
+      "/oixcloud/local-control.html"
+    ]
+  },
+  {
+    "terms": [
+      "可莉插件中心",
+      "Kelee Module Hub"
+    ],
+    "targets": [
+      "/oixcloud/modules.html"
+    ]
+  },
+  {
+    "terms": [
+      "自动化",
+      "Automation"
+    ],
+    "targets": [
+      "/oixcloud/automation.html"
+    ]
+  },
+  {
+    "terms": [
+      "模块排序",
+      "Module Order",
+      "ModuleOrder",
+      "生效顺序"
+    ],
+    "targets": [
+      "/oixcloud/modules.html"
+    ]
+  },
+  {
+    "terms": [
+      "密码",
+      "Password"
+    ],
+    "targets": [
+      "/account/security.html"
+    ]
+  },
+  {
+    "terms": [
+      "季度升级",
+      "季付升级",
+      "Quarterly upgrade"
+    ],
+    "targets": [
+      "/account/plans.html"
+    ]
+  },
+  {
+    "terms": [
+      "流量",
+      "Traffic"
+    ],
+    "targets": [
+      "/account/traffic.html"
+    ]
+  },
+  {
+    "terms": [
+      "订阅",
+      "Subscription"
+    ],
+    "targets": [
+      "/account/subscriptions.html",
+      "/flclash/profiles.html",
+      "/oixcloud/proxies.html"
+    ]
+  },
+  {
+    "terms": [
+      "账号",
+      "帐号",
+      "Account"
+    ],
+    "targets": [
+      "/account/",
+      "/account/security.html"
+    ]
+  },
+  {
+    "terms": [
+      "虚拟网卡",
+      "TUN"
+    ],
+    "targets": [
+      "/flclash/capture.html"
+    ]
+  },
+  {
+    "terms": [
+      "AuthKey",
+      "Auth key",
+      "Tailscale"
+    ],
+    "targets": [
+      "/flclash/tailscale.html",
+      "/oixcloud/tailscale.html"
+    ]
+  },
+  {
+    "terms": [
+      "fakeip",
+      "fake-ip",
+      "FAKE_IP"
+    ],
+    "targets": [
+      "/flclash/dns.html"
+    ]
+  },
+  {
+    "terms": [
+      "flclash webdav",
+      "FlClash 备份"
+    ],
+    "targets": [
+      "/flclash/backup.html"
+    ]
+  },
+  {
+    "terms": [
+      "FlClash Node Filter"
+    ],
+    "targets": [
+      "/flclash/profiles.html"
+    ]
+  },
+  {
+    "terms": [
+      "oixCloud iCloud Sync",
+      "iCloudSync"
+    ],
+    "targets": [
+      "/oixcloud/sync.html"
+    ]
+  },
+  {
+    "terms": [
+      "Helper LAN authentication",
+      "Helper 局域网"
+    ],
+    "targets": [
+      "/other/helper-mapping.html",
+      "/other/surge.html"
+    ]
+  },
+  {
+    "terms": [
+      "oixClash custom rules",
+      "oixClash 自定义规则"
+    ],
+    "targets": [
+      "/other/oixclash.html"
+    ]
+  },
+  {
+    "terms": [
+      "Apple TV",
+      "tvOS"
+    ],
+    "targets": [
+      "/oixcloud/apple-tv.html",
+      "/clients/"
+    ]
+  },
+  {
+    "terms": [
+      "Passkey",
+      "TOTP",
+      "AccessToken"
+    ],
+    "targets": [
+      "/account/security.html",
+      "/start/concepts.html",
+      "/flclash/connect.html",
+      "/oixcloud/connect.html"
+    ]
+  },
+  {
+    "terms": [
+      "MITM 证书",
+      "MITM certificate",
+      "PKCS"
+    ],
+    "targets": [
+      "/oixcloud/mitm.html"
+    ]
+  },
+  {
+    "terms": [
+      "Android 电池",
+      "Android battery"
+    ],
+    "targets": [
+      "/flclash/android.html"
+    ]
+  },
+  {
+    "terms": [
+      "Windows DLL",
+      "VCRUNTIME140",
+      "MSVCP140"
+    ],
+    "targets": [
+      "/flclash/windows-dll.html"
+    ]
+  },
+  {
+    "terms": [
+      "OpenClash smart",
+      "OpenClash 登录"
+    ],
+    "targets": [
+      "/other/openclash.html"
+    ]
+  },
+  {
+    "terms": [
+      "低速流量",
+      "low-speed traffic"
+    ],
+    "targets": [
+      "/account/traffic.html"
+    ]
+  },
+  {
+    "terms": [
+      "公平使用",
+      "fair use",
+      "Working nodes"
+    ],
+    "targets": [
+      "/account/fair-use.html"
+    ]
+  },
+  {
+    "terms": [
+      "专用 IP",
+      "dedicated IP"
+    ],
+    "targets": [
+      "/account/nodes.html"
+    ]
+  },
+  {
+    "terms": [
+      "内部中继",
+      "internal relay",
+      "多跳中继",
+      "multihop"
+    ],
+    "targets": [
+      "/account/relay.html"
+    ]
+  },
+  {
+    "terms": [
+      "流媒体",
+      "streaming",
+      "WARP",
+      "STUN"
+    ],
+    "targets": [
+      "/account/unlock.html"
+    ]
+  },
+  {
+    "terms": [
+      "Docker Helper",
+      "Linux Helper"
+    ],
+    "targets": [
+      "/other/helper-linux.html"
+    ]
+  },
+  {
+    "terms": [
+      "LAN proxy",
+      "局域网代理"
+    ],
+    "targets": [
+      "/flclash/networks.html",
+      "/oixcloud/networks.html",
+      "/other/helper-mapping.html"
+    ]
+  },
+  {
+    "terms": [
+      "SSID",
+      "Wi-Fi networks that pause the proxy"
+    ],
+    "targets": [
+      "/flclash/networks.html"
+    ]
+  },
+  {
+    "terms": [
+      "请求记录",
+      "Requests diagnostics"
+    ],
+    "targets": [
+      "/oixcloud/diagnostics.html",
+      "/flclash/diagnostics.html"
+    ]
+  },
+  {
+    "terms": [
+      "DOMAINSUFFIX",
+      "DOMAIN-SUFFIX"
+    ],
+    "targets": [
+      "/oixcloud/routing.html",
+      "/flclash/rules.html"
+    ]
+  },
+  {
+    "terms": [
+      "External Resources",
+      "外部资源"
+    ],
+    "targets": [
+      "/oixcloud/routing.html"
+    ]
+  },
+  {
+    "terms": [
+      "排障顺序",
+      "troubleshooting"
+    ],
+    "targets": [
+      "/help/troubleshooting.html",
+      "/help/",
+      "/account/relay.html"
+    ]
+  },
+  {
+    "terms": [
+      "提交支持请求",
+      "support request"
+    ],
+    "targets": [
+      "/help/support.html"
+    ]
+  },
+  {
+    "terms": [
+      "Overlay",
+      "叠加",
+      "覆写"
+    ],
+    "targets": [
+      "/flclash/rules.html",
+      "/flclash/profiles.html"
+    ]
+  },
+  {
+    "terms": [
+      "Network Profiles",
+      "网络预设"
+    ],
+    "targets": [
+      "/oixcloud/networks.html"
+    ]
+  },
+  {
+    "terms": [
+      "Shortcuts",
+      "快捷指令",
+      "按需连接"
+    ],
+    "targets": [
+      "/oixcloud/automation.html"
+    ]
+  },
+  {
+    "terms": [
+      "Expected HTTP Status",
+      "预期 HTTP 状态",
+      "Underlying Proxy",
+      "底层代理"
+    ],
+    "targets": [
+      "/oixcloud/policies.html"
+    ]
+  },
+  {
+    "terms": [
+      "Split DNS",
+      "分流 DNS"
+    ],
+    "targets": [
+      "/oixcloud/dns.html"
+    ]
+  },
+  {
+    "terms": [
+      "Final Route",
+      "兜底路由"
+    ],
+    "targets": [
+      "/oixcloud/routing.html",
+      "/oixcloud/networks.html",
+      "/oixcloud/connect.html"
+    ]
+  },
+  {
+    "terms": [
+      "Restore all data",
+      "WebDAV configuration"
+    ],
+    "targets": [
+      "/flclash/backup.html"
+    ]
+  },
+  {
+    "terms": [
+      "Local port mapping",
+      "Single port",
+      "单端口",
+      "Apply in Surge",
+      "Lean rules",
+      "精简规则"
+    ],
+    "targets": [
+      "/other/surge.html",
+      "/other/helper-mapping.html"
+    ]
+  },
+  {
+    "terms": [
+      "Common ports only",
+      "仅代理常用端口",
+      "Memory optimization",
+      "内存优化",
+      "Save to panel and update",
+      "保存到面板并更新"
+    ],
+    "targets": [
+      "/other/oixclash.html"
+    ]
+  },
+  {
+    "terms": [
+      "策略组",
+      "Policy group",
+      "自动测速",
+      "URL Test"
+    ],
+    "targets": [
+      "/oixcloud/policies.html",
+      "/flclash/proxies.html"
+    ]
+  },
+  {
+    "terms": [
+      "talscale"
+    ],
+    "targets": [
+      "/oixcloud/tailscale.html",
+      "/flclash/tailscale.html"
+    ]
+  }
+]

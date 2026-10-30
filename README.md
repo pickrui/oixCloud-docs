@@ -10,6 +10,7 @@ Use Node.js 22 or newer and pnpm 10.6.5.
 pnpm install --frozen-lockfile
 pnpm dev
 pnpm build
+pnpm check:search
 pnpm preview
 ```
 
@@ -22,7 +23,7 @@ pnpm preview
 - Sidebar: `docs/.vitepress/navigation.json`
 - Theme, search and locales: `docs/.vitepress/config.mjs`
 
-Keep both languages at the same relative paths so the language switch opens the corresponding article. Add new articles to both category indexes and the sidebar. Builds reject broken Markdown links. Search uses local indexes with Chinese word segmentation; no search service is required.
+Keep both languages at the same relative paths so the language switch opens the corresponding article. Add new articles to both category indexes and the sidebar. Builds reject broken Markdown links. Search pairs matching sections in both languages, includes illustrated interface labels and keeps result links in the current locale. Keep the heading hierarchy and order aligned across each pair. Common bilingual feature names and spelling variants are normalized in `docs/.vitepress/search.mjs`. Add keyword cases to `scripts/search-cases.json` when documenting a new feature, then run `pnpm build` and `pnpm check:search`; the publishing workflow runs these checks too. No search service is required.
 
 The guide has 43 topics in each language. The latest client and account update was checked against maintained source on 16 October 2026; source support does not imply availability in every public binary or a deployed panel. iPhone/iPad, Apple TV and FlClash for oixCloud have different features; document their actual interfaces separately. This is a user guide, not a promise that every release or platform exposes every option.
 
