@@ -1,5 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
-import { onMounted, onUnmounted } from 'vue'
+import { h, onMounted, onUnmounted } from 'vue'
+import DocMedia from './DocMedia.vue'
 import './style.css'
 
 const legacyPages = new Map(Object.entries({
@@ -18,6 +19,7 @@ function redirectLegacyPage() {
 
 export default {
   extends: DefaultTheme,
+  Layout: () => h(DefaultTheme.Layout, null, { 'layout-bottom': () => h(DocMedia) }),
   enhanceApp({ router }) {
     if (typeof window !== 'undefined') router.onAfterRouteChange = redirectLegacyPage
   },

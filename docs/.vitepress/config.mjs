@@ -9,8 +9,17 @@ export default defineConfig({
   cleanUrls: false,
   markdown: {
     config(md) {
-      md.renderer.rules.table_open = () => '<div class="table-scroll" tabindex="0"><table>\n'
-      md.renderer.rules.table_close = () => '</table></div>\n'
+      md.renderer.rules.table_open = (tokens, index, options, env) => {
+        let columns = 0
+        for (let i = index + 1; tokens[i].type !== 'thead_close'; i++) {
+          if (tokens[i].type === 'th_open') columns++
+        }
+        const english = env.relativePath.startsWith('en/')
+        const hint = english ? 'Swipe left or right to see all columns' : '左右滑动，查看完整表格'
+        const label = english ? 'Table' : '表格'
+        return `<div class="table-block${columns > 2 ? ' table-wide' : ''}"><p class="table-hint">↔ ${hint}</p><div class="table-scroll" tabindex="0" role="region" aria-label="${label}"><table>\n`
+      }
+      md.renderer.rules.table_close = () => '</table></div></div>\n'
     }
   },
   sitemap: { hostname: 'https://docs.dler.io' },
