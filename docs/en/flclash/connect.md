@@ -61,7 +61,9 @@ FlClash for oixCloud is a graphical client. Its standard desktop packages do not
 
 Use the FlClash for oixCloud Docker image to sign in and manage the app from another device's browser. The host does not need a local desktop, but the container still runs the graphical client. Follow the [FlClash Docker guide](https://github.com/pickrui/FlClash/blob/main/docker/README.md) for deployment.
 
+::: warning Browser management access
 The browser interface has no authentication by default; do not expose it directly to the Internet. System Proxy or TUN inside the container does not automatically capture traffic from the host or other LAN devices. Configure proxy ports and access scope separately as described in the Docker guide.
+:::
 
 ### Use only the command line over SSH
 

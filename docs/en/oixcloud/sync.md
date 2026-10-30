@@ -36,9 +36,16 @@ Check each device's version and release channel, retain the device with complete
 
 ## Account changes and recovery
 
-After an Apple Account change or cloud deletion, read the recovery choices carefully. Upload and Merge adds local content to the cloud. Use iCloud Data replaces local content in enabled categories with the cloud version, including empty categories.
+After an Apple Account change or cloud deletion, review the recovery choices.
 
+| Choice | Effect on data |
+| --- | --- |
+| Upload and Merge | Adds local content to the cloud |
+| Use iCloud Data | Replaces local content in enabled categories with the cloud version, including empty categories |
+
+::: warning Identify the data to keep before replacing
 First identify the device that retains complete data. Repeatedly deleting cloud data on every device is not a troubleshooting procedure.
+:::
 
 ## Recently Deleted
 

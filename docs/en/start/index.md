@@ -1,7 +1,15 @@
+---
+pageClass: guide-index
+description: Make your first connection, then learn how nodes, groups and routing work.
+---
+
 # Start here
 
-Make a first connection, then understand nodes, groups and routing.
+Make your first connection, then learn how nodes, groups and routing work.
 
-- [Your first connection](/en/start/quick-start)
+| I want to… | Guide |
+| --- | --- |
+| Install a client and connect | [Your first connection](/en/start/quick-start) |
+| Understand nodes, groups, routing and credentials | [Nodes, groups and routing](/en/start/concepts) |
 
-- [Nodes, groups and routing](/en/start/concepts)
+If you are already connected but cannot browse, see [Connection and speed troubleshooting](/en/help/troubleshooting).

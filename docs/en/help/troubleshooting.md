@@ -4,6 +4,17 @@ description: "Connection and speed troubleshooting \u2014 setup, practical steps
 
 # Connection and speed troubleshooting
 
+Choose the closest symptom, then work through its checks. Change one condition at a time and keep the before-and-after results.
+
+| Symptom | Check first |
+| --- | --- |
+| [Cannot sign in or no nodes appear](#cannot-sign-in-or-no-nodes-appear) | Website, account, credentials and plan validity |
+| [Connected but websites do not load](#connected-but-websites-do-not-load) | Local network, traffic capture, mode and selected node |
+| [Slow speeds or high latency](#it-works-but-speed-is-low-or-latency-is-high) | High-speed allowance, restrictions and comparable node tests |
+| [Limited with traffic remaining](#limits) | Points, requests, Working nodes and account notices |
+| [Wrong streaming region](#the-node-works-but-the-streaming-region-is-wrong) | Actual exit, unlock settings and platform conditions |
+| [Local resolvers in a DNS test](#a-dns-test-lists-local-resolvers) | Intentional direct access, routing lookups and traffic capture |
+
 ## Cannot sign in, or no nodes appear
 
 First check that the website is reachable and your account is in good standing. Confirm that you are using the correct sign-in details: enter an Access Token in the token field and your account password in the password field. Check that your plan is valid, then refresh the configuration. Keep the client version and exact error message; avoid repeatedly submitting sign-in requests after consecutive failures.

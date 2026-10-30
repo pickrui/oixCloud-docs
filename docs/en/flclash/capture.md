@@ -13,7 +13,9 @@ description: "System Proxy and TUN \u2014 setup, practical steps and troubleshoo
 | Android | VPN permission and app access control |
 | App with its own proxy settings | Its protocol, address and port |
 
+::: info Capture comes before routing
 Rule/Global/Direct modes act after capture; they do not replace the capture switch.
+:::
 
 ## Desktop System Proxy
 

@@ -63,7 +63,9 @@ FlClash for oixCloud 是图形客户端，常规桌面安装包没有独立的�
 
 可使用 FlClash for oixCloud 的 Docker 镜像，在另一台设备的浏览器中登录和管理。宿主机无需本地桌面，容器内部仍运行图形客户端；部署步骤见 [FlClash Docker 教程](https://github.com/pickrui/FlClash/blob/main/docker/README_zh_CN.md)
 
+::: warning 浏览器管理界面的访问范围
 浏览器管理界面默认没有鉴权，不要直接暴露到公网。容器中的系统代理或虚拟网卡不会自动接管宿主机或其他局域网设备的流量，需按 Docker 教程单独配置代理端口与访问范围
+:::
 
 ### 只有 SSH，希望使用纯命令行
 

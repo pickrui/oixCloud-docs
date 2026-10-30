@@ -7,6 +7,12 @@ export default defineConfig({
   description: '连接、客户端设置、账户与故障排查 · Setup, client configuration, accounts and troubleshooting',
   base: '/',
   cleanUrls: false,
+  markdown: {
+    config(md) {
+      md.renderer.rules.table_open = () => '<div class="table-scroll" tabindex="0"><table>\n'
+      md.renderer.rules.table_close = () => '</table></div>\n'
+    }
+  },
   sitemap: { hostname: 'https://docs.dler.io' },
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
   locales: {
@@ -20,7 +26,7 @@ export default defineConfig({
         docFooter: { prev: '上一篇', next: '下一篇' },
         sidebarMenuLabel: '分类目录', returnToTopLabel: '返回顶部', darkModeSwitchLabel: '外观',
         langMenuLabel: '语言', skipToContentLabel: '跳转到正文',
-        footer: { message: '最近核对：2026-10-16 · 每个主题独立成篇', copyright: 'oixCloud 使用指南' }
+        footer: { message: '功能与平台范围请以各篇说明为准', copyright: 'oixCloud 使用指南' }
       }
     },
     en: {
@@ -30,7 +36,7 @@ export default defineConfig({
         nav: [{ text: 'Start here', link: '/en/start/' }, { text: 'Client guides', link: '/en/clients/' }, { text: 'Account & service', link: '/en/account/' }, { text: 'Troubleshooting', link: '/en/help/' }],
         sidebar: navigation.en,
         outline: { label: 'On this page', level: [2, 3] },
-        footer: { message: 'Last checked: 16 October 2026 · One topic per page', copyright: 'oixCloud User Guide' }
+        footer: { message: 'Check each guide for feature and platform scope', copyright: 'oixCloud User Guide' }
       }
     }
   },

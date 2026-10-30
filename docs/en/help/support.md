@@ -6,7 +6,15 @@ description: "Contact support with useful details \u2014 setup, practical steps 
 
 ## What to include
 
-Include your device and operating system version, client name and version, the time of the issue, network, node name, exact steps, full error message, and what you have already tried. Attach only redacted screenshots and logs. Contact us through this website's support tickets for account, plan, and node issues. Problems with Surge or OpenClash itself can also be reported to its developer.
+| Information | Include |
+| --- | --- |
+| Device and versions | Device model, operating system, client name and version |
+| Time and network | Time and time zone; Wi-Fi, mobile or Ethernet environment |
+| Node and destination | Node name, affected site or app, and exact steps |
+| Errors and comparisons | Full error message, checks performed and their results |
+| Attachments | Redacted screenshots and logs |
+
+Use this website's support tickets for account, plan and node issues. Problems with Surge or OpenClash itself can also be reported to its developer.
 
 ## Speed limits, points or account restrictions {#restrictions}
 
@@ -56,6 +64,8 @@ Exact error:
 Checks already performed and their results:
 ```
 
+::: warning Redact before public sharing
 Use a [support ticket](https://oixcloud.com/user/ticket) for account issues. Never post passwords, full subscription URLs, access tokens, node credentials or certificate private keys in public GitHub issues.
+:::
 
 For a module issue, include its name, source and the result with it enabled versus disabled. Do not publish personal request bodies.

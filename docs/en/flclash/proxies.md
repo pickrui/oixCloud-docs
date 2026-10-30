@@ -19,7 +19,10 @@ In **Proxies**, open the group responsible for your destination and select a nod
 
 ## Automatic groups
 
-A profile may contain manual selection, URL-test, fallback or load-balancing groups. Manual groups follow your choice; automatic groups follow their strategy.
+| Group in the profile | How members are chosen |
+| --- | --- |
+| Manual selection | Follows your choice |
+| URL-test, fallback or load balancing | Follows the group's own strategy |
 
 Test a small set of nodes on the same network. Latency is not bandwidth or proof of streaming access. If every test fails, check the test URL and local networking too; see [diagnostics](/en/flclash/diagnostics).
 

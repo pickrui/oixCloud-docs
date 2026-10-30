@@ -27,7 +27,12 @@ Format suggestions are only guidance. A successful import does not guarantee tha
 
 ## Maintain modules
 
-Use the module menu to update subscriptions, change arguments or organize categories. Categories organize the list; **Module Order** controls execution priority.
+| Operation | Purpose |
+| --- | --- |
+| Update subscription | Fetch remote content from the module menu |
+| Change arguments | Edit arguments from the module menu |
+| Categories | Organize the list without setting execution priority |
+| Module Order | Control execution priority |
 
 After updates, review warnings and inactive content, especially changed scripts, DNS and hosts.
 

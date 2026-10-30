@@ -1,3 +1,25 @@
+# Quarterly and semiannual upgrade eligibility — 30 October 2026
+
+Corrected the paired Plans guides: quarterly, semiannual and annual plans may upgrade or exchange when eligible; monthly plans cannot. The target must offer the original billing period, which remains unchanged. Active plans require a higher tier and at least 60 remaining days under the system calculation. Never-used queued plans may exchange; previously used queued plans must be activated before upgrade eligibility is checked. Target purchase eligibility, stock, funds and the Plan Management preview still apply. Annual benefit-credit eligibility is a separate rule and was not broadened.
+
+Verified `Bought::isUpgradeableBilling`, `ShopPolicy::canUpgrade`, `PurchaseService::validateUpgradeEligibility`, `PriceCalculator` and the upgrade transaction, plus the bilingual panel labels. The change was introduced by dler-panel `04af57481`; the inspected source HEAD `347090e998933af06d7c06c88725f8b08ffec1fc` matched remote main during this audit. No panel files were changed and no account purchase or upgrade was performed. Source publication does not establish production deployment.
+
+Validation: `pnpm build` and `git diff --check` passed. All 103 generated HTML pages, 7,056 internal references, 154 tables and 51 locale pairs passed the local link/anchor and table checks. Rechecked the corrected Chinese and English Plans pages at 390px and 1440px: the new eligibility text rendered without horizontal page overflow.
+
+---
+
+# Site-wide reading layout and node comparison — 30 October 2026
+
+Reorganized 27 Chinese/English page pairs: the homepage and seven category indexes now offer task-to-guide lookup tables; topic pages use tables for node types, ingress lines, renewal conditions, credentials, configuration sources and recovery choices. Existing procedures remain numbered steps. Consequences of replacement, deletion, credential changes and public exposure are highlighted using VitePress callouts. The seven Chinese node descriptions match the current official homepage; dedicated-line directions are presented separately without adding inferred use cases.
+
+The shared theme applies to all 51 locale pairs. Tables retain native table semantics inside focusable horizontal-scroll containers, with consistent headers, spacing, borders and light/dark colors. Updated indexes retain the full client display names and platform boundaries. Existing article paths, explicit anchors, sidebar categories and legacy panel fragment mappings are preserved. New paired sections share explicit anchors. Removed the homepage/footer's blanket historical verification date so a layout update does not imply a new audit of every client release.
+
+Validation: `pnpm build` and `git diff --check` passed. All 103 generated HTML pages, 7,056 internal references, 152 tables and 51 locale pairs passed link/anchor and table-wrapper checks. Edited pairs have matching table counts, callout types and explicit heading anchors. Browser layout checks covered all 102 localized pages at 390px and 1440px (204 cases), with no horizontal page overflow, failed loaded images or browser warnings/errors. Inspected representative light/dark homepage, category and node tables; verified keyboard table scrolling, mobile and desktop language links retaining the node article/section, local search for Fusion and representative legacy fragment redirects. The final node-table wording and width adjustment were rechecked separately.
+
+This pass updates documentation layout and presentation, with homepage-backed node descriptions. It does not re-audit client implementation, measure production routes or verify deployment. No commit, push or publication was performed.
+
+---
+
 # Panel guidance and account protection — 23 October 2026
 
 Updated six paired topics: account security, nodes, traffic, fair use, troubleshooting and support. The guides now match the panel's token creation/regeneration labels, Telegram binding without a username, daily-notification save states, TOTP wording and member service-status page. Published points tables, calculation examples and recovery conditions remain available. The account-protection notice explains automated abnormal-use detection and human review without publishing ban criteria or detection details. Current low-speed rate tiers remain documented; additional resource restrictions are described without internal trigger values.

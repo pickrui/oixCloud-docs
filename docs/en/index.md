@@ -17,7 +17,11 @@
         "text": "Download clients",
         "link": "https://oixcloud.com/client"
       }
-    ]
+    ],
+    "image": {
+      "src": "/logo.svg",
+      "alt": "oixCloud"
+    }
   },
   "features": [
     {
@@ -50,6 +54,17 @@
 
 ## Find the task you need
 
-Each topic has its own page, shareable link and table of contents. Use search for a feature or switch languages to open the matching guide.
+| I need to… | Go to |
+| --- | --- |
+| Make my first connection | [Your first connection](/en/start/quick-start) |
+| Compare Edge, CIA, IXP, Fusion and GIA | [Node types](/en/account/nodes#node-types) |
+| Understand traffic charges, low-speed tiers or limits | [Traffic and billing](/en/account/traffic) |
+| Filter nodes, update a subscription or restore defaults | [Subscriptions and filters](/en/account/subscriptions) |
+| Fix browsing, slow speeds or the wrong region | [Connection and speed troubleshooting](/en/help/troubleshooting) |
+| Submit an error and logs | [Support details and template](/en/help/support) |
 
-Tutorials follow the client features checked on 29 September 2026. Availability and menu labels can differ by version and platform. Account actions remain on the [oixCloud website](https://oixcloud.com/user).
+::: info Check your platform first
+Menu labels and features vary by client version and platform. Follow each guide's scope. Account actions remain in the [oixCloud user center](https://oixcloud.com/user).
+:::
+
+Use search at the top to find a feature, or switch languages to open the matching guide. Each article has its own link and section outline for sharing specific instructions.

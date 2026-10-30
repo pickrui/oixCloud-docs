@@ -1,4 +1,5 @@
 ---
+pageClass: guide-index
 description: Find connection and settings guides for your device and app
 ---
 
@@ -17,13 +18,16 @@ Choose your device and app for setup, connection and feature instructions. If yo
 
 ## Find an operation
 
-- Getting started: [Your first connection](/en/start/quick-start)
-- Importing a subscription into another compatible client: [Subscriptions and filters](/en/account/subscriptions)
-- Understanding nodes, groups and traffic capture: [Core concepts](/en/start/concepts)
-- Connected but unable to browse: [Connection and speed troubleshooting](/en/help/troubleshooting)
+| I want to… | Guide |
+| --- | --- |
+| Get started | [Your first connection](/en/start/quick-start) |
+| Import a subscription into another compatible client | [Subscriptions and filters](/en/account/subscriptions) |
+| Understand nodes, groups and traffic capture | [Core concepts](/en/start/concepts) |
+| Fix browsing after connecting | [Connection and speed troubleshooting](/en/help/troubleshooting) |
+| Repair missing DLLs on Windows | [FlClash for oixCloud: missing DLL repair](/en/flclash/windows-dll) |
+| Find Helper ports and LAN settings | [Helper local ports and LAN access](/en/other/helper-mapping) |
+| Run Helper on Linux | [Helper on Linux and diagnostics](/en/other/helper-linux) |
 
-Features vary by app and platform; follow the matching guide. For plans, traffic and account settings, see [Account & service](/en/account/).
-
-- [FlClash for oixCloud: missing DLL repair](/en/flclash/windows-dll)
-- [Helper local ports and LAN access](/en/other/helper-mapping)
-- [Helper on Linux and runtime diagnostics](/en/other/helper-linux)
+::: info Follow your platform's guide
+Features vary by app and platform. For plans, traffic and account settings, see [Account & service](/en/account/).
+:::

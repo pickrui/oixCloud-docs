@@ -34,7 +34,13 @@ In the rule list, Edit path opens the whole path that contains the rule, and Edi
 
 ### Status and applying changes
 
-- Active: the node uses this rule now. Standby: not used while a higher-priority rule is available. Unavailable: the source or destination node is currently unavailable. Configuring: just saved and waiting for a status update.
+| Status | Meaning |
+| --- | --- |
+| Active | The node uses this rule now |
+| Standby | Not used while a higher-priority rule is available |
+| Unavailable | The source or destination node is currently unavailable |
+| Configuring | Just saved and waiting for a status update |
+
 - After saving, update your subscription or managed configuration, select the entry node, open a new connection and check the actual exit.
 - Check WARP on both nodes first; a WARP-enabled node cannot be used as an ordinary relay node.
 

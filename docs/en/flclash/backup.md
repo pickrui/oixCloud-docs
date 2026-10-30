@@ -15,7 +15,9 @@ Open **Tools → Backup and Restore**.
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
 
+::: warning Back up before restoring
 Create a local backup before major changes or restoring another backup, save it somewhere you control and verify success. Backups contain ordinary subscriptions and personal settings; keep them private.
+:::
 
 ## Choose strategy and scope
 
@@ -40,7 +42,9 @@ Then select a scope:
 | Restore configuration files only | Restores profiles and associated scripts/rules while keeping current app settings |
 | Restore all data | Also applies backed-up app and network settings; the chosen strategy still controls configuration-data merging or replacement |
 
+::: info Compatible can still replace data
 Compatible does not mean that nothing is replaced. Restore all data still applies the backup's app settings. Check the active profile, overrides, ports, capture settings and node selection before verifying a connection.
+:::
 
 ## WebDAV
 

@@ -42,7 +42,9 @@ These folder operations apply to iPhone / iPad in 2.1.6 (520) and later supporti
 
 Folders organize standalone nodes, not nodes inside subscriptions. They are neither policy groups nor proxy chains. Each node appears in only one folder.
 
+::: info Deleting a folder is different from deleting nodes
 **Deleting a folder keeps its nodes**, returning them to the ungrouped list. Removing a member in the editor also only takes it out of the folder. Deleting a node itself is a separate action; check rule references first. Folders sync through the **Proxies** category; see [sync compatibility](/en/oixcloud/sync#folder-sync).
+:::
 
 ## Update and filter
 

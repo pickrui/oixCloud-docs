@@ -36,13 +36,13 @@ When an ordinary plan exhausts its high-speed allowance without a replacement pl
 
 `1 KiB/s = 1024 bytes per second`. These are rate caps, not guaranteed download speeds. Uploads and downloads are both limited, and connections belonging to the same account within the same node service share the rate; each device or connection does not receive a separate allowance. Routes, protocols and any lower applicable caps also affect actual throughput.
 
-The following conditions also apply:
-
-- **Abnormal resource use**: severe overuse or sustained abnormal resource consumption may lead to further restrictions. Check the account status and notices.
-- **Gaming nodes**: normal use is unavailable in low-speed mode. Restore high-speed traffic first.
-- **Pay-as-you-go plans**: the table does not apply. If restricted, meet the current plan's funding requirements and wait for a system check.
-- **Concurrent use**: low-speed mode is unsuitable for highly concurrent tasks, and connections may be restricted. Close unnecessary parallel tasks.
-- **Validity and permitted use**: unlimited low-speed traffic remains subject to plan expiry and service terms. It does not mean unlimited speed, unlimited connections or permission for sustained abnormal resource use.
+| Condition | Effect and action |
+| --- | --- |
+| Abnormal resource use | Severe overuse or sustained abnormal resource consumption may lead to further restrictions. Check the account status and notices. |
+| Gaming nodes | Normal use is unavailable in low-speed mode. Restore high-speed traffic first. |
+| Pay-as-you-go plans | The table does not apply. If restricted, meet the current plan's funding requirements and wait for a system check. |
+| Concurrent use | Low-speed mode is unsuitable for highly concurrent tasks, and connections may be restricted. Close unnecessary parallel tasks. |
+| Validity and permitted use | Unlimited low-speed traffic remains subject to plan expiry and service terms. It does not mean unlimited speed, unlimited connections or permission for sustained abnormal resource use. |
 
 To restore high-speed access, confirm that a new plan is active with available traffic, then allow the system and nodes to synchronize. If an existing connection remains slow, disconnect, reconnect and check again. Adding funds alone does not restore an ordinary plan's traffic, and points recovery does not remove the exhausted-allowance restriction.
 

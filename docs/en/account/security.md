@@ -63,7 +63,13 @@ These switches control daily notifications only; they do not establish whether s
 
 ## Before changing your password {#change-password}
 
-Changing your password revokes the account's Access Tokens, clears existing Passkeys and deletes the old main subscription URL. Clients using those credentials need a new sign-in or URL. Existing Passkeys can no longer sign in to the website and must be added again.
+Before changing your password, confirm you can update the affected devices:
+
+| Affected credential | What changes |
+| --- | --- |
+| Access Tokens | Account tokens are revoked; affected clients need to sign in again |
+| Passkeys | Existing records are cleared, can no longer sign in and must be added again |
+| Old main subscription URL | Deleted; clients using it need the new subscription URL |
 
 1. Open [Account Settings → Change Password](https://oixcloud.com/user/edit#settings-password) and enter the current password, new password and confirmation.
 2. Confirm you can update the other devices, submit, and wait for success.

@@ -51,6 +51,8 @@ On iPhone / iPad, **Settings → External Resources** brings routing rules, modu
 3. Wait for completion and inspect success markers and failure messages separately. One failure does not stop other updates; partial completion is not complete success.
 4. Check enabled state, routing destinations, module arguments and MITM hosts, then make a new request to verify the matched rule and outbound. Download completion does not mean a resource is enabled.
 
+::: warning Keep a copy before deleting resources
 Local imports without a remote source do not become the author's newer version automatically. Deleting a resource removes its contributed content and cannot be undone from this entry. Disable it for comparison first and retain its source or a copy for reimport before deletion.
+:::
 
 See [modules](/en/oixcloud/modules) and [MITM](/en/oixcloud/mitm) for runtime checks. Builds without **External Resources** can use each resource's own management page.

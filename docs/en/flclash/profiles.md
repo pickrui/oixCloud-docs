@@ -6,7 +6,13 @@ description: "Profiles, subscriptions and updates \u2014 setup, practical steps 
 
 ## Managed and ordinary profiles
 
-Signing into oixCloud imports a managed profile. Add your own subscription URL or local file through **Profiles → Add Profile**. Select it, start the client and verify the node list; an imported profile is not necessarily applied.
+| Profile source | Import | Update |
+| --- | --- | --- |
+| oixCloud managed profile | Imported when you sign into oixCloud | Account and managed-profile refresh/sync controls |
+| Your subscription URL | **Profiles → Add Profile**, enter the complete URL | Sync from the remote subscription |
+| Local file | **Profiles → Add Profile**, select a file | No remote URL to refresh |
+
+Select the profile, start the client and verify the node list; an imported profile is not necessarily applied.
 
 ## Update
 

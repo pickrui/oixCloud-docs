@@ -22,7 +22,12 @@ Open **Settings**, then **Network Profiles** in the **Network** section. Network
 3. Save, connect and inspect the active profile and actual requests on that network.
 4. Switch to a network without a matching profile and verify that global settings apply again.
 
-Direct mode sends traffic directly. A Direct Final Route only affects unmatched traffic; matching rules can still use a proxy. Enable **Auto Connect** in a profile if required. Global **Always On** takes priority over this option.
+| Setting | Effect |
+| --- | --- |
+| Direct mode | Sends traffic directly |
+| Direct Final Route | Only affects unmatched traffic; matching rules can still use a proxy |
+| Auto Connect | Starts VPN on the matching network; global Always On takes priority |
+| Inherit | Uses the corresponding global setting |
 
 A profile can use custom routing rules. Check this choice when global rule changes appear ineffective.
 

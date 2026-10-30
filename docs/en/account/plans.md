@@ -54,7 +54,15 @@ See [Fair use](/en/account/fair-use) for request bands, Working nodes bands, off
 
 ## Renewal and automatic switching
 
-You can reorder queued plans. When the current plan expires or runs out of traffic, queued plans are tried in that order before automatic renewal. Automatic renewal is attempted only when enabled and no queued plan is available. Early renewal pays for the next period and adds a queued plan; it does not immediately add traffic to the current plan. It requires automatic renewal to be enabled and must meet the product, stock, and billing-period conditions shown on the page. Turning off automatic renewal forfeits the renewal price and cannot be undone. Check the confirmation before proceeding.
+| Operation or stage | Behavior and conditions |
+| --- | --- |
+| Activation queue | You can reorder plans; when the active plan expires or runs out of traffic, queued plans are tried in that order |
+| Automatic renewal | Attempted only when enabled and no queued plan is available |
+| Early renewal | Pays for the next period and adds a queued plan without increasing current traffic; requires automatic renewal and the displayed product, stock and billing-period conditions |
+
+::: warning Check before disabling automatic renewal
+Disabling automatic renewal forfeits the renewal price and cannot be undone.
+:::
 
 ## Benefit credits {#benefit-credits}
 
@@ -73,7 +81,15 @@ Check your balance and redemption options in the [Benefits Center](https://oixcl
 
 ## Upgrade or use your next plan early
 
-Upgrades and exchanges currently apply only between annual plans. An active annual plan can only be upgraded to a higher tier and must have at least 60 days remaining. An unused queued annual plan may be exchanged under the conditions shown on the page. Check the preview in Plan Management for eligibility, the price difference, fees, and remaining benefits.
+Quarterly, semiannual and annual plans can be upgraded or exchanged when eligible; monthly plans cannot. The target must offer the original billing period, which stays the same after the operation. For example, a quarterly plan remains quarterly after an upgrade.
+
+| Current plan state | Upgrade or exchange conditions |
+| --- | --- |
+| Active | Only a higher tier is allowed, with at least 60 remaining days as calculated by the system |
+| Queued and never used | May be exchanged under the conditions shown on the page |
+| Previously used, now queued | Cannot be exchanged or upgraded directly; activate it first, then check upgrade eligibility |
+
+Check the Plan Management preview for the price difference, fees, remaining benefits and eligibility. The target must also meet current purchase, stock and funding requirements.
 
 ## Manual activation and refunds to balance
 
@@ -88,7 +104,7 @@ Manually switching plans deducts 24 hours from the original plan's validity, the
 | Start service | Choose a plan and pay the shortfall if prompted | An active record plus tier, expiry and allowance in the user center |
 | Prepare the next period | Buy another plan or use eligible early renewal | A queued plan; current traffic does not immediately increase |
 | Use the next plan now | Manually activate a queued plan | Read the old plan's deduction/retention preview, then check the newly active record |
-| Raise an active annual tier | Upgrade when eligible | Price difference, fee, remaining validity and resulting allowance |
+| Raise an active quarterly, semiannual or annual tier | Upgrade when eligible, keeping the billing period | Price difference, fee, remaining validity and resulting allowance |
 | Stop automatic renewal charges | Disable automatic renewal | Read the irreversible-disable and renewal-price notice first |
 
 ## Confirm a purchase
