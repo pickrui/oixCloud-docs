@@ -6,6 +6,25 @@ description: "Sign in and connect \u2014 setup, practical steps and troubleshoot
 
 This guide is for **FlClash for oixCloud**. The upstream general-purpose client has different account integration. Download from the [software center](https://oixcloud.com/client).
 
+## Downloads and system requirements {#downloads}
+
+Use the [download center](https://oixcloud.com/client), or this fork's [latest GitHub release](https://github.com/pickrui/FlClash/releases/latest). Other forks may lack the account integration used here.
+
+| System | Requirements | Package selection |
+| --- | --- | --- |
+| Windows | Windows 10 or later, 64-bit | `amd64` (x64) for Intel / AMD; `arm64` for ARM devices. Use `.exe` to install or `.zip` for the portable edition. |
+| macOS | Standard builds require macOS 13.0 or later | `arm64.dmg` for Apple Silicon; `amd64.dmg` for Intel. |
+| Android | Android 7.0 (API 24) or later | Usually `arm64-v8a.apk`; use `armeabi-v7a.apk` for a 32-bit OS or `x86_64.apk` for x86_64 devices and emulators. |
+| Linux | 64-bit graphical desktop, glibc 2.35 or later, GTK 3 and other runtime libraries | Match `amd64` / `arm64` to `uname -m`, then choose DEB, RPM or AppImage. ARM64 RPM / AppImage packages are also available on GitHub. |
+
+::: warning Final macOS 12 compatibility build
+Standard builds cannot run on macOS 12. Use only the v0.9.2 [Apple Silicon compatibility build](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-arm64.dmg) or [Intel compatibility build](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-amd64.dmg). These filenames include `macos12-final`. They are no longer maintained and in-app updates are disabled; upgrade to macOS 13 or later to receive further updates.
+:::
+
+The DEB declares `libayatana-appindicator3-1` and `libsecret-1-0` as dependencies; let the package manager install them. RPM / AppImage packages also need compatible system libraries. AppImage does not bypass the glibc requirement. For SSH-only servers, see [background and server operation](#headless).
+
+Use the release's `SHA256SUMS` for standard packages and `SHA256SUMS-macos12-final` for the macOS 12 compatibility builds. For missing Windows runtimes, see [DLL repair](/en/flclash/windows-dll).
+
 ## Illustrated steps
 
 <figure class="guide-figure">
@@ -69,4 +88,4 @@ The browser interface has no authentication by default; do not expose it directl
 
 ### Use only the command line over SSH
 
-Use the separate oixCloud Helper Linux program or its Docker image to provide proxy ports through a configuration file. Follow [Helper on Linux and runtime diagnostics](/en/other/helper-linux) to validate the configuration, start the program and verify connectivity. Helper port mapping does not provide the same rule routing and TUN traffic capture as FlClash for oixCloud.
+Use the public oixCloud Helper Docker image to provide proxy ports through a configuration file. Follow [Helper on Linux and runtime diagnostics](/en/other/helper-linux) to validate the configuration, start the program and verify connectivity. Helper port mapping does not provide the same rule routing and TUN traffic capture as FlClash for oixCloud.

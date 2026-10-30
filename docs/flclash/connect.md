@@ -6,6 +6,25 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 
 适用于 FlClash for oixCloud；上游通用版的账户入口与本教程不同，请从 [软件中心](https://oixcloud.com/client) 下载
 
+## 下载与系统要求 {#downloads}
+
+优先从 [软件中心](https://oixcloud.com/client) 下载；也可使用本分支的 [最新 GitHub 发行页](https://github.com/pickrui/FlClash/releases/latest)，不要误装其他分支的通用版
+
+| 系统 | 要求 | 安装包选择 |
+| --- | --- | --- |
+| Windows | Windows 10 及以上，64 位系统 | Intel / AMD 用 `amd64`（x64），ARM 设备用 `arm64`；`.exe` 为安装版，`.zip` 为便携版 |
+| macOS | 普通版要求 macOS 13.0 及以上 | Apple Silicon 用 `arm64.dmg`，Intel 用 `amd64.dmg` |
+| Android | Android 7.0（API 24）及以上 | 通常选 `arm64-v8a.apk`；32 位系统选 `armeabi-v7a.apk`，x86_64 设备或模拟器选 `x86_64.apk` |
+| Linux | 64 位图形环境、glibc 2.35 及以上、GTK 3 等运行库 | 按 `uname -m` 选择 `amd64` / `arm64`，再选 `.deb`、`.rpm` 或 AppImage；ARM64 的 RPM / AppImage 可在 GitHub 发行页获取 |
+
+::: warning macOS 12 最终兼容版
+macOS 12 不能运行普通版。仅可使用 v0.9.2 的 [Apple Silicon 最终兼容版](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-arm64.dmg) 或 [Intel 最终兼容版](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-amd64.dmg)。这两个文件名包含 `macos12-final`，已停止维护，应用内更新入口关闭；要继续获取更新需升级至 macOS 13 或更高版本
+:::
+
+Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`，应由包管理器安装依赖；RPM / AppImage 也仍需要兼容的系统运行库。AppImage 不会绕过 glibc 要求，只有 SSH 的服务器请看本页 [后台与服务器运行](#headless)
+
+下载后可用发行页的 `SHA256SUMS` 核对普通包；macOS 12 最终兼容版对应 `SHA256SUMS-macos12-final`。Windows 缺少运行库时见 [DLL 修复](/flclash/windows-dll)
+
 ## 操作示意
 
 <figure class="guide-figure">
@@ -71,4 +90,4 @@ FlClash for oixCloud 是图形客户端，常规桌面安装包没有独立的�
 
 ### 只有 SSH，希望使用纯命令行
 
-可使用独立的 oixCloud Helper Linux 程序或其 Docker 镜像，通过配置文件提供代理端口。按 [Helper Linux 与运行诊断](/other/helper-linux) 完成配置检查、启动和连接验证；Helper 的端口映射不等同于 FlClash for oixCloud 的规则分流与虚拟网卡接管
+可使用 oixCloud Helper 的公开 Docker 镜像，通过配置文件提供代理端口。按 [Helper Linux 与运行诊断](/other/helper-linux) 完成配置检查、启动和连接验证；Helper 的端口映射不等同于 FlClash for oixCloud 的规则分流与虚拟网卡接管

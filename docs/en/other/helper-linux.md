@@ -1,23 +1,24 @@
 # Helper on Linux and runtime diagnostics
 
-Download the binary for your Linux architecture from [public releases](https://github.com/pickrui/oixcloud-external-proxy-program/releases). Its filename remains `oixcloud-external-proxy-program`. The public container image is `ghcr.io/pickrui/oixcloud-external-proxy-program`; use the [public deployment documentation](https://github.com/pickrui/oixcloud-external-proxy-program) for release-specific parameters.
+For Linux / NAS, use the public container image `ghcr.io/pickrui/oixcloud-external-proxy-program:latest`. It supports `linux/amd64` and `linux/arm64` and requires Docker Engine and Docker Compose. The `-amd64`, `-arm64` and `-legacy` files on GitHub Releases are macOS executables, not standalone Linux programs.
 
 ## Validate before starting
 
-Fill in your credentials using the release's example configuration and restrict `config.json` to your user. The default directory is `~/.config/oixcloud-external-proxy-program/`, or pass an explicit path.
+Follow the [public Docker guide](https://github.com/pickrui/oixcloud-external-proxy-program/blob/main/docs/docker.md#english) to obtain `compose.yaml`, `config.example.json` and the custom rules file. Copy the example to `config.json` and set your credentials and LAN authentication. Keep real configurations out of Git. Permissions must let container UID/GID `10001` read the file while restricting other users.
 
-Run these in the extracted program directory, starting with local-only access:
+In the Compose directory, run:
 
 ```sh
-chmod 600 ./config.json
-./oixcloud-external-proxy-program --check-config --config ./config.json
-./oixcloud-external-proxy-program --diagnose-config --map --listen 127.0.0.1:6172 --config ./config.json
-./oixcloud-external-proxy-program --map --listen 127.0.0.1:6172 --bind 127.0.0.1 --config ./config.json
+docker compose pull
+docker compose run --rm --no-deps helper --check-config --config /config/config.json
+docker compose run --rm --no-deps helper --diagnose-config --map --listen 127.0.0.1:6172 --config /config/config.json
+docker compose up -d
+docker compose ps
 ```
 
-Check each result before continuing; the final command keeps running. Configuration checks return `0` for success or `2` for configuration errors and do not sign in. Port diagnostics briefly bind and release ports; they neither start a background service nor test upstream connectivity/firewalls.
+Confirm success before proceeding to each command. Configuration checks return `0` for success or `2` for configuration problems, without signing in. Port diagnostics briefly bind and release ports inside the temporary container; they do not check host port conflicts, upstream connectivity or the firewall. Verify container status and a real connection after startup.
 
-If you configure fixed `listeners`, inspect each entry's address too; do not treat a command-line default bind address as a substitute for that check.
+The published Compose exposes ports on all host interfaces by default. Configure LAN authentication and restrict the firewall before starting; for local use only, bind the host side of `ports` to `127.0.0.1`. Also review every fixed `listeners` address, if configured.
 
 ## Read back runtime status
 

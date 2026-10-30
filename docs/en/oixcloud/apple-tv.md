@@ -6,6 +6,12 @@ description: "Apple TV setup and sync \u2014 setup, practical steps and troubles
 
 TV focuses on remote-friendly node selection and connections, not every iPhone/iPad editing feature.
 
+## Installation and system requirements
+
+Apple TV requires tvOS 18.0 or later. Find [oixCloud](https://apps.apple.com/us/app/oixcloud/id6782528093) in the TV's App Store using an Apple Account outside mainland China. The iPhone / iPad publishing the account and configuration must also run iOS / iPadOS 18.0 or later.
+
+For beta installation, follow the Apple TV TestFlight steps in the [download center](https://oixcloud.com/client#apple): use the same App Store account in TestFlight on the phone and TV, accept the invitation on the phone, then install on the TV. Check available slots, build expiry and system requirements.
+
 ## Receive configuration
 
 1. Use the same Apple Account on iPhone/iPad and Apple TV, with compatible updated clients.

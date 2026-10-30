@@ -6,6 +6,15 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 
 适用于 iPhone / iPad，电视端请看 [Apple TV](/oixcloud/apple-tv)
 
+## 安装与系统要求
+
+| 设备 | 最低系统 | 安装入口 |
+| --- | --- | --- |
+| iPhone | iOS 18.0 | [App Store](https://apps.apple.com/us/app/oixcloud/id6782528093) |
+| iPad | iPadOS 18.0 | 同一 App Store 应用 |
+
+App Store 下载需要非中国大陆地区的 Apple 账户；测试版从 [软件中心](https://oixcloud.com/client#apple) 进入 TestFlight，需有可用名额且构建未过期。测试版要求以 TestFlight 中的构建说明为准，不能用它绕过系统要求
+
 ## 操作示意
 
 <figure class="guide-figure">

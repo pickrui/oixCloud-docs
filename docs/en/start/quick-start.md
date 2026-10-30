@@ -9,7 +9,7 @@ Get one normal connection working before enabling advanced features.
 ## Before connecting
 
 1. Open your [account](https://oixcloud.com/user) and confirm that it is active and has a valid, activated plan.
-2. Download the official client for your system and architecture from the [software center](https://oixcloud.com/client).
+2. Check [downloads and system requirements](/en/clients/#requirements), then get the official client for your system and architecture from the [download center](https://oixcloud.com/client).
 3. Pause other VPNs, keep default settings and choose an available node.
 
 A credited payment does not by itself confirm an active plan. If checkout was opened from a plan purchase, the system attempts to complete that purchase after payment; check funding and plan records before ordering again. After a standalone top-up, buy or activate the plan you need. See [Plans, renewals and switching](/en/account/plans).

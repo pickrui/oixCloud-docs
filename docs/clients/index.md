@@ -16,6 +16,19 @@ description: 按设备与应用查找连接和设置教程
 | Merlin 路由器 | [oixClash](/other/oixclash) |
 | 使用 Surge 的 Mac | [oixCloud Helper 与 Surge](/other/surge) |
 
+## 下载与系统要求 {#requirements}
+
+| 客户端与设备 | 当前系统要求 | 下载入口 |
+| --- | --- | --- |
+| oixCloud：iPhone / iPad | iOS / iPadOS 18.0 及以上 | [App Store](https://apps.apple.com/us/app/oixcloud/id6782528093)、[软件中心与 TestFlight](https://oixcloud.com/client#apple) |
+| oixCloud：Apple TV | tvOS 18.0 及以上；账户与配置同步还需兼容的 iPhone / iPad | [安装与同步](/oixcloud/apple-tv) |
+| FlClash for oixCloud：桌面与 Android | Windows 10+；macOS 13.0+；Android 7.0+；Linux 需图形环境与兼容运行库 | [安装包、架构与兼容版](/flclash/connect#downloads) |
+| oixCloud Helper：Mac | macOS 14+ 用普通版；macOS 12 / 13 用 Legacy | [下载与 Surge 接入](/other/surge#downloads) |
+| oixCloud Helper：Linux / NAS | Docker Engine 与 Compose；amd64 / arm64 | [容器部署](/other/helper-linux) |
+| OpenClash / oixClash：路由器 | 分别需要兼容的 OpenWrt / LuCI 或带 KoolCenter 软件中心的 Merlin 固件 | [OpenClash](/other/openclash)、[oixClash 平台包](/other/oixclash) |
+
+以上要求按 2026-10-30 的公开发行信息核对。下载入口跟随当前发行版，旧系统不要仅凭版本号相同就选择普通安装包；TestFlight 还受测试名额、构建有效期与该构建的系统要求限制
+
 ## 按操作查找
 
 | 我想要 | 阅读教程 |

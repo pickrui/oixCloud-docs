@@ -6,6 +6,12 @@ description: "Apple TV 连接与同步的操作步骤、适用范围与常见问
 
 电视端侧重遥控器操作、节点选择和连接，不提供 iPhone / iPad 的全部编辑功能
 
+## 安装与系统要求
+
+Apple TV 需要 tvOS 18.0 或更高版本，在电视的 App Store 搜索并安装 [oixCloud](https://apps.apple.com/us/app/oixcloud/id6782528093)，使用非中国大陆地区的 Apple 账户。用于发布账户与配置的 iPhone / iPad 也需运行 iOS / iPadOS 18.0 或更高版本
+
+测试版按 [软件中心](https://oixcloud.com/client#apple) 的 Apple TV TestFlight 步骤安装：手机与电视的 TestFlight 使用同一 App Store 账户，先在手机接受邀请，再在电视安装；同时核对名额、构建有效期与系统要求
+
 ## 方式一：接收手机或平板配置
 
 1. iPhone / iPad 与 Apple TV 使用同一 Apple 账户，并统一更新客户端版本

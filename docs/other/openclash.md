@@ -4,12 +4,21 @@ description: OpenWrt 上安装 OpenClash、登录账户、选择专用配置并�
 
 # OpenClash 安装与配置指南
 
-适用于 OpenWrt / LuCI。账户入口以 [软件中心](https://oixcloud.com/client/router) 提供的版本为准。通用发行版或旧版未必包含相同入口，先核对来源
+适用于 OpenWrt / LuCI。[软件中心](https://oixcloud.com/client#router) 的 OpenClash 入口通向上游安装说明；[上游发行页](https://github.com/vernesong/OpenClash/releases/latest) 提供 `.ipk` / `.apk`，但不保证包含下文的 oixCloud 账户集成。使用账户登录流程前，先确认已安装包含该入口的维护版本；通用发行版不能仅靠更换内核增加这个标签
+
+## 固件与依赖要求
+
+| 项目 | 选择方式 |
+| --- | --- |
+| 固件 | OpenWrt / LuCI，且软件源能提供所需内核模块与依赖；不能只凭路由器型号判断 |
+| 包管理器 | `opkg` 选 `.ipk`，`apk` 选 `.apk`；LuCI 插件包标记为 `all`，代理内核仍须匹配 CPU 架构 |
+| 防火墙 | 按 Firewall4 / nftables 或 Firewall3 / iptables 选择依赖，见 [维护仓库的安装说明](https://github.com/pickrui/OpenClash#快速开始) |
+| 空间与内存 | 为插件、代理内核、配置和运行缓存预留空间；缺少对应固件版本的内核模块时应先解决软件源匹配问题 |
 
 ## 1. 安装或更新插件
 
 1. 已安装用户先到「服务 → OpenClash → 插件设置 → 版本更新」备份现有配置；备份可能含账号、令牌和订阅地址，妥善保存
-2. 首次安装从软件中心对应的发布页获取安装包：`opkg` 固件用 `.ipk`，`apk` 固件用 `.apk`，在「系统 → 软件包」上传安装
+2. 首次安装从对应的发行页或维护版本提供方获取安装包：`opkg` 固件用 `.ipk`，`apk` 固件用 `.apk`，在「系统 → 软件包」上传安装
 3. 依赖同时按包管理器和防火墙类型选择：Firewall4 / nftables 与 Firewall3 / iptables 的依赖组合不同，使用发布页对应命令，不要混装
 4. 在「版本更新」核对设备 CPU 的「编译版本」。更新插件时先等待地址检测，再点击可用地址的「插件」版本，等日志完成后刷新页面
 
@@ -54,9 +63,9 @@ UDP 转发开启后仍受端口范围限制。端口过滤不等于识别所有 
 
 | 现象 | 下一步 |
 | --- | --- |
-| 没有 oixCloud 标签 | 核对软件中心提供的版本，更新插件并刷新浏览器缓存 |
+| 没有 oixCloud 标签 | 确认维护版本包含账户集成；上游通用安装包不保证有此入口，只有内核更新也无法增加标签 |
 | 内核下载或启动失败 | 看当次日志，再查 CPU 架构、时间、空间和依赖；专用内核有独立下载来源，不能只凭 GitHub 是否可访问判断 |
 | 登录成功却没有配置 | 检查配置订阅中的 `oixCloud - smart`，更新成功后明确切换到该配置 |
 | 路由器已运行，设备仍异常 | 核对设备网关、DNS、访问控制和 IPv6，再看连接记录 |
 
-反馈前在「运行日志 → 生成日志」导出调试信息，附插件与内核版本、运行模式和复现时间，并隐藏凭据。参考 [维护中的 OpenClash 集成](https://github.com/pickrui/OpenClash) 与 [OpenClash 使用手册](https://github.com/vernesong/OpenClash/wiki)
+反馈前在「运行日志 → 生成日志」导出调试信息，附插件与内核版本、运行模式和复现时间，并隐藏凭据。参考 [维护中的 OpenClash 集成](https://github.com/pickrui/OpenClash) 与 [OpenClash 上游安装说明](https://github.com/vernesong/OpenClash#快速开始)

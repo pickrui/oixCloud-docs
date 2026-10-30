@@ -4,12 +4,21 @@ description: Install OpenClash on OpenWrt, sign in, select the integrated profil
 
 # OpenClash installation and configuration
 
-For OpenWrt / LuCI. Use the build linked by the [download center](https://oixcloud.com/client/router); generic or older distributions may not expose the same account entry.
+For OpenWrt / LuCI. The [download center](https://oixcloud.com/client#router) links to upstream installation guidance. [Upstream releases](https://github.com/vernesong/OpenClash/releases/latest) provide `.ipk` / `.apk` packages but do not guarantee the oixCloud account integration described below. Confirm that your installed maintained build includes that entry before following the account workflow. Changing only the core cannot add the account tab to a generic build.
+
+## Firmware and dependency requirements
+
+| Item | Selection |
+| --- | --- |
+| Firmware | OpenWrt / LuCI with feeds supplying the required kernel modules and dependencies; the router model alone is insufficient. |
+| Package manager | `.ipk` for `opkg`, `.apk` for `apk`. The LuCI plugin package is marked `all`; the proxy core still needs the correct CPU architecture. |
+| Firewall | Match dependencies to Firewall4 / nftables or Firewall3 / iptables; see the [maintained repository's installation instructions](https://github.com/pickrui/OpenClash#快速开始). |
+| Storage and memory | Reserve space for the plugin, core, configurations and runtime cache. Resolve firmware/feed mismatches if matching kernel modules are unavailable. |
 
 ## 1. Install or update the plugin
 
 1. Existing users should back up under **Services → OpenClash → Plugin Settings → Version Update** first. Backups can contain credentials and subscription URLs.
-2. Download the matching package from the release page linked by the download center: `.ipk` for `opkg` firmware or `.apk` for `apk` firmware. Upload through **System → Software**.
+2. Download the matching package from the relevant release page or the provider of your maintained build: `.ipk` for `opkg` firmware or `.apk` for `apk` firmware. Upload through **System → Software**.
 3. Select dependencies for both the package manager and firewall: Firewall4/nftables and Firewall3/iptables require different combinations. Use the corresponding release instructions.
 4. Check the CPU build architecture on the update page. To update the plugin, wait for download-address checks, select an available **Plugin** version and wait for the log to finish before refreshing.
 
@@ -54,9 +63,9 @@ An account card, latency result or Running status alone does not prove that devi
 
 | Symptom | Next step |
 | --- | --- |
-| No oixCloud tab | Check the build linked by the download center, update the plugin and refresh browser cache. |
+| No oixCloud tab | Confirm that the maintained build includes account integration; a generic upstream package or a core-only update does not guarantee the tab. |
 | Core download/start fails | Read the current log, then check CPU architecture, time, space and dependencies. The dedicated core has its own download source; GitHub reachability alone is inconclusive. |
 | Signed in but no profile | Check and update `oixCloud - smart` under Config Subscribe, then explicitly switch to it. |
 | Router running but device fails | Check device gateway, DNS, access controls and IPv6, then inspect connections. |
 
-Before reporting, generate debug logs from **Running Log → Generate Log** and include plugin/core versions, mode and reproduction time, with credentials removed. References: [maintained OpenClash integration](https://github.com/pickrui/OpenClash) and [OpenClash manual](https://github.com/vernesong/OpenClash/wiki).
+Before reporting, generate debug logs from **Running Log → Generate Log** and include plugin/core versions, mode and reproduction time, with credentials removed. References: [maintained OpenClash integration](https://github.com/pickrui/OpenClash) and [OpenClash upstream installation guide](https://github.com/vernesong/OpenClash#快速开始).

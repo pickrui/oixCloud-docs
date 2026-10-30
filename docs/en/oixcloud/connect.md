@@ -6,6 +6,15 @@ description: "Sign in and connect \u2014 setup, practical steps and troubleshoot
 
 For iPhone / iPad. See the separate [Apple TV guide](/en/oixcloud/apple-tv).
 
+## Installation and system requirements
+
+| Device | Minimum OS | Download |
+| --- | --- | --- |
+| iPhone | iOS 18.0 | [App Store](https://apps.apple.com/us/app/oixcloud/id6782528093) |
+| iPad | iPadOS 18.0 | The same App Store app |
+
+App Store installation requires an Apple Account outside mainland China. For beta builds, open TestFlight from the [download center](https://oixcloud.com/client#apple); slots must be available and the build must not have expired. Check that build's requirements in TestFlight; beta access does not bypass OS requirements.
+
 ## Illustrated steps
 
 <figure class="guide-figure">

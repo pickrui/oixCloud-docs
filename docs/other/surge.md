@@ -13,10 +13,22 @@ oixCloud Helper 是与 Surge Mac 配合运行的代理助手，也支持本地�
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
 
+## 下载与系统要求 {#downloads}
+
+Helper 的系统要求与 FlClash for oixCloud 不同，不要混用安装包
+
+| macOS | Helper 文件 | 处理器 |
+| --- | --- | --- |
+| 14 及以上 | `oixcloud-external-proxy-program-arm64` | Apple Silicon |
+| 14 及以上 | `oixcloud-external-proxy-program-amd64` | Intel |
+| 12 / 13 | `oixcloud-external-proxy-program-legacy` | 通用版，支持 Apple Silicon 与 Intel |
+
+推荐下载 [公开启动包 ZIP](https://github.com/pickrui/oixcloud-external-proxy-program/archive/refs/heads/main.zip)，解压后运行 `启动 oixCloud.command`，启动器会按系统和架构选择当前发行文件。也可按 [公开安装说明](https://github.com/pickrui/oixcloud-external-proxy-program/blob/main/docs/configuration.md) 使用 Homebrew 或手动安装。macOS 11 不受支持；Legacy 尚未经过充分实机验证。Surge Mac 当前稳定版也要求 macOS 12.0 及以上，下载见 [Surge 官网](https://nssurge.com/)，系统下限见 [官方更新源](https://nssurge.com/mac/latest/appcast-signed.xml)
+
 ## 安装和登录
 
-1. 从 [软件中心](https://oixcloud.com/client/macos) 或 [公开发行页](https://github.com/pickrui/oixcloud-external-proxy-program/releases) 下载对应 macOS 版本与处理器的发行包；macOS 12 / 13 使用 Legacy 包，macOS 14 及以上选择对应架构
-2. 按发行包内启动说明运行；带「启动 oixCloud.command」的包可选择常驻启动
+1. 按上表下载启动包，或从 [最新发行页](https://github.com/pickrui/oixcloud-external-proxy-program/releases/latest) 手动选择对应的可执行文件
+2. 使用启动包时双击「启动 oixCloud.command」，首次使用选择「常驻启动」；直接下载发行页可执行文件时，按公开安装说明安装并以 `--tray` 启动
 3. 打开菜单栏 oixCloud 的「账户 → 登录…」，首次用邮箱和密码登录，生成 oixCloud Helper 专属 Token；之后可使用对应的 Access Token。Google 登录用户获取账户密码的方法与禁止客户端邮箱/密码登录的设置见 [首次登录说明](/account/security#first-client-login)
 4. 等待套餐和节点获取完成。菜单顶部有操作进度和结果，失败时查看具体原因后再处理
 

@@ -4,7 +4,7 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 
 # oixClash 安装与配置指南
 
-适用于安装了 KoolCenter 软件中心的 Merlin 固件（梅林改版、官改）。安装包以 [软件中心](https://oixcloud.com/client/router) 提供的版本为准。oixClash 按 oixCloud 下发的配置接管局域网设备，设备本身无需任何设置，不支持导入其他订阅
+适用于安装了 KoolCenter 软件中心的 Merlin 固件（梅林改版、官改）。安装包以 [软件中心](https://oixcloud.com/client#router) 提供的版本为准。oixClash 按 oixCloud 下发的配置接管局域网设备，设备本身无需任何设置，不支持导入其他订阅
 
 ## 1. 选择安装包
 
@@ -22,7 +22,7 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 
 </div>
 
-下载地址会跟随最新正式版本更新，也可下载 [SHA256 校验文件](https://dl.dler.io/oixclash-SHA256SUMS) 核对文件完整性
+下载地址会跟随最新正式版本更新，也可下载 [SHA256 校验文件](https://dl.dler.io/oixclash-SHA256SUMS) 核对文件完整性；直链不可用时，使用 [最新 GitHub 发行页](https://github.com/pickrui/oixclash-merlin/releases/latest) 中相同平台的文件
 
 安装包大小随版本和平台变化，需为上传包及解压后的文件预留 JFFS 空间。512MB 及以上内存的机型可按默认设置运行；256MB 等小内存机型可使用 0.0.3 起提供的[内存优化](#low-memory)。普通模式下，内核解压到内存约占 48MB，代理运行、GeoIP 数据和控制面板还会占用额外内存
 

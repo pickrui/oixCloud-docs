@@ -1,23 +1,24 @@
 # Helper Linux 与运行诊断
 
-从 [公开发行页](https://github.com/pickrui/oixcloud-external-proxy-program/releases) 获取对应 Linux 架构的程序，文件名仍是 `oixcloud-external-proxy-program`。容器镜像使用公开发行地址 `ghcr.io/pickrui/oixcloud-external-proxy-program`，部署参数参考 [公开文档](https://github.com/pickrui/oixcloud-external-proxy-program)
+Linux / NAS 使用公开容器镜像 `ghcr.io/pickrui/oixcloud-external-proxy-program:latest`，支持 `linux/amd64` 与 `linux/arm64`，需要 Docker Engine 与 Docker Compose。GitHub Release 中的 `-amd64`、`-arm64` 和 `-legacy` 文件均用于 macOS，不是 Linux 独立程序
 
 ## 先验证配置，再启动
 
-使用发行包提供的配置示例填写自己的凭据，将 `config.json` 设为仅自己可读写。默认目录是 `~/.config/oixcloud-external-proxy-program/`，也可以显式指定路径
+按 [公开 Docker 教程](https://github.com/pickrui/oixcloud-external-proxy-program/blob/main/docs/docker.md) 获取 `compose.yaml`、`config.example.json` 与自定义规则文件，复制示例为 `config.json` 后填写自己的凭据与局域网鉴权。不要把真实配置提交到仓库；权限需允许容器 UID/GID `10001` 读取，同时限制其他用户访问
 
-下面在已解压程序的目录执行，先以仅本机访问的方式运行：
+在 Compose 所在目录执行：
 
 ```sh
-chmod 600 ./config.json
-./oixcloud-external-proxy-program --check-config --config ./config.json
-./oixcloud-external-proxy-program --diagnose-config --map --listen 127.0.0.1:6172 --config ./config.json
-./oixcloud-external-proxy-program --map --listen 127.0.0.1:6172 --bind 127.0.0.1 --config ./config.json
+docker compose pull
+docker compose run --rm --no-deps helper --check-config --config /config/config.json
+docker compose run --rm --no-deps helper --diagnose-config --map --listen 127.0.0.1:6172 --config /config/config.json
+docker compose up -d
+docker compose ps
 ```
 
-逐条确认检查成功后再执行下一条；最后一条会持续运行。检查配置返回 `0` 表示通过、`2` 表示配置问题，不会登录账户。端口诊断会短暂绑定后释放端口，不代表后台已运行，也不会验证上游网络或防火墙
+逐条确认成功后再执行下一条。配置检查返回 `0` 表示通过、`2` 表示配置问题，不会登录账户。端口诊断只在临时容器内短暂绑定后释放，不会检查宿主机端口冲突，也不会验证上游网络或防火墙；启动后还需确认容器状态与实际连接
 
-如果配置包含固定 `listeners`，同时核对每项监听地址；命令行默认绑定值不应替代逐项检查
+发布的 Compose 默认将端口开放到宿主机所有接口，启动前先配置局域网鉴权并限制防火墙；仅本机使用时将 `ports` 的宿主机地址限制为 `127.0.0.1`。如果配置包含固定 `listeners`，同时核对每项监听地址
 
 ## 核对运行结果
 

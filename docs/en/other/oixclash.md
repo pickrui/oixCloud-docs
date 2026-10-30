@@ -4,7 +4,7 @@ description: Install oixClash on a Merlin router, sign in, turn on the proxy and
 
 # oixClash installation and configuration
 
-For Merlin firmware with the KoolCenter software center (Merlin mods and modified stock firmware). Use the build linked by the [download center](https://oixcloud.com/client/router). oixClash takes over LAN devices with the configuration oixCloud delivers, so devices need no setup; other subscriptions cannot be imported. The plugin page is in Chinese, so its labels below are given in Chinese with a translation.
+For Merlin firmware with the KoolCenter software center (Merlin mods and modified stock firmware). Use the build linked by the [download center](https://oixcloud.com/client#router). oixClash takes over LAN devices with the configuration oixCloud delivers, so devices need no setup; other subscriptions cannot be imported. The plugin page is in Chinese, so its labels below are given in Chinese with a translation.
 
 ## 1. Choose the package
 
@@ -22,7 +22,7 @@ Open **软件中心** (Software Center) in the router admin page, check the plat
 
 </div>
 
-These links follow the latest stable release. You can also download the [SHA256 checksums](https://dl.dler.io/oixclash-SHA256SUMS) to verify file integrity.
+These links follow the latest stable release. You can also download the [SHA256 checksums](https://dl.dler.io/oixclash-SHA256SUMS) to verify file integrity. If a direct link is unavailable, use the matching platform file from the [latest GitHub release](https://github.com/pickrui/oixclash-merlin/releases/latest).
 
 Package size varies by release and platform. Reserve JFFS space for both the uploaded archive and extracted files. Models with 512 MB of RAM or more can use the defaults; smaller models, including 256 MB routers, can use [memory optimization](#low-memory), available from 0.0.3. In normal mode, the extracted core occupies about 48 MB of RAM, with additional memory used by the running proxy, GeoIP data and dashboard.
 

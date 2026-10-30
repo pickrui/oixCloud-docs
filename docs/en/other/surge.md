@@ -13,10 +13,22 @@ oixCloud Helper runs alongside Surge Mac and also supports local proxy ports and
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
 
+## Downloads and system requirements {#downloads}
+
+Helper and FlClash for oixCloud have different requirements and packages.
+
+| macOS | Helper file | Processor |
+| --- | --- | --- |
+| 14 or later | `oixcloud-external-proxy-program-arm64` | Apple Silicon |
+| 14 or later | `oixcloud-external-proxy-program-amd64` | Intel |
+| 12 / 13 | `oixcloud-external-proxy-program-legacy` | Universal: Apple Silicon and Intel |
+
+Download the [public launcher ZIP](https://github.com/pickrui/oixcloud-external-proxy-program/archive/refs/heads/main.zip), extract it and run `启动 oixCloud.command`. The launcher selects the current release file for your OS and architecture. Alternatively, follow the [public installation guide](https://github.com/pickrui/oixcloud-external-proxy-program/blob/main/docs/configuration.md#english) for Homebrew or manual installation. macOS 11 is unsupported. Legacy has not been fully verified on physical hardware. The current stable Surge Mac also requires macOS 12.0 or later; use the [Surge website](https://nssurge.com/) to download and the [official update feed](https://nssurge.com/mac/latest/appcast-signed.xml) to check its minimum OS.
+
 ## Install and sign in
 
-1. Download the release matching your macOS version and processor from the [download center](https://oixcloud.com/client/macos) or [public releases](https://github.com/pickrui/oixcloud-external-proxy-program/releases). Use Legacy builds for macOS 12/13 and the matching architecture for macOS 14 or later.
-2. Follow the launcher instructions included in the package. Packages containing `启动 oixCloud.command` offer a persistent launch option.
+1. Download the launcher package above, or manually select the matching executable from the [latest release](https://github.com/pickrui/oixcloud-external-proxy-program/releases/latest).
+2. For the launcher package, double-click `启动 oixCloud.command` and select resident startup on first use. For a directly downloaded executable, follow the public installation guide and start it with `--tray`.
 3. Open **Account → Sign in…** from the oixCloud menu-bar icon. First sign in with email/password to create the dedicated oixCloud Helper token; you can use that Access Token afterward. See [first sign-in](/en/account/security#first-client-login) for obtaining an oixCloud password after Google registration and restricting client password sign-in.
 4. Wait for plan and node retrieval. The top of the menu shows progress and results; act on the specific error if an operation fails.
 
