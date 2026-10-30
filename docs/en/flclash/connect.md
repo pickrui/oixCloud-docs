@@ -56,7 +56,9 @@ Use the play button in the dashboard **Status** card to start and the same card'
 
 Capture settings control whether traffic enters the client. Rule and Global modes control what happens afterward. See [System Proxy and TUN](/en/flclash/capture).
 
-Select an available node in Proxies, open the target service and inspect connections. Sync the managed configuration after plan or node changes; repeated sign-out is not a refresh procedure.
+## Verify the connection
+
+Select a permitted, available node in Proxies, open the target service and inspect connections. Sync the managed configuration after plan or node changes; repeated sign-out is not a refresh procedure.
 
 For sign-in failures, retain the exact error and version, then check networking, system time and account status.
 

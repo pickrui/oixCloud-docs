@@ -38,7 +38,7 @@ Managed account information, filters and plan access are handled on the oixCloud
 
 Open **oixCloud → Node Filter**, select lines, regions and names, check the preview and save. Saving starts an account refresh and managed-profile sync automatically. Wait for completion and check the nodes; if it fails, resolve the reported error and use **Sync** on the account page. Restore Default uses Smart Selection. Devices using this client type on your account share the filter; see [subscriptions and filters](/en/account/subscriptions).
 
-Profile editing still offers minimal rules and TCP Fast Open. Keep their defaults unless needed. Filtering cannot expand plan access, and conditions retaining zero nodes cannot be saved.
+Profile editing still offers supported options such as **Minimal Configuration** (simplified rules) and TCP Fast Open. Keep their defaults unless needed. Filtering cannot expand plan access, and conditions retaining zero nodes cannot be saved.
 
 ## Keep personal changes
 

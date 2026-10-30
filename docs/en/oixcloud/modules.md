@@ -34,15 +34,13 @@ Format suggestions are only guidance. A successful import does not guarantee tha
 | Categories | Organize the list without setting execution priority |
 | Module Order | Control execution priority |
 
-After updates, review warnings and inactive content, especially changed scripts, DNS and hosts.
+After updates, review warnings and inactive content, especially changed scripts, DNS and hosts. Handle unsupported items according to their specific warnings.
 
 ## Resolve conflicts
 
 Modules apply in order. The first eligible module owns a conflicting DNS override; scripts matching the same host also respect module order.
 
-Start with one related module, verify, then enable others individually. Recreate connections after changing order. Disable a module for comparison before deleting it. Removal also removes its contributed rules, scripts and MITM hosts.
-
-Scripts can read matching request/response data and make their own network requests. Use trusted authors and keep private arguments out of public reports.
+Start with one related module, verify, then enable others individually. Recreate connections after changing order and inspect requests and module feedback.
 
 ### A host excluded by another module {#module-exclusions}
 
@@ -53,6 +51,12 @@ For example, if one enabled Surge-style module excludes `api.example.com`, anoth
 A Surge-style module containing only MITM exclusions can still contribute shared exclusions without adding interception targets. MITM sets embedded in native `.amod` modules and standalone native sets exclude only their own matches; they do not participate in the shared exclusions. See [exclusion scopes](/en/oixcloud/mitm#exclusion-scope).
 
 Use device-local **Never Decrypt** when the entire device should leave an exact domain encrypted.
+
+## Disable and remove
+
+Disable a module for comparison before deleting it. Removal removes its contributed rules, scripts and MITM hosts. If the issue persists, check other modules and manually added rules.
+
+Scripts can read matching request/response data and make their own network requests. Use trusted authors and keep private arguments out of public reports.
 
 ## Verify a complete import
 

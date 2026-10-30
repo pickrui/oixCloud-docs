@@ -14,7 +14,7 @@ For the first sign-in to each custom client, use email and password or its **Sig
 
 After signing in, find the client under **Issued by client login** on the [Access Token page](https://oixcloud.com/user/token). The same account and client type reuse a token; you do not need to create one per device.
 
-Google sign-in is available in supporting iPhone/iPad versions of oixCloud and FlClash for oixCloud. Apple TV continues to [receive the account from an iPhone](/en/oixcloud/apple-tv). Follow the email/password or token instructions for Helper, OpenClash and oixClash; do not assume they have a Google button.
+Google sign-in is available in supported oixCloud versions for iPhone/iPad and in supported versions of FlClash for oixCloud. Apple TV continues to [receive the account from an iPhone](/en/oixcloud/apple-tv). Follow the email/password or token instructions for Helper, OpenClash and oixClash; do not assume they have a Google button.
 
 ## Sign in to a client with Google {#google-client-login}
 
@@ -113,7 +113,7 @@ Do not share passwords, Access Tokens, full subscription URLs, node passwords, o
 
 ## When are inactive accounts deleted?
 
-Eligible accounts without an active plan have a 30-day cleanup period when both balance and commission are zero or negative, or 90 days when either is positive. The clock starts from the later of the most recent login activity and plan expiry, so a long absence does not by itself cause deletion on the day a plan expires.
+Eligible accounts without a valid plan have a 30-day cleanup period when both balance and commission are zero or negative, or 90 days when either is positive. The clock starts from the later of the most recent login activity and plan expiry, so a long absence does not by itself cause deletion on the day a plan expires.
 
 Website/client sign-ins and authenticated activity can update login activity. Active or valid queued plans, pending withdrawals, payments and other unsettled items can defer cleanup. Banned accounts are not automatically deleted under this inactivity rule. Check account notices and the current state.
 

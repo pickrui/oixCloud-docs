@@ -25,11 +25,11 @@ In **Proxies → Policies**, create a named group, choose its type and add membe
 | Load balance | Distribute separate connections among available members |
 | Smart | Learn from real connections and try another member when setup fails |
 
-**Best Available** (called Auto Select in older versions) is the built-in automatic group. Empty or unusable groups require checking member sources, filters and test results.
+**Best Available** (called Auto Select in older versions) is the built-in automatic group. Your own groups appear as separate selectable outbounds. Empty or unusable groups require checking member sources, filters and test results.
 
 ## Tests and priority
 
-Use a reachable test URL and keep the default interval initially. For Smart priority, lower values are preferred and 1.0 is neutral. Automatic changes normally affect new connections; reopen the target connection when checking a switch.
+Use a reachable test URL and keep the default interval initially. For Smart priority, lower values are preferred and 1.0 is neutral. Do not exclude large numbers of members based on one high-latency result. Automatic changes normally affect new connections; reopen the target connection when checking a switch.
 
 ### Why Best Available latency may stay unchanged {#retesting}
 

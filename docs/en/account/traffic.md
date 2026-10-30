@@ -18,7 +18,7 @@ Ordinary plans earn no benefit credits once their traffic runs out, even if low-
 
 ## Pay-as-you-go and low-speed mode
 
-Pay-as-you-go is a separate plan type. You must buy the corresponding plan and meet the balance requirement shown on its page; traffic charges come from your account balance first, then from commission for any shortfall. Check the store and account dashboard for plan fees, traffic prices, and speed-limit conditions. An ordinary plan entering low-speed mode does not automatically enable pay-as-you-go. Check your renewal or plan-switching options to restore high-speed access.
+Pay-as-you-go is a separate plan type. You must buy the corresponding plan and meet the balance requirement shown on its page; traffic charges come from your account balance first, then from commission for any shortfall. Check the store and account dashboard for plan fees, traffic prices, and usage conditions. An ordinary plan entering low-speed mode does not automatically enable pay-as-you-go. Check your renewal or plan-switching options to restore high-speed access.
 
 Check account records for settled charges and balance changes.
 

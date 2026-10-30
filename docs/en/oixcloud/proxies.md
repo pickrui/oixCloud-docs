@@ -65,4 +65,4 @@ Test individual nodes or a small batch. Compare the same network and time period
 
 ## Delete and restore
 
-Check group, chain and rule references before deleting. **Recently Deleted** keeps nodes and subscriptions deleted on this device for three days; it is not a shared cloud recycle bin. After restoring, check the selected outbound and related rules before connecting.
+Check group, chain and rule references before deleting. **Recently Deleted** keeps nodes and subscriptions deleted on this device for three days; it is not a shared cloud recycle bin, and expired entries cannot be recovered here. After restoring, check the selected outbound and related rules before connecting.

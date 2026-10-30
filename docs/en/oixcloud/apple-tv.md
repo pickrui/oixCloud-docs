@@ -28,11 +28,15 @@ The current oixCloud account page on TV displays the account received from iPhon
 
 Tailscale device authorization is separate and cannot sign into the managed oixCloud account.
 
-## Everyday use and troubleshooting
+<span id="everyday-use-and-troubleshooting"></span>
+
+## Everyday use
 
 Use the remote to choose a node or group and inspect latency and connection status. Perform complex node, chain and rule organization on the phone/tablet before syncing.
 
-If sync fails, check Apple Accounts, versions and both switches first. If nodes exist but streaming fails, inspect the chosen exit and service region rather than repeatedly syncing the same data.
+## Sync or connection failures
+
+Check Apple Accounts, client versions and both sync switches first, then the TV network and plan status. If nodes exist but streaming fails, inspect the chosen exit and service region rather than repeatedly syncing the same data.
 
 ## Inspect and select from a LAN browser {#local-control}
 

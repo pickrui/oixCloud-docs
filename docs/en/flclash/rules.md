@@ -26,10 +26,10 @@ Open **Override** from the profile menu.
 
 | Mode | Behavior |
 | --- | --- |
-| Merge | Keeps subscription groups/rules and layers personal settings; personal rules precede subscription rules, while existing added rules retain priority |
-| Custom | You maintain groups and rules yourself |
+| Overlay | Keeps subscription groups/rules and layers personal settings; personal rules precede subscription rules, while existing added rules retain priority |
+| Custom | You maintain groups and rules yourself; intended for users who understand the full routing structure |
 
-Start with Merge. Empty custom content does not provide a usable routing configuration.
+Start with Overlay. Empty custom content does not provide a usable routing configuration; do not switch to an empty Custom configuration just to remove default rules.
 
 ## Route a website
 
@@ -41,9 +41,13 @@ Start with Merge. Empty custom content does not provide a usable routing configu
 
 Domain fields do not take full page URLs. Old connections can survive a rule change, so reopen the destination when testing.
 
-## Groups and scripts
+<span id="groups-and-scripts"></span>
+
+## Add a policy group
 
 Create named groups with valid members before referencing them. Recheck rule targets after renaming or deleting a group.
+
+## Override scripts
 
 **Tools → Advanced Configuration → Scripts** changes generated configuration; it is not an HTTP-response rewriting interface. Use trusted scripts, preserve a recovery copy and disable the script for comparison if something fails.
 
@@ -51,9 +55,11 @@ Direct edits to a downloaded subscription may disappear on sync. Keep lasting ch
 
 For rule types and matching syntax, see the [mihomo routing-rule reference](https://wiki.metacubex.one/en/config/rules/). Use node or group names that exist in your active profile rather than copying example targets blindly.
 
-## Merge example: change one domain's outbound
+<span id="merge-example-change-one-domain-s-outbound"></span>
 
-First confirm a group named `Work` exists on the proxy page. In the selected profile's merge override, add the suffix `example.com` and choose `Work` as its target. Save and check the configuration, then test a destination in Rule mode.
+## Overlay example: change one domain's outbound
+
+First confirm a group named `Work` exists on the proxy page. In the selected profile's Overlay override, add the suffix `example.com` and choose `Work` as its target. Save and check the configuration, then test a destination in Rule mode.
 
 If it does not match, check capture, Rule mode, higher-priority added rules, the existence of the target group and whether you tested an old connection, in that order. Remove the example rule and reapply to restore the subscription's handling of that domain.
 

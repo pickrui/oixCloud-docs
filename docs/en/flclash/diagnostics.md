@@ -14,11 +14,13 @@ description: "Network checks and connections \u2014 setup, practical steps and t
 </figure>
 
 1. Keep the failing profile and network environment.
-2. Open **Tools → Network Check** and run it.
+2. Open **Tools → Network self-check** and select **Run self-check**.
 3. Review failures and attention items before taking their suggested actions.
 4. Rerun after each fix and retest the original application.
 
 Checks cover the active profile, core, listeners, system proxy, TUN, DNS and a few HTTPS probes. Passing does not prove that every node, app, UDP or IPv6 path works.
+
+## Understand the results
 
 | Result | Next check |
 | --- | --- |

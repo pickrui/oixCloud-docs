@@ -60,10 +60,10 @@ Compatible does not mean that nothing is replaced. Restore all data still applie
 3. Before restoring, check the strategy, select the intended device/time entry, then choose the scope.
 4. Set retention according to how many older copies you need.
 
-Retention affects this device's older WebDAV backups. Backup/restore is not continuous two-way synchronization.
+Retention affects this device's older WebDAV backups. Backup/restore is not continuous two-way synchronization; saving here does not immediately change another device.
 
 ## After moving to another device
 
-Grant VPN or administrator permissions again and check ports, app access control and the active profile. Managed-node files are not transferred in portable backups: sign into oixCloud and sync on the new device. Tailscale device identity and auth keys also require separate authorization.
+Grant VPN or administrator permissions again and check ports, app access control and the active profile. Managed-node files are not transferred in portable backups: sign into oixCloud and sync on the new device. Tailscale device identity and auth keys are also excluded from the backup, so authorize again on the new device.
 
 Exported backups omit the WebDAV password. Enter it again on a new device; same-device restore can retain an existing password for the matching server. Preserve the original backup and exact error if restore fails instead of repeatedly overwriting working data.

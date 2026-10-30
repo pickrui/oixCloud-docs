@@ -36,7 +36,9 @@ Choose an online, approved exit node in the network settings, then direct the in
 
 Authorize each device separately. Syncing configuration does not copy local identity. Use your administrator's control URL for Headscale and recheck sign-in after changing control servers or network identity.
 
-For failures, check VPN state, authorization, peers, access rules, subnet approval and exit-node status. Start a fresh login when an authorization page expires.
+## Connection failures
+
+Check in order: VPN state, device authorization, peer availability, access permissions, subnet approval and exit-node status. Start a fresh login when an authorization page expires; do not repeatedly share the same old authorization link with other devices.
 
 ## Capabilities and server-side setup
 

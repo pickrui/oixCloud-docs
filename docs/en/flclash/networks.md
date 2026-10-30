@@ -23,7 +23,7 @@ Restrict use to trusted LANs and do not forward the port to the public internet.
 
 ## Pause on a named Wi-Fi network
 
-Open **Tools → Advanced Configuration → Network → Exclude SSIDs**.
+Open **Tools → Advanced Configuration → Network → Wi-Fi networks that pause the proxy**.
 
 1. Add the exact Wi-Fi name to pause proxying while connected to it.
 2. On Android/macOS, follow the location-permission prompt if the name cannot be read. SSID matching cannot work without an available network name.

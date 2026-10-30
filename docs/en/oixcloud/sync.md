@@ -32,7 +32,7 @@ Version 1.34 introduced the current sync system; it does not support every featu
 
 On the first upgrade to a folder-capable build, devices syncing **Proxies** fetch that sync zone again. Once folder records exist in iCloud, older builds that cannot read them skip those records and report that an update is required. This does not call for deleting cloud data or adding every node again.
 
-Check each device's version and release channel, retain the device with complete data, then update, use **Sync Now**, and verify folder names and members. A device that cannot upgrade cannot validate sync of the new feature. Apple TV display and sync remain limited to what its own version supports.
+Check each device's version and release channel, preserve the existing complete data, then update, use **Sync Now**, and verify folder names and members. A device that cannot upgrade cannot validate sync of the new feature. Apple TV display and sync remain limited to what its own version supports.
 
 ## Account changes and recovery
 

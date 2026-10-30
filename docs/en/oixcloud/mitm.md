@@ -16,7 +16,7 @@ For iPhone / iPad. Ordinary proxy access does not require MITM.
 </figure>
 
 1. Open **Settings → MITM → MITM Certificates** and inspect **This Device**.
-2. If no certificate exists, choose **Generate Certificate**. To share an existing account certificate with another device, use the account-certificate controls instead.
+2. If no certificate exists, choose **Generate Certificate**. To use the same account certificate as an existing device, retrieve it through the account-certificate controls instead.
 3. Choose **Install Trust Profile** and complete profile installation in iOS Settings.
 4. Under **General → About → Certificate Trust Settings**, enable full trust for that root certificate.
 5. Return to the app, enable MITM as prompted, and check the intended hosts and rules.
@@ -34,9 +34,13 @@ Replacing the local certificate requires installing and trusting the new one; an
 
 Installing the profile and trusting its root are separate steps. See [Apple's certificate-trust instructions](https://support.apple.com/en-us/102390).
 
-## Enable and verify rules
+<span id="enable-and-verify-rules"></span>
+
+## Enable rules
 
 Review imported hosts and scripts. Remote MITM rule sets start disabled. Enable only the required sets and keep host scope narrow. HTTPS module rewriting also needs the master switch, a trusted certificate and active module content.
+
+## Verify that it works
 
 Connect, reopen the service and inspect request details or MITM diagnostics. An imported rule alone does not prove interception.
 
@@ -47,6 +51,8 @@ Connect, reopen the service and inspect request details or MITM diagnostics. An 
 | A feature breaks | Disable the relevant set or module and compare |
 
 Pinned applications may reject interception. Do not disable global certificate verification; exclude unsuitable hosts and retain their original TLS connection.
+
+## Disable MITM
 
 To stop, disable MITM or the relevant set and recreate connections. Remove the profile in system settings if no longer needed. Never share its private key.
 
@@ -63,8 +69,8 @@ Excluded domains retain their original TLS connection. HTTPS rewrites, scripts a
 | Setting | Effect on HTTPS decryption |
 | --- | --- |
 | An enabled Surge-style module's hostname exclusion | Shared across Surge-style modules; native modules and native MITM sets may still handle the host |
-| A hostname exclusion in a native `.amod` module's embedded MITM set | Removes only that embedded set; other applicable sources can still participate |
-| A native MITM rule set's hostname exclusion | Removes only that set; other applicable sets can still participate |
+| A hostname exclusion in a native `.amod` module's embedded MITM set | Excludes the host only from that embedded set; other applicable sources can still handle it |
+| A native MITM rule set's hostname exclusion | Excludes the host only from that set; other applicable sets can still handle it |
 | Device-local Never Decrypt | Prevents all modules and sets from decrypting that exact domain and survives subscription updates |
 
 Use **Never Decrypt** when the entire device should leave a domain encrypted. An exclusion in one module or native set is not equivalent. Shared Surge-style HTTPS exclusions do not disable plain HTTP rules; plain HTTP still follows each module's own matching and exclusion conditions.

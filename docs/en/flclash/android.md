@@ -18,12 +18,12 @@ Open **Tools → Access Control**. This application list is Android-specific.
 | Mode | Meaning |
 | --- | --- |
 | Whitelist mode | Only selected apps enter the VPN |
-| Blacklist mode | Selected apps bypass the VPN |
+| Blacklist mode | Selected apps bypass the VPN; other apps follow the VPN settings |
 
 1. Open the top-right More menu on **App Access Control** and choose **Turn on**.
 2. Choose **More → Settings → Mode**, select whitelist or blacklist mode, then return to select apps.
 3. Use the top-right **Save** checkmark and reconnect VPN as prompted. The bottom status bar shows the current mode and selection count.
-4. Verify one app before expanding the selection.
+4. Verify one app first; do not confuse excluding an app with allowing it into the VPN.
 
 Traffic entering the VPN still follows routing rules. Access control does not assign a separate remote node to every app.
 
@@ -36,5 +36,7 @@ Grant the system's installed-app-list permission when requested, then refresh. I
 Check system VPN status, battery optimization, background restrictions and startup permissions. Settings differ by device manufacturer.
 
 Competing VPNs can interrupt capture. Pause the other VPN and reproduce. Compare Wi-Fi and mobile networking separately when only one fails.
+
+## Verify after changes
 
 After changing access rules, reopen the target app and check connections. An excluded app not appearing in core connection records is expected; DNS changes do not fix that exclusion.

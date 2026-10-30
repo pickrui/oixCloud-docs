@@ -41,6 +41,8 @@ Open **Proxy Service** in the Network section of Settings and configure the port
 
 Keep the client connected on a reachable network. Other devices must support the protocol. Use trusted LANs and do not forward the listener to the public internet.
 
-IPv6, Enhanced Compatibility and Apple push capture solve different problems. Keep defaults unless needed, and read in-app explanations before changing broad capture options.
+## Advanced network controls
+
+IPv6, Enhanced Compatibility and Apple push capture solve different problems. Keep defaults unless needed and change one setting at a time. Read in-app explanations before changing options such as **Include All Networks** or on-demand connections.
 
 To inspect this device and switch its node from a browser on the same network, use [Local Controller](/en/oixcloud/local-control). Its HTTPS control port is separate from the HTTP/SOCKS5 proxy service.

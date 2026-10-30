@@ -26,9 +26,9 @@ A full profile and a Provider node list serve different purposes. A Provider mus
 | oixClash | **订阅管理** (Subscription Management) in the plugin's account row opens the web editor. After saving, click **更新节点** (Update Nodes) in the plugin to fetch immediately, or wait for the daily update. |
 | Other subscription clients | Update the imported address and confirm the updated profile is selected. |
 
-Names support case-insensitive regular expressions: `香港|日本` matches either word. Node names remain Chinese even in an English interface. Search within the preview only locates entries; it does not add a filter. Pending previews, invalid expressions and zero retained nodes prevent saving.
+Names support case-insensitive regular expressions: `香港|日本` matches either word. Changing the interface language does not translate node names. Search within the preview only locates entries; it does not add a filter. Pending previews, invalid expressions and zero retained nodes prevent saving.
 
-See the illustrations for [oixCloud](/en/oixcloud/proxies) and [FlClash for oixCloud](/en/flclash/profiles).
+See the illustrations for [oixCloud](/en/oixcloud/proxies#update-and-filter) and [FlClash for oixCloud](/en/flclash/profiles#managed-options).
 
 ## Empty filters and restoring defaults
 

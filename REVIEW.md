@@ -1,3 +1,41 @@
+# Bilingual content audit — 2026-10-30
+
+Read all 51 Chinese/English article pairs, including frontmatter, task indexes, steps, conditions, tables, examples, warnings and linked reading. This is a content comparison, with targeted maintained-source checks for ambiguous UI terminology; it is not a new release or cross-platform runtime audit.
+
+| Reviewed group | Pairs | Coverage |
+| --- | --- | --- |
+| Homepage | 1 | Hero, actions, task table and platform notice |
+| Start | 3 | Index, concepts and first connection |
+| Client index | 1 | Device guides and download/OS requirements |
+| Account | 9 | Index, plans, traffic, fair use, nodes, relays, subscriptions, security and unlock |
+| Help | 3 | Index, troubleshooting and support |
+| FlClash for oixCloud | 13 | Index and every installation, profile, routing, network, Tailscale and maintenance guide |
+| Apple oixCloud | 15 | Index and every phone/tablet, Apple TV, rule, module, DNS, sync, automation and control guide |
+| Other clients | 6 | Index, Helper Mac/Linux/ports, OpenClash and oixClash |
+
+| Difference found | Correction |
+| --- | --- |
+| English concepts omitted the examples column | Restore the five capture/routing/group/node/subscription examples and the domain/IP matching explanation. |
+| English Google sign-in sentence could imply an iPhone/iPad FlClash edition | Scope iPhone/iPad to Apple oixCloud, and state FlClash support separately. |
+| English subscription guide asserted node names remain Chinese | State that changing interface language does not translate node names; preserve the literal name-matching example. Restore links to the corresponding filter sections. |
+| Eligibility and billing wording was narrower or less explicit | Use usage conditions rather than speed-limit conditions, explicitly require enabled auto-renewal, and distinguish no valid plan from merely no active plan. No numeric billing/eligibility rules changed. |
+| English Android capture guide omitted battery restrictions and verification detail | Restore the battery/background check, whitelist/blacklist contrast and separate verification step. |
+| UI names differed from maintained translations | Use Overlay, Network self-check / Run self-check, Wi-Fi networks that pause the proxy, Minimal Configuration and Save and log in. Update the Chinese SSID menu label and profile-option label too. |
+| English Tailscale made Not Applied a diagnosis and omitted the auto-route condition | Treat it as a prompt to check profile membership/names, explicitly require automatic routing to be enabled, and identify the auth-key registration step. |
+| Backup and connection troubleshooting lost qualifications | Explicitly exclude Tailscale identity/auth keys from backups, explain that saving is not live cross-device sync, restore TV network/plan checks and expired-auth-link handling. |
+| Apple MITM certificate wording suggested sharing to another device | Say to retrieve the account certificate to use the same certificate as the existing device. |
+| MITM exclusion table sounded like it removed a whole set | Exclude the host only from the relevant native set; other sources may still process it. |
+| Rule updates sounded guaranteed and HTTPS inspection sounded optional | Say updates normally retain local routing choices, distinguish match data from client-selected routing, and require MITM when matching HTTPS content. |
+| Module and priority guidance omitted follow-up checks | Restore checks for other modules/manual rules after removal, warnings for unsupported entries, separate groups as outbounds and the single-latency-result caution. |
+| English sections merged distinct Chinese operations | Restore headings for verification, sign-out, advanced controls, scripts, disabling MITM/modules, Tailscale limits and troubleshooting. Preserve all old generated anchors with aliases where headings change. |
+| OpenClash port-filter wording could imply all downloads were disallowed | Both languages explicitly refer to BT/P2P downloads and account sharing; this changes no permission or service policy. |
+
+Source checks used committed FlClash `b014c82773e4ccd7ad766a0a2906901aec905cae`, Apple oixCloud `8219e9cd7bb913e4575c889681458a5c715a37cc`, and panel `7fc1c5785c6cee4977e0b6bfe3b75a730c6c47b9`. Helper menu source confirms actual bilingual labels, so they were not replaced with guessed Chinese-only paths. The official English panel label is Guangdong–Hong Kong, so that existing translation was retained. Client code and uncommitted sibling work were not changed.
+
+Automated comparison confirms all 51 pairs have matching heading hierarchy, table rows/columns, numbered-step counts, linked article paths and illustration references. Executable/example code blocks match; the fair-use formula and support template intentionally translate prose. Sidebar link order matches across all 50 non-home entries. Shared illustrations remain explicitly labelled as Chinese simulated interfaces on English pages.
+
+Validation: `pnpm build`, `git diff --check`, bilingual structural checks and internal-link checks passed: 103 HTML pages, 7,120 internal references, 172 wrapped tables, 51 locale pairs. All 102 bilingual article pages were checked at 1440 px and 390 px (204 browser cases), with no page overflow or broken images. Representative example and MITM tables were visually inspected. Desktop/mobile language switches retained the matching article and shared section anchors. Every existing generated anchor in edited pages was retained, including the renamed English sections. No navigation or legacy fragment mappings were modified.
+
 # External link audit — 2026-10-30
 
 Inventoried 65 distinct external links in the rendered site, including article links, homepage actions and the shared GitHub navigation. Eleven installer/archive links were covered by the preceding download audit; this pass fetched the other 54 destinations with GET requests and inspected final URLs, titles, page content and fragment targets. Localhost diagnostic commands, DNS endpoint examples and XML namespaces are not website links and were not treated as dead pages.

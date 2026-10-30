@@ -34,13 +34,17 @@ A domain field takes a hostname, not `https://` or a page path. A suffix include
 
 Global and Direct modes do not apply normal routing rules.
 
-## Import and edit sets
+<span id="import-and-edit-sets"></span>
 
-Import supported `.arrs`, `.list` or `.conf` files, or subscribe by URL. Review the preview, then assign a destination to the set. Updating a subscription preserves its local routing choice.
+## Import rule sets
 
-Tap a built-in set name to search or edit its contents. The separate destination control changes routing. **Restore Default** discards local content overrides; an empty override is different from restoring defaults.
+Import supported `.arrs`, `.list` or `.conf` files, or subscribe by URL. Review the preview, then assign a destination to the set. The file defines what to match; you choose the destination in the client. Subscription updates normally preserve that local choice, so you do not need to edit each domain entry.
 
-GeoIP/ASN needs its database. HTTPS path/header matching needs readable HTTP data and may require [MITM](/en/oixcloud/mitm).
+## Edit built-in rule sets
+
+Tap a built-in set name to view, search or edit its contents. The separate destination control changes routing. **Restore Default** discards local content overrides; an empty override is different from restoring defaults.
+
+GeoIP/ASN rules need their corresponding databases. HTTP path/header matching requires readable HTTP data; matching HTTPS content also requires [MITM](/en/oixcloud/mitm).
 
 ## Check external resource updates together {#external-resources}
 

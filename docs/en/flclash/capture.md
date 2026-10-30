@@ -36,12 +36,18 @@ Enable TUN and complete administrator authorization. A rejected permission reque
 
 After connection, check exclusions, routes, DNS and competing VPNs. Change MTU or stack only with a specific comparison in mind, and restart as required by the interface.
 
-## Android and verification
+<span id="android-and-verification"></span>
 
-Allow the system VPN request and inspect [app access control](/en/flclash/android). Compare the target app with connection records. Windows/macOS users can run [network checks](/en/flclash/diagnostics) for listeners, system proxy and TUN state.
+## Android
+
+Allow the system VPN request. If only some apps fail, inspect [app access control](/en/flclash/android), then check whether background battery restrictions interrupted the VPN.
+
+## Verify
+
+Compare the same target's behavior with connection records. Windows/macOS users can run [network checks](/en/flclash/diagnostics) for listeners, system proxy and TUN state.
 
 ## Proxy conflicts and occupied ports
 
-On Windows/macOS, startup may report a possible proxy conflict and list existing system proxies, a PAC script or another VPN/tunnel. Identify their purpose and open Network Diagnostics from the message if needed. This is evidence to investigate, not proof of the failure's cause.
+On Windows/macOS, startup may report a possible proxy conflict and list existing system proxies, a PAC script or another VPN/tunnel. Identify their purpose and open **Network self-check** from the message if needed. This is evidence to investigate, not proof of the failure's cause.
 
 If the mixed port is occupied, the port dialog suggests an available port when it finds one. Review it, choose **Save and retry**, and update apps with manually configured proxy addresses. A successful port check does not reserve it against another process using it later.

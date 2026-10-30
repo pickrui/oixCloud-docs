@@ -47,6 +47,8 @@ Pull down on the oixCloud account page to refresh account information. Use Refre
 
 Open a destination after connecting and check the actual outbound in [requests and diagnostics](/en/oixcloud/diagnostics). If sign-in works but the node list is empty, check your plan and node filters.
 
+## Sign out
+
 Signing out removes local sign-in state without revoking the login token shared by the same client type. Revoke tokens on the website when necessary, and account for enabled account sync on other devices.
 
 ## Google sign-in troubleshooting

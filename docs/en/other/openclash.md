@@ -43,7 +43,7 @@ While signed in, the integrated build prioritizes the dedicated core; the separa
 
 The maintained build enables common-port proxying by default: listed destination ports use the proxy, while others go direct. Check the router's actual settings for existing installations. If a game, call or self-hosted service uses uncommon ports, review **Plugin Settings → Traffic Control → Common Ports Proxy Mode**, adjust, restart and verify.
 
-UDP forwarding remains subject to the port range. Port filtering does not identify all BT/P2P traffic and does not authorize downloading or account sharing.
+UDP forwarding remains subject to the port range. Port filtering does not identify all BT/P2P traffic and does not authorize BT/P2P downloads or account sharing.
 
 ## 4. Verify from a LAN device
 

@@ -28,7 +28,7 @@ Test a small set of nodes on the same network. Latency is not bandwidth or proof
 
 ## Personal groups
 
-Add a group with valid members in a profile's Override settings, then point personal rules to it. Read [merge versus custom mode](/en/flclash/rules) first. Avoid empty groups and circular references.
+Add a group with valid members in a profile's Override settings, then point personal rules to it. Read [Overlay versus Custom mode](/en/flclash/rules) first. Avoid empty groups and circular references.
 
 ## Proxy chains
 

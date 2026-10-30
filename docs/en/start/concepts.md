@@ -6,13 +6,13 @@ description: "Nodes, groups and routing \u2014 setup, practical steps and troubl
 
 Separate three questions: does traffic reach the client, which route should it take, and which node serves that route?
 
-| Item | Purpose |
-| --- | --- |
-| System proxy / VPN / TUN | Captures traffic from applications |
-| Routing rules | Choose proxy, direct access or rejection by destination |
-| Policy group | Selects a member manually or automatically |
-| Node | The server that establishes the proxy connection |
-| Subscription | Updates nodes and some configuration from a provider |
+| Item | Purpose | Example |
+| --- | --- | --- |
+| System proxy / VPN / TUN | Captures traffic from applications | Enable System Proxy or TUN in FlClash for oixCloud |
+| Routing rules | Choose an outbound by domain, IP or other conditions | Send company domains direct and other requests through a proxy |
+| Policy group | Selects a node from its members | Manual selection, URL test or fallback |
+| Node | The server that establishes the proxy connection | Choose a node your account is permitted to use |
+| Subscription | Updates nodes and some configuration from a provider | A provider's managed profile |
 
 ## Modes
 
