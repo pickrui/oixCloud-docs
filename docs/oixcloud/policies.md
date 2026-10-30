@@ -9,13 +9,13 @@ description: "策略组、自动选择与代理链的操作步骤、适用范围
 ## 选择策略组
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-policies-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 创建策略组">
-    <img src="/illustrations/oixcloud-policies-zh.svg?v=20260929-2" alt="oixCloud · 创建策略组" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-policies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 创建策略组">
+    <img src="/illustrations/oixcloud-policies-zh.svg?v=20261030-2" alt="oixCloud · 创建策略组" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
 
-在「代理 → 策略」中添加策略组，填写名称、选择类型并添加成员。保存后，还要在首页或对应分流规则中选择它，流量才会使用该组
+在「代理 → 策略」中添加策略组，填写名称、选择类型并添加成员。保存后，还要在主页或对应分流规则中选择它，流量才会使用该组
 
 | 类型 | 适合的需求 |
 | --- | --- |
@@ -25,7 +25,7 @@ description: "策略组、自动选择与代理链的操作步骤、适用范围
 | 负载均衡 | 将不同连接分配给可用成员 |
 | 智能 | 根据实际连接表现学习路线，在建立连接失败时尝试其他成员 |
 
-首页的「自动优选」是内置自动组；你创建的策略组会作为独立出口供选择。没有可用成员时，先检查成员来源、筛选条件与测试结果
+主页的「自动优选」是内置自动组；你创建的策略组会作为独立出口供选择。没有可用成员时，先检查成员来源、筛选条件与测试结果
 
 ## 调整测速与优先级
 
@@ -39,20 +39,20 @@ description: "策略组、自动选择与代理链的操作步骤、适用范围
 
 需要立即比较节点时，在「代理 → 服务器」长按节点选择「测试延迟」；批量测试使用工具栏「全部测试」，文件夹也可从自身菜单测试成员。已有结果时，点击延迟数值可查看详情
 
-确认测试完成后，再在首页核对自动优选当前选择，并新建一次目标请求检查出口。手动测得的低延迟不等于一定成为自动优选结果，也不证明目标服务可用；不要把未刷新的数字直接视为连接故障
+确认测试完成后，再在主页核对自动优选当前选择，并新建一次目标请求检查出口。手动测得的低延迟不等于一定成为自动优选结果，也不证明目标服务可用；不要把未刷新的数字直接视为连接故障
 
 ## 创建代理链
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-chains-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 按顺序创建代理链">
-    <img src="/illustrations/oixcloud-chains-zh.svg?v=20260929-2" alt="oixCloud · 按顺序创建代理链" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-chains-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 按顺序创建代理链">
+    <img src="/illustrations/oixcloud-chains-zh.svg?v=20261030-2" alt="oixCloud · 按顺序创建代理链" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
 
 1. 在「代理」切换到代理链区域，添加至少两个成员
-2. 第一跳可选独立节点，或符合条件的「手动」「自动测速」「故障转移」策略组；后续各跳使用固定节点
-3. 保存后在首页或规则的目标中选中这条链
+2. 第一跳可选独立节点，或符合条件的「手动」「自动测速」「故障转移」「智能」策略组；后续各跳使用固定节点
+3. 保存后在主页或规则的目标中选中这条链
 4. 对目标网站检查最终出口，再比较速度与稳定性
 
 链越长不代表越快。任意一段不可用都会影响整条链；先分别验证每个节点，避免把链自身或相互依赖的策略组接回链中

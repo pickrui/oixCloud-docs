@@ -7,8 +7,8 @@ description: Install oixCloud Helper on macOS, choose an integration mode and co
 oixCloud Helper runs alongside Surge Mac and also supports local proxy ports and Linux. It is not an iPhone/iPad `.sgmodule` module.
 
 <figure class="guide-figure">
-  <a href="/illustrations/helper-surge-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Helper: apply the profile in Surge">
-    <img src="/illustrations/helper-surge-zh.svg?v=20260929-2" alt="Helper: apply the profile in Surge" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/helper-surge-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Helper: apply the profile in Surge">
+    <img src="/illustrations/helper-surge-zh.svg?v=20261030-2" alt="Helper: apply the profile in Surge" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>

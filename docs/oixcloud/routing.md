@@ -9,8 +9,8 @@ description: "分流规则与匹配顺序的操作步骤、适用范围与常见
 ## 操作示意
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-rules-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 为网站添加路由规则">
-    <img src="/illustrations/oixcloud-rules-zh.svg?v=20260929-2" alt="oixCloud · 为网站添加路由规则" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-rules-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 为网站添加路由规则">
+    <img src="/illustrations/oixcloud-rules-zh.svg?v=20261030-2" alt="oixCloud · 为网站添加路由规则" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

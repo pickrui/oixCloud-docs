@@ -37,8 +37,8 @@ If the platform does not match, the software center says so and stops; install t
 ## 3. Sign in to oixCloud
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-login-zh.svg?v=20261003" target="_blank" rel="noopener" aria-label="oixClash · Sign in">
-    <img src="/illustrations/oixclash-login-zh.svg?v=20261003" alt="oixClash · Sign in" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/oixclash-login-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixClash · Sign in">
+    <img src="/illustrations/oixclash-login-zh.svg?v=20261030-2" alt="oixClash · Sign in" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Simulated Chinese interface · Fictional data · Click to enlarge</figcaption>
 </figure>
@@ -55,8 +55,8 @@ After signing in, the page shows the account, plan, expiry date and traffic. A t
 ## 4. Turn on the proxy
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-running-zh.svg?v=20261030" target="_blank" rel="noopener" aria-label="oixClash · Running settings and memory optimization">
-    <img src="/illustrations/oixclash-running-zh.svg?v=20261030" alt="oixClash · Running settings and memory optimization" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/oixclash-running-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixClash · Running settings and memory optimization">
+    <img src="/illustrations/oixclash-running-zh.svg?v=20261030-2" alt="oixClash · Running settings and memory optimization" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Simulated Chinese interface · Fictional data · Click to enlarge</figcaption>
 </figure>
@@ -108,8 +108,8 @@ If the in-plugin updater cannot verify a package, or an older self-check reports
 From oixClash 0.0.2, **自定义规则** (Custom Rules) edits the same [account rules](https://oixcloud.com/user/rule) as the website. These rules precede the defaults. Saving affects other clients that use this account rule list. Saving an empty editor deletes the entire account list, so keep a copy of anything you need first.
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-rules-zh.svg?v=20261003" target="_blank" rel="noopener" aria-label="oixClash · Account custom rules">
-    <img src="/illustrations/oixclash-rules-zh.svg?v=20261003" alt="oixClash · Account custom rules" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/oixclash-rules-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixClash · Account custom rules">
+    <img src="/illustrations/oixclash-rules-zh.svg?v=20261030-2" alt="oixClash · Account custom rules" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Simulated Chinese interface · Fictional data · Click to enlarge</figcaption>
 </figure>

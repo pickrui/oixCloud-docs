@@ -17,8 +17,8 @@ Select the profile, start the client and verify the node list; an imported profi
 ## Update
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-profiles-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Update and manage profiles">
-    <img src="/illustrations/flclash-profiles-zh.svg?v=20260929-2" alt="Update and manage profiles" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-profiles-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Update and manage profiles">
+    <img src="/illustrations/flclash-profiles-zh.svg?v=20261030-2" alt="Update and manage profiles" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
@@ -30,8 +30,8 @@ Managed account information, filters and plan access are handled on the oixCloud
 ## Managed options
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-filter-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Filter managed nodes">
-    <img src="/illustrations/flclash-filter-zh.svg?v=20260929-2" alt="Filter managed nodes" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-filter-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Filter managed nodes">
+    <img src="/illustrations/flclash-filter-zh.svg?v=20261030-2" alt="Filter managed nodes" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>

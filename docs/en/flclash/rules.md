@@ -7,8 +7,8 @@ description: "Overrides, groups and added rules \u2014 setup, practical steps an
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-rules-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Add a domain-suffix rule">
-    <img src="/illustrations/flclash-rules-zh.svg?v=20260929-2" alt="Add a domain-suffix rule" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-rules-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Add a domain-suffix rule">
+    <img src="/illustrations/flclash-rules-zh.svg?v=20261030-2" alt="Add a domain-suffix rule" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
@@ -16,8 +16,8 @@ description: "Overrides, groups and added rules \u2014 setup, practical steps an
 ## Choose an override mode
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-override-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Choose an override mode">
-    <img src="/illustrations/flclash-override-zh.svg?v=20260929-2" alt="Choose an override mode" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-override-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Choose an override mode">
+    <img src="/illustrations/flclash-override-zh.svg?v=20261030-2" alt="Choose an override mode" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>

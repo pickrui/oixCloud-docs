@@ -9,8 +9,8 @@ For iPhone / iPad.
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-proxies-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Select a node">
-    <img src="/illustrations/oixcloud-proxies-zh.svg?v=20260929-2" alt="Select a node" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-proxies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Select a node">
+    <img src="/illustrations/oixcloud-proxies-zh.svg?v=20261030-2" alt="Select a node" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
@@ -32,7 +32,7 @@ Check whether the enclosed content is a single node or a subscription, confirm t
 
 ## Organize standalone nodes in folders {#folders}
 
-These folder operations apply to iPhone / iPad in 2.1.6 (520) and later supporting builds; availability depends on your release channel. Older illustrations may omit the controls. This does not imply an equivalent management interface on Apple TV.
+These folder operations apply to iPhone / iPad in 2.1.6 (520) and later supporting builds; availability depends on your release channel. The node-picker illustration on this page does not show folder editing. This does not imply an equivalent management interface on Apple TV.
 
 1. In **Proxies**, select **Servers**, then choose **New Folder** from the toolbar's additional actions.
 2. Enter a name, use **Add Proxy** to select standalone nodes not already in other folders, finish selection and save.
@@ -49,8 +49,8 @@ Folders organize standalone nodes, not nodes inside subscriptions. They are neit
 ## Update and filter
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Filter managed nodes">
-    <img src="/illustrations/oixcloud-filter-zh.svg?v=20260929-2" alt="Filter managed nodes" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Filter managed nodes">
+    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261030-2" alt="Filter managed nodes" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>

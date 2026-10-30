@@ -7,8 +7,8 @@ description: "Tailscale、子网与出口节点的操作步骤、适用范围与
 ## 添加并登录
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-tailscale-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 授权 Tailscale 网络">
-    <img src="/illustrations/flclash-tailscale-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 授权 Tailscale 网络" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-tailscale-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 授权 Tailscale 网络">
+    <img src="/illustrations/flclash-tailscale-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 授权 Tailscale 网络" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

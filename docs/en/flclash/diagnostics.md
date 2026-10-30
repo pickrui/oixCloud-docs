@@ -7,8 +7,8 @@ description: "Network checks and connections \u2014 setup, practical steps and t
 ## Windows / macOS network check
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-diagnostics-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Read network-check results">
-    <img src="/illustrations/flclash-diagnostics-zh.svg?v=20260929-2" alt="Read network-check results" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-diagnostics-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Read network-check results">
+    <img src="/illustrations/flclash-diagnostics-zh.svg?v=20261030-2" alt="Read network-check results" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>

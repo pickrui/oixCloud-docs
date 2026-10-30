@@ -13,8 +13,8 @@ description: "iCloud 同步与最近删除的操作步骤、适用范围与常�
 ## 开启同步
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-sync-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 选择 iCloud 同步内容">
-    <img src="/illustrations/oixcloud-sync-zh.svg?v=20260929-2" alt="oixCloud · 选择 iCloud 同步内容" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-sync-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 选择 iCloud 同步内容">
+    <img src="/illustrations/oixcloud-sync-zh.svg?v=20261030-2" alt="oixCloud · 选择 iCloud 同步内容" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
@@ -24,7 +24,7 @@ description: "iCloud 同步与最近删除的操作步骤、适用范围与常�
 3. 使用「立即同步」，等待状态完成后在另一台设备检查
 4. 先新增一条易识别的普通配置验证，再整理大量规则或节点
 
-可选类别包括代理、规则、模块、MITM、自动化、设置与账户。关闭某一类别会停止这部分传输，不会自动清空它的本地内容
+可选类别包括代理、规则、模块、MITM、自动化、设置与账户。MITM 类别同步规则集，每台设备保留自己的证书；账户证书在「设置 → MITM → MITM 证书」另行管理。关闭某一类别会停止这部分传输，不会自动清空它的本地内容
 
 ## 文件夹与新版本兼容 {#folder-sync}
 

@@ -9,8 +9,8 @@ For iPhone / iPad. See the separate [Apple TV guide](/en/oixcloud/apple-tv).
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-connect-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="First connection">
-    <img src="/illustrations/oixcloud-connect-zh.svg?v=20260929-2" alt="First connection" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-connect-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="First connection">
+    <img src="/illustrations/oixcloud-connect-zh.svg?v=20261030-2" alt="First connection" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
@@ -18,15 +18,15 @@ For iPhone / iPad. See the separate [Apple TV guide](/en/oixcloud/apple-tv).
 ## Managed account
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-login-zh.svg?v=20261016" target="_blank" rel="noopener" aria-label="Sign in to oixCloud">
-    <img src="/illustrations/oixcloud-login-zh.svg?v=20261016" alt="Sign in to oixCloud" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-login-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Sign in to oixCloud">
+    <img src="/illustrations/oixcloud-login-zh.svg?v=20261030-2" alt="Sign in to oixCloud" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
 
 1. Open the App Store or TestFlight link in our download center to install oixCloud, then sign in on the app's oixCloud account page.
 2. Choose email/password, an existing Access Token, or **Sign in with Google** when available. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Wait for the active plan and managed nodes to load before connecting.
-3. Select a node or policy group on the home screen, keep Rule mode selected, and tap Connect. Allow the system to add a VPN configuration when prompted on your first connection.
+3. Select a node or policy group on the home screen, keep Rule mode selected, and tap the power button in the status card. Allow the system to add a VPN configuration when prompted on your first connection.
 
 ## Your own nodes
 

@@ -15,8 +15,8 @@ When diagnosing on-demand behavior, temporarily disable the relevant setting and
 ## Automation scripts
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-automation-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Choose automation triggers">
-    <img src="/illustrations/oixcloud-automation-zh.svg?v=20260929-2" alt="Choose automation triggers" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-automation-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Choose automation triggers">
+    <img src="/illustrations/oixcloud-automation-zh.svg?v=20261030-2" alt="Choose automation triggers" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>

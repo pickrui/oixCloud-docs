@@ -37,8 +37,8 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 ## 3. 登录 oixCloud
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-login-zh.svg?v=20261003" target="_blank" rel="noopener" aria-label="oixClash · 登录账号">
-    <img src="/illustrations/oixclash-login-zh.svg?v=20261003" alt="oixClash · 登录账号" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/oixclash-login-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixClash · 登录账号">
+    <img src="/illustrations/oixclash-login-zh.svg?v=20261030-2" alt="oixClash · 登录账号" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
@@ -55,8 +55,8 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 ## 4. 开启代理
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-running-zh.svg?v=20261030" target="_blank" rel="noopener" aria-label="oixClash · 运行与内存优化">
-    <img src="/illustrations/oixclash-running-zh.svg?v=20261030" alt="oixClash · 运行与内存优化" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/oixclash-running-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixClash · 运行与内存优化">
+    <img src="/illustrations/oixclash-running-zh.svg?v=20261030-2" alt="oixClash · 运行与内存优化" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
@@ -108,8 +108,8 @@ oixClash 0.0.3 起提供「内存优化」。首次安装时，检测到总内�
 oixClash 0.0.2 起可在插件的「自定义规则」中编辑网站上的同一份 [账号规则](https://oixcloud.com/user/rule)，账号规则排在默认规则之前。保存会影响使用这份规则的其他客户端；清空后保存会删除整份账号规则，操作前先保留需要的内容
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-rules-zh.svg?v=20261003" target="_blank" rel="noopener" aria-label="oixClash · 账号自定义规则">
-    <img src="/illustrations/oixclash-rules-zh.svg?v=20261003" alt="oixClash · 账号自定义规则" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/oixclash-rules-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixClash · 账号自定义规则">
+    <img src="/illustrations/oixclash-rules-zh.svg?v=20261030-2" alt="oixClash · 账号自定义规则" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

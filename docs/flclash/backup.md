@@ -9,8 +9,8 @@ description: "备份、恢复与 WebDAV的操作步骤、适用范围与常见�
 ## 先备份当前数据
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-backup-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 备份与恢复入口">
-    <img src="/illustrations/flclash-backup-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 备份与恢复入口" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-backup-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 备份与恢复入口">
+    <img src="/illustrations/flclash-backup-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 备份与恢复入口" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
@@ -22,8 +22,8 @@ description: "备份、恢复与 WebDAV的操作步骤、适用范围与常见�
 ## 选择恢复策略与范围
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-restore-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 选择恢复范围">
-    <img src="/illustrations/flclash-restore-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 选择恢复范围" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-restore-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 选择恢复范围">
+    <img src="/illustrations/flclash-restore-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 选择恢复范围" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
@@ -49,8 +49,8 @@ description: "备份、恢复与 WebDAV的操作步骤、适用范围与常见�
 ## 使用 WebDAV
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-webdav-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 绑定 WebDAV 备份位置">
-    <img src="/illustrations/flclash-webdav-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 绑定 WebDAV 备份位置" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-webdav-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 绑定 WebDAV 备份位置">
+    <img src="/illustrations/flclash-webdav-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 绑定 WebDAV 备份位置" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

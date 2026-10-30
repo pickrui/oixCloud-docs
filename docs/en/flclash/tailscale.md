@@ -7,8 +7,8 @@ description: "Tailscale, subnets and exit nodes \u2014 setup, practical steps an
 ## Add and authorize
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-tailscale-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Add and authorize a Tailscale network">
-    <img src="/illustrations/flclash-tailscale-zh.svg?v=20260929-2" alt="Add and authorize a Tailscale network" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-tailscale-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Add and authorize a Tailscale network">
+    <img src="/illustrations/flclash-tailscale-zh.svg?v=20261030-2" alt="Add and authorize a Tailscale network" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>

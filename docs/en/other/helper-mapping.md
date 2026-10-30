@@ -3,8 +3,8 @@
 Complete [installation and sign-in](/en/other/surge) first. The default loopback listener is for Surge or another proxy app on the same Mac.
 
 <figure class="guide-figure">
-  <a href="/illustrations/helper-lan-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Helper: local ports and LAN access">
-    <img src="/illustrations/helper-lan-zh.svg?v=20260929-2" alt="Helper: local ports and LAN access" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/helper-lan-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Helper: local ports and LAN access">
+    <img src="/illustrations/helper-lan-zh.svg?v=20261030-2" alt="Helper: local ports and LAN access" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>

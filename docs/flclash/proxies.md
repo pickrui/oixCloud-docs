@@ -7,8 +7,8 @@ description: "节点、策略组与代理链的操作步骤、适用范围与常
 ## 操作示意
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-proxies-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 在策略组中选择节点">
-    <img src="/illustrations/flclash-proxies-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 在策略组中选择节点" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-proxies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 在策略组中选择节点">
+    <img src="/illustrations/flclash-proxies-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 在策略组中选择节点" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
@@ -39,8 +39,8 @@ description: "节点、策略组与代理链的操作步骤、适用范围与常
 ## 代理链
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-chains-zh.svg?v=20261030" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
-    <img src="/illustrations/flclash-chains-zh.svg?v=20261030" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-chains-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
+    <img src="/illustrations/flclash-chains-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

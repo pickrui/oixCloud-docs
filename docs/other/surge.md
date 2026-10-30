@@ -7,8 +7,8 @@ description: 在 macOS 安装 oixCloud Helper，选择接入模式并连接 Surg
 oixCloud Helper 是与 Surge Mac 配合运行的代理助手，也支持本地代理端口和 Linux。它不是 iPhone / iPad 的 `.sgmodule` 模块
 
 <figure class="guide-figure">
-  <a href="/illustrations/helper-surge-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Helper · 从菜单栏接入 Surge">
-    <img src="/illustrations/helper-surge-zh.svg?v=20260929-2" alt="Helper · 从菜单栏接入 Surge" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/helper-surge-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Helper · 从菜单栏接入 Surge">
+    <img src="/illustrations/helper-surge-zh.svg?v=20261030-2" alt="Helper · 从菜单栏接入 Surge" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

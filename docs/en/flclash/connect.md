@@ -9,8 +9,8 @@ This guide is for **FlClash for oixCloud**. The upstream general-purpose client 
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-connect-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Dashboard and traffic capture">
-    <img src="/illustrations/flclash-connect-zh.svg?v=20260929-2" alt="Dashboard and traffic capture" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-connect-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Dashboard and traffic capture">
+    <img src="/illustrations/flclash-connect-zh.svg?v=20261030-2" alt="Dashboard and traffic capture" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
@@ -18,20 +18,22 @@ This guide is for **FlClash for oixCloud**. The upstream general-purpose client 
 ## Import your account configuration
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-login-zh.svg?v=20261016" target="_blank" rel="noopener" aria-label="Sign in with an account">
-    <img src="/illustrations/flclash-login-zh.svg?v=20261016" alt="Sign in with an account" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-login-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Sign in with an account">
+    <img src="/illustrations/flclash-login-zh.svg?v=20261030-2" alt="Sign in with an account" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
 
 1. Download FlClash for oixCloud from our download center, choose the package for your operating system and processor architecture, and sign in on the app's oixCloud page.
-2. Choose email/password, an existing Access Token, or **Sign in with Google** when available. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Wait for the active plan and managed profile and nodes to load before connecting.
+2. Choose email/password, an existing Access Token, or **Sign in with Google** when available. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Submit credentials with the login form's top-right checkmark. Wait for the active plan and managed profile and nodes to load before connecting.
 3. Choose a node or policy group on the Proxies page and keep Rule mode for everyday use. On the oixCloud page, Refresh updates account information; Sync fetches the managed configuration again. Use Sync when you need to update nodes.
 
 ## Capture application traffic
 
 - Desktop: start with **System Proxy** for applications that follow it. Enable **TUN** and complete system authorization when you need broader traffic capture.
 - Android: allow the system VPN request and check that the target app is not excluded.
+
+Use the play button in the dashboard **Status** card to start and the same card's pause button to stop. Card arrangements vary with window width; the start control is no longer fixed at the page's bottom right.
 
 Capture settings control whether traffic enters the client. Rule and Global modes control what happens afterward. See [System Proxy and TUN](/en/flclash/capture).
 

@@ -7,8 +7,8 @@ description: "Nodes, groups and chains \u2014 setup, practical steps and trouble
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-proxies-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Select a node in a group">
-    <img src="/illustrations/flclash-proxies-zh.svg?v=20260929-2" alt="Select a node in a group" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-proxies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Select a node in a group">
+    <img src="/illustrations/flclash-proxies-zh.svg?v=20261030-2" alt="Select a node in a group" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
@@ -33,8 +33,8 @@ Add a group with valid members in a profile's Override settings, then point pers
 ## Proxy chains
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-chains-zh.svg?v=20261030" target="_blank" rel="noopener" aria-label="Set a proxy chain in forwarding order">
-    <img src="/illustrations/flclash-chains-zh.svg?v=20261030" alt="Set a proxy chain in forwarding order" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-chains-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Set a proxy chain in forwarding order">
+    <img src="/illustrations/flclash-chains-zh.svg?v=20261030-2" alt="Set a proxy chain in forwarding order" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>

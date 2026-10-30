@@ -7,18 +7,18 @@ description: "DNS 覆写与网络设置的操作步骤、适用范围与常见�
 ## DNS 先保留默认
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-dns-zh.svg?v=20261030" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 配置 DNS 覆写">
-    <img src="/illustrations/flclash-dns-zh.svg?v=20261030" alt="FlClash for oixCloud · 配置 DNS 覆写" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-dns-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 配置 DNS 覆写">
+    <img src="/illustrations/flclash-dns-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 配置 DNS 覆写" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
 
-从「工具 → 进阶配置 → DNS」查看设置。当前界面通过「添加覆写项」选择要覆盖的字段：已添加项覆盖所有配置的对应 DNS 设置，未添加项沿用配置自身设置，不再用一个总开关覆盖整组 DNS
+从「工具 → 进阶配置 → DNS」查看设置。当前界面通过标题栏的「＋」（添加覆写项）选择要覆盖的字段：已添加项覆盖所有配置的对应 DNS 设置，未添加项沿用配置自身设置，不再用一个总开关覆盖整组 DNS
 
 自定义配置自己添加的 DNS 设置优先于应用级覆写；脚本仍可能进一步改变生效配置。排查前先核对当前选中的配置及其个人设置
 
 1. 先记录当前配置、已添加的覆写项及原值
-2. 用「添加覆写项」选择需要验证的字段，使用可从当前网络访问的解析器
+2. 点标题栏「＋」选择需要验证的字段，使用可从当前网络访问的解析器
 3. 重新应用配置，再对同一域名测试
 4. 没有改善时恢复原值；移除新增的覆写项可恢复该字段的继承，再检查节点或规则
 

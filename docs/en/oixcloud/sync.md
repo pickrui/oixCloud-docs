@@ -13,8 +13,8 @@ Use oixCloud 1.34 or later on every syncing device. Versions 1.33 and earlier us
 ## Enable sync
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-sync-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Select iCloud sync categories">
-    <img src="/illustrations/oixcloud-sync-zh.svg?v=20260929-2" alt="Select iCloud sync categories" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-sync-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Select iCloud sync categories">
+    <img src="/illustrations/oixcloud-sync-zh.svg?v=20261030-2" alt="Select iCloud sync categories" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
@@ -24,7 +24,7 @@ Use oixCloud 1.34 or later on every syncing device. Versions 1.33 and earlier us
 3. Use **Sync Now**, wait for completion and check another device.
 4. Verify with one recognizable configuration before reorganizing many items.
 
-Categories cover proxies, rules, modules, MITM, automation, settings and accounts. Disabling a category stops its transport without automatically deleting its local contents.
+Categories cover proxies, rules, modules, MITM, automation, settings and accounts. The MITM category syncs rule sets; each device keeps its own certificate. Account certificates are managed separately under **Settings → MITM → MITM Certificates**. Disabling a category stops its transport without automatically deleting its local contents.
 
 ## Folders and newer data {#folder-sync}
 

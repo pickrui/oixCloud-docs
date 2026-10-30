@@ -9,8 +9,8 @@ For iPhone / iPad.
 ## Apply settings by network
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-networks-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Edit a network profile">
-    <img src="/illustrations/oixcloud-networks-zh.svg?v=20260929-2" alt="Edit a network profile" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-networks-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Edit a network profile">
+    <img src="/illustrations/oixcloud-networks-zh.svg?v=20261030-2" alt="Edit a network profile" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>

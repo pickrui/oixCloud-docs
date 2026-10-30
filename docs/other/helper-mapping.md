@@ -3,8 +3,8 @@
 先完成 [安装与登录](/other/surge)。默认只监听本机回环地址，适合同一台 Mac 上的 Surge 或其他代理应用
 
 <figure class="guide-figure">
-  <a href="/illustrations/helper-lan-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Helper · 本地端口与局域网访问">
-    <img src="/illustrations/helper-lan-zh.svg?v=20260929-2" alt="Helper · 本地端口与局域网访问" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/helper-lan-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Helper · 本地端口与局域网访问">
+    <img src="/illustrations/helper-lan-zh.svg?v=20261030-2" alt="Helper · 本地端口与局域网访问" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

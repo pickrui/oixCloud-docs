@@ -9,8 +9,8 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 ## 操作示意
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-connect-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 仪表盘启动与接管">
-    <img src="/illustrations/flclash-connect-zh.svg?v=20260929-2" alt="FlClash for oixCloud · 仪表盘启动与接管" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-connect-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 仪表盘启动与接管">
+    <img src="/illustrations/flclash-connect-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 仪表盘启动与接管" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
@@ -18,20 +18,22 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 ## 导入账户配置
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-login-zh.svg?v=20261016" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 登录账户">
-    <img src="/illustrations/flclash-login-zh.svg?v=20261016" alt="FlClash for oixCloud · 登录账户" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-login-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 登录账户">
+    <img src="/illustrations/flclash-login-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 登录账户" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
 
 1. 从软件中心下载 FlClash for oixCloud，选择适合设备系统与架构的安装包，打开应用中的「oixCloud」页面登录
-2. 选择邮箱/密码、已有 Access Token，或当前版本提供的「使用 Google 登录」。Google 只登录已有账户，并需客户端和网站同时支持，步骤见 [Google 登录说明](/account/security#google-client-login)。确认套餐生效，等待托管配置与节点加载完成再连接
+2. 选择邮箱/密码、已有 Access Token，或当前版本提供的「使用 Google 登录」。Google 只登录已有账户，并需客户端和网站同时支持，步骤见 [Google 登录说明](/account/security#google-client-login)。填写凭据后点登录表单右上角勾号提交，确认套餐生效，等待托管配置与节点加载完成再连接
 3. 在「代理」页面选择节点或策略组，日常使用保留「规则」模式；oixCloud 页的「刷新」更新账户信息，「同步」重新获取托管配置，需要更新节点时使用「同步」
 
 ## 让应用使用代理
 
 - 桌面系统：先启用「系统代理」供支持系统代理的应用使用；需要接管更多应用时，再配置「虚拟网卡」并完成系统授权
 - Android：启动时允许系统的 VPN 连接请求；检查是否把目标应用排除在 VPN 之外
+
+在仪表盘的「状态」卡片点击播放按钮启动，停止时使用同一卡片的暂停按钮。桌面布局与窄窗口的卡片排列可能不同，不再按旧图寻找页面右下角的固定启动按钮
 
 这两个设置决定流量是否进入客户端；「规则 / 全局」决定进入以后如何选择出口。详见 [系统代理与虚拟网卡](/flclash/capture)
 

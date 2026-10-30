@@ -9,8 +9,8 @@ For iPhone / iPad. Supported configuration can also sync to Apple TV.
 ## Create and select a group
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-policies-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Create a policy group">
-    <img src="/illustrations/oixcloud-policies-zh.svg?v=20260929-2" alt="Create a policy group" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-policies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Create a policy group">
+    <img src="/illustrations/oixcloud-policies-zh.svg?v=20261030-2" alt="Create a policy group" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
@@ -42,14 +42,14 @@ After testing finishes, check Best Available's current choice on Home and create
 ## Proxy chains
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-chains-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Create a proxy chain">
-    <img src="/illustrations/oixcloud-chains-zh.svg?v=20260929-2" alt="Create a proxy chain" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-chains-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Create a proxy chain">
+    <img src="/illustrations/oixcloud-chains-zh.svg?v=20261030-2" alt="Create a proxy chain" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
 
 1. Add a chain in Proxies with at least two members.
-2. The first hop can be a standalone node or an eligible Manual, URL Test or Fallback group. Later hops remain fixed nodes.
+2. The first hop can be a standalone node or an eligible Manual, URL Test, Fallback or Smart group. Later hops remain fixed nodes.
 3. Select the chain on Home or in a rule.
 4. Verify the final exit and compare performance.
 

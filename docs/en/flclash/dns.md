@@ -7,18 +7,18 @@ description: "DNS overrides and network settings \u2014 setup, practical steps a
 ## Begin with default DNS
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-dns-zh.svg?v=20261030" target="_blank" rel="noopener" aria-label="Configure DNS overrides">
-    <img src="/illustrations/flclash-dns-zh.svg?v=20261030" alt="Configure DNS overrides" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-dns-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Configure DNS overrides">
+    <img src="/illustrations/flclash-dns-zh.svg?v=20261030-2" alt="Configure DNS overrides" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
 
-Open **Tools → Advanced Configuration → DNS**. The current interface uses **Add override entry** to choose individual fields. Added entries replace the corresponding DNS fields across profiles; fields not added inherit each profile's own settings. There is no longer one master switch replacing the whole DNS section.
+Open **Tools → Advanced Configuration → DNS**. The current interface uses the title-bar **+** (**Add override entry**) to choose individual fields. Added entries replace the corresponding DNS fields across profiles; fields not added inherit each profile's own settings. There is no longer one master switch replacing the whole DNS section.
 
 A custom profile's own DNS settings take precedence over app-level overrides. Scripts may change the effective configuration further. Check the selected profile and its personal settings before diagnosing.
 
 1. Record the current profile, added override entries and original values.
-2. Use **Add override entry** for the field being tested, using a reachable resolver.
+2. Use the title-bar **+** for the field being tested, using a reachable resolver.
 3. Reapply the profile and test the same domain.
 4. Restore the original value if it does not help. Remove a newly added entry to restore inheritance for that field, then investigate nodes or rules.
 

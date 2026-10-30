@@ -9,8 +9,8 @@ description: "节点与订阅管理的操作步骤、适用范围与常见问题
 ## 操作示意
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-proxies-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 选择节点与自动优选">
-    <img src="/illustrations/oixcloud-proxies-zh.svg?v=20260929-2" alt="oixCloud · 选择节点与自动优选" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-proxies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 选择节点与自动优选">
+    <img src="/illustrations/oixcloud-proxies-zh.svg?v=20261030-2" alt="oixCloud · 选择节点与自动优选" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
@@ -20,7 +20,7 @@ description: "节点与订阅管理的操作步骤、适用范围与常见问题
 1. 打开「代理」，点添加入口
 2. 选择链接、文件或二维码导入，使用提供方给出的完整地址
 3. 核对导入预览中的节点、策略组或规则，处理不支持的条目后确认
-4. 回到首页选择新节点，连接并访问目标网站
+4. 回到主页选择新节点，连接并访问目标网站
 
 单节点分享链接与整份订阅不同。导入 Surge 配置时，预览会列出可识别的内容；不要把“导入成功”等同于原客户端全部功能完全兼容
 
@@ -32,13 +32,13 @@ description: "节点与订阅管理的操作步骤、适用范围与常见问题
 
 ## 用文件夹整理独立节点 {#folders}
 
-以下文件夹操作适用于 iPhone / iPad 的 2.1.6（520）及后续支持版本；是否可下载以所用发布渠道为准。旧版示意图可能没有这些入口，Apple TV 不据此视为具有相同管理界面
+以下文件夹操作适用于 iPhone / iPad 的 2.1.6（520）及后续支持版本；是否可下载以所用发布渠道为准。本页节点选择示意图不展示文件夹编辑，Apple TV 不据此视为具有相同管理界面
 
 1. 在「代理」选择「服务器」区域，从工具栏的更多操作中点「新建文件夹」
 2. 填写名称，点「添加代理」选择未归入其他文件夹的独立节点，完成选择后保存
 3. 长按节点，在操作菜单选「移到文件夹」；已归类节点可「移出文件夹」，也可移到其他文件夹
 4. 长按文件夹选「编辑」，可修改名称、添加成员及拖动成员排序；文件夹之间的顺序通过「重新排序代理」调整
-5. 展开文件夹确认节点和顺序，再回首页检查当前出口；整理文件夹本身不会切换连接
+5. 展开文件夹确认节点和顺序，再回主页检查当前出口；整理文件夹本身不会切换连接
 
 文件夹只整理独立节点，不收纳订阅中的节点，也不是策略组或代理链。同一个节点只在一个文件夹中显示
 
@@ -49,8 +49,8 @@ description: "节点与订阅管理的操作步骤、适用范围与常见问题
 ## 更新与筛选
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 筛选线路、地区与名称">
-    <img src="/illustrations/oixcloud-filter-zh.svg?v=20260929-2" alt="oixCloud · 筛选线路、地区与名称" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 筛选线路、地区与名称">
+    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261030-2" alt="oixCloud · 筛选线路、地区与名称" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

@@ -9,8 +9,8 @@ For iPhone / iPad. Apple TV mainly consumes synced rules and allows rule-set des
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-rules-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Add a routing rule">
-    <img src="/illustrations/oixcloud-rules-zh.svg?v=20260929-2" alt="Add a routing rule" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-rules-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Add a routing rule">
+    <img src="/illustrations/oixcloud-rules-zh.svg?v=20261030-2" alt="Add a routing rule" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>

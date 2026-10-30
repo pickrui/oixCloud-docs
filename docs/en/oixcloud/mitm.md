@@ -9,8 +9,8 @@ For iPhone / iPad. Ordinary proxy access does not require MITM.
 ## Install and trust
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-mitm-generate-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Generate a certificate on this device">
-    <img src="/illustrations/oixcloud-mitm-generate-zh.svg?v=20260929-2" alt="Generate a certificate on this device" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-mitm-generate-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Generate a certificate on this device">
+    <img src="/illustrations/oixcloud-mitm-generate-zh.svg?v=20261030-2" alt="Generate a certificate on this device" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>
@@ -22,8 +22,8 @@ For iPhone / iPad. Ordinary proxy access does not require MITM.
 5. Return to the app, enable MITM as prompted, and check the intended hosts and rules.
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-mitm-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="Install the generated trust profile">
-    <img src="/illustrations/oixcloud-mitm-zh.svg?v=20260929-2" alt="Install the generated trust profile" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-mitm-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Install the generated trust profile">
+    <img src="/illustrations/oixcloud-mitm-zh.svg?v=20261030-2" alt="Install the generated trust profile" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
 </figure>

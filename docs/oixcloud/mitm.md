@@ -9,8 +9,8 @@ description: "MITM 证书与 HTTPS 重写的操作步骤、适用范围与常见
 ## 准备证书
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-mitm-generate-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 首次生成 MITM 证书">
-    <img src="/illustrations/oixcloud-mitm-generate-zh.svg?v=20260929-2" alt="oixCloud · 首次生成 MITM 证书" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-mitm-generate-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 首次生成 MITM 证书">
+    <img src="/illustrations/oixcloud-mitm-generate-zh.svg?v=20261030-2" alt="oixCloud · 首次生成 MITM 证书" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
@@ -22,8 +22,8 @@ description: "MITM 证书与 HTTPS 重写的操作步骤、适用范围与常见
 5. 返回应用，按提示开启 MITM，并核对需要处理的主机与规则
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-mitm-zh.svg?v=20260929-2" target="_blank" rel="noopener" aria-label="oixCloud · 生成并安装 MITM 证书">
-    <img src="/illustrations/oixcloud-mitm-zh.svg?v=20260929-2" alt="oixCloud · 生成并安装 MITM 证书" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-mitm-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 生成并安装 MITM 证书">
+    <img src="/illustrations/oixcloud-mitm-zh.svg?v=20261030-2" alt="oixCloud · 生成并安装 MITM 证书" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

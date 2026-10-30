@@ -1,3 +1,57 @@
+# Complete illustration audit — 30 October 2026
+
+Checked all 37 Chinese simulated illustrations, including the three revised in the preceding pass, against committed client UI and localization sources. Revised 29 scene definitions and regenerated all 37 SVGs with updated shared navigation and an explicit operation-diagram label. Updated the image revision to `20261030-2` in all 25 paired articles (50 pages), including full-size links, so cached old illustrations are replaced. Images remain diagrams with fictional values, not screenshots or a claim of identical styling across operating systems and themes.
+
+The largest corrections are FlClash's Status-card start control, title-bar form confirmations and DNS add/remove controls, current sidebar DNS Queries entry, mode-card order, URL-profile menu order, macOS-only system DNS placement, Android More/Settings/Mode workflow and bottom status bar, and the two clients' different Tailscale forms. Apple figures now use the current Home label, correct login labels, group underlying-proxy section, chain route preview, network-preset Save action, module creation/import/subscription/hub entries, certificate login states and JavaScript-before-Run-Now order. The sync figure and prose distinguish MITM rule sets from device-local certificates. Smart is included among eligible Apple chain-entry groups. Merlin now shows the common-port row in its real order and refers to the page-bottom apply action instead of drawing it immediately after the cropped login/run area.
+
+Per-illustration checks (filenames below are under `docs/public/illustrations/` and end in `-zh.svg`):
+
+| Client | Illustration | Maintained UI checked / result |
+| --- | --- | --- |
+| Apple | oixcloud-login | CloudLoginView; email-password and Create Account translations |
+| Apple | oixcloud-connect | HomeView/HomeWorkbench; status, power, node card and mode controls |
+| Apple | oixcloud-proxies | NodePickerView; Done, search and directly selectable automatic/group rows |
+| Apple | oixcloud-filter | CloudNodeFilterView; tri-state filters, preview search and save |
+| Apple | oixcloud-policies | PolicyGroupEditorView; members, underlying proxy and health-check order |
+| Apple | oixcloud-chains | ChainEditorView; title, first-hop groups, reorder and route preview |
+| Apple | oixcloud-rules | RoutingRuleEditorView; match/value/action and add confirmation |
+| Apple | oixcloud-dns | DNSSettingsView rule editor; enabled, match, action and save |
+| Apple | oixcloud-networks | NetworkProfileEditorView; Save, inherited DNS and per-network controls |
+| Apple | oixcloud-mitm | MITMCertificateView; generated local certificate and signed-out account actions |
+| Apple | oixcloud-mitm-generate | MITMCertificateView; empty local state and Generate Certificate |
+| Apple | oixcloud-modules | ModuleListView; creation/import/subscription/hub, toggles and order |
+| Apple | oixcloud-sync | SettingsView/ICloudSyncCategory; categories, default choices and certificate scope |
+| Apple | oixcloud-tailscale | TailscaleSettingsView/TailscaleEditorForm; interactive login and Save and Log In |
+| Apple | oixcloud-automation | AutomationSettingsView; name-based title, triggers, code and Run Now |
+| Apple | oixcloud-requests | RequestDetailView; Host field and connection/decision sections |
+| FlClash | flclash-login | CloudLoginPage/CloudFormSheet; title-bar confirmation and fields |
+| FlClash | flclash-connect | Dashboard/CurrentOutboundCard; start control inside Status card |
+| FlClash | flclash-proxies | ProxiesView/card/list; selectable groups and example delay cards |
+| FlClash | flclash-profiles | Profile menu; URL profile example distinct from managed controls |
+| FlClash | flclash-filter | NodeFilterPage; title-bar reset/save and side-by-side preview |
+| FlClash | flclash-chains | ProxyChainEditView; warning, name, selected chain and candidates |
+| FlClash | flclash-override | OverwriteView; mode order and check/apply controls |
+| FlClash | flclash-rules | CustomRuleEditor; form/raw, basic information, preview and confirmation |
+| FlClash | flclash-capture | NetworkListView; macOS System/Options sections and platform-specific DNS |
+| FlClash | flclash-dns | OverrideView/DnsOverrideSpec; add, remove, quick edit and field grouping |
+| FlClash | flclash-backup | BackupAndRestore; unbound WebDAV state and restore strategy |
+| FlClash | flclash-restore | Restore dialog; separate configuration-only/all-data choices |
+| FlClash | flclash-webdav | WebDAVForm/FormPage; grouped fields and title-bar confirmation |
+| FlClash | flclash-tailscale | Network editor; segmented login methods and lower login controls |
+| FlClash | flclash-android | AccessControlView; More menu, mode submenu, save and status |
+| FlClash | flclash-diagnostics | NetworkDiagnosticsPage; top actions and actual check labels |
+| Helper | helper-surge | MenuBar connection submenu; labels and order retained |
+| Helper | helper-lan | MenuBar/Legacy; local ports, LAN access and authentication retained |
+| Merlin | oixclash-login | Module_oixclash.asp; login methods and cropped Run section |
+| Merlin | oixclash-running | Module_oixclash.asp; common ports, UDP, QUIC and memory optimization order |
+| Merlin | oixclash-rules | Module_oixclash.asp; read/save-account-rules workflow retained |
+
+Source snapshots: `oixCloud 8219e9cd7bb913e4575c889681458a5c715a37cc`, `FlClash 5cde0769ff2a9b7ece3ca21151a4b05c821f03fa`, `oixClash 16394d14a3eea7c04348d304923f79b6509bec03`, `oixCloud-Helper 71087638df26dfd7f0b9e16d7d455c3ecac31eeb`, `oixCloud-Helper-legacy 1ced3ade2afd89915da1e30824f8b9bfec71513f`. Additional related UI forms were read at the same committed revisions. Helper advanced to `50151de1543dfc812f392fe053370e26cd6d2717` during the audit; its illustrated graphical menu files did not change. Uncommitted client work was excluded and no client files were edited. Public release metadata was rechecked for FlClash v0.9.2, oixClash v0.0.14 and Helper v0.0.50. This source/diagram audit does not establish App Store availability or exercise every distributed binary.
+
+Validation: `pnpm build` and `git diff --check` passed. All 37 SVGs parse; each was visually inspected and browser geometry checks found no overlapping text or text outside its canvas. The 50 affected Chinese/English pages passed 100 layout cases at 390px/1440px after client-side hydration, without page overflow, broken loaded images, old illustration revisions or browser warnings/errors. Desktop/mobile language switching retained the paired sync article and shared folder section. All 103 generated HTML pages, 7,076 internal references, 162 tables and 51 locale pairs passed link/anchor/locale checks; image/full-size-link revisions are paired. Navigation and legacy fragment mappings are unchanged. Preview servers were restarted after the final build to clear their asset index; no production client login, VPN connection, certificate installation or account operation was performed. Publication is checked separately after pushing main.
+
+---
+
 # Site-wide factual audit — 30 October 2026
 
 Reviewed all 51 Chinese/English guide pairs against maintained implementation and official references. Corrected 13 paired topics (26 pages), with three regenerated Chinese simulated illustrations shared by both locales:
