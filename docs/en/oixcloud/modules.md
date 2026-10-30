@@ -11,10 +11,10 @@ Modules can combine routing, DNS, rewriting and scripts. They are unnecessary fo
 ## Import
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-modules-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Import and order modules">
-    <img src="/illustrations/oixcloud-modules-zh.svg?v=20261030-2" alt="Import and order modules" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-modules-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Import and manage modules">
+    <img src="/illustrations/oixcloud-modules-en.svg?v=20261030-en1" alt="oixCloud · Import and manage modules" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 1. Open **Proxies → Policies → Modules → Import Module** or **Subscribe Module**.

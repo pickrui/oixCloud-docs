@@ -9,10 +9,10 @@ For iPhone / iPad. Supported configuration can also sync to Apple TV.
 ## Create and select a group
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-policies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Create a policy group">
-    <img src="/illustrations/oixcloud-policies-zh.svg?v=20261030-2" alt="Create a policy group" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-policies-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Create a policy group">
+    <img src="/illustrations/oixcloud-policies-en.svg?v=20261030-en1" alt="oixCloud · Create a policy group" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 In **Proxies → Policies**, create a named group, choose its type and add members. Select the saved group on Home or as a rule target; creating it alone does not route traffic through it.
@@ -42,10 +42,10 @@ After testing finishes, check Best Available's current choice on Home and create
 ## Proxy chains
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-chains-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Create a proxy chain">
-    <img src="/illustrations/oixcloud-chains-zh.svg?v=20261030-2" alt="Create a proxy chain" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-chains-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Build a proxy chain in order">
+    <img src="/illustrations/oixcloud-chains-en.svg?v=20261030-en1" alt="oixCloud · Build a proxy chain in order" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 1. Add a chain in Proxies with at least two members.

@@ -9,10 +9,10 @@ For iPhone / iPad.
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-proxies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Select a node">
-    <img src="/illustrations/oixcloud-proxies-zh.svg?v=20261030-2" alt="Select a node" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-proxies-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Select a node or Best Available">
+    <img src="/illustrations/oixcloud-proxies-en.svg?v=20261030-en1" alt="oixCloud · Select a node or Best Available" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 ## Import
@@ -49,10 +49,10 @@ Folders organize standalone nodes, not nodes inside subscriptions. They are neit
 ## Update and filter
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Filter managed nodes">
-    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261030-2" alt="Filter managed nodes" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-filter-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Filter lines, regions and names">
+    <img src="/illustrations/oixcloud-filter-en.svg?v=20261030-en1" alt="oixCloud · Filter lines, regions and names" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 Use **Update** from a subscription's menu. For managed oixCloud nodes, use **Refresh Nodes** on the account page. Refreshing account information alone does not redownload nodes.

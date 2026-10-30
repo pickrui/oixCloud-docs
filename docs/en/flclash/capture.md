@@ -20,10 +20,10 @@ Rule/Global/Direct modes act after capture; they do not replace the capture swit
 ## Desktop System Proxy
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-capture-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Choose desktop traffic capture">
-    <img src="/illustrations/flclash-capture-zh.svg?v=20261030-2" alt="Choose desktop traffic capture" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-capture-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Choose desktop traffic capture">
+    <img src="/illustrations/flclash-capture-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Choose desktop traffic capture" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 Start the client and enable System Proxy. Check that system HTTP/HTTPS settings use its local port. Other proxy software, a PAC script or organization policy may override them.

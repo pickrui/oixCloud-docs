@@ -9,10 +9,10 @@ Open **Tools → Access Control**. This application list is Android-specific.
 ## Choose which apps enter VPN
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-android-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Select Android apps for VPN access">
-    <img src="/illustrations/flclash-android-zh.svg?v=20261030-2" alt="Select Android apps for VPN access" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/flclash-android-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Choose which apps enter the VPN">
+    <img src="/illustrations/flclash-android-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Choose which apps enter the VPN" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 | Mode | Meaning |

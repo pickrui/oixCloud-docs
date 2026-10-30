@@ -13,10 +13,10 @@ Use oixCloud 1.34 or later on every syncing device. Versions 1.33 and earlier us
 ## Enable sync
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-sync-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Select iCloud sync categories">
-    <img src="/illustrations/oixcloud-sync-zh.svg?v=20261030-2" alt="Select iCloud sync categories" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-sync-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Choose what iCloud syncs">
+    <img src="/illustrations/oixcloud-sync-en.svg?v=20261030-en1" alt="oixCloud · Choose what iCloud syncs" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 1. Use the same Apple Account and confirm iCloud works.

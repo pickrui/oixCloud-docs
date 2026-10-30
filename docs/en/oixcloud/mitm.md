@@ -9,10 +9,10 @@ For iPhone / iPad. Ordinary proxy access does not require MITM.
 ## Install and trust
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-mitm-generate-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Generate a certificate on this device">
-    <img src="/illustrations/oixcloud-mitm-generate-zh.svg?v=20261030-2" alt="Generate a certificate on this device" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-mitm-generate-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Generate your first MITM certificate">
+    <img src="/illustrations/oixcloud-mitm-generate-en.svg?v=20261030-en1" alt="oixCloud · Generate your first MITM certificate" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 1. Open **Settings → MITM → MITM Certificates** and inspect **This Device**.
@@ -22,10 +22,10 @@ For iPhone / iPad. Ordinary proxy access does not require MITM.
 5. Return to the app, enable MITM as prompted, and check the intended hosts and rules.
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-mitm-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Install the generated trust profile">
-    <img src="/illustrations/oixcloud-mitm-zh.svg?v=20261030-2" alt="Install the generated trust profile" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-mitm-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Install this device’s MITM certificate">
+    <img src="/illustrations/oixcloud-mitm-en.svg?v=20261030-en1" alt="oixCloud · Install this device’s MITM certificate" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 ::: warning Trust a replacement certificate again

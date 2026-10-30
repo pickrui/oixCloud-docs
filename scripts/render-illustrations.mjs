@@ -1,18 +1,45 @@
-import { mkdirSync, writeFileSync } from 'node:fs'
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 
-// Chinese simulations drawn from the maintained SwiftUI/Material/Merlin screen structure.
+// Simulations drawn from the maintained SwiftUI/Material/Merlin screen structure.
 // Data is fictional. Only public UI labels and drawing primitives belong here.
 const out = fileURLToPath(new URL('../docs/public/illustrations/', import.meta.url))
 mkdirSync(out, { recursive: true })
+const english = process.argv.includes('--en')
+const translations = JSON.parse(readFileSync(new URL('./illustrations.en.json', import.meta.url), 'utf8'))
+let drawingUI = false
+let currentScene
+const hasChinese = s => /[\u4e00-\u9fff]/.test(s)
+function ui(s) {
+ const value = String(s)
+ if (!english || !drawingUI || !hasChinese(value)) return value
+ const key = `${currentScene.client}-${currentScene.id}`
+ const translated = translations.overrides[key]?.[value] ?? translations.ui[currentScene.client]?.[value]
+ if (!translated) throw new Error(`Missing English UI text in ${key}: ${value}`)
+ return translated
+}
+function textWidth(s, size) { return [...String(s)].reduce((w,c) => w + (hasChinese(c) ? 1 : /[MW@]/.test(c) ? .85 : /[il.,:;'!| ]/.test(c) ? .3 : .57) * size, 0) }
 const E = s => String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')
 const R = (x,y,w,h,c='#fff',r=12,stroke='none') => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${c}" stroke="${stroke}"/>`
-const T = (x,y,s,z=20,c='#202124',weight=400,anchor='start') => `<text x="${x}" y="${y}" font-size="${z}" fill="${c}" font-weight="${weight}" text-anchor="${anchor}">${E(s)}</text>`
+const T = (x,y,s,z=20,c='#202124',weight=400,anchor='start',maxWidth) => {
+ const original = String(s), text = ui(original)
+ const bilingual = english && drawingUI && currentScene.client === 'oixclash' && hasChinese(original)
+ const phone = currentScene?.client === 'oixcloud' || currentScene?.id === 'android'
+ if (english && drawingUI && !maxWidth) maxWidth = anchor === 'start' ? (phone ? 480 : 1060) - x : undefined
+ const size = english && maxWidth ? Math.min(z, z * maxWidth / Math.max(1,textWidth(text,z))) : z
+ let result = `<text x="${x}" y="${y-(bilingual?6:0)}" font-size="${size}" fill="${c}" font-weight="${weight}" text-anchor="${anchor}">${E(text)}</text>`
+ if (bilingual) {
+  const width = maxWidth || 1060-x
+  const secondarySize = Math.min(10.5, 10.5 * width / Math.max(1,textWidth(original,10.5)))
+  result += `<text x="${x}" y="${y+10}" font-size="${secondarySize}" fill="${c}" font-weight="400" text-anchor="${anchor}">${E(original)}</text>`
+ }
+ return result
+}
 const L = (x,y,x2,y2,c='#dedee3',w=1) => `<path d="M${x} ${y}H${x2}" stroke="${c}" stroke-width="${w}"/>`
 const circ=(x,y,r,c,stroke='none',w=1)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${c}" stroke="${stroke}" stroke-width="${w}"/>`
 function wrap(s,max=24){let result=[],line='',width=0;for(const token of s.match(/[A-Za-z0-9]+(?:[./_-][A-Za-z0-9]+)*|[^A-Za-z0-9]/g)||[]){let u=[...token].reduce((n,c)=>n+(/[\u2e80-\uffff]/.test(c)?1:.56),0);if(token==='\n'||(width+u>max&&line)){result.push(line.trimEnd());line='';width=0;if(token==='\n')continue}line+=token;width+=u}if(line)result.push(line.trimEnd());return result}
-const lines=(x,y,s,size=19,color='#667085',max=24)=>wrap(s,max).map((s,i)=>T(x,y+i*(size*1.55),s,size,color)).join('')
+const lines=(x,y,s,size=19,color='#667085',max=24)=>wrap(ui(s),max).map((s,i)=>T(x,y+i*(size*1.55),s,size,color)).join('')
 const check=(x,y,c='#007aff')=>`<path d="M${x} ${y}l5 5 11-13" fill="none" stroke="${c}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`
 const chevron=(x,y,c='#aaa')=>`<path d="M${x} ${y}l5 5-5 5" fill="none" stroke="${c}" stroke-width="2" stroke-linecap="round"/>`
 const toggle=(x,y,on=true,fl=false)=>R(x,y,50,29,on?(fl?'#8a5260':'#34c759'):'#d3d3d8',16)+circ(x+(on?35:15),y+14.5,11,'#fff')
@@ -25,7 +52,7 @@ function add(client,id,title,route,notes,draw){scenes.push({client,id,title,rout
 function ios(title,{tab,back='设置',action='',large=false}={}){
  let s=R(38,121,464,823,'#e6e8ed',39)+R(44,127,452,811,'#f2f2f7',34)+T(72,164,'9:41',17,'#161617',650)+T(456,164,'▮▮▮  ▰',15,'#161617',600,'end')
  if(large){s+=T(67,234,title,37,'#111',700);if(action)s+=T(470,224,action,22,'#007aff',500,'end')}
- else{s+=(back?T(69,215,back==='取消'?'取消':'‹ '+back,18,'#007aff'):'')+T(270,215,title,21,'#111',600,'middle');if(action)s+=T(470,215,action,18,'#007aff',600,'end')}
+ else{s+=(back?T(69,215,back==='取消'?'取消':'‹ '+back,18,'#007aff',400,'start',english?270-textWidth(ui(title),21)/2-87:undefined):'')+T(270,215,title,21,'#111',600,'middle');if(action)s+=T(470,215,action,18,'#007aff',600,'end')}
  if(tab){s+=R(49,854,442,63,'#fcfcfd',27,'#e4e4e9');['主页','代理','活动','oixCloud','设置'].forEach((n,i)=>{let x=93+i*87;s+=icon(x,880,['⌂','▤','◴','☁','⚙'][i],n===tab?'#007aff':'#8b8b93')+T(x,900,n,12,n===tab?'#007aff':'#8b8b93',500,'middle')})}
  s+=R(210,924,120,5,'#19191b',3)
  return s
@@ -34,11 +61,11 @@ function group(y,rows,{title='',w=404,x=68}={}){
  let h=rows.reduce((sum,r)=>sum+(r.sub?68:53),0),s=title?T(x+14,y-12,title,15,'#727279'):''
  s+=R(x,y,w,h,'#fff',14)
  let yy=y
- rows.forEach((r,i)=>{let rh=r.sub?68:53;s+=T(x+16,yy+(r.sub?27:33),r.label,20,r.disabled?'#a5a5ad':r.danger?'#d23d3d':r.blue?'#007aff':'#202124',r.bold?600:400);if(r.sub)s+=T(x+16,yy+51,r.sub,14,'#85858d');if(r.value)s+=T(x+w-(r.chev?28:16),yy+33,r.value,r.valueSize||18,'#85858d',400,'end');if(r.chev)s+=chevron(x+w-18,yy+23);if(r.on!==undefined)s+=toggle(x+w-66,yy+12,r.on);if(i<rows.length-1)s+=L(x+16,yy+rh,x+w,yy+rh);if(r.n)s+=mark(x+4,yy+4,w-8,rh-8,r.n);yy+=rh})
+ rows.forEach((r,i)=>{let rh=r.sub?68:53;s+=T(x+16,yy+(r.sub?27:33),r.label,20,r.disabled?'#a5a5ad':r.danger?'#d23d3d':r.blue?'#007aff':'#202124',r.bold?600:400,'start',english ? w-32-(r.on!==undefined?62:r.value?Math.min(190,textWidth(ui(r.value),r.valueSize||18)+28):r.chev?20:0) : undefined);if(r.sub)s+=T(x+16,yy+51,r.sub,14,'#85858d',400,'start',english?w-36:undefined);if(r.value)s+=T(x+w-(r.chev?28:16),yy+33,english&&currentScene.client==='oixcloud'&&r.value==='代理'?'Proxy':r.value,r.valueSize||18,'#85858d',400,'end');if(r.chev)s+=chevron(x+w-18,yy+23);if(r.on!==undefined)s+=toggle(x+w-66,yy+12,r.on);if(i<rows.length-1)s+=L(x+16,yy+rh,x+w,yy+rh);if(r.n)s+=mark(x+4,yy+4,w-8,rh-8,r.n);yy+=rh})
  return s
 }
 function segmented(x,y,w,labels,sel=0,fl=false){let s=R(x,y,w,39,fl?'#f7edef':'#e4e4e9',fl?20:8,fl?'#a8959a':'none');labels.forEach((l,i)=>{let iw=w/labels.length;if(sel===i)s+=R(x+i*iw+3,y+3,iw-6,33,fl?'#f0d9df':'#fff',fl?17:6);s+=T(x+iw*(i+.5),y+25,l,16,fl?'#593c44':'#222',i===sel?600:400,'middle')});return s}
-function field(x,y,w,label,value,{n,fl=true}={}){return R(x,y,w,58,'#fffbfc',7,'#9d8d92')+R(x+10,y-9,label.length*15+14,18,'#fffbfc',0)+T(x+17,y+4,label,14,'#756067')+T(x+17,y+38,value,19,'#2f272a')+(n?mark(x,y,w,58,n):'')}
+function field(x,y,w,label,value,{n,fl=true}={}){return R(x,y,w,58,'#fffbfc',7,'#9d8d92')+R(x+10,y-9,(english?textWidth(ui(label),14)+14:label.length*15+14),18,'#fffbfc',0)+T(x+17,y+4,label,14,'#756067')+T(x+17,y+38,value,19,'#2f272a')+(n?mark(x,y,w,58,n):'')}
 function material(title,active='工具'){
  let s=R(28,128,1064,657,'#e3dbde',16)+R(30,130,1060,653,'#fffbfc',15)
  s+=R(30,130,1060,35,'#f2eaed',15)+circ(49,148,5,'#df8e94')+circ(66,148,5,'#e7c87c')+circ(83,148,5,'#95bda4')+T(560,152,'FlClash for oixCloud',14,'#68575e',500,'middle')
@@ -47,11 +74,11 @@ function material(title,active='工具'){
  s+=T(153,205,title,27,'#2d2528',500)
  return s
 }
-function mrow(y,label,{sub='',value='',on,n,x=154,w=898}={}){let h=sub?70:59,vw=Math.max(106,Math.min(270,value.length*12+32)),s=T(x+16,y+29,label,20,'#332b2e');if(sub)s+=T(x+16,y+53,sub,15,'#7e7176');if(value)s+=R(x+w-vw-16,y+9,vw,37,'#f0dce2',20)+T(x+w-vw/2-16,y+33,value,16,'#784f5b',500,'middle');if(on!==undefined)s+=toggle(x+w-67,y+13,on,true);s+=L(x,y+h,x+w,y+h,'#ede5e8');if(n)s+=mark(x,y+2,w,h-6,n);return s}
+function mrow(y,label,{sub='',value='',on,n,x=154,w=898}={}){let h=sub?70:59,vw=Math.max(106,Math.min(270,english?textWidth(ui(value),16)+32:value.length*12+32)),s=T(x+16,y+29,label,20,'#332b2e');if(sub)s+=T(x+16,y+53,sub,15,'#7e7176');if(value)s+=R(x+w-vw-16,y+9,vw,37,'#f0dce2',20)+T(x+w-vw/2-16,y+33,value,16,'#784f5b',500,'middle');if(on!==undefined)s+=toggle(x+w-67,y+13,on,true);s+=L(x,y+h,x+w,y+h,'#ede5e8');if(n)s+=mark(x,y+2,w,h-6,n);return s}
 const mhead=(y,t)=>T(166,y,t,16,'#885461',600)
-const button=(x,y,w,label,n)=>R(x,y,w,43,'#8a5260',23)+T(x+w/2,y+28,label,17,'#fff',500,'middle')+(n?mark(x,y,w,43,n):'')
+const button=(x,y,w,label,n)=>R(x,y,w,43,'#8a5260',23)+T(x+w/2,y+28,label,17,'#fff',500,'middle',english?w-22:undefined)+(n?mark(x,y,w,43,n):'')
 function modal(title,w=490,h=410){let x=(1120-w)/2,y=235;return {x,y,w,s:R(30,165,1060,618,'#00000044',0)+R(x,y,w,h,'#fff6f8',27,'#ddcbd2')+(title?T(560,y+48,title,26,'#332b2e',500,'middle'):'')}}
-const sheetHead=(m,title,saveMark)=>T(m.x+24,m.y+42,'‹',26,'#8a5260')+T(m.x+m.w/2,m.y+43,title,23,'#332b2e',600,'middle')+T(m.x+m.w-28,m.y+43,'✓',24,'#8a5260',600,'end')+(saveMark?badge(m.x+m.w-13,m.y+18,saveMark):'')
+const sheetHead=(m,title,saveMark)=>T(m.x+24,m.y+42,'‹',26,'#8a5260')+T(m.x+m.w/2,m.y+43,title,23,'#332b2e',600,'middle',english?m.w-110:undefined)+T(m.x+m.w-28,m.y+43,'✓',24,'#8a5260',600,'end')+(saveMark?badge(m.x+m.w-13,m.y+18,saveMark):'')
 
 function chips(x,y,names,selected=0,fl=false){const selectedSet=new Set(Array.isArray(selected)?selected:[selected]);return names.map((v,i)=>{const active=selectedSet.has(i);return R(x+i*123,y,113,36,active?(fl?'#f0d9df':'#dfebff'):'#f4f5f8',18,active?(fl?'#bd8d9b':'#8db7ff'):'#dbdce2')+T(x+i*123+56,y+24,v,15,active?(fl?'#794c59':'#0068d8'):'#646771',500,'middle')}).join('')}
 
@@ -178,7 +205,7 @@ add('flclash','diagnostics','运行网络自检','Windows / macOS → 工具 →
 ],()=>material('网络自检','工具')+T(974,205,'⧉',25,'#8a5260')+T(1034,205,'↻',25,'#8a5260')+badge(1051,177,1)+R(158,241,887,89,'#f5e5ed',19)+T(180,275,'检查当前连接并进行少量抽查',20,'#74525f')+T(180,307,'系统网络路径也可能经过虚拟网卡',16,'#8e727f')+badge(1034,244,3)+['已应用配置','内核响应','本地代理入口','系统代理','虚拟网卡与路由','内核 DNS'].map((v,i)=>mrow(345+i*62,v,{value:i===5?'需要关注':'通过',n:i===5?2:undefined})).join(''))
 
 function helperDesktop(){return R(30,130,1060,653,'#dfe7f3',15)+R(30,130,1060,34,'#f5f6f9',14)+T(53,153,'●   Finder   文件   编辑   显示   前往   窗口',15,'#384052')+T(1049,153,'☁    09:41',15,'#384052',500,'end')}
-function helperMenu(x,y,w,items){let s=R(x,y,w,items.length*37+18,'#fbfbfdee',10,'#c8ced8');items.forEach((item,i)=>{let yy=y+10+i*37;const active=item.active;s+=active?R(x+5,yy,w-10,34,'#2676df',6):'';s+=T(x+18,yy+24,item.label,17,active?'#fff':item.muted?'#89909b':'#303946');if(item.sub)s+=chevron(x+w-24,yy+13,active?'#fff':'#6e7885');if(item.n)s+=badge(x+w-8,yy,item.n)});return s}
+function helperMenu(x,y,w,items){let s=R(x,y,w,items.length*37+18,'#fbfbfdee',10,'#c8ced8');items.forEach((item,i)=>{let yy=y+10+i*37;const active=item.active;s+=active?R(x+5,yy,w-10,34,'#2676df',6):'';s+=T(x+18,yy+24,item.label,17,active?'#fff':item.muted?'#89909b':'#303946',400,'start',english?w-52:undefined);if(item.sub)s+=chevron(x+w-24,yy+13,active?'#fff':'#6e7885');if(item.n)s+=badge(x+w-8,yy,item.n)});return s}
 add('helper','surge','从菜单栏接入 Surge','菜单栏 oixCloud → 连接设置',[
  ['先完成账户登录','等待账户与节点获取完成，再打开连接设置'],['核对接入模式','多端口模式在 Surge 选节点，单端口模式在 Helper 选'],['接入并核对配置','点接入 Surge 后，确认 Surge 已切换到生成的配置']
 ],()=>helperDesktop()+helperMenu(85,187,242,[{label:'oixCloud',muted:true},{label:'账户',sub:true,n:1},{label:'节点',sub:true},{label:'连接设置',sub:true,active:true},{label:'工具',sub:true}])+helperMenu(333,303,672,[{label:'SOCKS5 + HTTP  127.0.0.1:7100',muted:true},{label:'开机启动'},{label:'本地端口…'},{label:'允许局域网访问'},{label:'局域网访问鉴权…（未开启）'},{label:'接入模式…（当前：本地多端口映射）',n:2},{label:'节点筛选 · 智能优选'},{label:'精简规则'},{label:'复制本机节点列表 URL'},{label:'接入 Surge',active:true,n:3},{label:'导出 OpenSurge 配置'}]))
@@ -190,13 +217,13 @@ add('helper','lan','设置本地端口与局域网访问','菜单栏 oixCloud �
 function merlin(section) {
  let s=R(30,130,1060,653,'#20333e',15)+R(220,149,849,611,'#4d595d',4)
  s+=T(48,174,'ASUSWRT',20,'#d5e4e8',700)+T(241,181,'软件中心 - oixClash',24,'#fff',600)
- ;['网络地图','AiMesh','访客网络','流量分析','软件中心','无线网络','内部网络','外部网络','IPv6','系统管理'].forEach((n,i)=>{const y=205+i*51;s+=R(43,y,164,46,n==='软件中心'?'#387aa0':'#354247',3)+T(60,y+29,n,17,'#f2f6f8',n==='软件中心'?600:400)})
+ ;['网络地图','AiMesh','访客网络','流量分析','软件中心','无线网络','内部网络','外部网络','IPv6','系统管理'].forEach((n,i)=>{const y=205+i*51;s+=R(43,y,164,46,n==='软件中心'?'#387aa0':'#354247',3)+T(60,y+29,n,17,'#f2f6f8',n==='软件中心'?600:400,'start',english?137:undefined)})
  s+=T(243,216,section,17,'#dbe7eb')
  return s
 }
-const oxHead=(y,label)=>R(239,y,811,33,'#73838a',0)+T(252,y+23,label,17,'#fff',600)
-const oxRow=(y,label,h=53)=>R(239,y,811,h,'#465960',0,'#293b44')+R(239,y,164,h,'#2e3b41',0,'#293b44')+T(252,y+32,label,17,'#f4f6f8')
-const oxButton=(x,y,w,label,n)=>R(x,y,w,36,'#17272e',7,'#637980')+T(x+w/2,y+24,label,16,'#fff',600,'middle')+(n?mark(x,y,w,36,n):'')
+const oxHead=(y,label)=>R(239,y,811,33,'#73838a',0)+T(252,y+(english?20:23),label,english?15:17,'#fff',600)
+const oxRow=(y,label,h=53)=>R(239,y,811,h,'#465960',0,'#293b44')+R(239,y,164,h,'#2e3b41',0,'#293b44')+T(252,y+32,label,17,'#f4f6f8',400,'start',english?139:undefined)
+const oxButton=(x,y,w,label,n)=>R(x,y,w,36,'#17272e',7,'#637980')+T(x+w/2,y+24,label,16,'#fff',600,'middle',english?w-14:undefined)+(n?mark(x,y,w,36,n):'')
 const oxCheck=(x,y,on=true)=>R(x,y,17,17,on?'#2ba5d0':'#fff',2)+(on?`<path d="M${x+3} ${y+9}l4 4 7-10" fill="none" stroke="#fff" stroke-width="2"/>`:'')
 
 add('oixclash','login','登录 oixCloud 账号','软件中心 → oixClash → oixCloud 账号',[
@@ -209,13 +236,39 @@ add('oixclash','running','开启代理与内存优化','软件中心 → oixClas
 
 add('oixclash','rules','读取并保存账号规则','软件中心 → oixClash → 自定义规则',[
  ['先读取面板规则','读取会替换未保存的草稿，先保留需要的内容'],['每行一条规则','策略使用 DIRECT、REJECT 或已有策略组'],['保存并检查结果','保存影响同账号其他客户端，再验证新连接']
-],()=>merlin('账号规则与网站共用，排在面板默认规则之前')+oxHead(239,'自定义规则')+oxRow(272,'账号规则',385)+R(420,289,609,180,'#22343d',0,'#8fa3ad')+T(435,324,'DOMAIN-SUFFIX,example.com,DIRECT',19,'#e6edf2')+T(435,360,'DOMAIN,ads.example.com,REJECT',19,'#e6edf2')+badge(1018,286,2)+T(420,500,'每行一条，无需 rules: 或行首短横线',16,'#e2ecf0')+T(420,531,'留空并保存可清除面板账号规则',16,'#ffce55')+T(420,562,'管理面板账号规则',17,'#41b6d5')+oxButton(420,589,166,'读取面板规则',1)+oxButton(613,589,211,'保存到面板并更新',3)+T(421,648,'已读取面板规则，可编辑后保存',16,'#b7e46e')+T(242,705,'示例域名不对应真实服务；请按实际需求填写',16,'#c8d7dd')+T(242,737,'保存成功后，检查日志并在控制面板核对规则命中',16,'#c8d7dd'))
+],()=>merlin('账号规则与网站共用，排在面板默认规则之前')+oxHead(239,'自定义规则')+oxRow(272,'账号规则',385)+R(420,289,609,180,'#22343d',0,'#8fa3ad')+T(435,324,'DOMAIN-SUFFIX,example.com,DIRECT',19,'#e6edf2')+T(435,360,'DOMAIN,ads.example.com,REJECT',19,'#e6edf2')+badge(1018,286,2)+T(420,english?496:500,'每行一条，无需 rules: 或行首短横线',16,'#e2ecf0')+T(420,531,'留空并保存可清除面板账号规则',16,'#ffce55')+T(420,english?566:562,'管理面板账号规则',17,'#41b6d5')+oxButton(420,589,166,'读取面板规则',1)+oxButton(613,589,211,'保存到面板并更新',3)+T(421,648,'已读取面板规则，可编辑后保存',16,'#b7e46e')+T(242,705,'示例域名不对应真实服务；请按实际需求填写',16,'#c8d7dd')+T(242,737,'保存成功后，检查日志并在控制面板核对规则命中',16,'#c8d7dd'))
 
 
-for(const sc of scenes){const phone=sc.client==='oixcloud'||sc.id==='android';const h=phone?982:975;let s=`<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="${h}" viewBox="0 0 1120 ${h}" role="img" aria-labelledby="title desc"><title id="title">${E((sc.client==='oixcloud'?'oixCloud':sc.client==='helper'?'oixCloud Helper':sc.client==='oixclash'?'oixClash':'FlClash for oixCloud')+' · '+sc.title)}</title><desc id="desc">按维护版本的菜单与表单绘制，非客户端截图；中文界面与虚构数据；界面细节随系统、平台与主题变化</desc><g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',Arial,sans-serif">`
- s+=R(0,0,1120,h,'#f3f5f8',0)+T(34,38,sc.client==='oixcloud'?'oixCloud · iPhone / iPad':sc.client==='helper'?'oixCloud Helper · macOS':sc.client==='oixclash'?'oixClash · Merlin 路由器':'FlClash for oixCloud'+(sc.id==='android'?' · Android':' · 桌面端'),18,'#697386',600)+T(1085,38,'操作示意 · 虚构数据',16,'#788392',500,'end')+T(34,87,sc.title,31,'#263245',700)+sc.draw()
- if(phone){s+=T(552,175,'操作位置',17,'#748092',600)+lines(552,214,sc.route,21,'#233955',24);sc.notes.forEach(([title,body],i)=>{let y=336+i*176;s+=badge(568,y,i+1)+T(598,y+7,title,24,'#273952',600)+lines(552,y+46,body,20,'#64748b',24)})}
- else{sc.notes.forEach(([title,body],i)=>{let x=42+i*365;s+=badge(x+12,829,i+1)+T(x+38,835,title,21,'#273952',600)+lines(x,868,body,17,'#64748b',19)});s+=T(34,966,'入口：'+sc.route,14,'#7c8797')}
- s+='</g></svg>\n';writeFileSync(path.join(out,`${sc.client}-${sc.id}-zh.svg`),s)
+for(const original of scenes){
+ currentScene=original
+ const key=`${original.client}-${original.id}`
+ const localized=english?translations.scenes[key]:null
+ if(english&&!localized)throw new Error(`Missing English scene: ${key}`)
+ const sc=localized?{...original,title:localized[0],route:localized[1],notes:localized[2]}:original
+ const phone=sc.client==='oixcloud'||sc.id==='android'
+ const h=english?(phone?1120:1100):(phone?982:975)
+ const brand=sc.client==='oixcloud'?'oixCloud':sc.client==='helper'?'oixCloud Helper':sc.client==='oixclash'?'oixClash':'FlClash for oixCloud'
+ const description=english?(sc.client==='oixclash'?'English reference with bilingual labels for the Chinese-only plugin UI; fictional data, not a screenshot.':'English interface simulation based on maintained client labels; fictional data, not a screenshot. Layout varies by OS, platform and theme.'):'按维护版本的菜单与表单绘制，非客户端截图；中文界面与虚构数据；界面细节随系统、平台与主题变化'
+ let s=`<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="${h}" viewBox="0 0 1120 ${h}" role="img" aria-labelledby="title desc"><title id="title">${E(brand+' · '+sc.title)}</title><desc id="desc">${E(description)}</desc><g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',Arial,sans-serif">`
+ const platform=sc.client==='oixcloud'?'oixCloud · iPhone / iPad':sc.client==='helper'?'oixCloud Helper · macOS':sc.client==='oixclash'?('oixClash · '+(english?'Merlin router':'Merlin 路由器')):'FlClash for oixCloud'+(sc.id==='android'?' · Android':english?' · Desktop':' · 桌面端')
+ s+=R(0,0,1120,h,'#f3f5f8',0)+T(34,38,platform,18,'#697386',600)+T(1085,38,english?(sc.client==='oixclash'?'English guide · Chinese-only plugin UI':'Illustration · Fictional data'):'操作示意 · 虚构数据',16,'#788392',500,'end')+T(34,87,sc.title,31,'#263245',700)
+ drawingUI=true
+ s+=sc.draw()
+ drawingUI=false
+ if(phone){
+  s+=T(552,175,english?'Where to go':'操作位置',17,'#748092',600)+lines(552,214,sc.route,21,'#233955',24)
+  sc.notes.forEach(([title,body],i)=>{let y=336+i*(english?220:176);s+=badge(568,y,i+1)
+   const titleLines=english?wrap(title,20):[title]
+   s+=titleLines.map((v,j)=>T(598,y+7+j*31,v,english?23:24,'#273952',600)).join('')+lines(552,y+(english?Math.max(46,titleLines.length*31+15):46),body,20,'#64748b',24)
+  })
+ }else{
+  sc.notes.forEach(([title,body],i)=>{let x=42+i*365
+   const titleLines=english?wrap(title,15):[title]
+   s+=badge(x+12,829,i+1)+titleLines.map((v,j)=>T(x+38,835+j*30,v,english?20:21,'#273952',600)).join('')+lines(x,english?850+titleLines.length*30:868,body,17,'#64748b',19)
+  })
+  s+=T(34,english?h-20:966,(english?'Where to go: ':'入口：')+sc.route,14,'#7c8797')
+ }
+ s+='</g></svg>\n'
+ writeFileSync(path.join(out,`${sc.client}-${sc.id}-${english?'en':'zh'}.svg`),s)
 }
-console.log(`Rendered ${scenes.length} Chinese client illustrations`)
+console.log(`Rendered ${scenes.length} ${english?'English':'Chinese'} client illustrations`)

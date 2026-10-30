@@ -1,3 +1,18 @@
+# English illustration localization — 2026-10-30
+
+Replaced the 37 Chinese-image references in 25 English articles with independently generated English SVGs. Added a public-label translation catalog and `node scripts/render-illustrations.mjs --en`; the default command still regenerates the original Chinese images byte for byte. English callouts, routes, accessible descriptions, captions and full-size links are localized. Wider English text has its own wrapping, field widths and canvas spacing. All images remain explicitly identified as simulations with fictional data.
+
+| Maintained implementation | Committed baseline | English interface checked |
+| --- | --- | --- |
+| Apple oixCloud | `8219e9cd7bb913e4575c889681458a5c715a37cc` | SwiftUI views and `Shared/Localizable.xcstrings`: Sign In, Proxies/Policies/Chains, filters, DNS, network profiles, modules, MITM, iCloud Sync, Automation and Tailscale |
+| FlClash for oixCloud | `0ee1b18dd3099e4c7cc673207877273ccc367d25` | Maintained views and `arb/intl_en.arb`: account/profile menus, proxy chains, Overlay, desktop capture, DNS, Android AccessControl, backup/restore, WebDAV, diagnostics and Tailscale |
+| oixCloud Helper | `ff756864a87b154d10463200c70160c53a2fc87b` | English menu strings in MenuBar, Helper and NodeFilter: Connection, mode names, LAN authentication, Apply in Surge and export actions |
+| oixClash | `16394d14a3eea7c04348d304923f79b6509bec03` | The maintained software-center page has Chinese-only controls. Its three English reference diagrams retain Chinese control names below English explanations; banners, captions and SVG descriptions explicitly identify this limitation |
+
+Labels preserve client-specific spelling and capitalization, including Apple's Save and Log In versus FlClash's Save and log in. Example node names are fictional English values; switching language does not translate real subscription node names. Client repositories and their unrelated working changes were read only.
+
+Validation: `pnpm build` and `git diff --check` passed. All 74 SVGs parse; all 37 original Chinese SVGs match HEAD exactly. Each English SVG is referenced once, with matching full-size link, dimensions, accessible title and caption. No English article references a Chinese asset. The 34 diagrams for clients with English interfaces contain no Chinese text; only the three explicitly bilingual oixClash references retain it. All 37 English diagrams were visually inspected and passed text overlap/canvas-boundary checks; the final oixClash header adjustment was separately rechecked. The 25 edited articles passed 74 figure-level browser cases at 1440px and 390px, with loaded images, matching enlargement links, no page overflow and no captured browser warnings/errors. Desktop and mobile language switching retained the corresponding article/hash and selected the correct localized image. All 103 generated HTML pages, 7,120 internal references, 172 wrapped tables and 51 locale pairs passed link, anchor and paired-structure checks, with locale image suffixes normalized. Navigation and legacy fragment mappings are unchanged. These are source and documentation checks, not client runtime/VPN acceptance tests; publication is verified after pushing main.
+
 # Bilingual content audit — 2026-10-30
 
 Read all 51 Chinese/English article pairs, including frontmatter, task indexes, steps, conditions, tables, examples, warnings and linked reading. This is a content comparison, with targeted maintained-source checks for ambiguous UI terminology; it is not a new release or cross-platform runtime audit.

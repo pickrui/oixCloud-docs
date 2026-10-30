@@ -17,10 +17,10 @@ Select the profile, start the client and verify the node list; an imported profi
 ## Update
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-profiles-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Update and manage profiles">
-    <img src="/illustrations/flclash-profiles-zh.svg?v=20261030-2" alt="Update and manage profiles" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-profiles-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Update and manage profiles">
+    <img src="/illustrations/flclash-profiles-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Update and manage profiles" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 Use **Sync** in the profile menu. Edit a profile to enable automatic updates and set an interval. Check the result: a failed download does not mean new nodes were applied.
@@ -30,10 +30,10 @@ Managed account information, filters and plan access are handled on the oixCloud
 ## Managed options
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-filter-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Filter managed nodes">
-    <img src="/illustrations/flclash-filter-zh.svg?v=20261030-2" alt="Filter managed nodes" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-filter-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Filter managed nodes">
+    <img src="/illustrations/flclash-filter-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Filter managed nodes" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 Open **oixCloud → Node Filter**, select lines, regions and names, check the preview and save. Saving starts an account refresh and managed-profile sync automatically. Wait for completion and check the nodes; if it fails, resolve the reported error and use **Sync** on the account page. Restore Default uses Smart Selection. Devices using this client type on your account share the filter; see [subscriptions and filters](/en/account/subscriptions).

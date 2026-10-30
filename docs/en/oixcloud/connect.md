@@ -18,19 +18,19 @@ App Store installation requires an Apple Account outside mainland China. For bet
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-connect-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="First connection">
-    <img src="/illustrations/oixcloud-connect-zh.svg?v=20261030-2" alt="First connection" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-connect-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Connect and choose an outbound">
+    <img src="/illustrations/oixcloud-connect-en.svg?v=20261030-en1" alt="oixCloud · Connect and choose an outbound" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 ## Managed account
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-login-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Sign in to oixCloud">
-    <img src="/illustrations/oixcloud-login-zh.svg?v=20261030-2" alt="Sign in to oixCloud" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-login-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Sign in to your account">
+    <img src="/illustrations/oixcloud-login-en.svg?v=20261030-en1" alt="oixCloud · Sign in to your account" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 1. Open the App Store or TestFlight link in our download center to install oixCloud, then sign in on the app's oixCloud account page.

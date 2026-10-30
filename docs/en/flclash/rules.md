@@ -7,19 +7,19 @@ description: "Overrides, groups and added rules \u2014 setup, practical steps an
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-rules-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Add a domain-suffix rule">
-    <img src="/illustrations/flclash-rules-zh.svg?v=20261030-2" alt="Add a domain-suffix rule" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-rules-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Add a domain suffix rule">
+    <img src="/illustrations/flclash-rules-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Add a domain suffix rule" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 ## Choose an override mode
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-override-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Choose an override mode">
-    <img src="/illustrations/flclash-override-zh.svg?v=20261030-2" alt="Choose an override mode" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-override-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Choose a profile override mode">
+    <img src="/illustrations/flclash-override-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Choose a profile override mode" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 Open **Override** from the profile menu.

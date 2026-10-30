@@ -7,10 +7,10 @@ description: "Network checks and connections \u2014 setup, practical steps and t
 ## Windows / macOS network check
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-diagnostics-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Read network-check results">
-    <img src="/illustrations/flclash-diagnostics-zh.svg?v=20261030-2" alt="Read network-check results" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-diagnostics-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Run a network self-check">
+    <img src="/illustrations/flclash-diagnostics-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Run a network self-check" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 1. Keep the failing profile and network environment.

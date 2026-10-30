@@ -9,10 +9,10 @@ Open **Tools → Backup and Restore**.
 ## Back up current data first
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-backup-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Find backup and restore controls">
-    <img src="/illustrations/flclash-backup-zh.svg?v=20261030-2" alt="Find backup and restore controls" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-backup-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Back up before restoring">
+    <img src="/illustrations/flclash-backup-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Back up before restoring" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 ::: warning Back up before restoring
@@ -22,10 +22,10 @@ Create a local backup before major changes or restoring another backup, save it 
 ## Choose strategy and scope
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-restore-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Choose the restore scope">
-    <img src="/illustrations/flclash-restore-zh.svg?v=20261030-2" alt="Choose the restore scope" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-restore-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Choose the restore scope">
+    <img src="/illustrations/flclash-restore-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Choose the restore scope" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 These are two separate choices. First check **Restore Strategy** on the page, then start local or WebDAV restore.
@@ -49,10 +49,10 @@ Compatible does not mean that nothing is replaced. Restore all data still applie
 ## WebDAV
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-webdav-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Configure WebDAV backups">
-    <img src="/illustrations/flclash-webdav-zh.svg?v=20261030-2" alt="Configure WebDAV backups" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-webdav-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Bind a WebDAV backup location">
+    <img src="/illustrations/flclash-webdav-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Bind a WebDAV backup location" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 1. Enter a reachable WebDAV URL and account, preferably over HTTPS.

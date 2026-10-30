@@ -7,10 +7,10 @@ description: "DNS overrides and network settings \u2014 setup, practical steps a
 ## Begin with default DNS
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-dns-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Configure DNS overrides">
-    <img src="/illustrations/flclash-dns-zh.svg?v=20261030-2" alt="Configure DNS overrides" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-dns-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Add DNS override entries">
+    <img src="/illustrations/flclash-dns-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Add DNS override entries" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 Open **Tools → Advanced Configuration → DNS**. The current interface uses the title-bar **+** (**Add override entry**) to choose individual fields. Added entries replace the corresponding DNS fields across profiles; fields not added inherit each profile's own settings. There is no longer one master switch replacing the whole DNS section.

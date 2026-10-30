@@ -1,0 +1,1065 @@
+{
+  "ui": {
+    "oixcloud": {
+      "Cron 定时": "Cron",
+      "MITM 证书": "MITM Certificates",
+      "iCloud 同步": "iCloud Sync",
+      "oixCloud 已启动": "oixCloud Started",
+      "上次同步": "Last Synced",
+      "主机": "Host",
+      "主页": "Home",
+      "交互式登录": "Interactive Login",
+      "从此设备删除": "Delete from This Device",
+      "使用 Google 登录": "Sign in with Google",
+      "保存": "Save",
+      "保存并登录": "Save and Log In",
+      "健康检查": "Health Check",
+      "兜底路由": "Final Route",
+      "入口": "Entry",
+      "全局": "Global",
+      "分流 DNS": "Split DNS",
+      "刚刚": "Just Now",
+      "创建并用于此设备": "Create and Use on This Device",
+      "创建账号": "Create Account",
+      "判定": "Decision",
+      "匹配方式": "Match",
+      "协议": "Protocol",
+      "原因": "Reason",
+      "取消": "Cancel",
+      "可莉插件中心": "Kelee Module Hub",
+      "同步到 Apple TV": "Sync to Apple TV",
+      "名称": "Name",
+      "名称包含": "Name contains",
+      "名称排除": "Name excludes",
+      "后缀": "Suffix",
+      "安装信任描述文件": "Install Trust Profile",
+      "完成": "Done",
+      "客户端": "Client",
+      "导入模块": "Import Module",
+      "导出公钥证书": "Export Public Certificate",
+      "将 PKCS#12 导入账号": "Import PKCS#12 into Account",
+      "尚未登录": "Not logged in",
+      "已启用": "Enabled",
+      "已运行": "Uptime",
+      "底层代理": "Underlying Proxy",
+      "忘记密码？": "Forgot Password?",
+      "恢复默认": "Restore Default",
+      "成员": "Members",
+      "手动": "Manual",
+      "扩展匹配": "Extended Matching",
+      "新建模块": "Add Module",
+      "新建链式代理": "New Chain",
+      "无": "None",
+      "时间": "Time",
+      "替换此设备上的证书": "Replace Certificate on This Device",
+      "未连接": "Disconnected",
+      "根证书": "Root Certificate",
+      "模块说明": "Module Guide",
+      "模式": "Mode",
+      "此处的更改仅影响此设备": "Changes here affect only this device.",
+      "此设备": "This Device",
+      "活动": "Activity",
+      "添加": "Add",
+      "添加网络": "Add Network",
+      "添加规则": "Add Rule",
+      "生成证书": "Generate Certificate",
+      "生效顺序": "Module Order",
+      "直连": "Direct",
+      "立即同步": "Sync Now",
+      "端口": "Port",
+      "策略组只能作为第一跳": "A policy group can only be the first hop.",
+      "类型": "Type",
+      "精确": "Exact",
+      "线路": "Lines",
+      "结果": "Result",
+      "继承": "Inherit",
+      "网络名称": "Network Name",
+      "网络已更改": "Network Changed",
+      "自动优选": "Best Available",
+      "自动化": "Automation",
+      "自动路由": "Automatic Routing",
+      "自动连接": "Auto Connect",
+      "节点筛选": "Node Filter",
+      "节点预览": "Preview",
+      "订阅模块": "Subscribe Module",
+      "设备名称": "Device Name",
+      "设置": "Settings",
+      "账户": "Account",
+      "路由到": "Route To",
+      "路由预览": "Route Preview",
+      "连接数": "Connections",
+      "通配符": "Wildcard",
+      "邮箱密码": "Email & Password",
+      "间隔": "Interval",
+      "高级": "Advanced",
+      "DNS 规则": "DNS Rule",
+      "代理": "Proxies",
+      "状态": "Status",
+      "规则": "Rule",
+      "地区": "Regions",
+      "域名尾缀": "Domain Suffix",
+      "参数": "Arguments",
+      "操作": "Action",
+      "模块": "Modules",
+      "节点": "Nodes",
+      "请求": "Request",
+      "连接": "Connection",
+      "路由": "Routing",
+      "网络": "Network",
+      "登录": "Sign In",
+      "出口": "Exit",
+      "出口节点": "Exit Node",
+      "触发器": "Triggers",
+      "超时": "Timeout",
+      "工作": "Work",
+      "工作代理链": "Work Chain",
+      "香港 · 示例 A": "HK · Example A",
+      "日本 · 示例 B": "JP · Example B",
+      "新加坡 · 示例 C": "SG · Example C",
+      "香港": "HK",
+      "日本": "JP",
+      "新加坡": "SG",
+      "香港|日本": "HK|JP",
+      "测试|维护": "Test|Maintenance",
+      "自动测速": "URL Test",
+      "自定义": "Custom",
+      "延迟优先": "Lowest latency",
+      "匹配规则": "Matched Rule",
+      "测试 URL": "Test URL",
+      "预期 HTTP 状态": "Expected HTTP Status",
+      "可选": "Optional",
+      "10 秒": "10 s",
+      "示例任务": "Example Task",
+      "示例脚本模块": "Example Script",
+      "示例规则模块": "Example Rules",
+      "文件 · 已停用": "File · Disabled",
+      "订阅 · 上次更新：刚刚": "Subscription · Updated just now",
+      "// 示例脚本代码…": "// Example script…",
+      "○ 不筛选  →  ✓ 仅保留  →  ⊖ 排除": "○ Any  →  ✓ Only  →  ⊖ Exclude",
+      "保留 2 / 12 个节点": "2 of 12 nodes kept",
+      "规则匹配": "Rule matched",
+      "ϟ  自动优选": "ϟ  Best Available",
+      "⌕  搜索": "⌕  Search",
+      "⌕  搜索节点": "⌕  Search nodes",
+      "＋ 添加": "＋ Add",
+      "＋ 添加代理": "＋ Add Proxy",
+      "＋ 添加成员": "＋ Add Members",
+      "‹ 策略": "‹ Policies",
+      "‹ 网络预设": "‹ Network Profiles",
+      "‹ 设置": "‹ Settings",
+      "‹ 请求": "‹ Requests",
+      "↓  日本 · 示例 B": "↓  JP · Example B",
+      "↑  —     上传": "↑  —     Upload",
+      "↓  —     下载": "↓  —     Download",
+      "此规则只用于匹配的域名；其他请求继续按原有设置解析": "This rule applies only to matching domains. Other queries keep their existing DNS settings.",
+      "规则自上而下匹配，命中第一条即生效": "Rules match from top to bottom; the first match applies.",
+      "示例：尚未登录，账户证书操作不可用": "Example: signed out; account certificate actions are unavailable.",
+      "节点、订阅、链式代理、策略组与文件夹": "Nodes, subscriptions, chains, groups and folders",
+      "规则集；每台设备保留自己的证书": "Rule sets; each device keeps its own certificate",
+      "路由规则": "Routing Rules"
+    },
+    "flclash": {
+      "DNS 查询": "DNS queries",
+      "WebDAV配置": "WebDAV configuration",
+      "交互式登录": "Interactive",
+      "仅恢复配置文件": "Restore configuration files only",
+      "代理": "Proxies",
+      "代理链": "Proxy chain",
+      "仪表盘": "Dashboard",
+      "使用 Google 登录": "Sign in with Google",
+      "全局": "Global",
+      "兼容": "Compatible",
+      "内容": "Content",
+      "内核 DNS": "Core DNS",
+      "内核响应": "Core response",
+      "出站模式": "Outbound mode",
+      "刚刚": "Just now",
+      "删除": "Delete",
+      "刷新": "Refresh",
+      "叠加": "Overlay",
+      "只允许选中应用进入VPN": "Only selected apps go through the VPN",
+      "可用节点与策略组": "Available nodes and groups",
+      "同步": "Sync",
+      "名称": "Name",
+      "名称包含": "Name contains",
+      "名称排除": "Name excludes",
+      "地区": "Regions",
+      "地址": "Address",
+      "域名服务器": "Nameserver",
+      "基础信息": "Basic info",
+      "备份": "Backup",
+      "备份与恢复": "Backup and Restore",
+      "备份数据到本地": "Backup local data to local",
+      "工具": "Tools",
+      "已应用配置": "Applied configuration",
+      "应用访问控制": "App access control",
+      "忘记密码？": "Forgot password?",
+      "恢复": "Restore",
+      "恢复所有数据": "Restore all data",
+      "恢复策略": "Restore strategy",
+      "排除域名": "Bypass domains",
+      "排除域名仅在系统代理启用时生效": "Bypass domains apply only while the system proxy is on",
+      "新增": "Add",
+      "暂无信息": "No info",
+      "本地": "Local",
+      "本地代理入口": "Local proxy entry",
+      "标准": "Standard",
+      "栈模式": "Stack mode",
+      "添加网络": "Add network",
+      "添加规则": "Add rule",
+      "登录": "Login",
+      "登录方式": "Login method",
+      "立即应用": "Apply now",
+      "策略组": "Policy groups",
+      "系统": "System",
+      "线路": "Lines",
+      "绑定": "Bind",
+      "编辑": "Edit",
+      "编辑自定义": "Edit custom routing",
+      "网络自检": "Network self-check",
+      "网络速度": "Network speed",
+      "脚本": "Script",
+      "自动设置系统DNS": "Auto-set system DNS",
+      "自动路由": "Automatic routing",
+      "节点筛选": "Node Filter",
+      "节点预览": "Preview",
+      "虚拟网卡与路由": "TUN interface and route",
+      "表单": "Form",
+      "覆写": "Override",
+      "覆写模式": "Override mode",
+      "规则文本": "Rule text",
+      "规则目标": "Rule target",
+      "规则类型": "Rule type",
+      "认证密钥": "Auth key",
+      "设备名称": "Device name",
+      "请绑定WebDAV": "Please bind WebDAV",
+      "账号": "Account",
+      "远程": "Remote",
+      "选项": "Options",
+      "通过": "Passed",
+      "通过文件恢复数据": "Restore data via file",
+      "邮箱": "Email",
+      "邮箱密码": "Email & Password",
+      "链式代理": "Proxy chains",
+      "需要关注": "Needs attention",
+      "预览": "Preview",
+      "高级": "Advanced",
+      "关闭": "Turn Off",
+      "密码": "Password",
+      "出口节点": "Exit node",
+      "直连": "Direct",
+      "系统代理": "System proxy",
+      "虚拟网卡": "TUN",
+      "自定义": "Custom",
+      "网络": "Network",
+      "网络名称": "Network name",
+      "规则": "Rule",
+      "请求": "Requests",
+      "连接": "Connections",
+      "配置": "Profiles",
+      "工作": "Work",
+      "工作代理链": "Work Chain",
+      "香港 · 示例 A": "HK · Example A",
+      "日本 · 示例 B": "JP · Example B",
+      "新加坡 · 示例 C": "SG · Example C",
+      "台湾 · 示例 D": "TW · Example D",
+      "香港": "HK",
+      "日本": "JP",
+      "新加坡": "SG",
+      "香港|日本": "HK|JP",
+      "测试|维护": "Test|Maintenance",
+      "DOMAIN-SUFFIX,example.com,工作": "DOMAIN-SUFFIX,example.com,Work",
+      "oixCloud  ·  示例托管配置": "oixCloud · Example managed profile",
+      "个人订阅（示例）": "Personal subscription (example)",
+      "托管配置": "Managed profile",
+      "⊖  DNS模式": "⊖  DNS mode",
+      "⊖  代理域名服务器": "⊖  Proxy nameserver",
+      "⊖  域名服务器": "⊖  Nameserver",
+      "⊖  状态": "⊖  Status",
+      "⊖  遵守规则": "⊖  Respect rules",
+      "⌄  节点选择": "⌄  Proxy Selection",
+      "节点选择": "Proxy Selection",
+      "⌕  搜索": "⌕  Search",
+      "⌕ 搜索": "⌕ Search",
+      "⌕ 搜索节点": "⌕ Search nodes",
+      "○ 不筛选 → ✓ 仅保留 → ⊖ 排除": "○ Any → ✓ Only → ⊖ Exclude",
+      "个人规则优先于订阅规则，已有附加规则保持优先": "Personal rules precede subscription rules; existing added rules keep priority.",
+      "保留订阅规则和策略组，再叠加个人设置": "Keep subscription rules and groups, then add personal settings.",
+      "入口  ·  拖动排序": "Entry · Drag to reorder",
+      "出口  ·  拖动排序": "Exit · Drag to reorder",
+      "保留 2 / 12 个节点": "2 of 12 nodes kept",
+      "已选 2": "2 selected",
+      "开启  ✓": "Turn On  ✓",
+      "更多  ›": "More  ›",
+      "状态  ·  未连接": "Status · Disconnected",
+      "运行时间  —": "Uptime  —",
+      "留空": "Leave empty",
+      "测速": "Test",
+      "检查当前连接并进行少量抽查": "Check the current connection with a few probes",
+      "系统网络路径也可能经过虚拟网卡": "The system network path may still use TUN",
+      "请确认各跳可用，链越长不代表越快": "Check every hop; a longer chain is not necessarily faster",
+      "示例工作应用": "Example Work App",
+      "示例播放器": "Example Player",
+      "示例浏览器": "Example Browser",
+      "设置  ›  白名单模式": "Settings  ›  Whitelist mode",
+      "香港 · 示例 A  →  日本 · 示例 B": "HK · Example A  →  JP · Example B"
+    },
+    "helper": {
+      "●   Finder   文件   编辑   显示   前往   窗口": "●   Finder   File   Edit   View   Go   Window",
+      "允许局域网访问": "Allow LAN access",
+      "复制本机节点列表 URL": "Copy local node list URL",
+      "导出 OpenSurge 配置": "Export OpenSurge config",
+      "局域网访问鉴权…（已开启）": "LAN authentication… (on)",
+      "局域网访问鉴权…（未开启）": "LAN authentication… (off)",
+      "工具": "Tools",
+      "开机启动": "Start at login",
+      "接入 Surge": "Apply in Surge",
+      "接入模式…（当前：单端口）": "Mode… (currently Single port)",
+      "接入模式…（当前：本地多端口映射）": "Mode… (currently Local port mapping)",
+      "本地端口…": "Local port…",
+      "精简规则": "Lean rules",
+      "节点": "Nodes",
+      "节点筛选 · 智能优选": "Node Filter · Smart Selection",
+      "账户": "Account",
+      "连接设置": "Connection"
+    },
+    "oixclash": {
+      "UDP 转发": "UDP forwarding",
+      "oixCloud 账号": "oixCloud account",
+      "仅代理常用端口": "Common ports only",
+      "仅接管常用端口，其他端口直连": "Capture common ports only; other ports go direct",
+      "保存到面板并更新": "Save to panel and update",
+      "保存成功后，检查日志并在控制面板核对规则命中": "After saving, check the log and matched rules in the dashboard",
+      "内存优化": "Memory optimization",
+      "内部网络": "LAN",
+      "向下查看设备、DNS 与自定义规则；在页面底部「保存并应用」": "Scroll for devices, DNS and rules; use Save and Apply at the bottom",
+      "在 oixCloud 网站或 App 中复制": "Copy from the oixCloud website or app",
+      "外部网络": "WAN",
+      "将符合端口设置的 UDP 流量交给代理": "Proxy UDP traffic within the configured port scope",
+      "屏蔽 QUIC": "Block QUIC",
+      "已登录：reader@example.com  ·  示例套餐": "Signed in: reader@example.com · Example plan",
+      "已读取面板规则，可编辑后保存": "Panel rules loaded; edit and save",
+      "开启": "Enable",
+      "打开控制面板": "Open dashboard",
+      "插件版本：0.0.14": "Plugin version: 0.0.14",
+      "无线网络": "Wireless",
+      "未开启 UDP 转发时建议开启": "Recommended when UDP forwarding is off",
+      "未运行": "Stopped",
+      "本机内存 256MB  ·  内核在 JFFS 上运行": "256 MB RAM · Core runs on JFFS",
+      "查看日志": "View log",
+      "检查更新": "Check updates",
+      "每行一条，无需 rules: 或行首短横线": "One rule per line; no rules: header or leading dash",
+      "流量分析": "Traffic analyzer",
+      "游戏或语音需非常用端口时，可按需关闭": "Turn off if a game or call needs uncommon ports",
+      "留空并保存可清除面板账号规则": "Saving an empty editor clears account rules",
+      "登录": "Sign in",
+      "登录令牌": "Access Token",
+      "登录后，主局域网设备使用 oixCloud 的节点和分流规则": "Main-LAN devices use oixCloud nodes and rules after sign-in",
+      "登录方式": "Sign-in method",
+      "示例为未登录状态，令牌输入框尚未填写": "Example: signed out, with the token field empty",
+      "示例域名不对应真实服务；请按实际需求填写": "Example domains; replace them for your own use",
+      "管理面板账号规则": "Manage panel account rules",
+      "系统管理": "Administration",
+      "网络地图": "Network map",
+      "自定义规则": "Custom rules",
+      "节点切换": "Node selection",
+      "访客网络": "Guest network",
+      "读取面板规则": "Read panel rules",
+      "账号规则": "Account rules",
+      "账号规则与网站共用，排在面板默认规则之前": "Shared account rules run before panel defaults",
+      "软件中心": "Software Center",
+      "软件中心 - oixClash": "Software Center - oixClash",
+      "运行": "Run",
+      "运行中  ·  内核 alpha-oix-示例  ·  UDP 已转发": "Running · Core alpha-oix-example · UDP forwarded",
+      "运行状态": "Status",
+      "适合小内存设备": "For low-memory devices",
+      "邮箱和密码": "Email and password"
+    }
+  },
+  "overrides": {
+    "oixcloud-tailscale": {
+      "登录": "Login"
+    },
+    "oixcloud-sync": {
+      "代理": "Proxies",
+      "规则": "Rules"
+    },
+    "oixcloud-requests": {
+      "代理": "Proxy"
+    },
+    "oixcloud-proxies": {
+      "请求": "Requests"
+    },
+    "oixcloud-automation": {
+      "参数": "Argument"
+    }
+  },
+  "scenes": {
+    "oixcloud-login": [
+      "Sign in to your account",
+      "oixCloud → Sign In",
+      [
+        [
+          "Choose a sign-in method",
+          "Use an Access Token, email and password, or Google for an existing account."
+        ],
+        [
+          "Enter your credentials",
+          "The example email is fictional; no password is shown."
+        ],
+        [
+          "Wait for managed nodes",
+          "After sign-in, wait for nodes to load before connecting on Home."
+        ]
+      ]
+    ],
+    "oixcloud-connect": [
+      "Connect and choose an outbound",
+      "Home → Current node card",
+      [
+        [
+          "Use the power button",
+          "Start the VPN after loading nodes. Allow the first VPN configuration request."
+        ],
+        [
+          "Open the node card",
+          "Select a node. If a network profile fixes the outbound, change that profile first."
+        ],
+        [
+          "Check mode and new requests",
+          "Connection state, mode and Final Route are separate. Verify the actual exit."
+        ]
+      ]
+    ],
+    "oixcloud-proxies": [
+      "Select a node or Best Available",
+      "Home → Current node card → Nodes",
+      [
+        [
+          "Search by node name",
+          "Search the list for the node you need."
+        ],
+        [
+          "Select an automatic entry or group",
+          "These entries select an outbound; they do not open another editor."
+        ],
+        [
+          "Select a node and choose Done",
+          "Verify a new connection. The latency values are examples only."
+        ]
+      ]
+    ],
+    "oixcloud-filter": [
+      "Filter lines, regions and names",
+      "oixCloud → Node Filter",
+      [
+        [
+          "Cycle each filter",
+          "Choose Any, Only or Exclude for lines and regions. Available tags depend on the account."
+        ],
+        [
+          "Inspect the preview",
+          "Names accept regular expressions. Preview search does not change the filter."
+        ],
+        [
+          "Save and refresh",
+          "Only some lines are shown here. Wait for managed nodes to refresh after saving."
+        ]
+      ]
+    ],
+    "oixcloud-policies": [
+      "Create a policy group",
+      "Proxies → Policies → Add Policy Group",
+      [
+        [
+          "Set the name and type",
+          "Choose Manual, URL Test, Fallback, Load Balance or Smart for your needs."
+        ],
+        [
+          "Add members and check the relay",
+          "The example has two nodes. Leave Underlying Proxy as None if not needed."
+        ],
+        [
+          "Save and select the group",
+          "More Health Check options are below. Select the saved group on Home or in a rule."
+        ]
+      ]
+    ],
+    "oixcloud-chains": [
+      "Build a proxy chain in order",
+      "Proxies → Chains → Add",
+      [
+        [
+          "Name the chain",
+          "Use a name that describes its purpose."
+        ],
+        [
+          "Arrange members in forwarding order",
+          "Eligible policy groups can be the first hop only. Test nodes individually first."
+        ],
+        [
+          "Save, then select the chain",
+          "Check Route Preview. Select the saved chain on Home or in a rule."
+        ]
+      ]
+    ],
+    "oixcloud-rules": [
+      "Add a routing rule for a website",
+      "Proxies → Policies → Routing Rules",
+      [
+        [
+          "Choose Domain Suffix",
+          "Enter example.com without a scheme or path."
+        ],
+        [
+          "Choose an existing target",
+          "The example uses an existing group named Work."
+        ],
+        [
+          "Choose Add",
+          "Use Rule mode and make a new request to verify the matched rule."
+        ]
+      ]
+    ],
+    "oixcloud-dns": [
+      "Add a split DNS rule",
+      "Settings → DNS → Add DNS Rule",
+      [
+        [
+          "Choose the match type",
+          "The example matches the suffix of an internal domain."
+        ],
+        [
+          "Choose Split DNS",
+          "Send only matching domain queries to the selected resolver."
+        ],
+        [
+          "Check resolver reachability",
+          "192.0.2.53 is a documentation address. Replace it with your reachable DNS server."
+        ]
+      ]
+    ],
+    "oixcloud-networks": [
+      "Apply settings for one network",
+      "Settings → Network Profiles → Network name",
+      [
+        [
+          "Check the network name",
+          "Match the exact Wi-Fi SSID. Configure cellular networks separately."
+        ],
+        [
+          "Separate Mode and Final Route",
+          "Direct mode differs from sending only unmatched traffic direct."
+        ],
+        [
+          "Save and verify",
+          "Empty DNS inherits global settings. Rules and IPv6 can inherit independently."
+        ]
+      ]
+    ],
+    "oixcloud-mitm": [
+      "Install this device’s MITM certificate",
+      "Settings → MITM → MITM Certificates",
+      [
+        [
+          "Inspect This Device",
+          "This example has a generated certificate but no signed-in account."
+        ],
+        [
+          "Install Trust Profile",
+          "Complete installation and full trust in iOS Settings."
+        ],
+        [
+          "Manage account certificates separately",
+          "Account actions are unavailable while signed out. Do not replace local certificates casually."
+        ]
+      ]
+    ],
+    "oixcloud-modules": [
+      "Import and manage modules",
+      "Proxies → Policies → Modules",
+      [
+        [
+          "Choose import or subscription",
+          "Add Module, Import Module, Subscribe Module and Kelee Module Hub are separate actions."
+        ],
+        [
+          "Inspect the module state",
+          "Names and content are fictional. Enable what you need; long-press for actions."
+        ],
+        [
+          "Check Module Order",
+          "Adjust runtime priority here when modules affect the same domain."
+        ]
+      ]
+    ],
+    "oixcloud-sync": [
+      "Choose what iCloud syncs",
+      "Settings → iCloud Sync",
+      [
+        [
+          "Check sync status",
+          "Enable sync on the main Settings page first. Use Sync Now here."
+        ],
+        [
+          "Select categories",
+          "MITM syncs rule sets. This switch does not sync device certificates."
+        ],
+        [
+          "Enable TV sync separately",
+          "Use the same Apple Account on both devices and enable sync on TV too."
+        ]
+      ]
+    ],
+    "oixcloud-tailscale": [
+      "Add and authorize a Tailscale network",
+      "Settings → Tailscale → Add Network",
+      [
+        [
+          "Name the network and device",
+          "The names identify this network and this device."
+        ],
+        [
+          "Keep Interactive Login",
+          "Use Save and Log In, then authorize this device in the browser."
+        ],
+        [
+          "Check routing and the exit",
+          "Automatic Routing handles peers and approved subnets. Choose internet exit routing separately."
+        ]
+      ]
+    ],
+    "oixcloud-automation": [
+      "Choose script triggers",
+      "Settings → Automation → Add Script",
+      [
+        [
+          "Check the source and client API",
+          "Select the API expected by the script. Its name becomes the page title."
+        ],
+        [
+          "Choose the triggers you need",
+          "Test manually first, then enable schedules or network events."
+        ],
+        [
+          "Enter code before running",
+          "JavaScript and Run Now are below the triggers. Scroll down to continue."
+        ]
+      ]
+    ],
+    "oixcloud-requests": [
+      "Inspect a request’s routing decision",
+      "Activity → Requests → A request",
+      [
+        [
+          "Find the destination",
+          "example.com is a fictional request."
+        ],
+        [
+          "Check the routing result",
+          "Inspect the route used and the reason for the decision."
+        ],
+        [
+          "Check the matched rule",
+          "After changes, make a new connection and verify the rule and outbound."
+        ]
+      ]
+    ],
+    "oixcloud-mitm-generate": [
+      "Generate your first MITM certificate",
+      "Settings → MITM → MITM Certificates",
+      [
+        [
+          "Inspect This Device",
+          "Generate Certificate appears when no local certificate exists."
+        ],
+        [
+          "Choose Generate Certificate",
+          "Installation and trust actions appear after generation."
+        ],
+        [
+          "Continue with installation and trust",
+          "Install the local profile and enable full trust in iOS Settings."
+        ]
+      ]
+    ],
+    "flclash-login": [
+      "Sign in to your account",
+      "Sidebar → oixCloud → Login",
+      [
+        [
+          "Choose your credentials",
+          "Google, Access Token and email/password sign-in are supported."
+        ],
+        [
+          "Submit with the top-right checkmark",
+          "This confirms the form. No real account or token is shown."
+        ],
+        [
+          "Wait for profile sync",
+          "Return to the account page and wait for the managed profile to finish syncing."
+        ]
+      ]
+    ],
+    "flclash-connect": [
+      "Start from the dashboard",
+      "Dashboard → Status card",
+      [
+        [
+          "Choose traffic capture",
+          "On desktop, enable System proxy or TUN as needed."
+        ],
+        [
+          "Keep Rule mode",
+          "Select nodes in the relevant group on Proxies."
+        ],
+        [
+          "Use the Status card’s play button",
+          "The start control is inside this card, not fixed at the bottom-right corner."
+        ]
+      ]
+    ],
+    "flclash-proxies": [
+      "Select a node in its group",
+      "Sidebar → Proxies",
+      [
+        [
+          "Expand the manual group",
+          "Each group has its own choice. Change the group that handles your traffic."
+        ],
+        [
+          "Select a node card",
+          "The theme color marks the selected node."
+        ],
+        [
+          "Verify a new connection",
+          "Latency is a test result, not proof that every app or website works."
+        ]
+      ]
+    ],
+    "flclash-profiles": [
+      "Update and manage profiles",
+      "Sidebar → Profiles → URL profile menu",
+      [
+        [
+          "Check the selected profile",
+          "This is an ordinary URL profile. Managed profiles sync from the account page."
+        ],
+        [
+          "Use the current menu order",
+          "Edit, Override, Sync, Proxy chains, More and Delete are separate actions."
+        ],
+        [
+          "Distinguish profile types",
+          "More includes runtime-profile actions. Managed profiles do not offer identical exports."
+        ]
+      ]
+    ],
+    "flclash-filter": [
+      "Filter managed nodes",
+      "oixCloud → Node Filter",
+      [
+        [
+          "Choose lines and regions",
+          "Cycle Any, Only and Exclude. Available tags depend on the account."
+        ],
+        [
+          "Inspect the preview",
+          "The right-hand preview follows your conditions. Search only locates entries."
+        ],
+        [
+          "Save with the top-right checkmark",
+          "Restore default is at the top. Wait for account refresh and profile sync."
+        ]
+      ]
+    ],
+    "flclash-chains": [
+      "Edit the chain’s forwarding order",
+      "Profile menu → Proxy chains → Add or edit",
+      [
+        [
+          "Name it, then choose members",
+          "Available nodes and supported groups appear below the chain."
+        ],
+        [
+          "Check entry-to-exit order",
+          "Reorder the hops here. Per-hop latency is not full-chain latency."
+        ],
+        [
+          "Save with the top-right checkmark",
+          "For a node exit, select its derived (via …) entry. The original node keeps its route."
+        ]
+      ]
+    ],
+    "flclash-override": [
+      "Choose a profile override mode",
+      "Profile menu → Override",
+      [
+        [
+          "Select the required mode",
+          "Order: Standard, Overlay, Custom, Script. Overlay is selected here."
+        ],
+        [
+          "Edit custom routing",
+          "Keep personal rules and groups on top of the subscription."
+        ],
+        [
+          "Check and apply",
+          "Use the title-bar check and Apply now to validate and apply changes."
+        ]
+      ]
+    ],
+    "flclash-rules": [
+      "Add a domain suffix rule",
+      "Override → Edit custom routing → Rules → Add",
+      [
+        [
+          "Use the Form editor",
+          "Form and Rule text are separate editing modes."
+        ],
+        [
+          "Enter the match and target",
+          "Basic info contains the type, content and an existing rule target."
+        ],
+        [
+          "Save with the top-right checkmark",
+          "A preview is below. Check and apply, then verify a new request."
+        ]
+      ]
+    ],
+    "flclash-capture": [
+      "Choose desktop traffic capture",
+      "macOS → Tools → Advanced configuration → Network",
+      [
+        [
+          "Check the System section",
+          "System proxy and Bypass domains affect apps that follow system proxy settings."
+        ],
+        [
+          "Find TUN under Options",
+          "After enabling it, verify authorization, routes and actual traffic."
+        ],
+        [
+          "Check macOS system DNS",
+          "This option is macOS-only. Windows has a different set of options."
+        ]
+      ]
+    ],
+    "flclash-dns": [
+      "Add DNS override entries",
+      "Tools → Advanced configuration → DNS",
+      [
+        [
+          "Add fields with the top + button",
+          "Unadded fields inherit the profile. Remove an entry using its left-hand control."
+        ],
+        [
+          "Change one field at a time",
+          "Values are examples only. Quick edit is also available at the top right."
+        ],
+        [
+          "Recheck after applying",
+          "A custom profile’s own settings take precedence. Restore original values if needed."
+        ]
+      ]
+    ],
+    "flclash-backup": [
+      "Back up before restoring",
+      "Tools → Backup and Restore",
+      [
+        [
+          "Back up local data first",
+          "Keep the current state before major changes or restoring another backup."
+        ],
+        [
+          "Check Restore strategy",
+          "Compatible updates matching records. Override removes content absent from the backup."
+        ],
+        [
+          "Then choose the restore scope",
+          "After choosing Restore, select configuration files only or all data."
+        ]
+      ]
+    ],
+    "flclash-restore": [
+      "Choose the restore scope",
+      "Backup and Restore → Restore",
+      [
+        [
+          "Restore configuration files only",
+          "Restore profiles, scripts and rules while keeping app settings."
+        ],
+        [
+          "Restore all data",
+          "Also apply the backup’s application and network settings."
+        ],
+        [
+          "The strategy still applies",
+          "Scope and Compatible/Override strategy are independent choices."
+        ]
+      ]
+    ],
+    "flclash-webdav": [
+      "Bind a WebDAV backup location",
+      "Tools → Backup and Restore → Bind",
+      [
+        [
+          "Use the full service URL",
+          "Enter your own WebDAV address, preferably HTTPS."
+        ],
+        [
+          "Enter the account credentials",
+          "Portable backups omit this password. Enter it again on a new device."
+        ],
+        [
+          "Save with the top-right checkmark",
+          "Make a manual backup and confirm a new remote entry afterwards."
+        ]
+      ]
+    ],
+    "flclash-tailscale": [
+      "Authorize a Tailscale network",
+      "Tools → Tailscale → Add network",
+      [
+        [
+          "Name the network and device",
+          "Every device needs separate authorization."
+        ],
+        [
+          "Choose Interactive",
+          "The current login method is a segmented control, not a dropdown."
+        ],
+        [
+          "Scroll to Save and log in",
+          "Continue below Automatic routing, Exit node and Advanced to authorize."
+        ]
+      ]
+    ],
+    "flclash-android": [
+      "Choose which apps enter the VPN",
+      "Android → Tools → AccessControl",
+      [
+        [
+          "Turn on from the More menu",
+          "The top-right menu enables or disables app access control."
+        ],
+        [
+          "Choose a mode in Settings",
+          "More → Settings → Mode. Whitelist mode includes only selected apps."
+        ],
+        [
+          "Select apps and save",
+          "Use the top-right checkmark. The bottom bar shows the mode and selected count."
+        ]
+      ]
+    ],
+    "flclash-diagnostics": [
+      "Run a network self-check",
+      "Windows / macOS → Tools → Network self-check",
+      [
+        [
+          "Run the check from the title bar",
+          "The adjacent control copies the diagnostic report."
+        ],
+        [
+          "Read each result separately",
+          "Distinguish profile, core, local entry, capture and DNS checks."
+        ],
+        [
+          "Results are a limited sample",
+          "More DNS/HTTPS checks are below. A pass does not validate every app or node."
+        ]
+      ]
+    ],
+    "helper-surge": [
+      "Apply Helper’s profile in Surge",
+      "oixCloud menu bar → Connection",
+      [
+        [
+          "Sign in first",
+          "Wait for account and node retrieval before opening Connection."
+        ],
+        [
+          "Check the mode",
+          "Select nodes in Surge for mapping mode, or in Helper for single-port mode."
+        ],
+        [
+          "Apply and check the profile",
+          "Use Apply in Surge and confirm Surge selected the generated profile."
+        ]
+      ]
+    ],
+    "helper-lan": [
+      "Set ports and LAN access",
+      "oixCloud menu bar → Connection",
+      [
+        [
+          "Distinguish the ports",
+          "Configuration delivery and proxy traffic use different ports."
+        ],
+        [
+          "Set authentication first",
+          "Use dedicated LAN credentials, not the oixCloud account password."
+        ],
+        [
+          "Then allow LAN access",
+          "Other devices use this Mac’s LAN IP. Update their settings after changes."
+        ]
+      ]
+    ],
+    "oixclash-login": [
+      "Sign in to oixClash",
+      "Software Center → oixClash → oixCloud account",
+      [
+        [
+          "Choose a sign-in method",
+          "Use an Access Token, or choose email and password."
+        ],
+        [
+          "Enter account credentials",
+          "Copy the token from the website or app. It is not a subscription URL."
+        ],
+        [
+          "Enable after sign-in",
+          "Check the plan, enable the plugin, then save and apply at the page bottom."
+        ]
+      ]
+    ],
+    "oixclash-running": [
+      "Enable proxying and optimize memory",
+      "Software Center → oixClash → Run",
+      [
+        [
+          "Enable, then save and apply",
+          "Wait for Running status, then verify a LAN connection."
+        ],
+        [
+          "Check common ports and UDP",
+          "Uncommon ports go direct by default. Adjust only as needed and retest."
+        ],
+        [
+          "Find memory optimization below",
+          "Device policies, DNS and custom rules follow. Save and apply at the bottom."
+        ]
+      ]
+    ],
+    "oixclash-rules": [
+      "Read and save shared account rules",
+      "Software Center → oixClash → Custom rules",
+      [
+        [
+          "Read panel rules first",
+          "Reading replaces unsaved edits. Keep anything you need before reloading."
+        ],
+        [
+          "Enter one rule per line",
+          "Use DIRECT, REJECT or a group already present in the configuration."
+        ],
+        [
+          "Save and check the result",
+          "Saving affects other clients using these account rules. Verify a new connection."
+        ]
+      ]
+    ]
+  }
+}

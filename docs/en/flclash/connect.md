@@ -28,19 +28,19 @@ Use the release's `SHA256SUMS` for standard packages and `SHA256SUMS-macos12-fin
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-connect-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Dashboard and traffic capture">
-    <img src="/illustrations/flclash-connect-zh.svg?v=20261030-2" alt="Dashboard and traffic capture" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-connect-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Start from the dashboard">
+    <img src="/illustrations/flclash-connect-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Start from the dashboard" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 ## Import your account configuration
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-login-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Sign in with an account">
-    <img src="/illustrations/flclash-login-zh.svg?v=20261030-2" alt="Sign in with an account" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-login-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Sign in to your account">
+    <img src="/illustrations/flclash-login-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Sign in to your account" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 1. Download FlClash for oixCloud from our download center, choose the package for your operating system and processor architecture, and sign in on the app's oixCloud page.

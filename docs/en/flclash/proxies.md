@@ -7,10 +7,10 @@ description: "Nodes, groups and chains \u2014 setup, practical steps and trouble
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-proxies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Select a node in a group">
-    <img src="/illustrations/flclash-proxies-zh.svg?v=20261030-2" alt="Select a node in a group" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-proxies-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Select a node in its group">
+    <img src="/illustrations/flclash-proxies-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Select a node in its group" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 ## Select a node
@@ -33,10 +33,10 @@ Add a group with valid members in a profile's Override settings, then point pers
 ## Proxy chains
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-chains-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Set a proxy chain in forwarding order">
-    <img src="/illustrations/flclash-chains-zh.svg?v=20261030-2" alt="Set a proxy chain in forwarding order" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-chains-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Edit the chain’s forwarding order">
+    <img src="/illustrations/flclash-chains-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Edit the chain’s forwarding order" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 Open **Proxy Chains** from the profile menu and add at least two members in forwarding order: entry first, exit last. Current versions accept nodes and supported policy groups listed in the editor. The Apple oixCloud client's first-hop-only group restriction does not apply here.

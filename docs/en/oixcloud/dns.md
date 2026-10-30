@@ -39,10 +39,10 @@ Encryption protects the connection to the resolver; it does not select a proxy o
 ## Add a domain-specific DNS rule
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-dns-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Add a domain-specific DNS rule">
-    <img src="/illustrations/oixcloud-dns-zh.svg?v=20261030-2" alt="Add a domain-specific DNS rule" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-dns-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Add a split DNS rule">
+    <img src="/illustrations/oixcloud-dns-en.svg?v=20261030-en1" alt="oixCloud · Add a split DNS rule" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>Chinese simulated interface with fictional data · Click to view full size</figcaption>
+  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 1. Open **Settings → DNS → Add DNS Rule**.
