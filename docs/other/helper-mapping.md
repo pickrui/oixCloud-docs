@@ -4,7 +4,7 @@
 
 <figure class="guide-figure">
   <a href="/illustrations/helper-lan-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Helper · 本地端口与局域网访问">
-    <img src="/illustrations/helper-lan-zh.svg?v=20261030-2" alt="Helper · 本地端口与局域网访问" width="1120" height="975" loading="lazy">
+    <img src="/illustrations/helper-lan-zh.svg?v=20261030-2" alt="Helper · 本地端口与局域网访问" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

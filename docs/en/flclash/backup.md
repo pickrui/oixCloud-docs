@@ -10,7 +10,7 @@ Open **Tools → Backup and Restore**.
 
 <figure class="guide-figure">
   <a href="/illustrations/flclash-backup-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Back up before restoring">
-    <img src="/illustrations/flclash-backup-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Back up before restoring" width="1120" height="1100" loading="lazy">
+    <img src="/illustrations/flclash-backup-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Back up before restoring" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>

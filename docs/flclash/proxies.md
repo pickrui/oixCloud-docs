@@ -8,7 +8,7 @@ description: "节点、策略组与代理链的操作步骤、适用范围与常
 
 <figure class="guide-figure">
   <a href="/illustrations/flclash-proxies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 在策略组中选择节点">
-    <img src="/illustrations/flclash-proxies-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 在策略组中选择节点" width="1120" height="975" loading="lazy">
+    <img src="/illustrations/flclash-proxies-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 在策略组中选择节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

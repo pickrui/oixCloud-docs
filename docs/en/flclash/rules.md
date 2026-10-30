@@ -8,7 +8,7 @@ description: "Overrides, groups and added rules \u2014 setup, practical steps an
 
 <figure class="guide-figure">
   <a href="/illustrations/flclash-rules-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Add a domain suffix rule">
-    <img src="/illustrations/flclash-rules-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Add a domain suffix rule" width="1120" height="1100" loading="lazy">
+    <img src="/illustrations/flclash-rules-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Add a domain suffix rule" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>

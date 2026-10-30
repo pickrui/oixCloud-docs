@@ -1,4 +1,4 @@
-import DefaultTheme from 'vitepress/theme'
+import DefaultTheme from 'vitepress/theme-without-fonts'
 import { h, onMounted, onUnmounted } from 'vue'
 import DocMedia from './DocMedia.vue'
 import './style.css'
@@ -20,7 +20,9 @@ function redirectLegacyPage() {
 export default {
   extends: DefaultTheme,
   Layout: () => h(DefaultTheme.Layout, null, { 'layout-bottom': () => h(DocMedia) }),
-  enhanceApp({ router }) {
+  enhanceApp({ app, router }) {
+    // Search excerpts use an isolated Vue app, so their images stay lazy.
+    app.config.globalProperties.$isGuidePage = true
     if (typeof window !== 'undefined') router.onAfterRouteChange = redirectLegacyPage
   },
   setup() {

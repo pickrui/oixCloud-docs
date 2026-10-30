@@ -10,7 +10,7 @@ For iPhone / iPad. Supported configuration can also sync to Apple TV.
 
 <figure class="guide-figure">
   <a href="/illustrations/oixcloud-policies-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Create a policy group">
-    <img src="/illustrations/oixcloud-policies-en.svg?v=20261030-en1" alt="oixCloud · Create a policy group" width="1120" height="1120" loading="lazy">
+    <img src="/illustrations/oixcloud-policies-en.svg?v=20261030-en1" alt="oixCloud · Create a policy group" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>

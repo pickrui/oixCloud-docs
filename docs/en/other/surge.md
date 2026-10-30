@@ -8,7 +8,7 @@ oixCloud Helper runs alongside Surge Mac and also supports local proxy ports and
 
 <figure class="guide-figure">
   <a href="/illustrations/helper-surge-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud Helper · Apply Helper’s profile in Surge">
-    <img src="/illustrations/helper-surge-en.svg?v=20261030-en1" alt="oixCloud Helper · Apply Helper’s profile in Surge" width="1120" height="1100" loading="lazy">
+    <img src="/illustrations/helper-surge-en.svg?v=20261030-en1" alt="oixCloud Helper · Apply Helper’s profile in Surge" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>

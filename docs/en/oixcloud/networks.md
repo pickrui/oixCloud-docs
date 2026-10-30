@@ -10,7 +10,7 @@ For iPhone / iPad.
 
 <figure class="guide-figure">
   <a href="/illustrations/oixcloud-networks-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Apply settings for one network">
-    <img src="/illustrations/oixcloud-networks-en.svg?v=20261030-en1" alt="oixCloud · Apply settings for one network" width="1120" height="1120" loading="lazy">
+    <img src="/illustrations/oixcloud-networks-en.svg?v=20261030-en1" alt="oixCloud · Apply settings for one network" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>

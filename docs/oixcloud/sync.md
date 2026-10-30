@@ -14,7 +14,7 @@ description: "iCloud 同步与最近删除的操作步骤、适用范围与常�
 
 <figure class="guide-figure">
   <a href="/illustrations/oixcloud-sync-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 选择 iCloud 同步内容">
-    <img src="/illustrations/oixcloud-sync-zh.svg?v=20261030-2" alt="oixCloud · 选择 iCloud 同步内容" width="1120" height="982" loading="lazy">
+    <img src="/illustrations/oixcloud-sync-zh.svg?v=20261030-2" alt="oixCloud · 选择 iCloud 同步内容" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

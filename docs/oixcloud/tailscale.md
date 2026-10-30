@@ -10,7 +10,7 @@ description: "Tailscale、子网与出口节点的操作步骤、适用范围与
 
 <figure class="guide-figure">
   <a href="/illustrations/oixcloud-tailscale-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 添加并授权 Tailscale 网络">
-    <img src="/illustrations/oixcloud-tailscale-zh.svg?v=20261030-2" alt="oixCloud · 添加并授权 Tailscale 网络" width="1120" height="982" loading="lazy">
+    <img src="/illustrations/oixcloud-tailscale-zh.svg?v=20261030-2" alt="oixCloud · 添加并授权 Tailscale 网络" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

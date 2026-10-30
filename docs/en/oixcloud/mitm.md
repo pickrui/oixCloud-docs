@@ -10,7 +10,7 @@ For iPhone / iPad. Ordinary proxy access does not require MITM.
 
 <figure class="guide-figure">
   <a href="/illustrations/oixcloud-mitm-generate-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Generate your first MITM certificate">
-    <img src="/illustrations/oixcloud-mitm-generate-en.svg?v=20261030-en1" alt="oixCloud · Generate your first MITM certificate" width="1120" height="1120" loading="lazy">
+    <img src="/illustrations/oixcloud-mitm-generate-en.svg?v=20261030-en1" alt="oixCloud · Generate your first MITM certificate" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
