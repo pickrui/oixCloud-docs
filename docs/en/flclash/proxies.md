@@ -4,6 +4,8 @@ description: "Nodes, groups and chains \u2014 setup, practical steps and trouble
 
 # Nodes, groups and chains
 
+To add sources first, see [individual third-party nodes](/en/flclash/profiles#single-node), [subscription imports](/en/flclash/profiles#other-subscription) and [combining them with managed nodes](/en/flclash/profiles#managed-mix).
+
 ## Illustrated steps
 
 <figure class="guide-figure">

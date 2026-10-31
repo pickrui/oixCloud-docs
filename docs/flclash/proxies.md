@@ -4,6 +4,8 @@ description: "节点、策略组与代理链的操作步骤、适用范围与常
 
 # 节点、策略组与代理链
 
+需要先添加第三方节点或导入其他订阅时，见 [添加单个节点](/flclash/profiles#single-node)、[导入订阅](/flclash/profiles#other-subscription) 和 [与托管节点混用](/flclash/profiles#managed-mix)
+
 ## 操作示意
 
 <figure class="guide-figure">

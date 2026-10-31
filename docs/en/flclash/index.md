@@ -12,6 +12,8 @@ Profiles, traffic capture and network tools for Windows, macOS, Android and Linu
 | I want to… | Guide |
 | --- | --- |
 | Sign in and connect | [Sign in and connect](/en/flclash/connect) |
+| Add an individual third-party node | [Custom nodes and share links](/en/flclash/profiles#single-node) |
+| Use another subscription with oixCloud managed nodes | [Combine nodes and proxy providers](/en/flclash/profiles#managed-mix) |
 | Import profiles, filter nodes and update subscriptions | [Profiles, subscriptions and updates](/en/flclash/profiles) |
 | Select a node, group or proxy chain | [Nodes, groups and chains](/en/flclash/proxies) |
 | Capture app traffic | [System Proxy and TUN](/en/flclash/capture) |

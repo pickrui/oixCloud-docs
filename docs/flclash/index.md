@@ -12,6 +12,8 @@ Windows、macOS、Android 与 Linux 的配置、流量接管与网络工具
 | 我想要 | 阅读教程 |
 | --- | --- |
 | 登录账户并连接 | [登录与首次连接](/flclash/connect) |
+| 添加单个第三方节点 | [自定义节点与分享链接](/flclash/profiles#single-node) |
+| 将其他订阅与 oixCloud 托管节点一起使用 | [混用节点与代理提供者](/flclash/profiles#managed-mix) |
 | 导入配置、筛选节点和更新订阅 | [配置、订阅与更新](/flclash/profiles) |
 | 选择节点、策略组或代理链 | [节点、策略组与代理链](/flclash/proxies) |
 | 让应用流量进入客户端 | [系统代理与虚拟网卡](/flclash/capture) |

@@ -1,6 +1,22 @@
 [
   {
     "terms": [
+      "FlClash 第三方节点",
+      "FlClash 单个节点",
+      "FlClash third-party nodes",
+      "FlClash share link",
+      "FlClash 其他订阅",
+      "FlClash 托管节点一起使用",
+      "FlClash managed subscription",
+      "FlClash 代理提供者",
+      "FlClash proxy provider"
+    ],
+    "targets": [
+      "/flclash/profiles.html"
+    ]
+  },
+  {
+    "terms": [
       "节点筛选",
       "Node Filter",
       "NodeFilter",
