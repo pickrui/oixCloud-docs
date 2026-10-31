@@ -24,6 +24,8 @@ For iPhone / iPad. Apple TV mainly consumes synced rules and allows rule-set des
 
 A domain field takes a hostname, not `https://` or a page path. A suffix includes subdomains; an exact domain matches that host only.
 
+To keep managed nodes as your usual outbound and send only selected websites through third-party nodes, follow [Use third-party and managed nodes together](/en/oixcloud/proxies#route-third-party). Adding another node subscription does not itself install all of that provider's routing rules.
+
 ## Understand priority
 
 - **Excluded Routes** applies first and keeps matching destinations direct or outside the tunnel.

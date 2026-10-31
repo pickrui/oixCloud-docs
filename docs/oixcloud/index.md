@@ -12,6 +12,9 @@ iPhone、iPad 与 Apple TV 的连接、分流、模块和同步教程
 | 我想要 | 阅读教程 |
 | --- | --- |
 | 登录账户并完成首次连接 | [登录与首次连接](/oixcloud/connect) |
+| 添加第三方节点或订阅 | [添加节点与订阅](/oixcloud/proxies#single-node) |
+| 将第三方与托管节点一起使用 | [网站例外与混合策略组](/oixcloud/proxies#managed-mix) |
+| 更新第三方订阅或托管节点 | [按来源分别更新](/oixcloud/proxies#update-third-party) |
 | 导入、筛选和整理节点 | [节点与订阅管理](/oixcloud/proxies) |
 | 自动选择出口或组合代理链 | [策略组、自动选择与代理链](/oixcloud/policies) |
 

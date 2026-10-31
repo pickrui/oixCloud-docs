@@ -12,6 +12,9 @@ Connection, routing, modules and sync for iPhone, iPad and Apple TV.
 | I want to… | Guide |
 | --- | --- |
 | Sign in and make a first connection | [Sign in and connect](/en/oixcloud/connect) |
+| Add third-party nodes or subscriptions | [Add nodes and subscriptions](/en/oixcloud/proxies#single-node) |
+| Use third-party and managed nodes together | [Website exceptions and mixed groups](/en/oixcloud/proxies#managed-mix) |
+| Update third-party subscriptions or managed nodes | [Update each source separately](/en/oixcloud/proxies#update-third-party) |
 | Import, filter and organize nodes | [Nodes and subscriptions](/en/oixcloud/proxies) |
 | Select routes automatically or build a proxy chain | [Policy groups and proxy chains](/en/oixcloud/policies) |
 

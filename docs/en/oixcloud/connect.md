@@ -39,7 +39,7 @@ App Store installation requires an Apple Account outside mainland China. For bet
 
 ## Your own nodes
 
-You can also use compatible private nodes or subscriptions without a managed account. In **Proxies**, choose Add and import a link, file or QR code. See [nodes and subscriptions](/en/oixcloud/proxies).
+You can also use compatible private nodes or subscriptions without a managed account. Use a link, QR code or manual entry under **Proxies → Servers → Add**; local profile files use a separate import entry. See [nodes and subscriptions](/en/oixcloud/proxies#single-node) for the steps and mixed use.
 
 ## Refresh and verify
 

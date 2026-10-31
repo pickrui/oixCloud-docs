@@ -27,6 +27,8 @@ In **Proxies → Policies**, create a named group, choose its type and add membe
 
 **Best Available** (called Auto Select in older versions) is the built-in automatic group. Your own groups appear as separate selectable outbounds. Empty or unusable groups require checking member sources, filters and test results.
 
+A personal group can include standalone nodes and nodes from third-party and managed subscriptions; follow [Create a mixed group](/en/oixcloud/proxies#mixed-group). **All** in the subscription-grouped member picker selects current nodes, not future additions to that source. The built-in Best Available group's **Include All Proxies** is a separate setting; when enabled, third-party nodes can participate too.
+
 ## Tests and priority
 
 Use a reachable test URL and keep the default interval initially. For Smart priority, lower values are preferred and 1.0 is neutral. Do not exclude large numbers of members based on one high-latency result. Automatic changes normally affect new connections; reopen the target connection when checking a switch.

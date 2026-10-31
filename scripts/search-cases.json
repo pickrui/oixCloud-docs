@@ -1,6 +1,22 @@
 [
   {
     "terms": [
+      "oixCloud 第三方节点",
+      "oixCloud 第三方订阅",
+      "oixCloud third-party nodes",
+      "oixCloud third-party subscription",
+      "oixCloud 更新第三方",
+      "oixCloud mixed group",
+      "oixCloud 混合策略组",
+      "oixCloud update subscription",
+      "oixCloud Import Rule Set"
+    ],
+    "targets": [
+      "/oixcloud/proxies.html"
+    ]
+  },
+  {
+    "terms": [
       "FlClash 第三方节点",
       "FlClash 单个节点",
       "FlClash third-party nodes",
