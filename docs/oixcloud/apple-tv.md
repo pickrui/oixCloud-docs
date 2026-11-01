@@ -14,6 +14,14 @@ Apple TV 需要 tvOS 18.0 或更高版本，在电视的 App Store 搜索并安�
 
 ## 方式一：接收手机或平板配置
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/apple-tv-sync-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 在电视设置中打开同步">
+    <img src="/illustrations/apple-tv-sync-zh.svg?v=20261102-3" alt="oixCloud · 在电视设置中打开同步" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 1. iPhone / iPad 与 Apple TV 使用同一 Apple 账户，并统一更新客户端版本
 2. 手机或平板先完成登录与节点配置
 3. 手机进入「设置 → iCloud 同步」，开启「同步到 Apple TV」

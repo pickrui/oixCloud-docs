@@ -24,6 +24,13 @@ FlClash for oixCloud 可以使用兼容的第三方节点和订阅，普通导�
 
 ## 添加单个第三方节点 {#single-node}
 
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-custom-node-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 在当前配置添加自定义节点">
+    <img src="/illustrations/flclash-custom-node-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 在当前配置添加自定义节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 适合已有可用配置，希望加入一个自建或第三方节点的情况，也可直接加在 oixCloud 托管配置中
 
 新增前准备一个独立名称：**与原配置中的节点同名会覆盖该节点的定义**，而不是增加第二个同名节点；不要使用已有策略组或 `DIRECT`、`REJECT` 等内置策略的名称
@@ -89,6 +96,13 @@ URL 订阅在该配置的操作菜单中点「同步」更新，也可在「编�
 按 [添加单个第三方节点](#single-node) 在托管配置中保存并启用节点，然后在托管配置原有的手动选择组中选中它。若只希望某个网站使用该节点，在托管配置的「覆写 → 叠加 → 规则」中添加域名后缀规则并将目标设为该节点，其余流量继续使用托管规则
 
 ### 加入整份第三方订阅 {#managed-subscription}
+
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-provider-members-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 把第三方提供者加入自己的组">
+    <img src="/illustrations/flclash-provider-members-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 把第三方提供者加入自己的组" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
 
 通过应用资源库将订阅作为「代理提供者」引用，可以更新第三方节点，同时保留托管配置的规则
 

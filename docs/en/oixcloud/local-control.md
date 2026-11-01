@@ -11,6 +11,13 @@ For iPhone/iPad and Apple TV versions offering this feature. It lets a device on
 | iPhone / iPad | Settings → Local Controller |
 | Apple TV | Settings → Local Control Panel |
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-local-control-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Enable LAN control and find its address">
+    <img src="/illustrations/oixcloud-local-control-en.svg?v=20261102-3" alt="Enable LAN control and find its address" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 ## Enable and connect
 
 These steps apply to iPhone/iPad; see [Apple TV instructions](#apple-tv) for TV.

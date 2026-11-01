@@ -15,6 +15,14 @@ Internal relay forwards traffic from one service node through other service node
 
 ### Add a multihop path
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-relay-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Arrange entry and exit in the path editor">
+    <img src="/illustrations/account-relay-en.svg?v=20261102-3" alt="Arrange entry and exit in the path editor" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 1. Open [Internal relay](https://oixcloud.com/user/relay) and select Add path.
 2. Choose nodes in the order traffic passes through them. The first is the entry node your client connects to; the last is the exit node, where traffic reaches the website. Insert relay nodes in between as needed; a path can include up to 17 nodes.
 3. Use the buttons beside each node to move it earlier, move it later or remove it. Preview path updates as you go.

@@ -12,6 +12,14 @@ oixCloud、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路�
 
 ## 设置节点筛选
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 筛选线路、地区与名称">
+    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261102-3" alt="oixCloud · 筛选线路、地区与名称" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>oixCloud iPhone / iPad 界面示例 · 其他客户端按对应教程操作 · 点击放大</figcaption>
+</figure>
+
 1. 打开客户端「oixCloud → 节点筛选」，Helper 使用「连接设置 → 节点筛选…」；也可在网站订阅管理中编辑对应地址
 2. 点线路或地区，在「不筛选 → 仅保留 → 排除」间切换；线路与地区的条件共同作用
 3. 需要时填写「名称包含」或「名称排除」，等待预览完成，检查保留数量和目标节点

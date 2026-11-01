@@ -33,6 +33,14 @@ description: "第一次使用的操作步骤、适用范围与常见问题"
 
 ## 怎么确认已经可用
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-connect-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 仪表盘启动与接管">
+    <img src="/illustrations/flclash-connect-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 仪表盘启动与接管" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>FlClash for oixCloud 桌面界面示例 · 其他客户端按对应教程操作 · 点击放大</figcaption>
+</figure>
+
 打开平时需要代理的网站，再检查客户端是否出现流量或连接记录。仅看到 VPN 图标或连接开关开启，还不能证明目标网站可用
 
 失败时先看 [连接排查](/help/troubleshooting)，不要一次修改节点、DNS、模式和订阅全部选项

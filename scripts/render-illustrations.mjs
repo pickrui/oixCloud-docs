@@ -61,7 +61,7 @@ function group(y,rows,{title='',w=404,x=68}={}){
  let h=rows.reduce((sum,r)=>sum+(r.sub?68:53),0),s=title?T(x+14,y-12,title,15,'#727279'):''
  s+=R(x,y,w,h,'#fff',14)
  let yy=y
- rows.forEach((r,i)=>{let rh=r.sub?68:53;s+=T(x+16,yy+(r.sub?27:33),r.label,20,r.disabled?'#a5a5ad':r.danger?'#d23d3d':r.blue?'#007aff':'#202124',r.bold?600:400,'start',english ? w-32-(r.on!==undefined?62:r.value?Math.min(190,textWidth(ui(r.value),r.valueSize||18)+28):r.chev?20:0) : undefined);if(r.sub)s+=T(x+16,yy+51,r.sub,14,'#85858d',400,'start',english?w-36:undefined);if(r.value)s+=T(x+w-(r.chev?28:16),yy+33,english&&currentScene.client==='oixcloud'&&r.value==='代理'?'Proxy':r.value,r.valueSize||18,'#85858d',400,'end');if(r.chev)s+=chevron(x+w-18,yy+23);if(r.on!==undefined)s+=toggle(x+w-66,yy+12,r.on);if(i<rows.length-1)s+=L(x+16,yy+rh,x+w,yy+rh);if(r.n)s+=mark(x+4,yy+4,w-8,rh-8,r.n);yy+=rh})
+ rows.forEach((r,i)=>{let rh=r.sub?68:53;s+=T(x+16,yy+(r.sub?27:33),r.label,r.labelSize||20,r.disabled?'#a5a5ad':r.danger?'#d23d3d':r.blue?'#007aff':'#202124',r.bold?600:400,'start',english ? w-32-(r.on!==undefined?62:r.value?Math.min(190,textWidth(ui(r.value),r.valueSize||18)+28):r.chev?20:0) : undefined);if(r.sub)s+=T(x+16,yy+51,r.sub,14,'#85858d',400,'start',english?w-36:undefined);if(r.value)s+=T(x+w-(r.chev?28:16),yy+33,english&&currentScene.client==='oixcloud'&&r.value==='代理'?'Proxy':r.value,r.valueSize||18,'#85858d',400,'end');if(r.chev)s+=chevron(x+w-18,yy+23);if(r.on!==undefined)s+=toggle(x+w-66,yy+12,r.on);if(i<rows.length-1)s+=L(x+16,yy+rh,x+w,yy+rh);if(r.n)s+=mark(x+4,yy+4,w-8,rh-8,r.n);yy+=rh})
  return s
 }
 function segmented(x,y,w,labels,sel=0,fl=false){let s=R(x,y,w,39,fl?'#f7edef':'#e4e4e9',fl?20:8,fl?'#a8959a':'none');labels.forEach((l,i)=>{let iw=w/labels.length;if(sel===i)s+=R(x+i*iw+3,y+3,iw-6,33,fl?'#f0d9df':'#fff',fl?17:6);s+=T(x+iw*(i+.5),y+25,l,16,fl?'#593c44':'#222',i===sel?600:400,'middle')});return s}
@@ -103,8 +103,8 @@ add('oixcloud','policies','创建策略组','代理 → 策略 → 添加策略�
 ],()=>ios('工作',{back:'取消',action:'保存'})+badge(476,241,3)+group(266,[{label:'名称',value:'工作'},{label:'类型',value:'自动测速',chev:true,n:1}])+group(425,[{label:'香港 · 示例 A'},{label:'日本 · 示例 B'},{label:'＋ 添加成员',blue:true,n:2}],{title:'成员'})+group(621,[{label:'底层代理',value:'无',chev:true}])+group(735,[{label:'测试 URL',value:'https://example.com',valueSize:13},{label:'预期 HTTP 状态',value:'200',valueSize:16}],{title:'健康检查'}))
 
 add('oixcloud','chains','按顺序创建代理链','代理 → 链式代理 → 添加',[
- ['填写链的名称','使用能够辨认用途的名称'],['按转发顺序放置成员','策略组只可作为第一跳；节点需先单独验证可用'],['保存后选择代理链','路线预览核对方向；在主页或规则中选用保存的链']
-],()=>ios('新建链式代理',{back:'取消',action:'✓'})+badge(475,241,3)+group(276,[{label:'名称',value:'工作代理链',n:1}])+group(390,[{label:'香港 · 示例 A',sub:'入口',value:'≡',n:2},{label:'日本 · 示例 B',sub:'出口',value:'≡'},{label:'＋ 添加代理',blue:true}],{title:'代理'})+T(83,625,'策略组只能作为第一跳',15,'#85858d')+group(707,[{label:'香港 · 示例 A'},{label:'↓  日本 · 示例 B'}],{title:'路由预览'}))
+ ['填写链的名称','使用能够辨认用途的名称'],['按转发顺序放置成员','任意跳可用策略组；后续跳组在其他地方也经前置路径'],['保存后选择代理链','路线预览核对方向；在主页或规则中选用保存的链']
+],()=>ios('新建链式代理',{back:'取消',action:'✓'})+badge(475,241,3)+group(276,[{label:'名称',value:'工作代理链',n:1}])+group(390,[{label:'香港 · 示例 A',sub:'入口',value:'≡',n:2},{label:'工作',sub:'URL Test',value:'≡'},{label:'＋ 添加代理',blue:true}],{title:'代理'})+T(83,625,'任意一跳都可使用策略组',15,'#85858d')+T(83,650,'后续跳组在其他地方也经前置路径',15,'#85858d')+group(707,[{label:'香港 · 示例 A'},{label:'↓  工作'}],{title:'路由预览'}))
 
 add('oixcloud','rules','为网站添加路由规则','代理 → 策略 → 路由规则',[
  ['选择域名尾缀','输入 example.com，不带协议或路径'],['选择实际目标','示例选用已有的「工作」策略组'],['点添加','回到规则模式，重新访问目标网站核对命中结果']
@@ -162,7 +162,7 @@ add('flclash','filter','可视化节点筛选','oixCloud → 节点筛选',[
 ],()=>{let s=material('节点筛选','oixCloud')+T(975,205,'↺',25,'#8a5260')+T(1037,205,'✓',26,'#8a5260',600,'end')+badge(1052,177,3)+R(153,241,485,479,'#fbf6f8',20,'#e7dce2')+R(657,241,395,479,'#fbf6f8',20,'#e7dce2')+T(175,278,'○ 不筛选 → ✓ 仅保留 → ⊖ 排除',16,'#796570')+T(177,337,'线路',18)+chips(177,354,['Edge','CIA','IXP'],-1,true)+chips(177,399,['Fusion','GIA'],-1,true)+badge(620,335,1)+T(177,479,'地区',18)+chips(177,495,['香港','日本','新加坡'],[0,1],true)+field(176,563,438,'名称包含','香港|日本')+field(176,647,438,'名称排除','测试|维护');s+=T(681,282,'节点预览',21)+T(681,319,'保留 2 / 12 个节点',16,'#8a5260')+badge(1032,275,2)+R(680,344,347,41,'#f0e7ec',10)+T(696,371,'⌕ 搜索节点',17,'#a08c95');['香港 · 示例 A','日本 · 示例 B'].forEach((n,i)=>s+=T(684,437+i*62,n,20)+check(988,430+i*62,'#8a5260'));return s})
 
 add('flclash','chains','编辑代理链顺序','配置菜单 → 链式代理 → 添加或编辑',[
- ['先命名，再选择成员','编辑器下方列出可用节点与受支持策略组'],['检查入口到出口顺序','在代理链区域排序；各跳延迟不代表完整链路'],['右上角勾号保存','节点出口选带 (via …) 的派生项，原节点仍保留原路线']
+ ['先命名，再选择成员','编辑器下方列出可用节点与受支持策略组'],['检查入口到出口顺序','在代理链区域排序；各跳延迟不代表完整链路'],['保存后选择链名','应用成功后在代理列表或规则目标选链名；原节点保留原路线']
 ],()=>material('链式代理','配置')+T(1037,205,'✓',26,'#8a5260',600,'end')+badge(1052,177,3)+R(155,242,895,60,'#f6e4e9',15)+T(176,278,'请确认各跳可用，链越长不代表越快',18,'#8a5260')+field(170,325,864,'名称','工作代理链',{n:1})+mhead(423,'代理链')+button(911,397,126,'新增')+mrow(448,'香港 · 示例 A',{sub:'入口  ·  拖动排序',value:'≡',n:2})+mrow(531,'日本 · 示例 B',{sub:'出口  ·  拖动排序',value:'≡'})+mhead(657,'可用节点与策略组')+mrow(678,'节点选择',{sub:'策略组',value:'＋'}))
 
 add('flclash','override','选择配置覆写模式','配置菜单 → 覆写',[
@@ -239,6 +239,72 @@ add('oixclash','rules','读取并保存账号规则','软件中心 → oixClash 
 ],()=>merlin('账号规则与网站共用，排在面板默认规则之前')+oxHead(239,'自定义规则')+oxRow(272,'账号规则',385)+R(420,289,609,180,'#22343d',0,'#8fa3ad')+T(435,324,'DOMAIN-SUFFIX,example.com,DIRECT',19,'#e6edf2')+T(435,360,'DOMAIN,ads.example.com,REJECT',19,'#e6edf2')+badge(1018,286,2)+T(420,english?496:500,'每行一条，无需 rules: 或行首短横线',16,'#e2ecf0')+T(420,531,'留空并保存可清除面板账号规则',16,'#ffce55')+T(420,english?566:562,'管理面板账号规则',17,'#41b6d5')+oxButton(420,589,166,'读取面板规则',1)+oxButton(613,589,211,'保存到面板并更新',3)+T(421,648,'已读取面板规则，可编辑后保存',16,'#b7e46e')+T(242,705,'示例域名不对应真实服务；请按实际需求填写',16,'#c8d7dd')+T(242,737,'保存成功后，检查日志并在控制面板核对规则命中',16,'#c8d7dd'))
 
 
+// Additional interface simulations: public labels and fictional values only.
+// Sources: maintained AddProxyView/LocalControlSettingsView, TVSettingsViewController,
+// FlClash GeneralView/ProfileProxyEditView, panel user templates and OpenClash status view.
+function website(title) {
+ return R(28,128,1064,657,'#e3e8f1',16)+R(30,130,1060,653,'#f7f9fc',15)+R(30,130,1060,40,'#e9edf5',15)+T(560,156,'oixcloud.com',15,'#66768b',500,'middle')+R(30,170,1060,55,'#fff',0)+T(54,205,'oixCloud',25,'#344b70',700)+T(276,203,'我的 ▾',17,'#65768e')+T(413,203,'使用 ▾',17,'#65768e')+T(550,203,'交易 ▾',17,'#65768e')+T(687,203,'帮助 ▾',17,'#65768e')+T(1060,203,'示例账户',16,'#7a879b',500,'end')+T(146,272,title,27,'#2b405e',650)+'<g transform="translate(-100 0)">'
+}
+const webButton=(x,y,w,label,n)=>R(x,y,w,40,'#4c74d8',7)+T(x+w/2,y+26,label,16,'#fff',600,'middle',w-20)+(n?mark(x,y,w,40,n):'')
+function webField(x,y,w,label,value,n){return T(x,y,label,16,'#596b85',600)+R(x,y+12,w,45,'#fff',7,'#d5deea')+T(x+13,y+41,value,17,'#445a77',400,'start',w-24)+(n?mark(x,y+12,w,45,n):'')}
+
+add('oixcloud','add-node','从链接添加自己的节点','代理 → 服务器 → 添加 → 链接',[
+ ['选择添加方式','按现有资料选择链接、二维码或手动'],['粘贴完整节点链接','不要填账户 Access Token；图中地址与凭据均为示例'],['继续并核对参数','保存后在主页或分流规则中选用新节点']
+],()=>{let s=ios('代理',{large:true,tab:'代理'})+R(45,245,450,693,'#00000022',25)+R(45,319,450,619,'#fff',27)+R(240,329,60,5,'#d5d5dc',3)+T(70,377,'添加代理',23,'#202124',650)+circ(460,367,16,'#f0f0f4')+T(460,373,'×',23,'#727279',500,'middle');['二维码','链接','手动','oixCloud'].forEach((label,i)=>{let y=411+i*43;s+=T(78,y,['▦','↗','✎','☁'][i],25,'#007aff')+T(121,y,label,20,'#202124',600)+circ(457,y-7,12,i===1?'#007aff':'#ededf1');if(i===1)s+=check(450,y-14,'#fff')});return s+mark(67,385,405,174,1)+R(69,584,402,50,'#f3f3f7',12)+T(83,615,'trojan://example@proxy.example.com:443',13,'#202124')+mark(69,584,402,50,2)+lines(83,660,'支持代理链接和 Clash 或 Surge 订阅',14,'#85858d',29)+T(83,713,'Remnawave HWID',18,'#202124')+toggle(407,691,false)+lines(83,753,'通过 HTTPS 向此订阅发送此设备的标识',13,'#85858d',30)+R(69,850,402,46,'#007aff',23)+T(270,880,'继续',20,'#fff',650,'middle')+mark(69,850,402,46,3)})
+
+add('oixcloud','local-control','开启局域网控制并找到地址','设置 → 局域网控制',[
+ ['开启局域网访问','保持 oixCloud 已连接，另一设备须在同一网络'],['打开列出的 HTTPS 地址','使用当前设备地址；图中仅为示例'],['核对指纹后使用密钥','复制本设备的访问密钥；完成后关闭访问']
+],()=>ios('局域网控制',{back:'设置',action:'应用'})+group(275,[{label:'允许局域网访问',on:true,n:1},{label:'端口',value:'9091'},{label:'状态',value:'可用'}])+group(488,[{label:'https://192.0.2.10:9091',n:2}],{title:'局域网地址'})+group(612,[{label:'复制访问密钥',blue:true,n:3},{label:'重置访问密钥',danger:true},{label:'证书指纹',sub:'SHA-256 · 示例指纹，不用于连接'}],{title:'安全访问'}))
+
+add('apple-tv','sync','在电视设置中打开同步','Apple TV → 设置 → iCloud 同步',[
+ ['先在手机开启电视同步','手机的设置 → iCloud 同步 → 同步到 Apple TV'],['电视打开 iCloud 同步','两端使用同一 Apple 账户；按提示处理已有配置'],['等节点出现后再连接','用遥控器选择出口，在电视目标应用验证']
+],()=>{let s=R(30,130,1060,653,'#edf0f5',15)+T(90,212,'设置',39,'#25354d',650);['模式','代理服务','局域网控制台','允许不安全','iCloud 同步'].forEach((label,i)=>{let y=287+i*78;let selected=i===4;s+=R(78,y-35,962,61,selected?'#fff':'#e3e7ef',12)+T(102,y+5,label,25,'#2d3e58',selected?600:400)+T(1010,y+5,i===0?'规则':i===4?'开启':'关闭',22,'#6a7e98',500,'end');if(selected)s+=mark(78,y-35,962,61,2)});return s+T(90,738,'接收来自 iPhone / iPad 的配置',20,'#64748b')})
+
+add('flclash','lan','找到局域网代理与端口','工具 → 常规',[
+ ['先检查端口','打开端口查看混合端口，另一设备使用同一端口'],['开启局域网代理','另一设备填写这台电脑的局域网 IP，不是 127.0.0.1'],['需要时开启本地认证','另一设备填写相同账户与密码，限制可信网络访问']
+],()=>material('常规','工具')+mrow(252,'端口',{sub:'混合端口  7890',value:'›',n:1})+mrow(343,'局域网代理',{on:true,n:2})+mrow(420,'外部控制器',{on:false})+mrow(497,'本地代理认证',{on:true,n:3})+mrow(574,'账户',{value:'example-user'})+mrow(651,'密码',{value:'••••••••'}))
+
+add('flclash','custom-node','在当前配置添加自定义节点','配置菜单 → 链式代理 → 自定义节点 → 新增',[
+ ['选输入方式','URI 为分享链接；快速编辑或 YAML 按资料填写'],['粘贴单个节点链接','使用独立名称，避免替换配置中的同名节点'],['保存后启用并选用','应用当前配置，在代理手选组选择节点；无需开启代理链']
+],()=>{let m=modal('',810,440);return material('链式代理','配置')+m.s+sheetHead(m,'自定义节点',3)+segmented(m.x+28,m.y+80,754,['URI','快速编辑','YAML'],0,true)+mark(m.x+28,m.y+80,754,39,1)+R(m.x+28,m.y+168,754,143,'#fffbfc',7,'#9d8d92')+T(m.x+45,m.y+198,'URI',15,'#756067')+T(m.x+45,m.y+237,'trojan://example@proxy.example.com:443',19,'#2f272a')+mark(m.x+28,m.y+168,754,143,2)+T(m.x+28,m.y+350,'示例链接，不能直接使用',17,'#897181')+T(m.x+28,m.y+390,'支持的协议以输入提示与检查结果为准',17,'#897181')})
+
+add('flclash','provider-members','把第三方提供者加入自己的组','托管配置 → 覆写 → 叠加 → 代理组 → 成员',[
+ ['先在资源库添加提供者','示例来源叫 ThirdParty；继续保留托管配置'],['在成员中勾选提供者','在代理提供者分类中选择已保存的第三方来源'],['保存并设置规则目标','个人规则指向此组，应用后在代理页选择实际节点']
+],()=>{let m=modal('',770,435);return material('覆写','配置')+m.s+sheetHead(m,'选择代理',3)+R(m.x+25,m.y+80,720,42,'#f3e8ee',10)+T(m.x+44,m.y+108,'⌕ 搜索',18,'#93818b')+T(m.x+31,m.y+168,'代理提供者',17,'#895b70',600)+R(m.x+26,m.y+191,718,65,'#f0dce7',13)+T(m.x+52,m.y+232,'ThirdParty',22,'#493241',600)+check(m.x+685,m.y+224,'#8a5260')+mark(m.x+26,m.y+191,718,65,2)+T(m.x+31,m.y+306,'策略组',17,'#895b70',600)+T(m.x+52,m.y+354,'节点选择',21,'#51414b')+R(m.x+667,m.y+332,23,23,'#fff',3,'#b7a2ae')})
+
+add('account','plans','购买后在这里核对生效状态','网站 → 套餐管理',[
+ ['核对已购买的记录','先确认当前记录，避免付款后重复下单'],['区分生效与待激活','待激活套餐不会立即增加当前套餐的可用流量'],['核对剩余时间与流量','示例数值不代表售卖额度，实际以账户记录为准']
+],()=>website('套餐管理')+R(245,304,808,111,'#fff',12)+T(267,338,'我的套餐',20,'#405675',600)+mark(259,312,260,39,1)+webButton(898,321,132,'购买套餐')+T(267,388,'当前生效套餐与待激活队列',17,'#7a8ca4')+R(245,438,808,248,'#fff',12)+R(245,438,808,46,'#edf2fa',12)+T(269,468,'套餐',17,'#5c6e89',600)+T(567,468,'状态',17,'#5c6e89',600)+T(745,468,'剩余时间',17,'#5c6e89',600)+T(914,468,'剩余流量',17,'#5c6e89',600)+T(269,525,'示例套餐 A',19)+T(564,525,'生效中',18,'#3b967b',600)+mark(552,497,103,40,2)+T(750,525,'20 天',18)+T(917,525,'50 GiB',18)+mark(730,497,294,40,3)+L(264,555,1030,555)+T(269,604,'示例套餐 B',19)+T(564,604,'待激活',18,'#af8a39',600)+T(750,604,'—',18)+T(917,604,'—',18))
+
+add('account','activity','在最近活动中找到请求与节点','网站 → 账户信息 → 最近活动记录',[
+ ['先对照发生时间','图中为虚构分钟记录，按问题发生的时区核对'],['看活动请求与节点数','长连接、活动请求与 Working nodes 是不同数据'],['点节点数展开详情','核对当时使用哪些节点，再与客户端记录对照']
+],()=>website('账户信息')+R(245,305,808,91,'#fff',12)+T(271,338,'最近活动',17,'#657b97')+T(271,375,'2',26,'#476994',650)+T(537,338,'订阅访问',17,'#657b97')+T(537,375,'1',26,'#476994',650)+T(804,338,'登录记录',17,'#657b97')+T(804,375,'1',26,'#476994',650)+R(245,420,808,280,'#fff',12)+T(267,457,'最近活动记录',21,'#405675',600)+R(245,475,808,43,'#edf2fa',0)+T(265,503,'长连接',16)+T(412,503,'活动请求',16)+T(567,503,'Working nodes',16)+T(763,503,'上行/下行',16)+T(936,503,'时间',16)+T(275,557,'8',19)+T(437,557,'24',19)+T(620,557,'2 ⌄',19,'#4277c8',600)+mark(602,529,66,42,3)+T(753,557,'1 / 5 MiB',17)+T(925,557,'10:00',17)+mark(909,529,105,42,1)+mark(402,480,312,34,2)+R(551,582,331,89,'#f0f5fd',9)+T(570,617,'香港 · 示例 A',18)+T(570,650,'日本 · 示例 B',18))
+
+add('account','tokens','找到对应客户端的 Access Token','网站 → Access Token 管理',[
+ ['按客户端找到记录','同账号同类官方客户端可共用这条登录令牌'],['复制的是 Token 本身','图中完全隐藏凭据，不复制订阅网址代替'],['刷新前检查影响范围','重新生成会使旧令牌失效，共用设备均需更新']
+],()=>website('Access Token')+R(245,305,808,64,'#edf3fd',12)+T(267,345,'禁止客户端使用邮箱/密码登录',18)+toggle(969,322,false)+R(245,394,808,292,'#fff',12)+T(267,434,'客户端登录签发',21,'#405675',600)+mark(259,409,255,39,1)+R(267,456,763,43,'#f6f8fc',7,'#d9e1ed')+T(284,484,'FlClash for oixCloud',18)+webButton(808,457,126,'重新生成',3)+T(950,484,'删除',17,'#bb636f')+R(267,520,763,44,'#fff',7,'#d5dfed')+T(284,549,'••••••••••••••••••••••••',20,'#74859a')+T(977,549,'复制',16,'#4b75bf',600)+mark(951,522,71,39,2)+webField(267,607,763,'绑定订阅','客户端专用订阅'))
+
+add('account','relay','在路径编辑器排列入口与出口','网站 → 内部中继 → 添加路径',[
+ ['按经过顺序选节点','第一个是客户端连接的入口，最后一个是出口'],['需要时加入中间跳','用各行按钮调整顺序，核对右侧预览路径'],['保存前检查影响','若提示影响共用路段，阅读受影响规则后再确认']
+],()=>website('添加路径')+webField(247,318,357,'优先级','优先级 1')+R(245,398,471,335,'#fff',12)+T(267,435,'节点顺序',20,'#405675',600)+webField(268,473,422,'入口','香港 · 示例 A',1)+T(602,473,'↑  ↓  ×',16,'#7b8ba2')+webField(268,569,422,'出口','日本 · 示例 B')+T(602,569,'↑  ↓  ×',16,'#7b8ba2')+webButton(268,681,154,'添加节点')+R(739,398,314,214,'#fff',12)+T(762,435,'预览路径',20,'#405675',600)+T(764,480,'香港 · 示例 A',18)+T(782,515,'↓',22,'#4c74d8')+T(764,554,'日本 · 示例 B',18)+mark(750,451,286,122,2)+webButton(742,640,190,'保存路径',3))
+
+add('account','warp','找到节点的 WARP 与智能回退','网站 → WARP 设置',[
+ ['找到要调整的节点','此设置按支持节点生效，先确认节点名称'],['核对 WARP 开关','开启会移除相关中继，先记录仍需保留的设置'],['按出口要求选择回退','回退使用远程节点普通出口，保存后重连验证']
+],()=>website('WARP 设置')+R(245,306,808,102,'#edf3fd',12)+T(267,341,'智能回退',19,'#45668b',600)+lines(267,375,'WARP 不可用时使用节点普通出口',17,'#677f9e',36)+R(245,432,808,246,'#fff',12)+T(270,477,'香港 · 示例 A',24,'#314f78',600)+mark(263,449,347,41,1)+T(271,534,'启用 WARP',20)+toggle(961,512,true)+mark(949,505,78,45,2)+T(271,607,'智能回退',20)+toggle(961,585,false)+mark(949,579,78,45,3))
+
+add('account','nodes','在节点列表查看具体节点','网站 → 节点列表 → 节点卡片',[
+ ['先选择有权限的节点','按需要的地区和线路查找，列表取决于账户'],['查看倍率与连接方式','展开目标节点，按客户端支持的方式获取信息'],['回到客户端验证','更新托管节点后选择它，连接记录核对实际出口']
+],()=>website('节点列表')+R(245,306,808,58,'#fff',10)+T(267,344,'⌕ 搜索节点',19,'#8b9ab0')+R(245,389,808,268,'#fff',12)+T(272,434,'香港 · 示例 A',25,'#355681',650)+mark(265,406,345,41,1)+T(274,480,'Fusion  ·  香港',18,'#6d83a1')+R(270,506,260,48,'#edf4ff',9)+T(289,537,'倍率 1×（示例）',18,'#4c71a5')+mark(267,504,270,53,2)+webButton(271,583,158,'配置信息'))
+
+add('account','ticket','在服务单表单填写可复现信息','网站 → 服务单 → 新建服务单',[
+ ['先选问题类型','按页面补充地区、节点、客户端与排查结果；图为表单局部'],['写清操作与报错','提供时间、网络、目标和对照，附件先脱敏'],['检查确认项后提交','先回复已有未结案工单，勿公开密码或完整订阅']
+],()=>website('新建服务单')+webField(246,317,365,'问题类型','无法连接／速度异常',1)+webField(640,317,412,'客户端','软件中心提供的客户端')+webField(246,415,365,'客户端及版本','FlClash for oixCloud v0.9.2')+webField(640,415,412,'标题','连接异常')+T(247,508,'详细说明',16,'#596b85',600)+R(246,524,806,130,'#fff',7,'#d5deea')+T(267,556,'设备 / 系统 / 客户端版本：示例',17,'#7d8da5')+T(267,589,'发生时间、网络、节点与目标：示例',17,'#7d8da5')+T(267,622,'完整报错与已尝试的步骤：示例',17,'#7d8da5')+mark(246,524,806,130,2)+R(248,688,19,19,'#4c74d8',3)+check(251,690,'#fff')+T(280,705,'我已阅读并完成相关排查',16,'#657b97')+webButton(883,679,168,'提交服务单',3))
+
+add('openclash','running','确认正在运行专用配置','LuCI → 服务 → OpenClash → 运行状态',[
+ ['在配置列表找到专用配置','oixCloud - smart.yaml 来自集成账户入口'],['切换并等待重启','切换后先等待，仍未运行再操作启动开关'],['核对内核与实际设备','内核版本含 oix；在局域网设备验证规则和出口']
+],()=>R(30,130,1060,653,'#f5f5f5',15)+R(30,130,1060,55,'#283643',15)+T(55,166,'OpenWrt',25,'#fff',600)+T(242,166,'服务',19,'#fff')+T(333,166,'OpenClash',19,'#fff')+T(63,231,'OpenClash',30,'#333',650)+segmented(64,261,991,['运行状态','插件设置','配置订阅','配置管理'],0)+R(64,329,991,139,'#fff',8,'#ddd')+T(86,366,'运行状态',20,'#444',600)+T(86,417,'运行中',19,'#3c9d75',600)+T(331,417,'内核版本：mihomo oix（示例）',18,'#666')+mark(320,390,540,42,3)+R(64,499,991,176,'#fff',8,'#ddd')+T(86,538,'配置文件',20,'#444',600)+T(89,592,'oixCloud - smart.yaml',22,'#466b96',600)+mark(81,562,449,43,1)+webButton(877,564,128,'切换',2)+T(89,644,'规则模式  ·  按当前配置运行',18,'#777'))
+
+
 for(const original of scenes){
  currentScene=original
  const key=`${original.client}-${original.id}`
@@ -247,13 +313,14 @@ for(const original of scenes){
  const sc=localized?{...original,title:localized[0],route:localized[1],notes:localized[2]}:original
  const phone=sc.client==='oixcloud'||sc.id==='android'
  const h=english?(phone?1120:1100):(phone?982:975)
- const brand=sc.client==='oixcloud'?'oixCloud':sc.client==='helper'?'oixCloud Helper':sc.client==='oixclash'?'oixClash':'FlClash for oixCloud'
+ const brand=['oixcloud','apple-tv','account'].includes(sc.client)?'oixCloud':sc.client==='openclash'?'OpenClash':sc.client==='helper'?'oixCloud Helper':sc.client==='oixclash'?'oixClash':'FlClash for oixCloud'
  const description=english?(sc.client==='oixclash'?'English reference with bilingual labels for the Chinese-only plugin UI; fictional data, not a screenshot.':'English interface simulation based on maintained client labels; fictional data, not a screenshot. Layout varies by OS, platform and theme.'):'按维护版本的菜单与表单绘制，非客户端截图；中文界面与虚构数据；界面细节随系统、平台与主题变化'
  let s=`<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="${h}" viewBox="0 0 1120 ${h}" role="img" aria-labelledby="title desc"><title id="title">${E(brand+' · '+sc.title)}</title><desc id="desc">${E(description)}</desc><g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',Arial,sans-serif">`
- const platform=sc.client==='oixcloud'?'oixCloud · iPhone / iPad':sc.client==='helper'?'oixCloud Helper · macOS':sc.client==='oixclash'?('oixClash · '+(english?'Merlin router':'Merlin 路由器')):'FlClash for oixCloud'+(sc.id==='android'?' · Android':english?' · Desktop':' · 桌面端')
+ const platform=sc.client==='account'?(english?'oixCloud · Website':'oixCloud · 网站'):sc.client==='apple-tv'?'oixCloud · Apple TV':sc.client==='openclash'?'OpenClash · OpenWrt / LuCI':sc.client==='oixcloud'?'oixCloud · iPhone / iPad':sc.client==='helper'?'oixCloud Helper · macOS':sc.client==='oixclash'?('oixClash · '+(english?'Merlin router':'Merlin 路由器')):'FlClash for oixCloud'+(sc.id==='android'?' · Android':english?' · Desktop':' · 桌面端')
  s+=R(0,0,1120,h,'#f3f5f8',0)+T(34,38,platform,18,'#697386',600)+T(1085,38,english?(sc.client==='oixclash'?'English guide · Chinese-only plugin UI':'Illustration · Fictional data'):'操作示意 · 虚构数据',16,'#788392',500,'end')+T(34,87,sc.title,31,'#263245',700)
  drawingUI=true
  s+=sc.draw()
+ if(sc.client==='account')s+='</g>'
  drawingUI=false
  if(phone){
   s+=T(552,175,english?'Where to go':'操作位置',17,'#748092',600)+lines(552,214,sc.route,21,'#233955',24)

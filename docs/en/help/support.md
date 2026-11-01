@@ -18,6 +18,13 @@ Use this website's support tickets for account, plan and node issues. Problems w
 
 ## Before opening a ticket: checks and annual allowance {#ticket-eligibility}
 
+<figure class="guide-figure">
+  <a href="/illustrations/account-ticket-en.svg?v=20261102-4" target="_blank" rel="noopener" aria-label="Fill in reproducible ticket details">
+    <img src="/illustrations/account-ticket-en.svg?v=20261102-4" alt="Fill in reproducible ticket details" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 The creation page requires all confirmations: you followed the relevant guide and checks, retried connection issues with a client from the download center, and checked Edge's suitability for mainland-China access. Complete the required human verification and name the actual client and node for connection issues.
 
 | Current plan | Self-created tickets per calendar year |

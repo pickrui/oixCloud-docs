@@ -11,6 +11,13 @@ description: "在同一局域网通过 HTTPS 查看 oixCloud 状态、切换节�
 | iPhone / iPad | 设置 → 局域网控制 |
 | Apple TV | 设置 → 局域网控制台 |
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-local-control-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 开启局域网控制并找到地址">
+    <img src="/illustrations/oixcloud-local-control-zh.svg?v=20261102-3" alt="oixCloud · 开启局域网控制并找到地址" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 ## 开启并连接
 
 以下为 iPhone / iPad 步骤，电视端见 [Apple TV 操作](#apple-tv)

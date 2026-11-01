@@ -26,6 +26,13 @@ description: "添加和更新第三方节点、Clash 或 Surge 订阅，以及�
 
 ### 添加单个第三方节点 {#single-node}
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-add-node-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 从链接添加自己的节点">
+    <img src="/illustrations/oixcloud-add-node-zh.svg?v=20261102-3" alt="oixCloud · 从链接添加自己的节点" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 1. 打开「代理 → 服务器」，点工具栏的添加按钮，进入「添加代理」
 2. 选择「链接」，粘贴一条完整的节点分享链接，例如 `ss://`、`vless://`、`trojan://`、`anytls://` 或 `hy2://`，再点「继续」；二维码则选择「二维码 → 继续」后扫描
 3. 没有分享链接时，选择「手动 → 继续」，在编辑器选择协议，填写名称、地址、端口及该协议需要的密码、UUID、TLS、SNI 或传输参数，核对后「保存」

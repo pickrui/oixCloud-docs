@@ -12,6 +12,13 @@ Fair-use points measure request and node resource use separately from traffic al
 
 ## Find your threshold and points {#check}
 
+<figure class="guide-figure">
+  <a href="/illustrations/account-activity-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Find request and node activity">
+    <img src="/illustrations/account-activity-en.svg?v=20261102-3" alt="Find request and node activity" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 1. Find the **Threshold** (临界值) of your current purchased plan in the [plan store](https://oixcloud.com/user/shop). This guide calls it `K`.
 2. Check your points in the [user center](https://oixcloud.com/user). The initial score is **50**, with a range of **0–50**.
 3. Open recent activity in [Account Profile](https://oixcloud.com/user/profile). Compare the time, activity requests and Working nodes; expand the node count to see the nodes reported for that minute.

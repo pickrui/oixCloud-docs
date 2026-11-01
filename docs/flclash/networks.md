@@ -4,6 +4,13 @@ description: 局域网代理、本地认证、按 Wi-Fi 或 Android 网络条件
 
 # 局域网代理与网络排除
 
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-lan-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 找到局域网代理与端口">
+    <img src="/illustrations/flclash-lan-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 找到局域网代理与端口" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 ## 让其他设备使用本机代理
 
 1. 保持 FlClash for oixCloud 已启动并有可用配置

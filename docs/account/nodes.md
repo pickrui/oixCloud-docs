@@ -77,6 +77,14 @@ Edge 级别节点面向国际网络环境，从部分地区（如中国大陆）
 
 ## 第一次选节点的步骤
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-nodes-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 在节点列表查看具体节点">
+    <img src="/illustrations/account-nodes-zh.svg?v=20261102-3" alt="oixCloud · 在节点列表查看具体节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 1. 在 [节点列表](https://oixcloud.com/user/node) 核对账户可用节点、地区、线路和倍率
 2. 更新客户端的托管配置；节点不在列表时先查 [筛选条件](/account/subscriptions)，不要把没有显示直接当成故障
 3. 选择一条符合用途的节点，先测试同一个目标网站或应用

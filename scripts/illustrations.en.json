@@ -67,7 +67,6 @@
       "直连": "Direct",
       "立即同步": "Sync Now",
       "端口": "Port",
-      "策略组只能作为第一跳": "A policy group can only be the first hop.",
       "类型": "Type",
       "精确": "Exact",
       "线路": "Lines",
@@ -156,7 +155,27 @@
       "示例：尚未登录，账户证书操作不可用": "Example: signed out; account certificate actions are unavailable.",
       "节点、订阅、链式代理、策略组与文件夹": "Nodes, subscriptions, chains, groups and folders",
       "规则集；每台设备保留自己的证书": "Rule sets; each device keeps its own certificate",
-      "路由规则": "Routing Rules"
+      "路由规则": "Routing Rules",
+      "任意一跳都可使用策略组": "Any hop can be a policy group.",
+      "后续跳组在其他地方也经前置路径": "Later groups use preceding hops elsewhere too.",
+      "↓  工作": "↓  Work",
+      "添加代理": "Add Proxy",
+      "继续": "Continue",
+      "链接": "Link",
+      "二维码": "QR Code",
+      "示例链接不能直接使用；请粘贴提供方给出的完整节点链接": "This example cannot connect. Paste the complete share link from your provider.",
+      "局域网控制": "Local Controller",
+      "应用": "Apply",
+      "允许局域网访问": "Allow Local Access",
+      "可用": "Ready",
+      "局域网地址": "Local Network Address",
+      "安全访问": "Secure Access",
+      "复制访问密钥": "Copy Access Key",
+      "重置访问密钥": "Reset Access Key",
+      "证书指纹": "Certificate Fingerprint",
+      "SHA-256 · 示例指纹，不用于连接": "SHA-256 · Example only, not for connecting",
+      "支持代理链接和 Clash 或 Surge 订阅": "Supports proxy links and Clash or Surge subscriptions",
+      "通过 HTTPS 向此订阅发送此设备的标识": "Send this device’s identifier to this subscription over HTTPS."
     },
     "flclash": {
       "DNS 查询": "DNS queries",
@@ -302,7 +321,20 @@
       "示例播放器": "Example Player",
       "示例浏览器": "Example Browser",
       "设置  ›  白名单模式": "Settings  ›  Whitelist mode",
-      "香港 · 示例 A  →  日本 · 示例 B": "HK · Example A  →  JP · Example B"
+      "香港 · 示例 A  →  日本 · 示例 B": "HK · Example A  →  JP · Example B",
+      "常规": "Basic configuration",
+      "端口": "Port",
+      "混合端口  7890": "Mixed port  7890",
+      "局域网代理": "Allow LAN",
+      "外部控制器": "External controller",
+      "本地代理认证": "Local proxy authentication",
+      "账户": "Account",
+      "自定义节点": "Custom nodes",
+      "快速编辑": "Quick edit",
+      "示例链接，不能直接使用": "Example link; cannot connect as written",
+      "支持的协议以输入提示与检查结果为准": "See the input hint and validation result for supported protocols",
+      "选择代理": "Select proxies",
+      "代理提供者": "Proxy providers"
     },
     "helper": {
       "●   Finder   文件   编辑   显示   前往   窗口": "●   Finder   File   Edit   View   Go   Window",
@@ -374,6 +406,107 @@
       "运行状态": "Status",
       "适合小内存设备": "For low-memory devices",
       "邮箱和密码": "Email and password"
+    },
+    "apple-tv": {
+      "设置": "Settings",
+      "模式": "Mode",
+      "规则": "Rule",
+      "代理服务": "Proxy Service",
+      "关闭": "Off",
+      "局域网控制台": "Local Control Panel",
+      "允许不安全": "Allow Insecure",
+      "iCloud 同步": "iCloud Sync",
+      "开启": "On",
+      "接收来自 iPhone / iPad 的配置": "Receive configuration from iPhone / iPad"
+    },
+    "account": {
+      "示例账户": "Example account",
+      "用户中心": "User center",
+      "节点列表": "Nodes",
+      "套餐管理": "Plans",
+      "内部中继": "Internal relay",
+      "服务单": "Tickets",
+      "我的套餐": "My plans",
+      "购买套餐": "Buy a plan",
+      "当前生效套餐与待激活队列": "Active plan and activation queue",
+      "套餐": "Plan",
+      "状态": "Status",
+      "剩余时间": "Time remaining",
+      "剩余流量": "Traffic remaining",
+      "示例套餐 A": "Example plan A",
+      "生效中": "Active",
+      "20 天": "20 days",
+      "示例套餐 B": "Example plan B",
+      "待激活": "Pending",
+      "账户信息": "Account information",
+      "最近活动": "Recent activity",
+      "订阅访问": "Subscription access",
+      "登录记录": "Sign-in records",
+      "最近活动记录": "Recent activity records",
+      "长连接": "Open connections",
+      "活动请求": "Activity requests",
+      "上行/下行": "Upload / Download",
+      "时间": "Time",
+      "香港 · 示例 A": "HK · Example A",
+      "日本 · 示例 B": "JP · Example B",
+      "禁止客户端使用邮箱/密码登录": "Disable client email/password sign-in",
+      "客户端登录签发": "Issued by client sign-in",
+      "重新生成": "Regenerate",
+      "删除": "Delete",
+      "复制": "Copy",
+      "绑定订阅": "Bound subscription",
+      "客户端专用订阅": "Client subscription",
+      "添加路径": "Add path",
+      "优先级": "Priority",
+      "优先级 1": "Priority 1",
+      "节点顺序": "Node order",
+      "入口": "Entry",
+      "出口": "Exit",
+      "预览路径": "Path preview",
+      "保存路径": "Save path",
+      "WARP 设置": "WARP settings",
+      "智能回退": "Smart fallback",
+      "WARP 不可用时使用节点普通出口": "Use the node’s ordinary exit if WARP is unavailable",
+      "启用 WARP": "Enable WARP",
+      "⌕ 搜索节点": "⌕ Search nodes",
+      "Fusion  ·  香港": "Fusion  ·  Hong Kong",
+      "倍率 1×（示例）": "Multiplier 1× (example)",
+      "查看节点信息": "Node information",
+      "复制链接": "Copy link",
+      "新建服务单": "New ticket",
+      "问题类别": "Category",
+      "连接问题": "Connection issue",
+      "客户端": "Client",
+      "标题": "Title",
+      "连接异常": "Connection issue",
+      "详细说明": "Description",
+      "设备 / 系统 / 客户端版本：示例": "Device / OS / client version: example",
+      "发生时间、网络、节点与目标：示例": "Time, network, node and destination: example",
+      "完整报错与已尝试的步骤：示例": "Exact error and attempted steps: example",
+      "我已阅读并完成相关排查": "I have read and completed the relevant checks",
+      "提交服务单": "Submit ticket",
+      "配置信息": "Configuration",
+      "问题类型": "Issue type",
+      "我的 ▾": "Account ▾",
+      "使用 ▾": "Services ▾",
+      "交易 ▾": "Billing ▾",
+      "帮助 ▾": "Support ▾",
+      "添加节点": "Add node",
+      "无法连接／速度异常": "Connection or speed problem",
+      "软件中心提供的客户端": "Software Center client",
+      "客户端及版本": "Client and version"
+    },
+    "openclash": {
+      "服务": "Services",
+      "运行状态": "Running status",
+      "插件设置": "Plugin settings",
+      "配置订阅": "Profile subscriptions",
+      "配置管理": "Profile management",
+      "运行中": "Running",
+      "内核版本：mihomo oix（示例）": "Core version: mihomo oix (example)",
+      "配置文件": "Configuration files",
+      "切换": "Switch",
+      "规则模式  ·  按当前配置运行": "Rule mode · Using the current configuration"
     }
   },
   "overrides": {
@@ -392,6 +525,9 @@
     },
     "oixcloud-automation": {
       "参数": "Argument"
+    },
+    "flclash-custom-node": {
+      "自定义节点": "Custom node"
     }
   },
   "scenes": {
@@ -495,7 +631,7 @@
         ],
         [
           "Arrange members in forwarding order",
-          "Eligible policy groups can be the first hop only. Test nodes individually first."
+          "Any hop can be a group. Later groups use preceding hops wherever they are used."
         ],
         [
           "Save, then select the chain",
@@ -786,8 +922,8 @@
           "Reorder the hops here. Per-hop latency is not full-chain latency."
         ],
         [
-          "Save with the top-right checkmark",
-          "For a node exit, select its derived (via …) entry. The original node keeps its route."
+          "Save, then select the chain name",
+          "After applying, select the chain name in Proxies or a rule. Original nodes keep their routes."
         ]
       ]
     ],
@@ -1058,6 +1194,258 @@
         [
           "Save and check the result",
           "Saving affects other clients using these account rules. Verify a new connection."
+        ]
+      ]
+    ],
+    "oixcloud-add-node": [
+      "Add your own node from a link",
+      "Proxies → Servers → Add → Link",
+      [
+        [
+          "Choose an input method",
+          "Choose Link, QR Code or Manual according to the information you have."
+        ],
+        [
+          "Paste a complete node link",
+          "Do not enter an account Access Token. All addresses and credentials shown are fictional."
+        ],
+        [
+          "Continue and review",
+          "After saving, select the node on Home or target it in a rule."
+        ]
+      ]
+    ],
+    "oixcloud-local-control": [
+      "Enable LAN control and find its address",
+      "Settings → Local Controller",
+      [
+        [
+          "Enable local access",
+          "Keep oixCloud connected. The other device must be on the same LAN."
+        ],
+        [
+          "Open the listed HTTPS address",
+          "Use the address on your device; the illustrated address is an example."
+        ],
+        [
+          "Check fingerprint, then use the key",
+          "Copy this device’s access key. Disable access when finished."
+        ]
+      ]
+    ],
+    "apple-tv-sync": [
+      "Enable sync in TV settings",
+      "Apple TV → Settings → iCloud Sync",
+      [
+        [
+          "Publish from the phone first",
+          "On iPhone: Settings → iCloud Sync → Sync to Apple TV."
+        ],
+        [
+          "Enable iCloud Sync on the TV",
+          "Use the same Apple account and review prompts about existing configuration."
+        ],
+        [
+          "Wait for nodes, then connect",
+          "Choose an exit with the remote and test the destination application on TV."
+        ]
+      ]
+    ],
+    "flclash-lan": [
+      "Find LAN proxy and port settings",
+      "Tools → Basic configuration",
+      [
+        [
+          "Check the port first",
+          "Open Port and find the mixed port to use on the other device."
+        ],
+        [
+          "Enable Allow LAN",
+          "The other device uses this computer’s LAN IP, not 127.0.0.1."
+        ],
+        [
+          "Enable local authentication if needed",
+          "Use matching credentials on the other device and restrict access to trusted networks."
+        ]
+      ]
+    ],
+    "flclash-custom-node": [
+      "Add a custom node to this profile",
+      "Profile menu → Proxy chains → Custom nodes → Add",
+      [
+        [
+          "Choose an input method",
+          "URI accepts a share link. Use Quick edit or YAML for other supplied parameters."
+        ],
+        [
+          "Paste one node link",
+          "Use a distinct name so you do not replace an existing node definition."
+        ],
+        [
+          "Save, enable and select it",
+          "Apply the profile and select the node in a manual group. No chain is required."
+        ]
+      ]
+    ],
+    "flclash-provider-members": [
+      "Add a third-party provider to your group",
+      "Managed profile → Override → Overlay → Proxy group → Members",
+      [
+        [
+          "Add the provider to the library first",
+          "ThirdParty is the fictional source name. Keep the managed profile selected."
+        ],
+        [
+          "Select the provider in Members",
+          "Under Proxy providers, check your saved third-party source."
+        ],
+        [
+          "Save and set a rule target",
+          "Target this group with a personal rule, apply, then select a node under Proxies."
+        ]
+      ]
+    ],
+    "account-plans": [
+      "Check plan status after purchase",
+      "Website → Plans",
+      [
+        [
+          "Review purchased records",
+          "Check existing records before placing another order after payment."
+        ],
+        [
+          "Distinguish Active and Pending",
+          "A pending plan does not immediately add traffic to your current plan."
+        ],
+        [
+          "Check time and traffic remaining",
+          "Illustrated values are fictional. Use your actual account records."
+        ]
+      ]
+    ],
+    "account-activity": [
+      "Find request and node activity",
+      "Website → Account information → Recent activity records",
+      [
+        [
+          "Match the event time",
+          "These are fictional minute records. Check the time zone when comparing."
+        ],
+        [
+          "Compare requests and nodes",
+          "Open connections, activity requests and Working nodes are different metrics."
+        ],
+        [
+          "Expand the node count",
+          "Check which nodes were used and compare with client connection records."
+        ]
+      ]
+    ],
+    "account-tokens": [
+      "Find the token for your client",
+      "Website → Access Token management",
+      [
+        [
+          "Find the correct client record",
+          "Official clients of the same kind can share this issued sign-in token."
+        ],
+        [
+          "Copy the token itself",
+          "Credentials are completely hidden here. A subscription URL is a different input."
+        ],
+        [
+          "Review before regenerating",
+          "The old token stops working; every device sharing it needs the new token."
+        ]
+      ]
+    ],
+    "account-relay": [
+      "Arrange entry and exit in the path editor",
+      "Website → Internal relay → Add path",
+      [
+        [
+          "Select nodes in forwarding order",
+          "The first node is the client’s entry and the last node is the exit."
+        ],
+        [
+          "Add intermediate hops if needed",
+          "Use the row controls and check Path preview on the right."
+        ],
+        [
+          "Review the effect before saving",
+          "If shared segments are affected, review the named rules before confirming."
+        ]
+      ]
+    ],
+    "account-warp": [
+      "Find WARP and fallback for a node",
+      "Website → WARP settings",
+      [
+        [
+          "Find the intended node",
+          "This setting is node-specific. Check the node name first."
+        ],
+        [
+          "Check Enable WARP",
+          "Enabling removes related relays. Record settings you still need first."
+        ],
+        [
+          "Choose fallback for your needs",
+          "Fallback uses the remote node’s ordinary exit. Reconnect and verify."
+        ]
+      ]
+    ],
+    "account-nodes": [
+      "Inspect a node in the website list",
+      "Website → Nodes → Node card",
+      [
+        [
+          "Choose an available node",
+          "Search by region or network. Your account determines the available list."
+        ],
+        [
+          "Inspect multiplier and access",
+          "Expand the node information and use a client-supported import method."
+        ],
+        [
+          "Verify in the client",
+          "Refresh managed nodes, select the node and inspect the actual exit in records."
+        ]
+      ]
+    ],
+    "account-ticket": [
+      "Fill in reproducible ticket details",
+      "Website → Tickets → New ticket",
+      [
+        [
+          "Choose the issue type first",
+          "Complete location, node, client and test results. This shows part of the form."
+        ],
+        [
+          "Describe steps and exact errors",
+          "Give time, network, destination and comparisons. Redact attachments first."
+        ],
+        [
+          "Review confirmations and submit",
+          "Continue existing open tickets. Never share passwords or full subscriptions."
+        ]
+      ]
+    ],
+    "openclash-running": [
+      "Confirm the managed profile is running",
+      "LuCI → Services → OpenClash → Running status",
+      [
+        [
+          "Find the managed profile",
+          "oixCloud - smart.yaml comes from the integrated account workflow."
+        ],
+        [
+          "Switch and wait for restart",
+          "Wait for the switch to finish; use Start only if still not running."
+        ],
+        [
+          "Check core and an actual device",
+          "The core version includes oix. Verify routing and exit from a LAN device."
         ]
       ]
     ]

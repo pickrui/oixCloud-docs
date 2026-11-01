@@ -12,6 +12,13 @@ description: "公平使用的积分算法、套餐临界值、日间与闲时阈
 
 ## 先查看临界值与积分 {#check}
 
+<figure class="guide-figure">
+  <a href="/illustrations/account-activity-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 在最近活动中找到请求与节点">
+    <img src="/illustrations/account-activity-zh.svg?v=20261102-3" alt="oixCloud · 在最近活动中找到请求与节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 1. 在 [套餐商店](https://oixcloud.com/user/shop) 查看当前所购套餐的「临界值」，下文记为 `K`
 2. 在 [用户中心](https://oixcloud.com/user) 查看当前积分；初始值为 **50**，范围为 **0–50**
 3. 打开 [账户信息](https://oixcloud.com/user/profile) 的「最近活动记录」，对照发生时间、活动请求及 Working nodes，点击节点数可查看该分钟上报的节点

@@ -24,6 +24,13 @@ The client applies one profile at a time. Select it, start the client and verify
 
 ## Add an individual third-party node {#single-node}
 
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-custom-node-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Add a custom node to this profile">
+    <img src="/illustrations/flclash-custom-node-en.svg?v=20261102-3" alt="Add a custom node to this profile" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 Use this method to add a self-hosted or third-party node to a working profile, including the oixCloud managed profile.
 
 Choose a distinct name before adding it: **matching a node name in the original profile replaces that node's definition**, rather than creating a second node with the same name. Avoid existing group names and built-in names such as `DIRECT` and `REJECT`.
@@ -89,6 +96,13 @@ To keep managed routing while sending some traffic through third-party nodes, ke
 Follow [Add an individual third-party node](#single-node) to save and enable a node in the managed profile, then select it in an existing manual selection group. To use it only for a website, add a domain-suffix rule under the managed profile's **Override → Overlay → Rule** targeting that node. Other traffic continues through managed rules.
 
 ### Add a whole third-party subscription {#managed-subscription}
+
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-provider-members-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Add a third-party provider to your group">
+    <img src="/illustrations/flclash-provider-members-en.svg?v=20261102-3" alt="Add a third-party provider to your group" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
 
 Reference the subscription as a **Proxy provider** in the provider library to update its nodes while keeping managed routing.
 

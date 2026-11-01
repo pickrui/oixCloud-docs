@@ -32,6 +32,14 @@ Wait for account information, profile download and core processing. The plugin c
 
 ## 3. Select the profile and start
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/openclash-running-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Confirm the managed profile is running">
+    <img src="/illustrations/openclash-running-en.svg?v=20261102-3" alt="Confirm the managed profile is running" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 1. Find `oixCloud - smart.yaml` in the profile area on **Overview / Running Status**.
 2. Select it and use **Switch** if another profile is active. Wait for any resulting restart; enable the start switch if it is still stopped.
 3. Inspect logs for successful configuration loading and core startup. The core version should include `oix`.

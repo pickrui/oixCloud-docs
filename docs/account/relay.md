@@ -15,6 +15,14 @@
 
 ### 添加多级路径
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-relay-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 在路径编辑器排列入口与出口">
+    <img src="/illustrations/account-relay-zh.svg?v=20261102-3" alt="oixCloud · 在路径编辑器排列入口与出口" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 1. 打开[内部中继](https://oixcloud.com/user/relay)，点击「添加路径」
 2. 按流量经过的顺序选择节点：第一个是入口节点，客户端连接它；最后一个是出口节点，流量从这里访问目标网站；中间可以插入中继节点，一条路径最多 17 个节点
 3. 用每个节点右侧的按钮前移、后移或移除节点，「预览路径」会同步显示走向

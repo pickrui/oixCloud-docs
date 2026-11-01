@@ -4,6 +4,13 @@ description: Share a LAN proxy, configure local credentials and pause on Wi-Fi o
 
 # LAN proxy and network exclusions
 
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-lan-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Find LAN proxy and port settings">
+    <img src="/illustrations/flclash-lan-en.svg?v=20261102-3" alt="Find LAN proxy and port settings" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 ## Share a local proxy
 
 1. Keep FlClash for oixCloud running with a working profile.

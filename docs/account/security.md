@@ -35,6 +35,13 @@ Google 登录需要客户端和网站同时支持。若当前版本没有入口�
 
 ## 刷新客户端 Access Token {#refresh-client-token}
 
+<figure class="guide-figure">
+  <a href="/illustrations/account-tokens-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 找到对应客户端的 Access Token">
+    <img src="/illustrations/account-tokens-zh.svg?v=20261102-3" alt="oixCloud · 找到对应客户端的 Access Token" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 刷新会立即使旧 Token 失效，同账号同类客户端的所有共用设备都需要换用新 Token；客户端身份和绑定订阅保持不变
 
 1. 打开 [Access Token 管理](https://oixcloud.com/user/token)，在「客户端登录签发」中找到目标客户端

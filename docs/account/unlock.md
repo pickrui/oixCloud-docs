@@ -10,9 +10,17 @@ WARP 与流媒体地区在服务端改变支持节点的出口行为，先在 [�
 
 ## 为节点开启 WARP
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-warp-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 找到节点的 WARP 与智能回退">
+    <img src="/illustrations/account-warp-zh.svg?v=20261102-3" alt="oixCloud · 找到节点的 WARP 与智能回退" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 1. 打开 [WARP 设置](https://oixcloud.com/user/warp)，找到需要调整的节点
-2. 开启 WARP，再决定是否开启「智能回退」
-3. 阅读冲突提示后保存：启用 WARP 会移除以该逻辑节点为来源或目标的内部中继，以及以它为来源的外部中继，先记录仍需保留的设置
+2. 开启前先记录仍需保留的中继：启用 WARP 会移除以该逻辑节点为来源或目标的内部中继，以及以它为来源的外部中继
+3. 切换 WARP 开关，若出现清理中继的提示，阅读影响后再确认。开关会自动提交，等待保存结果；再按需求调整「智能回退」并核对结果
 4. 更新客户端配置，断开旧连接后重新连接该节点，用目标网站核对结果
 
 | 选项 | WARP 不可用时 |

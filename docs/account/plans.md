@@ -12,6 +12,14 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
 
 ## 充值、购买与激活
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-plans-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 购买后在这里核对生效状态">
+    <img src="/illustrations/account-plans-zh.svg?v=20261102-3" alt="oixCloud · 购买后在这里核对生效状态" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 充值先增加余额，购买才生成套餐订单。当前没有套餐时，新购套餐可直接生效；已有套餐时，新购套餐进入待激活队列。购买前查看周期、等级、总流量和结算金额，支付后到「套餐管理」确认当前生效套餐
 
 ### 从套餐购买进入收银台

@@ -12,6 +12,14 @@ If you have a queued plan or automatic renewal enabled, the continuation rules b
 
 ## Add funds, buy, and activate
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-plans-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Check plan status after purchase">
+    <img src="/illustrations/account-plans-en.svg?v=20261102-3" alt="Check plan status after purchase" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 Adding funds increases your account balance; buying creates a plan order. A new plan can take effect immediately when you have no current plan. If you already have one, the new plan enters the activation queue. Before buying, check the billing period, tier, total traffic, and final price. After payment, open Plan Management to confirm which plan is active.
 
 ### Checkout opened from a plan purchase

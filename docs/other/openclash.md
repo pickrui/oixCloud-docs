@@ -32,6 +32,14 @@ LuCI 插件和代理内核可单独更新。找不到新菜单时，仅更新内
 
 ## 3. 选择配置并启动
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/openclash-running-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="OpenClash · 确认正在运行专用配置">
+    <img src="/illustrations/openclash-running-zh.svg?v=20261102-3" alt="OpenClash · 确认正在运行专用配置" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 1. 到「运行状态」的配置文件区域找到 `oixCloud - smart.yaml`
 2. 如果当前不是它，选中并「切换」；等待由切换触发的重启完成，仍未运行时再打开启动开关
 3. 查看运行日志，确认配置加载和内核启动成功，内核版本应包含 `oix`

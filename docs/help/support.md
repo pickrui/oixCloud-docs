@@ -18,6 +18,14 @@ description: "提交有效的服务单的操作步骤、适用范围与常见问
 
 ## 新建前确认与年度额度 {#ticket-eligibility}
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-ticket-zh.svg?v=20261102-4" target="_blank" rel="noopener" aria-label="oixCloud · 在服务单表单填写可复现信息">
+    <img src="/illustrations/account-ticket-zh.svg?v=20261102-4" alt="oixCloud · 在服务单表单填写可复现信息" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 新建页须勾选全部确认项：已阅读并完成相关配置与排查、连接问题先用软件中心提供的客户端重试、已核对中国大陆网络与 Edge 节点的适用范围。按页面要求完成人机验证，连接问题请写明实际客户端与节点
 
 | 当前套餐 | 每自然年主动新建服务单上限 |

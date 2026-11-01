@@ -79,6 +79,14 @@ If 30 more days would exceed the expected plan expiry, extend your plan first, t
 
 ## Select your first node
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-nodes-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Inspect a node in the website list">
+    <img src="/illustrations/account-nodes-en.svg?v=20261102-3" alt="Inspect a node in the website list" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 1. Check permitted nodes, regions, lines and multipliers in the [node list](https://oixcloud.com/user/node).
 2. Refresh the managed client profile. If a node is missing, check [filters](/en/account/subscriptions) before assuming an outage.
 3. Select a suitable node and test the same target site or app.

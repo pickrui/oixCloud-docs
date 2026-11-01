@@ -26,6 +26,13 @@ For iPhone / iPad, using the maintained client's menus. If an option is missing,
 
 ### Add an individual third-party node {#single-node}
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixcloud-add-node-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Add your own node from a link">
+    <img src="/illustrations/oixcloud-add-node-en.svg?v=20261102-3" alt="Add your own node from a link" width="1120" height="1120" loading="lazy">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 1. Open **Proxies → Servers** and use the toolbar's add button to open **Add Proxy**.
 2. Choose **Link**, paste one complete node share link such as `ss://`, `vless://`, `trojan://`, `anytls://` or `hy2://`, then choose **Continue**. For a QR code, choose **QR Code → Continue** and scan it.
 3. Without a share link, choose **Manual → Continue**. In the editor, select the protocol and enter its name, address, port and required password, UUID, TLS, SNI or transport parameters. Check them and **Save**.

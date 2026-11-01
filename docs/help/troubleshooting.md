@@ -47,6 +47,14 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
 
 ## 客户端专用诊断
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-diagnostics-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 运行网络自检">
+    <img src="/illustrations/flclash-diagnostics-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 运行网络自检" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>FlClash for oixCloud 桌面界面示例 · 其他客户端按对应教程操作 · 点击放大</figcaption>
+</figure>
+
 - [oixCloud 请求、DNS 与网络事件](/oixcloud/diagnostics)
 - [FlClash for oixCloud 网络自检与连接记录](/flclash/diagnostics)
 

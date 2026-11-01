@@ -10,9 +10,17 @@ WARP and streaming regions change the outbound behavior of supported remote node
 
 ## Enable WARP for a node
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-warp-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Find WARP and fallback for a node">
+    <img src="/illustrations/account-warp-en.svg?v=20261102-3" alt="Find WARP and fallback for a node" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 1. Open [WARP settings](https://oixcloud.com/user/warp) and locate the node.
-2. Enable WARP and choose whether to enable **Smart fallback**.
-3. Read the conflict notice before saving: enabling WARP removes internal relays using this logical node as source or destination, and external relays using it as their source. Record settings you still need first.
+2. Record relays you still need before enabling WARP: it removes internal relays using this logical node as source or destination, and external relays using it as their source.
+3. Toggle WARP. If a relay-cleanup notice appears, review its effect before confirming. Changes submit automatically; wait for the save result, then adjust **Smart fallback** as needed and check its result.
 4. Update the client profile and establish a new connection through that node, then check the target website.
 
 | Setting | When WARP is unavailable |
