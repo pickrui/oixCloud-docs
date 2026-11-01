@@ -608,5 +608,16 @@
       "/oixcloud/tailscale.html",
       "/flclash/tailscale.html"
     ]
+  },
+  {
+    "terms": [
+      "oixClash arm64",
+      "arm64 内核",
+      "oixClash 速度慢",
+      "oixClash slower than phone"
+    ],
+    "targets": [
+      "/other/oixclash.html"
+    ]
   }
 ]

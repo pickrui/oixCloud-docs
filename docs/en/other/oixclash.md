@@ -24,7 +24,9 @@ Open **软件中心** (Software Center) in the router admin page, check the plat
 
 These links follow the latest stable release. You can also download the [SHA256 checksums](https://dl.dler.io/oixclash-SHA256SUMS) to verify file integrity. If a direct link is unavailable, use the matching platform file from the [latest GitHub release](https://github.com/pickrui/oixclash-merlin/releases/latest).
 
-Package size varies by release and platform. Reserve JFFS space for both the uploaded archive and extracted files. Models with 512 MB of RAM or more can use the defaults; smaller models, including 256 MB routers, can use [memory optimization](#low-memory), available from 0.0.3. In normal mode, the extracted core occupies about 48 MB of RAM, with additional memory used by the running proxy, GeoIP data and dashboard.
+From 0.0.15, the hnd package carries both an armv7 and an arm64 core. Models with a 64-bit system, such as RT-AX86U and GT-AX6000, use the arm64 core automatically; it can use the CPU's AES instructions for encryption and is much faster than the armv7 core. 32-bit models such as RT-AX58U and TUF-AX5400 keep the armv7 core. Offline installation and in-plugin updates choose automatically and keep only the chosen core on JFFS; click **自检** (Self-check) to see which core is in use.
+
+Package size varies by release and platform: about 36 MB for hnd and about 18 MB for other platforms. Reserve JFFS space for both the uploaded archive and extracted files. Models with 512 MB of RAM or more can use the defaults; smaller models, including 256 MB routers, can use [memory optimization](#low-memory), available from 0.0.3. In normal mode, the extracted core occupies about 48 MB of RAM, with additional memory used by the running proxy, GeoIP data and dashboard.
 
 ## 2. Install offline
 
@@ -69,7 +71,7 @@ oixClash captures main-LAN DNS and eligible TCP according to device and port set
 
 For a game, call or other service using uncommon ports, disable **仅代理常用端口** if needed and save. UDP also requires **UDP 转发** (UDP forwarding); verify after the status reports it active. Without UDP forwarding, keep **屏蔽 QUIC** (Block QUIC) on for browser TCP fallback.
 
-Port filtering cannot identify every BT/P2P transfer; downloads on common ports can still use the proxy. Device bypass, DNS capture and QUIC blocking retain their own settings, so the UDP switch alone does not establish capture.
+Port filtering cannot identify every BT/P2P transfer; downloads on common ports can still use the proxy. Device bypass, DNS capture and QUIC blocking retain their own settings, so the UDP switch alone does not establish capture. QUIC blocking does not affect private networks such as the LAN or a VPN.
 
 ### Small-memory routers {#low-memory}
 
@@ -83,7 +85,7 @@ From oixClash 0.0.3, **内存优化** (Memory Optimization) turns on automatical
 | --- | --- |
 | Store the core and dashboard on JFFS when space permits | Reduces memory used by files but needs more flash space. The proxy process still uses RAM. |
 | Use a smaller GeoIP database | Covers only CN and a few other regions. Check matching if custom `GEOIP` rules reference other regions. |
-| Reclaim memory more aggressively | Reduces memory peaks but may cost CPU time. It does not guarantee every configuration will run on a 256 MB router. |
+| Cap the core's memory | Reclaims memory early near the cap to limit peaks, which costs CPU time at that point. It does not guarantee every configuration will run on a 256 MB router. |
 
 After disabling memory optimization, a core already stored on JFFS stays there. The next plugin update restores the compressed archive for extraction to RAM at run time.
 
@@ -148,5 +150,6 @@ Reading again replaces unsaved edits, so review the confirmation first. Account 
 | UDP forwarding does not take effect | Click **自检** (Self-check) and look at the TPROXY and policy routing items; firmware without support only loses UDP, TCP stays proxied |
 | Conflict with fancyss or MerlinClash | Turn off the other proxy plugin; only one can run |
 | The router runs but a device still misbehaves | Check the device's gateway, DNS and IPv6, then the dashboard's connection list |
+| The same node is slower through the router than on a phone or computer | Click **自检** (Self-check) and check the core: 64-bit hnd models should show **使用 arm64 内核** (using the arm64 core); if it still shows armv7, update to 0.0.15 or reinstall offline. 32-bit models are limited by the CPU. Speed tests on uncommon ports go direct, so turn off **仅代理常用端口** (Common ports only) temporarily before comparing |
 
 Before contacting support, click **自检** and send its result together with the plugin log from **查看日志** (View Log), with account details hidden.
