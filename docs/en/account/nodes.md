@@ -54,9 +54,9 @@ To use them, edit the current address in [Subscription management](https://oixcl
 
 ### Traffic routing restrictions {#isp-routing}
 
-Home ISP nodes excluded from default subscriptions cannot be selected for new or modified internal relays, external relays, HTTP/3, WARP or streaming-unlock settings. Adding ISP to a subscription manually does not remove this restriction, and a wildcard source such as **All nodes** cannot bypass it.
+Home ISP nodes excluded from default subscriptions can be selected as internal relay targets or exits, but not as entries or intermediate hops. External relay, HTTP/3, WARP and streaming-unlock settings remain unavailable. Adding ISP to a subscription manually does not remove these restrictions, and a wildcard source such as **All nodes** cannot bypass them.
 
-Backends grouped under the same node name share configuration eligibility: a restriction on any backend prevents selecting the group. Existing settings remain active and can be deleted. Default inclusion alone does not guarantee feature support or permission to configure a node; check the settings page.
+Nodes manually disabled by an administrator remain unavailable as both relay entries and exits. Backends grouped under the same node name share configuration eligibility. Existing settings remain active and can be deleted. All nodes must still meet plan permissions, feature requirements and the conditions shown on the settings page.
 
 ## Rule, Global, and Direct modes
 

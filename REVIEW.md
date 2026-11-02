@@ -1,3 +1,9 @@
+# Home ISP relay exit eligibility — 2026-11-02
+
+Updated the paired node and relay guides against the panel at `4edf5aa41fa2b34133e02cb77ae2970349191a84`: Home ISP nodes excluded from default subscriptions can be internal relay targets/exits, while entry and intermediate-hop restrictions remain. External relay, HTTP/3, WARP and streaming-unlock restrictions are unchanged; manual administrator bans still apply to both entries and exits. No navigation, anchors or illustrations changed.
+
+Validation: `pnpm build`, `pnpm check:search` (370 keyword checks and 710 result anchors), and `git diff --check` passed. All 304 local links and anchors on the four edited pages resolve. The four pages passed 1440px and 390px checks with no page overflow or broken loaded images; visually checked Chinese desktop and English mobile text. Language switching retained the node article and `#isp-routing` anchor, with no browser warnings/errors captured. These are local checks; the panel behavior and these guide changes have not been deployed or published.
+
 # Home ISP node guidance — 2026-11-02
 
 Reviewed the maintained panel at `3b8f88d826073f141fd65974550ce4194df8bfd1`, including node classification, plan access, subscription selection, routing eligibility and displayed labels. The paired node and subscription guides now explain static/dynamic Home ISP categories, per-node default inclusion, explicit ISP selection and traffic-routing restrictions. Relay and WARP/streaming guides link to the common eligibility explanation. CIA and GIA use Basic Optimized Network and Premium Optimized Network; CIA retains its best-effort description. Existing paths, navigation and legacy fragment mappings are unchanged.

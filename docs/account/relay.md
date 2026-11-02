@@ -9,7 +9,7 @@
 | 转发至已有 SSH、远程桌面或游戏服务 | 外部中继的协议转换模式，按页面允许的端口设置 |
 | 在本机组合已有代理节点 | [oixCloud 代理链](/oixcloud/policies) 或 [FlClash for oixCloud 代理链](/flclash/proxies) |
 
-未默认下发的 Home ISP 不允许新增或修改中继配置；手动加入订阅也不会解除限制，已有配置继续生效并可删除。选择前查看 [流量路由限制](/account/nodes#isp-routing)
+未默认下发的 Home ISP 可以作为内部中继目标／出口，不能作为入口或中间节点，也不能配置外部中继。手动加入订阅不会解除这些限制，已有配置继续生效并可删除。选择前查看 [流量路由限制](/account/nodes#isp-routing)
 
 ## 内部中继
 
