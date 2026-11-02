@@ -1,3 +1,11 @@
+# Home ISP node guidance — 2026-11-02
+
+Reviewed the maintained panel at `3b8f88d826073f141fd65974550ce4194df8bfd1`, including node classification, plan access, subscription selection, routing eligibility and displayed labels. The paired node and subscription guides now explain static/dynamic Home ISP categories, per-node default inclusion, explicit ISP selection and traffic-routing restrictions. Relay and WARP/streaming guides link to the common eligibility explanation. CIA and GIA use Basic Optimized Network and Premium Optimized Network; CIA retains its best-effort description. Existing paths, navigation and legacy fragment mappings are unchanged.
+
+The panel homepage is being updated separately in the same task with Home ISP and the renamed network categories in five languages. Its copy focuses on network features and advantages; operational rules remain in the user guide. No private source snippets, credentials, live subscription addresses or account data were added.
+
+Validation: `pnpm build`, `pnpm check:search` (370 keyword checks and 710 result anchors) and `git diff --check` passed. All 586 local links and anchors on the eight edited article pages resolve. All eight pages passed 1440px and 390px checks with no page overflow or broken loaded images; visually inspected the Chinese desktop and English mobile Home ISP sections. Desktop language switching retained the corresponding article and `#home-isp` anchor, and no browser warnings/errors were captured. These are local documentation checks, not production subscription or routing acceptance tests. Publication is verified separately after pushing main.
+
 # Proxy chains and illustrated onboarding — 2026-11-02
 
 Checked chain behavior against the maintained Apple client at `6286b84b2264bb743a727c81b07422f6c3ebf6f1` and FlClash for oixCloud's chain model, editor and configuration generation at `240f3e9f6`. The relevant FlClash files have no uncommitted edits; unrelated startup work in that checkout was left untouched. Website illustrations follow the read-only panel templates at `a3b0ae29b`; the OpenClash view follows `82ba1399`. These are implementation references, not a claim that every deployed page or installed release has the same controls.

@@ -9,6 +9,8 @@ Choose the intended traffic path first. Website relay settings and client-side p
 | Reach an existing SSH, remote-desktop or game service | External relay's protocol-conversion mode, using an allowed destination port |
 | Combine existing proxies on your device | [oixCloud chains](/en/oixcloud/policies) or [FlClash for oixCloud chains](/en/flclash/proxies) |
 
+Home ISP nodes excluded from default subscriptions cannot be selected for new or modified relay settings. Adding them to a subscription does not lift this restriction; existing settings remain active and can be deleted. Check [traffic routing restrictions](/en/account/nodes#isp-routing) before choosing nodes.
+
 ## Internal relay
 
 Internal relay forwards traffic from one service node through other service nodes before it leaves. The relay paths diagram at the top of the page shows your configuration, and the relay rules list below shows each segment of those paths.

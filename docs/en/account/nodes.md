@@ -15,13 +15,14 @@ These descriptions follow the [official homepage](https://oixcloud.com/#network)
 
 | Node type | Network and purpose |
 | --- | --- |
-| <span id="edge"></span>**Edge**<br>Global Network | Tier 1 transit and upstream interconnections provide global access for destinations that do not require mainland-China routing optimization. |
-| <span id="cia"></span>**CIA**<br>China-Optimized Network | CMIN2 or comparable carrier resources supplement international transit to optimize mainland-China routes on a best-effort basis. |
+| <span id="edge"></span>**Edge**<br>Global Network | Tier 1 transit and upstream interconnections provide global access for destinations that do not require mainland-China routing optimization. Designed for international network environments. Connections from certain regions, such as mainland China, are not covered by SLA guarantees. |
+| <span id="isp"></span>**[Home ISP](#home-isp)**<br>Home broadband | Home-broadband exits grouped by static or dynamic IP. Designed for international network environments. No commitments or SLA guarantees are provided. |
+| <span id="cia"></span>**CIA**<br>Basic Optimized Network | CMIN2 or comparable carrier resources supplement international transit to optimize mainland-China routes on a best-effort basis. |
 | <span id="ixp"></span>**IXP**<br>Cloud Interconnect | Internet exchange points connect cloud and content providers, reducing public-Internet detours for supported cloud-network access. |
 | <span id="fusion"></span>**Fusion**<br>Private Network Interconnect | Traffic enters over the Guangdong–Hong Kong dedicated line, then reaches worldwide nodes through Hong Kong as the international hub. |
 | <span id="fusion-advanced"></span>**Fusion Advanced**<br>Private Network Interconnect | Higher scheduling priority, link redundancy and an additional Shanghai–Japan line support multiple devices and sustained transfers. |
 | <span id="fusion-premium"></span>**Fusion Premium**<br>Private Network Interconnect | The highest scheduling priority and layered redundancy serve needs that place greater emphasis on latency, jitter and sustained availability. |
-| <span id="gia"></span>**GIA**<br>Premium China Routing | Tier 1 transit combines with Premium Transit resources, including CN2 GIA, for higher-grade mainland-China routing needs. |
+| <span id="gia"></span>**GIA**<br>Premium Optimized Network | Tier 1 transit combines with Premium Transit resources, including CN2 GIA, for higher-grade mainland-China routing needs. |
 
 ### Dedicated-line access {#dedicated-lines}
 
@@ -33,6 +34,29 @@ These descriptions follow the [official homepage](https://oixcloud.com/#network)
 | Fusion Premium | South China access point → Hong Kong | East China access point → Japan |
 
 IXP uses cloud-network dedicated-line access; the Fusion series uses dedicated-line access. A dash means the homepage does not list that ingress direction.
+
+## Home ISP nodes {#home-isp}
+
+Home ISP is at the same tier as Edge and uses the same plan permissions, with a separate category in the node list. Check the nodes available to your account and their actual exits before choosing.
+
+| List category | Meaning |
+| --- | --- |
+| Home ISP · Static IP | Normally uses a fixed exit IP; verify the address currently used by the node. |
+| Home ISP · Dynamic IP | The exit IP may change, so it is unsuitable for uses that depend on a long-term fixed address. |
+
+Static and dynamic describe the node's exit IP type, not an IP dedicated to your account. Neither category guarantees availability or streaming access.
+
+### Default subscriptions and explicit selection {#isp-subscription}
+
+Default inclusion is set by the service for each node, independently of its static or dynamic IP category. Home ISP nodes without default inclusion are not added automatically to ordinary subscriptions, Smart Selection or a fallback when the default node set is empty.
+
+To use them, edit the current address in [Subscription management](https://oixcloud.com/user/sub_manage), or open **Node Filter** in a supported client. Set the **ISP** line to **Only**, check the preview, save and update the subscription. ISP includes permitted static and dynamic home-broadband nodes without selecting Edge. Region or name filters alone do not add ISP nodes excluded by default. See [Subscriptions and filters](/en/account/subscriptions#home-isp) for entry points and eligibility.
+
+### Traffic routing restrictions {#isp-routing}
+
+Home ISP nodes excluded from default subscriptions cannot be selected for new or modified internal relays, external relays, HTTP/3, WARP or streaming-unlock settings. Adding ISP to a subscription manually does not remove this restriction, and a wildcard source such as **All nodes** cannot bypass it.
+
+Backends grouped under the same node name share configuration eligibility: a restriction on any backend prevents selecting the group. Existing settings remain active and can be deleted. Default inclusion alone does not guarantee feature support or permission to configure a node; check the settings page.
 
 ## Rule, Global, and Direct modes
 
@@ -59,8 +83,6 @@ Use the managed configuration generated for your client. Avoid copying port and 
 | Expected plan expiry | Current plan expiry plus the remaining duration of plans that can activate consecutively in the queue |
 | Purchase and manual-renewal term | At most 12 months per operation; a new purchase must meet the product minimum, while manual renewal starts at one month |
 | Billing month | Exactly 30 days |
-
-Edge-tier nodes are designed for international network environments. Connections from certain regions, such as mainland China, are not covered by SLA guarantees.
 
 ### Auto-renewal {#ip-auto-renewal}
 

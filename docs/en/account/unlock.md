@@ -8,6 +8,8 @@ WARP and streaming regions change the outbound behavior of supported remote node
 | Block STUN connections | All devices using the account on supported nodes | On |
 | YouTube background playback compatibility | All nodes for the account | Off |
 
+Home ISP nodes excluded from default subscriptions cannot be selected for new or modified WARP or streaming-unlock settings, even after explicitly adding them to a subscription. Existing settings remain active; see [traffic routing restrictions](/en/account/nodes#isp-routing).
+
 ## Enable WARP for a node
 
 

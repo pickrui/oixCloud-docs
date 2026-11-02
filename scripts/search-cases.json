@@ -619,5 +619,31 @@
     "targets": [
       "/other/oixclash.html"
     ]
+  },
+  {
+    "terms": [
+      "Home ISP",
+      "家宽",
+      "静态 IP",
+      "动态 IP",
+      "static IP",
+      "dynamic IP"
+    ],
+    "targets": [
+      "/account/nodes.html"
+    ]
+  },
+  {
+    "terms": [
+      "ISP 订阅",
+      "ISP subscription",
+      "ISP 流量路由",
+      "ISP WARP"
+    ],
+    "targets": [
+      "/account/nodes.html",
+      "/account/subscriptions.html",
+      "/account/unlock.html"
+    ]
   }
 ]
