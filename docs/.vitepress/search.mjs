@@ -4,9 +4,10 @@ import { fileURLToPath } from 'node:url'
 
 const docs = fileURLToPath(new URL('../', import.meta.url))
 const headingPattern = /<h([1-6])\b[^>]*>[\s\S]*?<\/h\1>/g
-const plain = html => html.replace(/<[^>]*>/g, ' ').replace(/\u200b/g, '').trim()
+export const plain = html => html.replace(/<[^>]*>/g, ' ').replace(/\u200b/g, '').trim()
+export const clean = html => html.replace(/<p class="table-hint">[\s\S]*?<\/p>/g, '').replace(/<figcaption>[\s\S]*?<\/figcaption>/g, '')
 
-function sections(html) {
+export function sections(html) {
   const headings = [...html.matchAll(headingPattern)]
   return headings.map((m, i) => ({
     level: m[1], heading: m[0],
@@ -20,9 +21,15 @@ function searchableText(section, md, includeContent = false) {
   return md.utils.unescapeAll(plain(section.heading + (includeContent ? ' ' + section.content : '')) + ' ' + labels.join(' '))
 }
 
+// Client named in the page title, for a path without the locale prefix
+export function clientName(relative) {
+  return relative.startsWith('flclash/') ? 'FlClash for oixCloud'
+    : relative.startsWith('oixcloud/') ? 'oixCloud'
+    : relative.startsWith('other/helper-') || relative === 'other/surge.md' ? 'oixCloud Helper' : ''
+}
+
 // Search-only content: pair translations by heading order, preserving local URLs/titles.
 export function renderSearch(src, env, md) {
-  const clean = html => html.replace(/<p class="table-hint">[\s\S]*?<\/p>/g, '').replace(/<figcaption>[\s\S]*?<\/figcaption>/g, '')
   const html = clean(md.render(src, env))
   if (env.frontmatter?.search === false) return ''
   const relative = env.relativePath.replace(/^en\//, '')
@@ -33,9 +40,7 @@ export function renderSearch(src, env, md) {
   if (other.length && (own.length !== other.length || own.some((s, i) => s.level !== other[i].level))) {
     throw new Error(`Paired search headings differ: ${env.relativePath}`)
   }
-  const client = relative.startsWith('flclash/') ? 'FlClash for oixCloud'
-    : relative.startsWith('oixcloud/') ? 'oixCloud'
-    : relative.startsWith('other/helper-') || relative === 'other/surge.md' ? 'oixCloud Helper' : ''
+  const client = clientName(relative)
   return own.map((section, i) => {
     let heading = section.heading
     if (section.level === '1' && client && !plain(heading).toLowerCase().includes(client.toLowerCase())) {

@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import navigation from './navigation.json' with { type: 'json' }
 import { renderSearch, tokenizeSearch } from './search.mjs'
+import { writeGuideIndex } from './guide-index.mjs'
 
 export default defineConfig({
   title: 'oixCloud',
@@ -24,6 +25,7 @@ export default defineConfig({
     }
   },
   sitemap: { hostname: 'https://docs.dler.io' },
+  buildEnd: writeGuideIndex,
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
   locales: {
     root: {
