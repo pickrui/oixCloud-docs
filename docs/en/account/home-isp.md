@@ -25,7 +25,7 @@ Residential broadband exits originate from authentic residential ISP networks (s
 
 ## Subscriptions and filters {#subscription}
 
-Default inclusion is configured per node by the service, independently of the static or dynamic IP category. Home ISP nodes without default inclusion are not added automatically to regular subscriptions, Smart Selection, or fallback lists.
+Default inclusion is configured per node by the service, independently of the static or dynamic IP category. Home ISP nodes without default inclusion are not added automatically to regular subscriptions, Smart Selection, or fallback lists. For plans with CIA, IXP, Fusion or GIA, Smart Selection only includes the plan's default lines and leaves out Home ISP nodes, even those included by default.
 
 <figure class="guide-figure">
   <a href="/illustrations/oixcloud-filter-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · Keep only the ISP line in node filters">
@@ -138,7 +138,7 @@ After configuration, verify your connection and exit attributes:
    - oixCloud: Tap the target entry in `Activity → Requests` to confirm the routing decision points to the proxy chain or internal relay.
    - FlClash: Inspect active connection details in "Connections" to confirm the multi-hop path from entry to Home ISP exit.
 3. **Common troubleshooting steps**:
-   - **Home ISP missing from the list**: Check whether Node Filter has "ISP" set to "Keep only" and whether the profile has been refreshed. Restoring default filters removes non-default ISP nodes.
+   - **Home ISP missing from the list**: Check whether Node Filter has "ISP" set to "Keep only" and whether the profile has been refreshed. Restoring default filters removes non-default ISP nodes; on plans with CIA, IXP, Fusion or GIA, Smart Selection then contains no ISP nodes.
    - **Internal relay rejected on save**: Verify that the Home ISP node is placed strictly as the exit hop. Excluded ISP nodes cannot act as entries or intermediate hops.
    - **Chain connection failures**: Test the entry node independently to ensure network reachability. Check each hop in the chain, ensuring no circular dependencies or conflicting underlying proxy settings exist.
    - **Dynamic IP rotations**: Dynamic residential broadband IPs change periodically. If stateful third-party sessions disconnect, disconnect and reconnect in your client to establish a fresh connection.

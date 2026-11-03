@@ -42,7 +42,7 @@ See the illustrations for [oixCloud](/en/oixcloud/proxies#update-and-filter) and
 
 | Address type | Without custom conditions |
 | --- | --- |
-| Official-client smart subscription | Uses Smart Selection's default lines, excluding dedicated IPs by default. Only if that default set is empty does it fall back to permitted nodes eligible for default inclusion. |
+| Official-client smart subscription | Uses Smart Selection's default lines: permitted Fusion and GIA for plans with Fusion, or CIA + IXP for plans with CIA / IXP, without dedicated IPs or Home ISP. Plans with Edge only get Edge, Home ISP nodes eligible for default inclusion and the account's dedicated IPs. Only if that default set is empty does it fall back to permitted nodes eligible for default inclusion. |
 | Ordinary personal subscription URL | Returns permitted nodes eligible for default inclusion in that subscription format, without an additional custom filter. |
 
 In oixCloud, resetting a saved custom filter asks for confirmation and resets it on the server; an unsaved draft can simply be cleared. FlClash for oixCloud's **Restore default** submits the reset and starts sync. Helper clears the draft first, so you must still click **Save**.
@@ -51,7 +51,7 @@ Resetting does not increase plan permissions or make every node compatible with 
 
 ## Include Home ISP nodes {#home-isp}
 
-Home ISP default inclusion is set per node, independently of the static or dynamic IP category. Ordinary subscriptions, Smart Selection and fallback selection do not automatically add ISP nodes excluded by default.
+Home ISP default inclusion is set per node, independently of the static or dynamic IP category. Ordinary subscriptions, Smart Selection and fallback selection do not automatically add ISP nodes excluded by default. For plans with CIA, IXP, Fusion or GIA, Smart Selection contains no Home ISP nodes, even those included by default.
 
 1. Find the **ISP** line in the current subscription address's node filter and set it to **Only**. Set any other lines you want to **Only** as well.
 2. Add region or name conditions as needed, wait for the preview and check the intended nodes and retained count.

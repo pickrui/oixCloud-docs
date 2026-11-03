@@ -48,7 +48,7 @@ Static and dynamic describe the node's exit IP type, not an IP dedicated to your
 
 ### Default subscriptions and explicit selection {#isp-subscription}
 
-Default inclusion is set by the service for each node, independently of its static or dynamic IP category. Home ISP nodes without default inclusion are not added automatically to ordinary subscriptions, Smart Selection or a fallback when the default node set is empty.
+Default inclusion is set by the service for each node, independently of its static or dynamic IP category. Home ISP nodes without default inclusion are not added automatically to ordinary subscriptions, Smart Selection or a fallback when the default node set is empty. For plans with CIA, IXP, Fusion or GIA, Smart Selection only includes the plan's default lines and leaves out Home ISP nodes, even those included by default.
 
 To use them, edit the current address in [Subscription management](https://oixcloud.com/user/sub_manage), or open **Node Filter** in a supported client. Set the **ISP** line to **Only**, check the preview, save and update the subscription. ISP includes permitted static and dynamic home-broadband nodes without selecting Edge. Region or name filters alone do not add ISP nodes excluded by default. See [Subscriptions and filters](/en/account/subscriptions#home-isp) for entry points and eligibility.
 
