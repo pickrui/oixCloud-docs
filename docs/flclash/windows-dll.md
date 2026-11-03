@@ -17,6 +17,14 @@ description: 按缺失文件区分 Visual C++ 运行库、客户端安装文件�
 
 ## 2. 安装或修复 Visual C++ 运行库
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-windows-dll-zh.svg?v=20261103-1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Windows 缺少运行库排查与修复">
+    <img src="/illustrations/flclash-windows-dll-zh.svg?v=20261103-1" alt="FlClash for oixCloud · Windows 缺少运行库排查与修复" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 1. 关闭 FlClash for oixCloud，包括系统托盘中的进程
 2. 打开 [Microsoft 官方运行库下载页](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist)，选择与客户端安装包架构一致的 v14 包
 3. x64 客户端选择 [x64 运行库](https://aka.ms/vc14/vc_redist.x64.exe)；原生 ARM64 客户端选择 [ARM64 运行库](https://aka.ms/vc14/vc_redist.arm64.exe)。运行库需匹配应用架构，不是只看电脑名称

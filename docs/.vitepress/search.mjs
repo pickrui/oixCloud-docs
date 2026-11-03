@@ -94,7 +94,8 @@ export function tokenizeSearch(text) {
     [/流媒体|streaming\b/g, 'streaming'],
     [/支持请求|support[\s_-]*requests?\b|服务单|工单|\btickets?\b/g, 'supportticket'],
     [/策略组|policy[\s_-]*groups?\b/g, 'policygroup'],
-    [/自动测速|url[\s_-]*test\b/g, 'urltest']
+    [/自动测速|url[\s_-]*test\b/g, 'urltest'],
+    [/home[\s_-]*isp|家宽|家庭宽带|residential[\s_-]*broadband\b/g, 'homeisp']
   ]
   let input = normalized
   for (const [pattern, term] of aliases) input = input.replace(pattern, ' ' + term + ' ')

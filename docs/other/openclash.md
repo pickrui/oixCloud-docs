@@ -67,6 +67,53 @@ UDP 转发开启后仍受端口范围限制。端口过滤不等于识别所有 
 - 筛选节点：oixCloud 标签的「节点筛选」打开网站编辑器；保存后重启 OpenClash 立即获取，或等待内核下次订阅更新。同账户的 OpenClash 设备共享筛选，见 [订阅与筛选](/account/subscriptions)
 - 升级插件或内核：先备份，在版本更新中分别选择对应下载入口，不要把插件升级和订阅更新混为一件事
 
+## 6. 更换与更新 oix 内核 {#kernel-update}
+
+<figure class="guide-figure">
+  <a href="/illustrations/openclash-version-zh.svg?v=20261103-1" target="_blank" rel="noopener" aria-label="OpenClash · 在版本更新中升级或更换 oix 内核">
+    <img src="/illustrations/openclash-version-zh.svg?v=20261103-1" alt="OpenClash · 在版本更新中升级或更换 oix 内核" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
+oix 内核基于 Mihomo 深度定制，包含针对 oixCloud 节点的专属优化、智能调度与通信支持，在 OpenClash 中对应 Meta 内核路径 `/etc/openclash/core/clash_meta`（小闪存模式为 `/tmp/etc/openclash/core/clash_meta`）。在维护版本中登录账户后，系统会自动检测 `oix_token` 并将核心类型设为 `Oix`，优先调用该内核；若需在线更新或手动替换特定版本，可按以下方式操作
+
+### 在线更新内核
+
+1. 打开「服务 → OpenClash → 插件设置 → 版本更新」
+2. 核对页面顶部的 CPU「编译版本」，例如 `linux-arm64`、`linux-amd64-v1` 或 `linux-armv7`
+3. 在版本列表的内核列中点击版本号链接触发更新；维护版本会自动从专属源拉取对应架构的 `mihomo-oix` 内核包
+4. 等待更新日志提示替换成功，系统会自动写入 `/etc/openclash/core/clash_meta` 并赋予 `4755` 权限
+5. 返回「运行状态」重新启动 OpenClash，在状态卡片与运行日志中确认内核版本包含 `oix`
+
+### 手动上传与替换内核
+
+若路由器无法直连下载源，或需测试特定构建的 oix 内核，可手动通过命令行上传替换：
+
+1. **准备内核文件**：根据路由器 CPU 架构获取对应的 oix 内核压缩包（格式为 `mihomo-<arch>-<version>.gz`），在电脑或终端中解压出二进制文件，或直接在路由器中解压：
+   ```sh
+   gzip -dc mihomo-linux-arm64-v1.gz > clash_meta
+   ```
+2. **停止 OpenClash**：在 LuCI「运行状态」中关闭 OpenClash 启动开关，确保没有正在运行的内核进程占用文件
+3. **上传到路由器**：使用 SCP、SFTP 或终端命令将二进制文件传输至路由器的 OpenClash 内核路径：
+   ```sh
+   scp clash_meta root@192.168.1.1:/etc/openclash/core/clash_meta
+   ```
+4. **赋予执行权限**：通过 SSH 登录路由器，赋予该文件执行权限：
+   ```sh
+   chmod 4755 /etc/openclash/core/clash_meta
+   ```
+5. **验证内核版本**：在 SSH 中直接执行该文件核对版本信息：
+   ```sh
+   /etc/openclash/core/clash_meta -v
+   ```
+   正常输出应显示版本号及包含 `oix` 或 `alpha-oix` 的标识；若报错 `cannot execute binary file`，说明内核的 CPU 架构与路由器不符，需更换正确架构的包
+6. **启动并验证**：返回 OpenClash 网页界面打开启动开关，在运行日志中确认内核正常运行
+
+::: warning 上传前核对存储空间与小闪存设置
+OpenClash 内核体积约在 15–30 MB 之间。上传前在终端运行 `df -h` 确认 `/etc` 所在的分区（通常为 `/overlay` 或 rootfs）有足够的剩余空间；若路由器启用了「小闪存模式」，目标路径应相应调整为 `/tmp/etc/openclash/core/clash_meta`
+:::
+
 ## 常见问题
 
 | 现象 | 下一步 |

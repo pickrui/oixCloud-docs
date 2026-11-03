@@ -6,6 +6,13 @@ description: "节点、策略组与分流的操作步骤、适用范围与常见
 
 先分清三个问题：流量有没有进入客户端、应该走哪条路线、路线最终使用哪个节点
 
+<figure class="guide-figure">
+  <a href="/illustrations/start-concepts-zh.svg?v=20261103-1" target="_blank" rel="noopener" aria-label="oixCloud · 流量接管、分流规则与节点调度模型">
+    <img src="/illustrations/start-concepts-zh.svg?v=20261103-1" alt="oixCloud · 流量接管、分流规则与节点调度模型" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的架构示意 · 虚构数据 · 点击放大查看各环节流程</figcaption>
+</figure>
+
 | 名称 | 作用 | 举例 |
 | --- | --- | --- |
 | 系统代理 / VPN / TUN | 让应用流量进入客户端 | FlClash for oixCloud 开启系统代理或虚拟网卡 |

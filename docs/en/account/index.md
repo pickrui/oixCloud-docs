@@ -13,6 +13,7 @@ Find help with plans, traffic, nodes, subscriptions and account security.
 | Check traffic charges, low-speed tiers and limits | [Traffic and billing](/en/account/traffic) |
 | Compare node types or buy a dedicated IP | [Nodes and connection options](/en/account/nodes) |
 | Set subscription formats, filters and account rules | [Subscriptions and filters](/en/account/subscriptions) |
+| Use residential broadband IPs via internal relays or proxy chains | [Home ISP user guide](/en/account/home-isp) |
 | Set up internal relays or your own destination | [Relays and your own destinations](/en/account/relay) |
 | Adjust WARP or streaming regions | [WARP and streaming regions](/en/account/unlock) |
 | Manage sign-in, tokens, passkeys and two-step verification | [Accounts and access tokens](/en/account/security) |

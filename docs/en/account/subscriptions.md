@@ -57,7 +57,7 @@ Home ISP default inclusion is set per node, independently of the static or dynam
 2. Add region or name conditions as needed, wait for the preview and check the intended nodes and retained count.
 3. Save, update the client subscription and select a node again. Static and dynamic home-broadband nodes both belong to ISP; Edge is a separate line.
 
-Region or name filters alone do not add these nodes. Restoring defaults removes ISP nodes excluded by default again. Explicit selection does not remove their [traffic routing restrictions](/en/account/nodes#isp-routing).
+Region or name filters alone do not add these nodes. Restoring defaults removes ISP nodes excluded by default again. Explicit selection does not remove their [traffic routing restrictions](/en/account/nodes#isp-routing); for relay and proxy chain setup, see the [Home ISP user guide](/en/account/home-isp).
 
 ## Which devices share a filter?
 

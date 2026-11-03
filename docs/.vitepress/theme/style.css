@@ -27,9 +27,30 @@
   .VPNavBar .VPNavBarHamburger { display: flex; }
   .VPNav .VPNavScreen { display: block; }
 }
-.VPFeature { border-radius: 16px !important; }
-.VPFeature.link:hover { border-color: var(--vp-c-brand-2); }
-.VPFeature .title { font-size: 18px; }
+.VPFeature {
+  border-radius: 16px !important;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+.VPFeature.link:hover {
+  border-color: var(--vp-c-brand-2) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+.dark .VPFeature.link:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+.VPFeature .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background-color: var(--vp-c-default-soft);
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+}
+.VPFeature .title { font-size: 18px; font-weight: 600; }
 .VPFeature .details { line-height: 1.8; }
 .VPDoc.has-aside .content-container { max-width: 768px; }
 .vp-doc { overflow-wrap: anywhere; }

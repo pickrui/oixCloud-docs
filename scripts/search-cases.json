@@ -357,7 +357,10 @@
   {
     "terms": [
       "OpenClash smart",
-      "OpenClash 登录"
+      "OpenClash 登录",
+      "OpenClash 内核",
+      "OpenClash oix",
+      "OpenClash core"
     ],
     "targets": [
       "/other/openclash.html"
@@ -643,7 +646,8 @@
       "dynamic IP"
     ],
     "targets": [
-      "/account/nodes.html"
+      "/account/nodes.html",
+      "/account/home-isp.html"
     ]
   },
   {
@@ -657,6 +661,31 @@
       "/account/nodes.html",
       "/account/subscriptions.html",
       "/account/unlock.html"
+    ]
+  },
+  {
+    "terms": [
+      "Home ISP 使用指南",
+      "Home ISP user guide",
+      "家宽代理链",
+      "家宽中继",
+      "residential broadband",
+      "ISP chain"
+    ],
+    "targets": [
+      "/account/home-isp.html"
+    ]
+  },
+  {
+    "terms": [
+      "IXP",
+      "云网互联",
+      "Cloud Interconnect",
+      "广港专线",
+      "沪日专线"
+    ],
+    "targets": [
+      "/account/nodes.html"
     ]
   }
 ]

@@ -263,7 +263,7 @@
       "需要关注": "Needs attention",
       "预览": "Preview",
       "高级": "Advanced",
-      "关闭": "Turn Off",
+      "关闭": "Close",
       "密码": "Password",
       "出口节点": "Exit node",
       "直连": "Direct",
@@ -334,7 +334,16 @@
       "示例链接，不能直接使用": "Example link; cannot connect as written",
       "支持的协议以输入提示与检查结果为准": "See the input hint and validation result for supported protocols",
       "选择代理": "Select proxies",
-      "代理提供者": "Proxy providers"
+      "代理提供者": "Proxy providers",
+      "FlClash.exe - 系统错误": "FlClash.exe - System Error",
+      "由于找不到 VCRUNTIME140.dll，无法继续执行代码。重新安装程序可能会解决此问题。": "The code execution cannot proceed because VCRUNTIME140.dll was not found. Reinstalling the program may fix this problem.",
+      "确定": "OK",
+      "请在安装前阅读许可条款并勾选同意：": "Please read the license terms and accept before installing:",
+      "我同意许可条款和条件": "I agree to the license terms and conditions",
+      "安装": "Install",
+      "Windows PowerShell (管理员)": "Windows PowerShell (Admin)",
+      "正在寻找包... 找到：Microsoft Visual C++ 2015-2022": "Found package: Microsoft Visual C++ 2015-2022",
+      "正在下载与安装... 已成功安装": "Downloading and installing... Successfully installed"
     },
     "helper": {
       "●   Finder   文件   编辑   显示   前往   窗口": "●   Finder   File   Edit   View   Go   Window",
@@ -506,7 +515,55 @@
       "内核版本：mihomo oix（示例）": "Core version: mihomo oix (example)",
       "配置文件": "Configuration files",
       "切换": "Switch",
-      "规则模式  ·  按当前配置运行": "Rule mode · Using the current configuration"
+      "规则模式  ·  按当前配置运行": "Rule mode · Using the current configuration",
+      "CPU 架构与编译版本": "CPU Architecture & Compiled Version",
+      "CPU 架构：ARMv8 Processor rev 4 (aarch64)  ·  编译版本：linux-arm64": "CPU: ARMv8 Processor rev 4 (aarch64) · Build: linux-arm64",
+      "内核与版本更新": "Core and Plugin Updates",
+      "OpenClash 插件": "OpenClash Plugin",
+      "当前版本：v0.46.066": "Current: v0.46.066",
+      "最新版本：v0.46.066（已是最新）": "Latest: v0.46.066 (Up to date)",
+      "Meta / oix 内核": "Meta / oix Core",
+      "当前版本：alpha-oix-20261028": "Current: alpha-oix-20261028",
+      "更新 oix 内核": "Update oix Core",
+      "最新：alpha-oix-latest": "Latest: alpha-oix-latest",
+      "目标路径：/etc/openclash/core/clash_meta (权限 4755)": "Target: /etc/openclash/core/clash_meta (chmod 4755)"
+    },
+    "start": {
+      "1. 本机流量接管": "1. Local Traffic Capture",
+      "应用网络请求": "App Network Requests",
+      "浏览器 / 办公 / 游戏": "Browser / Work / Games",
+      "客户端接管方式": "Traffic Capture Mode",
+      "系统代理 (HTTP/SOCKS5)": "System proxy (HTTP/SOCKS5)",
+      "TUN 虚拟网卡 (全局接管)": "TUN virtual interface (all apps)",
+      "VPN 配置 (iOS / 移动端)": "VPN profile (iOS / mobile)",
+      "将本机请求捕获并送入客户端核心路由引擎": "Captures device traffic and forwards to the client routing engine.",
+      "2. 分流规则匹配": "2. Routing Rule Matching",
+      "出站工作模式": "Outbound Mode",
+      "规则": "Rule",
+      "全局": "Global",
+      "直连": "Direct",
+      "规则命中判定": "Rule Matching Decision",
+      "DOMAIN-SUFFIX: 代理": "DOMAIN-SUFFIX: Proxy",
+      "GEOIP,CN: 直连 (Direct)": "GEOIP,CN: Direct",
+      "MATCH: 兜底策略组": "MATCH: Final Route group",
+      "自上而下逐条匹配，首条命中即决定流量去向": "Rules match from top to bottom; the first hit determines the route.",
+      "3. 策略组与链式代理": "3. Policy Groups & Chains",
+      "出口调度策略": "Outbound Routing Policy",
+      "自动测速 (URL Test)": "URL Test (lowest latency)",
+      "故障转移 / 负载均衡": "Fallback / Load Balance",
+      "多跳链路组合": "Multi-hop Proxy Chains",
+      "链式代理 / 内部中继": "Proxy Chain / Internal Relay",
+      "专线首跳 ➔ 家宽落地": "Dedicated transit ➔ Home ISP",
+      "动态检测节点健康度，支持专线高速中转与代理链": "Monitors node health and routes through dedicated transit and chains.",
+      "4. 节点出口与目标": "4. Exit Nodes & Targets",
+      "节点落地网络": "Node Exit Network",
+      "Fusion / GIA (专网优化)": "Fusion / GIA (Optimized)",
+      "IXP (云网互联)": "IXP (Cloud Interconnect)",
+      "Home ISP (家庭宽带住宅 IP)": "Home ISP (Residential broadband)",
+      "最终访问目标": "Internet Destination",
+      "Google / YouTube / GitHub": "Google / YouTube / GitHub",
+      "海外电商 / 银行支付 / 流媒体": "E-Commerce / Banking / Streaming",
+      "经由所选出口 IP 访问目标互联网服务": "Connects to target web services via the chosen exit IP."
     }
   },
   "overrides": {
@@ -1446,6 +1503,78 @@
         [
           "Check core and an actual device",
           "The core version includes oix. Verify routing and exit from a LAN device."
+        ]
+      ]
+    ],
+    "openclash-version": [
+      "Update or replace the oix kernel in Version Update",
+      "LuCI → Services → OpenClash → Plugin Settings → Version Update",
+      [
+        [
+          "Verify CPU compiled version",
+          "Check the target architecture at the top of the page, such as linux-arm64 or linux-amd64-v1."
+        ],
+        [
+          "Update or replace the core",
+          "Click the version link in the Meta / oix core row to fetch the latest kernel package."
+        ],
+        [
+          "Automatic install and permissions",
+          "The system installs to /etc/openclash/core/clash_meta and applies 4755 permissions automatically."
+        ]
+      ]
+    ],
+    "flclash-windows-dll": [
+      "Troubleshoot missing Windows runtime DLLs",
+      "Windows → System error dialog → Install VC++ runtime",
+      [
+        [
+          "Identify the missing runtime",
+          "The dialog reports that VCRUNTIME140.dll or MSVCP140.dll was not found."
+        ],
+        [
+          "Install official Visual C++ package",
+          "Download the matching architecture (x64 / ARM64) package from Microsoft and run setup."
+        ],
+        [
+          "Complete setup and reopen app",
+          "Restart or reopen FlClash after installation; the startup error will be resolved."
+        ]
+      ]
+    ],
+    "helper-linux": [
+      "Run and diagnose Helper on Linux or Docker",
+      "Linux terminal → Docker Compose → Status check",
+      [
+        [
+          "Verify configuration first",
+          "Run syntax check to ensure permissions (UID 10001) and formatting are valid before starting."
+        ],
+        [
+          "Start container and verify ports",
+          "Run docker compose up -d and verify mapped ports and container status."
+        ],
+        [
+          "Check health and readiness",
+          "Inspect /status JSON for ready state, then verify connectivity from LAN devices."
+        ]
+      ]
+    ],
+    "start-concepts": [
+      "Traffic capture, routing rules, and node selection model",
+      "Local capture → Routing rules → Policy group → Exit node",
+      [
+        [
+          "Traffic capture (Step 1)",
+          "Apps are captured by system proxy, VPN profile, or TUN virtual network adapter."
+        ],
+        [
+          "Routing rule matching (Step 2)",
+          "Matches domain/IP criteria and outbound mode (Rule, Global, Direct) to determine destination."
+        ],
+        [
+          "Policy groups and exit routing (Step 3)",
+          "Selects exit nodes via manual choice, URL test, or proxy chains through dedicated transit."
         ]
       ]
     ]

@@ -7,7 +7,7 @@ const legacyPages = new Map(Object.entries({
   start: 'start/quick-start', oixcloud: 'oixcloud/connect', flclash: 'flclash/connect',
   openclash: 'other/openclash', surge: 'other/surge', plans: 'account/plans',
   traffic: 'account/traffic', nodes: 'account/nodes', subscriptions: 'account/subscriptions',
-  relay: 'account/relay', unlock: 'account/unlock', security: 'account/security',
+  'home-isp': 'account/home-isp', relay: 'account/relay', unlock: 'account/unlock', security: 'account/security',
   'fair-use': 'account/fair-use', troubleshooting: 'help/troubleshooting', support: 'help/support'
 }))
 

@@ -13,6 +13,7 @@ description: 按当前任务查找套餐、流量、节点、订阅与账户安�
 | 核对流量扣除、低速档位和限速原因 | [流量与计费](/account/traffic) |
 | 比较节点类型或购买独享 IP | [节点与连接方式](/account/nodes) |
 | 设置订阅格式、节点筛选与自定义规则 | [订阅与筛选](/account/subscriptions) |
+| 使用家庭宽带住宅 IP，配置内部中继或链式代理 | [Home ISP 使用指南](/account/home-isp) |
 | 设置站内中继或连接自己的落地服务器 | [中继与自建落地](/account/relay) |
 | 调整 WARP 出口或流媒体地区 | [WARP 与流媒体解锁](/account/unlock) |
 | 管理登录、令牌、Passkey 和两步验证 | [账户与令牌安全](/account/security) |

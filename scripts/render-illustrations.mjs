@@ -304,6 +304,67 @@ add('openclash','running','确认正在运行专用配置','LuCI → 服务 → 
  ['在配置列表找到专用配置','oixCloud - smart.yaml 来自集成账户入口'],['切换并等待重启','切换后先等待，仍未运行再操作启动开关'],['核对内核与实际设备','内核版本含 oix；在局域网设备验证规则和出口']
 ],()=>R(30,130,1060,653,'#f5f5f5',15)+R(30,130,1060,55,'#283643',15)+T(55,166,'OpenWrt',25,'#fff',600)+T(242,166,'服务',19,'#fff')+T(333,166,'OpenClash',19,'#fff')+T(63,231,'OpenClash',30,'#333',650)+segmented(64,261,991,['运行状态','插件设置','配置订阅','配置管理'],0)+R(64,329,991,139,'#fff',8,'#ddd')+T(86,366,'运行状态',20,'#444',600)+T(86,417,'运行中',19,'#3c9d75',600)+T(331,417,'内核版本：mihomo oix（示例）',18,'#666')+mark(320,390,540,42,3)+R(64,499,991,176,'#fff',8,'#ddd')+T(86,538,'配置文件',20,'#444',600)+T(89,592,'oixCloud - smart.yaml',22,'#466b96',600)+mark(81,562,449,43,1)+webButton(877,564,128,'切换',2)+T(89,644,'规则模式  ·  按当前配置运行',18,'#777'))
 
+add('openclash','version','在版本更新中升级或更换 oix 内核','LuCI → 服务 → OpenClash → 插件设置 → 版本更新',[
+ ['核对 CPU 编译版本','页面顶部显示当前架构，如 linux-arm64 或 linux-amd64-v1'],
+ ['点击版本更新内核','Meta / oix 内核列点击版本号链接直接拉取最新内核包'],
+ ['自动写入与赋权','系统自动下载写入 /etc/openclash/core/clash_meta 并赋予 4755 权限']
+],()=>R(30,130,1060,653,'#f5f5f5',15)+R(30,130,1060,55,'#283643',15)+T(55,166,'OpenWrt',25,'#fff',600)+T(242,166,'服务',19,'#fff')+T(333,166,'OpenClash',19,'#fff')+T(63,231,'OpenClash',30,'#333',650)+segmented(64,261,991,['运行状态','插件设置','配置订阅','配置管理'],1)+R(64,329,991,100,'#fff',8,'#ddd')+T(86,364,'CPU 架构与编译版本',18,'#444',600)+T(86,404,'CPU 架构：ARMv8 Processor rev 4 (aarch64)  ·  编译版本：linux-arm64',18,'#333')+mark(500,380,210,38,1)+R(64,449,991,220,'#fff',8,'#ddd')+T(86,484,'内核与版本更新',18,'#444',600)+T(86,530,'OpenClash 插件',18,'#666')+T(330,530,'当前版本：v0.46.066',18,'#333')+T(650,530,'最新版本：v0.46.066（已是最新）',18,'#3c9d75')+T(86,590,'Meta / oix 内核',18,'#666')+T(330,590,'当前版本：alpha-oix-20261028',18,'#333')+webButton(650,568,180,'更新 oix 内核',2)+T(850,590,'最新：alpha-oix-latest',17,'#466b96')+T(86,645,'目标路径：/etc/openclash/core/clash_meta (权限 4755)',17,'#777')+mark(80,625,580,35,3))
+
+add('flclash','windows-dll','Windows 缺少运行库排查与修复','Windows → 系统错误弹窗 → 安装 VC++ 运行库',[
+ ['确认缺失的运行库文件','弹窗提示由于找不到 VCRUNTIME140.dll 或 MSVCP140.dll 无法继续'],
+ ['安装官方运行库安装包','从微软官网下载对应架构（x64 / ARM64）的 Visual C++ 运行库并安装'],
+ ['完成安装并重新启动','安装或修复完成后重新启动 FlClash 即可正常打开']
+],()=>R(30,130,1060,653,'#edf2f9',15)+R(30,743,1060,40,'#ffffffcc',0,'#d5dce6')+T(55,768,'⊞  ⌕',20,'#0078d4')+T(1040,768,'10:00',16,'#333',400,'end')+R(120,180,430,220,'#fff',10,'#868686')+R(120,180,430,36,'#eaeaea',10)+T(140,204,'FlClash.exe - 系统错误',16,'#111',600)+T(530,204,'✕',16,'#666')+circ(155,255,18,'#c42b1c')+T(155,262,'✕',18,'#fff',600,'middle')+lines(190,245,'由于找不到 VCRUNTIME140.dll，无法继续执行代码。重新安装程序可能会解决此问题。',15,'#111',20)+mark(135,225,400,100,1)+R(440,355,90,32,'#e1e1e1',5,'#adadad')+T(485,376,'确定',15,'#111',400,'middle')+R(575,180,460,330,'#f9f9f9',10,'#7b7b7b')+R(575,180,460,36,'#e8e8e8',10)+T(595,204,'Microsoft Visual C++ 2015-2022 Redistributable (x64)',14,'#111',600)+T(1015,204,'✕',16,'#666')+T(605,255,'Microsoft Visual C++ 2015-2022',20,'#0067b8',600)+T(605,282,'Redistributable (x64) - 14.40.33810',16,'#555')+T(605,330,'请在安装前阅读许可条款并勾选同意：',15,'#333')+R(605,355,18,18,'#0067b8',3)+check(607,357,'#fff')+T(635,370,'我同意许可条款和条件',15,'#333')+R(830,460,95,35,'#0067b8',5)+T(877,483,'安装',16,'#fff',500,'middle')+mark(820,450,115,50,2)+R(935,460,85,35,'#e1e1e1',5,'#adadad')+T(977,483,'关闭',16,'#111',400,'middle')+R(120,430,430,220,'#1e1e1e',10,'#333')+T(140,460,'Windows PowerShell (管理员)',15,'#aaa')+T(140,500,'PS C:\\> winget install Microsoft.VCRedist.2015+.x64',16,'#e5e5e5')+T(140,540,'正在寻找包... 找到：Microsoft Visual C++ 2015-2022',14,'#6a9955')+T(140,570,'正在下载与安装... 已成功安装',14,'#6a9955')+mark(130,480,410,40,3))
+
+
+
+add('helper','linux','Linux / Docker Helper 运行与状态检查','Linux 终端 → Docker Compose → 状态检查',[
+ ['先验证配置文件','运行配置语法检查，确认无格式与权限错误后再启动'],
+ ['启动容器并查看状态','使用 docker compose up -d 启动后台容器并确认端口映射'],
+ ['检查健康与就绪状态','curl 请求 /status 接口确认就绪，并在局域网设备验证连接']
+],()=>R(30,130,1060,653,'#1e222b',15)+R(30,130,1060,38,'#2d323f',14)+circ(50,149,6,'#e06c75')+circ(70,149,6,'#e5c07b')+circ(90,149,6,'#98c379')+T(560,154,'user@linux-server: ~/helper',14,'#abb2bf',500,'middle')+T(55,205,'user@linux-server:~/helper$ docker compose run --rm helper --check-config',16,'#61afef',600)+T(55,238,'[✓] Configuration check passed (UID 10001 can read /config/config.json)',15,'#98c379')+mark(50,185,980,65,1)+T(55,295,'user@linux-server:~/helper$ docker compose up -d',16,'#61afef',600)+T(55,325,'[+] Running 1/1',15,'#abb2bf')+T(55,348,' ✔ Container helper-service  Started                                    0.4s',15,'#98c379')+T(55,385,'user@linux-server:~/helper$ docker compose ps',16,'#61afef',600)+T(55,413,'NAME             IMAGE                                   STATUS         PORTS',14,'#7f848e')+T(55,438,'helper-service   ghcr.io/.../helper:latest   Up 2 minutes   127.0.0.1:6172->6172/tcp',14,'#e5c07b')+mark(50,275,980,180,2)+T(55,500,'user@linux-server:~/helper$ curl -s http://127.0.0.1:6172/status | jq .',16,'#61afef',600)+T(55,532,'{',15,'#abb2bf')+T(75,556,'"status": "ready",',15,'#98c379')+T(75,580,'"mode": "single_port",',15,'#98c379')+T(75,604,'"nodes_count": 12,',15,'#e5c07b')+T(75,628,'"listeners": ["127.0.0.1:6172", "127.0.0.1:7100"]',15,'#98c379')+T(55,652,'}',15,'#abb2bf')+mark(50,480,980,190,3))
+
+add('start','concepts','流量接管、分流规则与节点调度模型','本地客户端 → 分流规则 → 策略组 → 节点出口',[
+ ['流量接管（第一步）','通过系统代理、VPN 或 TUN 虚拟网卡将本机应用网络请求捕获到客户端'],
+ ['分流规则匹配（第二步）','根据域名或 IP 目标，结合模式（规则／全局／直连）决定走向与目标策略组'],
+ ['策略组与出口调度（第三步）','策略组根据自动优选、手动指定或代理链，经由专线与节点出口访问目标']
+],()=>{
+ let s=R(30,130,1060,653,'#f8fafc',15,'#e2e8f0')
+ s+=R(55,165,225,580,'#fff',14,'#cbd5e1')+R(55,165,225,48,'#f1f5f9',14)+T(167,196,'1. 本机流量接管',18,'#1e293b',600,'middle')
+ s+=T(75,245,'应用网络请求',16,'#334155',600)+R(75,260,185,42,'#f8fafc',8,'#e2e8f0')+T(90,287,'浏览器 / 办公 / 游戏',14,'#64748b')
+ s+=T(75,340,'客户端接管方式',16,'#334155',600)
+ s+=R(75,355,185,42,'#eff6ff',8,'#93c5fd')+T(90,382,'系统代理 (HTTP/SOCKS5)',13,'#1d4ed8')
+ s+=R(75,405,185,42,'#eff6ff',8,'#93c5fd')+T(90,432,'TUN 虚拟网卡 (全局接管)',13,'#1d4ed8')
+ s+=R(75,455,185,42,'#eff6ff',8,'#93c5fd')+T(90,482,'VPN 配置 (iOS / 移动端)',13,'#1d4ed8')+mark(65,325,205,185,1)
+ s+=lines(75,545,'将本机请求捕获并送入客户端核心路由引擎',14,'#64748b',15)
+ s+=T(292,430,'➔',26,'#94a3b8','middle')
+ s+=R(305,165,235,580,'#fff',14,'#cbd5e1')+R(305,165,235,48,'#f1f5f9',14)+T(422,196,'2. 分流规则匹配',18,'#1e293b',600,'middle')
+ s+=T(325,245,'出站工作模式',16,'#334155',600)+segmented(325,260,195,['规则','全局','直连'],0)
+ s+=T(325,340,'规则命中判定',16,'#334155',600)
+ s+=R(325,355,195,42,'#f0fdf4',8,'#86efac')+T(340,382,'DOMAIN-SUFFIX: 代理',13,'#166534')
+ s+=R(325,405,195,42,'#fef2f2',8,'#fca5a5')+T(340,432,'GEOIP,CN: 直连 (Direct)',13,'#991b1b')
+ s+=R(325,455,195,42,'#f8fafc',8,'#cbd5e1')+T(340,482,'MATCH: 兜底策略组',13,'#475569')+mark(315,325,215,185,2)
+ s+=lines(325,545,'自上而下逐条匹配，首条命中即决定流量去向',14,'#64748b',16)
+ s+=T(552,430,'➔',26,'#94a3b8','middle')
+ s+=R(565,165,235,580,'#fff',14,'#cbd5e1')+R(565,165,235,48,'#f1f5f9',14)+T(682,196,'3. 策略组与链式代理',18,'#1e293b',600,'middle')
+ s+=T(585,245,'出口调度策略',16,'#334155',600)
+ s+=R(585,260,195,42,'#faf5ff',8,'#d8b4fe')+T(600,287,'自动测速 (URL Test)',14,'#6b21a8')
+ s+=R(585,310,195,42,'#faf5ff',8,'#d8b4fe')+T(600,337,'故障转移 / 负载均衡',14,'#6b21a8')
+ s+=T(585,385,'多跳链路组合',16,'#334155',600)
+ s+=R(585,400,195,65,'#fff7ed',8,'#fed7aa')+T(600,425,'链式代理 / 内部中继',13,'#9a3412',600)+T(600,450,'专线首跳 ➔ 家宽落地',13,'#c2410c')+mark(575,370,215,105,3)
+ s+=lines(585,510,'动态检测节点健康度，支持专线高速中转与代理链',14,'#64748b',16)
+ s+=T(812,430,'➔',26,'#94a3b8','middle')
+ s+=R(825,165,235,580,'#fff',14,'#cbd5e1')+R(825,165,235,48,'#f1f5f9',14)+T(942,196,'4. 节点出口与目标',18,'#1e293b',600,'middle')
+ s+=T(845,245,'节点落地网络',16,'#334155',600)
+ s+=R(845,260,195,40,'#f0f9ff',8,'#bae6fd')+T(860,286,'Fusion / GIA (专网优化)',13,'#0369a1')
+ s+=R(845,308,195,40,'#f0f9ff',8,'#bae6fd')+T(860,334,'IXP (云网互联)',13,'#0369a1')
+ s+=R(845,356,195,40,'#f0fdf4',8,'#bbf7d0')+T(860,382,'Home ISP (家庭宽带住宅 IP)',13,'#15803d')
+ s+=T(845,430,'最终访问目标',16,'#334155',600)
+ s+=R(845,445,195,40,'#f8fafc',8,'#cbd5e1')+T(860,471,'Google / YouTube / GitHub',13,'#475569')
+ s+=R(845,493,195,40,'#f8fafc',8,'#cbd5e1')+T(860,519,'海外电商 / 银行支付 / 流媒体',13,'#475569')
+ s+=lines(845,565,'经由所选出口 IP 访问目标互联网服务',14,'#64748b',16)
+ return s
+})
 
 for(const original of scenes){
  currentScene=original
@@ -313,10 +374,10 @@ for(const original of scenes){
  const sc=localized?{...original,title:localized[0],route:localized[1],notes:localized[2]}:original
  const phone=sc.client==='oixcloud'||sc.id==='android'
  const h=english?(phone?1120:1100):(phone?982:975)
- const brand=['oixcloud','apple-tv','account'].includes(sc.client)?'oixCloud':sc.client==='openclash'?'OpenClash':sc.client==='helper'?'oixCloud Helper':sc.client==='oixclash'?'oixClash':'FlClash for oixCloud'
+ const brand=['oixcloud','apple-tv','account','start'].includes(sc.client)?'oixCloud':sc.client==='openclash'?'OpenClash':sc.client==='helper'?'oixCloud Helper':sc.client==='oixclash'?'oixClash':'FlClash for oixCloud'
  const description=english?(sc.client==='oixclash'?'English reference with bilingual labels for the Chinese-only plugin UI; fictional data, not a screenshot.':'English interface simulation based on maintained client labels; fictional data, not a screenshot. Layout varies by OS, platform and theme.'):'按维护版本的菜单与表单绘制，非客户端截图；中文界面与虚构数据；界面细节随系统、平台与主题变化'
  let s=`<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="${h}" viewBox="0 0 1120 ${h}" role="img" aria-labelledby="title desc"><title id="title">${E(brand+' · '+sc.title)}</title><desc id="desc">${E(description)}</desc><g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',Arial,sans-serif">`
- const platform=sc.client==='account'?(english?'oixCloud · Website':'oixCloud · 网站'):sc.client==='apple-tv'?'oixCloud · Apple TV':sc.client==='openclash'?'OpenClash · OpenWrt / LuCI':sc.client==='oixcloud'?'oixCloud · iPhone / iPad':sc.client==='helper'?'oixCloud Helper · macOS':sc.client==='oixclash'?('oixClash · '+(english?'Merlin router':'Merlin 路由器')):'FlClash for oixCloud'+(sc.id==='android'?' · Android':english?' · Desktop':' · 桌面端')
+ const platform=sc.client==='account'?(english?'oixCloud · Website':'oixCloud · 网站'):sc.client==='apple-tv'?'oixCloud · Apple TV':sc.client==='openclash'?'OpenClash · OpenWrt / LuCI':sc.client==='oixcloud'?'oixCloud · iPhone / iPad':sc.client==='helper'?('oixCloud Helper · '+(sc.id==='linux'?'Linux / Docker':'macOS')):sc.client==='start'?(english?'oixCloud · Architecture & Concepts':'oixCloud · 架构与概念'):sc.client==='oixclash'?('oixClash · '+(english?'Merlin router':'Merlin 路由器')):'FlClash for oixCloud'+(sc.id==='android'?' · Android':english?' · Desktop':' · 桌面端')
  s+=R(0,0,1120,h,'#f3f5f8',0)+T(34,38,platform,18,'#697386',600)+T(1085,38,english?(sc.client==='oixclash'?'English guide · Chinese-only plugin UI':'Illustration · Fictional data'):'操作示意 · 虚构数据',16,'#788392',500,'end')+T(34,87,sc.title,31,'#263245',700)
  drawingUI=true
  s+=sc.draw()

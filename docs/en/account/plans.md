@@ -7,7 +7,7 @@ description: "Plans, renewals and switching \u2014 setup, practical steps and tr
 ::: warning Plans are limited by both time and traffic
 Each plan has a validity period and a traffic allowance. **The plan is exhausted when either its validity ends or its traffic runs out, whichever happens first.** If you use all the traffic before the expiry date, you need to place a new plan order; remaining time alone does not let you keep using the original plan's high-speed allowance. You can also turn on automatic traffic reset below.
 
-If you have a queued plan or automatic renewal enabled, the continuation rules below apply. Check [Plan Management](https://oixcloud.com/user/bought) first, then place an order in the [plan store](https://oixcloud.com/user/shop) if no replacement has taken effect, to avoid duplicate purchases.
+If you have a queued plan, or have enabled automatic renewal (runs only at expiry) or automatic traffic reset, the continuation rules below apply. Check [Plan Management](https://oixcloud.com/user/bought) first, then place an order in the [plan store](https://oixcloud.com/user/shop) if no replacement has taken effect, to avoid duplicate purchases.
 :::
 
 ## Add funds, buy, and activate
@@ -117,6 +117,7 @@ Manually switching plans deducts 24 hours from the original plan's validity, the
 | Start service | Choose a plan and pay the shortfall if prompted | An active record plus tier, expiry and allowance in the user center |
 | Prepare the next period | Buy another plan or use eligible early renewal | A queued plan; current traffic does not immediately increase |
 | Use the next plan now | Manually activate a queued plan | Read the old plan's deduction/retention preview, then check the newly active record |
+| Automatically restore speed when traffic runs out | Turn on automatic traffic reset | Enable in the purchase record and ensure balance covers the reset price; does not run within 3 days before expiry |
 | Raise an active quarterly, semiannual or annual tier | Upgrade when eligible, keeping the billing period | Price difference, fee, remaining validity and resulting allowance |
 | Stop automatic renewal charges | Disable automatic renewal | Read the irreversible-disable and renewal-price notice first |
 
@@ -143,4 +144,9 @@ A missing transaction or mismatched network/recipient may require you to correct
 
 ## If automatic continuation did not happen
 
-Check for an eligible queued plan, the renewal switch, sufficient funds and whether the product currently permits renewal. Activation, upgrade and refund controls depend on order state; creating a new order does not reproduce those operations.
+Check the cause of exhaustion to verify the corresponding continuation conditions:
+
+- **At plan expiry**: Check whether an activatable plan exists in the queue first. If there are no queued plans, automatic renewal is attempted; check whether automatic renewal is enabled, whether account balance covers the renewal price, and whether the product currently allows renewal.
+- **When traffic runs out**: Check whether an activatable plan exists in the queue first. If there are no queued plans, check whether automatic traffic reset is enabled on that purchase record, whether balance (including commissions) covers the reset price, and whether the plan is within 3 days before expiry (automatic reset is disabled within 3 days before expiry to prevent duplicate charges with expiry renewal). Automatic renewal runs only at expiry and is never triggered prematurely by running out of traffic.
+
+Manual activation, upgrade and refund options appear based on order eligibility; when an option is not offered, do not attempt to simulate it by creating duplicate orders.

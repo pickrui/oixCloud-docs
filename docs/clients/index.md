@@ -38,6 +38,8 @@ description: 按设备与应用查找连接和设置教程
 | 区分节点、策略组与流量接管 | [基础概念](/start/concepts) |
 | 排查已连接但无法访问 | [连接与速度排查](/help/troubleshooting) |
 | 修复 Windows 缺少 DLL | [FlClash for oixCloud 缺少 DLL 修复](/flclash/windows-dll) |
+| 为 OpenClash 更换或更新 oix 专用内核 | [更换与更新 oix 内核](/other/openclash#kernel-update) |
+| 使用 Home ISP 住宅 IP 并设置中继或代理链 | [Home ISP 使用指南](/account/home-isp) |
 | 查找 Helper 的端口与局域网设置 | [Helper 本地端口与局域网](/other/helper-mapping) |
 | 在 Linux 运行 Helper | [Helper Linux 与诊断](/other/helper-linux) |
 

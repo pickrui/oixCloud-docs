@@ -10,6 +10,7 @@ OpenWrt 与 Merlin 路由器，以及 oixCloud Helper 与 Surge
 | 我想要 | 阅读教程 |
 | --- | --- |
 | 在 OpenWrt 上安装和连接 | [OpenClash 安装与配置指南](/other/openclash) |
+| 为 OpenClash 更换或更新 oix 内核 | [更换与更新 oix 内核](/other/openclash#kernel-update) |
 | 在 Merlin 上安装和连接 | [oixClash 安装与配置指南](/other/oixclash) |
 | 使用 Helper 接入 Surge | [oixCloud Helper 与 Surge](/other/surge) |
 | 区分 Helper 端口并接入局域网设备 | [Helper 本地端口与局域网接入](/other/helper-mapping) |

@@ -4,6 +4,14 @@ Linux / NAS 使用公开容器镜像 `ghcr.io/pickrui/oixcloud-external-proxy-pr
 
 ## 先验证配置，再启动
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/helper-linux-zh.svg?v=20261103-1" target="_blank" rel="noopener" aria-label="oixCloud Helper · Linux / Docker Helper 运行与状态检查">
+    <img src="/illustrations/helper-linux-zh.svg?v=20261103-1" alt="oixCloud Helper · Linux / Docker Helper 运行与状态检查" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+</figure>
+
 按 [公开 Docker 教程](https://github.com/pickrui/oixcloud-external-proxy-program/blob/main/docs/docker.md) 获取 `compose.yaml`、`config.example.json` 与自定义规则文件，复制示例为 `config.json` 后填写自己的凭据与局域网鉴权。不要把真实配置提交到仓库；权限需允许容器 UID/GID `10001` 读取，同时限制其他用户访问
 
 在 Compose 所在目录执行：

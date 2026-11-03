@@ -182,6 +182,10 @@
           "link": "/account/subscriptions"
         },
         {
+          "text": "Home ISP 使用指南",
+          "link": "/account/home-isp"
+        },
+        {
           "text": "中继与自建落地",
           "link": "/account/relay"
         },
@@ -400,6 +404,10 @@
         {
           "text": "Subscriptions and filters",
           "link": "/en/account/subscriptions"
+        },
+        {
+          "text": "Home ISP user guide",
+          "link": "/en/account/home-isp"
         },
         {
           "text": "Relays and your own destinations",

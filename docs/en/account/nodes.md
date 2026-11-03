@@ -18,7 +18,7 @@ These descriptions follow the [official homepage](https://oixcloud.com/#network)
 | <span id="edge"></span>**Edge**<br>Global Network | Tier 1 transit and upstream interconnections provide global access for destinations that do not require mainland-China routing optimization. Designed for international network environments. Connections from certain regions, such as mainland China, are not covered by SLA guarantees. |
 | <span id="isp"></span>**[Home ISP](#home-isp)**<br>Home broadband | Home-broadband exits grouped by static or dynamic IP. Designed for international network environments. No commitments or SLA guarantees are provided. |
 | <span id="cia"></span>**CIA**<br>Basic Optimized Network | CMIN2 or comparable carrier resources supplement international transit to optimize mainland-China routes on a best-effort basis. |
-| <span id="ixp"></span>**IXP**<br>Cloud Interconnect | Internet exchange points connect cloud and content providers, reducing public-Internet detours for supported cloud-network access. |
+| <span id="ixp"></span>**[IXP](#ixp)**<br>Cloud Interconnect | Connects cloud and content providers via Internet exchange points, reducing public-Internet detours for supported cloud networks. |
 | <span id="fusion"></span>**Fusion**<br>Private Network Interconnect | Traffic enters over the Guangdong–Hong Kong dedicated line, then reaches worldwide nodes through Hong Kong as the international hub. |
 | <span id="fusion-advanced"></span>**Fusion Advanced**<br>Private Network Interconnect | Higher scheduling priority, link redundancy and an additional Shanghai–Japan line support multiple devices and sustained transfers. |
 | <span id="fusion-premium"></span>**Fusion Premium**<br>Private Network Interconnect | The highest scheduling priority and layered redundancy serve needs that place greater emphasis on latency, jitter and sustained availability. |
@@ -56,7 +56,28 @@ To use them, edit the current address in [Subscription management](https://oixcl
 
 Home ISP nodes excluded from default subscriptions can be selected as internal relay targets or exits, but not as entries or intermediate hops. External relay, HTTP/3, WARP and streaming-unlock settings remain unavailable. Adding ISP to a subscription manually does not remove these restrictions, and a wildcard source such as **All nodes** cannot bypass them.
 
-Nodes manually disabled by an administrator remain unavailable as both relay entries and exits. Backends grouped under the same node name share configuration eligibility. Existing settings remain active and can be deleted. All nodes must still meet plan permissions, feature requirements and the conditions shown on the settings page.
+Nodes manually disabled by an administrator remain unavailable as both relay entries and exits. Backends grouped under the same node name share configuration eligibility. Existing settings remain active and can be deleted. All nodes must still meet plan permissions, feature requirements and the conditions shown on the settings page. For relay and proxy chain setup, see the [Home ISP user guide](/en/account/home-isp).
+
+## IXP Cloud Interconnect nodes {#ixp}
+
+IXP (Internet Exchange Point, Cloud Interconnect) nodes deliver high-capacity cloud transit and dedicated exchange resources. By interconnecting domestic backbones directly with international cloud service providers and content delivery networks (CDNs), IXP substantially reduces public-Internet detours, jitter, and packet loss.
+
+| Route | Path | Typical latency |
+| --- | --- | --- |
+| South China exchange point → Hong Kong | Guangdong–Hong Kong dedicated interconnect | ~30–45 ms from South China, ~45–65 ms nationwide |
+| East China exchange point → Japan | Shanghai–Japan dedicated interconnect | ~40–55 ms from East China, ~55–75 ms nationwide |
+
+### Plan eligibility and access characteristics {#ixp-access}
+
+IXP is accessible to Pass Alu, Pass Bronze, and all higher paid plans. Compared with Basic Optimized Network (CIA), it delivers lower jitter and dedicated-line-grade transit, offering an economical dedicated connectivity option.
+
+- **Official-client design**: IXP entry addresses are resolved and mapped dynamically through backend services tailored for official clients (oixCloud, FlClash for oixCloud, etc.); standard third-party formats lacking dynamic mapping may fail to connect directly.
+- **Default inclusion and Smart Selection**: For plans that include CIA and IXP permissions, IXP nodes are included by default in standard subscriptions and Smart Selection pools without requiring manual toggles.
+
+### Access model and network requirements {#ixp-connectivity}
+
+- **Cloud-optimized ingress**: IXP domestic entry points connect to BGP-optimized ingress networks across major domestic cloud providers (including Alibaba Cloud, Tencent Cloud, Baidu Cloud nationwide, and Volcano Engine, Huawei Cloud, UCloud in designated regions), rather than public-Internet-facing entry points.
+- **Seamless connection on official clients**: When using official clients (oixCloud, FlClash for oixCloud), backend services automatically handle fronting mapping and dynamic routing, allowing direct connection via node selection or Smart Selection. Because entry traffic relies on shared cloud-interconnect channels, performance may vary under peak loads; users seeking higher bandwidth and sustained low latency are encouraged to purchase a cloud instance in a supported region from corresponding cloud providers as a dedicated ingress front.
 
 ## Rule, Global, and Direct modes
 

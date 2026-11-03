@@ -38,6 +38,8 @@ Checked against public releases on 2026-10-30. Download entries follow current r
 | Understand nodes, groups and traffic capture | [Core concepts](/en/start/concepts) |
 | Fix browsing after connecting | [Connection and speed troubleshooting](/en/help/troubleshooting) |
 | Repair missing DLLs on Windows | [FlClash for oixCloud: missing DLL repair](/en/flclash/windows-dll) |
+| Replace or update the OpenClash oix core | [Replace or update the oix kernel](/en/other/openclash#kernel-update) |
+| Use Home ISP residential exits via relays or chains | [Home ISP user guide](/en/account/home-isp) |
 | Find Helper ports and LAN settings | [Helper local ports and LAN access](/en/other/helper-mapping) |
 | Run Helper on Linux | [Helper on Linux and diagnostics](/en/other/helper-linux) |
 

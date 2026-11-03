@@ -17,6 +17,14 @@ For Windows errors reporting a missing DLL/module or startup failure. Record the
 
 ## 2. Install or repair the Visual C++ runtime
 
+
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-windows-dll-en.svg?v=20261103-1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Troubleshoot missing Windows runtime DLLs">
+    <img src="/illustrations/flclash-windows-dll-en.svg?v=20261103-1" alt="FlClash for oixCloud · Troubleshoot missing Windows runtime DLLs" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
+
 1. Exit FlClash for oixCloud, including its tray process.
 2. Open [Microsoft's official runtime page](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) and select the v14 package matching the app package architecture.
 3. Use the [x64 runtime](https://aka.ms/vc14/vc_redist.x64.exe) for an x64 app, or [ARM64 runtime](https://aka.ms/vc14/vc_redist.arm64.exe) for a native ARM64 app. Match the application architecture, not just the computer's name.
