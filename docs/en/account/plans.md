@@ -34,20 +34,21 @@ When a purchased record is activated, its saved plan type is applied; regular pl
 
 ## Sold out and automatic restocking {#stock}
 
-Some plans have limited inventory. “Sold out” means no stock is currently available for a new purchase. **We normally do not replenish these plans manually.** Availability mainly returns when existing plans expire and release stock; there is no fixed restocking time or quantity.
+Some plans have limited inventory. “Sold out” means no stock is currently available for a new purchase. **We normally do not replenish these plans manually.** Availability mainly returns when existing plans expire, are refunded or move to another plan; there is no fixed restocking time or quantity.
 
 Stopping renewal does not release stock immediately. Disabling automatic renewal leaves the existing plan usable until expiry. Stock is returned when the plan expires without renewal or an eligible queued replacement, and the system completes termination. If a user buys again in that expired state with no eligible queued plan, the purchase process also retires the old expired active records and returns their stock.
 
-**Switching to another plan does not itself return the original plan's stock.** Manual or automatic activation of a queued plan, an upgrade or an exchange does not immediately create a new purchase slot for the old product. Retained benefits also mean the old plan has not simply been released.
+**Each queued or active purchase record holds one unit of stock**, which returns when the record ends or moves to another plan. An original plan that keeps its remaining benefits and goes back to the activation queue still holds its unit.
 
 | Operation or state | Inventory effect |
 | --- | --- |
 | New purchase or early renewal | Deducts one unit of the corresponding plan, including purchases placed in the activation queue |
-| Normal automatic renewal | Neither deducts again nor returns stock; funding and renewal eligibility still apply |
+| Normal automatic renewal | The new period takes over the original record's unit; nothing is deducted or returned. Funding and renewal eligibility still apply |
 | Disable automatic renewal | No immediate return; eligible expiry termination or cleanup must follow |
-| Activate or switch to an already purchased queued plan | No second deduction and no return of the original plan's stock merely from switching |
-| Upgrade or exchange | Deducts stock from the destination plan; original stock is not returned |
-| Eligible refund to account balance | Does not return stock |
+| Queued plan taking over automatically at expiry or when traffic runs out | No second deduction for the queued plan, which was deducted at purchase; the replaced plan ends and returns one unit |
+| Manually activate a queued plan | An original plan that keeps its remaining time and traffic and goes back to the queue still holds its unit; one that ends because too little is left returns one unit |
+| Upgrade or exchange | Deducts one unit from the destination plan and returns one to the original plan |
+| Eligible refund to account balance | Returns one unit |
 | Expiry without renewal or an eligible queued replacement, followed by completed termination/cleanup | Returns the corresponding limited stock |
 
 A sold-out new-purchase page therefore does not by itself prevent normal automatic renewal for an existing customer. **Early renewal still checks inventory** and differs from normal automatic renewal. Returning stock does not relist a product that has been taken off sale.

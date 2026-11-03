@@ -48,7 +48,7 @@ Provide redacted records, not passwords, full subscriptions or access tokens. Au
 
 ## Sold-out plans {#stock}
 
-Read [Sold out and automatic restocking](/en/account/plans#stock). Limited plans are normally not replenished manually and have no fixed restocking time. Stopping renewal must be followed by eligible expiry release; switching alone does not immediately return stock. Repeated tickets requesting restocking are unnecessary.
+Read [Sold out and automatic restocking](/en/account/plans#stock). Limited plans are normally not replenished manually and have no fixed restocking time. Disabling automatic renewal releases the slot only after the plan expires and is terminated. Repeated tickets requesting restocking are unnecessary.
 
 If you have paid but the plan is not active, separately provide the order ID, payment time, funding record and Plan Management state. Credited funds do not mean plan stock was reserved. Do not pay again for the same issue.
 

@@ -1,3 +1,9 @@
+# Plan stock returned when a record ends early — 2026-11-03
+
+Checked against `dler-panel` commit `89921861b` (`FinanceJob::deactivateActivePlans()`, `UserController::parkActivePlanForSwitch()` and `upgradePlan()`, `RefundService`) and the stock rule in the panel's `AGENTS.md`. Each queued or active record holds one unit, returned when the record ends or moves to another plan; automatic renewal carries the unit to the new period. The stock table in both plan guides now returns a unit for the replaced plan when a queued plan takes over automatically, for a manual activation that ends the original plan, for the original plan of an upgrade or exchange, and for a refund to balance; the lead paragraphs and the sold-out answer in `docs/help/support.md` and `docs/en/help/support.md` no longer say switching never returns stock.
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
 # Automatic traffic reset without the 3-day cutoff — 2026-11-03
 
 Checked against the panel's reset rule (`dler-panel` `app/Models/Bought.php` `trafficResetBlocker()`, `app/Command/Job/FinanceJob.php` `tryTrafficReset()`, and the `bought.traffic_reset_*` and plan notification copy in `resources/lang/material/{zh-cn,en}.php`). The panel no longer skips the reset in the last 3 days before expiry; it resets whenever traffic runs out before expiry and the plan still renews at expiry as set. The paired automatic traffic reset paragraph, the comparison table row and the "when traffic runs out" checklist in `docs/account/plans.md` and `docs/en/account/plans.md` drop the 3-day exception and note the renewal at expiry; the English switch name now matches the panel's "Automatic traffic reset".
