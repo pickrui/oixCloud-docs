@@ -101,7 +101,7 @@ Use the managed configuration generated for your client. Avoid copying port and 
 | --- | --- |
 | Plan eligibility | A currently active plan is required; queued plans alone are not enough |
 | Dedicated IP expiry | The new expiry must be on or before the expected plan expiry; check Latest dedicated IP expiry in the purchase dialog |
-| Expected plan expiry | Current plan expiry plus the remaining duration of plans that can activate consecutively in the queue, plus one more period if the last plan has automatic renewal on |
+| Expected plan expiry | Current plan expiry plus the remaining duration of plans that can activate consecutively in the queue, plus the period it renews if a plan has automatic renewal on |
 | Purchase and manual-renewal term | At most 12 months per operation; a new purchase must meet the product minimum, while manual renewal starts at one month |
 | Billing month | Exactly 30 days |
 
