@@ -75,7 +75,7 @@ Disabling automatic renewal forfeits the renewal price and cannot be undone.
 
 ### Automatic traffic reset {#traffic-reset}
 
-Each purchase record has its own "Auto reset when traffic runs out" switch. It is off by default, and records created by renewal keep the original setting. When it is on and traffic runs out with no queued plan available, used traffic is cleared at the reset price and the expiry stays the same. The reset price is shown under the switch in the purchase record, and coupon discounts do not apply to it. If your traffic has already run out when you turn it on, you are charged and the traffic is reset within about a minute. If your balance including commission is short, the plan stays at low speed until you top up enough for the reset price. Traffic that runs out in the last 3 days before expiry is not reset, so you are not charged again at renewal; the plan stays at low speed until it expires. Developer and pay-as-you-go plans do not offer it.
+Each purchase record has its own "Automatic traffic reset" switch. It is off by default, and records created by renewal keep the original setting. When it is on and traffic runs out with no queued plan available, used traffic is cleared at the reset price and the expiry stays the same. The reset price is shown under the switch in the purchase record, and coupon discounts do not apply to it. If your traffic has already run out when you turn it on, you are charged and the traffic is reset within about a minute. If your balance including commission is short, the plan stays at low speed until you top up enough for the reset price. It resets whenever traffic runs out before expiry; if that happens close to expiry, the plan still renews at expiry according to your automatic renewal setting. Developer and pay-as-you-go plans do not offer it.
 
 ## Benefit credits {#benefit-credits}
 
@@ -117,7 +117,7 @@ Manually switching plans deducts 2 hours from the original plan's validity, then
 | Start service | Choose a plan and pay the shortfall if prompted | An active record plus tier, expiry and allowance in the user center |
 | Prepare the next period | Buy another plan or use eligible early renewal | A queued plan; current traffic does not immediately increase |
 | Use the next plan now | Manually activate a queued plan | Read the old plan's deduction/retention preview, then check the newly active record |
-| Automatically restore speed when traffic runs out | Turn on automatic traffic reset | Enable in the purchase record and ensure balance covers the reset price; does not run within 3 days before expiry |
+| Automatically restore speed when traffic runs out | Turn on automatic traffic reset | Enable in the purchase record and ensure balance covers the reset price |
 | Raise an active quarterly, semiannual or annual tier | Upgrade when eligible, keeping the billing period | Price difference, fee, remaining validity and resulting allowance |
 | Stop automatic renewal charges | Disable automatic renewal | Read the irreversible-disable and renewal-price notice first |
 
@@ -147,6 +147,6 @@ A missing transaction or mismatched network/recipient may require you to correct
 Check the cause of exhaustion to verify the corresponding continuation conditions:
 
 - **At plan expiry**: Check whether an activatable plan exists in the queue first. If there are no queued plans, automatic renewal is attempted; check whether automatic renewal is enabled, whether account balance covers the renewal price, and whether the product currently allows renewal.
-- **When traffic runs out**: Check whether an activatable plan exists in the queue first. If there are no queued plans, check whether automatic traffic reset is enabled on that purchase record, whether balance (including commissions) covers the reset price, and whether the plan is within 3 days before expiry (automatic reset is disabled within 3 days before expiry to prevent duplicate charges with expiry renewal). Automatic renewal runs only at expiry and is never triggered prematurely by running out of traffic.
+- **When traffic runs out**: Check whether an activatable plan exists in the queue first. If there are no queued plans, check whether automatic traffic reset is enabled on that purchase record, and whether balance (including commissions) covers the reset price. Automatic renewal runs only at expiry and is never triggered prematurely by running out of traffic.
 
 Manual activation, upgrade and refund options appear based on order eligibility; when an option is not offered, do not attempt to simulate it by creating duplicate orders.

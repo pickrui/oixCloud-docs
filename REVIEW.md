@@ -1,3 +1,9 @@
+# Automatic traffic reset without the 3-day cutoff — 2026-11-03
+
+Checked against the panel's reset rule (`dler-panel` `app/Models/Bought.php` `trafficResetBlocker()`, `app/Command/Job/FinanceJob.php` `tryTrafficReset()`, and the `bought.traffic_reset_*` and plan notification copy in `resources/lang/material/{zh-cn,en}.php`). The panel no longer skips the reset in the last 3 days before expiry; it resets whenever traffic runs out before expiry and the plan still renews at expiry as set. The paired automatic traffic reset paragraph, the comparison table row and the "when traffic runs out" checklist in `docs/account/plans.md` and `docs/en/account/plans.md` drop the 3-day exception and note the renewal at expiry; the English switch name now matches the panel's "Automatic traffic reset".
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
 # Automatic traffic reset label — 2026-11-03
 
 Checked against the panel's purchase-record guide card, switch, confirmations and notifications (`dler-panel` `resources/lang/material/zh-cn.php` keys under `bought.*`, `account_overview.*` and the plan notifications, plus `app/Services/Notification.php`). The panel now calls the feature 自动重置流量, so the Chinese pages `docs/account/plans.md` and `docs/account/traffic.md` use that name in prose, the comparison tables and the `#traffic-reset` heading; the anchor is unchanged. The English pages already say "automatic traffic reset" and are unchanged.
