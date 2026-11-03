@@ -1,3 +1,9 @@
+# Manual activation threshold and switching cost — 2026-11-03
+
+Checked against the panel's manual activation rules (`dler-panel` `app/Models/Bought.php` `MIN_ACTIVATION_MINUTES`, `app/Services/ShopPolicy.php`, `app/Controllers/UserController.php` `SWITCH_COST_MINUTES`, and the `bought.activation_loss_html` copy in `resources/lang/material/{zh-cn,en}.php`). The paired manual activation paragraphs in `docs/account/plans.md` and `docs/en/account/plans.md` now state a 2-hour switching cost instead of 24 hours, and that a queued plan with less than 6 hours remaining has no activation option and takes over automatically in queue order.
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
 # Traffic reset price wording — 2026-11-03
 
 Checked against the panel's purchase-record guide card and switch (`dler-panel` `resources/lang/material/{zh-cn,en}.php`, keys `bought.traffic_reset_guide` and `bought.traffic_reset_each`). The automatic traffic reset subsection in `docs/account/plans.md` and `docs/en/account/plans.md` no longer explains how the reset price is derived when a plan has none set; it now points to the price shown under the switch in the purchase record. Coupon discounts still do not apply to it.

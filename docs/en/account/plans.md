@@ -106,7 +106,7 @@ Check the Plan Management preview for the price difference, fees, remaining bene
 
 ## Manual activation and refunds to balance
 
-Manually switching plans deducts 24 hours from the original plan's validity, then preserves its remaining time and traffic according to the rules. A plan with too little left to preserve ends, and saved traffic is rounded down to whole GiB. Only eligible unused plans that show a refund option can be refunded to account balance. This is not a refund to the original payment method or a withdrawal. Read the confirmation dialog before proceeding.
+Manually switching plans deducts 2 hours from the original plan's validity, then preserves its remaining time and traffic according to the rules. A plan with too little left to preserve ends, and saved traffic is rounded down to whole GiB. A queued plan with less than 6 hours remaining has no activation option; it takes over automatically in queue order when the current plan expires or runs out of traffic. Only eligible unused plans that show a refund option can be refunded to account balance. This is not a refund to the original payment method or a withdrawal. Read the confirmation dialog before proceeding.
 
 [Open Plan Management](https://oixcloud.com/user/bought)
 
