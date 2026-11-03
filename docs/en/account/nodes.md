@@ -94,7 +94,7 @@ Use the managed configuration generated for your client. Avoid copying port and 
 | Conditions not met | Charges pause, the setting stays on, and retries continue until expiry |
 
 ::: warning Check the renewal result before expiry
-If 30 more days would exceed the expected plan expiry, extend your plan or turn on its automatic renewal first, then check renewal eligibility. Adding more IP renewal months cannot solve this. After an IP expires, automatic renewal is tried once more before it is reclaimed; an IP still not renewed is reclaimed. While the IP's node is under maintenance or paused, you are not charged for renewal, an expired IP is kept for up to 14 days, and you are notified; once the node is back, the IP renews or is reclaimed as usual, and it is reclaimed if the node is still down after 14 days.
+If 30 more days would exceed the expected plan expiry, extend your plan or turn on its automatic renewal first, then check renewal eligibility. Adding more IP renewal months cannot solve this. After an IP expires, automatic renewal is tried once more before it is reclaimed; an IP still not renewed is reclaimed. While the IP's node is under maintenance or paused, you are not charged for renewal, the IP still appears on the nodes page marked as under maintenance, an expired IP is kept for up to 14 days, and you are notified; once the node is back, the IP renews or is reclaimed as usual, and it is reclaimed if the node is still down after 14 days. If an extension only holds once your plan renews automatically and the plan renews within 7 days, automatic IP renewal also reserves balance for the plan renewal and renews only when both are covered.
 :::
 
 ### Deposit and abuse fees {#ip-deposit}

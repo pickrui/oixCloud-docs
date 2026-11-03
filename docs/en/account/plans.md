@@ -75,7 +75,7 @@ Disabling automatic renewal forfeits the renewal price and cannot be undone.
 
 ### Automatic traffic reset {#traffic-reset}
 
-Each purchase record has its own "Auto reset when traffic runs out" switch. It is off by default, and records created by renewal keep the original setting. When it is on and traffic runs out with no queued plan available, used traffic is cleared at the reset price and the expiry stays the same. The reset price is set per plan; if it is not set separately, the current store price for that billing period applies, not your renewal price. If your traffic has already run out when you turn it on, you are charged and the traffic is reset within about a minute. If your balance including commission is short, the plan stays at low speed until you top up enough for the reset price. Traffic that runs out in the last 3 days before expiry is not reset, so you are not charged again at renewal; the plan stays at low speed until it expires. Developer and pay-as-you-go plans do not offer it.
+Each purchase record has its own "Auto reset when traffic runs out" switch. It is off by default, and records created by renewal keep the original setting. When it is on and traffic runs out with no queued plan available, used traffic is cleared at the reset price and the expiry stays the same. The reset price is set per plan; if it is not set separately, the current store price for that billing period applies, not your renewal price. Coupon discounts do not apply to it. If your traffic has already run out when you turn it on, you are charged and the traffic is reset within about a minute. If your balance including commission is short, the plan stays at low speed until you top up enough for the reset price. Traffic that runs out in the last 3 days before expiry is not reset, so you are not charged again at renewal; the plan stays at low speed until it expires. Developer and pay-as-you-go plans do not offer it.
 
 ## Benefit credits {#benefit-credits}
 
@@ -88,7 +88,7 @@ Annual Pass Gold plans or above, including annual pay-as-you-go plans, earn bene
 | Ordinary plan with exhausted traffic | None |
 | Pay-as-you-go plan meeting the eligibility requirements above | Fixed 5 |
 
-**Ordinary plans earn no benefit credits once their traffic runs out, even if low-speed access continues until expiry.** After renewal or switching, the new plan is assessed separately under the conditions above. Plans ended early, refunded or not yet activated earn no credits.
+**Ordinary plans earn no benefit credits once their traffic runs out, even if low-speed access continues until expiry, and plans whose traffic was reset for a fee during the period earn none either.** After renewal or switching, the new plan is assessed separately under the conditions above. Plans ended early, refunded or not yet activated earn no credits.
 
 Check your balance and redemption options in the [Benefits Center](https://oixcloud.com/user/benefits).
 
