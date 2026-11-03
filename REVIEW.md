@@ -1,3 +1,9 @@
+# Automatic traffic reset label — 2026-11-03
+
+Checked against the panel's purchase-record guide card, switch, confirmations and notifications (`dler-panel` `resources/lang/material/zh-cn.php` keys under `bought.*`, `account_overview.*` and the plan notifications, plus `app/Services/Notification.php`). The panel now calls the feature 自动重置流量, so the Chinese pages `docs/account/plans.md` and `docs/account/traffic.md` use that name in prose, the comparison tables and the `#traffic-reset` heading; the anchor is unchanged. The English pages already say "automatic traffic reset" and are unchanged.
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
 # Manual activation threshold and switching cost — 2026-11-03
 
 Checked against the panel's manual activation rules (`dler-panel` `app/Models/Bought.php` `MIN_ACTIVATION_MINUTES`, `app/Services/ShopPolicy.php`, `app/Controllers/UserController.php` `SWITCH_COST_MINUTES`, and the `bought.activation_loss_html` copy in `resources/lang/material/{zh-cn,en}.php`). The paired manual activation paragraphs in `docs/account/plans.md` and `docs/en/account/plans.md` now state a 2-hour switching cost instead of 24 hours, and that a queued plan with less than 6 hours remaining has no activation option and takes over automatically in queue order.
