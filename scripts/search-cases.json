@@ -393,6 +393,19 @@
   },
   {
     "terms": [
+      "独享 IP 保证金",
+      "保证金退回",
+      "免收保证金",
+      "滥用费用",
+      "dedicated IP deposit",
+      "abuse fee"
+    ],
+    "targets": [
+      "/account/nodes.html"
+    ]
+  },
+  {
+    "terms": [
       "内部中继",
       "internal relay",
       "多跳中继",

@@ -90,11 +90,34 @@ Use the managed configuration generated for your client. Avoid copying port and 
 | --- | --- |
 | Attempt window | Within 24 hours before IP expiry |
 | Extension | 30 days; the system does not automatically increase billed months |
-| Charge conditions | An active plan, sufficient funds including commission, and a new IP expiry on or before the expected plan expiry, including valid queued plans |
+| Charge conditions | An active plan, enough balance for the rent and any [deposit](#ip-deposit) top-up, and a new IP expiry on or before the expected plan expiry, including valid queued plans |
 | Conditions not met | Charges pause, the setting stays on, and retries continue until expiry |
 
 ::: warning Check the renewal result before expiry
 If 30 more days would exceed the expected plan expiry, extend your plan first, then check renewal eligibility. Adding more IP renewal months cannot solve this. An IP not renewed by expiry is reclaimed.
+:::
+
+### Deposit and abuse fees {#ip-deposit}
+
+Some dedicated IP products require a deposit, one per IP, to guarantee that the IP is not abused. The amount appears in the product list and the purchase dialog; click or tap the deposit chip in the product list for details.
+
+| Item | Rule |
+| --- | --- |
+| Collection | Charged with the rent on a new purchase (except an order of 6 months or more); the dialog's total includes it. If your balance is short, the dialog shows how much to top up |
+| Waiver | Buying or renewing 6 months or more at once needs no deposit for that order, and a deposit you already paid stays held. Once the same IP has 12 months paid in total (new purchases and manual and automatic renewals all count), no deposit is needed at all: a deposit you already paid goes toward the renewal that reaches 12 months, and any amount above the rent returns to your account balance. The renewal dialog shows the months paid so far, the amount applied and what you actually pay |
+| Top-up | If a complaint forfeits the deposit or a product change leaves it below the requirement, the next manual or automatic renewal that does not qualify for a waiver tops it up; the renewal dialog shows the amount |
+| Where to see it | Each dedicated IP card in the node list shows its current deposit; reclaimed IPs show the amount awaiting return and the expected date at the top of the node list's Exclusive IP page |
+| Return | 14 days after the IP stops being renewed and is reclaimed, a deposit that was not forfeited returns in full to your account balance automatically, with a notification |
+| Account deletion | The account cannot be deleted until the deposit is returned |
+
+::: tip Returned deposits can only be spent
+The deposit returns to your account balance. It cannot be withdrawn or refunded to the original payment method, and can only be spent in the dashboard, such as on plans and renewals.
+:::
+
+A dedicated IP may only be used by your own account. If the IP draws abuse complaints during your holding period (such as spam, port scanning, attacks or copyright complaints), the whole deposit is forfeited and not returned, and later renewals collect it again under the rules above. If no deposit was paid or it has already been forfeited, the upstream handling fees are charged to your balance and commission; if this leaves your balance negative, the account may be suspended for arrears until you top up. Each action is notified with the amount and complaint details; submit a [support ticket](/en/help/support) if you disagree. Clause 1.10 of the [Terms of Service](https://oixcloud.com/tos#section-tos-dedicated-ip) is authoritative.
+
+::: warning Avoid complaints
+Do not send bulk email, scan ports, run P2P/BitTorrent downloads or access unauthorized systems through a dedicated IP. Complaints are traced by time to the account holding the IP at that moment, and complaints received after the deposit is returned may still lead to additional charges.
 :::
 
 [Open your account](https://oixcloud.com/user)
@@ -118,7 +141,7 @@ For streaming-region requirements, see [streaming settings](/en/account/unlock);
 
 ## Verify a dedicated-IP purchase
 
-1. Review the node, billing months, latest allowed expiry, minimum purchase term and total in the purchase dialog.
+1. Review the node, billing months, latest allowed expiry, minimum purchase term, deposit and total in the purchase dialog, then accept the [deposit and abuse fee](#ip-deposit) rules and confirm.
 2. Check the allocated address and expiry afterwards; payment success does not update the client by itself.
 3. Ensure the node is retained in the official client's filter preview, then refresh the profile and establish a new connection.
 4. Verify the exit in your actual application and allow time to resolve balance or plan eligibility before renewal.

@@ -1,3 +1,33 @@
+# Dedicated IP deposit waiver rules — 2026-11-03
+
+Replaced the 12-month waiver row in both node guides with the panel's two rules: a purchase or renewal of 6 months or more needs no deposit for that order while a deposit already paid stays held, and once the same IP has 12 months paid in total (including automatic renewals) no deposit is needed and a deposit already paid goes toward the renewal that reaches 12 months. The cumulative rule is not limited by plan expiry, unlike a single 12-month purchase. The collection, top-up and complaint text no longer says a forfeited deposit is always paid again at the next renewal, since waived orders do not collect it. Matches clause 1.10 of the Terms of Service. Anchors, navigation and search cases are unchanged.
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
+# Dedicated IP deposit waiver for 12 months — 2026-11-03
+
+Added a row to both node guides' deposit tables: buying or renewing 12 months at once requires no deposit, a deposit already paid goes toward that renewal's rent with any excess returned to account balance, and monthly automatic renewals still top it up. This matches the panel change and clause 1.10 of the Terms of Service. Added a search term for the waiver. Anchors and navigation are unchanged.
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
+# Dedicated IP deposit forfeiture — 2026-11-03
+
+Updated both node guides to the panel rule that an abuse complaint forfeits the IP's whole deposit, which is not returned and must be paid again at the next renewal; only when no deposit is held are handling fees charged to balance and commission. A deposit that was not forfeited returns in full 14 days after release. The guides no longer describe offsets or remainders, explain that the deposit guarantees the IP is not abused, and mention the details opened by clicking the product-list deposit chip. Anchors, navigation and search cases are unchanged.
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
+# Dedicated IP deposit wording — 2026-11-03
+
+Rechecked the Chinese deposit subsection against the panel at `9e41f5dea` and clause 1.10 of the Terms of Service. The table, callout and complaint warning now use the same refund term as the terms (退还), and the callout says the deposit is not returned to the original payment method (不会原路退回). The English page already matched. The deposit is charged separately for each IP, as both guides already state. The complaint warning in both languages now says late complaints may still lead to additional charges, rather than that they are always charged. Anchors, navigation and search cases are unchanged.
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
+# Dedicated IP deposit and abuse fees — 2026-11-03
+
+Checked the paired node guides against the panel at `e5484cf54`, including product deposit configuration, purchase and renewal collection, the admin abuse-fee flow, the 14-day return after reclamation, account-deletion blocking and clause 1.10 of the Terms of Service. Added a `#ip-deposit` subsection to both node guides covering collection, renewal top-up, where the deposit appears, the automatic return, the deletion restriction and abuse fees, with a callout that returned deposits go to account balance, cannot be withdrawn or refunded to the original payment method, and can only be spent. Auto-renewal charge conditions and the purchase checklist now mention the deposit; the fair-use violations sections link to the new subsection. Balance-only payment of the deposit is intentionally not described. No navigation or existing anchors changed.
+
+Validation: `pnpm build`, `pnpm check:search` (380 keyword checks, including a new deposit case, and 712 result anchors) and `git diff --check` passed. These are local documentation checks; the panel change has not been deployed.
+
 # Home ISP relay exit eligibility — 2026-11-02
 
 Updated the paired node and relay guides against the panel at `4edf5aa41fa2b34133e02cb77ae2970349191a84`: Home ISP nodes excluded from default subscriptions can be internal relay targets/exits, while entry and intermediate-hop restrictions remain. External relay, HTTP/3, WARP and streaming-unlock restrictions are unchanged; manual administrator bans still apply to both entries and exits. No navigation, anchors or illustrations changed.
