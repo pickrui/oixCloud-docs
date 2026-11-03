@@ -66,7 +66,7 @@ See [Fair use](/en/account/fair-use) for request bands, Working nodes bands, off
 | --- | --- |
 | Activation queue | You can reorder plans; when the active plan expires or runs out of traffic, queued plans are tried in that order |
 | Automatic renewal | Attempted only when enabled and no queued plan is available |
-| Early renewal | Pays for the next period and adds a queued plan without increasing current traffic; requires automatic renewal to be enabled and the displayed product, stock and billing-period conditions to be met |
+| Early renewal | Pays for the next period at the current renewal price, the same amount automatic renewal would charge, and adds a queued plan without increasing current traffic; requires automatic renewal to be enabled and the displayed product, stock and billing-period conditions to be met. A discount code applies only if it is cheaper than the current renewal price; developer plans renew automatically at expiry and do not offer early renewal |
 
 ::: warning Check before disabling automatic renewal
 Disabling automatic renewal forfeits the renewal price and cannot be undone.

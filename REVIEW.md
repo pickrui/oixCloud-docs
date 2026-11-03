@@ -1,3 +1,9 @@
+# Early renewal pricing — 2026-11-03
+
+Updated the early-renewal row in both plan guides to the panel rule: early renewal charges the record's current renewal price, the same amount automatic renewal would charge; a discount code applies only if it is cheaper than that price; developer plans renew automatically at expiry and do not offer early renewal. Anchors, navigation and search cases are unchanged.
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
 # Dedicated IP deposit waiver rules — 2026-11-03
 
 Replaced the 12-month waiver row in both node guides with the panel's two rules: a purchase or renewal of 6 months or more needs no deposit for that order while a deposit already paid stays held, and once the same IP has 12 months paid in total (including automatic renewals) no deposit is needed and a deposit already paid goes toward the renewal that reaches 12 months. The cumulative rule is not limited by plan expiry, unlike a single 12-month purchase. The collection, top-up and complaint text no longer says a forfeited deposit is always paid again at the next renewal, since waived orders do not collect it. Matches clause 1.10 of the Terms of Service. Anchors, navigation and search cases are unchanged.
