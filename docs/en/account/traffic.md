@@ -10,9 +10,9 @@ Uploads and downloads both count toward usage, adjusted by the billing multiplie
 
 ## When does the allowance renew?
 
-Your allowance covers the selected plan period; it does not reset automatically each calendar month. **The plan is exhausted when either its validity ends or its traffic runs out, whichever happens first.** A future expiry date does not mean traffic remains available. Once the traffic runs out, you need to place a new plan order.
+Your allowance covers the selected plan period; it does not reset automatically each calendar month. **The plan is exhausted when either its validity ends or its traffic runs out, whichever happens first.** A future expiry date does not mean traffic remains available. Once the traffic runs out, you need to place a new plan order; if [automatic traffic reset](/en/account/plans#traffic-reset) is on, the used traffic is cleared at the reset price instead, and the expiry stays the same.
 
-When an ordinary plan runs out of traffic, the service first tries already purchased queued plans or automatic renewal according to your settings. Check the result before buying again. If neither provides a replacement, the plan enters a low-speed state and remains subject to its expiry date; low-speed access does not mean the original allowance has been restored. To restore high-speed access, follow [Plans, renewals and switching](/en/account/plans) to complete a purchase and confirm that the new plan is active. Adding funds alone does not add traffic to an ordinary plan.
+When an ordinary plan runs out of traffic, the service first tries already purchased queued plans; without one, it resets the traffic at the reset price if automatic traffic reset is on. Automatic renewal only happens at expiry, never early because traffic ran out. Check the result before buying again. If nothing provides a replacement, the plan enters a low-speed state and remains subject to its expiry date; low-speed access does not mean the original allowance has been restored. To restore high-speed access, follow [Plans, renewals and switching](/en/account/plans) to complete a purchase and confirm that the new plan is active. If automatic traffic reset is on but the balance was short, topping up enough for the reset price triggers the reset; otherwise adding funds alone does not add traffic to an ordinary plan.
 
 Ordinary plans earn no benefit credits once their traffic runs out, even if low-speed access continues until expiry. See [Benefit credits](/en/account/plans#benefit-credits) for eligibility and amounts.
 
@@ -44,13 +44,13 @@ When an ordinary plan exhausts its high-speed allowance without a replacement pl
 | Concurrent use | Low-speed mode is unsuitable for highly concurrent tasks, and connections may be restricted. Close unnecessary parallel tasks. |
 | Validity and permitted use | Unlimited low-speed traffic remains subject to plan expiry and service terms. It does not mean unlimited speed, unlimited connections or permission for sustained abnormal resource use. |
 
-To restore high-speed access, confirm that a new plan is active with available traffic, then allow the system and nodes to synchronize. If an existing connection remains slow, disconnect, reconnect and check again. Adding funds alone does not restore an ordinary plan's traffic, and points recovery does not remove the exhausted-allowance restriction.
+To restore high-speed access, confirm that a new plan is active with available traffic, then allow the system and nodes to synchronize. If an existing connection remains slow, disconnect, reconnect and check again. Unless automatic traffic reset is on, adding funds alone does not restore an ordinary plan's traffic, and points recovery does not remove the exhausted-allowance restriction.
 
 ## Distinguish limits and recovery conditions {#limits}
 
 | Situation | What to check | What restores service |
 | --- | --- | --- |
-| Low-speed mode after high-speed allowance runs out | Current allowance, expiry, activation queue and automatic renewal | Available traffic on a valid active plan, followed by a system check; adding funds alone does not add traffic to an ordinary plan |
+| Low-speed mode after high-speed allowance runs out | Current allowance, expiry, activation queue and automatic traffic reset | Available traffic on a valid active plan, followed by a system check; with automatic reset on, enough balance for the reset price triggers a reset, otherwise adding funds alone does not add traffic to an ordinary plan |
 | Insufficient funds on pay-as-you-go | Balance, commission and billing conditions | Sufficient funds and current plan conditions, followed by a check; points alone are not enough |
 | Fair-use points cap | Points, activity requests and Working nodes | Normal use raises points above 10, then the system removes this cap |
 | Plan expiry or an account restriction/ban | Expiry, account state and notices | Continue the plan or contact support according to the cause; points recovery alone does not restore service |

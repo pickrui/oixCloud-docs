@@ -80,7 +80,7 @@ Use the managed configuration generated for your client. Avoid copying port and 
 | --- | --- |
 | Plan eligibility | A currently active plan is required; queued plans alone are not enough |
 | Dedicated IP expiry | The new expiry must be on or before the expected plan expiry; check Latest dedicated IP expiry in the purchase dialog |
-| Expected plan expiry | Current plan expiry plus the remaining duration of plans that can activate consecutively in the queue |
+| Expected plan expiry | Current plan expiry plus the remaining duration of plans that can activate consecutively in the queue, plus one more period if the last plan has automatic renewal on |
 | Purchase and manual-renewal term | At most 12 months per operation; a new purchase must meet the product minimum, while manual renewal starts at one month |
 | Billing month | Exactly 30 days |
 
@@ -90,11 +90,11 @@ Use the managed configuration generated for your client. Avoid copying port and 
 | --- | --- |
 | Attempt window | Within 24 hours before IP expiry |
 | Extension | 30 days; the system does not automatically increase billed months |
-| Charge conditions | An active plan, enough balance for the rent and any [deposit](#ip-deposit) top-up, and a new IP expiry on or before the expected plan expiry, including valid queued plans |
+| Charge conditions | An active plan, enough balance for the rent and any [deposit](#ip-deposit) top-up, and a new IP expiry on or before the expected plan expiry, including valid queued plans and one more period if the plan auto-renews |
 | Conditions not met | Charges pause, the setting stays on, and retries continue until expiry |
 
 ::: warning Check the renewal result before expiry
-If 30 more days would exceed the expected plan expiry, extend your plan first, then check renewal eligibility. Adding more IP renewal months cannot solve this. An IP not renewed by expiry is reclaimed.
+If 30 more days would exceed the expected plan expiry, extend your plan or turn on its automatic renewal first, then check renewal eligibility. Adding more IP renewal months cannot solve this. After an IP expires, automatic renewal is tried once more before it is reclaimed; an IP still not renewed is reclaimed. While the IP's node is under maintenance or paused, you are not charged for renewal, an expired IP is kept for up to 14 days, and you are notified; once the node is back, the IP renews or is reclaimed as usual, and it is reclaimed if the node is still down after 14 days.
 :::
 
 ### Deposit and abuse fees {#ip-deposit}

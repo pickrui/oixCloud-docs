@@ -5,7 +5,7 @@ description: "Plans, renewals and switching \u2014 setup, practical steps and tr
 # Plans, renewals and switching
 
 ::: warning Plans are limited by both time and traffic
-Each plan has a validity period and a traffic allowance. **The plan is exhausted when either its validity ends or its traffic runs out, whichever happens first.** If you use all the traffic before the expiry date, you need to place a new plan order; remaining time alone does not let you keep using the original plan's high-speed allowance.
+Each plan has a validity period and a traffic allowance. **The plan is exhausted when either its validity ends or its traffic runs out, whichever happens first.** If you use all the traffic before the expiry date, you need to place a new plan order; remaining time alone does not let you keep using the original plan's high-speed allowance. You can also turn on automatic traffic reset below.
 
 If you have a queued plan or automatic renewal enabled, the continuation rules below apply. Check [Plan Management](https://oixcloud.com/user/bought) first, then place an order in the [plan store](https://oixcloud.com/user/shop) if no replacement has taken effect, to avoid duplicate purchases.
 :::
@@ -65,12 +65,17 @@ See [Fair use](/en/account/fair-use) for request bands, Working nodes bands, off
 | Operation or stage | Behavior and conditions |
 | --- | --- |
 | Activation queue | You can reorder plans; when the active plan expires or runs out of traffic, queued plans are tried in that order |
-| Automatic renewal | Attempted only when enabled and no queued plan is available |
+| Automatic renewal | Happens only at expiry, when enabled and no queued plan is available; running out of traffic does not trigger an early renewal |
+| Automatic traffic reset | Clears used traffic at the reset price when it runs out, without changing the expiry; see [Automatic traffic reset](#traffic-reset) |
 | Early renewal | Pays for the next period at the current renewal price, the same amount automatic renewal would charge, and adds a queued plan without increasing current traffic; requires automatic renewal to be enabled and the displayed product, stock and billing-period conditions to be met. A discount code applies only if it is cheaper than the current renewal price; developer plans renew automatically at expiry and do not offer early renewal |
 
 ::: warning Check before disabling automatic renewal
 Disabling automatic renewal forfeits the renewal price and cannot be undone.
 :::
+
+### Automatic traffic reset {#traffic-reset}
+
+Each purchase record has its own "Auto reset when traffic runs out" switch. It is off by default, and records created by renewal keep the original setting. When it is on and traffic runs out with no queued plan available, used traffic is cleared at the reset price and the expiry stays the same. The reset price is set per plan; if it is not set separately, the current store price for that billing period applies, not your renewal price. If your traffic has already run out when you turn it on, you are charged and the traffic is reset within about a minute. If your balance including commission is short, the plan stays at low speed until you top up enough for the reset price. Traffic that runs out in the last 3 days before expiry is not reset, so you are not charged again at renewal; the plan stays at low speed until it expires. Developer and pay-as-you-go plans do not offer it.
 
 ## Benefit credits {#benefit-credits}
 

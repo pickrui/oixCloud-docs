@@ -1,3 +1,9 @@
+# Renewal rules: traffic reset and dedicated IP renewal — 2026-11-03
+
+Updated the traffic and plan guides for the panel's new rules: automatic renewal happens only at expiry; running out of traffic first tries queued plans, then, if the record's automatic traffic reset switch is on, clears used traffic at the reset price without changing the expiry. Added an anchored subsection for automatic traffic reset: it is off by default and carried over on renewal; the reset price falls back to the current store price for that billing period, not the renewal price; turning it on after traffic has run out resets within about a minute; there is no reset in the last 3 days before expiry; developer and pay-as-you-go plans do not offer it. Adjusted the statements that topping up never restores traffic. The dedicated IP section now explains that the expected plan expiry adds one period when the plan auto-renews, that an expired IP gets one more renewal attempt before reclaim, and that IPs on nodes under maintenance are kept for up to 14 days after expiry.
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
 # Early renewal pricing — 2026-11-03
 
 Updated the early-renewal row in both plan guides to the panel rule: early renewal charges the record's current renewal price, the same amount automatic renewal would charge; a discount code applies only if it is cheaper than that price; developer plans renew automatically at expiry and do not offer early renewal. Anchors, navigation and search cases are unchanged.
