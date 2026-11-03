@@ -1,3 +1,9 @@
+# Traffic reset price wording — 2026-11-03
+
+Checked against the panel's purchase-record guide card and switch (`dler-panel` `resources/lang/material/{zh-cn,en}.php`, keys `bought.traffic_reset_guide` and `bought.traffic_reset_each`). The automatic traffic reset subsection in `docs/account/plans.md` and `docs/en/account/plans.md` no longer explains how the reset price is derived when a plan has none set; it now points to the price shown under the switch in the purchase record. Coupon discounts still do not apply to it.
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
 # 100% illustration coverage, IXP, Home ISP, OpenClash oix kernel and traffic exhaustion rules — 2026-11-03
 
 Achieved 100% interface illustration coverage across all 44 documentation tutorial topics (55 bilingual scene pairs, 110 SVG illustrations total) by rendering and embedding four new paired illustrations:
