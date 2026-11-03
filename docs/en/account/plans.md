@@ -106,7 +106,7 @@ When a plan expires or runs out of traffic, the system checks the steps below fr
 
 ### Automatic renewal {#auto-renew}
 
-Only one plan has automatic renewal on at a time, and it is the plan renewed once all your plans are used up. Turning automatic renewal on for another purchase record, ticking it when buying, or renewing early turns it off for the plan that had it. While a plan has it on, new purchases in the store leave it unticked by default.
+Only one plan has automatic renewal on at a time, and it is the plan renewed once all your plans are used up. New purchases start with automatic renewal off; turn it on in your purchase records when you want it. Turning it on for another purchase record or renewing early turns it off for the plan that had it.
 
 You can turn automatic renewal on or off at any time. Turning it off does not forfeit the renewal price, and you can turn it back on any time before the plan ends. Turning it on requires the product to support automatic renewal and your account to still meet the plan's purchase requirements.
 
