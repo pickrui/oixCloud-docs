@@ -42,7 +42,7 @@ See the illustrations for [oixCloud](/en/oixcloud/proxies#update-and-filter) and
 
 | Address type | Without custom conditions |
 | --- | --- |
-| Official-client smart subscription | Uses Smart Selection's default lines: permitted Fusion and GIA for plans with Fusion, or CIA + IXP for plans with CIA / IXP, without dedicated IPs or Home ISP. Plans with Edge only get Edge, Home ISP nodes eligible for default inclusion and the account's dedicated IPs. Only if that default set is empty does it fall back to permitted nodes eligible for default inclusion. |
+| Official-client smart subscription | Uses Smart Selection's default lines by plan:<br>• **Plans with Fusion**: permitted Fusion and GIA (without dedicated IPs or Home ISP)<br>• **Plans with CIA / IXP**: CIA + IXP (without dedicated IPs or Home ISP)<br>• **Plans with Edge only**: Edge, Home ISP nodes eligible for default inclusion and the account's dedicated IPs<br>Only if that default set is empty does it fall back to permitted nodes eligible for default inclusion. |
 | Ordinary personal subscription URL | Returns permitted nodes eligible for default inclusion in that subscription format, without an additional custom filter. |
 
 In oixCloud, resetting a saved custom filter asks for confirmation and resets it on the server; an unsaved draft can simply be cleared. FlClash for oixCloud's **Restore default** submits the reset and starts sync. Helper clears the draft first, so you must still click **Save**.

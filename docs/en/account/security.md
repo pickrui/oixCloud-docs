@@ -66,7 +66,7 @@ Manual tokens stop authenticating at expiry and do not renew automatically throu
 3. Set email and Telegram independently under **Daily Notification Subscription**, then wait for the status text to confirm the state. Telegram notifications are unavailable until the account is bound.
 4. If saving fails or is unconfirmed, reload the page to check the actual state before retrying. Do not click repeatedly while a save is pending.
 
-These switches control daily notifications only; they do not establish whether security, payment or service notices are disabled. Unbinding stops Telegram sign-in, the bot and the in-Telegram user center, the user group and Telegram daily notifications, so confirm you no longer need the binding before removing it.
+These switches control daily notifications only; they do not establish whether security, payment or service notices are disabled. Unbinding disables Telegram sign-in, daily notifications, the bot, the user group and the in-Telegram user center—confirm you no longer need the binding before removing it.
 
 ## Before changing your password {#change-password}
 

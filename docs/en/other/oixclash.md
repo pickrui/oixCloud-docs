@@ -150,6 +150,6 @@ Reading again replaces unsaved edits, so review the confirmation first. Account 
 | UDP forwarding does not take effect | Click **自检** (Self-check) and look at the TPROXY and policy routing items; firmware without support only loses UDP, TCP stays proxied |
 | Conflict with fancyss or MerlinClash | Turn off the other proxy plugin; only one can run |
 | The router runs but a device still misbehaves | Check the device's gateway, DNS and IPv6, then the dashboard's connection list |
-| The same node is slower through the router than on a phone or computer | Click **自检** (Self-check) and check the core: 64-bit hnd models should show **使用 arm64 内核** (using the arm64 core); if it still shows armv7, update to 0.0.15 or reinstall offline. 32-bit models are limited by the CPU. Speed tests on uncommon ports go direct, so turn off **仅代理常用端口** (Common ports only) temporarily before comparing |
+| The same node is slower through the router than on a phone or computer | • **Check the core architecture**: Click **自检** (Self-check) and check the core—64-bit hnd models should show **使用 arm64 内核** (using the arm64 core); if it still shows armv7, update to 0.0.15 or reinstall offline. 32-bit models are limited by the CPU.<br>• **Check port filtering**: Speed tests on uncommon ports go direct, so turn off **仅代理常用端口** (Common ports only) temporarily before comparing |
 
 Before contacting support, click **自检** and send its result together with the plugin log from **查看日志** (View Log), with account details hidden.

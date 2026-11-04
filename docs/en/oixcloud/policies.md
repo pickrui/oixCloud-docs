@@ -63,7 +63,9 @@ Test every member separately first. Longer chains are not inherently faster, and
 
 After subscription, provider and filter expansion, an entry group's effective members must be standalone nodes, without nested groups, DIRECT/REJECT or existing chains. It cannot also have an underlying proxy.
 
-**Placing a group after the first hop changes its route wherever that group is used.** After saving `Entry A → Exit group`, a rule targeting Exit group directly also sends its concrete nodes through A. This applies beyond selecting the chain itself. Concrete members receive derived `Node name (via …)` routes with separate tests through the preceding hops. Selecting the original node elsewhere keeps its original route.
+**Placing a group after the first hop changes its route wherever that group is used:**
+- After saving `Entry A → Exit group`, a rule targeting `Exit group` directly also sends its concrete nodes through A (this applies beyond selecting the chain itself).
+- Concrete members receive derived `Node name (via …)` routes with separate tests through the preceding hops; selecting the original node elsewhere keeps its original route.
 
 Nested groups and DIRECT/REJECT in a later-hop group keep their own behavior and do not inherit preceding hops. DIRECT skips those hops; REJECT rejects the connection. Review and remove these exceptions if every connection must use the entry. A later-hop group needs at least one usable concrete node.
 

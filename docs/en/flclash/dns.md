@@ -65,7 +65,7 @@ The current maintained server implementation generates a FlClash for oixCloud pr
 | --- | --- |
 | macOS | Keep **Tools → Advanced Configuration → Network → Auto Set System DNS** enabled with TUN and verify that the system DNS change succeeded. Queries to a LAN router may bypass TUN; do not test only public resolver addresses. |
 | Windows | Enable TUN and inspect multiple adapters, other VPNs and system DNS. Add the Strict route override in the network settings' TUN section when needed; see below. |
-| Android | Enable **DNS Hijacking** and disable **Allow Bypass** under **Tools → Advanced Configuration → Network**; include the target app in VPN access control. Turn system **Private DNS** off while diagnosing. Always-on VPN and blocking connections without VPN are separate Android settings, subject to OS support. |
+| Android | Enable **DNS Hijacking** and disable **Allow Bypass** under **Tools → Advanced Configuration → Network**, and include the target app in VPN access control; turn system **Private DNS** off while diagnosing.<br>Always-on VPN and blocking connections without VPN are separate Android settings, subject to OS support. |
 | Linux | Check TUN automatic routes, the system resolver and competing network managers. Confirm queries enter the core, not merely that the local proxy port responds. |
 
 Browser Secure DNS and app-owned DoH / DoT are not intercepted as ordinary port-53 DNS. Record and temporarily disable those separate settings when diagnosing. If you keep them, route their connections through the intended proxy and verify IPv4 and IPv6 separately. Disabling DNS IPv6 resolution only affects AAAA answers; it does not disable system IPv6.

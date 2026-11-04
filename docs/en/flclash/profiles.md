@@ -85,7 +85,9 @@ For an HTTP / HTTPS proxy expressed as an `http://` or `https://` link, use **Cu
 
 Use **Sync** in a URL profile's menu to update it, or set automatic updates and an interval under **Edit**. A local-file import is a copy: changes to the original file do not update the client automatically. Import it again or edit the client's copy.
 
-**Add Profile → Import config** is a separate workflow: it extracts nodes, groups, rules and supported settings from a URL, file or text into an editable **Custom profile**. It does not retain the original URL as the sync source for the whole subscription. Use **Link** above to keep following the original subscription. **Importing a whole configuration into an existing custom profile replaces its nodes, groups, rules and settings**; [back up first](/en/flclash/backup) and review any **Not imported** notices.
+::: warning Distinguish "Link" from "Import config"
+**Add Profile → Import config** is a separate workflow: it extracts nodes, groups, rules and supported settings from a URL, file or text into an editable **Custom profile**, and does not retain the original URL as the sync source for the whole subscription. Use **Link** above to keep following the original subscription. **Importing a whole configuration into an existing custom profile replaces its nodes, groups, rules and settings**; [back up first](/en/flclash/backup) and review any **Not imported** notices.
+:::
 
 ## Use third-party and oixCloud managed nodes together {#managed-mix}
 
