@@ -42,7 +42,7 @@ Home ISP 与 Edge 同级，按相同套餐权限开放，在 [节点列表](http
 ISP 与 Edge 是两条相互独立的线路，仅筛选 Edge 不会包含 Home ISP；仅按地区或名称筛选也不会自动加入未开启默认下发的 ISP 节点
 
 ::: warning 严格遵循流量路由限制
-未开启默认下发的 Home ISP 可以作为内部中继的目标／出口节点，但**不能作为入口或中间节点**；外部转发、HTTP/3、WARP 和流媒体解锁均不可配置。主动将 ISP 加入订阅不会解除这些限制，具体规则见 [流量路由限制](/account/nodes#isp-routing)
+未开启默认下发的 Home ISP 可以作为内部中继的目标／出口节点，但**不能作为入口或中间节点**；外部转发、HTTP/3、WARP、IPv4 Only 和流媒体解锁均不可配置。主动将 ISP 加入订阅不会解除这些限制，具体规则见 [流量路由限制](/account/nodes#isp-routing)
 :::
 
 ## 为什么需要中转或链式代理？ {#why-relay-or-chain}

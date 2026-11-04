@@ -503,7 +503,23 @@
       "添加节点": "Add node",
       "无法连接／速度异常": "Connection or speed problem",
       "软件中心提供的客户端": "Software Center client",
-      "客户端及版本": "Client and version"
+      "客户端及版本": "Client and version",
+      "外部中继": "External Relay",
+      "流媒体解锁": "Streaming Unlock",
+      "IPv4 Only 设置": "IPv4 Only settings",
+      "与 WARP 一起使用": "Using it with WARP",
+      "回退与出口协议说明": "About fallback and egress preferences",
+      "⌕ 香港": "⌕ HK",
+      "全部状态 ▾": "All statuses ▾",
+      "全选": "Select all",
+      "已选 2 个节点": "Selected: 2",
+      "已选 0 个节点": "Selected: 0",
+      "开启所选 ▾": "Enable selected ▾",
+      "应用到 2 个节点": "Apply to 2 nodes",
+      "节点": "Node",
+      "香港 · 示例 B": "HK · Example B",
+      "香港 · 示例 C": "HK · Example C",
+      "出口偏好": "Egress preference"
     },
     "openclash": {
       "服务": "Services",
@@ -1435,20 +1451,20 @@
       ]
     ],
     "account-warp": [
-      "Find WARP and fallback for a node",
-      "Website → WARP settings",
+      "Check WARP fallback and the IPv4 Only override",
+      "Website → Traffic Routes → WARP",
       [
         [
-          "Find the intended node",
-          "This setting is node-specific. Check the node name first."
+          "Check relay cleanup first",
+          "Enabling WARP deletes conflicting relays. Turning it off does not restore them."
         ],
         [
-          "Check Enable WARP",
-          "Enabling removes related relays. Record settings you still need first."
+          "Choose smart fallback",
+          "Allows the node’s ordinary exit if WARP fails. The IP or region may change."
         ],
         [
-          "Choose fallback for your needs",
-          "Fallback uses the remote node’s ordinary exit. Reconnect and verify."
+          "IPv4 Only takes priority",
+          "Preference is unavailable. Click to manage; disabling restores the saved preference."
         ]
       ]
     ],
@@ -1575,6 +1591,24 @@
         [
           "Policy groups and exit routing (Step 3)",
           "Selects exit nodes via manual choice, URL test, or proxy chains through dedicated transit."
+        ]
+      ]
+    ],
+    "account-ipv4-only": [
+      "Find nodes and enable IPv4 Only in bulk",
+      "Website → Traffic Routes → IPv4 Only",
+      [
+        [
+          "Search and filter nodes",
+          "No pagination. Select all covers every available node matching the filters."
+        ],
+        [
+          "Check the count, then apply",
+          "Two disabled nodes are selected. Choose Enable selected, then apply."
+        ],
+        [
+          "Wait for sync and reconnect",
+          "No subscription refresh. Old connections stay; only destination exits are restricted."
         ]
       ]
     ]

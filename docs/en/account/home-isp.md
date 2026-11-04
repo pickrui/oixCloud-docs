@@ -42,7 +42,7 @@ Default inclusion is configured per node by the service, independently of the st
 ISP and Edge are separate lines; keeping only Edge does not include Home ISP nodes. Filtering solely by region or name will not automatically add excluded ISP nodes either.
 
 ::: warning Observe traffic routing restrictions
-Home ISP nodes excluded from default subscriptions can be internal relay targets or exits, but **cannot serve as entries or intermediate hops**. External relay, HTTP/3, WARP, and streaming unlocking cannot be configured on them. Manually adding an ISP node to a subscription does not waive these restrictions; see [Traffic routing restrictions](/en/account/nodes#isp-routing).
+Home ISP nodes excluded from default subscriptions can be internal relay targets or exits, but **cannot serve as entries or intermediate hops**. External relay, HTTP/3, WARP, IPv4 Only, and streaming unlocking cannot be configured on them. Manually adding an ISP node to a subscription does not waive these restrictions; see [Traffic routing restrictions](/en/account/nodes#isp-routing).
 :::
 
 ## Why use relays or proxy chains? {#why-relay-or-chain}
@@ -127,7 +127,7 @@ Applicable to Windows, Android, macOS, and Linux.
    - Once applied, FlClash generates a policy group named after the chain. Select it directly in the "Proxies" list.
    - For selective routing, edit your personal rules under Overrides and direct target traffic to the chain name.
 
-For detailed chain settings, see [FlClash nodes, groups and chains](/en/flclash/proxies#chains).
+For detailed chain settings, see [FlClash nodes, groups and chains](/en/flclash/proxies#proxy-chains).
 
 ## Verification and troubleshooting {#troubleshooting}
 

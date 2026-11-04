@@ -190,7 +190,7 @@
           "link": "/account/relay"
         },
         {
-          "text": "WARP 与流媒体解锁",
+          "text": "IPv4 Only、WARP 与解锁",
           "link": "/account/unlock"
         },
         {
@@ -414,7 +414,7 @@
           "link": "/en/account/relay"
         },
         {
-          "text": "WARP and streaming regions",
+          "text": "IPv4 Only, WARP & streaming",
           "link": "/en/account/unlock"
         },
         {

@@ -54,7 +54,7 @@ To use them, edit the current address in [Subscription management](https://oixcl
 
 ### Traffic routing restrictions {#isp-routing}
 
-Home ISP nodes excluded from default subscriptions can be selected as internal relay targets or exits, but not as entries or intermediate hops. External relay, HTTP/3, WARP and streaming-unlock settings remain unavailable. Adding ISP to a subscription manually does not remove these restrictions, and a wildcard source such as **All nodes** cannot bypass them.
+Home ISP nodes excluded from default subscriptions can be selected as internal relay targets or exits, but not as entries or intermediate hops. External relay, HTTP/3, WARP, IPv4 Only and streaming-unlock settings remain unavailable. Adding ISP to a subscription manually does not remove these restrictions, and a wildcard source such as **All nodes** cannot bypass them.
 
 Nodes manually disabled by an administrator remain unavailable as both relay entries and exits. Backends grouped under the same node name share configuration eligibility. Existing settings remain active and can be deleted. All nodes must still meet plan permissions, feature requirements and the conditions shown on the settings page. For relay and proxy chain setup, see the [Home ISP user guide](/en/account/home-isp).
 
@@ -173,9 +173,11 @@ The active plan and consecutively activatable queued plans must cover the dedica
 
 ## Dedicated IPv6 on supported nodes {#dedicated-ipv6}
 
-Check **Dedicated IPv6** and its supported-node list under [WARP settings](https://oixcloud.com/user/warp) or [Streaming unlock](https://oixcloud.com/user/unlock), then enable it if needed. Only listed supported nodes use the dedicated IPv6 egress assigned to the account; other nodes are unaffected. The setting is hidden when no accessible node supports it.
+Check **Dedicated IPv6** and its supported-node list under [WARP settings](https://oixcloud.com/user/warp) or [Streaming unlock](https://oixcloud.com/user/media-unlock), then enable it if needed. Only listed supported nodes use the dedicated IPv6 egress assigned to the account; other nodes are unaffected. The setting is hidden when no accessible node supports it.
 
 After saving, wait for node synchronization and use new connections to verify the exit seen by the target service. This controls the remote node's outbound, separately from local IPv6 capture, AAAA queries and the address family used to connect to a node. A client IPv6 switch does not verify this setting.
+
+To make websites see only an IPv4 exit, use [IPv4 Only](/en/account/unlock#ipv4-only). It takes priority on the selected supported nodes while preserving the Dedicated IPv6 setting itself.
 
 ## Check service status {#service-status}
 

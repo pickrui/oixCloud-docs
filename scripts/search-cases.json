@@ -423,7 +423,11 @@
       "流媒体",
       "streaming",
       "WARP",
-      "STUN"
+      "STUN",
+      "IPv4 Only",
+      "WARP IPv4",
+      "bulk settings",
+      "批量操作"
     ],
     "targets": [
       "/account/unlock.html"
