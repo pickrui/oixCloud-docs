@@ -420,6 +420,19 @@
   },
   {
     "terms": [
+      "HTTP/3",
+      "HTTP3",
+      "HTTP/3 智能回退",
+      "HTTP/3 TCP fallback",
+      "HTTP/3 独享 IP",
+      "HTTP/3 dedicated IP"
+    ],
+    "targets": [
+      "/account/http3.html"
+    ]
+  },
+  {
+    "terms": [
       "流媒体",
       "streaming",
       "WARP",

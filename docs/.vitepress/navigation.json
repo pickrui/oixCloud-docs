@@ -190,6 +190,10 @@
           "link": "/account/relay"
         },
         {
+          "text": "HTTP/3 与智能回退",
+          "link": "/account/http3"
+        },
+        {
           "text": "IPv4 Only、WARP 与解锁",
           "link": "/account/unlock"
         },
@@ -412,6 +416,10 @@
         {
           "text": "Relays and your own destinations",
           "link": "/en/account/relay"
+        },
+        {
+          "text": "HTTP/3 and smart fallback",
+          "link": "/en/account/http3"
         },
         {
           "text": "IPv4 Only, WARP & streaming",

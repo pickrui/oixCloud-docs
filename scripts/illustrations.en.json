@@ -519,7 +519,11 @@
       "节点": "Node",
       "香港 · 示例 B": "HK · Example B",
       "香港 · 示例 C": "HK · Example C",
-      "出口偏好": "Egress preference"
+      "出口偏好": "Egress preference",
+      "HTTP/3 设置": "HTTP/3 Settings",
+      "香港 · 独享 IP - 192.0.2.10": "HK · Dedicated IP - 192.0.2.10",
+      "HTTP/3（智能回退）": "HTTP/3 with smart fallback",
+      "HTTP/3（不回退）": "HTTP/3 only"
     },
     "openclash": {
       "服务": "Services",
@@ -1609,6 +1613,24 @@
         [
           "Wait for sync and reconnect",
           "No subscription refresh. Old connections stay; only destination exits are restricted."
+        ]
+      ]
+    ],
+    "account-http3": [
+      "Set HTTP/3 and smart fallback",
+      "Website → Traffic Routes → HTTP/3",
+      [
+        [
+          "Check the node and address",
+          "Regular nodes are grouped. Each dedicated IP has its own setting."
+        ],
+        [
+          "Enable HTTP/3",
+          "TCP is the default. Try one node first with smart fallback on."
+        ],
+        [
+          "Save, then refresh the client",
+          "Fallback chooses HTTP/3 or TCP during setup. Existing connections do not migrate."
         ]
       ]
     ]

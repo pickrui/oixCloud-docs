@@ -295,7 +295,7 @@ function routeSettings(title, active, count) {
  tabs.forEach((label,i)=>{const x=249+i*134;s+=(i===active?R(x,304,130,35,'#e2edff',6):'')+T(x+65,327,label,15,i===active?'#326cc4':'#657b97',i===active?600:400,'middle',122)})
  s+=R(245,365,808,410,'#fff',12,'#d5deea')+T(267,400,title,21,'#405675',600)
  s+=T(1030,399,english?`Nodes: ${count}`:`节点 ${count}`,15,'#657b97',400,'end')
- s+=T(267,435,active===4?'与 WARP 一起使用':'回退与出口协议说明',16,'#657b97')
+ s+=T(267,435,active===2?'智能回退':active===4?'与 WARP 一起使用':'回退与出口协议说明',16,'#657b97')
  s+=R(267,457,475,39,'#f7f9fc',6,'#d5deea')+T(283,483,'⌕ 香港',17,'#445a77')
  s+=R(763,457,267,39,'#fff',6,'#d5deea')+T(780,483,'全部状态 ▾',16,'#445a77')
  s+=T(267,514,english?`Showing ${count} of ${count} nodes`:`显示 ${count} / ${count} 个节点`,14,'#657b97')
@@ -304,6 +304,24 @@ function routeSettings(title, active, count) {
  s+=T(294,547,'全选',15,'#445a77')+T(400,547,active===4?'已选 2 个节点':'已选 0 个节点',15,'#657b97')
  return s
 }
+
+add('account','http3','设置 HTTP/3 与智能回退','网站 → 流量路由 → HTTP/3',[
+ ['核对节点与独享 IP','普通节点按项设置；独享 IP 按完整地址分别设置'],
+ ['开启 HTTP/3','默认使用 TCP，先在常用节点尝试并保留智能回退'],
+ ['保存后更新客户端订阅','回退只在建连时选用传输，旧连接不会迁移']
+],()=>{
+ let s=routeSettings('HTTP/3 设置',2,3)
+ s+=R(246,573,806,37,'#edf2fa',0)+T(293,598,'节点',16,'#5c6e89',600)+T(782,598,'HTTP/3',16,'#5c6e89',600,'middle')+T(966,598,'智能回退',15,'#5c6e89',600,'middle',142)
+ const names=['香港 · 示例 A','香港 · 示例 B','香港 · 独享 IP - 192.0.2.10']
+ const states=['TCP','HTTP/3（智能回退）','HTTP/3（不回退）']
+ names.forEach((name,i)=>{
+  const y=611+i*54,on=i>0
+  s+=R(267,y+15,17,17,'#fff',3,'#9daec5')+T(296,y+23,name,17,'#314f78',600,'start',409)+T(296,y+45,states[i],14,'#657b97')+toggle(757,y+10,on)
+  s+=(on?'':'<g opacity="0.45">')+toggle(941,y+10,i<2)+(on?'':'</g>')
+  if(i<2)s+=L(264,y+53,1034,y+53)
+ })
+ return s+mark(291,722,414,43,1)+mark(749,669,66,43,2)+mark(933,669,66,43,3)
+})
 
 add('account','ipv4-only','搜索并批量开启 IPv4 Only','网站 → 流量路由 → IPv4 Only',[
  ['搜索与筛选节点','列表不分页；全选覆盖所有符合筛选条件的可用节点'],

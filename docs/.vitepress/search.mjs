@@ -56,6 +56,7 @@ export function tokenizeSearch(text) {
   const normalized = text.normalize('NFKC').toLowerCase()
     .replace(/\bauth[\s_-]*key\b/g, 'auth key')
     .replace(/\baccess[\s_-]*token\b/g, 'access token')
+    .replace(/\bhttp[\s/_-]*3\b/g, 'http3')
     .replace(/\bicloud[\s_-]*sync\b/g, 'icloud sync')
     .replace(/\bfake[\s_-]*ip\b/g, 'fake ip')
     .replace(/\bdomain[\s_-]*suffix\b/g, 'domain suffix')

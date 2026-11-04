@@ -95,6 +95,8 @@ Global mode does not mean every app on the system is captured. That still depend
 
 Use the managed configuration generated for your client. Avoid copying port and protocol combinations from old tutorials. An option works only when both the node and client support it. Keep the defaults when unsure, and refresh the configuration and test a connection after making changes.
 
+To change the client-to-node transport, see [HTTP/3 and smart fallback](/en/account/http3). Refresh the client subscription after saving; dedicated IPs are configured per address.
+
 ## Buying and renewing dedicated IPs
 
 | Check | Requirement |

@@ -26,7 +26,7 @@ IPv4 Only makes the selected node connect to websites using IPv4 only. Use it wh
 2. Turn on **IPv4 Only** in that row and wait for the automatic save result. For multiple nodes, follow [bulk operations](#bulk-settings) below.
 3. Wait for node synchronization, close the target app's old connections, then establish a new connection through that node and check the exit IP seen by the website. **No subscription refresh is required.**
 
-This feature preserves relay rules. When an internal relay path passes through a node with IPv4 Only enabled, the restriction continues to apply to that path's final destination connections. Your connection to the node, internal relay links and the WARP tunnel itself can still use IPv6. HTTP/3 controls the client-to-node transport and does not determine the address family seen by websites.
+This feature preserves relay rules. When an internal relay path passes through a node with IPv4 Only enabled, the restriction continues to apply to that path's final destination connections. Your connection to the node, internal relay links and the WARP tunnel itself can still use IPv6. [HTTP/3](/en/account/http3) controls the client-to-node transport and does not determine the address family seen by websites.
 
 IPv6-only websites and literal IPv6 destinations become unreachable. A client that resolves a domain to an IPv6 address before submitting it may also encounter this failure. The restriction covers destination connections handled by the node; it cannot control the final exits of external forwarding servers or further third-party proxies. Dedicated IP nodes are outside this setting's scope; check the page for configurable nodes.
 
