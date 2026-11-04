@@ -64,18 +64,20 @@ See [Fair use](/en/account/fair-use) for request bands, Working nodes bands, off
 
 ## Renewal and automatic switching
 
-When a plan expires or runs out of traffic, the system checks the steps below from top to bottom and continues with the first one that applies.
+Expiry and running out of traffic before expiry follow different paths. Both give priority to eligible plans in the activation queue. With no eligible queued plan, **automatic renewal is attempted only at expiry; running out of traffic before then can trigger automatic traffic reset, but never an early automatic renewal**.
+
+The flow below applies to accounts eligible for continuation. Blocked accounts and accounts suspended for debt do not continue automatically; their active plan ends at expiry and purchased queued plans are kept.
 
 <div class="plan-flow" role="group" aria-label="What happens when a plan expires or runs out of traffic">
 <div class="plan-flow-lane">
 <p class="plan-flow-event"><span>Plan expires</span></p>
 <div class="plan-flow-step">
-<p class="plan-flow-check">Is a plan waiting in the activation queue?</p>
+<p class="plan-flow-check">Is an eligible plan waiting in the activation queue?</p>
 <p class="plan-flow-yes"><span class="plan-flow-label">Yes</span>The first queued plan activates; if the old plan has automatic renewal on, it awaits auto-renewal</p>
 </div>
 <p class="plan-flow-no"><span class="plan-flow-label">No</span></p>
 <div class="plan-flow-step">
-<p class="plan-flow-check">Does a plan have automatic renewal on (the current one or one awaiting auto-renewal), with balance (including commission) covering its renewal price?</p>
+<p class="plan-flow-check">Does a plan have automatic renewal on (the current one or one awaiting auto-renewal), and meet renewal eligibility, billing-period and funding requirements?</p>
 <p class="plan-flow-yes"><span class="plan-flow-label">Yes</span>That plan's renewal price is charged and its next period starts</p>
 </div>
 <p class="plan-flow-no"><span class="plan-flow-label">No</span></p>
@@ -84,18 +86,22 @@ When a plan expires or runs out of traffic, the system checks the steps below fr
 <div class="plan-flow-lane">
 <p class="plan-flow-event"><span>Traffic runs out before expiry</span></p>
 <div class="plan-flow-step">
-<p class="plan-flow-check">Is a plan waiting in the activation queue?</p>
+<p class="plan-flow-check">Is an eligible plan waiting in the activation queue?</p>
 <p class="plan-flow-yes"><span class="plan-flow-label">Yes</span>The first queued plan activates and the old plan's remaining time is not kept; if it has automatic renewal on, it awaits auto-renewal</p>
 </div>
 <p class="plan-flow-no"><span class="plan-flow-label">No</span></p>
 <div class="plan-flow-step">
-<p class="plan-flow-check">Is automatic traffic reset on for this record, with balance (including commission) covering the reset price?</p>
+<p class="plan-flow-check">Is automatic traffic reset on for the active record, is this period eligible for reset, is the account allowed to purchase, and does balance (including commission) cover the reset price?</p>
 <p class="plan-flow-yes"><span class="plan-flow-label">Yes</span>The reset price is charged; used traffic is cleared and the expiry stays the same</p>
 </div>
 <p class="plan-flow-no"><span class="plan-flow-label">No</span></p>
-<p class="plan-flow-end">Low speed until expiry, then the plan expires as above. If automatic traffic reset is on, topping up enough for the reset price resets traffic within about a minute</p>
+<p class="plan-flow-end">Stay at low speed for now, without early automatic renewal; at expiry, follow the expiry flow above</p>
 </div>
 </div>
+
+Renewing an ordinary plan or resetting traffic requires balance (including commission) to cover the charge. Developer accounts renew developer plans for free.
+
+While at low speed, adding an eligible queued plan causes automatic switching first. With no queued plan, enabling automatic reset or adding sufficient funds resets traffic within about a minute if the period is eligible; you do not have to wait until expiry.
 
 | Operation or stage | Behavior and conditions |
 | --- | --- |
@@ -106,17 +112,19 @@ When a plan expires or runs out of traffic, the system checks the steps below fr
 
 ### Automatic renewal {#auto-renew}
 
-Only one plan has automatic renewal on at a time, and it is the plan renewed once all your plans are used up. New purchases start with automatic renewal off; turn it on in your purchase records when you want it. Turning it on for another purchase record or renewing early turns it off for the plan that had it.
+Only one plan has automatic renewal on at a time. The system attempts to renew it only when the active plan expires and no eligible queued plan remains; running out of traffic before expiry does not trigger automatic renewal. New purchases start with automatic renewal off; turn it on in your purchase records when you want it. Turning it on for another purchase record or renewing early turns it off for the plan that had it.
 
 You can turn automatic renewal on or off at any time. Turning it off does not forfeit the renewal price, and you can turn it back on any time before the plan ends. Turning it on requires the product to support automatic renewal and your account to still meet the plan's purchase requirements.
 
-When a plan with automatic renewal on is replaced by a queued plan, it becomes **Awaiting auto-renewal**: it is no longer in use, it is queued after your other plans, and it keeps its stock unit. When your other plans are used up and expire, it renews automatically for its original renewal price; if the balance including commission is short at that point, it ends. If you turn its automatic renewal off, it no longer shows this status and ends once your other plans are used up; turn it back on before then to renew it.
+When a plan with automatic renewal on is replaced by a queued plan, it becomes **Awaiting auto-renewal**: it is no longer in use, it is queued after your other plans, and it keeps its stock unit. When the active plan expires and no eligible queued plan remains, the waiting record renews at its recorded renewal price if renewal eligibility, billing-period and funding requirements are met. Insufficient funds or lost renewal eligibility ends it. If you turn its automatic renewal off, it no longer shows this status and ends when the active plan expires with no eligible queued replacement; turning it back on before then allows renewal if the requirements are met.
+
+For example, A is awaiting auto-renewal, B is active, and no other plan is queued. If B runs out of traffic early, the system first attempts a reset according to B's setting; otherwise B stays at low speed. Renewal of A is attempted only when B expires.
 
 ### Automatic traffic reset {#traffic-reset}
 
-Each purchase record has its own "Automatic traffic reset" switch. It is off by default, and records created by renewal keep the original setting. When it is on and traffic runs out with no queued plan available, used traffic is cleared at the reset price and the expiry stays the same. The reset price is shown under the switch in the purchase record, and coupon discounts do not apply to it.
+Each purchase record has its own "Automatic traffic reset" switch. It is off by default, and records created by renewal keep the original setting. When it is on, traffic has run out before expiry, no eligible queued plan is available, the period supports reset, the account is allowed to purchase and funds are sufficient, used traffic is cleared at the reset price and the expiry stays the same. The reset price is shown under the switch in the purchase record, and coupon discounts do not apply to it.
 
-If your traffic has already run out when you turn it on, you are charged and the traffic is reset within about a minute. If your balance including commission is short, the plan stays at low speed until you top up enough for the reset price. It resets whenever traffic runs out before expiry; if that happens close to expiry, the plan still renews at expiry according to your automatic renewal setting. Developer and pay-as-you-go plans do not offer it.
+If your traffic has already run out when you turn it on, the charge and reset happen within about a minute if the conditions above are met. If insufficient balance including commission is the only obstacle, the plan stays at low speed and resets after you add enough funds. Reset is available at any time before expiry when the conditions are met. A reset close to expiry does not extend validity: at expiry, queued plans still take priority, and automatic renewal is considered only when no eligible queued plan remains. Developer and pay-as-you-go plans do not offer it.
 
 ## Benefit credits {#benefit-credits}
 
@@ -160,7 +168,7 @@ Manually switching plans deducts 2 hours from the original plan's validity, then
 | Use the next plan now | Manually activate a queued plan | Read the old plan's deduction/retention preview, then check the newly active record |
 | Automatically restore speed when traffic runs out | Turn on automatic traffic reset | Enable in the purchase record and ensure balance covers the reset price |
 | Raise an active quarterly, semiannual or annual tier | Upgrade when eligible, keeping the billing period | Price difference, fee, remaining validity and resulting allowance |
-| Renew a different plan once everything is used up | Turn on automatic renewal for that purchase record | The plan that had it is switched off; the confirmation names it |
+| Renew a different plan when the active plan expires with an empty queue | Turn on automatic renewal for that purchase record | The plan that had it is switched off; the confirmation names it |
 | Stop automatic renewal charges | Turn off automatic renewal | The purchase record shows it off; you can turn it back on later at the same renewal price |
 
 ## Confirm a purchase
@@ -188,7 +196,7 @@ A missing transaction or mismatched network/recipient may require you to correct
 
 Check the cause of exhaustion to verify the corresponding continuation conditions:
 
-- **At plan expiry**: Check whether an activatable plan exists in the queue first. If there are no queued plans, the plan with automatic renewal on is renewed, which may be the current plan or one awaiting auto-renewal; check that its automatic renewal is on, that account balance covers its renewal price, and that the product currently allows renewal.
-- **When traffic runs out**: Check whether an activatable plan exists in the queue first. If there are no queued plans, check whether automatic traffic reset is enabled on that purchase record, and whether balance (including commissions) covers the reset price. Automatic renewal runs only at expiry and is never triggered prematurely by running out of traffic.
+- **At plan expiry**: Check whether an activatable plan exists in the queue first. If there are no queued plans, the plan with automatic renewal on is renewed, which may be the current plan or one awaiting auto-renewal; check that its automatic renewal is on, that balance (including commission) covers its renewal price, and that renewal eligibility and billing-period requirements are met.
+- **When traffic runs out**: Check whether an activatable plan exists in the queue first. If there are no queued plans, check whether automatic traffic reset is enabled on the active purchase record, the period supports reset, the account is allowed to purchase, and balance (including commission) covers the reset price. Automatic renewal runs only at expiry and is never triggered prematurely by running out of traffic.
 
 Manual activation, upgrade and refund options appear based on order eligibility; when an option is not offered, do not attempt to simulate it by creating duplicate orders.
