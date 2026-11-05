@@ -762,6 +762,38 @@
       "款项不退到支付渠道": "No funds are returned to the payment provider",
       "取消": "Cancel",
       "确定": "Confirm"
+    },
+    "account-coupon-use": {
+      "购买套餐": "Buy Plan",
+      "确认购买": "Confirm Purchase",
+      "示例套餐 A · 季付": "Example plan A · Quarterly",
+      "折扣代码": "Coupon Code",
+      "验证": "Verify",
+      "✓ 循环折扣代码": "✓ Recurring coupon",
+      "20%（节省 ¥20.00）": "20% (save ¥20.00)",
+      "实付金额": "Total Due",
+      "当前续费 ¥80.00（最低为当期套餐售价的 70%）": "Renewal ¥80.00 at current prices (minimum 70% of plan price)"
+    },
+    "account-coupon-bind": {
+      "套餐管理": "Plan Management",
+      "示例套餐 A · 待激活": "Example plan A · Pending",
+      "绑定折扣": "Apply Coupon",
+      "绑定折扣代码": "Apply Coupon Code",
+      "验证": "Verify",
+      "折扣后价格：": "Discounted Price:",
+      "退还差价：": "Refund Difference:",
+      "✓ 循环折扣代码": "✓ Recurring coupon",
+      "确认绑定": "Apply Coupon"
+    },
+    "account-coupon-recurring": {
+      "套餐管理": "Plan Management",
+      "使用中": "Active",
+      "折扣代码": "Coupon Code",
+      "续费价格": "Renewal Price",
+      "自动续费": "Auto-renewal",
+      "剩余时间": "Time Left",
+      "20 天": "20 d",
+      "剩余流量": "Data Left"
     }
   },
   "scenes": {
@@ -2004,6 +2036,60 @@
         [
           "Verify the result",
           "Verify balance and Refunded. This plan has ended."
+        ]
+      ]
+    ],
+    "account-coupon-use": [
+      "Verify a coupon and check the renewal quote",
+      "Website → Buy Plan → Confirm Purchase → Verify",
+      [
+        [
+          "Enter one complete code",
+          "Keep its case. Verify again for a different plan or period."
+        ],
+        [
+          "Check type and renewal",
+          "One-time differs from recurring. 20% off means paying 80%."
+        ],
+        [
+          "Check the total, then buy",
+          "Verification is not a purchase and does not enable renewal."
+        ]
+      ]
+    ],
+    "account-coupon-bind": [
+      "Check the settlement before applying a coupon",
+      "Website → Plan Management → Apply Coupon → Verify",
+      [
+        [
+          "Use the original record",
+          "Normally within 7 days of purchase. Upgrades do not restart it."
+        ],
+        [
+          "Check refund or charge",
+          "This example refunds ¥20. Your quote may show a charge."
+        ],
+        [
+          "Verify balance and renewal",
+          "Recurring codes update the renewal price, not the switch."
+        ]
+      ]
+    ],
+    "account-coupon-recurring": [
+      "Check the recurring code and auto-renewal",
+      "Website → Plan Management → Coupon Code and Auto-renewal",
+      [
+        [
+          "Check the purchase record",
+          "The benefit follows this record, not unlimited new redemptions."
+        ],
+        [
+          "Check the renewal price",
+          "First purchase may cost less. Renewal price floors apply."
+        ],
+        [
+          "Enable renewal separately",
+          "Shown on. Having a code does not mean this switch is on."
         ]
       ]
     ]

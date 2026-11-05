@@ -96,7 +96,7 @@ If you have a top-up code, open [Top-up Code and Records](https://oixcloud.com/u
 </figure>
 
 1. Open the [plan store](https://oixcloud.com/user/shop), choose a supported billing period, and check its total data allowance, validity, intended use, stock and total price. The monthly equivalent is a price comparison, not monthly billing or a monthly traffic reset.
-2. Select **Buy** or **Add Plan**. In **Confirm Purchase**, check the plan, billing period and price. If using a coupon, select **Verify** and check the resulting Total Due. USD is a reference only; confirmation and actual charges use CNY.
+2. Select **Buy** or **Add Plan**. In **Confirm Purchase**, check the plan, billing period and price. If using a coupon, follow the [code steps](#coupon-use), select **Verify** and check the resulting Total Due. USD is a reference only; confirmation and actual charges use CNY.
 3. Read the terms and any plan-specific notices, complete the requested checkbox or typed acknowledgement, then confirm. Follow checkout for any shortfall instead of submitting several orders.
 4. Return to **Plan Management** and check **Active** or **Pending**, Time Left and Data Left. Adding a plan does not immediately replace an existing one.
 
@@ -120,6 +120,86 @@ Temporary automatic-purchase failures may be retried. If a notice says the autom
 ### Purchased plans and later store changes
 
 When a purchased record is activated, its saved plan type is applied; regular plans also use the allowance saved on that record. Pay-as-you-go availability is still calculated from balance, commission and the current unit price. Changing the same store product to pay-as-you-go or another type does not turn an existing regular plan into pay-as-you-go. For a new purchase, renewal or upgrade, check the plan and price on that operation's confirmation page.
+
+## Coupon codes {#coupons}
+
+Coupon codes apply to plan purchases, eligible changes/upgrades or application after purchase. They do not top up your balance and are not top-up codes, signup invitation codes or Access Tokens. Enter one code per operation without stacking; preserve its case and verify it for the selected plan, billing period and action.
+
+System codes may restrict dates, plans, billing periods, account eligibility, usage scenes, total uses and per-user uses. A code accepted for a new purchase may not support upgrades or application after purchase. Copy codes you generated from **My Discount Codes** in the [Benefits Center](https://oixcloud.com/user/benefits). Currently these are one-time codes for your own use or a new user with no purchase records. Generating one consumes the displayed benefit credits and cannot be undone; a used code cannot be reused.
+
+### Use a code when buying {#coupon-use}
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-coupon-use-en.svg?v=20261105-6" target="_blank" rel="noopener" aria-label="Verify a coupon and check the renewal quote">
+    <img src="/illustrations/account-coupon-use-en.svg?v=20261105-6" alt="Verify a coupon and check the renewal quote" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Interface simulation · Fictional prices and unusable example code · Click to enlarge</figcaption>
+</figure>
+
+1. Select the plan and billing period in the [plan store](https://oixcloud.com/user/shop), open **Confirm Purchase**, enter the **Coupon Code** and select **Verify**.
+2. Check verification success, the discount percentage, **One-time coupon** or **Recurring coupon**, Total Due, and the displayed renewal quote or renewal-unavailable message. **20% off means paying 80% of the original price**, not 20%.
+3. Verify again after changing the code, plan or period. Verification only quotes the operation: it does not buy a plan, reserve a coupon use or complete payment. Availability is checked again when you submit.
+4. Follow the [purchase steps](#purchase) to accept the terms and pay, then check the plan record and balance. A one-time purchase discount does not extend to renewals. A recurring coupon does not turn auto-renewal on by itself.
+
+Final purchase prices follow the displayed rounding rules. Upgrades, application after purchase and recurring renewals use different pricing rules; do not assume the same percentage produces the same result for every action.
+
+### Apply a coupon after purchase {#bind-coupon}
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-coupon-bind-en.svg?v=20261105-6" target="_blank" rel="noopener" aria-label="Check the settlement before applying a coupon">
+    <img src="/illustrations/account-coupon-bind-en.svg?v=20261105-6" alt="Check the settlement before applying a coupon" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Interface simulation · Fictional prices and unusable example code · Click to enlarge</figcaption>
+</figure>
+
+**Applying a coupon settles the current period immediately: it may refund or charge account balance.** **Apply Coupon** normally requires a paid record that is still Active or Pending and is within 7 days of its original purchase. Upgrading does not restart that window. Special converted records are excluded. If a one-use late-application allowance has been granted separately, follow the available button; successful application consumes that allowance.
+
+1. Open [Plan Management](https://oixcloud.com/user/bought), check the original purchase record and select **Apply Coupon** to open **Apply Coupon Code**.
+2. Enter a system code eligible for this action, or an unused code you generated yourself, then select **Verify**. Another person's new-user code cannot be applied to an existing purchase.
+3. Check **Discounted Price** and **Refund Difference** or **Amount Due**, along with coupon type and renewal quote. Settlement compares the current period's discounted price with the record's prior price, prorated by remaining duration; an active plan does not receive a full-period difference. The discounted price for this action has a 70% floor based on the period's current store price and follows rounding rules, so applying later may differ from using the code at purchase.
+4. Accept the settlement and renewal effect before selecting **Apply Coupon** in the dialog. Ensure enough funds for a charge. Verify again if the code or quote changes. A non-recurring code with no price difference is rejected as making no change, without consuming a use.
+5. Check the balance, renewal information and code-use status after success. This action does not extend validity, add/reset data or turn on auto-renewal. After a one-time application, the Coupon Code column can remain blank or keep the old recurring code; check the settlement result.
+
+**Cancel if a one-time code only adds a charge**: it does not improve renewal benefits. An existing recurring benefit does not need repeated application; do not submit the same code again to keep it, as that can consume another use.
+
+Unlike a [refund to balance](#refund), applying a coupon settles only the price difference and keeps the plan. Successful application consumes a code use; refunding the plan does not restore a used code.
+
+### Recurring coupons and renewals {#recurring-coupon}
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-coupon-recurring-en.svg?v=20261105-6" target="_blank" rel="noopener" aria-label="Check the recurring code and auto-renewal">
+    <img src="/illustrations/account-coupon-recurring-en.svg?v=20261105-6" alt="Check the recurring code and auto-renewal" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Interface simulation · Fictional prices and unusable example code · Click to enlarge</figcaption>
+</figure>
+
+Recurring means the corresponding purchase record can carry the successfully applied benefit forward. **It does not mean unlimited new redemptions, a permanently fixed price or automatic enrollment in auto-renewal.** Follow the [auto-renewal steps](#auto-renew) to select the record and check its switch. Queued plans, expiry, funding and renewal eligibility still follow the usual rules.
+
+| Action | Effect on renewal discounts |
+| --- | --- |
+| Buy with a one-time code | Discounts this purchase only; renewal uses the regular renewal quote shown at purchase |
+| Buy with a recurring code | Saves the applicable benefit and renewal price; a new purchase still starts with auto-renewal off |
+| Apply a one-time code after purchase | Settles the current-period difference and preserves the existing renewal price and recurring benefit |
+| Apply a recurring code after purchase | Settles the current-period difference and replaces this record's recurring benefit and renewal price; discounts do not stack and the renewal switch keeps its setting |
+| Leave the code blank during a change/upgrade | Attempts to inherit the existing recurring benefit, subject to target-plan and period eligibility; follow any refusal message |
+| Enter a new code during a change/upgrade | Quotes and sets renewal benefits using that code; a new one-time code does not preserve the old recurring benefit, so check the renewal price before confirming |
+
+Recurring renewal quotes have a floor of 70% of the corresponding period's price, so the discounted first purchase may cost less than a renewal. The current renewal charges the old record's renewal price; after it completes, the new record's next renewal price may be adjusted to the 70% floor based on the plan price at that time. Check that record rather than treating the first quote as a permanent price lock.
+
+Expiry, disabling or exhausted uses affect new redemptions; renewals carrying an already-recorded recurring benefit do not require re-entering the code each period. Renewing the original plan differs from carrying its benefit to another plan. A failed upgrade preview does not itself change the old renewal price. Automatic traffic resets do not receive coupon discounts.
+
+### Verification failures or unexpected amounts
+
+| Message or symptom | Check first |
+| --- | --- |
+| Not found, not started, expired, disabled or out of uses | Code case, validity and available uses; avoid repeated rapid checks |
+| Unsupported plan, period or action | The selected plan and period, and whether this is a purchase, upgrade or application after purchase |
+| New-user or account restriction | Purchase history and eligibility; self-generated and shared codes have different conditions |
+| No Apply Coupon button | Original purchase time, record state, paid amount and converted-record restrictions; upgrading cannot restart the window |
+| Application requires payment or the quote changed | Review the new charge/refund direction and amount; applying a coupon does not guarantee a refund |
+| One-time code applied but renewal price unchanged | Expected: this settles only the current-period difference; a recurring code updates the renewal benefit |
+
+If the result is unclear, check balance, plan records and the message before providing record details and the exact error in a [support ticket](/en/help/support#payment). Do not repeatedly buy or apply codes.
 
 ## Sold out and automatic restocking {#stock}
 
@@ -280,7 +360,7 @@ The target must also meet purchase, stock and funding requirements. Special conv
 </figure>
 
 1. Open [Plan Management](https://oixcloud.com/user/bought), check the original record and select **Upgrade** for an active plan or **Change** for a never-used pending plan.
-2. In **Change / Upgrade**, select the target and check the billing period. Optionally enter a coupon and select **Verify**. Leaving it blank attempts to inherit the original recurring coupon, which must still apply to the target and period; retention is not unconditional.
+2. In **Change / Upgrade**, select the target and check the billing period. Optionally enter a coupon and select **Verify**. Leaving it blank attempts to inherit the original recurring coupon, which must still apply to the target and period; retention is not unconditional. Before entering a new code, check its [effect on the existing recurring benefit](#recurring-coupon).
 3. Wait for the preview and check **Actual payment amount**, the discount and renewal price. For an ordinary-plan upgrade, also check **High-speed data after upgrade** and **Net data change**. Add sufficient funds if needed and review again if the target or amount changes.
 4. Accept the charges and data changes below before selecting **Confirm Change / Upgrade**. Afterwards, check the target plan, status, remaining data, expiry and renewal settings on the purchase record. Refresh client account information and the managed profile after changing an active plan.
 

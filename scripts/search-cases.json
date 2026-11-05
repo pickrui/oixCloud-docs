@@ -758,5 +758,18 @@
     "targets": [
       "/account/plans.html"
     ]
+  },
+  {
+    "terms": [
+      "折扣代码 验证",
+      "循环折扣 续费",
+      "绑定折扣 差价",
+      "coupon code verify",
+      "recurring coupon renewal",
+      "apply coupon after purchase"
+    ],
+    "targets": [
+      "/account/plans.html"
+    ]
   }
 ]
