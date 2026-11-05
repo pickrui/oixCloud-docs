@@ -717,6 +717,17 @@
       "到账金额需完全一致，请保留全部小数位": "Send the exact amount, including every decimal place",
       "提现手续费计算": "Withdrawal fee calculator",
       "订单详情": "Order details"
+    },
+    "account-crypto-feedback": {
+      "收银台": "Cashier",
+      "虚拟币订单记录": "Crypto Order Records",
+      "订单号": "Order Number",
+      "充值金额": "Top-up Amount",
+      "未到账反馈": "Report missing payment",
+      "交易哈希值": "Transaction Hash",
+      "问题描述": "Issue Description",
+      "付款时间、网络及问题（选填）": "Payment time, network and issue (optional)",
+      "提交": "Submit"
     }
   },
   "scenes": {
@@ -1887,6 +1898,24 @@
         [
           "Check withdrawal fees",
           "The amount received must match the order. Wait for confirmation; do not pay twice."
+        ]
+      ]
+    ],
+    "account-crypto-feedback": [
+      "Report a cryptocurrency payment that was not credited",
+      "Website → Cashier → Crypto Order Records → Report missing payment",
+      [
+        [
+          "Find the original order",
+          "Records appear below the payment area on the full page, not in the payment dialog."
+        ],
+        [
+          "Enter the original hash",
+          "Submit a first request from 5 minutes to 48 hours after order creation."
+        ],
+        [
+          "Follow the result",
+          "Review any proposed credit. Do not resubmit during automatic checks or manual review."
         ]
       ]
     ]

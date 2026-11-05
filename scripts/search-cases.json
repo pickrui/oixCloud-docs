@@ -737,7 +737,10 @@
       "套餐 自动续费",
       "plan renewal price",
       "自动重置流量",
-      "automatic traffic reset"
+      "automatic traffic reset",
+      "虚拟货币 未到账反馈",
+      "Crypto Order Records",
+      "Report missing payment"
     ],
     "targets": [
       "/account/plans.html"

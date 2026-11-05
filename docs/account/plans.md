@@ -18,7 +18,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-top-up-zh.svg?v=20261105-1" target="_blank" rel="noopener" aria-label="选择支付方式并核对充值金额">
     <img src="/illustrations/account-top-up-zh.svg?v=20261105-1" alt="选择支付方式并核对充值金额" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构渠道、金额与记录，示例充值码不可使用 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构渠道与金额 · 点击放大</figcaption>
 </figure>
 
 ### 法币充值 {#fiat-top-up}
@@ -44,7 +44,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-crypto-top-up-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="核对虚拟货币订单再转账">
     <img src="/illustrations/account-crypto-top-up-zh.svg?v=20261105-3" alt="核对虚拟货币订单再转账" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构数据，不可用于付款 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构数据 · 点击放大</figcaption>
 </figure>
 
 1. 选择收银台提供的虚拟货币方式；入口已注明网络时使用该网络，多币种入口则先选择币种，核对页面给出的网络、汇率和平台手续费
@@ -55,11 +55,12 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
 6. 在订单有效期内转账一次并保留交易哈希。当前虚拟货币订单付款有效期为 60 分钟，以页面倒计时为准；未付款而已过期时重新创建订单，不再使用旧金额或旧地址
 7. 返回收银台等待查询与链上确认，再到 [充值记录](https://oixcloud.com/user/code) 核对实际入账。钱包显示已发出、链上已确认与网站余额已入账是不同阶段
 
+**已付款但未自动到账？** 在完整收银台下方的「虚拟币订单记录」点击「未到账反馈」，见 [入口示意图与处理步骤](#crypto-payment-feedback)
+
 | 页面状态或问题 | 如何处理 |
 | --- | --- |
-| 已检测到交易，等待链上确认 | 等待确认入账，不要重复转账 |
 | 正在重新连接 | 查询暂时中断，不代表付款失败；已付款时先核对原订单和充值记录 |
-| 已检测到交易，尚未确认入账 | 即使付款窗口结束，也不要再次转账或新建订单；检查记录，未到账按 [反馈步骤](#crypto-payment-feedback) 处理 |
+| 已检测到交易，尚未确认入账 | 等待链上确认；即使付款窗口结束，也不要再次转账或新建订单；检查记录，未到账按 [反馈步骤](#crypto-payment-feedback) 处理 |
 | 少付、网络选错或付款超过有效期 | 保留原订单、交易哈希与凭证，按 [未到账反馈](#crypto-payment-feedback) 核查；不要自行追加转账或另建订单补救 |
 | 充值成功 | 核对余额和套餐记录；不要再次付款 |
 
@@ -78,7 +79,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
 
 | 遇到的情况 | 处理方式 |
 | --- | --- |
-| 已扣款但未到账 | 先核对原订单和充值记录，保留订单号、金额、付款时间及支付凭证，勿重复付款；虚拟币使用 [未到账反馈](#crypto-payment-feedback)，其他方式提交 [服务单](/help/support) |
+| 已扣款但未到账 | 先核对原订单和充值记录，保留订单号、金额、付款时间及支付凭证，勿重复付款；虚拟货币使用 [未到账反馈](#crypto-payment-feedback)，其他方式提交 [服务单](/help/support) |
 | 订单已过期 | 未付款的重新下单，勿再向旧订单转账；已经付款的先查原订单和记录，不要直接再付一笔 |
 | 待支付订单过多 | 按页面提示处理旧订单；已付款但结果不明的先核对，不要为了继续下单删除原订单 |
 | 到账后余额或流量不符合预期 | 核对欠款抵扣、套餐购买、自动续费或自动重置结果；单纯充值不会直接给普通套餐增加流量 |
@@ -91,7 +92,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-purchase-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="选择计费周期后核对购买订单">
     <img src="/illustrations/account-purchase-zh.svg?v=20261105-3" alt="选择计费周期后核对购买订单" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构数据，不可用于付款 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构数据 · 点击放大</figcaption>
 </figure>
 
 1. 打开 [套餐商店](https://oixcloud.com/user/shop)，选择商品支持的计费周期，核对该周期的总流量、有效期、用途、库存和总价；「折合每月」是价格参考，不代表按月扣款或每月重置流量
@@ -108,7 +109,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
 </figure>
 
-充值先增加余额，购买才生成套餐订单。当前没有套餐时，新购套餐可直接生效；已有套餐时，新购套餐进入待激活队列。购买前查看周期、等级、总流量和结算金额，支付后到「套餐管理」确认当前生效套餐
+充值先增加余额，购买才生成套餐订单。当前没有套餐时，新购套餐可直接生效；已有套餐时，新购套餐进入待激活队列。按上方步骤购买后，在此确认当前生效套餐
 
 ### 从套餐购买进入收银台
 
@@ -204,7 +205,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-renewal-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="核对自动续费对象和续费价格">
     <img src="/illustrations/account-renewal-zh.svg?v=20261105-3" alt="核对自动续费对象和续费价格" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构数据，不可用于付款 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构数据 · 点击放大</figcaption>
 </figure>
 
 1. 打开 [套餐管理](https://oixcloud.com/user/bought)，找到希望到期后续上的记录，点击它的「自动续费」开关
@@ -228,7 +229,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-traffic-reset-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="开启自动重置前核对每次费用">
     <img src="/illustrations/account-traffic-reset-zh.svg?v=20261105-3" alt="开启自动重置前核对每次费用" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构数据，不可用于付款 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构数据 · 点击放大</figcaption>
 </figure>
 
 1. 打开 [套餐管理](https://oixcloud.com/user/bought)，在目标记录中找到「自动重置流量」，核对开关下方的每次费用；待激活记录的设置在激活后才适用
@@ -293,17 +294,24 @@ Pass Gold 及以上年付套餐（含按量付费）在自然到期时发放权�
 
 如果支付平台已扣款但页面没有成功结果，先核对充值记录和套餐记录，保留订单号及时间再联系支持；充值到账与套餐购买是两个状态，购买流程中的自动处理也需分别确认
 
-## 虚拟币充值未到账 {#crypto-payment-feedback}
+## 虚拟货币充值未到账 {#crypto-payment-feedback}
 
-以下步骤适用于收银台显示的虚拟币充值订单；其他支付方式按订单页面说明处理
+打开完整的 [收银台页面](https://oixcloud.com/user/v2/counter)，向下找到付款区域下方的「**虚拟币订单记录**」，在原订单的「操作」列点击「**未到账反馈**」。嵌入式付款弹窗不显示这块记录，找不到时请打开完整页面
 
-1. 打开 [收银台](https://oixcloud.com/user/v2/counter)，找到原虚拟币充值订单，核对订单号、创建时间和到账状态，先不要重复付款
-2. 订单创建满 5 分钟后，符合条件的记录可点「未到账反馈」；入口保留至创建后 48 小时，以页面是否提供按钮为准
-3. 填入完整交易哈希，补充实际付款时间、链路及问题说明。TRC20 哈希为 64 位十六进制；Polygon / BSC 为 `0x` 开头的 66 位十六进制。交易哈希不是订单号、钱包地址或私钥
-4. 提交后阅读系统核对结果。若要求确认实际入账金额、差额或链路问题，先核对说明再决定；不确定时保留提示并联系支持
-5. 返回充值记录确认到账，再到「套餐管理」检查购买／激活结果。反馈提交成功或进入审核，不代表已到账或套餐已经生效
+<figure class="guide-figure">
+  <a href="/illustrations/account-crypto-feedback-zh.svg?v=20261105-4" target="_blank" rel="noopener" aria-label="找到未到账反馈按钮并提交原交易">
+    <img src="/illustrations/account-crypto-feedback-zh.svg?v=20261105-4" alt="找到未到账反馈按钮并提交原交易" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>界面示意 · 虚构订单与哈希占位符 · 点击放大</figcaption>
+</figure>
 
-未找到交易、链路或收款信息不匹配时，按提示自行核对，并不一定进入人工审核；待审核时无需反复提交同一笔付款。没有入口、超过反馈时限或结果持续不明时，按 [付款问题服务单](/help/support#payment) 提交原订单资料。不要为了找回原付款新建重复订单，也不要提供钱包私钥、助记词或验证码
+1. 核对原订单号、创建时间和金额；已经付款的不要重复支付或删除。列表显示近 48 小时未入账的订单，以及更早但仍在自动核查、待用户确认或人工审核中的反馈；已到账的到 [充值记录](https://oixcloud.com/user/code) 核对
+2. 创建未满 5 分钟时，按钮显示「等待自动入账」，点击会重新打开原付款订单；满 5 分钟后，符合条件的记录显示「未到账反馈」。首次反馈须在创建后 48 小时内提交；已进入处理中的反馈不会仅因超过该期限而消失
+3. 在「未到账反馈」窗口填写完整的「交易哈希值」，可在「问题描述」补充实际付款时间、转账网络及问题，再点击「提交」。TRC20 哈希为 64 位十六进制；Polygon／BSC 为 `0x` 开头的 66 位十六进制。交易哈希不是订单号、钱包地址或私钥；已自动填入且不能修改时，继续处理这份原反馈
+4. 按返回状态操作：「自动核查中」或「人工审核中」时等待，不反复提交；「等待您确认」时重新点击该操作入口，核对拟入账金额后决定是否确认；「核实后重新提交」时按说明检查哈希与付款资料。已关联交易的订单也可能显示「重试反馈通知」，按提示继续，不要另建订单
+5. 返回充值记录确认实际到账，再到「套餐管理」检查购买／激活结果。反馈提交成功、进入审核或订单从这张列表消失，都不能单独证明到账或套餐生效
+
+没有入口、超过首次反馈时限或结果持续不明时，按 [付款问题服务单](/help/support#payment) 提交原订单资料与页面提示。不要提供钱包私钥、助记词或验证码
 
 ## 自动接续没有发生
 

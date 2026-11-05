@@ -18,14 +18,14 @@ A top-up adds account balance; buying a plan is a separate step. If checkout was
   <a href="/illustrations/account-top-up-en.svg?v=20261105-1" target="_blank" rel="noopener" aria-label="Choose a method and check the top-up amount">
     <img src="/illustrations/account-top-up-en.svg?v=20261105-1" alt="Choose a method and check the top-up amount" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional channel, amounts and records; example code cannot be redeemed · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional channel and amount · Click to enlarge</figcaption>
 </figure>
 
 ### Fiat top-ups {#fiat-top-up}
 
 Use the fiat methods currently shown in checkout, such as Alipay or WeChat Pay. Available methods and amount limits follow the page.
 
-1. Sign in, open [Checkout](https://oixcloud.com/user/v2/counter), choose a payment method and enter the amount.
+1. Sign in, open [Cashier](https://oixcloud.com/user/v2/counter), choose a payment method and enter the amount.
 2. Check **CNY / USD** beside the field. CNY is the RMB order amount. USD is a reference conversion: review and confirm the CNY amount before placing the order. Use CNY if the exchange rate is unavailable.
 3. Pay using that order's QR code or link. Check the actual amount and fees on the payment order.
 4. Return to [Top-up History](https://oixcloud.com/user/code), verify the credit and refresh your balance. For checkout associated with a plan, also verify the resulting purchase in Plan Management.
@@ -44,7 +44,7 @@ Cryptocurrency payments require a transfer to the order's address on its specifi
   <a href="/illustrations/account-crypto-top-up-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the crypto order before transferring">
     <img src="/illustrations/account-crypto-top-up-en.svg?v=20261105-3" alt="Check the crypto order before transferring" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional data, not for payment · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 1. Choose an available cryptocurrency method. If the entry specifies a network, use that network. For a multi-asset entry, select the asset and check its displayed network, exchange rate and platform fee.
@@ -55,12 +55,13 @@ Cryptocurrency payments require a transfer to the order's address on its specifi
 6. Transfer once within the payment window and retain the transaction hash. Crypto orders currently allow 60 minutes; follow the displayed countdown. If an unpaid order expires, create a new one and do not reuse the old amount or address.
 7. Return to checkout for payment monitoring and chain confirmation, then verify the actual credit in [Top-up History](https://oixcloud.com/user/code). Wallet submission, blockchain confirmation and website crediting are separate stages.
 
+**Paid but not automatically credited?** Select **Report missing payment** in **Crypto Order Records** below the payment area on the full Cashier page; see the [entry illustration and steps](#crypto-payment-feedback).
+
 | Status or problem | Action |
 | --- | --- |
-| Transaction detected, awaiting on-chain confirmation | Wait for crediting; do not transfer again |
 | Reconnecting | The status query was interrupted, which does not prove payment failure. If already paid, check the original order and top-up history |
-| Transaction detected, payment not yet credited | Do not transfer again or create another order even if the payment window ended. Check history and use [missing-credit feedback](#crypto-payment-feedback) if needed |
-| Underpayment, wrong network or late transfer | Keep the original order, hash and receipt for [missing-credit feedback](#crypto-payment-feedback). Do not send an extra transfer or create another order as a workaround |
+| Transaction detected, payment not yet credited | Wait for on-chain confirmation. Do not transfer again or create another order even if the payment window ended. Check history and use [missing-payment feedback](#crypto-payment-feedback) if needed |
+| Underpayment, wrong network or late transfer | Keep the original order, hash and receipt for [missing-payment feedback](#crypto-payment-feedback). Do not send an extra transfer or create another order as a workaround |
 | Top-up successful | Verify balance and plan records; do not pay again |
 
 After a standalone top-up, complete your purchase in the [plan store](https://oixcloud.com/user/shop). Existing automatic renewal or traffic reset may spend the funds under their rules, so also check [Plan Management](https://oixcloud.com/user/bought).
@@ -91,7 +92,7 @@ If you have a top-up code, open [Top-up Code and Records](https://oixcloud.com/u
   <a href="/illustrations/account-purchase-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the billing period and purchase total">
     <img src="/illustrations/account-purchase-en.svg?v=20261105-3" alt="Check the billing period and purchase total" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional data, not for payment · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 1. Open the [plan store](https://oixcloud.com/user/shop), choose a supported billing period, and check its total data allowance, validity, intended use, stock and total price. The monthly equivalent is a price comparison, not monthly billing or a monthly traffic reset.
@@ -108,7 +109,7 @@ If you have a top-up code, open [Top-up Code and Records](https://oixcloud.com/u
   <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
 </figure>
 
-Adding funds increases your account balance; buying creates a plan order. A new plan can take effect immediately when you have no current plan. If you already have one, the new plan enters the activation queue. Before buying, check the billing period, tier, total traffic, and final price. After payment, open Plan Management to confirm which plan is active.
+Adding funds increases your account balance; buying creates a plan order. A new plan can take effect immediately when you have no current plan. If you already have one, the new plan enters the activation queue. After following the purchase steps above, confirm the active plan here.
 
 ### Checkout opened from a plan purchase
 
@@ -204,7 +205,7 @@ While at low speed, adding an eligible queued plan causes automatic switching fi
   <a href="/illustrations/account-renewal-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the renewal target and price">
     <img src="/illustrations/account-renewal-en.svg?v=20261105-3" alt="Check the renewal target and price" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional data, not for payment · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 1. Open [Plan Management](https://oixcloud.com/user/bought), find the record you want to renew after expiry, and select its **Auto-renewal** switch.
@@ -228,7 +229,7 @@ For example, A is awaiting auto-renewal, B is active, and no other plan is queue
   <a href="/illustrations/account-traffic-reset-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the cost of each automatic reset">
     <img src="/illustrations/account-traffic-reset-en.svg?v=20261105-3" alt="Check the cost of each automatic reset" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional data, not for payment · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
 1. Open [Plan Management](https://oixcloud.com/user/bought) and find **Automatic traffic reset** on the target record. Check the per-reset price beneath it. A pending record's setting applies only after activation.
@@ -291,19 +292,26 @@ Manually switching plans deducts 2 hours from the original plan's validity, then
 
 After following the [purchase steps](#purchase), check the record's status, time and data in Plan Management. Once active, refresh account information and the managed client profile to update node permissions. Do not buy again merely because a pending plan has not increased the current allowance.
 
-If the payment provider charged you but the page did not confirm success, check both funding and plan records first. Keep the order ID and time for support: credited funds and a completed plan purchase are separate states, even when the purchase flow handles them automatically.
+If the payment provider charged you but the page did not confirm success, check both top-up history and plan records first. Keep the order ID and time for support: credited funds and a completed plan purchase are separate states, even when the purchase flow handles them automatically.
 
 ## Crypto top-up not credited {#crypto-payment-feedback}
 
-These steps apply to cryptocurrency top-up orders shown in checkout. Follow the order page for other payment methods.
+Open the **full [Cashier page](https://oixcloud.com/user/v2/counter)** and scroll below the payment area to **Crypto Order Records**. Find the original order and use **Report missing payment** in its action column. The embedded payment dialog does not show this records section; open the full page if you cannot find it.
 
-1. Open [Checkout](https://oixcloud.com/user/v2/counter), find the original crypto order, and check its ID, creation time and credit status before paying again.
-2. Eligible records offer **Missing Credit Feedback** five minutes after order creation. The entry remains available until 48 hours after creation; use the button shown for that record.
-3. Enter the complete transaction hash and describe the actual payment time, network and problem. TRC20 hashes have 64 hexadecimal characters; Polygon/BSC hashes have 66, including the `0x` prefix. A transaction hash is not an order ID, wallet address or private key.
-4. Read the lookup result. If asked to confirm the credited amount, a shortfall or a network issue, check the explanation before deciding. Keep the message and contact support if unsure.
-5. Confirm credit in the funding records, then check purchase/activation in **Plan Management**. Submission success or a review status does not mean funds were credited or a plan became active.
+<figure class="guide-figure">
+  <a href="/illustrations/account-crypto-feedback-en.svg?v=20261105-4" target="_blank" rel="noopener" aria-label="Report a cryptocurrency payment that was not credited">
+    <img src="/illustrations/account-crypto-feedback-en.svg?v=20261105-4" alt="Report a cryptocurrency payment that was not credited" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Interface simulation · Fictional order and hash placeholder · Click to enlarge</figcaption>
+</figure>
 
-A missing transaction or mismatched network/recipient may require you to correct the details rather than enter manual review. Do not repeatedly submit the same payment while under review. If the entry is unavailable, its time window has passed or the result remains unclear, provide the original order details in a [payment support ticket](/en/help/support#payment). Do not create duplicate orders to recover an earlier payment, and never provide wallet private keys, seed phrases or verification codes.
+1. Check the original order ID, creation time and amount. Do not pay again or delete an order you have already paid. The list shows uncredited orders from the last 48 hours, plus older feedback still being checked, awaiting your confirmation or under manual review; credited orders are checked in [Top-up History](https://oixcloud.com/user/code).
+2. Before five minutes have passed, the button says **Awaiting auto credit** and reopens the original payment order. After five minutes, eligible records offer **Report missing payment**. Submit a new request within 48 hours of order creation; existing feedback in progress does not disappear simply because that window ends.
+3. In **Missing Credit Feedback**, enter the complete **Transaction Hash**. Use **Issue Description** to add the actual payment time, network and problem if needed, then select **Submit**. TRC20 hashes have 64 hexadecimal characters; Polygon/BSC hashes have 66, including the `0x` prefix. A hash is not an order ID, wallet address or private key. If a hash is already filled in and locked, continue with that request.
+4. Follow the resulting status: **Checking automatically** or **Under manual review** means wait without resubmitting; **Awaiting your confirmation** means reopen that action and review the proposed credit amount before confirming; **Check and resubmit** means check the hash and explanation before trying again. **Retry notification** can appear on orders already linked to a transaction. Follow the message rather than creating another order.
+5. Confirm the actual credit in top-up history, then check purchase/activation in **Plan Management**. Submission success, review status or an order disappearing from this list alone does not prove crediting or plan activation.
+
+If the entry is unavailable, the initial feedback window has passed or the result remains unclear, provide the original order details and displayed message in a [payment support ticket](/en/help/support#payment). Never provide wallet private keys, seed phrases or verification codes.
 
 ## If automatic continuation did not happen
 
