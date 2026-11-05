@@ -53,4 +53,4 @@ Signing out removes local sign-in state without revoking the login token shared 
 
 ## Google sign-in troubleshooting
 
-If the button is missing, check your installed version; a feature in the maintained source may not yet be in your App Store or stable build. If the browser remains open, use its Return to App link. Restart an expired flow from the client. For an unregistered-email message, sign in with the Google account matching your existing account or complete website registration first. Do not repeatedly reset tokens to troubleshoot a browser return.
+For a missing button, failed browser return, expired flow or unregistered email, follow the shared [Google sign-in checks](/en/account/security#google-troubleshooting).

@@ -151,8 +151,8 @@ Managed account information, filters and plan access are handled on the oixCloud
 ## Managed options
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-filter-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Filter managed nodes">
-    <img src="/illustrations/flclash-filter-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Filter managed nodes" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-filter-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Filter managed nodes">
+    <img src="/illustrations/flclash-filter-en.svg?v=20261105-3" alt="FlClash for oixCloud · Filter managed nodes" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>

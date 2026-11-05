@@ -1,144 +1,123 @@
 ---
-description: "Home ISP 家庭宽带节点的特点、订阅筛选，以及通过内部中继与客户端链式代理使用的操作步骤"
+description: "Home ISP 家宽节点的筛选、内部中继与客户端代理链设置，以及出口验证方法"
 ---
 
 # Home ISP 使用指南
 
-Home ISP 节点提供纯正的海外家庭宽带住宅 IP 出口。由于国际家宽网络通常缺少针对中国大陆的专项路由优化，建议配合站内「内部中继」或客户端「链式代理」组合使用，兼顾优质连接体验与纯净住宅出口
+Home ISP 提供海外家庭宽带出口。先确认目标节点可用，再按需要选择内部中继或客户端代理链；增加入口节点可能改善接入路径，也会增加一段连接，效果需要在自己的网络上验证
 
 ## 节点特点与适用场景 {#characteristics}
 
-Home ISP 与 Edge 同级，按相同套餐权限开放，在 [节点列表](https://oixcloud.com/user/node) 中单独展示。选择前核对账户当前可见节点与实际出口
+Home ISP 与 Edge 使用相同套餐权限，在 [节点列表](https://oixcloud.com/user/node) 中单独展示
 
-| 节点分类 | 特点与适用场景 |
+| 节点分类 | 选择时注意 |
 | --- | --- |
-| Home ISP · 静态 IP | 通常使用相对固定的落地 IP，实际以节点当前出口为准；适合需要长期维持稳定出口地址的业务 |
-| Home ISP · 动态 IP | 落地 IP 会随宽带拨号周期性变动，不适合需要绑定固定 IP 的场景；适合需要轮换出口的常规访问 |
+| Home ISP · 静态 IP | 通常使用相对固定的出口地址，仍应核对节点当前出口 |
+| Home ISP · 动态 IP | 出口地址可能变化，不适合长期绑定固定 IP 的用途 |
 
-静态／动态描述的是节点的宽带落地属性，不代表为个人账户分配独享 IP；两类均面向国际网络环境，不作任何可用性或流媒体解锁承诺，不提供面向中国大陆的 SLA 保障
-
-家庭宽带出口来自真实住宅 ISP 网络（如 AT&T、Verizon、Comcast 等），其 IP 属性在第三方风控数据库中通常标记为 ISP / Residential，而非机房 Data Center，适合以下场景：
-
-- 访问对机房 IP 有严格风控限制的海外平台、电商或支付管理后台
-- 降低跨国业务、社交平台或海外账户登录时的风控触发概率
-- 需要特定海外本地住宅网络环境的访问需求
+两类都不是分配给个人账户的独享 IP，也不承诺可用性、流媒体解锁或中国大陆接入 SLA。住宅网络属性不保证第三方平台放行、减少验证或保持会话，地区与 IP 分类以目标服务的实际判断为准
 
 ## 获取与加入订阅 {#subscription}
 
-是否默认下发由服务方逐节点设置，与静态／动态分类无关。未开启默认下发的 Home ISP 不会自动进入普通订阅、智能优选或回退列表。含 CIA、IXP、Fusion 或 GIA 的套餐，智能优选只下发套餐的默认线路，开启默认下发的 Home ISP 也不包含
+默认下发由服务方逐节点设置，与静态／动态分类无关。含 CIA、IXP、Fusion 或 GIA 的套餐，智能优选不包含 Home ISP；未默认下发的 ISP 也不会因默认节点为空而被自动补入
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 在节点筛选中保留 ISP 线路">
-    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261102-3" alt="oixCloud · 在节点筛选中保留 ISP 线路" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · 同时保留入口线路与 ISP">
+    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" alt="oixCloud · 同时保留入口线路与 ISP" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 图中同时保留 Fusion 与 ISP · 点击放大</figcaption>
 </figure>
 
-1. 打开客户端「节点筛选」（oixCloud 的「oixCloud → 节点筛选」、FlClash 的「侧栏 oixCloud → 节点筛选」），或在网页 [订阅管理](https://oixcloud.com/user/sub_manage) 中编辑对应订阅
-2. 在「线路」区域找到 **ISP**，点击切换为「仅保留」；如需同时使用其他线路，一并将它们设为「仅保留」
-3. 按需搭配地区或名称筛选，在右侧或下方预览中确认目标家宽节点已包含在保留列表中
-4. 保存筛选条件并更新客户端托管配置，节点列表即可加载该 Home ISP 节点
+1. 在 oixCloud 或 FlClash for oixCloud 打开「oixCloud → 节点筛选」，或在网页 [订阅管理](https://oixcloud.com/user/sub_manage) 编辑对应地址
+2. 将 **ISP** 设为「仅保留」。使用客户端代理链时，将入口所属线路也设为「仅保留」，否则入口可能被筛掉
+3. 核对地区、名称条件和节点预览，确认需要的入口与出口都在保留列表中
+4. 保存并等待客户端完成节点更新；各客户端的自动刷新与手动同步入口见 [订阅与筛选](/account/subscriptions)
 
-ISP 与 Edge 是两条相互独立的线路，仅筛选 Edge 不会包含 Home ISP；仅按地区或名称筛选也不会自动加入未开启默认下发的 ISP 节点
+ISP 与 Edge 是两条独立线路；只选 Edge，或只按地区、名称筛选，不会加入未默认下发的 ISP
 
-::: warning 严格遵循流量路由限制
-未开启默认下发的 Home ISP 可以作为内部中继的目标／出口节点，但**不能作为入口或中间节点**；外部转发、HTTP/3、WARP、IPv4 Only 和流媒体解锁均不可配置。主动将 ISP 加入订阅不会解除这些限制，具体规则见 [流量路由限制](/account/nodes#isp-routing)
+::: warning 先核对节点角色
+未默认下发的 Home ISP 只能作为内部中继目标／出口，不能作为入口或中间节点，且不能配置外部中继、HTTP/3、WARP、IPv4 Only 和流媒体解锁。主动加入订阅不会解除限制，详见 [流量路由限制](/account/nodes#isp-routing)
 :::
 
 ## 为什么需要中转或链式代理？ {#why-relay-or-chain}
 
-海外家庭宽带物理接入点位于海外居民区，不具备面向中国大陆的专属专线（如 Fusion 广港／沪日）或回国路由优化（如 GIA / CIA CMIN2）。直接从中国大陆直连海外家庭宽带节点，通常会经历公网国际跳板，容易产生高延迟、抖动、丢包甚至偶发连接阻断
+当本地直连 Home ISP 表现不佳时，可以比较「本地 → 可用入口 → Home ISP → 目标服务」与单节点连接。先用两跳验证；增加跳数不保证降低延迟、提高速度或解决出口本身的问题
 
-通过中转组合可以彻底解决该问题：
-
-1. **第一跳（入口）**：选择连接大陆稳定高速的专线（Fusion 系列）或优化线路（GIA / CIA / IXP），负责快速跨过国际公网或专线通道
-2. **第二跳（出口）**：选择目标 Home ISP 节点，由海外高速骨干网络将流量送达家宽落地，最终以纯正住宅 IP 访问目标服务
-
-| 方案 | 特点与优势 | 适用场景 |
+| 方案 | 在哪里配置 | 客户端如何使用 |
 | --- | --- | --- |
-| 面板内部中继 | 服务端节点间转发，客户端只需连接入口节点；跨所有客户端、路由器与设备通用 | 任意客户端（包括 OpenClash、路由器、无链式代理功能的应用） |
-| 客户端链式代理 | 本地客户端编排链路，灵活性高；入口可选策略组或自动优选，并支持本地分流规则 | oixCloud (Apple) 与 FlClash for oixCloud (多平台) |
+| 内部中继 | 网站「流量路由 → 内部中继」 | 连接入口节点，由服务端继续转发 |
+| 客户端代理链 | 支持代理链的客户端 | 选择保存的链名，或把分流规则指向它 |
+
+先选一种方案验证，避免同时叠加两套路径而难以判断实际出口。每段路径的可用性、延迟和计费倍率都应分别核对
 
 ## 方案一：面板内部中继配置 {#internal-relay}
 
-面板内部中继把流量从一个站内节点转发到其他站内节点再出站。配置完成后，客户端只需连接入口节点，即可自动经由 Home ISP 出口
+以下步骤为入口流量配置一条完整路径。WARP、外部中继和已有路径可能影响可选节点，按页面提示处理，具体见 [设置之间的关系](/account/relay#other-settings)
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-relay-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 在内部中继路径编辑器中配置入口与家宽出口">
-    <img src="/illustrations/account-relay-zh.svg?v=20261102-3" alt="oixCloud · 在内部中继路径编辑器中配置入口与家宽出口" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/account-relay-zh.svg?v=20261105-2" target="_blank" rel="noopener" aria-label="oixCloud · 内部中继路径编辑器">
+    <img src="/illustrations/account-relay-zh.svg?v=20261105-2" alt="oixCloud · 内部中继路径编辑器" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>通用路径编辑器示意 · 本例只需选择入口和 Home ISP 出口，中间跳按需添加 · 点击放大</figcaption>
 </figure>
 
-1. 登录面板打开 [内部中继](https://oixcloud.com/user/relay)，点击「添加路径」
-2. **选择入口节点**：在第一个节点位置，选择对你当前本地网络速度最优的站内节点（例如 Fusion 香港专线节点或 GIA 优化节点）
-3. **添加中继或直接选择出口**：如需多跳可在中间插入中继节点（一条路径最多 17 个节点）；最后选择目标 Home ISP 节点作为出口节点
-4. **核对节点角色**：确认 Home ISP 仅放在路径的最后一跳（出口）；未默认下发的 Home ISP 不能作为入口或中间跳
-5. **保存路径**：设置优先级并点击「保存路径」；如果该改动影响共用路段，按提示确认保存
-6. **分流指定目标（可选）**：如果只需特定网站走家宽，可在「中继规则」中点击「添加单条规则」，起源选入口节点，目标选家宽节点，并在「仅转发指定域名/IP」填入目标域名，例如 `example.com`
-7. **客户端应用与连接**：保存后在客户端更新托管配置，选择你所设置的**入口节点**建立连接；访问网站的实际出口 IP 将呈现为该 Home ISP 节点的宽带地址
+1. 打开 [内部中继](https://oixcloud.com/user/relay)，点击「添加路径」
+2. 首个位置选择当前网络可用、页面允许作为入口的节点，例如有权限的 Fusion 或 GIA 节点
+3. 最后一个位置选择目标 Home ISP，先使用「入口 → Home ISP」两跳；路径最多 17 个节点，不能重复同一条目
+4. 核对优先级和预览，点击「保存路径」。若影响共用路段，先检查涉及的其他路径再确认
+5. 更新客户端订阅或托管配置，选择**入口节点**，建立新连接并验证目标服务的实际出口
 
-出口节点之后无需额外设置中继规则，系统会自动完成终点配置。管理规则见 [中继与自建落地](/account/relay)
+只想让指定网站走家宽时，应改用 [按域名/IP 的单条规则](/account/relay#domain-rules)。不要先保留同一起源的无条件路径，再叠加条件规则并认为其他流量会自动绕过家宽；先核对已有规则、优先级与共用路段
+
+路径图只展示配置关系，不证明连通性。终点处理、共享路段和批量删除统一见 [内部中继教程](/account/relay)
 
 ## 方案二：客户端链式代理 {#proxy-chains}
 
-客户端链式代理在你的设备本地完成链路串联，由第一跳节点将请求直接转发至第二跳节点建立出口连接
+先确认入口与 Home ISP 都已加入当前节点列表。客户端代理链按入口到出口建立连接；链中成员必须可用，并满足该客户端的代理链约束
 
 ### oixCloud 客户端代理链 {#oixcloud-chain}
 
-适用于 iPhone、iPad、Mac 及同步配置的 Apple TV
+以下编辑步骤适用于 iPhone / iPad；Apple TV 从手机或平板 [同步配置](/oixcloud/apple-tv)，不提供相同的代理链编辑器
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-chains-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 创建家宽代理链">
-    <img src="/illustrations/oixcloud-chains-zh.svg?v=20261102-3" alt="oixCloud · 创建家宽代理链" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-chains-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 按顺序创建代理链">
+    <img src="/illustrations/oixcloud-chains-zh.svg?v=20261102-3" alt="oixCloud · 按顺序创建代理链" width="1120" height="982" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>通用代理链编辑器示意 · 本例用实际入口节点和 Home ISP 替换图中成员 · 点击放大</figcaption>
 </figure>
 
-1. 确保已在「oixCloud → 节点筛选」中将 ISP 设为「仅保留」并保存刷新，使家宽节点出现在节点列表中
-2. 在底栏进入「代理」，切换到「链式代理」区域，点击右上角「添加」
-3. 填写链名称，例如 `家宽代理链`
-4. **添加第一跳（入口）**：点击「添加代理」，选择连接表现优异的节点，或选择「自动优选」策略组（支持在首跳使用策略组）
-5. **添加第二跳（出口）**：再次点击「添加代理」，选择目标 Home ISP 节点
-6. 点击右上角勾号保存代理链
-7. **使用代理链**：
-   - 全局或手选模式：在主页节点选择卡片中直接选中该代理链
-   - 分流规则模式：在「代理 → 策略 → 路由规则」中新建规则，类型选择「域名后缀」并填入目标域名，路由目标选择该代理链
+1. 在「代理」中新建代理链，填写易辨认的名称，例如 `Home-ISP-Chain`
+2. 使用「添加代理」依次加入入口节点、Home ISP 出口，核对路由预览并保存
+3. 在主页选中该链。规则模式下，路由目标为「代理」的流量使用主页选择；指定节点、策略组、直连或拒绝的规则仍按原目标处理
+4. 只让指定网站使用该链时，在「代理 → 策略 → 路由规则」中添加「域名尾缀」规则，填入实际域名并将目标设为链名
+5. 建立新连接，在「活动 → 请求」中核对匹配规则和出口
 
-详细代理链与策略组交互规则见 [oixCloud 策略组与代理链](/oixcloud/policies#创建代理链)
+需要自动选择入口时，使用代理链编辑器允许的个人策略组，先检查其成员。组类型、后续跳组的影响及冲突处理见 [策略组与代理链](/oixcloud/policies#创建代理链)
 
 ### FlClash for oixCloud 链式代理 {#flclash-chain}
 
-适用于 Windows、Android、macOS 及 Linux
+适用于支持该功能的 Windows、macOS、Android 和 Linux 版本
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-chains-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑家宽代理链顺序">
-    <img src="/illustrations/flclash-chains-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 编辑家宽代理链顺序" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-chains-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
+    <img src="/illustrations/flclash-chains-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>通用代理链编辑器示意 · 本例用实际入口节点和 Home ISP 替换图中成员 · 点击放大</figcaption>
 </figure>
 
-1. 确保在侧栏「oixCloud → 节点筛选」中勾选保留 ISP，并完成配置同步
-2. 点击侧栏「配置」，在当前激活配置的卡片右侧点击操作菜单（`⋮`），选择「链式代理」
-3. 点击右上角「新增」，填写清晰的链名（例如 `ISP-Chain`；链名不要与已有节点或策略组同名，不含逗号）
-4. **排列转发顺序**：在编辑器下方「可用节点与策略组」中点击节点右侧的 `＋` 号添加成员；使用右侧拖动手柄调整顺序，确保第一跳为入口专线／优化组，最后一跳为出口 Home ISP 节点
-5. 点击右上角勾号保存并启用链式代理，返回配置页点击「立即应用」
-6. **使用代理链**：
-   - 成功应用后，FlClash 会自动生成同名策略组，可在「代理」列表中直接切换选中该代理链
-   - 如需精确分流，在配置覆写中编辑个人规则，将规则目标直接指向该链名
-
-详细链式代理操作见 [FlClash 节点与代理链](/flclash/proxies#代理链)
+1. 在「配置」中打开当前配置的菜单，选择「链式代理」，新增并命名
+2. 按「入口 → Home ISP」加入两个不同成员，用拖动手柄调整顺序，保存并确认该链已启用
+3. 等待配置应用成功。在「代理」选择生成的链名，或在配置覆写中将个人规则的目标设为该链名；若当前手选组没有包含它，按 [代理链教程](/flclash/proxies#代理链) 调整成员或规则
+4. 使用新连接核对规则和出口。选择原来的 Home ISP 节点不等于选择代理链
 
 ## 验证与排查 {#troubleshooting}
 
-配置完成后，按以下步骤核对出口与连接状态：
+| 现象 | 检查方法 |
+| --- | --- |
+| 找不到入口或 Home ISP | 同时保留入口线路与 ISP，检查地区、名称条件、套餐权限及同步结果 |
+| 中继保存被拒绝 | 检查节点角色、WARP／外部中继冲突及页面报错；未默认下发的 ISP 只能作为最终出口 |
+| 连接失败或变慢 | 先对照单独入口，再检查后续路径；减少不必要的跳数，避免循环和冲突的底层代理 |
+| 出口不是预期家宽 | 检查该目标的新连接是否命中预期规则。客户端记录能显示客户端选择的链或入口，但不保证显示服务端内部中继的每一跳 |
+| 动态 IP 变化后会话失效 | 重新建立连接，并按目标服务要求重新验证或登录；重连不保证恢复第三方会话 |
 
-1. **核对出口 IP 属性**：在浏览器访问公网 IP 诊断网站，核对当前显示的出口 IP 与地理位置，并确认 ASN 组织为住宅宽带运营商
-2. **检查客户端链路记录**：
-   - oixCloud：在「活动 → 请求」中点击目标请求，核对路由判定是否显示为该代理链或入口中继
-   - FlClash：在「连接」详情中查看当前连接的代理走向，核对是否经由入口节点转至家宽出口
-3. **常见问题排查**：
-   - **节点列表找不到 Home ISP**：检查节点筛选是否将「ISP」设为「仅保留」，保存后是否刷新了托管订阅；恢复默认筛选会重新排除未默认下发的 ISP 节点；含 CIA、IXP、Fusion 或 GIA 的套餐恢复为智能优选后不含任何 ISP
-   - **中继保存被系统拒绝**：检查是否误将 Home ISP 放在了第一跳入口或中间中继位置；未开启默认下发的 ISP 仅允许作为最终出口
-   - **连接报错或无法打开网页**：先单独选择入口节点测试其网络连通性；再核对代理链中各跳是否可用，避免产生节点自循环或策略组相互引用
-   - **动态 IP 变动影响**：动态家宽节点的出口 IP 会不定期更新；若遇到依赖连接状态的第三方会话断开，在客户端断开并重新建立连接即可恢复
+IP 查询网站也必须走同一条预期路径，才有对照意义；它的地区和 ASN 分类不能证明另一网站使用同一出口，也不能保证第三方风控或流媒体可用

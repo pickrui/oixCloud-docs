@@ -114,8 +114,8 @@ Folders organize standalone nodes, not nodes inside subscriptions. They are neit
 ## Update and filter
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Filter lines, regions and names">
-    <img src="/illustrations/oixcloud-filter-en.svg?v=20261030-en1" alt="oixCloud · Filter lines, regions and names" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixcloud-filter-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · Filter lines, regions and names">
+    <img src="/illustrations/oixcloud-filter-en.svg?v=20261105-3" alt="oixCloud · Filter lines, regions and names" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>

@@ -48,5 +48,3 @@ Use **Check and Repair**, inspect its results and reopen the client to check the
 ## If it still fails
 
 Include Windows version/architecture, client version, download filename, the complete error screenshot and whether it occurs at startup or when enabling TUN in a [support ticket](/en/help/support).
-
-Use Microsoft's official page for runtime downloads and compatibility.

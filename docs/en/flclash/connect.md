@@ -28,8 +28,8 @@ Use the release's `SHA256SUMS` for standard packages and `SHA256SUMS-macos12-fin
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-connect-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Start from the dashboard">
-    <img src="/illustrations/flclash-connect-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Start from the dashboard" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-connect-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Start from the dashboard">
+    <img src="/illustrations/flclash-connect-en.svg?v=20261102-3" alt="FlClash for oixCloud · Start from the dashboard" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
@@ -66,7 +66,7 @@ For a missing-DLL error at Windows startup, identify the file and runtime using 
 
 ## Google sign-in troubleshooting
 
-If the button is missing, check your installed version; a feature in the maintained source may not yet be in your stable build. If the browser remains open, use its Return to App link. Restart an expired flow from the client. For an unregistered-email message, sign in with the Google account matching your existing account or complete website registration first. Do not repeatedly reset tokens to troubleshoot a browser return.
+For a missing button, failed browser return, expired flow or unregistered email, follow the shared [Google sign-in checks](/en/account/security#google-troubleshooting).
 
 ## Headless and background operation {#headless}
 
@@ -82,7 +82,7 @@ FlClash for oixCloud is a graphical client. Its standard desktop packages do not
 
 ### Manage a Linux server or NAS through a browser
 
-Use the FlClash for oixCloud Docker image to sign in and manage the app from another device's browser. The host does not need a local desktop, but the container still runs the graphical client. Follow the [FlClash Docker guide](https://github.com/pickrui/FlClash/blob/main/docker/README.md) for deployment.
+Use the FlClash for oixCloud Docker image to sign in and manage the app from another device's browser. The host does not need a local desktop, but the container still runs the graphical client. Follow the [FlClash for oixCloud Docker guide](https://github.com/pickrui/FlClash/blob/main/docker/README.md) for deployment.
 
 ::: warning Browser management access
 The browser interface has no authentication by default; do not expose it directly to the Internet. System Proxy or TUN inside the container does not automatically capture traffic from the host or other LAN devices. Configure proxy ports and access scope separately as described in the Docker guide.

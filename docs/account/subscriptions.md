@@ -14,8 +14,8 @@ oixCloud、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路�
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 筛选线路、地区与名称">
-    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261102-3" alt="oixCloud · 筛选线路、地区与名称" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · 筛选线路、地区与名称">
+    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" alt="oixCloud · 筛选线路、地区与名称" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>oixCloud iPhone / iPad 界面示例 · 其他客户端按对应教程操作 · 点击放大</figcaption>
 </figure>

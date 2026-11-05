@@ -114,8 +114,8 @@ HTTP／HTTPS 代理在「手动」中填写最清楚。「链接」入口只有�
 ## 更新与筛选
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 筛选线路、地区与名称">
-    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261030-2" alt="oixCloud · 筛选线路、地区与名称" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · 筛选线路、地区与名称">
+    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" alt="oixCloud · 筛选线路、地区与名称" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

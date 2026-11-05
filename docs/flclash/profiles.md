@@ -151,8 +151,8 @@ oixCloud 托管配置不能作为另一份「自定义配置」的代理提供�
 ## 托管订阅选项
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-filter-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 可视化节点筛选">
-    <img src="/illustrations/flclash-filter-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 可视化节点筛选" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-filter-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 可视化节点筛选">
+    <img src="/illustrations/flclash-filter-zh.svg?v=20261105-3" alt="FlClash for oixCloud · 可视化节点筛选" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>

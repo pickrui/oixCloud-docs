@@ -1,5 +1,24 @@
 # Relays and your own destinations
 
+<div class="vps-providers">
+
+## VPS recommendations {#vps-providers}
+
+Providers we have worked with or that have an established reputation in the industry · Affiliate links
+
+<div class="vps-provider-links">
+  <a href="https://akile.ai/register?aff_code=f9cd9c94-8a32-491b-92d9-d7cb858748ed" target="_blank" rel="sponsored noopener">AkileCloud<span aria-hidden="true">↗</span></a>
+  <a href="https://cloud.isif.net/login?affiliation_code=adiao123" target="_blank" rel="sponsored noopener">ISIF Cloud<span aria-hidden="true">↗</span></a>
+  <a href="https://my.rfchost.com/aff.php?aff=542" target="_blank" rel="sponsored noopener">RFC Host<span aria-hidden="true">↗</span></a>
+  <a href="https://nube.sh/invite/2624168578884Z" target="_blank" rel="sponsored noopener">Nube Cloud<span aria-hidden="true">↗</span></a>
+  <a href="https://www.dmit.io/aff.php?aff=21" target="_blank" rel="sponsored noopener">DMIT<span aria-hidden="true">↗</span></a>
+  <a href="https://hyvps.hytron.io/register?invite=8JqB2f37VzcP" target="_blank" rel="sponsored noopener">HytronVPS<span aria-hidden="true">↗</span></a>
+  <a href="https://www.vultr.com/?ref=7118937" target="_blank" rel="sponsored noopener">Vultr<span aria-hidden="true">↗</span></a>
+  <a href="https://www.vmrack.net?ref_code=5nHUCVdwUDD" target="_blank" rel="sponsored noopener">VMRACK<span aria-hidden="true">↗</span></a>
+  <a href="https://lamhosting.com/aff.php?aff=148" target="_blank" rel="sponsored noopener">LamHosting<span aria-hidden="true">↗</span></a>
+</div>
+</div>
+
 Choose the intended traffic path first, then open the corresponding feature under **Traffic Routes** in the user center. Website relay settings belong to your account; client-side proxy chains are configured in that client.
 
 | Goal | Feature |

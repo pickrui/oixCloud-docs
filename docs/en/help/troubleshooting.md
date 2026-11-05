@@ -57,5 +57,3 @@ Follow the client-specific steps and verification guidance: [oixCloud DNS and IP
 
 - [oixCloud requests, DNS and network events](/en/oixcloud/diagnostics)
 - [FlClash for oixCloud network check and connections](/en/flclash/diagnostics)
-
-Change one setting at a time and record the before-and-after result.

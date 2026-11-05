@@ -25,6 +25,17 @@ Google sign-in is available in supported oixCloud versions for iPhone/iPad and i
 
 Both the client and website must support this flow. If the button is unavailable, use email/password or an Access Token. Never enter your Google password into the oixCloud password field. To obtain an oixCloud password, check Gmail, including spam, for the initial-password email, or use **Forgot password** on the [website sign-in page](https://oixcloud.com/auth/login).
 
+### Google sign-in troubleshooting {#google-troubleshooting}
+
+| Symptom | Next step |
+| --- | --- |
+| No button in the client | Check the installed version and release channel. Both client and website must support the flow; maintained source does not establish availability in your stable build |
+| Browser does not return | Use **Return to App** on the completion page. Start a new client flow after expiry or failed return verification |
+| Email not registered | Choose the Google account matching your existing oixCloud email, or register on the website first |
+| Signed in but no nodes | Wait for the managed profile, then check the plan, node filter and sync result |
+
+Do not repeatedly regenerate Access Tokens to diagnose a browser return; this invalidates devices sharing the old token.
+
 ## Disable client email/password sign-in {#token-only}
 
 1. Confirm that the clients you need have a usable token or support Google sign-in.

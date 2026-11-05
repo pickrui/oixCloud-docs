@@ -10,7 +10,7 @@ OpenWrt and Merlin routers, plus oixCloud Helper and Surge.
 | I want to… | Guide |
 | --- | --- |
 | Install and connect on OpenWrt | [OpenClash setup](/en/other/openclash) |
-| Replace or update the OpenClash oix core | [Replace or update the oix kernel](/en/other/openclash#kernel-update) |
+| Replace or update the OpenClash oix core | [Replace or update the oix core](/en/other/openclash#kernel-update) |
 | Install and connect on Merlin | [oixClash setup](/en/other/oixclash) |
 | Connect Surge through Helper | [oixCloud Helper and Surge](/en/other/surge) |
 | Understand Helper ports and connect LAN devices | [Helper local ports and LAN access](/en/other/helper-mapping) |

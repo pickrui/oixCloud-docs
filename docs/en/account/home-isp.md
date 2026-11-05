@@ -1,144 +1,123 @@
 ---
-description: "Home ISP residential broadband node characteristics, subscription filtering, and setup steps using internal relay and client proxy chains"
+description: "Filter Home ISP nodes, configure internal relays or client proxy chains, and verify the actual exit"
 ---
 
 # Home ISP user guide
 
-Home ISP nodes provide genuine residential broadband exit IPs overseas. Because international residential broadband networks typically lack specialized transit optimizations toward certain regions like mainland China, pairing them with the website's internal relays or client proxy chains delivers both high stability and genuine residential exit IPs.
+Home ISP provides overseas residential broadband exits. Check the destination node first, then choose an internal relay or client proxy chain if needed. Adding an entry may improve the access path but adds another connection stage; compare the result on your own network.
 
 ## Characteristics and use cases {#characteristics}
 
-Home ISP is at the same tier as Edge and uses the same plan permissions, displayed separately in the [node list](https://oixcloud.com/user/node). Verify the nodes available to your account and their actual exits before connecting.
+Home ISP uses the same plan permissions as Edge and appears separately in the [node list](https://oixcloud.com/user/node).
 
-| Node category | Characteristics and use cases |
+| Node category | What to check |
 | --- | --- |
-| Home ISP · Static IP | Normally uses a fixed exit IP, subject to the node's actual current exit; suitable for tasks requiring a long-term consistent IP address |
-| Home ISP · Dynamic IP | The exit IP may change when broadband dial-up rotates; unsuitable for tasks requiring a long-term fixed address, but well suited for general browsing |
+| Home ISP · Static IP | Normally uses a relatively stable exit address; still verify the node's current exit |
+| Home ISP · Dynamic IP | The exit address can change, so it is unsuitable for long-term fixed-IP requirements |
 
-Static and dynamic categorize the node's broadband exit properties rather than an exclusive IP assigned to your account. Both categories are designed for international network environments, carry no commitment to availability or streaming unlocking, and offer no SLA for connections from mainland China.
-
-Residential broadband exits originate from authentic residential ISP networks (such as AT&T, Verizon, Comcast, etc.). In third-party risk assessment databases, their IP type is classified as ISP / Residential rather than Data Center, making them ideal for:
-
-- Accessing overseas services, e-commerce portals, or payment consoles with strict data-center IP restrictions
-- Lowering risk triggers and verification challenges when signing in to international accounts or platforms
-- Workflows requiring an authentic local residential network environment overseas
+Neither category assigns an IP exclusively to your account or guarantees availability, streaming access or a mainland-China access SLA. A residential network does not guarantee that a third-party platform will permit access, reduce verification or preserve sessions. Region and IP classification depend on the destination service.
 
 ## Subscriptions and filters {#subscription}
 
-Default inclusion is configured per node by the service, independently of the static or dynamic IP category. Home ISP nodes without default inclusion are not added automatically to regular subscriptions, Smart Selection, or fallback lists. For plans with CIA, IXP, Fusion or GIA, Smart Selection only includes the plan's default lines and leaves out Home ISP nodes, even those included by default.
+The service sets default inclusion per node, independently of its static or dynamic category. Smart Selection excludes Home ISP on plans with CIA, IXP, Fusion or GIA. ISP nodes excluded by default are not added merely because the default selection is empty.
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · Keep only the ISP line in node filters">
-    <img src="/illustrations/oixcloud-filter-en.svg?v=20261102-3" alt="oixCloud · Keep only the ISP line in node filters" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-filter-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · Retain the entry line and ISP together">
+    <img src="/illustrations/oixcloud-filter-en.svg?v=20261105-3" alt="oixCloud · Retain the entry line and ISP together" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional data · Both Fusion and ISP are retained in this example · Click to enlarge</figcaption>
 </figure>
 
-1. Open Node Filter in your client (`oixCloud → Node Filter` in oixCloud, or `Sidebar oixCloud → Node Filter` in FlClash), or edit the address in [Subscription Management](https://oixcloud.com/user/sub_manage) on the website.
-2. In the Line section, click **ISP** to switch it to "Keep only". If you also need other lines, set them to "Keep only" as well.
-3. Combine with region or name filters as needed. Confirm in the preview on the right or below that the intended residential broadband nodes are retained.
-4. Save the filter and refresh your client configuration to load the Home ISP nodes into your node list.
+1. Open **oixCloud → Node Filter** in oixCloud or FlClash for oixCloud, or edit the corresponding address in [Subscription Management](https://oixcloud.com/user/sub_manage).
+2. Set **ISP** to **Only**. For a client proxy chain, set the entry node's line to **Only** too, or the filter may remove the entry.
+3. Check region and name conditions and confirm that both the required entry and exit appear in the preview.
+4. Save and wait for node updates. See [Subscriptions and filters](/en/account/subscriptions) for each client's automatic refresh and manual sync controls.
 
-ISP and Edge are separate lines; keeping only Edge does not include Home ISP nodes. Filtering solely by region or name will not automatically add excluded ISP nodes either.
+ISP and Edge are separate lines. Selecting only Edge, a region or a name does not add ISP nodes excluded by default.
 
-::: warning Observe traffic routing restrictions
-Home ISP nodes excluded from default subscriptions can be internal relay targets or exits, but **cannot serve as entries or intermediate hops**. External relay, HTTP/3, WARP, IPv4 Only, and streaming unlocking cannot be configured on them. Manually adding an ISP node to a subscription does not waive these restrictions; see [Traffic routing restrictions](/en/account/nodes#isp-routing).
+::: warning Check node roles first
+Home ISP nodes excluded by default can only be internal relay targets or exits, not entries or intermediate hops. External relay, HTTP/3, WARP, IPv4 Only and streaming-unlock settings are unavailable on them. Explicit subscription selection does not remove these [traffic routing restrictions](/en/account/nodes#isp-routing).
 :::
 
 ## Why use relays or proxy chains? {#why-relay-or-chain}
 
-Overseas residential broadband access points are physically located in local residential areas without dedicated transit lines (such as Fusion Hong Kong/Japan direct lines) or mainland-optimized routes (such as GIA or CIA CMIN2). Connecting directly from mainland China to overseas residential broadband nodes frequently encounters high latency, jitter, packet loss, or unexpected connection interruptions over public international networks.
+If direct access to Home ISP performs poorly, compare a single node with `Your device → Available entry → Home ISP → Destination`. Start with two hops. More hops do not guarantee lower latency, higher speed or a solution to problems at the exit itself.
 
-Relaying your traffic solves this bottleneck:
-
-1. **Hop 1 (Entry)**: Choose a low-latency, dedicated line (Fusion series) or an optimized route (GIA / CIA / IXP) to travel swiftly across international boundaries.
-2. **Hop 2 (Exit)**: Route via the target Home ISP node over high-capacity international backbones, ultimately accessing destination websites with an authentic residential IP.
-
-| Approach | Features and advantages | Best suited for |
+| Method | Configure in | Use from the client |
 | --- | --- | --- |
-| Website internal relay | Managed server-side forwarding; clients only connect to the entry node, functioning seamlessly across all clients, routers, and devices | Any client (including OpenClash, routers, and clients without native chaining support) |
-| Client proxy chains | Chained locally on your device; flexible entry choices including policy groups and Best Available, with fine-grained local routing rules | oixCloud (Apple) and FlClash for oixCloud (cross-platform) |
+| Internal relay | Website: Traffic Routes → Internal relay | Connect to the entry; the servers forward onward |
+| Client proxy chain | A client supporting proxy chains | Select the saved chain name or target it with a routing rule |
+
+Verify one method first. Combining both at once makes the actual route harder to diagnose. Check each segment's availability, latency and traffic multiplier.
 
 ## Method 1: Internal relay via the website {#internal-relay}
 
-Website internal relays forward traffic between nodes within the service before egressing. Once configured, your client only connects to the designated entry node, and traffic automatically exits through the Home ISP node.
+These steps configure a complete path for entry traffic. WARP, external relays and existing paths can affect node eligibility. Follow the page's feedback and [setting interactions](/en/account/relay#other-settings).
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-relay-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · Arrange entry and residential exit in the path editor">
-    <img src="/illustrations/account-relay-en.svg?v=20261102-3" alt="oixCloud · Arrange entry and residential exit in the path editor" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/account-relay-en.svg?v=20261105-2" target="_blank" rel="noopener" aria-label="oixCloud · Internal relay path editor">
+    <img src="/illustrations/account-relay-en.svg?v=20261105-2" alt="oixCloud · Internal relay path editor" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>General path-editor example · Select an entry and Home ISP exit; intermediate hops are optional · Click to enlarge</figcaption>
 </figure>
 
-1. Sign in to the website and open [Internal Relay](https://oixcloud.com/user/relay), then click "Add Path".
-2. **Select the entry node**: For the first node, pick a high-speed entry optimized for your local network (such as a Fusion Hong Kong dedicated node or GIA optimized node).
-3. **Add intermediate hops or choose the exit**: If multi-hop routing is needed, insert intermediate relay nodes (up to 17 nodes per path). Finally, select your target Home ISP node as the exit node.
-4. **Verify node roles**: Ensure the Home ISP node is positioned strictly as the final hop (exit). Home ISP nodes excluded from default subscriptions cannot serve as entries or intermediate hops.
-5. **Save the path**: Set the priority and click "Save Path". If shared segments with other entries are affected, confirm the prompt.
-6. **Route specific domains (optional)**: If only certain traffic requires residential broadband, click "Add Single Rule" under Relay Rules, choose the entry origin and Home ISP target, and enter domain patterns such as `example.com` under "Forward only specified domains/IPs".
-7. **Apply and connect in your client**: Update your subscription or managed profile, connect to the **entry node**, and verify that the egress IP on destination sites reflects the Home ISP broadband address.
+1. Open [Internal relay](https://oixcloud.com/user/relay) and choose **Add path**.
+2. Select a working node that the page permits as an entry, such as an available Fusion or GIA node.
+3. Select Home ISP last. Start with `Entry → Home ISP`; a path allows up to 17 nodes without repeating the same entry.
+4. Check priority and preview, then choose **Save path**. Review affected paths before confirming a shared-segment change.
+5. Update the client subscription or managed profile, select the **entry node**, and verify the destination's actual exit with a new connection.
 
-No additional endpoint rules are required after the exit node. See [Relays and your own destinations](/en/account/relay) for management rules.
+For selected websites only, use a [domain/IP-specific individual rule](/en/account/relay#domain-rules) instead. Do not retain an unconditional path from the same source, add a conditional rule, and assume other traffic will bypass Home ISP. Check existing rules, priority and shared segments first.
+
+The path diagram shows configuration, not connectivity. See the [internal relay guide](/en/account/relay) for endpoint handling, shared segments and bulk deletion.
 
 ## Method 2: Client proxy chains {#proxy-chains}
 
-Client proxy chains construct multi-hop paths locally on your device, forwarding requests from the first hop directly to the second hop to establish the exit connection.
+Confirm that the entry and Home ISP nodes are both in the current node list. The client connects through members in entry-to-exit order; members must be available and meet that client's chain constraints.
 
 ### oixCloud proxy chains {#oixcloud-chain}
 
-Applicable to iPhone, iPad, Mac, and synced Apple TV devices.
+These editing steps apply to iPhone / iPad. Apple TV [receives synced configuration](/en/oixcloud/apple-tv) from a phone or tablet and does not offer the same chain editor.
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-chains-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · Create a residential broadband proxy chain">
-    <img src="/illustrations/oixcloud-chains-en.svg?v=20261102-3" alt="oixCloud · Create a residential broadband proxy chain" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-chains-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · Create a chain in forwarding order">
+    <img src="/illustrations/oixcloud-chains-en.svg?v=20261102-3" alt="oixCloud · Create a chain in forwarding order" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>Simulated interface · Fictional data · Click to enlarge</figcaption>
+  <figcaption>General chain-editor example · Replace its members with your entry and Home ISP nodes · Click to enlarge</figcaption>
 </figure>
 
-1. Ensure ISP is set to "Keep only" in `oixCloud → Node Filter` and the profile is refreshed so the Home ISP node appears in your list.
-2. Go to the "Proxies" tab in the bottom bar, switch to the Proxy Chains section, and tap "Add" in the top right.
-3. Name the chain, such as `ISP-Chain`.
-4. **Add the first hop (Entry)**: Tap "Add Proxy" and choose a high-performance node or the "Best Available" policy group (policy groups are supported at any hop).
-5. **Add the second hop (Exit)**: Tap "Add Proxy" again and select the target Home ISP node.
-6. Tap the checkmark in the top right to save the proxy chain.
-7. **Use the proxy chain**:
-   - Global or manual mode: Select the proxy chain directly in the Home proxy card.
-   - Rule mode: Go to `Proxies → Policies → Routing Rules`, add a new rule with "Domain Suffix", enter the target domain, and set the route target to the proxy chain.
+1. Create a chain in **Proxies** and give it a recognizable name, such as `Home-ISP-Chain`.
+2. Use **Add Proxy** to add the entry, then the Home ISP exit. Check the route preview and save.
+3. Select the chain on Home. In Rule mode, traffic targeting **Proxy** follows the Home selection; rules targeting a specific node, group, Direct or Reject keep their own destinations.
+4. For selected websites, add a **Domain Suffix** rule under **Proxies → Policies → Routing Rules**, enter the actual domain and target the chain name.
+5. Make a new connection and inspect the rule and outbound under **Activity → Requests**.
 
-For details on group interactions and derived paths, see [oixCloud policy groups and proxy chains](/en/oixcloud/policies#proxy-chains).
+For automatic entry selection, use a personal policy group offered by the chain editor and check its members first. See [policy groups and chains](/en/oixcloud/policies#proxy-chains) for group types, effects of later-hop groups and conflicts.
 
 ### FlClash for oixCloud proxy chains {#flclash-chain}
 
-Applicable to Windows, Android, macOS, and Linux.
+For Windows, macOS, Android and Linux versions supporting this feature.
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-chains-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Edit residential broadband chain order">
-    <img src="/illustrations/flclash-chains-en.svg?v=20261102-3" alt="FlClash for oixCloud · Edit residential broadband chain order" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-chains-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Edit chain order">
+    <img src="/illustrations/flclash-chains-en.svg?v=20261102-3" alt="FlClash for oixCloud · Edit chain order" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Simulated interface · Fictional data · Click to enlarge</figcaption>
+  <figcaption>General chain-editor example · Replace its members with your entry and Home ISP nodes · Click to enlarge</figcaption>
 </figure>
 
-1. Ensure the ISP line is preserved under `Sidebar oixCloud → Node Filter` and configuration sync is complete.
-2. Click "Profiles" in the sidebar, click the action menu (`⋮`) on your active profile card, and select "Proxy Chains".
-3. Click "Add" in the top right and enter a distinct name (such as `Home-ISP-Chain`; do not reuse existing node or policy group names, and avoid commas).
-4. **Arrange the forwarding order**: Under "Available proxies and policy groups", click `＋` on the items to add them. Drag handles to ensure the first hop is an entry dedicated node or group and the final hop is the Home ISP node.
-5. Click the top-right checkmark to save and enable the chain, return to Profiles, and click "Apply".
-6. **Use the proxy chain**:
-   - Once applied, FlClash generates a policy group named after the chain. Select it directly in the "Proxies" list.
-   - For selective routing, edit your personal rules under Overrides and direct target traffic to the chain name.
-
-For detailed chain settings, see [FlClash nodes, groups and chains](/en/flclash/proxies#proxy-chains).
+1. Open **Proxy chains** from the current profile's menu in **Profiles**, then add and name a chain.
+2. Add two different members in `Entry → Home ISP` order, use the drag handles if needed, save and confirm the chain is enabled.
+3. Wait for the profile to apply. Select the generated chain name in **Proxies** or target it with a personal override rule. If a manual selector does not list it, adjust its members or rules as described in the [chain guide](/en/flclash/proxies#proxy-chains).
+4. Verify the rule and outbound on a new connection. Selecting the original Home ISP node does not select the chain.
 
 ## Verification and troubleshooting {#troubleshooting}
 
-After configuration, verify your connection and exit attributes:
+| Symptom | What to check |
+| --- | --- |
+| Missing entry or Home ISP | Retain both the entry line and ISP; check region/name conditions, plan permissions and sync results |
+| Relay save rejected | Check node roles, WARP/external-relay conflicts and the error; ISP nodes excluded by default can only be final exits |
+| Connection fails or slows down | Compare the entry alone, then check later segments; reduce unnecessary hops and resolve loops or underlying-proxy conflicts |
+| Unexpected exit | Check whether a new connection to that destination matches the intended rule. Client records show the selected client chain or entry, but may not show every server-side internal relay hop |
+| Session lost after a dynamic IP change | Reconnect and complete any verification or sign-in required by the destination; reconnecting does not guarantee session recovery |
 
-1. **Verify exit IP attributes**: Open an IP check service in your browser to verify the displayed exit IP and geographic location, confirming the ASN organization is a residential broadband provider.
-2. **Inspect client connection records**:
-   - oixCloud: Tap the target entry in `Activity → Requests` to confirm the routing decision points to the proxy chain or internal relay.
-   - FlClash: Inspect active connection details in "Connections" to confirm the multi-hop path from entry to Home ISP exit.
-3. **Common troubleshooting steps**:
-   - **Home ISP missing from the list**: Check whether Node Filter has "ISP" set to "Keep only" and whether the profile has been refreshed. Restoring default filters removes non-default ISP nodes; on plans with CIA, IXP, Fusion or GIA, Smart Selection then contains no ISP nodes.
-   - **Internal relay rejected on save**: Verify that the Home ISP node is placed strictly as the exit hop. Excluded ISP nodes cannot act as entries or intermediate hops.
-   - **Chain connection failures**: Test the entry node independently to ensure network reachability. Check each hop in the chain, ensuring no circular dependencies or conflicting underlying proxy settings exist.
-   - **Dynamic IP rotations**: Dynamic residential broadband IPs change periodically. If stateful third-party sessions disconnect, disconnect and reconnect in your client to establish a fresh connection.
+An IP-check website must use the same intended route to provide a useful comparison. Its region or ASN classification does not prove another website uses that exit or guarantee streaming access or acceptance by a third-party platform.

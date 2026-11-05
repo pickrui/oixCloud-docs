@@ -62,6 +62,10 @@ The illustrated `192.0.2.53` is a documentation address, not a usable resolver. 
 
 Network profiles can override global IPv6 settings. **Hide VPN Icon** and Reflection's **Local Device Compatibility** can cause IPv6 to bypass the VPN; check the effective summary first. Disabling IPv6 DNS resolution neither disables system IPv6 nor proves it is captured.
 
+## Change only the exit address websites see {#ipv4-only}
+
+To make destinations see an IPv4 exit, use the website's [IPv4 Only](/en/account/unlock#ipv4-only) setting. It restricts the selected supported node's connections to destinations, independently of local IPv6 capture, DNS queries and the address family used to reach a node. It does not disable device or intermediate-link IPv6 or cover direct traffic bypassing that node.
+
 ## Verify and troubleshoot
 
 - Test with fresh random domains to reduce cache effects. A DNS test shows resolvers; a country or IP differing from the proxy node is not proof of a leak.

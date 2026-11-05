@@ -699,7 +699,7 @@
         ],
         [
           "Save and refresh",
-          "Only some lines are shown here. Wait for managed nodes to refresh after saving."
+          "This example keeps Fusion and ISP. Wait for managed nodes to refresh after saving."
         ]
       ]
     ],
@@ -997,7 +997,7 @@
       [
         [
           "Choose lines and regions",
-          "Cycle Any, Only and Exclude. Available tags depend on the account."
+          "This example keeps Fusion and ISP. Available tags depend on the account."
         ],
         [
           "Inspect the preview",
@@ -1550,7 +1550,7 @@
       ]
     ],
     "openclash-version": [
-      "Update or replace the oix kernel in Version Update",
+      "Update or replace the oix core in Version Update",
       "LuCI → Services → OpenClash → Plugin Settings → Version Update",
       [
         [
@@ -1559,11 +1559,11 @@
         ],
         [
           "Update or replace the core",
-          "Click the version link in the Meta / oix core row to fetch the latest kernel package."
+          "Click the version link in the Meta / oix core row to fetch the latest core package."
         ],
         [
-          "Automatic install and permissions",
-          "The system installs to /etc/openclash/core/clash_meta and applies 4755 permissions automatically."
+          "Check the installed result",
+          "Verify the version and a connection. Small-flash mode uses temporary storage."
         ]
       ]
     ],

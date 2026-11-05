@@ -4,7 +4,7 @@ description: Install oixClash on a Merlin router, sign in, turn on the proxy and
 
 # oixClash installation and configuration
 
-For Merlin firmware with the KoolCenter software center (Merlin mods and modified stock firmware). Use the build linked by the [download center](https://oixcloud.com/client#router). oixClash takes over LAN devices with the configuration oixCloud delivers, so devices need no setup; other subscriptions cannot be imported. The plugin page is in Chinese, so its labels below are given in Chinese with a translation.
+For Merlin firmware with the KoolCenter software center (Merlin mods and modified stock firmware). Use the build linked by the [download center](https://oixcloud.com/client#router). oixClash takes over LAN devices with the configuration oixCloud delivers, so LAN devices need the correct gateway and DNS but no separate client installation. The plugin cannot import other subscriptions. The plugin page is in Chinese, so its labels below are given in Chinese with a translation.
 
 ## 1. Choose the package
 
@@ -26,7 +26,7 @@ These links follow the latest stable release. You can also download the [SHA256 
 
 From 0.0.15, the hnd package carries both an armv7 and an arm64 core. Models with a 64-bit system, such as RT-AX86U and GT-AX6000, use the arm64 core automatically; it can use the CPU's AES instructions for encryption and is much faster than the armv7 core. 32-bit models such as RT-AX58U and TUF-AX5400 keep the armv7 core. Offline installation and in-plugin updates choose automatically and keep only the chosen core on JFFS; click **自检** (Self-check) to see which core is in use.
 
-Package size varies by release and platform: about 36 MB for hnd and about 18 MB for other platforms. Reserve JFFS space for both the uploaded archive and extracted files. Models with 512 MB of RAM or more can use the defaults; smaller models, including 256 MB routers, can use [memory optimization](#low-memory), available from 0.0.3. In normal mode, the extracted core occupies about 48 MB of RAM, with additional memory used by the running proxy, GeoIP data and dashboard.
+Package size varies by release and platform. Reserve JFFS space for the actual downloaded archive and extracted files. Models with 512 MB of RAM or more can use the defaults; smaller models, including 256 MB routers, can use [memory optimization](#low-memory), available from 0.0.3. In normal mode, extracting the core into RAM consumes memory in addition to the running proxy, GeoIP data and dashboard. The amount depends on the build and architecture.
 
 ## 2. Install offline
 
@@ -39,8 +39,8 @@ If the platform does not match, the software center says so and stops; install t
 ## 3. Sign in to oixCloud
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-login-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixClash · Sign in to oixClash">
-    <img src="/illustrations/oixclash-login-en.svg?v=20261030-en1" alt="oixClash · Sign in to oixClash" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/oixclash-login-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixClash · Sign in to oixClash">
+    <img src="/illustrations/oixclash-login-en.svg?v=20261105-3" alt="oixClash · Sign in to oixClash" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English reference with Chinese control names · Chinese-only plugin UI · Click to enlarge</figcaption>
 </figure>
@@ -65,7 +65,7 @@ After signing in, the page shows the account, plan, expiry date and traffic. A t
 
 1. Under **运行** (Run), turn on the switch and click **保存并应用** (Save and Apply).
 2. Wait for the log to report a successful start. The first run also downloads GeoIP data and takes a moment.
-3. **运行状态** (Status) shows the core as running with its version.
+3. **运行状态** (Status) shows the core as running with its version. This confirms startup; verify a LAN connection in the next section.
 
 oixClash captures main-LAN DNS and eligible TCP according to device and port settings. From 0.0.14, **运行 → 仅代理常用端口** (Run → Common ports only) is enabled by default: common web/mail destination ports are captured and other ports go direct. An existing disabled setting is preserved.
 
@@ -95,7 +95,7 @@ After disabling memory optimization, a core already stored on JFFS stays there. 
 2. Visit a site that should go direct and one that needs the proxy.
 3. Click **打开控制面板** (Open Dashboard) and check the destination, matched rule and outbound in the connection list.
 
-Traffic of the router itself and of guest networks does not pass through oixClash. Devices that use IPv6 bypass the proxy; the status warns about it, and setting the connection type on the **IPv6** page to disabled is recommended.
+Traffic of the router itself and of guest networks does not pass through oixClash. Devices that use IPv6 bypass the proxy; the status warns about it. To avoid this bypass, set the connection type on the router's **IPv6** page to disabled and verify from a LAN device. The website's [IPv4 Only](/en/account/unlock#ipv4-only) controls remote-node egress and does not fix IPv6 bypass on the router.
 
 ## 6. Nodes, filters and updates
 

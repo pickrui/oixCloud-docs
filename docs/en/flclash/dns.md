@@ -93,3 +93,7 @@ Also review `nameserver-policy`, `fallback`, `direct-nameserver` and `proxy-serv
 A DNS test lists resolvers; a different country or IP from the node does not by itself establish a leak. Compare the queried hostname, routing rule and actual outbound. Local DNS for a direct destination may match the intended split routing, but sending an intended proxy destination to the local ISP resolver needs investigation.
 
 Use fresh random test hostnames to avoid cache effects. Compare VPN / TUN capture, DNS overrides, app-owned DNS and IPv6 one at a time, checking outbounds in [connections and network diagnostics](/en/flclash/diagnostics). Where possible, capture traffic on your own physical adapter or router: check UDP / TCP port 53 and direct encrypted-DNS connections, then repeat after network changes and reconnections. One passing browser test does not prove protection for every app or during disconnection.
+
+## Change only the remote node's IPv4 exit {#ipv4-only}
+
+The client's DNS IPv6 option and TUN capture settings are separate from remote egress restrictions. To make destinations see IPv4, use [IPv4 Only](/en/account/unlock#ipv4-only) and confirm traffic uses the selected supported node. Direct traffic or traffic bypassing the client is outside its scope.

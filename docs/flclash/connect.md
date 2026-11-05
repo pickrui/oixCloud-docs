@@ -28,8 +28,8 @@ Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`�
 ## 操作示意
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-connect-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 仪表盘启动与接管">
-    <img src="/illustrations/flclash-connect-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 仪表盘启动与接管" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-connect-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 仪表盘启动与接管">
+    <img src="/illustrations/flclash-connect-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 仪表盘启动与接管" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
 </figure>
@@ -66,7 +66,7 @@ Windows 启动提示找不到 DLL 时，先按 [缺少 DLL 修复](/flclash/wind
 
 ## Google 登录排查
 
-没有按钮时先核对安装版本；维护源码中的新功能不一定已经进入当前稳定版。浏览器未返回时使用「返回 App」，超时后从客户端重新开始。提示邮箱未注册时，选择已有账户对应的 Google 邮箱，或先在网站完成注册；不要为排查浏览器跳转而反复刷新 Token
+没有按钮、浏览器未返回、流程超时或邮箱未注册时，按统一的 [Google 登录排查](/account/security#google-troubleshooting) 处理
 
 ## 无图形界面与后台运行 {#headless}
 
@@ -82,7 +82,7 @@ FlClash for oixCloud 是图形客户端，常规桌面安装包没有独立的�
 
 ### Linux 服务器或 NAS，希望通过浏览器操作
 
-可使用 FlClash for oixCloud 的 Docker 镜像，在另一台设备的浏览器中登录和管理。宿主机无需本地桌面，容器内部仍运行图形客户端；部署步骤见 [FlClash Docker 教程](https://github.com/pickrui/FlClash/blob/main/docker/README_zh_CN.md)
+可使用 FlClash for oixCloud 的 Docker 镜像，在另一台设备的浏览器中登录和管理。宿主机无需本地桌面，容器内部仍运行图形客户端；部署步骤见 [FlClash for oixCloud Docker 教程](https://github.com/pickrui/FlClash/blob/main/docker/README_zh_CN.md)
 
 ::: warning 浏览器管理界面的访问范围
 浏览器管理界面默认没有鉴权，不要直接暴露到公网。容器中的系统代理或虚拟网卡不会自动接管宿主机或其他局域网设备的流量，需按 Docker 教程单独配置代理端口与访问范围

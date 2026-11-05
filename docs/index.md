@@ -47,7 +47,7 @@ features:
 | --- | --- |
 | 第一次连接，还不知道从哪里开始 | [第一次使用](/start/quick-start) |
 | 了解 Edge、CIA、IXP、Fusion 与 GIA 的区别 | [各类节点介绍](/account/nodes#node-types) |
-| 使用家庭宽带纯净住宅 IP，配置内部中继或链式代理 | [Home ISP 使用指南](/account/home-isp) |
+| 使用 Home ISP 家宽出口，配置内部中继或代理链 | [Home ISP 使用指南](/account/home-isp) |
 | 查询流量扣除、低速档位、自动重置或限速原因 | [流量与计费](/account/traffic) |
 | 筛选节点、更新订阅或恢复默认 | [订阅与筛选](/account/subscriptions) |
 | 设置服务端中继转发或连接自建落地服务器 | [中继与自建落地](/account/relay) |

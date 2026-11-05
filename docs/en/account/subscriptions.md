@@ -14,8 +14,8 @@ A full profile and a Provider node list serve different purposes. A Provider mus
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Filter lines, regions and names">
-    <img src="/illustrations/oixcloud-filter-en.svg?v=20261102-3" alt="Filter lines, regions and names" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-filter-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Filter lines, regions and names">
+    <img src="/illustrations/oixcloud-filter-en.svg?v=20261105-3" alt="Filter lines, regions and names" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>oixCloud iPhone / iPad example · Follow the relevant guide for other clients · Click to enlarge</figcaption>
 </figure>
