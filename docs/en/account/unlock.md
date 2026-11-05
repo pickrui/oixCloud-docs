@@ -72,7 +72,7 @@ If you changed IPv4 Only on another page, refresh the open WARP page before chec
 
 ## Find and update multiple nodes {#bulk-settings}
 
-Traffic route categories show their lists without pagination. Use search for long lists; on a phone, swipe the category bar horizontally. HTTP/3, WARP and IPv4 Only support status filters and bulk settings. Streaming unlock is configured separately for each node and service.
+Traffic route categories show their lists without pagination; on a phone, swipe the category bar horizontally. HTTP/3, WARP, IPv4 Only and streaming unlock provide node search. The first three also offer status filters and bulk settings; streaming unlock is configured separately for each node and service. Internal and external relay [bulk deletion](/en/account/relay#bulk-delete) has its own scope.
 
 1. Search in the relevant category and optionally filter by **Enabled**, **Disabled** or another status. WARP can also filter for IPv4 Only nodes.
 2. Select individual nodes or use **Select all** for **every available node matching the current search and filter**, including rows below the visible screen. Changing the search or filter clears the selection.
@@ -81,13 +81,36 @@ Traffic route categories show their lists without pagination. Use search for lon
 
 Nodes are saved one at a time. A later failure does not undo completed changes. If a timeout or similar interruption stops the batch, the page distinguishes confirmed saves, unconfirmed results and unattempted nodes. Refresh to check their state before retrying the nodes that still need changes.
 
-## Select regions by streaming service
+<span id="select-regions-by-streaming-service"></span>
 
-1. Open [Streaming unlock](https://oixcloud.com/user/media-unlock) and check supported nodes and services.
-2. Choose a region for the service you need; leave other services at their defaults.
-3. Save, establish a new connection through the corresponding node, and verify the region and playback in that service.
+## Select regions by streaming service {#streaming-regions}
 
-This feature is in public beta and supports only some nodes. Unconfigured services follow the node default. Region selection does not replace the platform's account, membership or content requirements.
+This public-beta feature currently supports selected Hong Kong IXP, Fusion-family and GIA nodes. Available nodes depend on account access; the current page determines which services and regions can be chosen. Dedicated IPs are outside this setting's scope. An absent option cannot be enabled by manually entering another region.
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-media-unlock-en.svg?v=20261105-2" target="_blank" rel="noopener" aria-label="Choose streaming regions per node and service">
+    <img src="/illustrations/account-media-unlock-en.svg?v=20261105-2" alt="Choose streaming regions per node and service" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  </a>
+  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+</figure>
+
+1. Open [Streaming unlock](https://oixcloud.com/user/media-unlock) and search for the node you actually use. The list has no pagination. Search only locates nodes and does not change settings; this page has no bulk region-setting action.
+2. Find the service under that node and choose a region from its dropdown. Services are independent, so leave others unchanged. The choice applies across the backends of that logical node.
+3. Changes save automatically. Wait for **Saved** beside the service name; there is no separate save button. After an error or timeout, refresh to check the result rather than treating the displayed dropdown value as proof of a server save.
+4. Wait for node synchronization, close the service's old connections, then reconnect through the modified node and verify the library and actual playback. A region-only change **does not require a subscription refresh**. If you also changed relays or HTTP/3, follow those guides to update the client profile.
+
+To restore defaults, select **Follow node default** for that service. This removes that node/service's custom region without clearing other services or disabling all unlock behavior. If the field says **Settings differ; please select a region again**, reselect the desired region or default and wait for the save to make the node's settings consistent.
+
+A chosen region does not guarantee that every request, item of content or unrelated website exits there. It does not replace the platform's account, membership or content requirements. A generic IP-check website may use a different exit from the streaming service; verify the intended service's library and playback.
+
+### WARP, relays and IPv4 Only {#streaming-routing}
+
+- **WARP takes precedence.** When enabled on the node, it handles connections instead of applying the saved streaming region. Even WARP's fallback to ordinary egress does not then apply this streaming-region setting. The region choice is retained; turn WARP off, wait for synchronization and retest if you want to use it.
+- **Internal relays forward first.** The node that finally handles the destination connection and its available unlock rules determine the region. Saving a region only at the entry does not ensure the exit uses it. Check the [internal relay path](/en/account/relay) first.
+- **IPv4 Only restricts the address family.** It does not choose a region for you. IPv6-only targets may fail and unlock results may change; see [IPv4 Only](#ipv4-only).
+- **Unlock-outbound failures can change the region.** A missing or failed unlock outbound can fall back to the node's ordinary egress. This page has no switch that disconnects unless the chosen region is retained; a saved region is not a fixed-region guarantee.
+
+The additional unlock route can increase latency or affect throughput. Compare the default and chosen region on one node and service before changing others. If playback fails, avoid changing WARP, relays and several regions simultaneously, so you can identify which change affects the result.
 
 ## Calls, remote access and STUN {#stun}
 

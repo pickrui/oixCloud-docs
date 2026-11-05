@@ -16,7 +16,8 @@ description: 按当前任务查找套餐、流量、节点、订阅与账户安�
 | 使用家庭宽带住宅 IP，配置内部中继或链式代理 | [Home ISP 使用指南](/account/home-isp) |
 | 设置站内中继或连接自己的落地服务器 | [中继与自建落地](/account/relay) |
 | 调整节点 HTTP/3 传输与 TCP 回退 | [HTTP/3 与智能回退](/account/http3) |
-| 仅使用 IPv4 出口、调整 WARP 或流媒体地区 | [IPv4 Only、WARP 与流媒体解锁](/account/unlock) |
+| 仅使用 IPv4 出口或调整 WARP | [IPv4 Only 与 WARP](/account/unlock) |
+| 选择流媒体地区、恢复节点默认或排查播放 | [流媒体解锁](/account/unlock#streaming-regions) |
 | 管理登录、令牌、Passkey 和两步验证 | [账户与令牌安全](/account/security) |
 | 理解积分、资源限制与恢复条件 | [公平使用](/account/fair-use) |
 

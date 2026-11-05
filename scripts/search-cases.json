@@ -704,5 +704,28 @@
     "targets": [
       "/account/nodes.html"
     ]
+  },
+  {
+    "terms": [
+      "外部中继 协议保持",
+      "external relay protocol conversion",
+      "中继 批量删除",
+      "relay domain matching",
+      "中继 优先级"
+    ],
+    "targets": [
+      "/account/relay.html"
+    ]
+  },
+  {
+    "terms": [
+      "流媒体 跟随节点默认",
+      "streaming restore defaults",
+      "流媒体 WARP",
+      "streaming settings differ"
+    ],
+    "targets": [
+      "/account/unlock.html"
+    ]
   }
 ]

@@ -467,11 +467,8 @@
       "客户端专用订阅": "Client subscription",
       "添加路径": "Add path",
       "优先级": "Priority",
-      "优先级 1": "Priority 1",
       "节点顺序": "Node order",
-      "入口": "Entry",
-      "出口": "Exit",
-      "预览路径": "Path preview",
+      "预览路径": "Preview path",
       "保存路径": "Save path",
       "WARP 设置": "WARP settings",
       "智能回退": "Smart fallback",
@@ -523,7 +520,33 @@
       "HTTP/3 设置": "HTTP/3 Settings",
       "香港 · 独享 IP - 192.0.2.10": "HK · Dedicated IP - 192.0.2.10",
       "HTTP/3（智能回退）": "HTTP/3 with smart fallback",
-      "HTTP/3（不回退）": "HTTP/3 only"
+      "HTTP/3（不回退）": "HTTP/3 only",
+      "低": "Low",
+      "入口节点": "Entry node",
+      "中继节点 1": "Relay node 1",
+      "出口节点": "Exit node",
+      "新加坡 · 示例 C": "SG · Example C",
+      "添加外部中继": "Add External Relay",
+      "起源节点": "Source node",
+      "起源端口": "Source port",
+      "目标地址": "Target address",
+      "目标端口": "Target port",
+      "备注": "Note",
+      "SSH 示例": "SSH example",
+      "仅转发指定域名/IP": "Forward only these domains / IPs",
+      "留空转发全部访问": "Empty: forward all traffic",
+      "协议保持模式": "Protocol keep mode",
+      "未勾选：起源解密后转发 TCP / UDP": "Unchecked: decrypt and forward TCP / UDP",
+      "添加中继规则": "Add relay rule",
+      "流媒体解锁地区": "Streaming Unlock Regions",
+      "示例流媒体 A": "Example service A",
+      "示例流媒体 B": "Example service B",
+      "日本": "Japan",
+      "跟随节点默认": "Follow node default",
+      "已保存": "Saved",
+      "账户设置": "Account settings",
+      "屏蔽 STUN 连接": "Block STUN connections",
+      "YouTube 后台播放兼容": "YouTube background playback compatibility"
     },
     "openclash": {
       "服务": "Services",
@@ -1438,7 +1461,7 @@
     ],
     "account-relay": [
       "Arrange entry and exit in the path editor",
-      "Website → Internal relay → Add path",
+      "Website → Traffic Routes → Internal relay → Add path",
       [
         [
           "Select nodes in forwarding order",
@@ -1446,7 +1469,7 @@
         ],
         [
           "Add intermediate hops if needed",
-          "Use the row controls and check Path preview on the right."
+          "Reorder with the row controls. The diagram is not a live connectivity test."
         ],
         [
           "Review the effect before saving",
@@ -1631,6 +1654,42 @@
         [
           "Save, then refresh the client",
           "Fallback chooses HTTP/3 or TCP during setup. Existing connections do not migrate."
+        ]
+      ]
+    ],
+    "account-cusrelay": [
+      "Set the external relay destination and mode",
+      "Website → Traffic Routes → External relay → Add relay rule",
+      [
+        [
+          "Choose an available source",
+          "The personal port is read-only. Avoid sources with conflicting rules."
+        ],
+        [
+          "Use the real service port",
+          "A protocol-conversion example. Port guidance is not a connectivity test."
+        ],
+        [
+          "Check mode before saving",
+          "Preserving mode needs the generated installation. Refresh the subscription after saving."
+        ]
+      ]
+    ],
+    "account-media-unlock": [
+      "Choose streaming regions per node and service",
+      "Website → Traffic Routes → Streaming unlock",
+      [
+        [
+          "Find the node you use",
+          "Only supported, accessible nodes appear. There are no bulk region changes."
+        ],
+        [
+          "Choose a region and wait",
+          "Each service saves automatically. Follow node default clears its preference."
+        ],
+        [
+          "Check account-wide controls",
+          "The switches below affect the account, not the selected node’s region."
         ]
       ]
     ]
