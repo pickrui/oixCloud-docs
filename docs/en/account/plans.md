@@ -152,15 +152,15 @@ Final purchase prices follow the displayed rounding rules. Upgrades, application
   <figcaption>Interface simulation · Fictional prices and unusable example code · Click to enlarge</figcaption>
 </figure>
 
-**Applying a coupon settles the current period immediately: it may refund or charge account balance.** **Apply Coupon** normally requires a paid record that is still Active or Pending and is within 7 days of its original purchase. Upgrading does not restart that window. Special converted records are excluded. If a one-use late-application allowance has been granted separately, follow the available button; successful application consumes that allowance.
+**Applying a coupon settles the current period immediately: one-time codes require a balance refund; recurring codes may also charge balance.** **Apply Coupon** normally requires a paid record that is still Active or Pending and is within 7 days of its original purchase. Upgrading does not restart that window. Special converted records are excluded. If a one-use late-application allowance has been granted separately, follow the available button; successful application consumes that allowance.
 
 1. Open [Plan Management](https://oixcloud.com/user/bought), check the original purchase record and select **Apply Coupon** to open **Apply Coupon Code**.
 2. Enter a system code eligible for this action, or an unused code you generated yourself, then select **Verify**. Another person's new-user code cannot be applied to an existing purchase.
 3. Check **Discounted Price** and **Refund Difference** or **Amount Due**, along with coupon type and renewal quote. Settlement compares the current period's discounted price with the record's prior price, prorated by remaining duration; an active plan does not receive a full-period difference. The discounted price for this action has a 70% floor based on the period's current store price and follows rounding rules, so applying later may differ from using the code at purchase.
-4. Accept the settlement and renewal effect before selecting **Apply Coupon** in the dialog. Ensure enough funds for a charge. Verify again if the code or quote changes. A non-recurring code with no price difference is rejected as making no change, without consuming a use.
+4. Accept the settlement and renewal effect before selecting **Apply Coupon** in the dialog. Ensure enough funds for a charge. Verify again if the code or quote changes. A one-time code with no refundable difference is rejected. Reapplying the same recurring code is also rejected when settlement is zero and both prices and saved discount rules are unchanged. Rejection consumes neither a code use nor a one-use late-application allowance.
 5. Check the balance, renewal information and code-use status after success. This action does not extend validity, add/reset data or turn on auto-renewal. After a one-time application, the Coupon Code column can remain blank or keep the old recurring code; check the settlement result.
 
-**Cancel if a one-time code only adds a charge**: it does not improve renewal benefits. An existing recurring benefit does not need repeated application; do not submit the same code again to keep it, as that can consume another use.
+An existing recurring benefit does not need repeated application. A recurring code can still update a changed renewal price or applicable rules with zero settlement. **Cancel if the page still asks for payment to apply a one-time code**: it does not improve renewal benefits.
 
 Unlike a [refund to balance](#refund), applying a coupon settles only the price difference and keeps the plan. Successful application consumes a code use; refunding the plan does not restore a used code.
 
@@ -179,7 +179,7 @@ Recurring means the corresponding purchase record can carry the successfully app
 | --- | --- |
 | Buy with a one-time code | Discounts this purchase only; renewal uses the regular renewal quote shown at purchase |
 | Buy with a recurring code | Saves the applicable benefit and renewal price; a new purchase still starts with auto-renewal off |
-| Apply a one-time code after purchase | Settles the current-period difference and preserves the existing renewal price and recurring benefit |
+| Apply a one-time code after purchase | Requires a refundable difference and preserves the existing renewal price and recurring benefit |
 | Apply a recurring code after purchase | Settles the current-period difference and replaces this record's recurring benefit and renewal price; discounts do not stack and the renewal switch keeps its setting |
 | Leave the code blank during a change/upgrade | Attempts to inherit the existing recurring benefit, subject to target-plan and period eligibility; follow any refusal message |
 | Enter a new code during a change/upgrade | Quotes and sets renewal benefits using that code; a new one-time code does not preserve the old recurring benefit, so check the renewal price before confirming |
@@ -196,7 +196,8 @@ Expiry, disabling or exhausted uses affect new redemptions; renewals carrying an
 | Unsupported plan, period or action | The selected plan and period, and whether this is a purchase, upgrade or application after purchase |
 | New-user or account restriction | Purchase history and eligibility; self-generated and shared codes have different conditions |
 | No Apply Coupon button | Original purchase time, record state, paid amount and converted-record restrictions; upgrading cannot restart the window |
-| Application requires payment or the quote changed | Review the new charge/refund direction and amount; applying a coupon does not guarantee a refund |
+| No need to apply the code | A one-time code has no refundable difference, or the same recurring code has unchanged prices and rules; do not repeatedly submit |
+| Recurring application requires payment or the quote changed | Review the new charge/refund direction, amount and renewal effect; recurring application does not guarantee a refund |
 | One-time code applied but renewal price unchanged | Expected: this settles only the current-period difference; a recurring code updates the renewal benefit |
 
 If the result is unclear, check balance, plan records and the message before providing record details and the exact error in a [support ticket](/en/help/support#payment). Do not repeatedly buy or apply codes.
