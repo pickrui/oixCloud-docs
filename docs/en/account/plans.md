@@ -260,21 +260,75 @@ Check your balance and redemption options in the [Benefits Center](https://oixcl
 
 ## Upgrade or use your next plan early
 
-Quarterly, semiannual and annual plans can be upgraded or exchanged when eligible; monthly plans cannot. The target must offer the original billing period, which stays the same after the operation. For example, a quarterly plan remains quarterly after an upgrade.
+Quarterly, semiannual and annual plans can be upgraded or changed when eligible; monthly plans cannot. The target must offer the original billing period, which stays the same after the operation. For example, a quarterly plan remains quarterly after an upgrade.
 
-| Current plan state | Upgrade or exchange conditions |
+| Current plan state | Upgrade or change conditions |
 | --- | --- |
 | Active | Only a higher tier is allowed, with at least 60 remaining days as calculated by the system |
-| Queued and never used | May be exchanged under the conditions shown on the page |
-| Previously used, now queued | Cannot be exchanged or upgraded directly; activate it first, then check upgrade eligibility |
+| Pending and never used | May be changed when eligible; it remains Pending and does not immediately replace the active plan |
+| Previously used, now Pending | Cannot be changed or upgraded directly; activate it first, then check eligibility, after reading the switching loss below |
 
-Check the Plan Management preview for the price difference, fees, remaining benefits and eligibility. The target must also meet current purchase, stock and funding requirements.
+The target must also meet purchase, stock and funding requirements. Special converted records may not offer this action. Use Plan Management on the full website and follow the buttons and target plans available for that record.
+
+### Upgrade or change a plan {#upgrade}
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-upgrade-en.svg?v=20261105-5" target="_blank" rel="noopener" aria-label="Check upgrade cost and remaining data">
+    <img src="/illustrations/account-upgrade-en.svg?v=20261105-5" alt="Check upgrade cost and remaining data" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Interface simulation · Fictional plan and amounts · Click to enlarge</figcaption>
+</figure>
+
+1. Open [Plan Management](https://oixcloud.com/user/bought), check the original record and select **Upgrade** for an active plan or **Change** for a never-used pending plan.
+2. In **Change / Upgrade**, select the target and check the billing period. Optionally enter a coupon and select **Verify**. Leaving it blank attempts to inherit the original recurring coupon, which must still apply to the target and period; retention is not unconditional.
+3. Wait for the preview and check **Actual payment amount**, the discount and renewal price. For an ordinary-plan upgrade, also check **High-speed data after upgrade** and **Net data change**. Add sufficient funds if needed and review again if the target or amount changes.
+4. Accept the charges and data changes below before selecting **Confirm Change / Upgrade**. Afterwards, check the target plan, status, remaining data, expiry and renewal settings on the purchase record. Refresh client account information and the managed profile after changing an active plan.
+
+**An active-plan upgrade does not buy a new full period**: the price difference is prorated by remaining days and includes a fee. The charge cannot be negative; a lower discounted target price does not produce a refund. For an ordinary-to-ordinary upgrade, expiry and used data stay unchanged. Remaining data becomes the target period's allowance minus data already used, with a minimum of zero, rather than the full new allowance. Continued usage can change the final result from the preview. Changes involving pay-as-you-go follow the target's billing rules rather than this ordinary-plan data formula.
+
+**Changing a never-used pending plan** uses the full-period price difference without that active-upgrade fee. A positive difference is charged and a negative difference returns to account balance; the record remains Pending.
+
+The renewal price is recalculated for the target and applicable discount. Auto-renewal stays on only if it was already on and the target supports it; otherwise it is turned off or stays off. Also check whether automatic traffic reset remains available and its per-reset price.
 
 ## Manual activation and refunds to balance
 
-Manually switching plans deducts 2 hours from the original plan's validity, then preserves its remaining time and traffic according to the rules. A plan with too little left to preserve ends (or awaits auto-renewal if automatic renewal is on), and saved traffic is rounded down to whole GiB. A queued plan with less than 6 hours remaining has no activation option; it takes over automatically in queue order when the current plan expires or runs out of traffic. Only eligible unused plans that show a refund option can be refunded to account balance. This is not a refund to the original payment method or a withdrawal. Read the confirmation dialog before proceeding.
+Both actions start from a purchase record. Activation immediately switches the active plan; a refund ends the refunded record. Check the record and confirmation first, rather than treating either action as a renewal or top-up.
 
-[Open Plan Management](https://oixcloud.com/user/bought)
+### Manual activation {#manual-activation}
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-activation-en.svg?v=20261105-5" target="_blank" rel="noopener" aria-label="Check the old plan before activating another">
+    <img src="/illustrations/account-activation-en.svg?v=20261105-5" alt="Check the old plan before activating another" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Interface simulation · Fictional plan and amounts · Click to enlarge</figcaption>
+</figure>
+
+**Each manual switch deducts 2 hours from the current active plan**, with saved time rounded down to whole minutes and ordinary-plan data to whole GiB. If enough remains, the old plan becomes Pending. If not, it becomes Awaiting auto-renewal when auto-renewal is on, or ends otherwise. Repeated switches incur the loss again; an ended record cannot be recovered by switching back.
+
+1. Open [Plan Management](https://oixcloud.com/user/bought) and select **Activate** on the pending record you want to use now. Manual activation requires at least 6 hours remaining and usable data; pay-as-you-go plans do not require a stored data allowance.
+2. Read **Notice** and check whether the old plan will become Pending, await auto-renewal or end. The illustration shows only the retention case. With no active plan, there is no old plan to replace and no switching loss to deduct.
+3. Select **Confirm Switch** to use it now, or **Think Again** to cancel. Activation does not merge the two plans' data or validity; the newly active plan starts counting down its recorded remaining duration at activation.
+4. Verify the new **Active** record, the old record's outcome and remaining time/data, then refresh client account information and the managed profile. Activating another plan does not by itself select a different auto-renewal target; change that separately if needed.
+
+A pending plan with less than 6 hours remaining has no manual activation button. If it still has valid time and usable data, it can take over automatically in queue order when the current plan expires or runs out of traffic. Follow any specific refusal message instead of repeatedly buying plans to substitute for activation.
+
+### Refund to balance {#refund}
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-refund-en.svg?v=20261105-5" target="_blank" rel="noopener" aria-label="Check the amount before refunding to balance">
+    <img src="/illustrations/account-refund-en.svg?v=20261105-5" alt="Check the amount before refunding to balance" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Interface simulation · Fictional plan and amounts · Click to enlarge</figcaption>
+</figure>
+
+**A refund ends that plan and returns funds only to account balance, not the original payment provider or a withdrawal; used coupon codes are not returned.** Self-service refunds require an eligible unused pending record with a positive refundable paid amount: annual plans and specific quarterly plans that show the button. Not every quarterly plan qualifies; monthly and semiannual plans do not offer this self-service refund. A previously used plan switched back to Pending is not eligible.
+
+1. Find the original record in [Plan Management](https://oixcloud.com/user/bought), check its name, period and **Pending** status, then select **Refund to balance**.
+2. In **Please confirm**, check the refund amount and the consequence of ending the plan. The amount follows the record's actual paid value, including previous additional charges or difference refunds, rather than its current store or renewal price.
+3. Select **Confirm** to proceed or **Cancel** to keep the plan. If the amount or state changed, refresh the record and check again.
+4. Verify account balance and the **Refunded** status. That record can no longer be activated or renewed; refunding it does not end a different plan currently in use.
+
+If the button is missing, check the period, usage history and record state. Do not activate a plan to try to qualify for a refund. If the result is unclear, refresh the balance and records, retain the message and provide details through [payment and plan support](/en/help/support#payment) rather than resubmitting.
 
 ## Choose the operation for your goal
 

@@ -745,5 +745,18 @@
     "targets": [
       "/account/plans.html"
     ]
+  },
+  {
+    "terms": [
+      "套餐 升级 剩余流量",
+      "plan upgrade used data",
+      "手动激活 切换损耗",
+      "manual activation switching loss",
+      "退款至余额",
+      "refund unused plan"
+    ],
+    "targets": [
+      "/account/plans.html"
+    ]
   }
 ]
