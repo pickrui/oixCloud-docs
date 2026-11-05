@@ -1,3 +1,9 @@
+# Complete top-up instructions — 2026-11-05
+
+Added paired `#top-up` sections to the existing plan guides and direct links from both homepages and account indexes. The guide now covers checkout, current payment methods and limits, CNY/USD input and confirmation, payment details, credited records, top-up codes, expired/pending orders and missing payments. Existing automatic-purchase and crypto-feedback sections remain the detailed destinations, with their anchors preserved.
+
+Checked against the panel's counter App, payment amount form, common payment flow, counter translations, counter template, `/user/code` routes and code redemption controller. No fixed channel availability, rate, fee or crediting time is promised. `pnpm build`, `pnpm check:search` (448 keyword cases, 786 result anchors), all 107 generated HTML pages with 8,964 internal references and `git diff --check` passed. Chromium passed eight bilingual desktop/mobile and light/dark cases with matching-language navigation and no overflow or page errors; the new section was visually inspected. The existing non-blocking bundle-size advisory remains. No real payment or authenticated production flow was performed. Temporary checks and preview processes were removed before committing.
+
 # Bilingual guide audit and VPS links — 2026-11-05
 
 Reviewed all 53 Chinese/English page pairs and 118 illustrations. Focused implementation checks used the maintained working copies of `dler-panel` `6f70f437`, `oix-server` `ce11f871`, `dler-webapi` `6ce0a4e9`, `oixCloud` `4cfcc139`, `FlClash` `20f53a8d0`, `oixClash` `0c7def8` and `OpenClash` `8ceb9d1f`. Existing unrelated client/server working-tree changes were left untouched. Public platform references and linked GitHub documentation were also checked; the dedicated core release was verified through GitHub's release API.

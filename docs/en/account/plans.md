@@ -10,8 +10,26 @@ Each plan has a validity period and a traffic allowance. **The plan is exhausted
 If you have a queued plan, or have enabled automatic renewal (runs only at expiry) or automatic traffic reset, the continuation rules below apply. Check [Plan Management](https://oixcloud.com/user/bought) first, then place an order in the [plan store](https://oixcloud.com/user/shop) if no replacement has taken effect, to avoid duplicate purchases.
 :::
 
-## Add funds, buy, and activate
+## How to add funds {#top-up}
 
+A top-up adds account balance; buying a plan is a separate step. If checkout was opened from a plan purchase, also read the automatic-purchase explanation below.
+
+1. Sign in and open [Checkout](https://oixcloud.com/user/v2/counter). Choose an available payment method. Available channels and amount limits are shown on the page.
+2. Enter the amount and check **CNY / USD** beside the field. CNY is the RMB order amount. USD is a reference conversion: review and confirm the CNY amount before placing the order. Use CNY if the exchange rate is unavailable. The payment channel's order determines the actual payment amount and fees.
+3. Pay using the displayed QR code or payment link. For cryptocurrency, check the order's currency, network, address, transfer amount and expiry individually; do not reuse details from an old order.
+4. Return to the website, check the credited amount in [Top-up Records](https://oixcloud.com/user/code), and refresh your balance. A debit in the payment app, a closed QR dialog or a submitted feedback form does not prove that funds were credited.
+5. After a standalone top-up, complete any intended purchase in the [plan store](https://oixcloud.com/user/shop). If automatic renewal or automatic traffic reset is enabled, funds may be spent under those rules; also check [Plan Management](https://oixcloud.com/user/bought).
+
+If you have a top-up code, open [Top-up Code and Records](https://oixcloud.com/user/code), enter the complete code and select **Use Top-up Code**. Check the record and balance after success. A top-up code is not an Access Token, subscription URL or payment order number.
+
+| Situation | What to do |
+| --- | --- |
+| Payment debited but not credited | Check the original order and top-up records first. Keep the order number, amount, payment time and receipt; do not pay again. Use [missing-payment feedback](#crypto-payment-feedback) for cryptocurrency or a [support ticket](/en/help/support) for other methods. |
+| Order expired | If unpaid, create a new order and do not transfer to the old one. If already paid, check the original order and records before taking further action. |
+| Too many pending orders | Follow the prompt to handle old orders. Verify any payment with an uncertain result before deleting its order just to place another one. |
+| Balance or traffic differs after crediting | Check debt deductions, plan purchases, automatic renewal and automatic traffic reset. Adding funds alone does not increase an ordinary plan's traffic allowance. |
+
+## Add funds, buy, and activate
 
 <figure class="guide-figure">
   <a href="/illustrations/account-plans-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Check plan status after purchase">

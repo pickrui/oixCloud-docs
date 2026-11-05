@@ -50,6 +50,7 @@ features:
 | 使用 Home ISP 家宽出口，配置内部中继或代理链 | [Home ISP 使用指南](/account/home-isp) |
 | 查询流量扣除、低速档位、自动重置或限速原因 | [流量与计费](/account/traffic) |
 | 筛选节点、更新订阅或恢复默认 | [订阅与筛选](/account/subscriptions) |
+| 在线充值、使用充值码或核对到账 | [充值与到账](/account/plans#top-up) |
 | 设置服务端中继转发或连接自建落地服务器 | [中继与自建落地](/account/relay) |
 | 已连接但打不开、速度慢或地区不对 | [连接与速度排查](/help/troubleshooting) |
 | 准备提交报错和日志 | [服务单信息与模板](/help/support) |

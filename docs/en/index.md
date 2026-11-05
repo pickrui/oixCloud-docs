@@ -50,6 +50,7 @@ features:
 | Use residential broadband IPs via internal relays or proxy chains | [Home ISP user guide](/en/account/home-isp) |
 | Understand traffic charges, low-speed tiers, auto reset or limits | [Traffic and billing](/en/account/traffic) |
 | Filter nodes, update a subscription or restore defaults | [Subscriptions and filters](/en/account/subscriptions) |
+| Add funds, use a top-up code or check crediting | [Top-ups and credited funds](/en/account/plans#top-up) |
 | Set up server-side relays or your own destination | [Relays and your own destinations](/en/account/relay) |
 | Fix browsing, slow speeds or the wrong region | [Connection and speed troubleshooting](/en/help/troubleshooting) |
 | Submit an error and logs | [Support details and template](/en/help/support) |
