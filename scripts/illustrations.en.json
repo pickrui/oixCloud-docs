@@ -628,6 +628,25 @@
     },
     "flclash-custom-node": {
       "自定义节点": "Custom node"
+    },
+    "account-top-up": {
+      "收银台": "Cashier",
+      "选择支付方式": "Choose a payment method",
+      "示例渠道": "Example channel",
+      "充值金额 · CNY": "Recharge amount · CNY",
+      "支付": "Pay",
+      "订单充值金额": "Order amount",
+      "实际以人民币充值，美元金额仅供参考": "Your balance is credited in CNY. USD amounts are for reference."
+    },
+    "account-top-up-records": {
+      "充值": "Top-up",
+      "在线支付": "Online Payment",
+      "前往收银台": "Go to Cashier",
+      "充值码": "Top-up Code",
+      "使用充值码": "Redeem Code",
+      "充值记录": "Top-up History",
+      "充值金额": "Top-up Amount",
+      "时间": "Date"
     }
   },
   "scenes": {
@@ -1690,6 +1709,42 @@
         [
           "Check account-wide controls",
           "The switches below affect the account, not the selected node’s region."
+        ]
+      ]
+    ],
+    "account-top-up": [
+      "Choose a method and check the top-up amount",
+      "Website → Cashier",
+      [
+        [
+          "Choose a payment method",
+          "The channel is fictional. Use a method currently offered on the page."
+        ],
+        [
+          "Check the input currency",
+          "This example uses CNY. USD input requires confirming the CNY order amount."
+        ],
+        [
+          "Pay using this order",
+          "Follow its QR code or link, then check Top-up History after payment."
+        ]
+      ]
+    ],
+    "account-top-up-records": [
+      "Redeem a code and verify credited funds",
+      "Website → Top-up",
+      [
+        [
+          "Open the cashier to pay",
+          "Return here after payment to check the credited amount and date."
+        ],
+        [
+          "Enter a top-up code only",
+          "The example code cannot be used. Do not enter an Access Token or subscription URL."
+        ],
+        [
+          "Then check the plan",
+          "Credited funds do not prove plan activation. Check purchases or automatic charges too."
         ]
       ]
     ]

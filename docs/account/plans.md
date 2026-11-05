@@ -14,11 +14,25 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
 
 充值用于增加账户余额，与购买套餐是两个步骤。若从套餐购买流程进入收银台，请同时阅读下方的自动购买说明
 
+<figure class="guide-figure">
+  <a href="/illustrations/account-top-up-zh.svg?v=20261105-1" target="_blank" rel="noopener" aria-label="选择支付方式并核对充值金额">
+    <img src="/illustrations/account-top-up-zh.svg?v=20261105-1" alt="选择支付方式并核对充值金额" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>界面示意 · 虚构渠道、金额与记录，示例充值码不可使用 · 点击放大</figcaption>
+</figure>
+
 1. 登录后打开 [收银台](https://oixcloud.com/user/v2/counter)，在「选择支付方式」中选择当前可用渠道；可用方式和金额上下限以页面为准
 2. 输入充值金额，核对输入框旁的 **CNY／USD**。CNY 是人民币订单金额；USD 仅用于参考换算，点击「核对金额」后，确认人民币金额再下单。汇率不可用时使用 CNY，实际付款金额及手续费以支付渠道订单为准
 3. 提交订单后，按页面提供的二维码或支付链接完成付款。使用虚拟币时，逐项核对订单的币种、网络、地址、转账金额和有效期，不要沿用旧订单资料
 4. 付款后返回网站，打开 [充值记录](https://oixcloud.com/user/code) 核对入账金额，并刷新账户余额。支付应用显示扣款、二维码关闭或反馈提交成功，都不能代替入账记录
 5. 若是普通充值，再到 [套餐商店](https://oixcloud.com/user/shop) 完成所需购买；若已有自动续费或自动重置流量，资金可能按对应规则被扣除，请同时核对 [套餐管理](https://oixcloud.com/user/bought)
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-top-up-records-zh.svg?v=20261105-1" target="_blank" rel="noopener" aria-label="使用充值码并核对到账记录">
+    <img src="/illustrations/account-top-up-records-zh.svg?v=20261105-1" alt="使用充值码并核对到账记录" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>界面示意 · 虚构渠道、金额与记录，示例充值码不可使用 · 点击放大</figcaption>
+</figure>
 
 已有充值码时，打开 [充值码与充值记录](https://oixcloud.com/user/code)，在「充值码」中输入完整代码，点击「使用充值码」，成功后核对记录和余额。充值码不是 Access Token、订阅地址或支付订单号
 

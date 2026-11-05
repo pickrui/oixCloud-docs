@@ -1,3 +1,9 @@
+# Bilingual top-up illustrations — 2026-11-05
+
+Added four generated SVGs to the existing top-up sections: Chinese and English cashier scenes, plus paired top-up-code and credited-history scenes. The diagrams follow the current counter components, recharge template and material translations, use fictional channel/amount/code/record data, and reuse the existing accessible image viewer. Corrected the English instructions to match the actual Redeem Code and Top-up History labels. Existing article paths and anchors are unchanged.
+
+Validation: `pnpm build`, `pnpm check:search` (448 keyword checks and 786 result anchors), `git diff --check`, all 107 generated HTML pages and 8,972 internal references passed. All 122 SVGs parse and regenerate byte for byte; the existing 118 remain unchanged. Chromium passed eight bilingual desktop/mobile light/dark page cases, 16 image-viewer interactions, matching-language navigation and four SVG text-bounds/overlap checks with no overflow or captured errors. Visually inspected all four new diagrams. The existing non-blocking bundle-size advisory remains. No real payment or authenticated production flow was performed. Temporary checks and previews were removed before committing; Pages publication is verified separately after pushing.
+
 # Complete top-up instructions — 2026-11-05
 
 Added paired `#top-up` sections to the existing plan guides and direct links from both homepages and account indexes. The guide now covers checkout, current payment methods and limits, CNY/USD input and confirmation, payment details, credited records, top-up codes, expired/pending orders and missing payments. Existing automatic-purchase and crypto-feedback sections remain the detailed destinations, with their anchors preserved.
