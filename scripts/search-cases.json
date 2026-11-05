@@ -727,5 +727,20 @@
     "targets": [
       "/account/unlock.html"
     ]
+  },
+  {
+    "terms": [
+      "法币充值 刷新",
+      "fiat top-up gateway",
+      "虚拟货币 手续费",
+      "cryptocurrency transfer amount",
+      "套餐 自动续费",
+      "plan renewal price",
+      "自动重置流量",
+      "automatic traffic reset"
+    ],
+    "targets": [
+      "/account/plans.html"
+    ]
   }
 ]

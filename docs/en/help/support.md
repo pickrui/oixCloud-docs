@@ -54,6 +54,8 @@ If you have paid but the plan is not active, separately provide the order ID, pa
 
 ## Payment missing or plan not active {#payment}
 
+For any fiat top-up issue, [refresh checkout to automatically reselect the payment gateway](/en/account/plans#fiat-top-up) before retrying. If already charged, check records and do not pay twice. Before a crypto transfer, follow the [asset, network, amount and fee checks](/en/account/plans#crypto-top-up).
+
 Check funding records and Plan Management separately. For crypto orders, follow the [uncredited-payment steps](/en/account/plans#crypto-payment-feedback) on the original order.
 
 Provide the original order ID, payment time and time zone, method, actual amount, funding/plan states and the exact feedback result. For crypto, include the network and transaction hash. Share necessary details only in a private ticket; never send wallet private keys, seed phrases, login passwords or verification codes.

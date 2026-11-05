@@ -21,11 +21,51 @@ A top-up adds account balance; buying a plan is a separate step. If checkout was
   <figcaption>Interface simulation · Fictional channel, amounts and records; example code cannot be redeemed · Click to enlarge</figcaption>
 </figure>
 
-1. Sign in and open [Checkout](https://oixcloud.com/user/v2/counter). Choose an available payment method. Available channels and amount limits are shown on the page.
-2. Enter the amount and check **CNY / USD** beside the field. CNY is the RMB order amount. USD is a reference conversion: review and confirm the CNY amount before placing the order. Use CNY if the exchange rate is unavailable. The payment channel's order determines the actual payment amount and fees.
-3. Pay using the displayed QR code or payment link. For cryptocurrency, check the order's currency, network, address, transfer amount and expiry individually; do not reuse details from an old order.
-4. Return to the website, check the credited amount in [Top-up History](https://oixcloud.com/user/code), and refresh your balance. A debit in the payment app, a closed QR dialog or a submitted feedback form does not prove that funds were credited.
-5. After a standalone top-up, complete any intended purchase in the [plan store](https://oixcloud.com/user/shop). If automatic renewal or automatic traffic reset is enabled, funds may be spent under those rules; also check [Plan Management](https://oixcloud.com/user/bought).
+### Fiat top-ups {#fiat-top-up}
+
+Use the fiat methods currently shown in checkout, such as Alipay or WeChat Pay. Available methods and amount limits follow the page.
+
+1. Sign in, open [Checkout](https://oixcloud.com/user/v2/counter), choose a payment method and enter the amount.
+2. Check **CNY / USD** beside the field. CNY is the RMB order amount. USD is a reference conversion: review and confirm the CNY amount before placing the order. Use CNY if the exchange rate is unavailable.
+3. Pay using that order's QR code or link. Check the actual amount and fees on the payment order.
+4. Return to [Top-up History](https://oixcloud.com/user/code), verify the credit and refresh your balance. For checkout associated with a plan, also verify the resulting purchase in Plan Management.
+
+::: tip Refresh the page if you encounter any fiat payment issue
+For any problem with a fiat top-up, **refresh the checkout page so the system automatically reselects the payment gateway, then try again**. You do not need to choose a gateway manually. The payment-method name can stay the same while the gateway handling it changes.
+
+If you have already been charged, check the original order and top-up history after refreshing instead of paying again. If still uncredited, keep the order number, time, amount and receipt for a [payment support ticket](/en/help/support#payment).
+:::
+
+### Cryptocurrency top-ups {#crypto-top-up}
+
+Cryptocurrency payments require a transfer to the order's address on its specified network. Matching the asset name alone is insufficient. The illustration uses a fictional USDT order; use the assets and networks actually offered in checkout. USDT orders do not all require the same network.
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-crypto-top-up-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the crypto order before transferring">
+    <img src="/illustrations/account-crypto-top-up-en.svg?v=20261105-3" alt="Check the crypto order before transferring" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Interface simulation · Fictional data, not for payment · Click to enlarge</figcaption>
+</figure>
+
+1. Choose an available cryptocurrency method. If the entry specifies a network, use that network. For a multi-asset entry, select the asset and check its displayed network, exchange rate and platform fee.
+2. Enter the account top-up amount, check CNY / USD, then select **Create Order**. The account credit and on-chain **Amount to receive** use different units. The pre-order coin estimate is only a preview; transfer the amount on the created order.
+3. Check the asset, **network, recipient address, amount to receive and remaining payment time**. Select the same asset and network in your wallet or exchange and copy the current order's address. The address QR code contains only the address; scanning it does not set or verify the network and amount.
+4. Follow that order's amount rule. For an exact-amount order, keep every decimal place and do not round. For a minimum-amount order, the received amount must not be less; excess funds are not refunded. Do not assume all channels use the same rule.
+5. Check the exchange's withdrawal fee and final received amount. A platform fee differs from exchange/network transfer fees; no platform fee does not mean a free transfer. If the exchange deducts its fee from the withdrawal quantity, use **Withdrawal fee calculator** to add **amount to receive + fee**, then check the exchange's final received amount again.
+6. Transfer once within the payment window and retain the transaction hash. Crypto orders currently allow 60 minutes; follow the displayed countdown. If an unpaid order expires, create a new one and do not reuse the old amount or address.
+7. Return to checkout for payment monitoring and chain confirmation, then verify the actual credit in [Top-up History](https://oixcloud.com/user/code). Wallet submission, blockchain confirmation and website crediting are separate stages.
+
+| Status or problem | Action |
+| --- | --- |
+| Transaction detected, awaiting on-chain confirmation | Wait for crediting; do not transfer again |
+| Reconnecting | The status query was interrupted, which does not prove payment failure. If already paid, check the original order and top-up history |
+| Transaction detected, payment not yet credited | Do not transfer again or create another order even if the payment window ended. Check history and use [missing-credit feedback](#crypto-payment-feedback) if needed |
+| Underpayment, wrong network or late transfer | Keep the original order, hash and receipt for [missing-credit feedback](#crypto-payment-feedback). Do not send an extra transfer or create another order as a workaround |
+| Top-up successful | Verify balance and plan records; do not pay again |
+
+After a standalone top-up, complete your purchase in the [plan store](https://oixcloud.com/user/shop). Existing automatic renewal or traffic reset may spend the funds under their rules, so also check [Plan Management](https://oixcloud.com/user/bought).
+
+### Top-up codes and credit verification {#top-up-records}
 
 <figure class="guide-figure">
   <a href="/illustrations/account-top-up-records-en.svg?v=20261105-1" target="_blank" rel="noopener" aria-label="Redeem a code and verify credited funds">
@@ -45,9 +85,25 @@ If you have a top-up code, open [Top-up Code and Records](https://oixcloud.com/u
 
 ## Add funds, buy, and activate
 
+### Choose and confirm a plan {#purchase}
+
 <figure class="guide-figure">
-  <a href="/illustrations/account-plans-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Check plan status after purchase">
-    <img src="/illustrations/account-plans-en.svg?v=20261102-3" alt="Check plan status after purchase" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/account-purchase-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the billing period and purchase total">
+    <img src="/illustrations/account-purchase-en.svg?v=20261105-3" alt="Check the billing period and purchase total" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Interface simulation · Fictional data, not for payment · Click to enlarge</figcaption>
+</figure>
+
+1. Open the [plan store](https://oixcloud.com/user/shop), choose a supported billing period, and check its total data allowance, validity, intended use, stock and total price. The monthly equivalent is a price comparison, not monthly billing or a monthly traffic reset.
+2. Select **Buy** or **Add Plan**. In **Confirm Purchase**, check the plan, billing period and price. If using a coupon, select **Verify** and check the resulting Total Due. USD is a reference only; confirmation and actual charges use CNY.
+3. Read the terms and any plan-specific notices, complete the requested checkbox or typed acknowledgement, then confirm. Follow checkout for any shortfall instead of submitting several orders.
+4. Return to **Plan Management** and check **Active** or **Pending**, Time Left and Data Left. Adding a plan does not immediately replace an existing one.
+
+### Check purchased records
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-plans-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check plan status after purchase">
+    <img src="/illustrations/account-plans-en.svg?v=20261105-3" alt="Check plan status after purchase" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
 </figure>
@@ -74,7 +130,7 @@ Stopping renewal does not release stock immediately. Disabling automatic renewal
 
 | Operation or state | Inventory effect |
 | --- | --- |
-| New purchase or early renewal | Deducts one unit of the corresponding plan, including purchases placed in the activation queue |
+| New purchase (including buying ahead) | Deducts one unit of the corresponding plan, including purchases placed in the activation queue |
 | Normal automatic renewal | The new period takes over the original record's unit; nothing is deducted or returned. Funding and renewal eligibility still apply |
 | Disable automatic renewal | No immediate return; eligible expiry termination or cleanup must follow |
 | Queued plan taking over automatically at expiry or when traffic runs out | No second deduction for the queued plan, which was deducted at purchase; the replaced plan ends and returns one unit, or awaits auto-renewal and keeps it if automatic renewal is on |
@@ -84,7 +140,7 @@ Stopping renewal does not release stock immediately. Disabling automatic renewal
 | Eligible refund to account balance | Returns one unit |
 | Expiry without renewal or an eligible queued replacement, followed by completed termination/cleanup | Returns the corresponding limited stock, including replaced plans queued after the others that did not renew |
 
-A sold-out new-purchase page therefore does not by itself prevent normal automatic renewal for an existing customer. **Early renewal still checks inventory** and differs from normal automatic renewal. Returning stock does not relist a product that has been taken off sale.
+A sold-out new-purchase page therefore does not by itself prevent normal automatic renewal for an existing customer. **Buying ahead uses the current new-purchase price and stock checks** and differs from normal automatic renewal. Returning stock does not relist a product that has been taken off sale.
 
 Refresh the store later or choose another available plan. Adding funds, opening checkout or submitting an unpaid order does not reserve plan inventory; stock may change before the purchase completes. Do not repeatedly top up or disable an existing renewal just to wait for stock.
 
@@ -140,11 +196,25 @@ While at low speed, adding an eligible queued plan causes automatic switching fi
 | Activation queue | You can reorder plans; when the active plan expires or runs out of traffic, queued plans are tried in that order |
 | Automatic renewal | Happens only at expiry when no queued plan is available, and renews the plan that has automatic renewal on; see [Automatic renewal](#auto-renew). Running out of traffic does not trigger an early renewal |
 | Automatic traffic reset | Clears used traffic at the reset price when it runs out, without changing the expiry; see [Automatic traffic reset](#traffic-reset) |
-| Early renewal | Pays for the next period at the current renewal price (the same amount automatic renewal would charge) and adds a queued plan without increasing current traffic; automatic renewal then moves to the new period.<br>Requires automatic renewal to be enabled and the displayed product, stock and billing-period conditions to be met. A discount code applies only if it is cheaper than the current renewal price; developer plans renew automatically at expiry and do not offer early renewal |
+| Prepare the next period | Add a plan from the store at the current purchase price, subject to stock. It enters the queue without increasing current traffic. Auto-renewal starts off on the new record; adding it does not change the existing renewal target |
 
 ### Automatic renewal {#auto-renew}
 
-Only one plan has automatic renewal on at a time. The system attempts to renew it only when the active plan expires and no eligible queued plan remains; running out of traffic before expiry does not trigger automatic renewal. New purchases start with automatic renewal off; turn it on in your purchase records when you want it. Turning it on for another purchase record or renewing early turns it off for the plan that had it.
+<figure class="guide-figure">
+  <a href="/illustrations/account-renewal-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the renewal target and price">
+    <img src="/illustrations/account-renewal-en.svg?v=20261105-3" alt="Check the renewal target and price" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Interface simulation · Fictional data, not for payment · Click to enlarge</figcaption>
+</figure>
+
+1. Open [Plan Management](https://oixcloud.com/user/bought), find the record you want to renew after expiry, and select its **Auto-renewal** switch.
+2. Check the quoted renewal price and whether another record will have auto-renewal turned off before confirming.
+3. Check the saved switch and **Renewal Price**, and ensure balance plus commission covers it before expiry. Turning the switch on does not buy the next period immediately.
+4. After expiry is processed, verify the new active record, validity and traffic. An enabled switch alone does not prove renewal succeeded.
+
+There is currently no separate early-renewal action. To prepare another period in advance, add a plan from the store and compare its current purchase price with your existing renewal price; they may differ.
+
+Only one plan has automatic renewal on at a time. The system attempts to renew it only when the active plan expires and no eligible queued plan remains; running out of traffic before expiry does not trigger automatic renewal. New purchases start with automatic renewal off; turn it on in your purchase records when you want it. Turning it on for another purchase record turns it off for the plan that had it.
 
 You can turn automatic renewal on or off at any time. Turning it off does not forfeit the renewal price, and you can turn it back on any time before the plan ends. Turning it on requires the product to support automatic renewal and your account to still meet the plan's purchase requirements.
 
@@ -154,9 +224,23 @@ For example, A is awaiting auto-renewal, B is active, and no other plan is queue
 
 ### Automatic traffic reset {#traffic-reset}
 
+<figure class="guide-figure">
+  <a href="/illustrations/account-traffic-reset-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the cost of each automatic reset">
+    <img src="/illustrations/account-traffic-reset-en.svg?v=20261105-3" alt="Check the cost of each automatic reset" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Interface simulation · Fictional data, not for payment · Click to enlarge</figcaption>
+</figure>
+
+1. Open [Plan Management](https://oixcloud.com/user/bought) and find **Automatic traffic reset** on the target record. Check the per-reset price beneath it. A pending record's setting applies only after activation.
+2. Select the switch and read the confirmation. If traffic has already run out and immediate-processing conditions are met, **Turn on and pay** warns that a charge may follow within about a minute.
+3. Afterwards, refresh the user center to verify used traffic is cleared, funds were deducted and the expiry is unchanged. If connections remain slow, wait for node synchronization and reconnect.
+4. Turn the switch off to stop future automatic reset charges. This does not turn off auto-renewal or reverse a completed reset charge.
+
 Each purchase record has its own "Automatic traffic reset" switch. It is off by default, and records created by renewal keep the original setting. When it is on, traffic has run out before expiry, no eligible queued plan is available, the period supports reset, the account is allowed to purchase and funds are sufficient, used traffic is cleared at the reset price and the expiry stays the same. The reset price is shown under the switch in the purchase record, and coupon discounts do not apply to it.
 
 If your traffic has already run out when you turn it on, the charge and reset happen within about a minute if the conditions above are met. If insufficient balance including commission is the only obstacle, the plan stays at low speed and resets after you add enough funds. Reset is available at any time before expiry when the conditions are met. A reset close to expiry does not extend validity: at expiry, queued plans still take priority, and automatic renewal is considered only when no eligible queued plan remains. Developer and pay-as-you-go plans do not offer it.
+
+The reset price follows the product's current price for resetting that billing period. If no separate reset price is set, the current store price for that period applies, rather than the record's renewal price. Automatic reset is not a one-time purchase: while enabled, traffic running out again in the same period can cause another charge if the conditions are met. A period with a paid reset earns no expiry benefit credits; see [Benefit credits](#benefit-credits).
 
 ## Benefit credits {#benefit-credits}
 
@@ -196,7 +280,7 @@ Manually switching plans deducts 2 hours from the original plan's validity, then
 | Goal | Operation | Verify afterwards |
 | --- | --- | --- |
 | Start service | Choose a plan and pay the shortfall if prompted | An active record plus tier, expiry and allowance in the user center |
-| Prepare the next period | Buy another plan or use eligible early renewal | A queued plan; current traffic does not immediately increase |
+| Prepare the next period | Add a plan from the store | A queued plan; current traffic does not immediately increase |
 | Use the next plan now | Manually activate a queued plan | Read the old plan's deduction/retention preview, then check the newly active record |
 | Automatically restore speed when traffic runs out | Turn on automatic traffic reset | Enable in the purchase record and ensure balance covers the reset price |
 | Raise an active quarterly, semiannual or annual tier | Upgrade when eligible, keeping the billing period | Price difference, fee, remaining validity and resulting allowance |
@@ -205,10 +289,7 @@ Manually switching plans deducts 2 hours from the original plan's validity, then
 
 ## Confirm a purchase
 
-1. Check period, total allowance, tier and price in the [plan store](https://oixcloud.com/user/shop).
-2. Verify the charge in the confirmation dialog, then read back the actual order in [Plan Management](https://oixcloud.com/user/bought).
-3. If a plan is already active, check whether the new one is queued. Do not buy again merely because the current allowance is unchanged.
-4. Once it becomes active, refresh account information and the managed client profile to update node permissions.
+After following the [purchase steps](#purchase), check the record's status, time and data in Plan Management. Once active, refresh account information and the managed client profile to update node permissions. Do not buy again merely because a pending plan has not increased the current allowance.
 
 If the payment provider charged you but the page did not confirm success, check both funding and plan records first. Keep the order ID and time for support: credited funds and a completed plan purchase are separate states, even when the purchase flow handles them automatically.
 

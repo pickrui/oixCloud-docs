@@ -647,6 +647,76 @@
       "充值记录": "Top-up History",
       "充值金额": "Top-up Amount",
       "时间": "Date"
+    },
+    "account-plans": {
+      "使用中": "Active",
+      "季付": "Quarterly",
+      "续费价格": "Renewal Price",
+      "自动续费": "Auto-renewal",
+      "自动重置流量": "Automatic traffic reset",
+      "每次 ¥60.00": "¥60.00 each",
+      "90 天": "90 d",
+      "激活": "Activate",
+      "剩余时间": "Time Left",
+      "剩余流量": "Data Left",
+      "套餐管理": "Plan Management",
+      "我的套餐": "My Plans",
+      "购买套餐": "Buy Plan",
+      "20 天": "20 d"
+    },
+    "account-renewal": {
+      "使用中": "Active",
+      "季付": "Quarterly",
+      "续费价格": "Renewal Price",
+      "自动续费": "Auto-renewal",
+      "自动重置流量": "Automatic traffic reset",
+      "每次 ¥60.00": "¥60.00 each",
+      "90 天": "90 d",
+      "激活": "Activate",
+      "剩余时间": "Time Left",
+      "剩余流量": "Data Left",
+      "套餐管理": "Plan Management",
+      "我的套餐": "My Plans",
+      "购买套餐": "Buy Plan",
+      "20 天": "20 d"
+    },
+    "account-traffic-reset": {
+      "使用中": "Active",
+      "季付": "Quarterly",
+      "续费价格": "Renewal Price",
+      "自动续费": "Auto-renewal",
+      "自动重置流量": "Automatic traffic reset",
+      "每次 ¥60.00": "¥60.00 each",
+      "90 天": "90 d",
+      "激活": "Activate",
+      "剩余时间": "Time Left",
+      "剩余流量": "Data Left",
+      "套餐管理": "Plan Management",
+      "我的套餐": "My Plans",
+      "购买套餐": "Buy Plan",
+      "20 天": "20 d"
+    },
+    "account-purchase": {
+      "购买套餐": "Buy Plan",
+      "确认购买": "Confirm Purchase",
+      "周期与金额": "Billing Period and Price",
+      "¥ 100.00 · 季付": "¥ 100.00 · Quarterly",
+      "折扣代码": "Coupon Code",
+      "验证": "Verify",
+      "实付金额": "Total Due",
+      "购买条款": "Purchase Terms",
+      "我已阅读并同意以上所有条款": "I have read and agree to all terms above"
+    },
+    "account-crypto-top-up": {
+      "收银台": "Cashier",
+      "转账付款 → 链上确认 → 充值到账": "Transfer → On-chain confirmation → Credited",
+      "付款剩余 45:00": "Time to pay 45:00",
+      "需到账金额": "Amount to receive",
+      "充值金额 80.00 RMB": "Top-up amount 80.00 RMB",
+      "收款地址": "Recipient address",
+      "到账金额需完全一致，请保留全部小数位": "Send the exact amount, including every decimal place",
+      "提现手续费计算": "Withdrawal fee calculator",
+      "订单详情": "Order details"
     }
   },
   "scenes": {
@@ -1426,19 +1496,19 @@
     ],
     "account-plans": [
       "Check plan status after purchase",
-      "Website → Plans",
+      "Website → Plan Management",
       [
         [
-          "Review purchased records",
-          "Check existing records before placing another order after payment."
+          "Check purchased records",
+          "Buy Plan opens the store; it is not an instant renewal button."
         ],
         [
           "Distinguish Active and Pending",
-          "A pending plan does not immediately add traffic to your current plan."
+          "A pending plan does not immediately add traffic to your active one."
         ],
         [
-          "Check time and traffic remaining",
-          "Illustrated values are fictional. Use your actual account records."
+          "Check time and data left",
+          "Values are fictional. Use the actual account records."
         ]
       ]
     ],
@@ -1745,6 +1815,78 @@
         [
           "Then check the plan",
           "Credited funds do not prove plan activation. Check purchases or automatic charges too."
+        ]
+      ]
+    ],
+    "account-purchase": [
+      "Check the billing period and purchase total",
+      "Website → Buy Plan → Confirm Purchase",
+      [
+        [
+          "Choose a period first",
+          "Check its total price and data; the monthly equivalent is not monthly billing."
+        ],
+        [
+          "Verify the final total",
+          "Verify any coupon first. No discount is used here."
+        ],
+        [
+          "Read terms and confirm",
+          "Pay any shortfall as prompted, then check the purchased record."
+        ]
+      ]
+    ],
+    "account-renewal": [
+      "Check the renewal target and price",
+      "Website → Plan Management → Auto-renewal",
+      [
+        [
+          "Choose the renewal target",
+          "Only one record can have auto-renewal on; enabling another turns the old one off."
+        ],
+        [
+          "Check switch and price",
+          "Shown enabled. Enabling alone does not charge the next period."
+        ],
+        [
+          "Renewal waits for expiry",
+          "Queued plans take priority. Running out of data early does not trigger renewal."
+        ]
+      ]
+    ],
+    "account-traffic-reset": [
+      "Check the cost of each automatic reset",
+      "Website → Plan Management → Automatic traffic reset",
+      [
+        [
+          "Check the active record",
+          "A pending record’s reset setting applies only after activation."
+        ],
+        [
+          "Check each reset charge",
+          "Shown off. With depleted data, check the Turn on and pay confirmation."
+        ],
+        [
+          "The expiry stays the same",
+          "This is a paid reset, not a renewal. Running out again can trigger another charge."
+        ]
+      ]
+    ],
+    "account-crypto-top-up": [
+      "Check the crypto order before transferring",
+      "Website → Cashier → Cryptocurrency order",
+      [
+        [
+          "Check amount and network",
+          "Keep every decimal place and use the asset and network on the order."
+        ],
+        [
+          "Use this order’s address",
+          "The QR contains only an address. This example address is invalid."
+        ],
+        [
+          "Check withdrawal fees",
+          "The amount received must match the order. Wait for confirmation; do not pay twice."
         ]
       ]
     ]
