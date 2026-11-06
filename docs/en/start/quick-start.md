@@ -18,7 +18,7 @@ A credited payment does not by itself confirm an active plan. If checkout was op
 
 Use email/password, an existing Access Token, or **Sign in with Google** when the client provides it. Google sign-in requires an existing account and support from both the client and website. Apple TV receives the account from your iPhone instead of repeating this flow on the TV.
 
-Email/password and Google sign-in issue or reuse the client's dedicated token, shown on the [Access Token page](https://oixcloud.com/user/token). **Disable email/password sign-in for clients** only blocks the password method; existing tokens, website sign-in and supported Google sign-in remain available. See [first sign-in and account security](/en/account/security#first-client-login).
+Email/password and Google sign-in issue or reuse the client's dedicated token, shown on the [Access Token page](https://oixcloud.com/user/token). **Disable email/password sign-in for clients**, under **Client sign-in and security tips** on that page, only blocks the password method; existing tokens, website sign-in and supported Google sign-in remain available. See [first sign-in and account security](/en/account/security#first-client-login).
 
 ## Choose your device
 

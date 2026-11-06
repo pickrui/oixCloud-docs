@@ -95,7 +95,7 @@ If you have a top-up code, open [Top-up Code and Records](https://oixcloud.com/u
   <figcaption>Interface simulation · Fictional data · Click to enlarge</figcaption>
 </figure>
 
-1. Open the [plan store](https://oixcloud.com/user/shop), choose a supported billing period, and check its total data allowance, validity, intended use, stock and total price. The monthly equivalent is a price comparison, not monthly billing or a monthly traffic reset.
+1. Open the [plan store](https://oixcloud.com/user/shop), choose a billing period above the list. Yearly is shown first (if a plan does not offer the selected period, its card shows the one it actually uses), and check its total data allowance, validity, intended use, stock and total price. The monthly equivalent is a price comparison, not monthly billing or a monthly traffic reset.
 2. Select **Buy** or **Add Plan**. In **Confirm Purchase**, check the plan, billing period and price. If using a coupon, follow the [code steps](#coupon-use), select **Verify** and check the resulting Total Due. USD is a reference only; confirmation and actual charges use CNY.
 3. Read the terms and any plan-specific notices, complete the requested checkbox or typed acknowledgement, then confirm. Follow checkout for any shortfall instead of submitting several orders.
 4. Return to **Plan Management** and check **Active** or **Pending**, Time Left and Data Left. Adding a plan does not immediately replace an existing one.

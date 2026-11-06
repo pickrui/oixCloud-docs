@@ -53,17 +53,17 @@ Internal relay forwards traffic from one service node through other service node
 3. Use the buttons beside each node to move it earlier, move it later or remove it. **Preview path** updates as you go.
 4. Choose a priority and select **Save path**. Higher-priority rules take precedence at the same entry; user choices are Lowest, Low, Medium and High. If shared segments are affected, review the named entries and rules before confirming the change.
 
-You do not need to add a terminating rule after the exit. If a system or All nodes rule could keep forwarding, the service adds a path end automatically; it does not appear in your rule list. If branches, domain conditions or an incomplete node group prevent whole-path editing, use **Edit rule** as prompted.
+You do not need to add a terminating rule after the exit. If a system or All nodes rule could keep forwarding, the service adds a path end automatically; it does not appear in your rule list. If branches, domain conditions or an incomplete node group prevent whole-path editing, use **Single rule** as prompted.
 
 ### Add an individual rule
 
-To give one source node several destinations, or to forward only some websites, select **Add individual rule** under **Relay rules**.
+To give one entry node several destinations, or to forward only some websites, select **Add individual rule** under **Relay rules**.
 
 1. Choose the source and priority, then select up to 10 destinations per submission. Existing destinations are marked **Added** and are not added again.
 2. Destinations at the same priority form a load-balancing group; no more than four per group is recommended. Traffic selects an exit from the group rather than passing through every destination in order. Unavailable destinations can give way to other available targets or lower-priority rules; this does not guarantee seamless continuation of an interrupted connection.
 3. To forward selected traffic, fill in **Forward only these domains / IPs** using [domain/IP matching](#domain-rules). Empty means all traffic. A higher-priority catch-all rule can override lower-priority conditional rules.
 
-**All nodes (except Fusion)** is a broad source scope, not just the node currently connected. In the list, **Edit path** opens the containing path and **Edit rule** changes one segment. Editing or deleting a segment affects every path that uses it.
+**All nodes (except Fusion)** is a broad entry scope, not just the node currently connected. In the list, **Edit path** opens the containing path (under **More** on phones) and **Single rule** changes one segment. Editing or deleting a segment affects every path that uses it.
 
 ### Status and applying changes
 
@@ -82,7 +82,7 @@ External relay sends traffic to a specified host and port. Decide which mode you
 
 | Mode | Client connection details | Destination preparation |
 | --- | --- | --- |
-| Protocol-preserving | The subscription switches to the source address, personal port and the account's AnyTLS credentials. | Run the form's generated installation command on your own destination server; its listening port must match the destination port. |
+| Protocol-preserving | The subscription switches to the entry address, personal port and the account's AnyTLS credentials. | Run the form's generated installation command on your own destination server; its listening port must match the destination port. |
 | Protocol-conversion | Keeps the node's original protocol and connection details; the source decrypts and forwards raw TCP/UDP. | Use an existing SSH, RDP, game or similar service; do not run the protocol-preserving installation command. |
 
 <figure class="guide-figure">
@@ -92,7 +92,7 @@ External relay sends traffic to a specified host and port. Decide which mode you
   <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
 </figure>
 
-1. Open [External relay](https://oixcloud.com/user/cusrelay), select **Add Rule**, and choose an available **Source node** without conflicting rules. **Source port** is your read-only personal port.
+1. Open [External relay](https://oixcloud.com/user/cusrelay), select **Add Rule**, and choose an available **Entry node** without conflicting rules. **Entry port** is your read-only personal port.
 2. Enter **Target address** and **Target port**. Use an IP or domain without a scheme, path or port in the address field. The port starts at your personal port: change it to the service's actual listening port and keep a valid value. For ordinary external destinations, both modes allow `22`, `23`, `3306`, `3389` or `10000–65535`; system-node exceptions follow form validation. Localhost and ordinary private-network addresses cannot be external targets.
 3. Optionally add a **Note**. Usually leave **Forward only these domains / IPs** empty; read the matching limits below before restricting it. The note becomes the subscription node name, is limited to 30 characters and must not duplicate another node or rule name. Empty matching rules forward all traffic.
 4. Set **Protocol keep mode** according to the table. If enabled, run the command currently generated by the page on your destination server and check the listening port and firewall. The optional DNS field takes an IPv4 DNS-server address, not the destination server's address. The command contains account credentials; do not publish it or attach it to a ticket.
@@ -143,7 +143,7 @@ Every additional hop adds network round trips, failure points and forwarding ove
 ## Troubleshooting order
 
 - Save rejected: check node permissions, Home ISP restrictions, WARP, an occupied source and destination ports. Wait for an unavailable node to recover before saving.
-- Existing relay conflict: open the named rule, adjust or delete it with **Edit rule**, then save the path again. Several targets on one source are not a multihop path.
+- Existing relay conflict: open the named rule, adjust or delete it with **Single rule**, then save the path again. Several targets on one source are not a multihop path.
 - Relay disabled for all nodes: delete the rule whose source is **All nodes** and destination is **Relay disabled**.
 - System forwarding conflict: choose other nodes or contact support instead of repeatedly adding the same rule.
 - External destination unreachable: check its listening address, port, firewall and service. In protocol-preserving mode, also check the current installation command, account credentials and client subscription.

@@ -18,7 +18,7 @@ description: "第一次使用的操作步骤、适用范围与常见问题"
 
 使用邮箱/密码、已有 Access Token，或客户端提供的「使用 Google 登录」。Google 入口只登录已有账户，需要客户端和网站同时支持；Apple TV 通过 iPhone 同步，不在电视端重复这套流程
 
-邮箱/密码和 Google 登录会签发或复用该客户端的专属 Token，可在 [Access Token 管理](https://oixcloud.com/user/token) 查看。该页的「禁止客户端使用邮箱/密码登录」只关闭密码方式，不影响现有 Token、网页登录和受支持的 Google 登录。详见 [首次登录与账户安全](/account/security#first-client-login)
+邮箱/密码和 Google 登录会签发或复用该客户端的专属 Token，可在 [Access Token 管理](https://oixcloud.com/user/token) 查看。该页「客户端登录方式与安全提示」里的「禁止客户端使用邮箱/密码登录」只关闭密码方式，不影响现有 Token、网页登录和受支持的 Google 登录。详见 [首次登录与账户安全](/account/security#first-client-login)
 
 ## 选择你的设备
 

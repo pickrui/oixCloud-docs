@@ -12,7 +12,7 @@ description: "账户与令牌安全的操作步骤、适用范围与常见问题
 
 首次使用每种定制客户端时，可用邮箱和密码，或该客户端提供的「使用 Google 登录」，签发对应客户端的专属 Token。已有对应 Access Token 时，也可直接粘贴登录；填写 Token 本身，不是订阅网址
 
-登录后，在 [Access Token 管理](https://oixcloud.com/user/token) 的「客户端登录签发」中找到对应客户端，之后可复制这条 Token 登录同类客户端。同账号同类客户端会复用令牌，不需要为每台设备重复创建
+登录后，在 [Access Token 管理](https://oixcloud.com/user/token) 的「客户端登录签发」中找到对应客户端，之后可用复制按钮取得这条 Token 登录同类客户端（页面默认只显示后 4 位）。同账号同类客户端会复用令牌，不需要为每台设备重复创建
 
 Google 入口目前适用于支持该功能的 oixCloud iPhone / iPad 版本和 FlClash for oixCloud。Apple TV 继续通过 [iPhone 同步账户](/oixcloud/apple-tv)；Helper、OpenClash、oixClash 按各自教程选择邮箱/密码或 Token，不假定都有 Google 按钮
 
@@ -39,7 +39,7 @@ Google 登录需要客户端和网站同时支持。若当前版本没有入口�
 ## 禁止客户端邮箱/密码登录 {#token-only}
 
 1. 先确认需要的客户端已有可用 Token，或能够通过受支持的 Google 入口登录
-2. 在 [Access Token 管理](https://oixcloud.com/user/token) 开启「禁止客户端使用邮箱/密码登录」，等待保存成功
+2. 在 [Access Token 管理](https://oixcloud.com/user/token) 展开「客户端登录方式与安全提示」，开启「禁止客户端使用邮箱/密码登录」，等待保存成功
 3. 此后客户端和 API 的邮箱/密码登录被拒绝；现有 Token、网站登录和受支持的 Google 登录继续有效
 
 旧页面可能把这个选项标为「仅允许 Access Token」，它实际限制的是邮箱/密码方式。如果某客户端没有 Google 入口且需要新签发 Token，可先在网站关闭此选项，用邮箱/密码登录后再开启
@@ -57,7 +57,7 @@ Google 登录需要客户端和网站同时支持。若当前版本没有入口�
 
 1. 打开 [Access Token 管理](https://oixcloud.com/user/token)，在「客户端登录签发」中找到目标客户端
 2. 点击该记录的「重新生成」，确认影响范围后提交
-3. 等待页面重新加载，复制新 Token，并更新所有使用这条 Token 的设备；通过 iPhone 同步到 Apple TV 的账户也需重新同步
+3. 等待页面重新加载，用复制按钮复制新 Token，并更新所有使用这条 Token 的设备；通过 iPhone 同步到 Apple TV 的账户也需重新同步
 
 禁止客户端邮箱/密码登录时仍可刷新，无需临时开放邮箱/密码登录。若请求失败或结果不明确，先重新加载令牌页确认当前 Token，再决定是否重试。手动创建的 Token 不提供此按钮，需要更换时请删除后重新创建
 
