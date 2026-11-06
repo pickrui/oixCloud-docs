@@ -1,3 +1,9 @@
+# Account cleanup period update — 2026-11-06
+
+Updated the account security guide in both languages: accounts without a valid plan and with a positive balance or commission now have a 365-day cleanup period instead of 90 days, reminders state the amounts, and balance and commission are removed on deletion. The 30-day period for accounts with neither is unchanged.
+
+Reviewed against panel commit 646e80c7b (`UserJob::accountCleanupSchedule`, `UserJob::queueAccountCleanupWarning`, `User::ACCOUNT_CLEANUP_FUNDED_DAYS`, `Notification::formatEmailContent`, terms section 1.8). `pnpm build`, `pnpm check:search` and `git diff --check` pass. The panel change is not yet deployed, so publish this guide together with or after it.
+
 # Coupon binding guard follow-up — 2026-11-05
 
 Implemented the two previously reported issues in panel commit bdce10f9a after user approval, with one shared assertion in preview and the transaction before any balance, purchase, coupon usage or allowance write. One-time applications require a positive refund. An unchanged recurring application compares settlement, stored purchase/renewal prices, code and decoded saved rules; JSON key ordering does not count as a change. Legitimate renewal-price/code/rule changes and establishing missing legacy snapshots remain allowed. No new database query, dependency or migration is added. Website and API use the same path; messages and binding instructions are bilingual. The browser prefix now says Cannot apply coupon instead of incorrectly treating every refusal as an invalid code.

@@ -131,7 +131,9 @@ Do not share passwords, Access Tokens, full subscription URLs, node passwords, o
 
 ## When are inactive accounts deleted?
 
-Eligible accounts without a valid plan have a 30-day cleanup period when both balance and commission are zero or negative, or 90 days when either is positive. The clock starts from the later of the most recent login activity and plan expiry, so a long absence does not by itself cause deletion on the day a plan expires.
+Eligible accounts without a valid plan have a 30-day cleanup period when both balance and commission are zero or negative, or 365 days when either is positive. The clock starts from the later of the most recent login activity and plan expiry, so a long absence does not by itself cause deletion on the day a plan expires.
+
+Reminders are sent 7 days, 3 days and 1 day before deletion, and accounts with a balance or commission see the amounts. Once the account is deleted, its balance and commission are removed and cannot be restored.
 
 Website/client sign-ins and authenticated activity can update login activity. Active or valid queued plans, pending withdrawals, payments and other unsettled items can defer cleanup. Banned accounts are not automatically deleted under this inactivity rule. Check account notices and the current state.
 
