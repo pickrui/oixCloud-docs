@@ -36,7 +36,7 @@ Home ISP 与 Edge 使用相同套餐权限，在 [节点列表](https://oixcloud
 ISP 与 Edge 是两条独立线路；只选 Edge，或只按地区、名称筛选，不会加入未默认下发的 ISP
 
 ::: warning 先核对节点角色
-未默认下发的 Home ISP 只能作为内部中继目标／出口，不能作为入口或中间节点，且不能配置外部中继、HTTP/3、WARP、IPv4 Only 和流媒体解锁。主动加入订阅不会解除限制，详见 [流量路由限制](/account/nodes#isp-routing)
+未默认下发的 Home ISP 只能作为内部中继目标／出口，不能作为入口或中间节点，且不能配置外部中继、HTTP/3、CDN、WARP、IPv4 Only 和流媒体解锁。主动加入订阅不会解除限制，详见 [流量路由限制](/account/nodes#isp-routing)
 :::
 
 ## 为什么需要中转或链式代理？ {#why-relay-or-chain}

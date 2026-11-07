@@ -36,7 +36,7 @@ The service sets default inclusion per node, independently of its static or dyna
 ISP and Edge are separate lines. Selecting only Edge, a region or a name does not add ISP nodes excluded by default.
 
 ::: warning Check node roles first
-Home ISP nodes excluded by default can only be internal relay targets or exits, not entries or intermediate hops. External relay, HTTP/3, WARP, IPv4 Only and streaming-unlock settings are unavailable on them. Explicit subscription selection does not remove these [traffic routing restrictions](/en/account/nodes#isp-routing).
+Home ISP nodes excluded by default can only be internal relay targets or exits, not entries or intermediate hops. External relay, HTTP/3, CDN, WARP, IPv4 Only and streaming-unlock settings are unavailable on them. Explicit subscription selection does not remove these [traffic routing restrictions](/en/account/nodes#isp-routing).
 :::
 
 ## Why use relays or proxy chains? {#why-relay-or-chain}

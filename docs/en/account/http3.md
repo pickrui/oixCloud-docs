@@ -80,7 +80,7 @@ Compare connection success, latency and actual transfers using the same network,
 
 Under **Traffic Routes → Protocols**, the [AnyTLS tab](https://oixcloud.com/user/anytls) lets you choose **Direct** or **CDN** per node. The default is Direct. Official clients use Hollow by default and switch to AnyTLS on nodes set to CDN; third-party clients connect directly over AnyTLS and are not affected. Only official clients that support this feature read the setting. After changing it, refresh the client subscription and establish new connections.
 
-The page lists only nodes that can use CDN, so it can be empty. A node with an external relay does not use CDN even when selected; the row shows a notice.
+Only Edge and Home ISP nodes can use CDN, and the page lists only those. Home ISP nodes excluded by default show as unavailable for traffic routes. A node with an external relay does not use CDN even when selected; the row shows a notice.
 
 ## Troubleshooting {#troubleshooting}
 
