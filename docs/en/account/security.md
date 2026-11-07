@@ -117,11 +117,19 @@ Once enabled, password sign-in to the website also requires a six-digit code. Fo
 
 Disabling TOTP also requires a valid code. If verification fails, check device time and the selected account, then try a newly generated code. Follow the stated wait period after too many attempts. If you lost the authenticator and cannot verify, explain the situation in a [support ticket](/en/help/support) instead of repeatedly deleting sign-in credentials.
 
+## Change your nickname {#nickname}
+
+Open [Account Settings → Change nickname](https://oixcloud.com/user/edit#settings-nickname), enter the new nickname and confirm. Nicknames use letters and numbers only, up to 12 characters, and must not already be in use.
+
+You can change your own nickname once a year. The first change is available at any time; during the year the card shows the next available date. A failed attempt, such as a nickname already in use, does not use up the change.
+
 ## Change your sign-in email
+
+You can change your own email once a year. The first change is available at any time; during the year you cannot request a code and the card shows the next available date. A failed attempt, such as a wrong code or password, does not use up the change. If you need to change it sooner, for example because the old mailbox is gone, explain the situation through a [ticket](/en/help/support).
 
 1. Open **Change Email** in [Account Settings](https://oixcloud.com/user/edit#settings-email), enter the new address and request a verification code.
 2. Read the code in the new inbox, enter it together with your current sign-in password, then submit the change.
-3. Confirm the success message and the email shown on your account. Use the new address for later sign-ins.
+3. Confirm the success message. The change ends your current session, so sign in again with the new address, then check the email shown on your account.
 
 The security notice uses the contact details from before the change; its email goes to the old address. Contact support immediately if you did not make the change. If too many incorrect-password attempts are reported, wait as instructed before trying again. This action is unavailable when email changes are disabled.
 

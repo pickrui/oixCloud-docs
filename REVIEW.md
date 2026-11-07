@@ -1,3 +1,11 @@
+# Nickname and email change limit — 2026-11-08
+
+Updated the account security guide in both languages: a new nickname section, the once-a-year limit on nickname and email changes, what does not use up the change, and signing in again after an email change.
+
+Reviewed against panel commit 9e9849a73 (`AccountChangeLimit`, `UserController::updateUserName`, `UserController::updateEmail`, `UserController::verifyEmail`, `user/settings/basic.tpl`).
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
 # One-to-many relay form — 2026-11-08
 
 Updated the relay guide in both languages for the new add-rule form: search and region filters, the summary of selected destinations, the one-region limit per submission and the entry node marking.
