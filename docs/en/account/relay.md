@@ -59,7 +59,7 @@ You do not need to add a terminating rule after the exit. If a system or All nod
 
 To give one entry node several destinations, or to forward only some websites, select **Add individual rule** under **Relay rules**.
 
-1. Choose the source and priority, then select up to 10 destinations per submission. Existing destinations are marked **Added** and are not added again.
+1. Choose the source and priority, then select destinations. You can search or filter by region, and selected destinations are listed alongside. Select up to 10 per submission, all in one region: after the first pick, other regions are unavailable until you remove your picks. Existing destinations are marked **Added** and are not added again. The entry node itself is marked **Entry node** and cannot be selected.
 2. Destinations at the same priority form a load-balancing group; no more than four per group is recommended. Traffic selects an exit from the group rather than passing through every destination in order. Unavailable destinations can give way to other available targets or lower-priority rules; this does not guarantee seamless continuation of an interrupted connection.
 3. To forward selected traffic, fill in **Forward only these domains / IPs** using [domain/IP matching](#domain-rules). Empty means all traffic. A higher-priority catch-all rule can override lower-priority conditional rules.
 

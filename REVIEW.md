@@ -1,3 +1,11 @@
+# One-to-many relay form — 2026-11-08
+
+Updated the relay guide in both languages for the new add-rule form: search and region filters, the summary of selected destinations, the one-region limit per submission and the entry node marking.
+
+Reviewed against panel commit f00200b86 (`RelayController::relayTargetOptions`, `RelayController::ajax_update`, `createRelayRule`, `public/js/relay-add.js`).
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
 # Google signup password — 2026-11-07
 
 Updated the account security guide in both languages: the Google signup result page now shows the initial password once and it is also emailed, and signed-in users can reach the password reset from Account Settings. Listed what a reset clears.
