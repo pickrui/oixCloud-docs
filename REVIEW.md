@@ -1,3 +1,11 @@
+# Google signup password — 2026-11-07
+
+Updated the account security guide in both languages: the Google signup result page now shows the initial password once and it is also emailed, and signed-in users can reach the password reset from Account Settings. Listed what a reset clears.
+
+Reviewed against panel commit d3ce9703c (`AuthController::googleSignupResponse`, `PasswordController::token`, `Password::resetBy`, `User::clean_link`, `user/settings/password_field.tpl`).
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
 # Traffic routes redesign — 2026-11-07
 
 Updated both languages for the panel's traffic route redesign, checked against the panel working tree on top of `dc7af36bd` (templates, language packs, `TrafficRouteOverview`, `pickProtocol`, `ClashGenerator`). Publish after the panel deploys: the overview and AnyTLS links do not exist before that.

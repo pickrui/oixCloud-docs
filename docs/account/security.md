@@ -23,7 +23,7 @@ Google 入口目前适用于支持该功能的 oixCloud iPhone / iPad 版本和 
 3. 完成验证后允许返回原客户端；若浏览器没有自动返回，点击完成页的「返回 App」
 4. 等待账户信息和托管节点加载，再建立连接。超时或返回验证失败时，从客户端重新发起，不重复打开旧完成页
 
-Google 登录需要客户端和网站同时支持。若当前版本没有入口，继续使用邮箱/密码或 Access Token；不要把 Google 密码填进 oixCloud 的密码框。需要账户密码时，可在 Gmail（包括垃圾邮件）查找初始密码邮件，或在 [网站登录页](https://oixcloud.com/auth/login) 用「忘记密码」重置
+Google 登录需要客户端和网站同时支持。若当前版本没有入口，继续使用邮箱/密码或 Access Token；不要把 Google 密码填进 oixCloud 的密码框。用 Google 注册时，结果页会显示一次初始密码，同时发到邮箱。需要账户密码时，可在 Gmail（包括垃圾邮件）查找这封邮件；找不到时重置密码：已登录时在 [账户设置 → 修改密码](https://oixcloud.com/user/edit#settings-password) 的「当前密码」下方点「忘记当前密码」，未登录时在 [网站登录页](https://oixcloud.com/auth/login) 点「忘记密码」。重置后所有客户端需要重新登录，主订阅地址会更换，两步验证会关闭，Passkey 会清除
 
 ### Google 登录排查 {#google-troubleshooting}
 
@@ -89,7 +89,7 @@ Google 登录需要客户端和网站同时支持。若当前版本没有入口�
 | Passkey | 已有记录被清除，不能继续登录网站，需要重新添加 |
 | 旧主订阅地址 | 地址被删除，使用它的客户端需更新订阅地址 |
 
-1. 打开 [账户设置 → 修改密码](https://oixcloud.com/user/edit#settings-password)，填写当前密码、新密码及确认密码
+1. 打开 [账户设置 → 修改密码](https://oixcloud.com/user/edit#settings-password)，填写当前密码、新密码及确认密码。忘记当前密码时，点该字段下方的「忘记当前密码」，改用邮件重置
 2. 确认能更新其他设备的登录信息后提交，等待成功提示
 3. 按提示重新登录网站，在令牌页重新获取所需客户端 Token，并更新使用旧主订阅地址的设备
 4. 重新添加仍需使用的 Passkey；开启账户同步时，检查其他设备和 Apple TV 的登录结果

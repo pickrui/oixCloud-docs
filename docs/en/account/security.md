@@ -23,7 +23,7 @@ Google sign-in is available in supported oixCloud versions for iPhone/iPad and i
 3. Complete verification and allow the browser to return to the original client. Use **Return to App** on the completion page if it does not return automatically.
 4. Wait for account information and managed nodes before connecting. If the flow expires or return verification fails, start again from the client instead of reopening an old completion page.
 
-Both the client and website must support this flow. If the button is unavailable, use email/password or an Access Token. Never enter your Google password into the oixCloud password field. To obtain an oixCloud password, check Gmail, including spam, for the initial-password email, or use **Forgot password** on the [website sign-in page](https://oixcloud.com/auth/login).
+Both the client and website must support this flow. If the button is unavailable, use email/password or an Access Token. Never enter your Google password into the oixCloud password field. When you sign up with Google, the result page shows the initial password once and it is also sent by email. To obtain an oixCloud password, check Gmail, including spam, for that email. If you cannot find it, reset the password: when signed in, select **Forgot current password** under **Current Password** in [Account Settings → Change Password](https://oixcloud.com/user/edit#settings-password); when signed out, select **Forgot password** on the [website sign-in page](https://oixcloud.com/auth/login). After a reset, all clients must sign in again, the main subscription URL changes, two-step verification is turned off and passkeys are removed.
 
 ### Google sign-in troubleshooting {#google-troubleshooting}
 
@@ -89,7 +89,7 @@ Before changing your password, confirm you can update the affected devices:
 | Passkeys | Existing records are cleared, can no longer sign in and must be added again |
 | Old main subscription URL | Deleted; clients using it need the new subscription URL |
 
-1. Open [Account Settings → Change Password](https://oixcloud.com/user/edit#settings-password) and enter the current password, new password and confirmation.
+1. Open [Account Settings → Change Password](https://oixcloud.com/user/edit#settings-password) and enter the current password, new password and confirmation. If you have forgotten the current password, select **Forgot current password** under that field to reset it by email.
 2. Confirm you can update the other devices, submit, and wait for success.
 3. Sign in to the website again if prompted, obtain new client tokens on the token page, and update devices using the old main subscription URL.
 4. Add the Passkeys you still need again. With account sync enabled, check the resulting sign-in state on other devices and Apple TV.
