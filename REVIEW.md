@@ -1,3 +1,11 @@
+# Traffic routes redesign — 2026-11-07
+
+Updated both languages for the panel's traffic route redesign, checked against the panel working tree on top of `dc7af36bd` (templates, language packs, `TrafficRouteOverview`, `pickProtocol`, `ClashGenerator`). Publish after the panel deploys: the overview and AnyTLS links do not exist before that.
+
+Changed: the three HTTP/3 options (Off, Smart fallback, HTTP/3 only) replace the two switches, with a note that UDP forwarding is unaffected; a short section on choosing CDN per node; account-wide switches now on the overview; filter, bulk and relay action wording; navigation paths. Illustrations: the route tabs draw only the four groups; the HTTP/3, IPv4 Only, WARP and streaming scenes follow the new layouts.
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed. An independent review checked page pairs, internal links, the changed illustrations and the HTTP/3 steps against the panel templates and language packs; its findings were fixed and the changed illustrations were inspected again in Chromium. No protocol name beyond those already public was added. No live account or client connection was used.
+
 # Account cleanup period update — 2026-11-06
 
 Updated the account security guide in both languages: accounts without a valid plan and with a positive balance or commission now have a 365-day cleanup period instead of 90 days, reminders state the amounts, and balance and commission are removed on deletion. The 30-day period for accounts with neither is unchanged.

@@ -45,7 +45,7 @@ If direct access to Home ISP performs poorly, compare a single node with `Your d
 
 | Method | Configure in | Use from the client |
 | --- | --- | --- |
-| Internal relay | Website: Traffic Routes → Internal relay | Connect to the entry; the servers forward onward |
+| Internal relay | Website: Traffic Routes → Relay → Internal relay | Connect to the entry; the servers forward onward |
 | Client proxy chain | A client supporting proxy chains | Select the saved chain name or target it with a routing rule |
 
 Verify one method first. Combining both at once makes the actual route harder to diagnose. Check each segment's availability, latency and traffic multiplier.
@@ -55,8 +55,8 @@ Verify one method first. Combining both at once makes the actual route harder to
 These steps configure a complete path for entry traffic. WARP, external relays and existing paths can affect node eligibility. Follow the page's feedback and [setting interactions](/en/account/relay#other-settings).
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-relay-en.svg?v=20261105-2" target="_blank" rel="noopener" aria-label="oixCloud · Internal relay path editor">
-    <img src="/illustrations/account-relay-en.svg?v=20261105-2" alt="oixCloud · Internal relay path editor" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/account-relay-en.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="oixCloud · Internal relay path editor">
+    <img src="/illustrations/account-relay-en.svg?v=20261107-1" alt="oixCloud · Internal relay path editor" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>General path-editor example · Select an entry and Home ISP exit; intermediate hops are optional · Click to enlarge</figcaption>
 </figure>

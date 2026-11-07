@@ -170,7 +170,7 @@ The active plan and consecutively activatable queued plans must cover the dedica
 
 ## Dedicated IPv6 on supported nodes {#dedicated-ipv6}
 
-Check **Dedicated IPv6** and its supported-node list under [WARP settings](https://oixcloud.com/user/warp) or [Streaming unlock](https://oixcloud.com/user/media-unlock), then enable it if needed. Only listed supported nodes use the dedicated IPv6 egress assigned to the account; other nodes are unaffected. The setting is hidden when no accessible node supports it.
+Check **Dedicated IPv6** and its supported-node list under **Account-wide settings** on the [Traffic Routes overview](https://oixcloud.com/user/route), then enable it if needed. Only listed supported nodes use the dedicated IPv6 egress assigned to the account; other nodes are unaffected. The setting is hidden when no accessible node supports it.
 
 After saving, wait for node synchronization and use new connections to verify the exit seen by the target service. This controls the remote node's outbound, separately from local IPv6 capture, AAAA queries and the address family used to connect to a node. A client IPv6 switch does not verify this setting.
 

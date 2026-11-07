@@ -45,7 +45,7 @@ ISP 与 Edge 是两条独立线路；只选 Edge，或只按地区、名称筛�
 
 | 方案 | 在哪里配置 | 客户端如何使用 |
 | --- | --- | --- |
-| 内部中继 | 网站「流量路由 → 内部中继」 | 连接入口节点，由服务端继续转发 |
+| 内部中继 | 网站「流量路由 → 转发 → 内部中继」 | 连接入口节点，由服务端继续转发 |
 | 客户端代理链 | 支持代理链的客户端 | 选择保存的链名，或把分流规则指向它 |
 
 先选一种方案验证，避免同时叠加两套路径而难以判断实际出口。每段路径的可用性、延迟和计费倍率都应分别核对
@@ -55,8 +55,8 @@ ISP 与 Edge 是两条独立线路；只选 Edge，或只按地区、名称筛�
 以下步骤为入口流量配置一条完整路径。WARP、外部中继和已有路径可能影响可选节点，按页面提示处理，具体见 [设置之间的关系](/account/relay#other-settings)
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-relay-zh.svg?v=20261105-2" target="_blank" rel="noopener" aria-label="oixCloud · 内部中继路径编辑器">
-    <img src="/illustrations/account-relay-zh.svg?v=20261105-2" alt="oixCloud · 内部中继路径编辑器" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/account-relay-zh.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="oixCloud · 内部中继路径编辑器">
+    <img src="/illustrations/account-relay-zh.svg?v=20261107-1" alt="oixCloud · 内部中继路径编辑器" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>通用路径编辑器示意 · 本例只需选择入口和 Home ISP 出口，中间跳按需添加 · 点击放大</figcaption>
 </figure>

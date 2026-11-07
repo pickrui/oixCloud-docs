@@ -42,8 +42,8 @@
 ### 添加多级路径
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-relay-zh.svg?v=20261105-2" target="_blank" rel="noopener" aria-label="oixCloud · 在路径编辑器排列入口与出口">
-    <img src="/illustrations/account-relay-zh.svg?v=20261105-2" alt="oixCloud · 在路径编辑器排列入口与出口" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/account-relay-zh.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="oixCloud · 在路径编辑器排列入口与出口">
+    <img src="/illustrations/account-relay-zh.svg?v=20261107-1" alt="oixCloud · 在路径编辑器排列入口与出口" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
 </figure>
@@ -63,7 +63,7 @@
 2. 同一优先级的多个目标组成负载均衡组，建议每组不超过 4 个；这表示从中选择出口，不是按顺序经过所有目标。目标不可用时可改用其他可用目标或较低优先级的规则，不保证故障中的旧连接无缝续传
 3. 只转发部分访问时，填写「仅转发指定域名/IP」，写法见[域名/IP 匹配](#domain-rules)。留空表示全部流量，高优先级的全量规则可能覆盖较低优先级的条件规则
 
-「所有节点（不含 Fusion）」是广泛生效的入口范围，不等于只修改当前连接的节点。规则列表中的「编辑路径」打开该规则所在的整条路径（手机上在「更多」里），「单条规则」只修改这一段；编辑或删除某段会影响所有经过它的路径
+「所有节点（不含 Fusion）」是广泛生效的入口范围，不等于只修改当前连接的节点。规则列表中的「编辑路径」打开该规则所在的整条路径（手机上在「更多」里），「编辑单条规则」只修改这一段（电脑上在「更多」里，手机上是「编辑」）；编辑或删除某段会影响所有经过它的路径
 
 ### 生效与状态
 
@@ -86,8 +86,8 @@
 | 协议转换 | 保留该节点原有的协议和连接信息；入口节点解密后转发原始 TCP / UDP | 已有 SSH、RDP、游戏等服务，无需运行协议保持的安装指令 |
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-cusrelay-zh.svg?v=20261105-2" target="_blank" rel="noopener" aria-label="oixCloud · 填写外部中继目标与模式">
-    <img src="/illustrations/account-cusrelay-zh.svg?v=20261105-2" alt="oixCloud · 填写外部中继目标与模式" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/account-cusrelay-zh.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="oixCloud · 填写外部中继目标与模式">
+    <img src="/illustrations/account-cusrelay-zh.svg?v=20261107-1" alt="oixCloud · 填写外部中继目标与模式" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
 </figure>
@@ -134,6 +134,7 @@
 | 设置 | 与中继的关系 |
 | --- | --- |
 | [HTTP/3](/account/http3) | 调整受支持客户端到入口节点的传输，不会把内部路径的每一跳都改为 HTTP/3；外部协议保持模式改用 AnyTLS，不使用这项 HTTP/3 传输设置 |
+| [CDN](/account/http3#cdn) | 只调整受支持的官方客户端到入口节点的连接；有外部中继的节点选了 CDN 也不走 |
 | [IPv4 Only](/account/unlock#ipv4-only) | 不删除中继；内部路径经过开启节点时，限制继续作用于最终目标连接，但不能控制外部服务器或后续第三方代理的最终出口 |
 | [WARP](/account/unlock#warp-ip-preference) | 与使用同一节点的普通中继存在冲突，启用前按页首提示记录配置 |
 | [流媒体地区](/account/unlock#streaming-regions) | 内部转发先决定下一跳，最终处理目标连接的节点再应用其可用解锁设置；仅修改入口的地区不能保证中继出口采用它 |

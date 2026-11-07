@@ -42,8 +42,8 @@ Internal relay forwards traffic from one service node through other service node
 ### Add a multihop path
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-relay-en.svg?v=20261105-2" target="_blank" rel="noopener" aria-label="Arrange entry and exit in the path editor">
-    <img src="/illustrations/account-relay-en.svg?v=20261105-2" alt="Arrange entry and exit in the path editor" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/account-relay-en.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="Arrange entry and exit in the path editor">
+    <img src="/illustrations/account-relay-en.svg?v=20261107-1" alt="Arrange entry and exit in the path editor" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
 </figure>
@@ -63,7 +63,7 @@ To give one entry node several destinations, or to forward only some websites, s
 2. Destinations at the same priority form a load-balancing group; no more than four per group is recommended. Traffic selects an exit from the group rather than passing through every destination in order. Unavailable destinations can give way to other available targets or lower-priority rules; this does not guarantee seamless continuation of an interrupted connection.
 3. To forward selected traffic, fill in **Forward only these domains / IPs** using [domain/IP matching](#domain-rules). Empty means all traffic. A higher-priority catch-all rule can override lower-priority conditional rules.
 
-**All nodes (except Fusion)** is a broad entry scope, not just the node currently connected. In the list, **Edit path** opens the containing path (under **More** on phones) and **Single rule** changes one segment. Editing or deleting a segment affects every path that uses it.
+**All nodes (except Fusion)** is a broad entry scope, not just the node currently connected. In the list, **Edit path** opens the containing path (under **More** on phones) and **Edit individual rule** changes one segment (under **More** on desktop, **Edit** on phones). Editing or deleting a segment affects every path that uses it.
 
 ### Status and applying changes
 
@@ -86,8 +86,8 @@ External relay sends traffic to a specified host and port. Decide which mode you
 | Protocol-conversion | Keeps the node's original protocol and connection details; the source decrypts and forwards raw TCP/UDP. | Use an existing SSH, RDP, game or similar service; do not run the protocol-preserving installation command. |
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-cusrelay-en.svg?v=20261105-2" target="_blank" rel="noopener" aria-label="Set the external relay destination and mode">
-    <img src="/illustrations/account-cusrelay-en.svg?v=20261105-2" alt="Set the external relay destination and mode" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/account-cusrelay-en.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="Set the external relay destination and mode">
+    <img src="/illustrations/account-cusrelay-en.svg?v=20261107-1" alt="Set the external relay destination and mode" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
 </figure>
@@ -134,6 +134,7 @@ Deleting an internal segment can affect every path sharing it; it does not autom
 | Setting | Relationship to relays |
 | --- | --- |
 | [HTTP/3](/en/account/http3) | Controls the supported client's transport to the entry, not every internal hop. External protocol-preserving mode uses AnyTLS and does not use this HTTP/3 transport setting. |
+| [CDN](/en/account/http3#cdn) | Only changes how supported official clients connect to the entry. A node with an external relay does not use CDN even when selected. |
 | [IPv4 Only](/en/account/unlock#ipv4-only) | Preserves relays. Passing through an enabled node carries the restriction to the internal path's final destination connection, but it cannot control an external server's or further third-party proxy's final exit. |
 | [WARP](/en/account/unlock#warp-ip-preference) | Conflicts with ordinary relays using the same node; record settings as described above before enabling it. |
 | [Streaming regions](/en/account/unlock#streaming-regions) | Internal forwarding chooses the next hop first. The node that finally handles the destination connection then applies its available unlock settings; setting a region only at the entry does not ensure the exit uses it. |

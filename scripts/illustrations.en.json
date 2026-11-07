@@ -512,7 +512,7 @@
       "已选 2 个节点": "Selected: 2",
       "已选 0 个节点": "Selected: 0",
       "开启所选 ▾": "Enable selected ▾",
-      "应用到 2 个节点": "Apply to 2 nodes",
+      "应用到 2 个节点": "Apply (2)",
       "节点": "Node",
       "香港 · 示例 B": "HK · Example B",
       "香港 · 示例 C": "HK · Example C",
@@ -527,8 +527,6 @@
       "出口节点": "Exit node",
       "新加坡 · 示例 C": "SG · Example C",
       "添加外部中继": "Add External Relay",
-      "起源节点": "Source node",
-      "起源端口": "Source port",
       "目标地址": "Target address",
       "目标端口": "Target port",
       "备注": "Note",
@@ -536,7 +534,6 @@
       "仅转发指定域名/IP": "Forward only these domains / IPs",
       "留空转发全部访问": "Empty: forward all traffic",
       "协议保持模式": "Protocol keep mode",
-      "未勾选：起源解密后转发 TCP / UDP": "Unchecked: decrypt and forward TCP / UDP",
       "添加中继规则": "Add relay rule",
       "流媒体解锁地区": "Streaming Unlock Regions",
       "示例流媒体 A": "Example service A",
@@ -546,7 +543,30 @@
       "已保存": "Saved",
       "账户设置": "Account settings",
       "屏蔽 STUN 连接": "Block STUN connections",
-      "YouTube 后台播放兼容": "YouTube background playback compatibility"
+      "YouTube 后台播放兼容": "YouTube background playback compatibility",
+      "总览": "Overview",
+      "协议": "Protocols",
+      "转发": "Relay",
+      "出口": "Exit",
+      "修改后自动保存": "Changes save automatically",
+      "使用说明与注意事项 ▾": "How it works and what to know ▾",
+      "全部": "All",
+      "已开启": "Enabled",
+      "未开启": "Disabled",
+      "关闭": "Off",
+      "仅 HTTP/3": "HTTP/3 only",
+      "已保存，请更新客户端订阅": "Saved. Update the subscription.",
+      "功能公测中，目前仅部分节点支持": "Public beta. Only some nodes support this.",
+      "IPv4 Only": "IPv4 Only",
+      "WARP": "WARP",
+      "全部 3": "All 3",
+      "已开启 2": "Enabled 2",
+      "已开启 1": "Enabled 1",
+      "未开启 1": "Disabled 1",
+      "未开启 2": "Disabled 2",
+      "入口端口": "Entry port",
+      "未勾选：入口解密后转发 TCP / UDP": "Unchecked: decrypt and forward TCP / UDP",
+      "不可用 0": "Unavailable 0"
     },
     "openclash": {
       "服务": "Services",
@@ -1627,7 +1647,7 @@
     ],
     "account-relay": [
       "Arrange entry and exit in the path editor",
-      "Website → Traffic Routes → Internal relay → Add path",
+      "Website → Traffic Routes → Relay → Internal relay → Add path",
       [
         [
           "Select nodes in forwarding order",
@@ -1645,7 +1665,7 @@
     ],
     "account-warp": [
       "Check WARP fallback and the IPv4 Only override",
-      "Website → Traffic Routes → WARP",
+      "Website → Traffic Routes → Exit → WARP",
       [
         [
           "Check relay cleanup first",
@@ -1789,7 +1809,7 @@
     ],
     "account-ipv4-only": [
       "Find nodes and enable IPv4 Only in bulk",
-      "Website → Traffic Routes → IPv4 Only",
+      "Website → Traffic Routes → Exit → IPv4 Only",
       [
         [
           "Search and filter nodes",
@@ -1807,29 +1827,29 @@
     ],
     "account-http3": [
       "Set HTTP/3 and smart fallback",
-      "Website → Traffic Routes → HTTP/3",
+      "Website → Traffic Routes → Protocols → Hollow",
       [
         [
           "Check the node and address",
           "Regular nodes are grouped. Each dedicated IP has its own setting."
         ],
         [
-          "Enable HTTP/3",
-          "TCP is the default. Try one node first with smart fallback on."
+          "Choose smart fallback",
+          "Off by default. Try one node first. UDP forwarding is not affected."
         ],
         [
           "Save, then refresh the client",
-          "Fallback chooses HTTP/3 or TCP during setup. Existing connections do not migrate."
+          "Fallback chooses during setup. Existing connections do not migrate."
         ]
       ]
     ],
     "account-cusrelay": [
       "Set the external relay destination and mode",
-      "Website → Traffic Routes → External relay → Add relay rule",
+      "Website → Traffic Routes → Relay → External relay → Add relay rule",
       [
         [
-          "Choose an available source",
-          "The personal port is read-only. Avoid sources with conflicting rules."
+          "Choose an available entry",
+          "The personal port is read-only. Avoid entries with conflicting rules."
         ],
         [
           "Use the real service port",
@@ -1843,19 +1863,19 @@
     ],
     "account-media-unlock": [
       "Choose streaming regions per node and service",
-      "Website → Traffic Routes → Streaming unlock",
+      "Website → Traffic Routes → Exit → Streaming unlock",
       [
         [
           "Find the node you use",
-          "Only supported, accessible nodes appear. There are no bulk region changes."
+          "Search appears when there are many nodes. Each service is set separately."
         ],
         [
           "Choose a region and wait",
           "Each service saves automatically. Follow node default clears its preference."
         ],
         [
-          "Check account-wide controls",
-          "The switches below affect the account, not the selected node’s region."
+          "Account-wide switches are on the overview",
+          "Block STUN and similar switches are on the Traffic Routes overview."
         ]
       ]
     ],

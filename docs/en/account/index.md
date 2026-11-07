@@ -17,7 +17,7 @@ Find help with plans, traffic, nodes, subscriptions and account security.
 | Set subscription formats, filters and account rules | [Subscriptions and filters](/en/account/subscriptions) |
 | Use residential broadband IPs via internal relays or proxy chains | [Home ISP user guide](/en/account/home-isp) |
 | Set up internal relays or your own destination | [Relays and your own destinations](/en/account/relay) |
-| Adjust HTTP/3 transport and TCP fallback | [HTTP/3 and smart fallback](/en/account/http3) |
+| Adjust HTTP/3 and smart fallback per node | [HTTP/3 and smart fallback](/en/account/http3) |
 | Use an IPv4-only exit or adjust WARP | [IPv4 Only and WARP](/en/account/unlock) |
 | Choose streaming regions, restore defaults or troubleshoot playback | [Streaming unlock](/en/account/unlock#streaming-regions) |
 | Manage sign-in, tokens, passkeys and two-step verification | [Accounts and access tokens](/en/account/security) |
