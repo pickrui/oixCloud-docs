@@ -56,7 +56,7 @@ Older pages may label this option **Access Token only**. Its actual scope is ema
 Refreshing immediately invalidates the old token. Every same-client device sharing it must switch to the new token. The client identity and subscription binding stay the same.
 
 1. Open the [Access Token page](https://oixcloud.com/user/token) and find the intended client under **Issued by client login**.
-2. Click **Regenerate** on that entry, review the affected devices, and confirm.
+2. Click **Regenerate** on that entry, review the affected devices, and confirm with a passkey or your current sign-in password in the dialog.
 3. Wait for the page to reload, copy the new token with the copy button, and update every device using it. If your Apple TV account is synced from an iPhone, sync it again.
 
 You can refresh while client email/password sign-in is disabled; there is no need to allow email/password sign-in temporarily. If the request fails or its result is unclear, reload the token page and check the current token before retrying. Manually created tokens do not have this button; delete and recreate them when a replacement is needed.
@@ -64,7 +64,7 @@ You can refresh while client email/password sign-in is disabled; there is no nee
 ## Create a manual token {#manual-token}
 
 1. On [Access Token Management](https://oixcloud.com/user/token), choose **New Token**, select its validity, add a recognizable note and check the subscription binding.
-2. Submit and wait for success. After the page reloads, find the new entry under **Tokens you created**.
+2. Submit, confirm with a passkey or your current sign-in password in the dialog, and wait for success. After the page reloads, find the new entry under **Tokens you created**.
 3. An account can retain up to 10 manual tokens. Client sign-in tokens are listed separately and do not use this quota.
 4. Read any failure message. If the outcome is unclear, reload the list to see whether a token was created before submitting again.
 
@@ -101,9 +101,9 @@ If client email/password sign-in is disabled, follow the [sign-in restriction gu
 A Passkey signs in to the website. It is neither a client Access Token nor a TOTP code.
 
 1. Open [Account Settings → Passkey and Two-step Verification](https://oixcloud.com/user/edit#settings-security) and choose **Add New Passkey**.
-2. Enter your current account password. If TOTP is enabled, also enter the authenticator's current six-digit code, then choose **Continue**.
+2. Enter your current account password. If TOTP is enabled, also enter the authenticator's current six-digit code, then choose **Continue**. If you already have a passkey, you can choose **Verify with an existing passkey** instead, then choose **Continue** once it is verified.
 3. Follow the browser's face, fingerprint or PIN verification prompt. Wait for the website's success message and confirm the new entry appears in the list.
-4. Rename entries to identify them. Before deleting one, confirm you retain another sign-in method; the deleted Passkey can no longer sign in to this account.
+4. Rename entries to identify them. Before deleting one, confirm you retain another sign-in method. Deleting requires a passkey or your current sign-in password, and the deleted Passkey can no longer sign in to this account.
 
 After cancellation or timeout, start again from **Add New Passkey**. Do not reuse a TOTP code already submitted and consumed; wait for a new code. Completing the system prompt alone does not confirm that the website saved the credential. If unsupported, use a browser with Passkey support and check that the page uses HTTPS.
 
@@ -128,7 +128,7 @@ You can change your own nickname once a year. The first change is available at a
 You can change your own email once a year. The first change is available at any time; during the year you cannot request a code and the card shows the next available date. A failed attempt, such as a wrong code or password, does not use up the change. If you need to change it sooner, for example because the old mailbox is gone, explain the situation through a [ticket](/en/help/support).
 
 1. Open **Change Email** in [Account Settings](https://oixcloud.com/user/edit#settings-email), enter the new address and request a verification code.
-2. Read the code in the new inbox, enter it together with your current sign-in password, then submit the change.
+2. Read the code in the new inbox, enter it and choose **Change Email**, then confirm with a passkey or your current sign-in password in the dialog.
 3. Confirm the success message. The change ends your current session, so sign in again with the new address, then check the email shown on your account.
 
 The security notice uses the contact details from before the change; its email goes to the old address. Contact support immediately if you did not make the change. If too many incorrect-password attempts are reported, wait as instructed before trying again. This action is unavailable when email changes are disabled.

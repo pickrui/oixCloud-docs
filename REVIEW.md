@@ -1,3 +1,11 @@
+# Identity verification for sensitive actions — 2026-11-08
+
+Updated the account security guide in both languages: changing email, deleting a passkey, and creating or regenerating an Access Token now confirm with a passkey or the sign-in password in one dialog, and adding a passkey can use an existing one. Withdrawal has no guide page, so nothing changed there.
+
+Reviewed against panel commit 2843b262e (`AccountIdentityVerification`, `PassKeyController`, `public/js/identity-verify.js`, `user/settings/modals.tpl`).
+
+Validation: `pnpm build`, `pnpm check:search` and `git diff --check` passed.
+
 # Nickname and email change limit — 2026-11-08
 
 Updated the account security guide in both languages: a new nickname section, the once-a-year limit on nickname and email changes, what does not use up the change, and signing in again after an email change.
