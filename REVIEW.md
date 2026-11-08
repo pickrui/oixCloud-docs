@@ -1,3 +1,9 @@
+# Protocol pages and feature controls — 2026-11-09
+
+Reviewed panel commit `c0cdbb5a3`: protocol pages use Hollow / AnyTLS names and separate HTTP/3 / CDN feature columns. Updated the paired HTTP/3 guides to identify the feature columns, use the current feature-specific filter labels, and replace the outdated Direct / CDN selection instructions with the AnyTLS with CDN on/off control. Existing article paths and the `#cdn` anchor are retained. Client support and subscription refresh requirements remain explicit.
+
+Validation: `pnpm build`, `pnpm check:search` (494 queries and 816 result anchors), and `git diff --check` passed. All 107 generated HTML pages and 9,086 internal references resolved. Browser checks verified the paired English article retains `#cdn`, plus desktop and 390 px mobile layouts without horizontal overflow or console errors. Local preview only; publication and panel deployment remain separate.
+
 # Identity verification for sensitive actions — 2026-11-08
 
 Updated the account security guide in both languages: changing email, deleting a passkey, and creating or regenerating an Access Token now confirm with a passkey or the sign-in password in one dialog, and adding a passkey can use an existing one. Withdrawal has no guide page, so nothing changed there.

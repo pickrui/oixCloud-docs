@@ -6,6 +6,8 @@ description: HTTP/3 support, smart fallback, dedicated IPs and bulk settings, wi
 
 HTTP/3 runs over QUIC (UDP). Here it carries the Hollow connection between your client and the node; destination websites do not need to support HTTP/3. It is off by default. Try **Smart fallback** on one regularly used node first. UDP traffic is forwarded as usual whichever option you choose.
 
+Hollow and AnyTLS are protocol page names. This guide covers the HTTP/3 feature column on the Hollow page; [AnyTLS with CDN](#cdn) is the CDN column on the AnyTLS page. Turning off a feature does not disable the whole protocol.
+
 ## Scope {#scope}
 
 Only Hollow connections in official clients that support this feature read the setting. AnyTLS connections and clients without this support are unaffected. Use the corresponding client from the [download center](https://oixcloud.com/client), and check your current version and actual connection protocol. The app's name alone does not prove HTTP/3 is active.
@@ -29,7 +31,7 @@ Home ISP nodes excluded from default subscriptions also follow the [traffic rout
 </figure>
 
 1. Open **Traffic Routes → Protocols → [Hollow](https://oixcloud.com/user/hollow)** in the user center. Search for the node name or dedicated IP address.
-2. Choose **Smart fallback** in that row. For a dedicated IP, check the complete address in the row.
+2. Choose **Smart fallback** in that row's **HTTP/3** column. For a dedicated IP, check the complete address in the row.
 3. Your choice submits automatically. Wait for a successful save, then **refresh the subscription or managed profile in your client and wait for the update to finish**.
 4. Select that node, close the target app's old connections and reconnect. Use the same website or app to check the result. Other devices sharing this account must also refresh their own profiles before adopting the setting.
 
@@ -51,7 +53,7 @@ Smart fallback chooses only while establishing a connection. **It does not switc
 
 ## Bulk settings for multiple nodes {#bulk-settings}
 
-The list has no pagination. Search by name or address and filter by **Enabled**, **Disabled** or another status.
+The list has no pagination. Search by name or address and filter by **HTTP/3 on**, **HTTP/3 off** or another status.
 
 1. Select individual nodes, or use the checkbox in the table header for every available entry matching the current search and filter, including rows below the visible screen. Changing the search or filter clears the selection.
 2. In the bulk action menu in the table header, choose **Off**, **Smart fallback** or **HTTP/3 only**. Check the count on **Apply (N)**, then apply.
@@ -76,11 +78,17 @@ UDP path quality, UDP restrictions on provider, corporate or campus networks, an
 
 Compare connection success, latency and actual transfers using the same network, node and destination. If slowdowns or instability persist, switch back to **Off**, refresh the subscription and reconnect before comparing again. Avoid changing WARP, egress preferences and client rules at the same time, so you can identify the cause.
 
-## Use CDN for a node {#cdn}
+## AnyTLS with CDN {#cdn}
 
-Under **Traffic Routes → Protocols**, the [AnyTLS tab](https://oixcloud.com/user/anytls) lets you choose **Direct** or **CDN** per node. The default is Direct. Official clients use Hollow by default and switch to AnyTLS on nodes set to CDN; third-party clients connect directly over AnyTLS and are not affected. Only official clients that support this feature read the setting. After changing it, refresh the client subscription and establish new connections.
+Open **Traffic Routes → Protocols → [AnyTLS](https://oixcloud.com/user/anytls)** in the user center. Turn AnyTLS with CDN on or off in each node's **CDN** column; the default is off. AnyTLS is the protocol page name and CDN is the feature column. Turning CDN off does not disable the AnyTLS protocol.
 
-Only Edge and Home ISP nodes can use CDN, and the page lists only those. Home ISP nodes excluded by default show as unavailable for traffic routes. A node with an external relay does not use CDN even when selected; the row shows a notice.
+1. Search for a node, or filter its saved state with **CDN on** or **CDN off**.
+2. Choose **On** in the node's **CDN** column and wait for the automatic save to succeed. For bulk changes, select nodes using the table header first.
+3. Refresh the subscription or managed profile in your client, wait for it to finish, and establish new connections.
+
+Official clients use Hollow by default and switch to AnyTLS on nodes with AnyTLS with CDN enabled. Turning it off restores the default connection behavior. Third-party clients connect directly over AnyTLS and are unaffected. Only official clients that support this feature read the setting, and other devices must refresh their own subscriptions too.
+
+Only Edge and Home ISP nodes can use CDN, so the current feature list contains only those nodes. Home ISP nodes excluded by default show as unavailable for traffic routes. Nodes with external relays follow their external relay rules even when CDN is on; their CDN selection is retained and the row shows a notice.
 
 ## Troubleshooting {#troubleshooting}
 
