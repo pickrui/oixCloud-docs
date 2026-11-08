@@ -36,7 +36,7 @@ For iPhone / iPad, using the maintained client's menus. If an option is missing,
 1. Open **Proxies → Servers** and use the toolbar's add button to open **Add Proxy**.
 2. Choose **Link**, paste one complete node share link such as `ss://`, `vless://`, `trojan://`, `anytls://` or `hy2://`, then choose **Continue**. For a QR code, choose **QR Code → Continue** and scan it.
 3. Without a share link, choose **Manual → Continue**. In the editor, select the protocol and enter its name, address, port and required password, UUID, TLS, SNI or transport parameters. Check them and **Save**.
-4. Verify the new node under **Servers**, then open the node picker on Home, select it and connect. Check the actual outbound in [request details](/en/oixcloud/diagnostics).
+4. Verify the new node under **Servers**, then open the node picker on Home (when a long list has more than one group, each starts folded; your own nodes are under **Other Nodes**), select it and connect. Check the actual outbound in [request details](/en/oixcloud/diagnostics).
 
 Use a recognizable name and parameters supplied by the node provider. Supported protocols and options depend on the current protocol picker and import validation. A Clash or Surge format does not imply support for every node it contains.
 
@@ -67,7 +67,7 @@ Check whether the enclosed content is a single node or a subscription, confirm t
 
 ## Use third-party and oixCloud managed nodes together {#managed-mix}
 
-Standalone nodes, third-party subscriptions and the oixCloud managed subscription can coexist in the proxy list. You do not need to insert another provider's nodes into the managed subscription. Add the third-party source as described above, keep the managed subscription, and find the desired outbound by subscription name in Home's node picker.
+Standalone nodes, third-party subscriptions and the oixCloud managed subscription can coexist in the proxy list. You do not need to insert another provider's nodes into the managed subscription. Add the third-party source as described above, keep the managed subscription, and open the group named after the subscription in Home's node picker and select the outbound you want.
 
 In Rule mode, the Home selection handles traffic targeting **Proxy**. Rules explicitly targeting a node, group, Direct or Reject keep their own destinations. Adding a third-party node to the list does not automatically send every website through it.
 
