@@ -23,7 +23,7 @@ Google sign-in is available in supported oixCloud versions for iPhone/iPad and i
 3. Complete verification and allow the browser to return to the original client. Use **Return to App** on the completion page if it does not return automatically.
 4. Wait for account information and managed nodes before connecting. If the flow expires or return verification fails, start again from the client instead of reopening an old completion page.
 
-Both the client and website must support this flow. If the button is unavailable, use email/password or an Access Token. Never enter your Google password into the oixCloud password field. When you sign up with Google, the result page shows the initial password once and it is also sent by email. To obtain an oixCloud password, check Gmail, including spam, for that email. If you cannot find it, reset the password: when signed in, select **Forgot current password** under **Current Password** in [Account Settings → Change Password](https://oixcloud.com/user/edit#settings-password); when signed out, select **Forgot password** on the [website sign-in page](https://oixcloud.com/auth/login). After a reset, all clients must sign in again, the main subscription URL changes, two-step verification is turned off and passkeys are removed.
+Both the client and website must support this flow. If the button is unavailable, use email/password or an Access Token. Never enter your Google password into the oixCloud password field. When you sign up with Google, the result page shows the initial password once and it is also sent by email. To obtain an oixCloud password, check Gmail, including spam, for that email. If you cannot find it, reset the password: when signed in, open [Account Settings → Password](https://oixcloud.com/user/edit#settings-password) and select **Forgot current password** under **Current Password** in the form that opens; when signed out, select **Forgot password** on the [website sign-in page](https://oixcloud.com/auth/login). After a reset, all clients must sign in again, the main subscription URL changes, two-step verification is turned off and passkeys are removed.
 
 ### Google sign-in troubleshooting {#google-troubleshooting}
 
@@ -72,9 +72,9 @@ Manual tokens stop authenticating at expiry and do not renew automatically throu
 
 ## Telegram binding and daily notifications {#notifications}
 
-1. Open [Account Settings → Basic Account Settings](https://oixcloud.com/user/edit#settings-basic) and check the Telegram card. If unbound, use its binding link and follow the bot's instructions; the page reloads once binding is complete. The link is created when you click it, so if it expires, click it again.
-2. **No Telegram username set** under **Bound Account** still means the account is bound. You do not need to bind it again just to add a username.
-3. Set email and Telegram independently under **Daily Notification Subscription**, then wait for the status text to confirm the state. Telegram notifications are unavailable until the account is bound.
+1. Open [Account Settings → Notifications and Telegram](https://oixcloud.com/user/edit#settings-telegram). The Telegram card shows **Bound** or **Not bound** next to its title. If unbound, select **Connect Telegram** and follow the bot's instructions; the page reloads once binding is complete. The link is created when you click it, so if it expires, click it again.
+2. **No Telegram username set** on a card marked **Bound** still means the account is bound. You do not need to bind it again just to add a username.
+3. Set email and Telegram independently on the **Daily notifications** card next to it, then wait for the status text to confirm the state. Telegram notifications are unavailable until the account is bound.
 4. If saving fails or is unconfirmed, reload the page to check the actual state before retrying. Do not click repeatedly while a save is pending.
 
 These switches control daily notifications only; they do not establish whether security, payment or service notices are disabled. Unbinding disables Telegram sign-in, daily notifications, the bot, the user group and the in-Telegram user center—confirm you no longer need the binding before removing it.
@@ -89,7 +89,7 @@ Before changing your password, confirm you can update the affected devices:
 | Passkeys | Existing records are cleared, can no longer sign in and must be added again |
 | Old main subscription URL | Deleted; clients using it need the new subscription URL |
 
-1. Open [Account Settings → Change Password](https://oixcloud.com/user/edit#settings-password) and enter the current password, new password and confirmation. If you have forgotten the current password, select **Forgot current password** under that field to reset it by email.
+1. Open [Account Settings → Password](https://oixcloud.com/user/edit#settings-password); the link opens the change form directly (from the page itself, select **Change** on the **Password** card). Enter the current password, new password and confirmation. If you have forgotten the current password, select **Forgot current password** under that field to reset it by email.
 2. Confirm you can update the other devices, submit, and wait for success.
 3. Sign in to the website again if prompted, obtain new client tokens on the token page, and update devices using the old main subscription URL.
 4. Add the Passkeys you still need again. With account sync enabled, check the resulting sign-in state on other devices and Apple TV.
@@ -100,26 +100,27 @@ If client email/password sign-in is disabled, follow the [sign-in restriction gu
 
 A Passkey signs in to the website. It is neither a client Access Token nor a TOTP code.
 
-1. Open [Account Settings → Passkey and Two-step Verification](https://oixcloud.com/user/edit#settings-security) and choose **Add New Passkey**.
+1. Open [Account Settings → Sign-in and security](https://oixcloud.com/user/edit#settings-passkey) and choose **Add** on the **Passkeys** card.
 2. Enter your current account password. If TOTP is enabled, also enter the authenticator's current six-digit code, then choose **Continue**. If you already have a passkey, you can choose **Verify with an existing passkey** instead, then choose **Continue** once it is verified.
 3. Follow the browser's face, fingerprint or PIN verification prompt. Wait for the website's success message and confirm the new entry appears in the list.
 4. Rename entries to identify them. Before deleting one, confirm you retain another sign-in method. Deleting requires a passkey or your current sign-in password, and the deleted Passkey can no longer sign in to this account.
 
-After cancellation or timeout, start again from **Add New Passkey**. Do not reuse a TOTP code already submitted and consumed; wait for a new code. Completing the system prompt alone does not confirm that the website saved the credential. If unsupported, use a browser with Passkey support and check that the page uses HTTPS.
+After cancellation or timeout, start again from **Add** on the **Passkeys** card. Do not reuse a TOTP code already submitted and consumed; wait for a new code. Completing the system prompt alone does not confirm that the website saved the credential. If unsupported, use a browser with Passkey support and check that the page uses HTTPS.
 
 ## Enable TOTP two-step verification {#totp}
 
 Once enabled, password sign-in to the website also requires a six-digit code. Follow verification prompts for sensitive actions that request it. A Passkey is a separate sign-in method, not a one-time password.
 
-1. Find **TOTP** on the same settings page. Scan its QR code with your authenticator, or enter the displayed secret manually.
-2. Enter the authenticator's six-digit code, submit activation, and wait for confirmation that TOTP is enabled.
-3. Keep a secure way to recover your authenticator. The QR code and secret generate login codes; never include them in screenshots, logs or support tickets.
+1. Open [Account Settings → Sign-in and security](https://oixcloud.com/user/edit#settings-totp); the link opens the setup dialog directly (from the page itself, select **Turn on** on the **Two-step verification** card).
+2. Follow the steps in the dialog: scan the QR code with your authenticator, or enter the displayed secret manually. To use a different secret, select **Regenerate**; the page reloads and returns to the dialog, and you add the new QR code again.
+3. Enter the authenticator's six-digit code, select **Enable two-step verification**, and wait for confirmation that TOTP is enabled.
+4. Keep a secure way to recover your authenticator. The QR code and secret generate login codes; never include them in screenshots, logs or support tickets.
 
-Disabling TOTP also requires a valid code. If verification fails, check device time and the selected account, then try a newly generated code. Follow the stated wait period after too many attempts. If you lost the authenticator and cannot verify, explain the situation in a [support ticket](/en/help/support) instead of repeatedly deleting sign-in credentials.
+To disable it, select **Turn off** on the **Two-step verification** card; this also requires a valid code. If verification fails, check device time and the selected account, then try a newly generated code. Follow the stated wait period after too many attempts. If you lost the authenticator and cannot verify, explain the situation in a [support ticket](/en/help/support) instead of repeatedly deleting sign-in credentials.
 
 ## Change your nickname {#nickname}
 
-Open [Account Settings → Change nickname](https://oixcloud.com/user/edit#settings-nickname), enter the new nickname and confirm. Nicknames use letters and numbers only, up to 12 characters, and must not already be in use.
+Open [Account Settings → Profile](https://oixcloud.com/user/edit#settings-nickname); the link opens the change form on the **Nickname** card. Enter the new nickname and confirm. Nicknames use letters and numbers only, up to 12 characters, and must not already be in use.
 
 You can change your own nickname once a year. The first change is available at any time; during the year the card shows the next available date. A failed attempt, such as a nickname already in use, does not use up the change.
 
@@ -127,8 +128,8 @@ You can change your own nickname once a year. The first change is available at a
 
 You can change your own email once a year. The first change is available at any time; during the year you cannot request a code and the card shows the next available date. A failed attempt, such as a wrong code or password, does not use up the change. If you need to change it sooner, for example because the old mailbox is gone, explain the situation through a [ticket](/en/help/support).
 
-1. Open **Change Email** in [Account Settings](https://oixcloud.com/user/edit#settings-email), enter the new address and request a verification code.
-2. Read the code in the new inbox, enter it and choose **Change Email**, then confirm with a passkey or your current sign-in password in the dialog.
+1. Open [Account Settings → Profile](https://oixcloud.com/user/edit#settings-email); the link opens the change form on the **Email** card. Enter the new address and select **Get code**, or press Enter in the address field.
+2. Read the code in the new inbox, enter it and choose **Change email** (or press Enter in the code field), then confirm with a passkey or your current sign-in password in the dialog.
 3. Confirm the success message. The change ends your current session, so sign in again with the new address, then check the email shown on your account.
 
 The security notice uses the contact details from before the change; its email goes to the old address. Contact support immediately if you did not make the change. If too many incorrect-password attempts are reported, wait as instructed before trying again. This action is unavailable when email changes are disabled.
