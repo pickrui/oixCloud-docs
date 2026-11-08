@@ -28,7 +28,7 @@ Home ISP nodes excluded from default subscriptions also follow the [traffic rout
   <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
 </figure>
 
-1. Open **Traffic Routes → Protocols → [Hollow](https://oixcloud.com/user/http3)** in the user center. Search for the node name or dedicated IP address.
+1. Open **Traffic Routes → Protocols → [Hollow](https://oixcloud.com/user/hollow)** in the user center. Search for the node name or dedicated IP address.
 2. Choose **Smart fallback** in that row. For a dedicated IP, check the complete address in the row.
 3. Your choice submits automatically. Wait for a successful save, then **refresh the subscription or managed profile in your client and wait for the update to finish**.
 4. Select that node, close the target app's old connections and reconnect. Use the same website or app to check the result. Other devices sharing this account must also refresh their own profiles before adopting the setting.
