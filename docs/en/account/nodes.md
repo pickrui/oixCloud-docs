@@ -15,7 +15,7 @@ These descriptions follow the [official homepage](https://oixcloud.com/#network)
 
 | Node type | Network and purpose |
 | --- | --- |
-| <span id="edge"></span>**Edge**<br>Global Network | Tier 1 transit and upstream interconnections provide global access for destinations that do not require mainland-China routing optimization. Designed for international network environments. Connections from certain regions, such as mainland China, are not covered by SLA guarantees. |
+| <span id="edge"></span>**Edge**<br>Global Network | Tier 1 transit and upstream interconnections provide global access for destinations that do not require mainland-China routing optimization. Designed for international network environments. Connection availability and stability cannot be guaranteed when accessing from certain regions, such as mainland China. You can try enabling [AnyTLS with CDN](https://oixcloud.com/user/anytls) to improve connectivity. Results depend on local network conditions. |
 | <span id="isp"></span>**[Home ISP](#home-isp)**<br>Home broadband | Home-broadband exits grouped by static or dynamic IP. Designed for international network environments. No commitments or SLA guarantees are provided. |
 | <span id="cia"></span>**CIA**<br>Basic Optimized Network | CMIN2 or comparable carrier resources supplement international transit to optimize mainland-China routes on a best-effort basis. |
 | **[IXP](#ixp)**<br>Cloud Interconnect | Connects cloud and content providers via Internet exchange points, reducing public-Internet detours for supported cloud networks. |
