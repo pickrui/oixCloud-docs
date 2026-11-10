@@ -13,7 +13,8 @@ Find help with plans, traffic, nodes, subscriptions and account security.
 | Buy, renew or switch a plan | [Plans, renewals and switching](/en/account/plans) |
 | Use coupons, apply one after purchase or check recurring discounts | [Coupon codes](/en/account/plans#coupons) |
 | Check traffic charges, low-speed tiers and limits | [Traffic and billing](/en/account/traffic) |
-| Compare node types or buy a dedicated IP | [Nodes and connection options](/en/account/nodes) |
+| Compare node types and connection options | [Nodes and connection options](/en/account/nodes) |
+| Understand dedicated IPs, purchases, renewals and deposits | [Dedicated IPs](/en/account/nodes#dedicated-ip) |
 | Set subscription formats, filters and account rules | [Subscriptions and filters](/en/account/subscriptions) |
 | Use residential broadband IPs via internal relays or proxy chains | [Home ISP user guide](/en/account/home-isp) |
 | Set up internal relays or your own destination | [Relays and your own destinations](/en/account/relay) |

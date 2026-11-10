@@ -48,6 +48,7 @@ features:
 | Make my first connection | [Your first connection](/en/start/quick-start) |
 | Compare Edge, CIA, IXP, Fusion and GIA | [Node types](/en/account/nodes#node-types) |
 | Use residential broadband IPs via internal relays or proxy chains | [Home ISP user guide](/en/account/home-isp) |
+| Keep a consistent exit and understand dedicated-IP renewals | [Dedicated IPs](/en/account/nodes#dedicated-ip) |
 | Understand traffic charges, low-speed tiers, auto reset or limits | [Traffic and billing](/en/account/traffic) |
 | Filter nodes, update a subscription or restore defaults | [Subscriptions and filters](/en/account/subscriptions) |
 | Add funds, use a top-up code or check crediting | [Top-ups and credited funds](/en/account/plans#top-up) |

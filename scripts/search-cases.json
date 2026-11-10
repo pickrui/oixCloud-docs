@@ -388,7 +388,12 @@
   {
     "terms": [
       "专用 IP",
-      "dedicated IP"
+      "独享 IP",
+      "dedicated IP",
+      "独享 IP 租期",
+      "dedicated IP term",
+      "独享 IP 好处",
+      "dedicated IP benefits"
     ],
     "targets": [
       "/account/nodes.html"

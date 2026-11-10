@@ -48,6 +48,7 @@ features:
 | 第一次连接，还不知道从哪里开始 | [第一次使用](/start/quick-start) |
 | 了解 Edge、CIA、IXP、Fusion 与 GIA 的区别 | [各类节点介绍](/account/nodes#node-types) |
 | 使用 Home ISP 家宽出口，配置内部中继或代理链 | [Home ISP 使用指南](/account/home-isp) |
+| 长期使用同一出口，了解独享 IP 与续费规则 | [独享 IP](/account/nodes#dedicated-ip) |
 | 查询流量扣除、低速档位、自动重置或限速原因 | [流量与计费](/account/traffic) |
 | 筛选节点、更新订阅或恢复默认 | [订阅与筛选](/account/subscriptions) |
 | 在线充值、使用充值码或核对到账 | [充值与到账](/account/plans#top-up) |

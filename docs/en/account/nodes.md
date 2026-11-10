@@ -92,15 +92,39 @@ Use the managed configuration generated for your client. Avoid copying port and 
 
 To change the client-to-node transport, see [HTTP/3 and smart fallback](/en/account/http3). Refresh the client subscription after saving; dedicated IPs are configured per address.
 
+## Dedicated IPs: a stable long-term exit {#dedicated-ip}
+
+A dedicated IP assigns an exit address exclusively to your account. Normal renewal keeps that address. Dedicated does not mean residential or free of previous history.
+
+### Practical benefits {#ip-benefits}
+
+| Benefit | Use case |
+| --- | --- |
+| Consistent exit | Use the same address for daily sign-ins, remote work and business access, with easier checks of access records |
+| Less shared-IP interference | Reduce abnormal requests, rate limits and reputation effects caused by other accounts sharing the same IP |
+| Easier IP authorization | Register a fixed address with servers or workplace systems that support source-IP allowlists, reducing authorization changes |
+
+### Understanding IP reputation {#ip-reputation}
+
+> The ideal IP does not make a service recognize you as a special user. It gives the service no reason to consider you one.
+
+This is the aim of consistent, normal use, not a promise of equal treatment across platforms. Platforms independently assess the ASN (the network owning the address), location, IP history and usage. A dedicated IP does not guarantee freedom from verification, bans or streaming restrictions, or isolate you from the network's reputation.
+
 ## Buying and renewing dedicated IPs
+
+On the website, sign in and open [Node list → Exclusive IP](https://oixcloud.com/user/node?node_level=Exclusive).
 
 | Check | Requirement |
 | --- | --- |
-| Plan eligibility | A currently active plan is required; queued plans alone are not enough |
-| Dedicated IP expiry | The new expiry must be on or before the expected plan expiry; check Latest dedicated IP expiry in the purchase dialog |
-| Expected plan expiry | Current plan expiry plus the remaining duration of plans that can activate consecutively in the queue, plus the period it renews if a plan has automatic renewal on |
+| Plan eligibility | Buying, renewing and using the IP require an active plan; activate a queued plan first if none is active |
+| Independent term | Billed and timed separately; the IP may outlast the plan |
+| Start time | A purchase starts when bought; renewal extends from the existing expiry, or from renewal time if expired but not yet reclaimed |
 | Purchase and manual-renewal term | At most 12 months per operation; a new purchase must meet the product minimum, while manual renewal starts at one month |
-| Billing month | Exactly 30 days |
+| Billing month | Exactly 30 days; the dialog shows the resulting expiry in UTC+8 |
+
+::: warning Plan expiry does not pause the IP term
+When the plan expires, dedicated-IP use pauses and the address stays assigned until its own expiry. Its term keeps running, with no pause or extension. Restore an active plan to resume using an unexpired IP. Once reclaimed, the same address is not guaranteed to be available to buy again.
+:::
 
 ### Auto-renewal {#ip-auto-renewal}
 
@@ -108,13 +132,13 @@ To change the client-to-node transport, see [HTTP/3 and smart fallback](/en/acco
 | --- | --- |
 | Attempt window | Within 24 hours before IP expiry |
 | Extension | 30 days; the system does not automatically increase billed months |
-| Charge conditions | An active plan, enough balance for the rent and any [deposit](#ip-deposit) top-up, and a new IP expiry on or before the expected plan expiry, including valid queued plans and one more period if the plan auto-renews |
+| Charge conditions | An active plan, enough available funds for rent and any [deposit](#ip-deposit) top-up, and a node providing normal service; rent uses the current product price |
 | Conditions not met | Charges pause, the setting stays on, and retries continue until expiry |
 
 ::: warning Check the renewal result before expiry
-If 30 more days would exceed the expected plan expiry, extend your plan or turn on its automatic renewal first, then check renewal eligibility (adding more IP renewal months cannot solve this). If an extension only holds once your plan renews automatically and the plan renews within 7 days, automatic IP renewal also reserves balance for the plan renewal and renews only when both are covered.
+Expand the node card's IP list and enable **Auto Renewal** beside the address. Enabling it does not charge immediately; disabling it leaves the current expiry unchanged. The IP and plan renew separately, with no funds reserved for plan renewal. Check funds and renewal results for both.
 
-After an IP expires, automatic renewal is tried once more before it is reclaimed; an IP still not renewed is reclaimed. While the IP's node is under maintenance or paused, you are not charged for renewal, the IP still appears on the nodes page marked as under maintenance, and an expired IP is kept for up to 14 days with a notification; once the node is back, the IP renews or is reclaimed as usual (or is reclaimed if the node is still down after 14 days).
+After expiry, renewal is attempted once more before reclaim. During node maintenance, renewal charges pause and the address stays visible with a maintenance label. An IP expiring during maintenance is held for up to 14 days, with a notification. Renewal is attempted when the node recovers; the IP is reclaimed if renewal fails or maintenance lasts beyond that grace period.
 :::
 
 ### Deposit and abuse fees {#ip-deposit}
@@ -125,7 +149,7 @@ Some dedicated IP products require a deposit, one per IP, to guarantee that the 
 | --- | --- |
 | Collection | Charged with the rent on a new purchase (except an order of 6 months or more); the dialog's total includes it. If your balance is short, the dialog shows how much to top up |
 | Waiver | • **6+ months at once**: Buying or renewing 6 months or more at once needs no deposit for that order, and any deposit already paid stays held.<br>• **12 months cumulative**: Once the same IP has 12 months paid in total (new purchases and manual and automatic renewals all count), no deposit is needed at all—any deposit already paid goes toward the renewal that reaches 12 months, and any amount above the rent returns to your account balance.<br>The renewal dialog shows the months paid so far, the amount applied and what you actually pay |
-| Top-up | If a complaint forfeits the deposit or a product change leaves it below the requirement, the next manual or automatic renewal that does not qualify for a waiver tops it up; the renewal dialog shows the amount |
+| Top-up | If verified abuse forfeits the deposit or a product change leaves it below the requirement, the next manual or automatic renewal that does not qualify for a waiver tops it up; the renewal dialog shows the amount |
 | Where to see it | Each dedicated IP card in the node list shows its current deposit; reclaimed IPs show the amount awaiting return and the expected date at the top of the node list's Exclusive IP page |
 | Return | 14 days after the IP stops being renewed and is reclaimed, a deposit that was not forfeited returns in full to your account balance automatically, with a notification |
 | Account deletion | The account cannot be deleted until the deposit is returned |
@@ -134,7 +158,7 @@ Some dedicated IP products require a deposit, one per IP, to guarantee that the 
 The deposit returns to your account balance. It cannot be withdrawn or refunded to the original payment method, and can only be spent in the dashboard, such as on plans and renewals.
 :::
 
-A dedicated IP may only be used by your own account. If the IP draws abuse complaints during your holding period (such as spam, port scanning, attacks or copyright complaints), the whole deposit is forfeited and not returned, and later renewals collect it again under the rules above. If no deposit was paid or it has already been forfeited, the upstream handling fees are charged to your balance and commission; if this leaves your balance negative, the account may be suspended for arrears until you top up. Each action is notified with the amount and complaint details; submit a [support ticket](/en/help/support) if you disagree. Clause 1.10 of the [Terms of Service](https://oixcloud.com/tos#section-tos-dedicated-ip) is authoritative.
+A dedicated IP may only be used by your own account. Complaints about spam, port scanning, attacks or copyright require verification of abuse during your holding period and responsibility for it; receiving a complaint alone does not justify a charge. Once verified, the whole deposit is forfeited, and later renewals top it up under the rules above. The same incident is not charged twice: if the deposit is forfeited for it, no additional upstream handling fee is charged for that incident. Without a deposit deduction, only a documented upstream handling fee actually incurred is collected, once, from your balance and commission. If this leaves your balance negative, the account may be suspended for arrears until you top up. Notification of the basis and amount is arranged at or promptly after the charge. Submit a [support ticket](/en/help/support) for review and correction of an erroneous deduction. Clause 1.10 of the [Terms of Service](https://oixcloud.com/tos#section-tos-dedicated-ip) is authoritative.
 
 ::: warning Avoid complaints
 Do not send bulk email, scan ports, run P2P/BitTorrent downloads or access unauthorized systems through a dedicated IP. Complaints are traced by time to the account holding the IP at that moment, and complaints received after the deposit is returned may still lead to additional charges.
@@ -161,12 +185,22 @@ For streaming-region requirements, see [streaming settings](/en/account/unlock#s
 
 ## Verify a dedicated-IP purchase
 
-1. Review the node, billing months, latest allowed expiry, minimum purchase term, deposit and total in the purchase dialog, then accept the [deposit and abuse fee](#ip-deposit) rules and confirm.
-2. Check the allocated address and expiry afterwards; payment success does not update the client by itself.
-3. Ensure the node is retained in the official client's filter preview, then refresh the profile and establish a new connection.
-4. Verify the exit in your actual application and allow time to resolve balance or plan eligibility before renewal.
+1. Click **Buy**, choose the months and check the expiry and total. Read the term and [deposit rules](#ip-deposit) before confirming; submission charges immediately and assigns one address.
+2. Check the assigned address and expiry, confirm the address is retained in the [subscription filter](/en/account/subscriptions) preview, then refresh the client configuration.
+3. Select the IP, establish a new connection and verify the exit in your actual application.
 
-The active plan and consecutively activatable queued plans must cover the dedicated IP term. If the plan term is too short, extend it first or reduce the IP purchase term without going below the product minimum. Follow the latest allowed expiry shown in the purchase or renewal dialog.
+To renew manually: expand the IP list → check the full address → **Renew** → choose the months and confirm the total. A product going off sale does not prevent existing IPs from being used or renewed.
+
+Included services appear as cards on the same page while you hold an unexpired IP for the product. The cards provide addresses, credentials and documentation; do not share credentials publicly.
+
+### Common problems {#ip-troubleshooting}
+
+| Symptom | Check first |
+| --- | --- |
+| The IP is unexpired but unusable | Check plan eligibility and the expiry note above; restore an active plan and refresh the client configuration |
+| Payment outcome is unclear | Refresh the node list and check assigned addresses and expiry dates before making another purchase |
+| A service sees another exit despite selecting the dedicated IP | Check the matched policy in connection records, then inspect [relays](/en/account/relay), [WARP and streaming unlock](/en/account/unlock) for changes to the final exit; verify with a new connection |
+| CAPTCHAs or access restrictions remain | Record the destination, error, time and actual exit; follow the platform's guidance and avoid high-frequency retries |
 
 ## Dedicated IPv6 on supported nodes {#dedicated-ipv6}
 
