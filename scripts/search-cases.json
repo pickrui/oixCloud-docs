@@ -776,5 +776,20 @@
     "targets": [
       "/account/plans.html"
     ]
+  },
+  {
+    "terms": [
+      "购买赠礼",
+      "奖励链接",
+      "自行领取 赠礼",
+      "赠礼 退款",
+      "purchase gifts",
+      "reward links",
+      "claim gift",
+      "gift refund"
+    ],
+    "targets": [
+      "/account/rewards.html"
+    ]
   }
 ]

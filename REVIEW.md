@@ -1,3 +1,11 @@
+# Reward links, purchase gifts and coupon window — 2026-11-12
+
+Added paired reward-link guides for eligibility, matching the original purchased plan with a separately preset gift period, self-claims, sharing, reset/deletion, campaign end and original-order refunds. Explained that either a self-claim or a friend’s claim requires support for the original refund, while unclaimed gifts are revoked. Updated the paired plan guides and coupon-binding illustrations from seven days to three days, preserving the one-use late allowance. Added category/sidebar links and search cases; existing page paths, anchors and legacy fragment mappings are retained.
+
+Reviewed against maintained panel commit `c69fec93a`, including campaign services, purchase/refund policy, templates and bilingual interface labels. Availability follows the Benefits Center; this documentation update does not deploy the panel or promise the feature is already present in production.
+
+Validation: `pnpm build`, `pnpm check:search` (520 keyword checks and 840 result anchors) and `git diff --check` passed. All 109 generated HTML pages, 9382 internal references and 54 locale pairs passed link/anchor checks. The six changed account pages were checked at 1440px and 390px without page overflow or script errors; the reward guide and updated illustrated deadline were visually inspected. Switching to English retained `#refunds`. The build retains its existing bundle-size advisory. Checks used local documentation previews without a live account or payment request; publication is tracked separately.
+
 # Dedicated IP benefits and independent rental term — 2026-11-11
 
 Updated the paired node guides with dedicated-IP benefits (consistent exits, reduced interference from accounts sharing the same address and source-IP allowlisting), the ordinary-user reputation ideal and the limits of platform-specific risk assessment. Both languages use the confirmed Exclusive IP deep link. Kept the supplied reputation statement and one scope paragraph; shortened the benefit table and removed repeated eligibility, purchase and troubleshooting explanations. Added homepage and account-index task links while retaining existing article paths, anchors and legacy fragment mappings.

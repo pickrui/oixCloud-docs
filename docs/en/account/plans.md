@@ -146,13 +146,13 @@ Final purchase prices follow the displayed rounding rules. Upgrades, application
 ### Apply a coupon after purchase {#bind-coupon}
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-coupon-bind-en.svg?v=20261105-6" target="_blank" rel="noopener" aria-label="Check the settlement before applying a coupon">
-    <img src="/illustrations/account-coupon-bind-en.svg?v=20261105-6" alt="Check the settlement before applying a coupon" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/account-coupon-bind-en.svg?v=20261112-1" target="_blank" rel="noopener" aria-label="Check the settlement before applying a coupon">
+    <img src="/illustrations/account-coupon-bind-en.svg?v=20261112-1" alt="Check the settlement before applying a coupon" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>Interface simulation · Fictional prices and unusable example code · Click to enlarge</figcaption>
 </figure>
 
-**Applying a coupon settles the current period immediately: one-time codes require a balance refund; recurring codes may also charge balance.** **Apply Coupon** normally requires a paid record that is still Active or Pending and is within 7 days of its original purchase. Upgrading does not restart that window. Special converted records are excluded. If a one-use late-application allowance has been granted separately, follow the available button; successful application consumes that allowance.
+**Applying a coupon settles the current period immediately: one-time codes require a balance refund; recurring codes may also charge balance.** **Apply Coupon** normally requires a paid record that is still Active or Pending and is within 3 days of its original purchase. Upgrading does not restart that window. Special converted records are excluded. If a one-use late-application allowance has been granted separately, follow the available button; successful application consumes that allowance.
 
 1. Open [Plan Management](https://oixcloud.com/user/bought), check the original purchase record and select **Apply Coupon** to open **Apply Coupon Code**.
 2. Enter a system code eligible for this action, or an unused code you generated yourself, then select **Verify**. Another person's new-user code cannot be applied to an existing purchase.
@@ -163,6 +163,8 @@ Final purchase prices follow the displayed rounding rules. Upgrades, application
 An existing recurring benefit does not need repeated application. A recurring code can still update a changed renewal price or applicable rules with zero settlement. **Cancel if the page still asks for payment to apply a one-time code**: it does not improve renewal benefits.
 
 Unlike a [refund to balance](#refund), applying a coupon settles only the price difference and keeps the plan. Successful application consumes a code use; refunding the plan does not restore a used code.
+
+For an order with purchase gifts, applying a coupon that refunds the entire paid amount to zero also revokes unclaimed gifts. Claimed gifts require support; see [gifts and original-order refunds](/en/account/rewards#refunds).
 
 ### Recurring coupons and renewals {#recurring-coupon}
 
@@ -404,12 +406,14 @@ A pending plan with less than 6 hours remaining has no manual activation button.
 
 **A refund ends that plan and returns funds only to account balance, not the original payment provider or a withdrawal; used coupon codes are not returned.** Self-service refunds require an eligible unused pending record with a positive refundable paid amount: annual plans and specific quarterly plans that show the button. Not every quarterly plan qualifies; monthly and semiannual plans do not offer this self-service refund. A previously used plan switched back to Pending is not eligible.
 
+**If the order earned purchase gifts, refunding revokes unclaimed slots and links. Once you or a friend has claimed a gift, the original order no longer offers self-service refunds: contact support, and claimed gifts are retained.** Check [gift status and refund rules](/en/account/rewards#refunds) before proceeding.
+
 1. Find the original record in [Plan Management](https://oixcloud.com/user/bought), check its name, period and **Pending** status, then select **Refund to balance**.
 2. In **Please confirm**, check the refund amount and the consequence of ending the plan. The amount follows the record's actual paid value, including previous additional charges or difference refunds, rather than its current store or renewal price.
 3. Select **Confirm** to proceed or **Cancel** to keep the plan. If the amount or state changed, refresh the record and check again.
 4. Verify account balance and the **Refunded** status. That record can no longer be activated or renewed; refunding it does not end a different plan currently in use.
 
-If the button is missing, check the period, usage history and record state. Do not activate a plan to try to qualify for a refund. If the result is unclear, refresh the balance and records, retain the message and provide details through [payment and plan support](/en/help/support#payment) rather than resubmitting.
+If the button is missing, check the period, usage history, record state and whether an associated gift was claimed. Do not activate a plan to try to qualify for a refund. If the result is unclear, refresh the balance and records, retain the message and provide details through [payment and plan support](/en/help/support#payment) rather than resubmitting.
 
 ## Choose the operation for your goal
 

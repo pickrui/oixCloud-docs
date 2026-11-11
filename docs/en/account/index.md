@@ -12,6 +12,7 @@ Find help with plans, traffic, nodes, subscriptions and account security.
 | Add funds, use a top-up code or check crediting | [Top-ups and credited funds](/en/account/plans#top-up) |
 | Buy, renew or switch a plan | [Plans, renewals and switching](/en/account/plans) |
 | Use coupons, apply one after purchase or check recurring discounts | [Coupon codes](/en/account/plans#coupons) |
+| Claim a reward, share a link or check purchase gifts | [Reward links and purchase gifts](/en/account/rewards) |
 | Check traffic charges, low-speed tiers and limits | [Traffic and billing](/en/account/traffic) |
 | Compare node types and connection options | [Nodes and connection options](/en/account/nodes) |
 | Understand dedicated IPs, purchases, renewals and deposits | [Dedicated IPs](/en/account/nodes#dedicated-ip) |

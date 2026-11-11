@@ -170,6 +170,10 @@
           "link": "/account/plans"
         },
         {
+          "text": "奖励链接与购买赠礼",
+          "link": "/account/rewards"
+        },
+        {
           "text": "流量与计费",
           "link": "/account/traffic"
         },
@@ -396,6 +400,10 @@
         {
           "text": "Plans, renewals and switching",
           "link": "/en/account/plans"
+        },
+        {
+          "text": "Reward links and purchase gifts",
+          "link": "/en/account/rewards"
         },
         {
           "text": "Traffic and billing",

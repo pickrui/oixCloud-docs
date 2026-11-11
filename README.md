@@ -27,7 +27,7 @@ Keep both languages at the same relative paths so the language switch opens the 
 
 Builds also write `/guide-index.json` with the text of every section in both languages; the panel downloads it hourly to ground AI support suggestions. Generation fails if a section anchor is missing from the built page. The file is public like the pages it summarizes.
 
-The guide has 43 topics in each language. Feature-specific implementation baselines are recorded in REVIEW.md; source support does not imply availability in every public binary or a deployed panel. iPhone/iPad, Apple TV and FlClash for oixCloud have different features; document their actual interfaces separately. This is a user guide, not a promise that every release or platform exposes every option.
+The guide has 46 topics in each language. Feature-specific implementation baselines are recorded in REVIEW.md; source support does not imply availability in every public binary or a deployed panel. iPhone/iPad, Apple TV and FlClash for oixCloud have different features; document their actual interfaces separately. This is a user guide, not a promise that every release or platform exposes every option.
 
 Old panel links such as `/guide#subscriptions` redirect to the site root with their fragment. The theme maps these legacy fragments to individual articles in the selected language on first load, internal navigation and hash changes; unrelated fragments stay on the current page.
 

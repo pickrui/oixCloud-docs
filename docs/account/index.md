@@ -12,6 +12,7 @@ description: 按当前任务查找套餐、流量、节点、订阅与账户安�
 | 在线充值、使用充值码或核对到账 | [充值与到账](/account/plans#top-up) |
 | 购买、续费或切换套餐 | [购买、续费与切换](/account/plans) |
 | 使用折扣代码、购买后绑定或核对循环折扣 | [折扣代码](/account/plans#coupons) |
+| 自行领取奖励、生成链接送人或核对购买赠礼 | [奖励链接与购买赠礼](/account/rewards) |
 | 核对流量扣除、低速档位和限速原因 | [流量与计费](/account/traffic) |
 | 比较节点类型与连接方式 | [节点与连接方式](/account/nodes) |
 | 了解独享 IP、购买续费与保证金 | [独享 IP](/account/nodes#dedicated-ip) |
