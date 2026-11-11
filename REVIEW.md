@@ -1,3 +1,11 @@
+# Purchase-gift order policy and entitlement lifecycle — 2026-11-12
+
+Updated the paired plan and reward guides for new orders that actually receive gift credits: self-service changes, upgrades, balance refunds and post-purchase coupon application are restricted; historical orders keep their original rules. Closing a campaign stops new awards while previously awarded credits remain redeemable. The guides also explain remaining-quota allocation, preserved awarded limits, support refunds and checkout coupon stacking.
+
+Reviewed against the maintained panel order policy, purchase-reward and campaign services, client API serialization and the incremental order-policy migration. Account-wide restrictions and retroactive changes to historical orders are excluded.
+
+Validation: paired guide build and local search passed (520 keyword checks and 840 result-anchor checks); all 109 generated HTML pages and 8,324 internal links and anchors resolved. Browser checks covered Chinese/English reward content, language switching, desktop and 390 px mobile layouts without horizontal overflow. Panel production deployment remains separate.
+
 # Reward links, purchase gifts and coupon window — 2026-11-12
 
 Added paired reward-link guides for eligibility, matching the original purchased plan with a separately preset gift period, self-claims, sharing, reset/deletion, campaign end and original-order refunds. Explained that either a self-claim or a friend’s claim requires support for the original refund, while unclaimed gifts are revoked. Updated the paired plan guides and coupon-binding illustrations from seven days to three days, preserving the one-use late allowance. Added category/sidebar links and search cases; existing page paths, anchors and legacy fragment mappings are retained.

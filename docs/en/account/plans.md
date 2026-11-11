@@ -88,6 +88,10 @@ If you have a top-up code, open [Top-up Code and Records](https://oixcloud.com/u
 
 ### Choose and confirm a plan {#purchase}
 
+::: warning Purchase-gift orders
+New orders that actually receive purchase-gift credits do not support self-service plan changes, upgrades, balance refunds or applying a coupon after purchase. Check the checkout notice and [gift rules](/en/account/rewards#refunds); historical orders keep their original rules.
+:::
+
 <figure class="guide-figure">
   <a href="/illustrations/account-purchase-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the billing period and purchase total">
     <img src="/illustrations/account-purchase-en.svg?v=20261105-3" alt="Check the billing period and purchase total" width="1120" height="1100" loading="lazy">
@@ -164,7 +168,7 @@ An existing recurring benefit does not need repeated application. A recurring co
 
 Unlike a [refund to balance](#refund), applying a coupon settles only the price difference and keeps the plan. Successful application consumes a code use; refunding the plan does not restore a used code.
 
-For an order with purchase gifts, applying a coupon that refunds the entire paid amount to zero also revokes unclaimed gifts. Claimed gifts require support; see [gifts and original-order refunds](/en/account/rewards#refunds).
+New orders with awarded purchase-gift credits cannot apply a coupon after purchase; eligible codes may still be used at checkout. Historical orders retain the original settlement and gift-revocation rules; see [gifts and original-order refunds](/en/account/rewards#refunds).
 
 ### Recurring coupons and renewals {#recurring-coupon}
 
@@ -355,6 +359,8 @@ The target must also meet purchase, stock and funding requirements. Special conv
 
 ### Upgrade or change a plan {#upgrade}
 
+New-rule orders with awarded purchase-gift credits cannot use this self-service action; contact support. Historical orders retain their original eligibility.
+
 <figure class="guide-figure">
   <a href="/illustrations/account-upgrade-en.svg?v=20261105-5" target="_blank" rel="noopener" aria-label="Check upgrade cost and remaining data">
     <img src="/illustrations/account-upgrade-en.svg?v=20261105-5" alt="Check upgrade cost and remaining data" width="1120" height="1100" loading="lazy">
@@ -406,14 +412,14 @@ A pending plan with less than 6 hours remaining has no manual activation button.
 
 **A refund ends that plan and returns funds only to account balance, not the original payment provider or a withdrawal; used coupon codes are not returned.** Self-service refunds require an eligible unused pending record with a positive refundable paid amount: annual plans and specific quarterly plans that show the button. Not every quarterly plan qualifies; monthly and semiannual plans do not offer this self-service refund. A previously used plan switched back to Pending is not eligible.
 
-**If the order earned purchase gifts, refunding revokes unclaimed slots and links. Once you or a friend has claimed a gift, the original order no longer offers self-service refunds: contact support, and claimed gifts are retained.** Check [gift status and refund rules](/en/account/rewards#refunds) before proceeding.
+**New-rule orders that received purchase-gift credits do not offer self-service balance refunds, even before gifts are claimed. Historical orders keep the original rule: an eligible refund revokes unclaimed gifts; any claimed gift requires support, and claimed gifts are retained.** Check [gift status and refund rules](/en/account/rewards#refunds) before proceeding.
 
 1. Find the original record in [Plan Management](https://oixcloud.com/user/bought), check its name, period and **Pending** status, then select **Refund to balance**.
 2. In **Please confirm**, check the refund amount and the consequence of ending the plan. The amount follows the record's actual paid value, including previous additional charges or difference refunds, rather than its current store or renewal price.
 3. Select **Confirm** to proceed or **Cancel** to keep the plan. If the amount or state changed, refresh the record and check again.
 4. Verify account balance and the **Refunded** status. That record can no longer be activated or renewed; refunding it does not end a different plan currently in use.
 
-If the button is missing, check the period, usage history, record state and whether an associated gift was claimed. Do not activate a plan to try to qualify for a refund. If the result is unclear, refresh the balance and records, retain the message and provide details through [payment and plan support](/en/help/support#payment) rather than resubmitting.
+If the button is missing, check the period, usage history, record state and whether it received gift credits under the new rule; historical orders also check whether a gift was claimed. Do not activate a plan to try to qualify for a refund. If the result is unclear, refresh the balance and records, retain the message and provide details through [payment and plan support](/en/help/support#payment) rather than resubmitting.
 
 ## Choose the operation for your goal
 

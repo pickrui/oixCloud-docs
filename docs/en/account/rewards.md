@@ -20,12 +20,12 @@ Earned slots do not require the original plan to remain active. Some other campa
 
 A campaign can offer a fixed plan or show **Same plan as the original purchase**. A matching-plan gift follows the order that earned its slot, while **the gift period is preset separately**. For example, buying Gold annually can earn a monthly Gold gift, and buying Silver annually can earn a monthly Silver gift. An annual purchase does not necessarily earn a full year as a gift.
 
-Upgrading the original order or changing your current account plan does not change an earned gift's plan. If one campaign has several available gift plans, currently available slots are used in purchase order. Check available gifts and plan duration before generating links. Slots for a temporarily unavailable reward are retained, while other available gifts can still be used.
+A support-assisted change to the original order or switching your current account plan does not change an earned gift's plan. If one campaign has several available gift plans, currently available slots are used in purchase order. Check available gifts and plan duration before generating links. Slots for a temporarily unavailable reward are retained, while other available gifts can still be used.
 
 ## Claim for yourself {#claim-self}
 
 ::: warning Check original-order refund plans first
-Claiming for yourself counts as a claimed gift. Once completed, the original purchase no longer offers self-service refunds and requires support. Read the [refund rules](#refunds) before claiming if you intend to refund that order.
+New orders are restricted as soon as gift credits are actually awarded, before generation or claiming. Historical orders keep their original rules: claiming for yourself counts as a claimed gift and then requires support for an original-order refund. Read the [refund rules](#refunds) first.
 :::
 
 1. Select **Claim 1 for myself** in the intended campaign.
@@ -52,22 +52,26 @@ A link is valid for 365 days after generation. This is the claim deadline, **not
 | Reset an unclaimed link | The old address stops working, a new address receives a new claim deadline, and the same slot remains used with the same reward plan. |
 | Delete an unclaimed link | The old address stops working and its slot is returned. Generating again still requires campaign eligibility. |
 | A link has been claimed | It cannot be reset or deleted. The slot is not returned if the recipient later deletes their account. |
-| The campaign has ended | No new gift slots or links are issued, including direct self-claims. Existing links follow their own status and deadline; unclaimed links can still be reset or deleted. |
+| The campaign has ended | New purchases stop earning gift credits. Previously awarded credits can still generate links or be claimed for yourself. Existing links follow their own status and deadline; unclaimed links can still be reset or deleted. |
 
 Before resetting, tell the recipient that the old address will stop working, then send the replacement. If the reward plan or period is unavailable, generation, reset or claiming may be unavailable; follow the page's reason.
 
-## Original-order refunds and gifts {#refunds}
+## Original-order refunds and plan changes {#refunds}
 
-Before refunding, check both the [original order's self-service refund eligibility](/en/account/plans#refund) and its gift status.
+New orders that actually receive gift credits do not support self-service plan changes, upgrades, refunds to account balance or applying a coupon after purchase. This applies before links are generated or claimed. Other orders on the account are unaffected; normal usage, activation and renewal switches remain available. Check [Plan Management](/en/account/plans#refund) and contact [support](/en/help/support#payment) for special cases.
 
-| Gift status | What happens when the original order is refunded |
+| Order or gift state | Handling |
 | --- | --- |
-| Unclaimed, including generated links | Its gift slots are revoked and unclaimed links stop working. |
-| Claimed by you or a friend | Self-service refunds stop. Contact support; a manual refund preserves the recipient's gift plan. |
+| New-rule order with awarded gift credits | The original order is restricted even while all gifts remain unclaimed; deleting links or ending the campaign does not remove the restriction |
+| Historical order, gifts unclaimed | Original change/coupon rules remain; an otherwise eligible refund revokes its unclaimed slots and links |
+| Historical order, any gift claimed | Original-order refunds require support; other actions retain their original rules |
+| Support-assisted refund | Unclaimed gift credits and links are revoked; claimed gifts and the recipient's plan are retained |
 
-Deleting the original order through the admin interface also revokes unclaimed gifts. If applying a coupon or switching a plan refunds all of the original paid amount to zero, the same unclaimed-revocation or claimed-support rule applies. Ordinary price adjustments that leave a positive paid amount do not earn new gifts.
+The limit includes both generated links and unused awarded credits. A purchase earns only the remaining available credits; no credits are awarded when the limit is exhausted or the reward is unavailable, so that purchase does not acquire the new restriction. Lowering a campaign limit does not remove credits already awarded. Closing the campaign stops new awards while existing credits remain redeemable; temporary reward unavailability may still require waiting or support.
 
-When a refund and claim happen together, check the final outcome. If preparing a refund, ask the recipient to pause claiming. For manual review, provide the original purchase record, campaign name and relevant messages through [payment and plan support](/en/help/support#payment).
+Coupon discounts at checkout and independently matching campaigns can still combine. A zero-paid purchase earns no new purchase gifts. The restriction concerns applying a coupon after purchase, which can refund a price difference. Historical orders retain their prior handling when such a settlement returns the entire paid amount to zero.
+
+Before support handles a refund, provide the original purchase record, campaign name and related messages. Do not ask a recipient to claim while support is checking the order.
 
 ## Troubleshooting {#troubleshooting}
 
