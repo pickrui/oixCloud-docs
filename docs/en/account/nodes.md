@@ -96,6 +96,10 @@ To change the client-to-node transport, see [HTTP/3 and smart fallback](/en/acco
 
 A dedicated IP assigns an exit address exclusively to your account. Normal renewal keeps that address. Dedicated does not mean residential or free of previous history.
 
+::: warning Network environment
+Dedicated IPs are part of the Edge tier and are generally intended for international network environments. Routing on some lines may work better with certain carriers. We will call out such cases when relevant, but this is not a guarantee of connectivity, speed or stability. Actual results depend on your location, carrier and current routing. We still recommend using a dedicated IP as an exit node.
+:::
+
 ### Practical benefits {#ip-benefits}
 
 | Benefit | Use case |
