@@ -18,7 +18,7 @@ A top-up adds account balance; buying a plan is a separate step. If checkout was
   <a href="/illustrations/account-top-up-en.svg?v=20261105-1" target="_blank" rel="noopener" aria-label="Choose a method and check the top-up amount">
     <img src="/illustrations/account-top-up-en.svg?v=20261105-1" alt="Choose a method and check the top-up amount" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional channel and amount · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional channel and amount</figcaption>
 </figure>
 
 ### Fiat top-ups {#fiat-top-up}
@@ -44,7 +44,7 @@ Cryptocurrency payments require a transfer to the order's address on its specifi
   <a href="/illustrations/account-crypto-top-up-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the crypto order before transferring">
     <img src="/illustrations/account-crypto-top-up-en.svg?v=20261105-3" alt="Check the crypto order before transferring" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional data</figcaption>
 </figure>
 
 1. Choose an available cryptocurrency method. If the entry specifies a network, use that network. For a multi-asset entry, select the asset and check its displayed network, exchange rate and platform fee.
@@ -72,7 +72,7 @@ After a standalone top-up, complete your purchase in the [plan store](https://oi
   <a href="/illustrations/account-top-up-records-en.svg?v=20261105-1" target="_blank" rel="noopener" aria-label="Redeem a code and verify credited funds">
     <img src="/illustrations/account-top-up-records-en.svg?v=20261105-1" alt="Redeem a code and verify credited funds" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional channel, amounts and records; example code cannot be redeemed · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional channel, amounts and records; example code cannot be redeemed</figcaption>
 </figure>
 
 If you have a top-up code, open [Top-up Code and Records](https://oixcloud.com/user/code), enter the complete code and select **Redeem Code**. Check the record and balance after success. A top-up code is not an Access Token, subscription URL or payment order number.
@@ -96,7 +96,7 @@ New orders that actually receive purchase-gift credits do not support self-servi
   <a href="/illustrations/account-purchase-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the billing period and purchase total">
     <img src="/illustrations/account-purchase-en.svg?v=20261105-3" alt="Check the billing period and purchase total" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional data</figcaption>
 </figure>
 
 1. Open the [plan store](https://oixcloud.com/user/shop), choose a billing period above the list. Yearly is shown first (if a plan does not offer the selected period, its card shows the one it actually uses), and check its total data allowance, validity, intended use, stock and total price. The monthly equivalent is a price comparison, not monthly billing or a monthly traffic reset.
@@ -110,7 +110,7 @@ New orders that actually receive purchase-gift credits do not support self-servi
   <a href="/illustrations/account-plans-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check plan status after purchase">
     <img src="/illustrations/account-plans-en.svg?v=20261105-3" alt="Check plan status after purchase" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 Adding funds increases your account balance; buying creates a plan order. A new plan can take effect immediately when you have no current plan. If you already have one, the new plan enters the activation queue. After following the purchase steps above, confirm the active plan here.
@@ -137,7 +137,7 @@ System codes may restrict dates, plans, billing periods, account eligibility, us
   <a href="/illustrations/account-coupon-use-en.svg?v=20261105-6" target="_blank" rel="noopener" aria-label="Verify a coupon and check the renewal quote">
     <img src="/illustrations/account-coupon-use-en.svg?v=20261105-6" alt="Verify a coupon and check the renewal quote" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional prices and unusable example code · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional prices and unusable example code</figcaption>
 </figure>
 
 1. Select the plan and billing period in the [plan store](https://oixcloud.com/user/shop), open **Confirm Purchase**, enter the **Coupon Code** and select **Verify**.
@@ -153,7 +153,7 @@ Final purchase prices follow the displayed rounding rules. Upgrades, application
   <a href="/illustrations/account-coupon-bind-en.svg?v=20261112-1" target="_blank" rel="noopener" aria-label="Check the settlement before applying a coupon">
     <img src="/illustrations/account-coupon-bind-en.svg?v=20261112-1" alt="Check the settlement before applying a coupon" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional prices and unusable example code · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional prices and unusable example code</figcaption>
 </figure>
 
 **Applying a coupon settles the current period immediately: one-time codes require a balance refund; recurring codes may also charge balance.** **Apply Coupon** normally requires a paid record that is still Active or Pending and is within 3 days of its original purchase. Upgrading does not restart that window. Special converted records are excluded. If a one-use late-application allowance has been granted separately, follow the available button; successful application consumes that allowance.
@@ -176,7 +176,7 @@ New orders with awarded purchase-gift credits cannot apply a coupon after purcha
   <a href="/illustrations/account-coupon-recurring-en.svg?v=20261105-6" target="_blank" rel="noopener" aria-label="Check the recurring code and auto-renewal">
     <img src="/illustrations/account-coupon-recurring-en.svg?v=20261105-6" alt="Check the recurring code and auto-renewal" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional prices and unusable example code · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional prices and unusable example code</figcaption>
 </figure>
 
 Recurring means the corresponding purchase record can carry the successfully applied benefit forward. **It does not mean unlimited new redemptions, a permanently fixed price or automatic enrollment in auto-renewal.** Follow the [auto-renewal steps](#auto-renew) to select the record and check its switch. Queued plans, expiry, funding and renewal eligibility still follow the usual rules.
@@ -292,7 +292,7 @@ While at low speed, adding an eligible queued plan causes automatic switching fi
   <a href="/illustrations/account-renewal-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the renewal target and price">
     <img src="/illustrations/account-renewal-en.svg?v=20261105-3" alt="Check the renewal target and price" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional data</figcaption>
 </figure>
 
 1. Open [Plan Management](https://oixcloud.com/user/bought), find the record you want to renew after expiry, and select its **Auto-renewal** switch.
@@ -316,7 +316,7 @@ For example, A is awaiting auto-renewal, B is active, and no other plan is queue
   <a href="/illustrations/account-traffic-reset-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the cost of each automatic reset">
     <img src="/illustrations/account-traffic-reset-en.svg?v=20261105-3" alt="Check the cost of each automatic reset" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional data</figcaption>
 </figure>
 
 1. Open [Plan Management](https://oixcloud.com/user/bought) and find **Automatic traffic reset** on the target record. Check the per-reset price beneath it. A pending record's setting applies only after activation.
@@ -365,7 +365,7 @@ New-rule orders with awarded purchase-gift credits cannot use this self-service 
   <a href="/illustrations/account-upgrade-en.svg?v=20261105-5" target="_blank" rel="noopener" aria-label="Check upgrade cost and remaining data">
     <img src="/illustrations/account-upgrade-en.svg?v=20261105-5" alt="Check upgrade cost and remaining data" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional plan and amounts · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional plan and amounts</figcaption>
 </figure>
 
 1. Open [Plan Management](https://oixcloud.com/user/bought), check the original record and select **Upgrade** for an active plan or **Change** for a never-used pending plan.
@@ -389,7 +389,7 @@ Both actions start from a purchase record. Activation immediately switches the a
   <a href="/illustrations/account-activation-en.svg?v=20261105-5" target="_blank" rel="noopener" aria-label="Check the old plan before activating another">
     <img src="/illustrations/account-activation-en.svg?v=20261105-5" alt="Check the old plan before activating another" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional plan and amounts · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional plan and amounts</figcaption>
 </figure>
 
 **Each manual switch deducts 2 hours from the current active plan**, with saved time rounded down to whole minutes and ordinary-plan data to whole GiB. If enough remains, the old plan becomes Pending. If not, it becomes Awaiting auto-renewal when auto-renewal is on, or ends otherwise. Repeated switches incur the loss again; an ended record cannot be recovered by switching back.
@@ -407,7 +407,7 @@ A pending plan with less than 6 hours remaining has no manual activation button.
   <a href="/illustrations/account-refund-en.svg?v=20261105-5" target="_blank" rel="noopener" aria-label="Check the amount before refunding to balance">
     <img src="/illustrations/account-refund-en.svg?v=20261105-5" alt="Check the amount before refunding to balance" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional plan and amounts · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional plan and amounts</figcaption>
 </figure>
 
 **A refund ends that plan and returns funds only to account balance, not the original payment provider or a withdrawal; used coupon codes are not returned.** Self-service refunds require an eligible unused pending record with a positive refundable paid amount: annual plans and specific quarterly plans that show the button. Not every quarterly plan qualifies; monthly and semiannual plans do not offer this self-service refund. A previously used plan switched back to Pending is not eligible.
@@ -447,7 +447,7 @@ Open the **full [Cashier page](https://oixcloud.com/user/v2/counter)** and scrol
   <a href="/illustrations/account-crypto-feedback-en.svg?v=20261105-4" target="_blank" rel="noopener" aria-label="Report a cryptocurrency payment that was not credited">
     <img src="/illustrations/account-crypto-feedback-en.svg?v=20261105-4" alt="Report a cryptocurrency payment that was not credited" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional order and hash placeholder · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional order and hash placeholder</figcaption>
 </figure>
 
 1. Check the original order ID, creation time and amount. Do not pay again or delete an order you have already paid. The list shows uncredited orders from the last 48 hours, plus older feedback still being checked, awaiting your confirmation or under manual review; credited orders are checked in [Top-up History](https://oixcloud.com/user/code).

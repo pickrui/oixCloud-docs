@@ -5,8 +5,6 @@ description: Start with the symptom, then contact support with useful evidence.
 
 # Troubleshooting
 
-Start with the symptom, then contact support with useful evidence.
-
 | I want to… | Guide |
 | --- | --- |
 | Resolve sign-in, missing nodes or browsing failures | [Connection and speed troubleshooting](/en/help/troubleshooting) |

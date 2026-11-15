@@ -27,7 +27,7 @@ Hollow 和 AnyTLS 是协议页名称；本教程的 HTTP/3 是 Hollow 页中的�
   <a href="/illustrations/account-http3-zh.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="oixCloud · 设置 HTTP/3 与智能回退">
     <img src="/illustrations/account-http3-zh.svg?v=20261107-1" alt="oixCloud · 设置 HTTP/3 与智能回退" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 打开用户中心的「流量路由 → 协议 → [Hollow](https://oixcloud.com/user/hollow)」，搜索节点名称或独享 IP 地址

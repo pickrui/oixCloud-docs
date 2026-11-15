@@ -38,7 +38,7 @@ Email/password and Google sign-in issue or reuse the client's dedicated token, s
   <a href="/illustrations/flclash-connect-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Start from the dashboard">
     <img src="/illustrations/flclash-connect-en.svg?v=20261102-3" alt="Start from the dashboard" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>FlClash for oixCloud desktop example · Follow the relevant guide for other clients · Click to enlarge</figcaption>
+  <figcaption>FlClash for oixCloud desktop example · Follow the relevant guide for other clients</figcaption>
 </figure>
 
 Open the service you intend to use, then check traffic or connection records. A VPN icon or an enabled switch alone does not prove that the destination works.

@@ -37,7 +37,7 @@ Wait for account information, profile download and core processing. The plugin c
   <a href="/illustrations/openclash-running-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Confirm the managed profile is running">
     <img src="/illustrations/openclash-running-en.svg?v=20261102-3" alt="Confirm the managed profile is running" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 1. Find `oixCloud - smart.yaml` in the profile area on **Overview / Running Status**.
@@ -73,7 +73,7 @@ An account card, latency result or Running status alone does not prove that devi
   <a href="/illustrations/openclash-version-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="OpenClash · Update or replace the oix core in Version Update">
     <img src="/illustrations/openclash-version-en.svg?v=20261105-3" alt="OpenClash · Update or replace the oix core in Version Update" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 The oix core is a Mihomo build supporting oixCloud managed nodes; an ordinary Mihomo package is not a substitute. The maintained integration prioritizes it after sign-in. Plugin, core and subscription updates are separate operations.

@@ -18,7 +18,7 @@ When diagnosing on-demand behavior, temporarily disable the relevant setting and
   <a href="/illustrations/oixcloud-automation-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Choose script triggers">
     <img src="/illustrations/oixcloud-automation-en.svg?v=20261030-en1" alt="oixCloud · Choose script triggers" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 1. Open **Settings → Automation** and create a script.

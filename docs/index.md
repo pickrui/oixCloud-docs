@@ -3,8 +3,6 @@ layout: home
 title: 使用指南
 hero:
   name: oixCloud 使用指南
-  text: 连接、客户端与日常使用
-  tagline: 从第一次连接到客户端设置、账户管理与问题排查，随时找到最清晰的操作步骤
   actions:
     - theme: brand
       text: 快速开始
@@ -21,24 +19,20 @@ hero:
 features:
   - icon: 🚀
     title: 快速开始
-    details: 从选择设备、安装应用到完成第一次连接，轻松上手
+    details: 选择设备、安装客户端、首次连接
     link: /start/
-    linkText: 查看指南
   - icon: 📱
     title: 客户端教程
     details: 覆盖 oixCloud、FlClash for oixCloud、OpenClash 与 Surge 等
     link: /clients/
-    linkText: 查看客户端
   - icon: ⚡
     title: 账户与服务
     details: 套餐购买续费、流量重置、Home ISP 家宽与中继自建
     link: /account/
-    linkText: 浏览服务说明
   - icon: 🛠️
     title: 故障排查
     details: 网络自检、连接排查、节点测速与服务单提交规范
     link: /help/
-    linkText: 获取支持帮助
 ---
 
 ## 按当前任务查找
@@ -59,5 +53,3 @@ features:
 ::: info 阅读前先确认平台
 具体入口与可用功能随客户端版本和平台变化，请以各篇说明为准。账户操作在 [oixCloud 用户中心](https://oixcloud.com/user) 完成
 :::
-
-使用页面顶部的搜索查找功能；切换语言可打开对应教程。每篇文章都有独立链接与章节目录，可直接分享具体操作

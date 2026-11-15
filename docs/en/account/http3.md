@@ -27,7 +27,7 @@ Home ISP nodes excluded from default subscriptions also follow the [traffic rout
   <a href="/illustrations/account-http3-en.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="Set HTTP/3 and smart fallback">
     <img src="/illustrations/account-http3-en.svg?v=20261107-1" alt="Set HTTP/3 and smart fallback" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 1. Open **Traffic Routes → Protocols → [Hollow](https://oixcloud.com/user/hollow)** in the user center. Search for the node name or dedicated IP address.

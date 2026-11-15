@@ -25,7 +25,7 @@ Home ISP 与 Edge 使用相同套餐权限，在 [节点列表](https://oixcloud
   <a href="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · 同时保留入口线路与 ISP">
     <img src="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" alt="oixCloud · 同时保留入口线路与 ISP" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 图中同时保留 Fusion 与 ISP · 点击放大</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 图中同时保留 Fusion 与 ISP</figcaption>
 </figure>
 
 1. 在 oixCloud 或 FlClash for oixCloud 打开「oixCloud → 节点筛选」，或在网页 [订阅管理](https://oixcloud.com/user/sub_manage) 编辑对应地址
@@ -58,7 +58,7 @@ ISP 与 Edge 是两条独立线路；只选 Edge，或只按地区、名称筛�
   <a href="/illustrations/account-relay-zh.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="oixCloud · 内部中继路径编辑器">
     <img src="/illustrations/account-relay-zh.svg?v=20261107-1" alt="oixCloud · 内部中继路径编辑器" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>通用路径编辑器示意 · 本例只需选择入口和 Home ISP 出口，中间跳按需添加 · 点击放大</figcaption>
+  <figcaption>通用路径编辑器示意 · 本例只需选择入口和 Home ISP 出口，中间跳按需添加</figcaption>
 </figure>
 
 1. 打开 [内部中继](https://oixcloud.com/user/relay)，点击「添加路径」
@@ -83,7 +83,7 @@ ISP 与 Edge 是两条独立线路；只选 Edge，或只按地区、名称筛�
   <a href="/illustrations/oixcloud-chains-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 按顺序创建代理链">
     <img src="/illustrations/oixcloud-chains-zh.svg?v=20261102-3" alt="oixCloud · 按顺序创建代理链" width="1120" height="982" loading="lazy">
   </a>
-  <figcaption>通用代理链编辑器示意 · 本例用实际入口节点和 Home ISP 替换图中成员 · 点击放大</figcaption>
+  <figcaption>通用代理链编辑器示意 · 本例用实际入口节点和 Home ISP 替换图中成员</figcaption>
 </figure>
 
 1. 在「代理」中新建代理链，填写易辨认的名称，例如 `Home-ISP-Chain`
@@ -102,7 +102,7 @@ ISP 与 Edge 是两条独立线路；只选 Edge，或只按地区、名称筛�
   <a href="/illustrations/flclash-chains-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
     <img src="/illustrations/flclash-chains-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>通用代理链编辑器示意 · 本例用实际入口节点和 Home ISP 替换图中成员 · 点击放大</figcaption>
+  <figcaption>通用代理链编辑器示意 · 本例用实际入口节点和 Home ISP 替换图中成员</figcaption>
 </figure>
 
 1. 在「配置」中打开当前配置的菜单，选择「链式代理」，新增并命名

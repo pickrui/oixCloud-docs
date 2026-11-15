@@ -12,7 +12,7 @@ To add sources first, see [individual third-party nodes](/en/flclash/profiles#si
   <a href="/illustrations/flclash-proxies-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Select a node in its group">
     <img src="/illustrations/flclash-proxies-en.svg?v=20261105-3" alt="FlClash for oixCloud · Select a node in its group" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 ## Select a node
@@ -38,7 +38,7 @@ Add a group with valid members in a profile's Override settings, then point pers
   <a href="/illustrations/flclash-chains-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Edit the chain’s forwarding order">
     <img src="/illustrations/flclash-chains-en.svg?v=20261102-3" alt="FlClash for oixCloud · Edit the chain’s forwarding order" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 1. In **Profiles**, open **Proxy chains** from the current profile's menu, add a chain and give it a recognizable name.

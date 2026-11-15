@@ -10,7 +10,7 @@ description: "DNS 覆写与网络设置的操作步骤、适用范围与常见�
   <a href="/illustrations/flclash-dns-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 配置 DNS 覆写">
     <img src="/illustrations/flclash-dns-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 配置 DNS 覆写" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 从「工具 → 进阶配置 → DNS」查看设置。当前界面通过标题栏的「＋」（添加覆写项）选择要覆盖的字段：已添加项覆盖所有配置的对应 DNS 设置，未添加项沿用配置自身设置，不再用一个总开关覆盖整组 DNS

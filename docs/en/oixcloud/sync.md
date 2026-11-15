@@ -16,7 +16,7 @@ Use oixCloud 1.34 or later on every syncing device. Versions 1.33 and earlier us
   <a href="/illustrations/oixcloud-sync-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Choose what iCloud syncs">
     <img src="/illustrations/oixcloud-sync-en.svg?v=20261030-en1" alt="oixCloud · Choose what iCloud syncs" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 1. Use the same Apple Account and confirm iCloud works.

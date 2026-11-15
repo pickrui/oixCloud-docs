@@ -31,7 +31,7 @@ Use the release's `SHA256SUMS` for standard packages and `SHA256SUMS-macos12-fin
   <a href="/illustrations/flclash-connect-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Start from the dashboard">
     <img src="/illustrations/flclash-connect-en.svg?v=20261102-3" alt="FlClash for oixCloud · Start from the dashboard" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 ## Import your account configuration
@@ -40,7 +40,7 @@ Use the release's `SHA256SUMS` for standard packages and `SHA256SUMS-macos12-fin
   <a href="/illustrations/flclash-login-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Sign in to your account">
     <img src="/illustrations/flclash-login-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Sign in to your account" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 1. Download FlClash for oixCloud from our download center, choose the package for your operating system and processor architecture, and sign in on the app's oixCloud page.

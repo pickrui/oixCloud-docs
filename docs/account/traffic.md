@@ -68,7 +68,7 @@ description: "流量与计费的操作步骤、适用范围与常见问题"
   <a href="/illustrations/account-activity-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 在最近活动中找到请求与节点">
     <img src="/illustrations/account-activity-zh.svg?v=20261102-3" alt="oixCloud · 在最近活动中找到请求与节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 在用户中心核对生效套餐、额度、有效期以及当前是否低速

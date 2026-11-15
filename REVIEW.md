@@ -1,3 +1,9 @@
+# UI copy and label review — 2026-11-15
+
+Removed redundant homepage hero copy, repeated card link prompts, generic category introductions and the repeated footer scope reminder in both languages. Removed only the enlargement instruction from 160 illustration captions; retained fictional-data notices, unusable example-code warnings and platform-specific limitations. Article steps, warning blocks, headings, image alternatives, accessibility attributes and legacy fragment mappings remain unchanged.
+
+Validation: `pnpm build` and `pnpm check:search` passed (520 keyword checks and 840 result-anchor checks). Parsed all 109 generated HTML pages: 9,384 internal links, assets and anchors resolved; all 54 page paths have matching Chinese and English versions. Source comparisons confirmed that headings, image alternatives, ARIA attributes and warning/danger blocks were preserved. Browser checks covered representative home, category and illustrated article pages at 1360 px and 390 px, dark/light themes, bilingual search, corresponding article language switching, image fit/close/focus return, overflow-table hints and both localized legacy subscription redirects. These checks cover documentation presentation and navigation, not client runtime behavior or external downloads.
+
 # Purchase-gift order policy and entitlement lifecycle — 2026-11-12
 
 Updated the paired plan and reward guides for new orders that actually receive gift credits: self-service changes, upgrades, balance refunds and post-purchase coupon application are restricted; historical orders keep their original rules. Closing a campaign stops new awards while previously awarded credits remain redeemable. The guides also explain remaining-quota allocation, preserved awarded limits, support refunds and checkout coupon stacking.

@@ -18,7 +18,7 @@ description: "自动化与按需连接的操作步骤、适用范围与常见问
   <a href="/illustrations/oixcloud-automation-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 设置脚本触发方式">
     <img src="/illustrations/oixcloud-automation-zh.svg?v=20261030-2" alt="oixCloud · 设置脚本触发方式" width="1120" height="982" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 1. 进入「设置 → 自动化」，新建脚本

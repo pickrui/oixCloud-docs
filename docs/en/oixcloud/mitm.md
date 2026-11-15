@@ -12,7 +12,7 @@ For iPhone / iPad. Ordinary proxy access does not require MITM.
   <a href="/illustrations/oixcloud-mitm-generate-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Generate your first MITM certificate">
     <img src="/illustrations/oixcloud-mitm-generate-en.svg?v=20261030-en1" alt="oixCloud · Generate your first MITM certificate" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 1. Open **Settings → MITM → MITM Certificates** and inspect **This Device**.
@@ -25,7 +25,7 @@ For iPhone / iPad. Ordinary proxy access does not require MITM.
   <a href="/illustrations/oixcloud-mitm-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Install this device’s MITM certificate">
     <img src="/illustrations/oixcloud-mitm-en.svg?v=20261030-en1" alt="oixCloud · Install this device’s MITM certificate" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 ::: warning Trust a replacement certificate again

@@ -12,7 +12,7 @@ For iPhone / iPad. Apple TV mainly consumes synced rules and allows rule-set des
   <a href="/illustrations/oixcloud-rules-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Add a routing rule for a website">
     <img src="/illustrations/oixcloud-rules-en.svg?v=20261030-en1" alt="oixCloud · Add a routing rule for a website" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 ## Route a website

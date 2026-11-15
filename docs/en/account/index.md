@@ -5,8 +5,6 @@ description: Find help with plans, traffic, nodes, subscriptions and account sec
 
 # Account & service
 
-Find help with plans, traffic, nodes, subscriptions and account security.
-
 | I want to… | Guide |
 | --- | --- |
 | Add funds, use a top-up code or check crediting | [Top-ups and credited funds](/en/account/plans#top-up) |

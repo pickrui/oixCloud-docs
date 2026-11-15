@@ -10,7 +10,7 @@ description: "覆写、策略组与附加规则的操作步骤、适用范围与
   <a href="/illustrations/flclash-rules-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 添加域名后缀规则">
     <img src="/illustrations/flclash-rules-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 添加域名后缀规则" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 ## 选择覆写模式
@@ -19,7 +19,7 @@ description: "覆写、策略组与附加规则的操作步骤、适用范围与
   <a href="/illustrations/flclash-override-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 选择配置覆写模式">
     <img src="/illustrations/flclash-override-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 选择配置覆写模式" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 打开配置操作菜单中的「覆写」

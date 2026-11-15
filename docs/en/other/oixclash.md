@@ -42,7 +42,7 @@ If the platform does not match, the software center says so and stops; install t
   <a href="/illustrations/oixclash-login-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixClash · Sign in to oixClash">
     <img src="/illustrations/oixclash-login-en.svg?v=20261105-3" alt="oixClash · Sign in to oixClash" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>English reference with Chinese control names · Chinese-only plugin UI · Click to enlarge</figcaption>
+  <figcaption>English reference with Chinese control names · Chinese-only plugin UI</figcaption>
 </figure>
 
 For the first sign-in under **oixCloud 账号**, choose email and password to create the dedicated oixClash token. You can use that Access Token afterward. See [first sign-in](/en/account/security#first-client-login) for obtaining an oixCloud password after Google registration and restricting client password sign-in.
@@ -60,7 +60,7 @@ After signing in, the page shows the account, plan, expiry date and traffic. A t
   <a href="/illustrations/oixclash-running-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixClash · Enable proxying and optimize memory">
     <img src="/illustrations/oixclash-running-en.svg?v=20261030-en1" alt="oixClash · Enable proxying and optimize memory" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>English reference with Chinese control names · Chinese-only plugin UI · Click to enlarge</figcaption>
+  <figcaption>English reference with Chinese control names · Chinese-only plugin UI</figcaption>
 </figure>
 
 1. Under **运行** (Run), turn on the switch and click **保存并应用** (Save and Apply).
@@ -113,7 +113,7 @@ From oixClash 0.0.2, **自定义规则** (Custom Rules) edits the same [account 
   <a href="/illustrations/oixclash-rules-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixClash · Read and save shared account rules">
     <img src="/illustrations/oixclash-rules-en.svg?v=20261030-en1" alt="oixClash · Read and save shared account rules" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>English reference with Chinese control names · Chinese-only plugin UI · Click to enlarge</figcaption>
+  <figcaption>English reference with Chinese control names · Chinese-only plugin UI</figcaption>
 </figure>
 
 1. Sign in and click **读取面板规则** (Read Panel Rules). Wait until the status confirms that the rules are ready to edit.

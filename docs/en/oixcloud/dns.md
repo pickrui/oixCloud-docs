@@ -42,7 +42,7 @@ Encryption protects the connection to the resolver; it does not select a proxy o
   <a href="/illustrations/oixcloud-dns-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Add a split DNS rule">
     <img src="/illustrations/oixcloud-dns-en.svg?v=20261030-en1" alt="oixCloud · Add a split DNS rule" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 1. Open **Settings → DNS → Add DNS Rule**.

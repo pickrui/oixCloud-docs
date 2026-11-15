@@ -21,7 +21,7 @@ App Store installation requires an Apple Account outside mainland China. For bet
   <a href="/illustrations/oixcloud-connect-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Connect and choose an outbound">
     <img src="/illustrations/oixcloud-connect-en.svg?v=20261030-en1" alt="oixCloud · Connect and choose an outbound" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 ## Managed account
@@ -30,7 +30,7 @@ App Store installation requires an Apple Account outside mainland China. For bet
   <a href="/illustrations/oixcloud-login-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Sign in to your account">
     <img src="/illustrations/oixcloud-login-en.svg?v=20261030-en1" alt="oixCloud · Sign in to your account" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 1. Open the App Store or TestFlight link in our download center to install oixCloud, then sign in on the app's oixCloud account page.

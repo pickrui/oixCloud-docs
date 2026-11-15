@@ -18,7 +18,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-top-up-zh.svg?v=20261105-1" target="_blank" rel="noopener" aria-label="选择支付方式并核对充值金额">
     <img src="/illustrations/account-top-up-zh.svg?v=20261105-1" alt="选择支付方式并核对充值金额" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构渠道与金额 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构渠道与金额</figcaption>
 </figure>
 
 ### 法币充值 {#fiat-top-up}
@@ -44,7 +44,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-crypto-top-up-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="核对虚拟货币订单再转账">
     <img src="/illustrations/account-crypto-top-up-zh.svg?v=20261105-3" alt="核对虚拟货币订单再转账" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构数据 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 选择收银台提供的虚拟货币方式；入口已注明网络时使用该网络，多币种入口则先选择币种，核对页面给出的网络、汇率和平台手续费
@@ -72,7 +72,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-top-up-records-zh.svg?v=20261105-1" target="_blank" rel="noopener" aria-label="使用充值码并核对到账记录">
     <img src="/illustrations/account-top-up-records-zh.svg?v=20261105-1" alt="使用充值码并核对到账记录" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构渠道、金额与记录，示例充值码不可使用 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构渠道、金额与记录，示例充值码不可使用</figcaption>
 </figure>
 
 已有充值码时，打开 [充值码与充值记录](https://oixcloud.com/user/code)，在「充值码」中输入完整代码，点击「使用充值码」，成功后核对记录和余额。充值码不是 Access Token、订阅地址或支付订单号
@@ -96,7 +96,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-purchase-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="选择计费周期后核对购买订单">
     <img src="/illustrations/account-purchase-zh.svg?v=20261105-3" alt="选择计费周期后核对购买订单" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构数据 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 打开 [套餐商店](https://oixcloud.com/user/shop)，在列表上方选择计费周期，默认显示年付（套餐没有所选周期时，卡片会标明实际周期），核对该周期的总流量、有效期、用途、库存和总价；「折合每月」是价格参考，不代表按月扣款或每月重置流量
@@ -110,7 +110,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-plans-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · 购买后在这里核对生效状态">
     <img src="/illustrations/account-plans-zh.svg?v=20261105-3" alt="oixCloud · 购买后在这里核对生效状态" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 充值先增加余额，购买才生成套餐订单。当前没有套餐时，新购套餐可直接生效；已有套餐时，新购套餐进入待激活队列。按上方步骤购买后，在此确认当前生效套餐
@@ -137,7 +137,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-coupon-use-zh.svg?v=20261105-6" target="_blank" rel="noopener" aria-label="购买时验证折扣并核对续费报价">
     <img src="/illustrations/account-coupon-use-zh.svg?v=20261105-6" alt="购买时验证折扣并核对续费报价" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构金额，示例折扣代码不可使用 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构金额，示例折扣代码不可使用</figcaption>
 </figure>
 
 1. 在 [套餐商店](https://oixcloud.com/user/shop) 先选套餐及计费周期，打开「确认购买」，在「折扣代码」中输入代码并点「验证」
@@ -153,7 +153,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-coupon-bind-zh.svg?v=20261112-1" target="_blank" rel="noopener" aria-label="购买后绑定前核对补退差价">
     <img src="/illustrations/account-coupon-bind-zh.svg?v=20261112-1" alt="购买后绑定前核对补退差价" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构金额，示例折扣代码不可使用 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构金额，示例折扣代码不可使用</figcaption>
 </figure>
 
 **绑定会立即结算本期差价：一次性代码须能退回余额，循环代码也可能补扣余额**。通常仅首次购买后 3 天内、仍为「使用中」或「待激活」且有实付金额的记录提供「绑定折扣」；升级不会重新计算这 3 天。特殊转换记录不支持；已单独获准一次超期绑定的，以页面入口为准，成功后这次许可即用完
@@ -176,7 +176,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-coupon-recurring-zh.svg?v=20261105-6" target="_blank" rel="noopener" aria-label="核对循环代码与自动续费设置">
     <img src="/illustrations/account-coupon-recurring-zh.svg?v=20261105-6" alt="核对循环代码与自动续费设置" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构金额，示例折扣代码不可使用 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构金额，示例折扣代码不可使用</figcaption>
 </figure>
 
 「循环」表示成功应用后的优惠可由对应购买记录沿用，**不表示可以无限次重新输入代码，也不表示永久固定金额或自动开启续费**。购买或绑定后，按 [自动续费步骤](#auto-renew) 选择要续的记录并核对开关；待激活队列、到期时间、资金与续费资格仍按原规则处理
@@ -292,7 +292,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-renewal-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="核对自动续费对象和续费价格">
     <img src="/illustrations/account-renewal-zh.svg?v=20261105-3" alt="核对自动续费对象和续费价格" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构数据 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 打开 [套餐管理](https://oixcloud.com/user/bought)，找到希望到期后续上的记录，点击它的「自动续费」开关
@@ -316,7 +316,7 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
   <a href="/illustrations/account-traffic-reset-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="开启自动重置前核对每次费用">
     <img src="/illustrations/account-traffic-reset-zh.svg?v=20261105-3" alt="开启自动重置前核对每次费用" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构数据 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 打开 [套餐管理](https://oixcloud.com/user/bought)，在目标记录中找到「自动重置流量」，核对开关下方的每次费用；待激活记录的设置在激活后才适用
@@ -365,7 +365,7 @@ Pass Gold 及以上年付套餐（含按量付费）在自然到期时发放权�
   <a href="/illustrations/account-upgrade-zh.svg?v=20261105-5" target="_blank" rel="noopener" aria-label="核对升级费用与剩余流量">
     <img src="/illustrations/account-upgrade-zh.svg?v=20261105-5" alt="核对升级费用与剩余流量" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构套餐与数值 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构套餐与数值</figcaption>
 </figure>
 
 1. 打开 [套餐管理](https://oixcloud.com/user/bought)，核对要操作的原记录，使用中的点「升级」，从未使用的待激活记录点「更换」
@@ -389,7 +389,7 @@ Pass Gold 及以上年付套餐（含按量付费）在自然到期时发放权�
   <a href="/illustrations/account-activation-zh.svg?v=20261105-5" target="_blank" rel="noopener" aria-label="手动激活前确认原套餐去向">
     <img src="/illustrations/account-activation-zh.svg?v=20261105-5" alt="手动激活前确认原套餐去向" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构套餐与数值 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构套餐与数值</figcaption>
 </figure>
 
 **已有使用中套餐时，每次手动切换都会从原套餐扣除 2 小时有效时间**，剩余时间按整分钟、普通套餐剩余流量按整 GiB 向下保存。原套餐能保留时转为待激活；不足以保留时，开着自动续费的转为「等待自动续费」，其余直接结束。重复切换会再次产生损耗；结束的记录不能靠切回恢复
@@ -407,7 +407,7 @@ Pass Gold 及以上年付套餐（含按量付费）在自然到期时发放权�
   <a href="/illustrations/account-refund-zh.svg?v=20261105-5" target="_blank" rel="noopener" aria-label="退款前确认金额与套餐结束">
     <img src="/illustrations/account-refund-zh.svg?v=20261105-5" alt="退款前确认金额与套餐结束" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构套餐与数值 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构套餐与数值</figcaption>
 </figure>
 
 **退款会结束这份套餐，款项仅退到账户余额，不退到原支付渠道，也不是提现；已使用的折扣代码不退还**。自助入口仅支持符合条件、有可退实付金额且从未使用的待激活记录：年付，以及页面提供入口的特定季付套餐；不是所有季付都支持，月付和半年付不提供该自助退款。曾使用后切回待激活也不符合条件
@@ -447,7 +447,7 @@ Pass Gold 及以上年付套餐（含按量付费）在自然到期时发放权�
   <a href="/illustrations/account-crypto-feedback-zh.svg?v=20261105-4" target="_blank" rel="noopener" aria-label="找到未到账反馈按钮并提交原交易">
     <img src="/illustrations/account-crypto-feedback-zh.svg?v=20261105-4" alt="找到未到账反馈按钮并提交原交易" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>界面示意 · 虚构订单与哈希占位符 · 点击放大</figcaption>
+  <figcaption>界面示意 · 虚构订单与哈希占位符</figcaption>
 </figure>
 
 1. 核对原订单号、创建时间和金额；已经付款的不要重复支付或删除。列表显示近 48 小时未入账的订单，以及更早但仍在自动核查、待用户确认或人工审核中的反馈；已到账的到 [充值记录](https://oixcloud.com/user/code) 核对

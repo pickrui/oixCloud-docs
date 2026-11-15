@@ -19,7 +19,7 @@ For beta installation, follow the Apple TV TestFlight steps in the [download cen
   <a href="/illustrations/apple-tv-sync-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Enable sync in TV settings">
     <img src="/illustrations/apple-tv-sync-en.svg?v=20261102-3" alt="Enable sync in TV settings" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 1. Use the same Apple Account on iPhone/iPad and Apple TV, with compatible updated clients.

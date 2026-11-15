@@ -12,7 +12,7 @@ For iPhone / iPad. Supported configuration can also sync to Apple TV.
   <a href="/illustrations/oixcloud-policies-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Create a policy group">
     <img src="/illustrations/oixcloud-policies-en.svg?v=20261030-en1" alt="oixCloud · Create a policy group" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 In **Proxies → Policies**, create a named group, choose its type and add members. Select the saved group on Home or as a rule target; creating it alone does not route traffic through it.
@@ -47,7 +47,7 @@ After testing finishes, check Best Available's current choice on Home and create
   <a href="/illustrations/oixcloud-chains-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · Build a proxy chain in order">
     <img src="/illustrations/oixcloud-chains-en.svg?v=20261102-3" alt="oixCloud · Build a proxy chain in order" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 These steps follow the maintained version with groups at any hop. If an older editor lacks an option, check your [installed version and download source](/en/oixcloud/connect).

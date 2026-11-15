@@ -10,7 +10,7 @@ Separate three questions: does traffic reach the client, which route should it t
   <a href="/illustrations/start-concepts-en.svg?v=20261103-1" target="_blank" rel="noopener" aria-label="oixCloud · Traffic capture, routing rules, and node selection model">
     <img src="/illustrations/start-concepts-en.svg?v=20261103-1" alt="oixCloud · Traffic capture, routing rules, and node selection model" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface architecture simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface architecture simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 | Item | Purpose | Example |

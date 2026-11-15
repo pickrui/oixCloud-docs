@@ -25,7 +25,7 @@ The service sets default inclusion per node, independently of its static or dyna
   <a href="/illustrations/oixcloud-filter-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · Retain the entry line and ISP together">
     <img src="/illustrations/oixcloud-filter-en.svg?v=20261105-3" alt="oixCloud · Retain the entry line and ISP together" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation · Fictional data · Both Fusion and ISP are retained in this example · Click to enlarge</figcaption>
+  <figcaption>Interface simulation · Fictional data · Both Fusion and ISP are retained in this example</figcaption>
 </figure>
 
 1. Open **oixCloud → Node Filter** in oixCloud or FlClash for oixCloud, or edit the corresponding address in [Subscription Management](https://oixcloud.com/user/sub_manage).
@@ -58,7 +58,7 @@ These steps configure a complete path for entry traffic. WARP, external relays a
   <a href="/illustrations/account-relay-en.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="oixCloud · Internal relay path editor">
     <img src="/illustrations/account-relay-en.svg?v=20261107-1" alt="oixCloud · Internal relay path editor" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>General path-editor example · Select an entry and Home ISP exit; intermediate hops are optional · Click to enlarge</figcaption>
+  <figcaption>General path-editor example · Select an entry and Home ISP exit; intermediate hops are optional</figcaption>
 </figure>
 
 1. Open [Internal relay](https://oixcloud.com/user/relay) and choose **Add path**.
@@ -83,7 +83,7 @@ These editing steps apply to iPhone / iPad. Apple TV [receives synced configurat
   <a href="/illustrations/oixcloud-chains-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · Create a chain in forwarding order">
     <img src="/illustrations/oixcloud-chains-en.svg?v=20261102-3" alt="oixCloud · Create a chain in forwarding order" width="1120" height="1120" loading="lazy">
   </a>
-  <figcaption>General chain-editor example · Replace its members with your entry and Home ISP nodes · Click to enlarge</figcaption>
+  <figcaption>General chain-editor example · Replace its members with your entry and Home ISP nodes</figcaption>
 </figure>
 
 1. Create a chain in **Proxies** and give it a recognizable name, such as `Home-ISP-Chain`.
@@ -102,7 +102,7 @@ For Windows, macOS, Android and Linux versions supporting this feature.
   <a href="/illustrations/flclash-chains-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Edit chain order">
     <img src="/illustrations/flclash-chains-en.svg?v=20261102-3" alt="FlClash for oixCloud · Edit chain order" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>General chain-editor example · Replace its members with your entry and Home ISP nodes · Click to enlarge</figcaption>
+  <figcaption>General chain-editor example · Replace its members with your entry and Home ISP nodes</figcaption>
 </figure>
 
 1. Open **Proxy chains** from the current profile's menu in **Profiles**, then add and name a chain.

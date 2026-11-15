@@ -10,7 +10,7 @@ description: "节点、策略组与分流的操作步骤、适用范围与常见
   <a href="/illustrations/start-concepts-zh.svg?v=20261103-1" target="_blank" rel="noopener" aria-label="oixCloud · 流量接管、分流规则与节点调度模型">
     <img src="/illustrations/start-concepts-zh.svg?v=20261103-1" alt="oixCloud · 流量接管、分流规则与节点调度模型" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的架构示意 · 虚构数据 · 点击放大查看各环节流程</figcaption>
+  <figcaption>按维护版本绘制的架构示意 · 虚构数据</figcaption>
 </figure>
 
 | 名称 | 作用 | 举例 |

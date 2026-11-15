@@ -19,7 +19,7 @@ description: "添加和更新第三方节点、Clash 或 Surge 订阅，以及�
   <a href="/illustrations/oixcloud-proxies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 选择节点与自动优选">
     <img src="/illustrations/oixcloud-proxies-zh.svg?v=20261030-2" alt="oixCloud · 选择节点与自动优选" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 ## 添加自有节点或订阅
@@ -30,7 +30,7 @@ description: "添加和更新第三方节点、Clash 或 Surge 订阅，以及�
   <a href="/illustrations/oixcloud-add-node-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 从链接添加自己的节点">
     <img src="/illustrations/oixcloud-add-node-zh.svg?v=20261102-3" alt="oixCloud · 从链接添加自己的节点" width="1120" height="982" loading="lazy">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 打开「代理 → 服务器」，点工具栏的添加按钮，进入「添加代理」
@@ -117,7 +117,7 @@ HTTP／HTTPS 代理在「手动」中填写最清楚。「链接」入口只有�
   <a href="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · 筛选线路、地区与名称">
     <img src="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" alt="oixCloud · 筛选线路、地区与名称" width="1120" height="982" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 在订阅的操作菜单中使用「更新」。托管 oixCloud 节点使用账户页的「刷新节点」，账户信息下拉刷新并不等于重新获取节点

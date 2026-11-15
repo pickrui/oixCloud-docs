@@ -22,7 +22,7 @@ description: 按缺失文件区分 Visual C++ 运行库、客户端安装文件�
   <a href="/illustrations/flclash-windows-dll-zh.svg?v=20261103-1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Windows 缺少运行库排查与修复">
     <img src="/illustrations/flclash-windows-dll-zh.svg?v=20261103-1" alt="FlClash for oixCloud · Windows 缺少运行库排查与修复" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 关闭 FlClash for oixCloud，包括系统托盘中的进程

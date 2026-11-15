@@ -52,7 +52,7 @@ Follow the client-specific steps and verification guidance: [oixCloud DNS and IP
   <a href="/illustrations/flclash-diagnostics-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Run a network self-check">
     <img src="/illustrations/flclash-diagnostics-en.svg?v=20261102-3" alt="Run a network self-check" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>FlClash for oixCloud desktop example · Follow the relevant guide for other clients · Click to enlarge</figcaption>
+  <figcaption>FlClash for oixCloud desktop example · Follow the relevant guide for other clients</figcaption>
 </figure>
 
 - [oixCloud requests, DNS and network events](/en/oixcloud/diagnostics)

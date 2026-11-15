@@ -175,7 +175,7 @@ IP 到期后、回收前再尝试一次自动续费，失败则回收。节点�
   <a href="/illustrations/account-nodes-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 在节点列表查看具体节点">
     <img src="/illustrations/account-nodes-zh.svg?v=20261102-3" alt="oixCloud · 在节点列表查看具体节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 在 [节点列表](https://oixcloud.com/user/node) 核对账户可用节点、地区、线路和倍率

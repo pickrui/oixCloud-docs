@@ -5,8 +5,6 @@ description: Make your first connection, then learn how nodes, groups and routin
 
 # Start here
 
-Make your first connection, then learn how nodes, groups and routing work.
-
 | I want to… | Guide |
 | --- | --- |
 | Install a client and connect | [Your first connection](/en/start/quick-start) |

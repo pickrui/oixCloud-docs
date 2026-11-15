@@ -5,7 +5,7 @@ description: Find connection and settings guides for your device and app
 
 # Client guides
 
-Choose your device and app for setup, connection and feature instructions. If you have not installed an app, visit the [download center](https://oixcloud.com/client) first.
+If you have not installed an app, visit the [download center](https://oixcloud.com/client) first.
 
 | Device | App and guide |
 | --- | --- |

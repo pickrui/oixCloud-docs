@@ -37,7 +37,7 @@ LuCI 插件和代理内核可单独更新。找不到新菜单时，仅更新内
   <a href="/illustrations/openclash-running-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="OpenClash · 确认正在运行专用配置">
     <img src="/illustrations/openclash-running-zh.svg?v=20261102-3" alt="OpenClash · 确认正在运行专用配置" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 到「运行状态」的配置文件区域找到 `oixCloud - smart.yaml`
@@ -73,7 +73,7 @@ UDP 转发开启后仍受端口范围限制。端口过滤不等于识别所有 
   <a href="/illustrations/openclash-version-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="OpenClash · 在版本更新中升级或更换 oix 内核">
     <img src="/illustrations/openclash-version-zh.svg?v=20261105-3" alt="OpenClash · 在版本更新中升级或更换 oix 内核" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 oix 内核是支持 oixCloud 托管节点的 Mihomo 构建，不能用普通 Mihomo 包替代。维护版本登录账户后会优先使用它；插件更新、内核更新和订阅更新是三个不同操作

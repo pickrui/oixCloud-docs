@@ -12,7 +12,7 @@ description: "节点、策略组与代理链的操作步骤、适用范围与常
   <a href="/illustrations/flclash-proxies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 在策略组中选择节点">
     <img src="/illustrations/flclash-proxies-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 在策略组中选择节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 ## 手动选择节点
@@ -44,7 +44,7 @@ description: "节点、策略组与代理链的操作步骤、适用范围与常
   <a href="/illustrations/flclash-chains-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
     <img src="/illustrations/flclash-chains-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 1. 打开「配置」，在当前配置的菜单中进入「链式代理」，新增并填写容易辨认的链名

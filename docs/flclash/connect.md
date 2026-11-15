@@ -31,7 +31,7 @@ Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`�
   <a href="/illustrations/flclash-connect-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 仪表盘启动与接管">
     <img src="/illustrations/flclash-connect-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 仪表盘启动与接管" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 ## 导入账户配置
@@ -40,7 +40,7 @@ Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`�
   <a href="/illustrations/flclash-login-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 登录账户">
     <img src="/illustrations/flclash-login-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 登录账户" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 1. 从软件中心下载 FlClash for oixCloud，选择适合设备系统与架构的安装包，打开应用中的「oixCloud」页面登录

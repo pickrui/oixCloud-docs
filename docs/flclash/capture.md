@@ -23,7 +23,7 @@ description: "系统代理与虚拟网卡的操作步骤、适用范围与常见
   <a href="/illustrations/flclash-capture-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 设置桌面接管方式">
     <img src="/illustrations/flclash-capture-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 设置桌面接管方式" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 启动连接，开启「系统代理」，检查系统 HTTP / HTTPS 代理是否指向客户端的本地端口。另一个代理软件、自动代理脚本或组织策略可能覆盖此设置

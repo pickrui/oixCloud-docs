@@ -19,7 +19,7 @@ IPv4 Only 让所选节点仅通过 IPv4 连接目标网站，适用于需要 IPv
   <a href="/illustrations/account-ipv4-only-zh.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="oixCloud · 搜索并批量开启 IPv4 Only">
     <img src="/illustrations/account-ipv4-only-zh.svg?v=20261107-1" alt="oixCloud · 搜索并批量开启 IPv4 Only" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 打开 [IPv4 Only](https://oixcloud.com/user/ipv4-only)，搜索节点名称，按需筛选「未开启」
@@ -38,7 +38,7 @@ IPv4 Only 不保证提速，实际速度取决于 IPv4 线路质量，部分流�
   <a href="/illustrations/account-warp-zh.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="oixCloud · 核对 WARP 回退与 IPv4 Only 联动">
     <img src="/illustrations/account-warp-zh.svg?v=20261107-1" alt="oixCloud · 核对 WARP 回退与 IPv4 Only 联动" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 打开 [WARP](https://oixcloud.com/user/warp)，找到需要调整的节点
@@ -91,7 +91,7 @@ IPv4 Only 不保证提速，实际速度取决于 IPv4 线路质量，部分流�
   <a href="/illustrations/account-media-unlock-zh.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="oixCloud · 按节点和服务选择流媒体地区">
     <img src="/illustrations/account-media-unlock-zh.svg?v=20261107-1" alt="oixCloud · 按节点和服务选择流媒体地区" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 打开[流媒体解锁](https://oixcloud.com/user/media-unlock)，找到实际使用的节点，节点较多时可以搜索。列表不分页，此页没有批量设置地区的操作

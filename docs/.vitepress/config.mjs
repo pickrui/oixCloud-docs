@@ -38,7 +38,7 @@ export default defineConfig({
         docFooter: { prev: '上一篇', next: '下一篇' },
         sidebarMenuLabel: '分类目录', returnToTopLabel: '返回顶部', darkModeSwitchLabel: '外观',
         langMenuLabel: '语言', skipToContentLabel: '跳转到正文',
-        footer: { message: '功能与平台范围请以各篇说明为准', copyright: 'oixCloud 使用指南' }
+        footer: { copyright: 'oixCloud 使用指南' }
       }
     },
     en: {
@@ -48,7 +48,7 @@ export default defineConfig({
         nav: [{ text: 'Start here', link: '/en/start/' }, { text: 'Client guides', link: '/en/clients/' }, { text: 'Account & service', link: '/en/account/' }, { text: 'Troubleshooting', link: '/en/help/' }],
         sidebar: navigation.en,
         outline: { label: 'On this page', level: [2, 3] },
-        footer: { message: 'Check each guide for feature and platform scope', copyright: 'oixCloud User Guide' }
+        footer: { copyright: 'oixCloud User Guide' }
       }
     }
   },

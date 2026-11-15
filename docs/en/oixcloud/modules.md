@@ -14,7 +14,7 @@ Modules can combine routing, DNS, rewriting and scripts. They are unnecessary fo
   <a href="/illustrations/oixcloud-modules-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Import and manage modules">
     <img src="/illustrations/oixcloud-modules-en.svg?v=20261030-en1" alt="oixCloud · Import and manage modules" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 1. Open **Proxies → Policies → Modules → Import Module** or **Subscribe Module**.

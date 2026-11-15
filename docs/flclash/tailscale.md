@@ -10,7 +10,7 @@ description: "Tailscale、子网与出口节点的操作步骤、适用范围与
   <a href="/illustrations/flclash-tailscale-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 授权 Tailscale 网络">
     <img src="/illustrations/flclash-tailscale-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 授权 Tailscale 网络" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 1. 进入「工具 → Tailscale → 添加网络」

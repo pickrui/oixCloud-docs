@@ -42,7 +42,7 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
   <a href="/illustrations/oixclash-login-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixClash · 登录账号">
     <img src="/illustrations/oixclash-login-zh.svg?v=20261030-2" alt="oixClash · 登录账号" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 首次在「oixCloud 账号」选择邮箱和密码登录，生成 oixClash 专属 Token；之后可使用对应的 Access Token。Google 登录用户获取账户密码的方法与禁止客户端邮箱/密码登录的设置见 [首次登录说明](/account/security#first-client-login)
@@ -60,7 +60,7 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
   <a href="/illustrations/oixclash-running-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixClash · 运行与内存优化">
     <img src="/illustrations/oixclash-running-zh.svg?v=20261030-2" alt="oixClash · 运行与内存优化" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 1. 在「运行」打开开关，点「保存并应用」
@@ -113,7 +113,7 @@ oixClash 0.0.2 起可在插件的「自定义规则」中编辑网站上的同�
   <a href="/illustrations/oixclash-rules-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixClash · 账号自定义规则">
     <img src="/illustrations/oixclash-rules-zh.svg?v=20261030-2" alt="oixClash · 账号自定义规则" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 1. 登录后点击「读取面板规则」，确认显示「已读取面板规则，可编辑后保存」

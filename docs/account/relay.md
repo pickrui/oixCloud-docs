@@ -45,7 +45,7 @@
   <a href="/illustrations/account-relay-zh.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="oixCloud · 在路径编辑器排列入口与出口">
     <img src="/illustrations/account-relay-zh.svg?v=20261107-1" alt="oixCloud · 在路径编辑器排列入口与出口" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 打开[内部中继](https://oixcloud.com/user/relay)，点击「添加路径」
@@ -89,7 +89,7 @@
   <a href="/illustrations/account-cusrelay-zh.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="oixCloud · 填写外部中继目标与模式">
     <img src="/illustrations/account-cusrelay-zh.svg?v=20261107-1" alt="oixCloud · 填写外部中继目标与模式" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 1. 打开[外部中继](https://oixcloud.com/user/cusrelay)，点击「添加中继规则」，选择可用且没有冲突的「入口节点」。「入口端口」是账户个人端口，只读

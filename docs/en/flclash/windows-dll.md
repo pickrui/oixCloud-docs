@@ -22,7 +22,7 @@ For Windows errors reporting a missing DLL/module or startup failure. Record the
   <a href="/illustrations/flclash-windows-dll-en.svg?v=20261103-1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Troubleshoot missing Windows runtime DLLs">
     <img src="/illustrations/flclash-windows-dll-en.svg?v=20261103-1" alt="FlClash for oixCloud · Troubleshoot missing Windows runtime DLLs" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 1. Exit FlClash for oixCloud, including its tray process.

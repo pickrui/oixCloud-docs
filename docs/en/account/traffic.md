@@ -70,7 +70,7 @@ These numbers illustrate the calculation only. Check the node page for its actua
   <a href="/illustrations/account-activity-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Find request and node activity">
     <img src="/illustrations/account-activity-en.svg?v=20261102-3" alt="Find request and node activity" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 1. Check the active plan, allowance, validity and low-speed status in the user center.

@@ -21,7 +21,7 @@ App Store 下载需要非中国大陆地区的 Apple 账户；测试版从 [软�
   <a href="/illustrations/oixcloud-connect-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 主页连接与节点选择">
     <img src="/illustrations/oixcloud-connect-zh.svg?v=20261030-2" alt="oixCloud · 主页连接与节点选择" width="1120" height="982" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 ## 登录托管账户
@@ -30,7 +30,7 @@ App Store 下载需要非中国大陆地区的 Apple 账户；测试版从 [软�
   <a href="/illustrations/oixcloud-login-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 登录账户">
     <img src="/illustrations/oixcloud-login-zh.svg?v=20261030-2" alt="oixCloud · 登录账户" width="1120" height="982" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 1. 从软件中心进入 App Store 或 TestFlight 安装 oixCloud，打开应用中的「oixCloud」账户页登录

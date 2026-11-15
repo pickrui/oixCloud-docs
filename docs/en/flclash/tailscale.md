@@ -10,7 +10,7 @@ description: "Tailscale, subnets and exit nodes \u2014 setup, practical steps an
   <a href="/illustrations/flclash-tailscale-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Authorize a Tailscale network">
     <img src="/illustrations/flclash-tailscale-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Authorize a Tailscale network" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 1. Open **Tools → Tailscale → Add Network**.

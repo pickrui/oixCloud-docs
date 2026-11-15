@@ -6,7 +6,7 @@ Complete [installation and sign-in](/en/other/surge) first. The default loopback
   <a href="/illustrations/helper-lan-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud Helper · Set ports and LAN access">
     <img src="/illustrations/helper-lan-en.svg?v=20261030-en1" alt="oixCloud Helper · Set ports and LAN access" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 ## Configuration ports versus proxy ports

@@ -12,7 +12,7 @@ description: "策略组、自动选择与代理链的操作步骤、适用范围
   <a href="/illustrations/oixcloud-policies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 创建策略组">
     <img src="/illustrations/oixcloud-policies-zh.svg?v=20261030-2" alt="oixCloud · 创建策略组" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 在「代理 → 策略」中添加策略组，填写名称、选择类型并添加成员。保存后，还要在主页或对应分流规则中选择它，流量才会使用该组
@@ -49,7 +49,7 @@ description: "策略组、自动选择与代理链的操作步骤、适用范围
   <a href="/illustrations/oixcloud-chains-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 按顺序创建代理链">
     <img src="/illustrations/oixcloud-chains-zh.svg?v=20261102-3" alt="oixCloud · 按顺序创建代理链" width="1120" height="982" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 以下按支持任意跳策略组的维护版本说明；旧版缺少选项时，先核对 [安装版本与下载入口](/oixcloud/connect)

@@ -45,7 +45,7 @@ Internal relay forwards traffic from one service node through other service node
   <a href="/illustrations/account-relay-en.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="Arrange entry and exit in the path editor">
     <img src="/illustrations/account-relay-en.svg?v=20261107-1" alt="Arrange entry and exit in the path editor" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 1. Open [Internal relay](https://oixcloud.com/user/relay) and select **Add path**.
@@ -89,7 +89,7 @@ External relay sends traffic to a specified host and port. Decide which mode you
   <a href="/illustrations/account-cusrelay-en.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="Set the external relay destination and mode">
     <img src="/illustrations/account-cusrelay-en.svg?v=20261107-1" alt="Set the external relay destination and mode" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 1. Open [External relay](https://oixcloud.com/user/cusrelay), select **Add Rule**, and choose an available **Entry node** without conflicting rules. **Entry port** is your read-only personal port.

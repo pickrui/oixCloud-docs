@@ -3,8 +3,6 @@ layout: home
 title: User Guide
 hero:
   name: oixCloud User Guide
-  text: Set up and stay connected
-  tagline: Find step-by-step guidance for first-time setup, client configuration, account management and troubleshooting.
   actions:
     - theme: brand
       text: Start here
@@ -21,24 +19,20 @@ hero:
 features:
   - icon: 🚀
     title: Start here
-    details: Choose your device, install a client and make your first connection with ease
+    details: Choose a device, install a client and connect
     link: /en/start/
-    linkText: Browse guides
   - icon: 📱
     title: Client guides
     details: Covers oixCloud, FlClash for oixCloud, OpenClash, Surge and more
     link: /en/clients/
-    linkText: View clients
   - icon: ⚡
     title: Account & service
     details: Plans, renewals, automatic traffic reset, Home ISP and internal relays
     link: /en/account/
-    linkText: Explore features
   - icon: 🛠️
     title: Troubleshooting
     details: Network self-check, diagnostics, speed issues and support ticket templates
     link: /en/help/
-    linkText: Get assistance
 ---
 
 ## Find the task you need
@@ -59,5 +53,3 @@ features:
 ::: info Check your platform first
 Menu labels and features vary by client version and platform. Follow each guide's scope. Account actions remain in the [oixCloud user center](https://oixcloud.com/user).
 :::
-
-Use search at the top to find a feature, or switch languages to open the matching guide. Each article has its own link and section outline for sharing specific instructions.

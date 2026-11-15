@@ -10,7 +10,7 @@ description: "网络自检与连接记录的操作步骤、适用范围与常见
   <a href="/illustrations/flclash-diagnostics-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 运行网络自检">
     <img src="/illustrations/flclash-diagnostics-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 运行网络自检" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 1. 保持出现问题时的配置与网络环境

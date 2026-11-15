@@ -19,7 +19,7 @@ IPv4 Only makes the selected node connect to websites using IPv4 only. Use it wh
   <a href="/illustrations/account-ipv4-only-en.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="Find nodes and enable IPv4 Only in bulk">
     <img src="/illustrations/account-ipv4-only-en.svg?v=20261107-1" alt="Find nodes and enable IPv4 Only in bulk" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 1. Open [IPv4 Only](https://oixcloud.com/user/ipv4-only), search for the node name and optionally filter by **Disabled**.
@@ -38,7 +38,7 @@ IPv4 Only does not guarantee higher speeds: performance depends on the IPv4 rout
   <a href="/illustrations/account-warp-en.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="Check WARP fallback and the IPv4 Only override">
     <img src="/illustrations/account-warp-en.svg?v=20261107-1" alt="Check WARP fallback and the IPv4 Only override" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 1. Open [WARP](https://oixcloud.com/user/warp) and locate the node.
@@ -91,7 +91,7 @@ This public-beta feature currently supports selected Hong Kong IXP, Fusion-famil
   <a href="/illustrations/account-media-unlock-en.svg?v=20261107-1" target="_blank" rel="noopener" aria-label="Choose streaming regions per node and service">
     <img src="/illustrations/account-media-unlock-en.svg?v=20261107-1" alt="Choose streaming regions per node and service" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 1. Open [Streaming unlock](https://oixcloud.com/user/media-unlock) and find the node you actually use; search is available when there are many nodes. The list has no pagination, and this page has no bulk region-setting action.

@@ -10,7 +10,7 @@ description: "Overrides, groups and added rules \u2014 setup, practical steps an
   <a href="/illustrations/flclash-rules-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Add a domain suffix rule">
     <img src="/illustrations/flclash-rules-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Add a domain suffix rule" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 ## Choose an override mode
@@ -19,7 +19,7 @@ description: "Overrides, groups and added rules \u2014 setup, practical steps an
   <a href="/illustrations/flclash-override-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Choose a profile override mode">
     <img src="/illustrations/flclash-override-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Choose a profile override mode" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 Open **Override** from the profile menu.

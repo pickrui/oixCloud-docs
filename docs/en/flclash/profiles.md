@@ -28,7 +28,7 @@ The client applies one profile at a time. Select it, start the client and verify
   <a href="/illustrations/flclash-custom-node-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Add a custom node to this profile">
     <img src="/illustrations/flclash-custom-node-en.svg?v=20261102-3" alt="Add a custom node to this profile" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 Use this method to add a self-hosted or third-party node to a working profile, including the oixCloud managed profile.
@@ -103,7 +103,7 @@ Follow [Add an individual third-party node](#single-node) to save and enable a n
   <a href="/illustrations/flclash-provider-members-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Add a third-party provider to your group">
     <img src="/illustrations/flclash-provider-members-en.svg?v=20261102-3" alt="Add a third-party provider to your group" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data · Click to enlarge</figcaption>
+  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
 Reference the subscription as a **Proxy provider** in the provider library to update its nodes while keeping managed routing.
@@ -141,7 +141,7 @@ Subscription URLs and node links may contain credentials. Do not post them in pu
   <a href="/illustrations/flclash-profiles-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Update and manage profiles">
     <img src="/illustrations/flclash-profiles-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Update and manage profiles" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 Use **Sync** in the profile menu. Edit a profile to enable automatic updates and set an interval. Check the result: a failed download does not mean new nodes were applied.
@@ -154,7 +154,7 @@ Managed account information, filters and plan access are handled on the oixCloud
   <a href="/illustrations/flclash-filter-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Filter managed nodes">
     <img src="/illustrations/flclash-filter-en.svg?v=20261105-3" alt="FlClash for oixCloud · Filter managed nodes" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>English interface simulation · Fictional data · Click to enlarge</figcaption>
+  <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 Open **oixCloud → Node Filter**, select lines, regions and names, check the preview and save. Saving starts an account refresh and managed-profile sync automatically. Wait for completion and check the nodes; if it fails, resolve the reported error and use **Sync** on the account page. Restore Default uses Smart Selection. Devices using this client type on your account share the filter; see [subscriptions and filters](/en/account/subscriptions).

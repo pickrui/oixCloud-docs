@@ -28,7 +28,7 @@ FlClash for oixCloud 可以使用兼容的第三方节点和订阅，普通导�
   <a href="/illustrations/flclash-custom-node-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 在当前配置添加自定义节点">
     <img src="/illustrations/flclash-custom-node-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 在当前配置添加自定义节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 适合已有可用配置，希望加入一个自建或第三方节点的情况，也可直接加在 oixCloud 托管配置中
@@ -103,7 +103,7 @@ URL 订阅在该配置的操作菜单中点「同步」更新，也可在「编�
   <a href="/illustrations/flclash-provider-members-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 把第三方提供者加入自己的组">
     <img src="/illustrations/flclash-provider-members-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 把第三方提供者加入自己的组" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 通过应用资源库将订阅作为「代理提供者」引用，可以更新第三方节点，同时保留托管配置的规则
@@ -141,7 +141,7 @@ oixCloud 托管配置不能作为另一份「自定义配置」的代理提供�
   <a href="/illustrations/flclash-profiles-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 更新与管理配置">
     <img src="/illustrations/flclash-profiles-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 更新与管理配置" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 打开配置操作菜单，使用「同步」更新。编辑配置时可设置自动更新及间隔；更新后检查结果，下载失败不等于已经应用了新节点
@@ -154,7 +154,7 @@ oixCloud 托管配置不能作为另一份「自定义配置」的代理提供�
   <a href="/illustrations/flclash-filter-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 可视化节点筛选">
     <img src="/illustrations/flclash-filter-zh.svg?v=20261105-3" alt="FlClash for oixCloud · 可视化节点筛选" width="1120" height="975" loading="lazy">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 在「oixCloud → 节点筛选」按线路、地区和名称调整，检查预览并保存。保存后会自动刷新账户并同步托管配置，等待完成后检查节点；失败时按提示处理，再在账户页「同步」。恢复默认会使用智能优选；同一账户的同款客户端共享筛选，详见 [订阅与筛选](/account/subscriptions)

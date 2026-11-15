@@ -10,7 +10,7 @@ oixCloud Helper 是与 Surge Mac 配合运行的代理助手，也支持本地�
   <a href="/illustrations/helper-surge-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Helper · 从菜单栏接入 Surge">
     <img src="/illustrations/helper-surge-zh.svg?v=20261030-2" alt="Helper · 从菜单栏接入 Surge" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>中文模拟界面 · 虚构数据 · 点击查看大图</figcaption>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 ## 下载与系统要求 {#downloads}

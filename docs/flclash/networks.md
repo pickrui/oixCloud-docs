@@ -8,7 +8,7 @@ description: 局域网代理、本地认证、按 Wi-Fi 或 Android 网络条件
   <a href="/illustrations/flclash-lan-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 找到局域网代理与端口">
     <img src="/illustrations/flclash-lan-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 找到局域网代理与端口" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 点击放大查看操作位置</figcaption>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
 ## 让其他设备使用本机代理
