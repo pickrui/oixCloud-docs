@@ -383,7 +383,7 @@ The renewal price is recalculated for the target and applicable discount. Auto-r
 
 Both actions start from a purchase record. Activation immediately switches the active plan; a refund ends the refunded record. Check the record and confirmation first, rather than treating either action as a renewal or top-up.
 
-### Manual activation {#manual-activation}
+### What happens to my current plan if I activate a pending plan? {#manual-activation}
 
 <figure class="guide-figure">
   <a href="/illustrations/account-activation-en.svg?v=20261105-5" target="_blank" rel="noopener" aria-label="Check the old plan before activating another">

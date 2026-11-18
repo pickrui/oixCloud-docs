@@ -10,6 +10,13 @@ oixCloud, FlClash for oixCloud, the integrated OpenClash build, oixClash on Merl
 
 A full profile and a Provider node list serve different purposes. A Provider must be referenced by an existing client configuration; it is not a complete runnable profile. An Access Token is a sign-in credential, not a subscription URL.
 
+## A node appears in the website’s node list but is missing from the client’s proxy list {#missing-nodes}
+
+1. Search for the node in your account’s [node list](https://oixcloud.com/user/node). If it is missing there too, check the active plan and the lines it includes.
+2. Open the **subscription this device uses**. If you set a filter, search for the node in the preview and check the line, region and name conditions. For a default smart subscription, check which lines your plan receives by default in the section below.
+3. In oixCloud on iPhone or iPad, select **Refresh Nodes** on the account page. In FlClash for oixCloud, select **Sync** on the oixCloud page to fetch the managed profile. **Refresh** on that page updates account information only. In another subscription client, update the imported URL and select the updated profile.
+4. Search for the same name again in the client. If it is still missing, include the client version, subscription format and whether the node appeared in the preview when contacting support. Keep the full subscription URL private.
+
 ## Configure a filter
 
 

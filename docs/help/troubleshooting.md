@@ -17,11 +17,21 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
 
 ## 无法登录，或节点列表为空
 
-先确认官网能访问、账户状态正常，再检查登录方式：Token 栏应填写 Access Token，密码栏应填写账户密码。确认套餐有效后刷新配置；保留客户端版本和原始报错，连续失败时不要反复提交登录
+先在 [用户中心](https://oixcloud.com/user) 确认能否登录，再按看到的情况操作
+
+| 你看到的情况 | 下一步 |
+| --- | --- |
+| 网站能登录，客户端提示凭据错误 | 检查所选登录方式。密码栏填写账户密码，Token 栏填写有效的 Access Token。如果已关闭客户端密码登录，请改用 [客户端支持的登录方式](/account/security#first-client-login) |
+| 已付款，客户端仍提示没有有效套餐 | 分别核对充值记录和套餐管理，确认有一笔「使用中」的套餐。若只有充值记录或显示「待激活」，按 [付款与激活排查](/help/support#payment) 继续，避免重复付款 |
+| 已登录，有效套餐下仍找不到目标节点 | 在网站的 [节点列表](https://oixcloud.com/user/node) 搜索节点名称。网站能看到时，按 [缺少节点的排查步骤](/account/subscriptions#missing-nodes) 核对当前订阅并更新客户端 |
 
 ## 显示已连接，但网页打不开
 
-先暂停其他 VPN 或代理，确认本机网络正常；再检查系统代理 / VPN / TUN 是否启用、当前模式和策略组选中的节点。换一个可见节点并用同一网站复测；只有某个应用异常时，检查它是否遵循系统代理或需要 TUN
+1. 暂停其他 VPN 或代理，先确认当前网络能打开平时可直连的网站
+2. 连接客户端，打开一次出错的网站，再查看连接记录。iPhone / iPad 用 [oixCloud 的网络检测与请求记录](/oixcloud/diagnostics#network-check)；FlClash for oixCloud 在 Windows / macOS 可运行 [工具 → 网络自检](/flclash/diagnostics)，Android / Linux 查看连接与日志
+3. 找不到这次请求时，检查应用是否使用系统代理，或是否被 VPN / TUN 排除。能找到请求时，查看它命中的规则和实际出口，再用同一网站对比另一个可用节点
+
+在中国大陆直连 Edge 或 Home ISP 时，先查看 [节点类型](/account/nodes#node-types)。如果套餐包含 CIA、IXP、Fusion 或 GIA，可保持网络和客户端不变，换用其中一个节点重试；记录哪个能访问、哪个超时
 
 ## 能用，但速度慢或延迟高
 

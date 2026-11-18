@@ -32,7 +32,9 @@ Checks cover the active profile, core, listeners, system proxy, TUN, DNS and a f
 
 The system network path may still use TUN; it is not necessarily a physical direct connection. Cancelled checks or profile changes can leave incomplete results.
 
-## Other platforms and routing
+## How do I check connections and matched rules for a domain on Android or Linux? {#other-platforms-and-routing}
+
+<span id="其他平台与规则排查"></span>
 
 On Android/Linux, use connections and logs. Filter by the target domain, inspect the rule/group/outbound, then create a fresh connection after changing settings.
 
