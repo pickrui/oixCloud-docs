@@ -96,9 +96,22 @@ To change the client-to-node transport, see [HTTP/3 and smart fallback](/en/acco
 
 A dedicated IP assigns an exit address exclusively to your account. Normal renewal keeps that address. Dedicated does not mean residential or free of previous history.
 
-::: warning Network environment
-Dedicated IPs are part of the Edge tier and are generally intended for international network environments. Routing on some lines may work better with certain carriers. We will call out such cases when relevant, but this is not a guarantee of connectivity, speed or stability. Actual results depend on your location, carrier and current routing. We still recommend using a dedicated IP as an exit node.
+Dedicated IP traffic is metered separately and does not count toward your account plan’s data allowance.
+
+::: warning Routing and service guarantees
+All dedicated IPs are Edge nodes intended for international networks. We recommend using them as exit nodes. Routes can vary between dedicated IPs. The US BGP route has worked well on China Telecom and China Unicom networks. One speed test reached 540 Mbps. That result is for reference only. Actual speed and connection stability depend on your location, carrier and routing at the time.
+
+- **The service level agreement (SLA)** covers only node uptime. Connectivity to networks in mainland China is outside its scope.
+- **Access to AI services** is guaranteed only at delivery. Continued access after delivery is not guaranteed.
 :::
+
+### Ways to connect to a dedicated IP {#ip-connection-methods}
+
+Choose whichever option works best for your local network and how you prefer to connect.
+
+- **Direct connection**. Select the dedicated IP node in your client’s node list. Route quality from your network to that node is not guaranteed.
+- **Internal relay**. In the user center, open **Traffic Routes → Relay → [Internal relay](/en/account/relay#internal-relay)** and add a path. Choose an entry node and set the dedicated IP as the exit. Save the path, then select the entry node in your client.
+- **Proxy chain**. In your client, create a chain with the entry node as the first hop and the dedicated IP as the last hop. Save and select the chain. See the instructions for [oixCloud](/en/oixcloud/policies#proxy-chains) or [FlClash for oixCloud](/en/flclash/proxies#proxy-chains).
 
 ### Practical benefits {#ip-benefits}
 
