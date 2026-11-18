@@ -13,7 +13,22 @@ For iPhone / iPad. See the separate [Apple TV guide](/en/oixcloud/apple-tv).
 | iPhone | iOS 18.0 | [App Store](https://apps.apple.com/us/app/oixcloud/id6782528093) |
 | iPad | iPadOS 18.0 | The same App Store app |
 
-App Store installation requires an Apple Account outside mainland China. For beta builds, open TestFlight from the [download center](https://oixcloud.com/client#apple); slots must be available and the build must not have expired. Check that build's requirements in TestFlight; beta access does not bypass OS requirements.
+The App Store release requires an Apple Account registered outside mainland China.
+
+### Install or update with TestFlight {#testflight}
+
+On your iPhone or iPad, install [TestFlight](https://apps.apple.com/app/id899247664), open the [oixCloud beta invitation](https://testflight.apple.com/join/qMEsvKD1), then tap **Accept** and **Install**. If you have already joined, open TestFlight and tap **Update** next to oixCloud. Joining requires an open slot. To install or update, you need an unexpired build that supports your OS version.
+
+**A mainland China Apple Account cannot install or update the beta directly.** Apple has disabled internal testing, external testing and public invitations for oixCloud in mainland China. Some users suggest temporarily switching storefronts. Check TestFlight to see whether a build is available to you.
+
+1. On your iPhone or iPad, open the [storefront picker](https://www.liangjianghu.com/searchads-appstore-switch) and select **US 美国 United States**.
+2. Quit TestFlight completely and reopen it. If oixCloud appears, tap **Install** or **Update**. If this is your first time joining, open the beta invitation above.
+
+::: details On a Mac or unable to open the storefront picker?
+Add the [App Store Region shortcut](https://www.icloud.com/shortcuts/cd008a5e6d1440689173d548ce0eac78), run it, choose **United States**, then reopen TestFlight. You can also select the United States in [Store Redirect](https://apps.apple.com/cn/app/store-redirect/id1601434613).
+
+If you previously enabled any TestFlight MitM modules or rules, turn them off or remove them first.
+:::
 
 ## Illustrated steps
 

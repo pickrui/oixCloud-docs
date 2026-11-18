@@ -10,7 +10,9 @@ description: "Apple TV 连接与同步的操作步骤、适用范围与常见问
 
 Apple TV 需要 tvOS 18.0 或更高版本，在电视的 App Store 搜索并安装 [oixCloud](https://apps.apple.com/us/app/oixcloud/id6782528093)，使用非中国大陆地区的 Apple 账户。用于发布账户与配置的 iPhone / iPad 也需运行 iOS / iPadOS 18.0 或更高版本
 
-测试版按 [软件中心](https://oixcloud.com/client#apple) 的 Apple TV TestFlight 步骤安装：手机与电视的 TestFlight 使用同一 App Store 账户，先在手机接受邀请，再在电视安装；同时核对名额、构建有效期与系统要求
+安装测试版时，iPhone 或 iPad 与 Apple TV 的 TestFlight 须使用同一 App Store 账户。先在手机或平板上接受 [oixCloud 测试邀请](https://testflight.apple.com/join/qMEsvKD1)，再在电视上打开 TestFlight，选择 oixCloud 并点「安装」或「更新」。首次加入需有名额，构建须在有效期内并支持当前 tvOS 版本
+
+中国大陆区 Apple ID 无法直接安装或更新。有关手机或平板上的邀请和商店地区选项，见 [TestFlight 安装与更新](/oixcloud/connect#testflight)
 
 ## 方式一：接收手机或平板配置
 

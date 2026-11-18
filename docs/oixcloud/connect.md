@@ -13,7 +13,22 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 | iPhone | iOS 18.0 | [App Store](https://apps.apple.com/us/app/oixcloud/id6782528093) |
 | iPad | iPadOS 18.0 | 同一 App Store 应用 |
 
-App Store 下载需要非中国大陆地区的 Apple 账户；测试版从 [软件中心](https://oixcloud.com/client#apple) 进入 TestFlight，需有可用名额且构建未过期。测试版要求以 TestFlight 中的构建说明为准，不能用它绕过系统要求
+从 App Store 下载正式版需要非中国大陆地区的 Apple 账户
+
+### 通过 TestFlight 安装或更新 {#testflight}
+
+首次安装时，在 iPhone 或 iPad 上安装 [TestFlight](https://apps.apple.com/app/id899247664)，打开 [oixCloud 测试邀请](https://testflight.apple.com/join/qMEsvKD1)，点「接受」再点「安装」。已加入测试的用户可直接打开 TestFlight，在 oixCloud 旁点「更新」。首次加入需有测试名额，安装和更新都需要尚未过期且兼容当前系统的构建
+
+**中国大陆区 Apple ID 无法直接安装或更新**。Apple 已停用 oixCloud 在中国大陆的内部测试、外部测试和公开邀请。以下是用户分享的临时切换商店方法，能否安装或更新以 TestFlight 显示为准
+
+1. 用 iPhone 或 iPad 打开[商店地区选择页](https://www.liangjianghu.com/searchads-appstore-switch)，点「US 美国」
+2. 从后台退出 TestFlight，再重新打开。找到 oixCloud 后点「安装」或「更新」，首次加入请打开上方测试邀请
+
+::: details 使用 Mac 或打不开地区选择页？
+添加 [App Store Region 快捷指令](https://www.icloud.com/shortcuts/cd008a5e6d1440689173d548ce0eac78)，运行后选择「United States」，再重开 TestFlight。也可以在 [Store Redirect](https://apps.apple.com/cn/app/store-redirect/id1601434613) 中选择美国
+
+如果曾启用 TestFlight 的 MitM 模块或规则，请先停用或删除
+:::
 
 ## 操作示意
 

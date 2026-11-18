@@ -20,7 +20,7 @@ description: 按设备与应用查找连接和设置教程
 
 | 客户端与设备 | 当前系统要求 | 下载入口 |
 | --- | --- | --- |
-| oixCloud：iPhone / iPad | iOS / iPadOS 18.0 及以上 | [App Store](https://apps.apple.com/us/app/oixcloud/id6782528093)、[软件中心与 TestFlight](https://oixcloud.com/client#apple) |
+| oixCloud：iPhone / iPad | iOS / iPadOS 18.0 及以上 | [App Store](https://apps.apple.com/us/app/oixcloud/id6782528093)、[TestFlight 安装与更新](/oixcloud/connect#testflight) |
 | oixCloud：Apple TV | tvOS 18.0 及以上；账户与配置同步还需兼容的 iPhone / iPad | [安装与同步](/oixcloud/apple-tv) |
 | FlClash for oixCloud：桌面与 Android | Windows 10+；macOS 13.0+；Android 7.0+；Linux 需图形环境与兼容运行库 | [安装包、架构与兼容版](/flclash/connect#downloads) |
 | oixCloud Helper：Mac | macOS 14+ 用普通版；macOS 12 / 13 用 Legacy | [下载与 Surge 接入](/other/surge#downloads) |

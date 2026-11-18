@@ -10,7 +10,9 @@ TV focuses on remote-friendly node selection and connections, not every iPhone/i
 
 Apple TV requires tvOS 18.0 or later. Find [oixCloud](https://apps.apple.com/us/app/oixcloud/id6782528093) in the TV's App Store using an Apple Account outside mainland China. The iPhone / iPad publishing the account and configuration must also run iOS / iPadOS 18.0 or later.
 
-For beta installation, follow the Apple TV TestFlight steps in the [download center](https://oixcloud.com/client#apple): use the same App Store account in TestFlight on the phone and TV, accept the invitation on the phone, then install on the TV. Check available slots, build expiry and system requirements.
+Use the same App Store account in TestFlight on your iPhone or iPad and your Apple TV. Accept the [oixCloud beta invitation](https://testflight.apple.com/join/qMEsvKD1) on the phone or tablet, then open TestFlight on the TV, select oixCloud and choose **Install** or **Update**. Joining requires an open slot, and the build must be unexpired and support your tvOS version.
+
+A mainland China Apple Account cannot install or update the beta directly. For the invitation and storefront options on your phone or tablet, see [Install or update with TestFlight](/en/oixcloud/connect#testflight).
 
 ## Receive configuration
 
