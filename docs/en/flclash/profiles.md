@@ -135,7 +135,9 @@ For proxy-provider formats and fields, see the [official mihomo proxy-provider r
 
 Subscription URLs and node links may contain credentials. Do not post them in public issues or submit them to untrusted converters. To undo an addition, first remove references from personal rules, groups and chains, then disable or delete the node or provider. Do not delete the managed profile just to remove one third-party node.
 
-## Update
+## Refresh account details, sync managed nodes or update a subscription {#update}
+
+<span id="手动与自动更新"></span>
 
 <figure class="guide-figure">
   <a href="/illustrations/flclash-profiles-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Update and manage profiles">
@@ -146,7 +148,7 @@ Subscription URLs and node links may contain credentials. Do not post them in pu
 
 Use **Sync** in the profile menu. Edit a profile to enable automatic updates and set an interval. Check the result: a failed download does not mean new nodes were applied.
 
-Managed account information, filters and plan access are handled on the oixCloud page. Refreshing account information is different from syncing a profile.
+For nodes obtained by signing in to your account, open the **oixCloud** page and choose **Sync** to fetch the managed profile. Search for the node again under **Proxies**. **Refresh** updates account and plan information only.
 
 ## Managed options
 

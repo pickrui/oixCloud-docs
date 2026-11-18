@@ -17,11 +17,21 @@ Choose the closest symptom, then work through its checks. Change one condition a
 
 ## Cannot sign in, or no nodes appear
 
-First check that the website is reachable and your account is in good standing. Confirm that you are using the correct sign-in details: enter an Access Token in the token field and your account password in the password field. Check that your plan is valid, then refresh the configuration. Keep the client version and exact error message; avoid repeatedly submitting sign-in requests after consecutive failures.
+Try signing in to the [User Center](https://oixcloud.com/user) first, then follow the row that matches what you see.
+
+| What you see | What to do |
+| --- | --- |
+| Website sign-in works, but the client rejects your credentials | Enter your account password in the password field or a valid Access Token in the token field. If you disabled password sign-in for clients, use another [supported sign-in method](/en/account/security#first-client-login). |
+| You paid, but the client shows no active plan | Check both your top-up history and Plan Management for an active plan. If you see only a top-up or a plan pending activation, follow the [payment and activation checks](/en/help/support#payment) before paying again. |
+| Your plan is active, but a node is missing | Search for its name in the website’s [node list](https://oixcloud.com/user/node). If it appears there, [check the subscription and update the client](/en/account/subscriptions#missing-nodes). |
 
 ## Connected, but websites do not load
 
-Pause other VPNs or proxies and check that your network works. Then verify that system proxy, VPN, or TUN is enabled, and check the current mode and selected node in the policy group. Try another available node against the same website. If only one app has trouble, check whether it follows the system proxy settings or needs TUN.
+1. Pause other VPNs or proxies. Check that a site you normally reach directly opens on the current network.
+2. Connect the client and open the affected site once. On iPhone or iPad, use [oixCloud’s Network Check and request history](/en/oixcloud/diagnostics#network-check). In FlClash for oixCloud, run the [network self-check](/en/flclash/diagnostics) on Windows or macOS, or inspect connections and logs on Android or Linux.
+3. If the request is missing, check whether the app uses the system proxy or is excluded from the VPN or TUN. If the request appears, check the matched rule and outbound, then try the same site on another available node.
+
+If you connect directly to Edge or Home ISP from mainland China, check the [node types](/en/account/nodes#node-types). If your plan includes CIA, IXP, Fusion or GIA, try one of those on the same network and client. Note which node worked and which timed out.
 
 ## It works, but speed is low or latency is high
 

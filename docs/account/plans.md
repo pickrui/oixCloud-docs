@@ -383,7 +383,7 @@ Pass Gold 及以上年付套餐（含按量付费）在自然到期时发放权�
 
 这两项都从购买记录操作：激活会立即切换当前套餐；退款会结束被退的记录。请先核对记录与确认框，不把它们当作续费或充值
 
-### 手动激活 {#manual-activation}
+### 手动切换到待激活套餐会怎样影响当前套餐？ {#manual-activation}
 
 <figure class="guide-figure">
   <a href="/illustrations/account-activation-zh.svg?v=20261105-5" target="_blank" rel="noopener" aria-label="手动激活前确认原套餐去向">
