@@ -1,0 +1,192 @@
+/* Single-color icons drawn as masks in the text color; sources, licenses and trademarks are listed in icons/NOTICE.md */
+:root {
+  --gi-start: url(./icons/rocket.svg);
+  --gi-clients: url(./icons/monitor-smartphone.svg);
+  --gi-account: url(./icons/circle-user-round.svg);
+  --gi-help: url(./icons/life-buoy.svg);
+  --gi-oixflow: url(./icons/oixflow.svg);
+  --gi-flclash: url(./icons/flclash.svg);
+  --gi-openclash: url(./icons/openclash.png);
+  --gi-oixclash: url(./icons/oixcloud.svg);
+  --gi-helper: url(./icons/surge.svg);
+  --gi-apple: url(./icons/apple.svg);
+  --gi-android: url(./icons/android.svg);
+  --gi-linux: url(./icons/linux.svg);
+  --gi-windows: url(./icons/windows.svg);
+  --gi-openwrt: url(./icons/openwrt.svg);
+  --gi-router: url(./icons/router.svg);
+  --gi-info: url(./icons/info.svg);
+  --gi-tip: url(./icons/lightbulb.svg);
+  --gi-warning: url(./icons/triangle-alert.svg);
+  --gi-danger: url(./icons/octagon-alert.svg);
+  --gi-zoom: url(./icons/maximize-2.svg);
+  --gi-external: url(./icons/arrow-up-right.svg);
+}
+.gi {
+  display: inline-block;
+  flex: none;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  background-color: currentColor;
+  -webkit-mask: var(--gi) center / contain no-repeat;
+  mask: var(--gi) center / contain no-repeat;
+}
+.gi-start { --gi: var(--gi-start); }
+.gi-clients { --gi: var(--gi-clients); }
+.gi-account { --gi: var(--gi-account); }
+.gi-help { --gi: var(--gi-help); }
+.gi-oixflow { --gi: var(--gi-oixflow); }
+.gi-flclash { --gi: var(--gi-flclash); }
+.gi-openclash { --gi: var(--gi-openclash); }
+.gi-oixclash { --gi: var(--gi-oixclash); }
+.gi-helper { --gi: var(--gi-helper); }
+.gi-apple { --gi: var(--gi-apple); }
+.gi-android { --gi: var(--gi-android); }
+.gi-linux { --gi: var(--gi-linux); }
+.gi-windows { --gi: var(--gi-windows); }
+.gi-openwrt { --gi: var(--gi-openwrt); }
+.gi-router { --gi: var(--gi-router); }
+
+/* Homepage entries */
+.VPFeature .icon { color: var(--vp-c-brand-1); }
+.VPFeature .icon .gi { width: 24px; height: 24px; }
+
+/* Sidebar: sections repeat the homepage icons; client entries carry the app mark, Helper topics stay aligned under the first */
+.VPSidebarItem.level-0 > .item > .link[href$="/start/"] { --gi: var(--gi-start); }
+.VPSidebarItem.level-0 > .item > .link[href$="/clients/"] { --gi: var(--gi-clients); }
+.VPSidebarItem.level-0 > .item > .link[href$="/account/"] { --gi: var(--gi-account); }
+.VPSidebarItem.level-0 > .item > .link[href$="/help/"] { --gi: var(--gi-help); }
+.VPSidebarItem.level-1 > .item > .link[href$="/oixcloud/"] { --gi: var(--gi-oixflow); }
+.VPSidebarItem.level-1 > .item > .link[href$="/flclash/"] { --gi: var(--gi-flclash); }
+.VPSidebarItem.level-1 > .item > .link[href$="/other/openclash.html"] { --gi: var(--gi-openclash); }
+.VPSidebarItem.level-1 > .item > .link[href$="/other/oixclash.html"] { --gi: var(--gi-oixclash); }
+.VPSidebarItem.level-1 > .item > .link[href$="/other/surge.html"] { --gi: var(--gi-helper); }
+:is(.VPSidebarItem.level-0, .VPSidebarItem.level-0:has(> .item > .link[href$="/clients/"]) > .items > .VPSidebarItem) > .item > .link > .text {
+  position: relative;
+  padding-left: 26px;
+}
+:is(.VPSidebarItem.level-0, .VPSidebarItem.level-0:has(> .item > .link[href$="/clients/"]) > .items > .VPSidebarItem) > .item > .link > .text::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  -webkit-mask: var(--gi, linear-gradient(transparent 0 0)) center / contain no-repeat;
+  mask: var(--gi, linear-gradient(transparent 0 0)) center / contain no-repeat;
+}
+
+/* Articles under an app hang from its mark and line up with its name */
+.VPSidebarItem.level-0:has(> .item > .link[href$="/clients/"]) > .items > .VPSidebarItem > .items { margin-left: 7.5px; padding-left: 17.5px; }
+.VPSidebarItem.level-0:has(> .item > .link[href$="/clients/"]) > .items > .VPSidebarItem > .items .indicator { left: -18.5px; }
+
+/* Client marks beside links in the device tables; wrapped text keeps a hanging indent */
+.vp-doc a:has(> .gi:first-child) { display: inline-flex; align-items: flex-start; column-gap: 0.45em; }
+.vp-doc a > .gi:first-child { margin-top: calc((1lh - 1.125em) / 2); width: 1.125em; height: 1.125em; }
+
+/* Client articles: name the client above the title */
+.client-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  padding: 2px 12px 2px 9px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 22px;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+.client-badge:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+.client-badge:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 3px; }
+.client-badge .gi { width: 16px; height: 16px; }
+.client-mark {
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background: var(--vp-c-default-soft);
+  width: 52px;
+  height: 52px;
+  color: var(--vp-c-text-1);
+}
+.client-mark .gi { width: 30px; height: 30px; }
+
+/* Device tables: a platform mark and its name wrap as one unit; marks are sized to look even */
+.platform {
+  --pw: 1em;
+  --ph: 1em;
+  display: inline-block;
+  position: relative;
+  padding-left: calc(var(--pw) + 0.3em);
+}
+.platform::before {
+  content: '';
+  position: absolute;
+  top: calc((1lh - var(--ph)) / 2);
+  left: 0;
+  width: var(--pw);
+  height: var(--ph);
+  background-color: currentColor;
+  -webkit-mask: var(--gi) center / contain no-repeat;
+  mask: var(--gi) center / contain no-repeat;
+}
+.platform:not(:last-child) { margin-right: 0.4em; }
+.platform.gi-apple { --pw: 0.92em; --ph: 1.125em; }
+.platform.gi-windows { --pw: 0.9375em; --ph: 0.9375em; }
+.platform.gi-android { --pw: 1.375em; --ph: 0.8em; }
+.platform:is(.gi-linux, .gi-openwrt) { --pw: 1.04em; --ph: 1.25em; }
+.platform.gi-router { --pw: 1.125em; --ph: 1.125em; }
+/* Device tables size their columns to the content, so the platforms stay on one line whenever both columns fit */
+.vp-doc table:has(.platform) td:first-child { width: auto; }
+
+/* Callouts: the icon repeats the block's tone */
+.vp-doc .custom-block:is(.info, .tip, .warning, .danger) > .custom-block-title { position: relative; padding-left: 24px; }
+.vp-doc .custom-block:is(.info, .tip, .warning, .danger) > .custom-block-title::before {
+  content: '';
+  position: absolute;
+  top: calc((1lh - 16px) / 2);
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  -webkit-mask: var(--gi) center / contain no-repeat;
+  mask: var(--gi) center / contain no-repeat;
+}
+.vp-doc .custom-block.info > .custom-block-title::before { --gi: var(--gi-info); color: var(--vp-c-text-2); }
+.vp-doc .custom-block.tip > .custom-block-title::before { --gi: var(--gi-tip); color: var(--vp-c-brand-1); }
+.vp-doc .custom-block.warning > .custom-block-title::before { --gi: var(--gi-warning); color: var(--vp-c-warning-1); }
+.vp-doc .custom-block.danger > .custom-block-title::before { --gi: var(--gi-danger); color: var(--vp-c-danger-1); }
+
+/* Links that leave the guide */
+.VPHero .actions .VPButton[href^="http"]::after {
+  content: '';
+  display: inline-block;
+  margin-left: 4px;
+  width: 14px;
+  height: 14px;
+  vertical-align: -1px;
+  background-color: currentColor;
+  -webkit-mask: var(--gi-external) center / contain no-repeat;
+  mask: var(--gi-external) center / contain no-repeat;
+}
+
+/* Illustration zoom hint: the box stays in ::after, the glyph is drawn above it */
+.guide-figure a::after { content: ''; }
+.guide-figure a::before {
+  content: '';
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  background-color: var(--vp-c-text-1);
+  -webkit-mask: var(--gi-zoom) center / contain no-repeat;
+  mask: var(--gi-zoom) center / contain no-repeat;
+}

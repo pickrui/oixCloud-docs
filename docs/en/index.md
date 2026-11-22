@@ -17,19 +17,19 @@ hero:
     src: /logo.svg
     alt: oixCloud
 features:
-  - icon: 🚀
+  - icon: '<span class="gi gi-start" aria-hidden="true"></span>'
     title: Start here
     details: Choose a device, install a client and connect
     link: /en/start/
-  - icon: 📱
+  - icon: '<span class="gi gi-clients" aria-hidden="true"></span>'
     title: Client guides
     details: Covers oixFlow, FlClash for oixCloud, OpenClash, Surge and more
     link: /en/clients/
-  - icon: ⚡
+  - icon: '<span class="gi gi-account" aria-hidden="true"></span>'
     title: Account & service
     details: Plans, renewals, automatic traffic reset, Home ISP and internal relays
     link: /en/account/
-  - icon: 🛠️
+  - icon: '<span class="gi gi-help" aria-hidden="true"></span>'
     title: Troubleshooting
     details: Network self-check, diagnostics, speed issues and support ticket templates
     link: /en/help/

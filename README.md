@@ -33,6 +33,10 @@ Old panel links such as `/guide#subscriptions` redirect to the site root with th
 
 Review findings, source baselines and validation scope are recorded in [REVIEW.md](REVIEW.md).
 
+## Icons
+
+Icons are single-color masks bundled with the theme; no icon font or CDN is loaded. `docs/.vitepress/theme/icons.css` maps sidebar sections and client entries by link path, so add a line there when a section or client guide is added or moved. Device tables mark platforms with `<span class="platform gi-apple">iPhone / iPad</span>` and apps with `[<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow](/oixcloud/)`. oixFlow and FlClash for oixCloud articles show their client above the title through `ClientBadge.vue`. Record the source and license of every new icon in `docs/.vitepress/theme/icons/NOTICE.md`.
+
 ## Publishing
 
 Push to `main` to build and deploy through `.github/workflows/deploy.yml`. Pull requests build without deploying. In repository **Settings → Pages**, use **GitHub Actions** and set the custom domain to `docs.dler.io`.

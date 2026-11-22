@@ -1,7 +1,9 @@
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import { h, onMounted, onUnmounted } from 'vue'
+import ClientBadge from './ClientBadge.vue'
 import DocMedia from './DocMedia.vue'
 import './style.css'
+import './icons.css'
 
 const legacyPages = new Map(Object.entries({
   start: 'start/quick-start', oixcloud: 'oixcloud/connect', flclash: 'flclash/connect',
@@ -19,7 +21,7 @@ function redirectLegacyPage() {
 
 export default {
   extends: DefaultTheme,
-  Layout: () => h(DefaultTheme.Layout, null, { 'layout-bottom': () => h(DocMedia) }),
+  Layout: () => h(DefaultTheme.Layout, null, { 'doc-before': () => h(ClientBadge), 'layout-bottom': () => h(DocMedia) }),
   enhanceApp({ app, router }) {
     // Search excerpts use an isolated Vue app, so their images stay lazy.
     app.config.globalProperties.$isGuidePage = true

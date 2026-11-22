@@ -9,12 +9,12 @@ description: 按设备与应用查找连接和设置教程
 
 | 设备 | 应用与教程 |
 | --- | --- |
-| iPhone / iPad | [oixFlow](/oixcloud/) |
-| Apple TV | [oixFlow：Apple TV 连接与同步](/oixcloud/apple-tv) |
-| Windows / macOS / Android / Linux | [FlClash for oixCloud](/flclash/) |
-| OpenWrt 路由器 | [OpenClash](/other/openclash) |
-| Merlin 路由器 | [oixClash](/other/oixclash) |
-| 使用 Surge 的 Mac | [oixCloud Helper 与 Surge](/other/surge) |
+| <span class="platform gi-apple">iPhone / iPad</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow](/oixcloud/) |
+| <span class="platform gi-apple">Apple TV</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow：Apple TV 连接与同步](/oixcloud/apple-tv) |
+| <span class="platform gi-windows">Windows</span> <span class="platform gi-apple">macOS</span> <span class="platform gi-android">Android</span> <span class="platform gi-linux">Linux</span> | [<span class="gi gi-flclash" aria-hidden="true"></span>FlClash for oixCloud](/flclash/) |
+| <span class="platform gi-openwrt">OpenWrt 路由器</span> | [<span class="gi gi-openclash" aria-hidden="true"></span>OpenClash](/other/openclash) |
+| <span class="platform gi-router">Merlin 路由器</span> | [<span class="gi gi-oixclash" aria-hidden="true"></span>oixClash](/other/oixclash) |
+| <span class="platform gi-apple">使用 Surge 的 Mac</span> | [<span class="gi gi-helper" aria-hidden="true"></span>oixCloud Helper 与 Surge](/other/surge) |
 
 ## 下载与系统要求 {#requirements}
 

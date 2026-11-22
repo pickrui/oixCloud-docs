@@ -9,12 +9,12 @@ If you have not installed an app, visit the [download center](https://oixcloud.c
 
 | Device | App and guide |
 | --- | --- |
-| iPhone / iPad | [oixFlow](/en/oixcloud/) |
-| Apple TV | [oixFlow: Apple TV setup and sync](/en/oixcloud/apple-tv) |
-| Windows / macOS / Android / Linux | [FlClash for oixCloud](/en/flclash/) |
-| OpenWrt router | [OpenClash](/en/other/openclash) |
-| Merlin router | [oixClash](/en/other/oixclash) |
-| Mac running Surge | [oixCloud Helper and Surge](/en/other/surge) |
+| <span class="platform gi-apple">iPhone / iPad</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow](/en/oixcloud/) |
+| <span class="platform gi-apple">Apple TV</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow: Apple TV setup and sync](/en/oixcloud/apple-tv) |
+| <span class="platform gi-windows">Windows</span> <span class="platform gi-apple">macOS</span> <span class="platform gi-android">Android</span> <span class="platform gi-linux">Linux</span> | [<span class="gi gi-flclash" aria-hidden="true"></span>FlClash for oixCloud](/en/flclash/) |
+| <span class="platform gi-openwrt">OpenWrt router</span> | [<span class="gi gi-openclash" aria-hidden="true"></span>OpenClash](/en/other/openclash) |
+| <span class="platform gi-router">Merlin router</span> | [<span class="gi gi-oixclash" aria-hidden="true"></span>oixClash](/en/other/oixclash) |
+| <span class="platform gi-apple">Mac running Surge</span> | [<span class="gi gi-helper" aria-hidden="true"></span>oixCloud Helper and Surge](/en/other/surge) |
 
 ## Downloads and system requirements {#requirements}
 

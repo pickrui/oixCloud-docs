@@ -17,19 +17,19 @@ hero:
     src: /logo.svg
     alt: oixCloud
 features:
-  - icon: 🚀
+  - icon: '<span class="gi gi-start" aria-hidden="true"></span>'
     title: 快速开始
     details: 选择设备、安装客户端、首次连接
     link: /start/
-  - icon: 📱
+  - icon: '<span class="gi gi-clients" aria-hidden="true"></span>'
     title: 客户端教程
     details: 覆盖 oixFlow、FlClash for oixCloud、OpenClash 与 Surge 等
     link: /clients/
-  - icon: ⚡
+  - icon: '<span class="gi gi-account" aria-hidden="true"></span>'
     title: 账户与服务
     details: 套餐购买续费、流量重置、Home ISP 家宽与中继自建
     link: /account/
-  - icon: 🛠️
+  - icon: '<span class="gi gi-help" aria-hidden="true"></span>'
     title: 故障排查
     details: 网络自检、连接排查、节点测速与服务单提交规范
     link: /help/
