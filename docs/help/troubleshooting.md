@@ -28,7 +28,7 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
 ## 显示已连接，但网页打不开
 
 1. 暂停其他 VPN 或代理，先确认当前网络能打开平时可直连的网站
-2. 连接客户端，打开一次出错的网站，再查看连接记录。iPhone / iPad 用 [oixCloud 的网络检测与请求记录](/oixcloud/diagnostics#network-check)；FlClash for oixCloud 在 Windows / macOS 可运行 [工具 → 网络自检](/flclash/diagnostics)，Android / Linux 查看连接与日志
+2. 连接客户端，打开一次出错的网站，再查看连接记录。iPhone / iPad 用 [oixFlow 的网络检测与请求记录](/oixcloud/diagnostics#network-check)；FlClash for oixCloud 在 Windows / macOS 可运行 [工具 → 网络自检](/flclash/diagnostics)，Android / Linux 查看连接与日志
 3. 找不到这次请求时，检查应用是否使用系统代理，或是否被 VPN / TUN 排除。能找到请求时，查看它命中的规则和实际出口，再用同一网站对比另一个可用节点
 
 在中国大陆直连 Edge 或 Home ISP 时，先查看 [节点类型](/account/nodes#node-types)。如果套餐包含 CIA、IXP、Fusion 或 GIA，可保持网络和客户端不变，换用其中一个节点重试；记录哪个能访问、哪个超时
@@ -53,7 +53,7 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
 
 先区分预期直连、路由判断产生的解析与绕过客户端的查询。DNS 加密、DNS 经代理以及 VPN / TUN 接管是不同环节，全局模式也不是零泄漏保证
 
-按客户端查看操作步骤与验证方法：[oixCloud DNS 与 IPv6](/oixcloud/dns#dns-泄漏-哪些设置有帮助)、[FlClash for oixCloud DNS 与接管](/flclash/dns#dns-泄漏-先检查托管配置和接管方式)
+按客户端查看操作步骤与验证方法：[oixFlow DNS 与 IPv6](/oixcloud/dns#dns-泄漏-哪些设置有帮助)、[FlClash for oixCloud DNS 与接管](/flclash/dns#dns-泄漏-先检查托管配置和接管方式)
 
 ## 客户端专用诊断
 
@@ -65,5 +65,5 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
   <figcaption>FlClash for oixCloud 桌面界面示例 · 其他客户端按对应教程操作</figcaption>
 </figure>
 
-- [oixCloud 请求、DNS 与网络事件](/oixcloud/diagnostics)
+- [oixFlow 请求、DNS 与网络事件](/oixcloud/diagnostics)
 - [FlClash for oixCloud 网络自检与连接记录](/flclash/diagnostics)

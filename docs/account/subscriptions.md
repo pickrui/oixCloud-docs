@@ -6,7 +6,7 @@ description: 选择订阅格式、设置节点筛选、恢复默认并确认多�
 
 ## 先选择接入方式
 
-oixCloud、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路由器的 oixClash 和 oixCloud Helper 可以登录账户获取托管配置。其他兼容客户端在 [订阅管理](https://oixcloud.com/user/sub_manage) 选择对应格式的地址，再导入客户端
+oixFlow、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路由器的 oixClash 和 oixCloud Helper 可以登录账户获取托管配置。其他兼容客户端在 [订阅管理](https://oixcloud.com/user/sub_manage) 选择对应格式的地址，再导入客户端
 
 完整配置与 Provider 节点列表用途不同；Provider 需要客户端已有配置引用，不能把它当作一份完整配置直接启动。Access Token 是登录凭据，也不是订阅网址
 
@@ -21,10 +21,10 @@ oixCloud、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路�
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · 筛选线路、地区与名称">
-    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" alt="oixCloud · 筛选线路、地区与名称" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 筛选线路、地区与名称">
+    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261123-1" alt="oixFlow · 筛选线路、地区与名称" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>oixCloud iPhone / iPad 界面示例 · 其他客户端按对应教程操作</figcaption>
+  <figcaption>oixFlow iPhone / iPad 界面示例 · 其他客户端按对应教程操作</figcaption>
 </figure>
 
 1. 打开客户端「oixCloud → 节点筛选」，Helper 使用「连接设置 → 节点筛选…」；也可在网站订阅管理中编辑对应地址
@@ -34,7 +34,7 @@ oixCloud、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路�
 
 | 客户端 | 保存后如何应用 |
 | --- | --- |
-| oixCloud | 自动刷新托管节点，检查刷新结果与当前出口 |
+| oixFlow | 自动刷新托管节点，检查刷新结果与当前出口 |
 | FlClash for oixCloud | 自动发起账户刷新和托管配置同步；等待同步完成，失败时处理报错后在账户页「同步」 |
 | oixCloud Helper | 重新获取节点并更新映射；使用 Surge 时再次「接入 Surge」 |
 | OpenClash | 网站编辑器保存后重启 OpenClash 立即获取，或等待内核下次订阅更新 |
@@ -43,7 +43,7 @@ oixCloud、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路�
 
 名称支持不区分大小写的正则表达式，例如 `香港|日本` 表示名称含任一词；节点名不会随界面语言翻译。预览里的搜索只帮助查找，不会改变筛选条件。预览未完成、表达式无效或保留数为零时不能保存
 
-图解见 [oixCloud](/oixcloud/proxies#更新与筛选) 和 [FlClash for oixCloud](/flclash/profiles#托管订阅选项)
+图解见 [oixFlow](/oixcloud/proxies#更新与筛选) 和 [FlClash for oixCloud](/flclash/profiles#托管订阅选项)
 
 ## 空筛选与恢复默认
 
@@ -52,7 +52,7 @@ oixCloud、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路�
 | 官方客户端的智能订阅 | 按套餐下发智能优选的默认线路：<br>• **含 Fusion 的套餐**：有权限的 Fusion 与 GIA（不含独享 IP 和 Home ISP）<br>• **含 CIA／IXP 的套餐**：CIA + IXP（不含独享 IP 和 Home ISP）<br>• **仅含 Edge 的套餐**：Edge、允许默认下发的 Home ISP 及账户独享 IP<br>仅当上述默认集合为空时，才回退到有权限且允许默认下发的节点 |
 | 普通个人订阅地址 | 返回该订阅格式下账户有权限且允许默认下发的节点，不再附加自定义筛选 |
 
-oixCloud 对已保存的自定义筛选会先确认再恢复服务端默认；尚未保存的草稿可直接清空。FlClash for oixCloud 的「恢复默认」直接提交重置并发起同步。Helper 的「恢复默认」先清空草稿，还需点击「保存」
+oixFlow 对已保存的自定义筛选会先确认再恢复服务端默认；尚未保存的草稿可直接清空。FlClash for oixCloud 的「恢复默认」直接提交重置并发起同步。Helper 的「恢复默认」先清空草稿，还需点击「保存」
 
 恢复默认不提高套餐权限，也不保证每种订阅格式都支持相同节点。旧教程中的「所有节点」「海外网络环境」「应急模式」已由可视化筛选取代
 
@@ -76,7 +76,7 @@ Home ISP 是否默认下发由每个节点单独设置，与静态／动态 IP �
 
 网站 [自定义规则](https://oixcloud.com/user/rule) 按账号共用，修改会影响实际使用这份规则的订阅或客户端；节点筛选则按订阅地址保存，可因客户端而不同
 
-oixClash 使用这份账号规则，支持的插件版本可直接读取和编辑；网站保存后，在插件点「更新节点」获取，操作步骤见 [oixClash 账号规则](/other/oixclash#_7-编辑账号自定义规则)。oixCloud App 内添加的本地分流规则仍在 App 中单独管理
+oixClash 使用这份账号规则，支持的插件版本可直接读取和编辑；网站保存后，在插件点「更新节点」获取，操作步骤见 [oixClash 账号规则](/other/oixclash#_7-编辑账号自定义规则)。oixFlow App 内添加的本地分流规则仍在 App 中单独管理
 
 清空并保存会删除账号规则，先保留需要的内容。保存成功后，还需确认客户端配置更新成功，并用新连接核对实际命中结果
 

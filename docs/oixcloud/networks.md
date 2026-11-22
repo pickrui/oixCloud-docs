@@ -9,8 +9,8 @@ description: "网络预设、直连与局域网代理的操作步骤、适用范
 ## 按网络自动应用预设
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-networks-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 为特定网络应用预设">
-    <img src="/illustrations/oixcloud-networks-zh.svg?v=20261030-2" alt="oixCloud · 为特定网络应用预设" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-networks-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 为特定网络应用预设">
+    <img src="/illustrations/oixcloud-networks-zh.svg?v=20261123-1" alt="oixFlow · 为特定网络应用预设" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>

@@ -16,8 +16,8 @@ For iPhone / iPad, using the maintained client's menus. If an option is missing,
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-proxies-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Select a node or Best Available">
-    <img src="/illustrations/oixcloud-proxies-en.svg?v=20261030-en1" alt="oixCloud · Select a node or Best Available" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-proxies-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Select a node or Best Available">
+    <img src="/illustrations/oixcloud-proxies-en.svg?v=20261123-1" alt="oixFlow · Select a node or Best Available" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -27,8 +27,8 @@ For iPhone / iPad, using the maintained client's menus. If an option is missing,
 ### Add an individual third-party node {#single-node}
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-add-node-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Add your own node from a link">
-    <img src="/illustrations/oixcloud-add-node-en.svg?v=20261102-3" alt="Add your own node from a link" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixcloud-add-node-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="Add your own node from a link">
+    <img src="/illustrations/oixcloud-add-node-en.svg?v=20261123-1" alt="Add your own node from a link" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
@@ -114,8 +114,8 @@ Folders organize standalone nodes, not nodes inside subscriptions. They are neit
 ## Update and filter
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · Filter lines, regions and names">
-    <img src="/illustrations/oixcloud-filter-en.svg?v=20261105-3" alt="oixCloud · Filter lines, regions and names" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixcloud-filter-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Filter lines, regions and names">
+    <img src="/illustrations/oixcloud-filter-en.svg?v=20261123-1" alt="oixFlow · Filter lines, regions and names" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>

@@ -9,8 +9,8 @@ For iPhone / iPad.
 ## Apply settings by network
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-networks-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Apply settings for one network">
-    <img src="/illustrations/oixcloud-networks-en.svg?v=20261030-en1" alt="oixCloud · Apply settings for one network" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-networks-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Apply settings for one network">
+    <img src="/illustrations/oixcloud-networks-en.svg?v=20261123-1" alt="oixFlow · Apply settings for one network" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>

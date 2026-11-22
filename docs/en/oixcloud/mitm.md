@@ -9,8 +9,8 @@ For iPhone / iPad. Ordinary proxy access does not require MITM.
 ## Install and trust
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-mitm-generate-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Generate your first MITM certificate">
-    <img src="/illustrations/oixcloud-mitm-generate-en.svg?v=20261030-en1" alt="oixCloud · Generate your first MITM certificate" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-mitm-generate-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Generate your first MITM certificate">
+    <img src="/illustrations/oixcloud-mitm-generate-en.svg?v=20261123-1" alt="oixFlow · Generate your first MITM certificate" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -22,8 +22,8 @@ For iPhone / iPad. Ordinary proxy access does not require MITM.
 5. Return to the app, enable MITM as prompted, and check the intended hosts and rules.
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-mitm-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Install this device’s MITM certificate">
-    <img src="/illustrations/oixcloud-mitm-en.svg?v=20261030-en1" alt="oixCloud · Install this device’s MITM certificate" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixcloud-mitm-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Install this device’s MITM certificate">
+    <img src="/illustrations/oixcloud-mitm-en.svg?v=20261123-1" alt="oixFlow · Install this device’s MITM certificate" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>

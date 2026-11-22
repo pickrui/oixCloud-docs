@@ -118,7 +118,7 @@ add('oixcloud','networks','为特定网络应用预设','设置 → 网络预设
 
 add('oixcloud','mitm','安装本机 MITM 证书','设置 → MITM → MITM 证书',[
  ['核对此设备的证书','本图展示已生成证书、尚未登录账户的状态'],['安装信任描述文件','安装后到 iOS 设置完成安装与完全信任'],['账户证书另行管理','未登录时账户操作不可用；不要随意替换本机证书']
-],()=>ios('MITM 证书',{back:'MITM'})+group(281,[{label:'oixCloud CA',sub:'根证书',n:1},{label:'安装信任描述文件',blue:true,n:2},{label:'导出公钥证书',blue:true},{label:'替换此设备上的证书',blue:true},{label:'从此设备删除',danger:true}],{title:'此设备'})+T(83,595,'此处的更改仅影响此设备',15,'#85858d')+group(662,[{label:'状态',value:'尚未登录'},{label:'创建并用于此设备',disabled:true},{label:'将 PKCS#12 导入账号',disabled:true}],{title:'oixCloud'})+badge(468,662,3))
+],()=>ios('MITM 证书',{back:'MITM'})+group(281,[{label:'oixFlow CA',sub:'根证书',n:1},{label:'安装信任描述文件',blue:true,n:2},{label:'导出公钥证书',blue:true},{label:'替换此设备上的证书',blue:true},{label:'从此设备删除',danger:true}],{title:'此设备'})+T(83,595,'此处的更改仅影响此设备',15,'#85858d')+group(662,[{label:'状态',value:'尚未登录'},{label:'创建并用于此设备',disabled:true},{label:'将 PKCS#12 导入账号',disabled:true}],{title:'oixCloud'})+badge(468,662,3))
 
 add('oixcloud','modules','导入、更新与排列模块','代理 → 策略 → 模块',[
  ['选择导入或订阅','新建、文件导入、订阅与可莉插件中心是不同入口'],['核对模块状态','名称与内容均为虚构；按用途启用，长按可查看操作'],['检查生效顺序','多个模块影响相同域名时，在生效顺序中调整']
@@ -133,7 +133,7 @@ add('oixcloud','tailscale','添加并授权 Tailscale 网络','设置 → Tailsc
 ],()=>ios('添加网络',{back:'Tailscale',action:'保存'})+group(269,[{label:'网络名称',value:'Tailnet',n:1},{label:'设备名称',value:'My iPhone'},{label:'登录',value:'交互式登录',chev:true}])+group(470,[{label:'自动路由',on:true,n:3}])+group(570,[{label:'出口节点',value:'none'}])+group(674,[{label:'高级',chev:true}])+group(782,[{label:'保存并登录',blue:true,n:2}]))
 add('oixcloud','automation','设置脚本触发方式','设置 → 自动化 → 新增脚本',[
  ['核对来源与客户端','选择脚本针对的客户端；名称填写后会显示在页标题'],['按需设置触发器','先选手动验证，再开启定时或网络事件'],['填写代码后再运行','JavaScript 与立即运行在触发器下方，向下滚动查看']
-],()=>ios('示例任务',{back:'取消',action:'保存'})+group(267,[{label:'示例任务',n:1},{label:'客户端',value:'Surge',chev:true},{label:'参数',value:'可选'},{label:'超时',value:'10 秒'}])+group(534,[{label:'手动',on:true,n:2},{label:'间隔',on:false},{label:'Cron 定时',on:false},{label:'oixCloud 已启动',on:false},{label:'网络已更改',on:false}],{title:'触发器'})+T(83,858,'JavaScript',15,'#727279')+R(68,872,404,32,'#fff',12)+T(84,895,'// 示例脚本代码…',14,'#85858d')+badge(468,872,3))
+],()=>ios('示例任务',{back:'取消',action:'保存'})+group(267,[{label:'示例任务',n:1},{label:'客户端',value:'Surge',chev:true},{label:'参数',value:'可选'},{label:'超时',value:'10 秒'}])+group(534,[{label:'手动',on:true,n:2},{label:'间隔',on:false},{label:'Cron 定时',on:false},{label:'oixFlow 已启动',on:false},{label:'网络已更改',on:false}],{title:'触发器'})+T(83,858,'JavaScript',15,'#727279')+R(68,872,404,32,'#fff',12)+T(84,895,'// 示例脚本代码…',14,'#85858d')+badge(468,872,3))
 
 add('oixcloud','requests','查看请求的路由判定','活动 → 请求 → 一条请求',[
  ['先找到目标域名','图中 example.com 为虚构请求'],['核对路由结果','查看该请求使用的路线与判定原因'],['检查匹配规则','修改规则后重新建立连接，再核对规则与出口']
@@ -253,7 +253,7 @@ add('oixcloud','add-node','从链接添加自己的节点','代理 → 服务器
 ],()=>{let s=ios('代理',{large:true,tab:'代理'})+R(45,245,450,693,'#00000022',25)+R(45,319,450,619,'#fff',27)+R(240,329,60,5,'#d5d5dc',3)+T(70,377,'添加代理',23,'#202124',650)+circ(460,367,16,'#f0f0f4')+T(460,373,'×',23,'#727279',500,'middle');['二维码','链接','手动','oixCloud'].forEach((label,i)=>{let y=411+i*43;s+=T(78,y,['▦','↗','✎','☁'][i],25,'#007aff')+T(121,y,label,20,'#202124',600)+circ(457,y-7,12,i===1?'#007aff':'#ededf1');if(i===1)s+=check(450,y-14,'#fff')});return s+mark(67,385,405,174,1)+R(69,584,402,50,'#f3f3f7',12)+T(83,615,'trojan://example@proxy.example.com:443',13,'#202124')+mark(69,584,402,50,2)+lines(83,660,'支持代理链接和 Clash 或 Surge 订阅',14,'#85858d',29)+T(83,713,'Remnawave HWID',18,'#202124')+toggle(407,691,false)+lines(83,753,'通过 HTTPS 向此订阅发送此设备的标识',13,'#85858d',30)+R(69,850,402,46,'#007aff',23)+T(270,880,'继续',20,'#fff',650,'middle')+mark(69,850,402,46,3)})
 
 add('oixcloud','local-control','开启局域网控制并找到地址','设置 → 局域网控制',[
- ['开启局域网访问','保持 oixCloud 已连接，另一设备须在同一网络'],['打开列出的 HTTPS 地址','使用当前设备地址；图中仅为示例'],['核对指纹后使用密钥','复制本设备的访问密钥；完成后关闭访问']
+ ['开启局域网访问','保持 oixFlow 已连接，另一设备须在同一网络'],['打开列出的 HTTPS 地址','使用当前设备地址；图中仅为示例'],['核对指纹后使用密钥','复制本设备的访问密钥；完成后关闭访问']
 ],()=>ios('局域网控制',{back:'设置',action:'应用'})+group(275,[{label:'允许局域网访问',on:true,n:1},{label:'端口',value:'9091'},{label:'状态',value:'可用'}])+group(488,[{label:'https://192.0.2.10:9091',n:2}],{title:'局域网地址'})+group(612,[{label:'复制访问密钥',blue:true,n:3},{label:'重置访问密钥',danger:true},{label:'证书指纹',sub:'SHA-256 · 示例指纹，不用于连接'}],{title:'安全访问'}))
 
 add('apple-tv','sync','在电视设置中打开同步','Apple TV → 设置 → iCloud 同步',[
@@ -570,10 +570,10 @@ for(const original of scenes){
  const sc=localized?{...original,title:localized[0],route:localized[1],notes:localized[2]}:original
  const phone=sc.client==='oixcloud'||sc.id==='android'
  const h=english?(phone?1120:1100):(phone?982:975)
- const brand=['oixcloud','apple-tv','account','start'].includes(sc.client)?'oixCloud':sc.client==='openclash'?'OpenClash':sc.client==='helper'?'oixCloud Helper':sc.client==='oixclash'?'oixClash':'FlClash for oixCloud'
+ const brand=['oixcloud','apple-tv'].includes(sc.client)?'oixFlow':['account','start'].includes(sc.client)?'oixCloud':sc.client==='openclash'?'OpenClash':sc.client==='helper'?'oixCloud Helper':sc.client==='oixclash'?'oixClash':'FlClash for oixCloud'
  const description=english?(sc.client==='oixclash'?'English reference with bilingual labels for the Chinese-only plugin UI; fictional data, not a screenshot.':'English interface simulation based on maintained client labels; fictional data, not a screenshot. Layout varies by OS, platform and theme.'):'按维护版本的菜单与表单绘制，非客户端截图；中文界面与虚构数据；界面细节随系统、平台与主题变化'
  let s=`<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="${h}" viewBox="0 0 1120 ${h}" role="img" aria-labelledby="title desc"><title id="title">${E(brand+' · '+sc.title)}</title><desc id="desc">${E(description)}</desc><g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',Arial,sans-serif">`
- const platform=sc.client==='account'?(english?'oixCloud · Website':'oixCloud · 网站'):sc.client==='apple-tv'?'oixCloud · Apple TV':sc.client==='openclash'?'OpenClash · OpenWrt / LuCI':sc.client==='oixcloud'?'oixCloud · iPhone / iPad':sc.client==='helper'?('oixCloud Helper · '+(sc.id==='linux'?'Linux / Docker':'macOS')):sc.client==='start'?(english?'oixCloud · Architecture & Concepts':'oixCloud · 架构与概念'):sc.client==='oixclash'?('oixClash · '+(english?'Merlin router':'Merlin 路由器')):'FlClash for oixCloud'+(sc.id==='android'?' · Android':english?' · Desktop':' · 桌面端')
+ const platform=sc.client==='account'?(english?'oixCloud · Website':'oixCloud · 网站'):sc.client==='apple-tv'?'oixFlow · Apple TV':sc.client==='openclash'?'OpenClash · OpenWrt / LuCI':sc.client==='oixcloud'?'oixFlow · iPhone / iPad':sc.client==='helper'?('oixCloud Helper · '+(sc.id==='linux'?'Linux / Docker':'macOS')):sc.client==='start'?(english?'oixCloud · Architecture & Concepts':'oixCloud · 架构与概念'):sc.client==='oixclash'?('oixClash · '+(english?'Merlin router':'Merlin 路由器')):'FlClash for oixCloud'+(sc.id==='android'?' · Android':english?' · Desktop':' · 桌面端')
  s+=R(0,0,1120,h,'#f3f5f8',0)+T(34,38,platform,18,'#697386',600)+T(1085,38,english?(sc.client==='oixclash'?'English guide · Chinese-only plugin UI':'Illustration · Fictional data'):'操作示意 · 虚构数据',16,'#788392',500,'end')+T(34,87,sc.title,31,'#263245',700)
  drawingUI=true
  s+=sc.draw()

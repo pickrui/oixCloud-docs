@@ -22,13 +22,13 @@ Neither category assigns an IP exclusively to your account or guarantees availab
 The service sets default inclusion per node, independently of its static or dynamic category. Smart Selection excludes Home ISP on plans with CIA, IXP, Fusion or GIA. ISP nodes excluded by default are not added merely because the default selection is empty.
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · Retain the entry line and ISP together">
-    <img src="/illustrations/oixcloud-filter-en.svg?v=20261105-3" alt="oixCloud · Retain the entry line and ISP together" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-filter-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Retain the entry line and ISP together">
+    <img src="/illustrations/oixcloud-filter-en.svg?v=20261123-1" alt="oixFlow · Retain the entry line and ISP together" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation · Fictional data · Both Fusion and ISP are retained in this example</figcaption>
 </figure>
 
-1. Open **oixCloud → Node Filter** in oixCloud or FlClash for oixCloud, or edit the corresponding address in [Subscription Management](https://oixcloud.com/user/sub_manage).
+1. Open **oixCloud → Node Filter** in oixFlow or FlClash for oixCloud, or edit the corresponding address in [Subscription Management](https://oixcloud.com/user/sub_manage).
 2. Set **ISP** to **Only**. For a client proxy chain, set the entry node's line to **Only** too, or the filter may remove the entry.
 3. Check region and name conditions and confirm that both the required entry and exit appear in the preview.
 4. Save and wait for node updates. See [Subscriptions and filters](/en/account/subscriptions) for each client's automatic refresh and manual sync controls.
@@ -75,13 +75,13 @@ The path diagram shows configuration, not connectivity. See the [internal relay 
 
 Confirm that the entry and Home ISP nodes are both in the current node list. The client connects through members in entry-to-exit order; members must be available and meet that client's chain constraints.
 
-### oixCloud proxy chains {#oixcloud-chain}
+### oixFlow proxy chains {#oixcloud-chain}
 
 These editing steps apply to iPhone / iPad. Apple TV [receives synced configuration](/en/oixcloud/apple-tv) from a phone or tablet and does not offer the same chain editor.
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-chains-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · Create a chain in forwarding order">
-    <img src="/illustrations/oixcloud-chains-en.svg?v=20261102-3" alt="oixCloud · Create a chain in forwarding order" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixcloud-chains-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Create a chain in forwarding order">
+    <img src="/illustrations/oixcloud-chains-en.svg?v=20261123-1" alt="oixFlow · Create a chain in forwarding order" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>General chain-editor example · Replace its members with your entry and Home ISP nodes</figcaption>
 </figure>

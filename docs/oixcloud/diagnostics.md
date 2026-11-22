@@ -8,7 +8,7 @@ description: "请求记录与诊断的操作步骤、适用范围与常见问题
 
 ## 先检查当前网络和节点 {#network-check}
 
-1. 保持出现问题时的网络，打开「主页 → 网络检测」，点「开始检测」。要测当前代理，先连接 oixCloud
+1. 保持出现问题时的网络，打开「主页 → 网络检测」，点「开始检测」。要测当前代理，先连接 oixFlow
 2. 对照直连和代理的结果。直连成功、代理超时时，在同一网络换一个可用节点，点「重新检测」。只有路由器没有回应时，它可能不响应 ping，可继续核对直连与代理结果
 3. 需要区分 TCP 和 UDP 时，在同一页进入「节点诊断」，点「全部测试」，再按节点名称查结果。TCP 显示节点延迟测试结果，UDP 成功表示经该节点发往测试目标的 DNS 查询得到了回应
 4. 重新打开出错的网站或应用。如果检测通过但它仍然打不开，用下方的请求记录检查这一次访问实际走了哪条线路
@@ -16,8 +16,8 @@ description: "请求记录与诊断的操作步骤、适用范围与常见问题
 ## 找到走错路线的请求
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-requests-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 查看请求的路由判定">
-    <img src="/illustrations/oixcloud-requests-zh.svg?v=20261030-2" alt="oixCloud · 查看请求的路由判定" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-requests-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 查看请求的路由判定">
+    <img src="/illustrations/oixcloud-requests-zh.svg?v=20261123-1" alt="oixFlow · 查看请求的路由判定" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>

@@ -1,10 +1,10 @@
 ---
-description: "在同一局域网通过 HTTPS 查看 oixCloud 状态、切换节点和读取近期日志"
+description: "在同一局域网通过 HTTPS 查看 oixFlow 状态、切换节点和读取近期日志"
 ---
 
 # 局域网控制
 
-适用于提供此功能的 iPhone / iPad 与 Apple TV 版本。它让同一 Wi-Fi 或以太网内的设备管理这台设备上的 oixCloud，与 [让其他设备使用代理](/oixcloud/networks) 是不同功能
+适用于提供此功能的 iPhone / iPad 与 Apple TV 版本。它让同一 Wi-Fi 或以太网内的设备管理这台设备上的 oixFlow，与 [让其他设备使用代理](/oixcloud/networks) 是不同功能
 
 | 设备 | 设置入口 |
 | --- | --- |
@@ -12,8 +12,8 @@ description: "在同一局域网通过 HTTPS 查看 oixCloud 状态、切换节�
 | Apple TV | 设置 → 局域网控制台 |
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-local-control-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 开启局域网控制并找到地址">
-    <img src="/illustrations/oixcloud-local-control-zh.svg?v=20261102-3" alt="oixCloud · 开启局域网控制并找到地址" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-local-control-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 开启局域网控制并找到地址">
+    <img src="/illustrations/oixcloud-local-control-zh.svg?v=20261123-1" alt="oixFlow · 开启局域网控制并找到地址" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
@@ -22,7 +22,7 @@ description: "在同一局域网通过 HTTPS 查看 oixCloud 状态、切换节�
 
 以下为 iPhone / iPad 步骤，电视端见 [Apple TV 操作](#apple-tv)
 
-1. 在 oixCloud 建立连接，进入「设置 → 局域网控制」，开启「允许局域网访问」
+1. 在 oixFlow 建立连接，进入「设置 → 局域网控制」，开启「允许局域网访问」
 2. 默认端口为 `9091`。如需更换，选择未占用的 `1024–65535` 端口，不能与 HTTP / SOCKS5 代理服务共用，点「应用」
 3. 确认状态为可用，复制页面列出的 HTTPS 局域网地址，在同一网络的另一台设备上打开
 4. 浏览器显示证书提示时，先核对其证书指纹与应用中的「证书指纹」一致，再继续；不一致就停止连接并核对地址
@@ -32,7 +32,7 @@ description: "在同一局域网通过 HTTPS 查看 oixCloud 状态、切换节�
 
 ### 在 Apple TV 上开启 {#apple-tv}
 
-1. 在电视端「设置 → 局域网控制台」开启「允许局域网访问」，并保持 oixCloud 连接运行
+1. 在电视端「设置 → 局域网控制台」开启「允许局域网访问」，并保持 oixFlow 连接运行
 2. 打开「局域网地址」查看 HTTPS 地址及二维码，在同一网络的手机扫码或电脑输入地址
 3. 在电视端查看「证书指纹」，与浏览器显示的指纹核对一致
 4. 打开「访问密钥」，查看文本或扫码复制，再粘贴到网页登录；地址二维码不包含密钥，密钥二维码只包含密钥文本

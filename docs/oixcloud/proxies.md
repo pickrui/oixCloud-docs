@@ -16,8 +16,8 @@ description: "添加和更新第三方节点、Clash 或 Surge 订阅，以及�
 ## 操作示意
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-proxies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 选择节点与自动优选">
-    <img src="/illustrations/oixcloud-proxies-zh.svg?v=20261030-2" alt="oixCloud · 选择节点与自动优选" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-proxies-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 选择节点与自动优选">
+    <img src="/illustrations/oixcloud-proxies-zh.svg?v=20261123-1" alt="oixFlow · 选择节点与自动优选" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -27,8 +27,8 @@ description: "添加和更新第三方节点、Clash 或 Surge 订阅，以及�
 ### 添加单个第三方节点 {#single-node}
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-add-node-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 从链接添加自己的节点">
-    <img src="/illustrations/oixcloud-add-node-zh.svg?v=20261102-3" alt="oixCloud · 从链接添加自己的节点" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-add-node-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 从链接添加自己的节点">
+    <img src="/illustrations/oixcloud-add-node-zh.svg?v=20261123-1" alt="oixFlow · 从链接添加自己的节点" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
@@ -114,8 +114,8 @@ HTTP／HTTPS 代理在「手动」中填写最清楚。「链接」入口只有�
 ## 更新与筛选
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · 筛选线路、地区与名称">
-    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" alt="oixCloud · 筛选线路、地区与名称" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 筛选线路、地区与名称">
+    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261123-1" alt="oixFlow · 筛选线路、地区与名称" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>

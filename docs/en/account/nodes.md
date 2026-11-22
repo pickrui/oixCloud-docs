@@ -111,7 +111,7 @@ Choose whichever option works best for your local network and how you prefer to 
 
 - **Direct connection**. Select the dedicated IP node in your client’s node list. Route quality from your network to that node is not guaranteed.
 - **Internal relay**. In the user center, open **Traffic Routes → Relay → [Internal relay](/en/account/relay#internal-relay)** and add a path. Choose an entry node and set the dedicated IP as the exit. Save the path, then select the entry node in your client.
-- **Proxy chain**. In your client, create a chain with the entry node as the first hop and the dedicated IP as the last hop. Save and select the chain. See the instructions for [oixCloud](/en/oixcloud/policies#proxy-chains) or [FlClash for oixCloud](/en/flclash/proxies#proxy-chains).
+- **Proxy chain**. In your client, create a chain with the entry node as the first hop and the dedicated IP as the last hop. Save and select the chain. See the instructions for [oixFlow](/en/oixcloud/policies#proxy-chains) or [FlClash for oixCloud](/en/flclash/proxies#proxy-chains).
 
 ### Practical benefits {#ip-benefits}
 

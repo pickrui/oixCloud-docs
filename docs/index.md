@@ -23,7 +23,7 @@ features:
     link: /start/
   - icon: 📱
     title: 客户端教程
-    details: 覆盖 oixCloud、FlClash for oixCloud、OpenClash 与 Surge 等
+    details: 覆盖 oixFlow、FlClash for oixCloud、OpenClash 与 Surge 等
     link: /clients/
   - icon: ⚡
     title: 账户与服务

@@ -23,7 +23,7 @@ features:
     link: /en/start/
   - icon: 📱
     title: Client guides
-    details: Covers oixCloud, FlClash for oixCloud, OpenClash, Surge and more
+    details: Covers oixFlow, FlClash for oixCloud, OpenClash, Surge and more
     link: /en/clients/
   - icon: ⚡
     title: Account & service

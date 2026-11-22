@@ -8,7 +8,7 @@ For iPhone / iPad.
 
 ## Check the current network and node {#network-check}
 
-1. Stay on the network where the problem occurred. Open **Home → Network Check** and tap **Run Check**. Connect oixCloud first to test the current proxy.
+1. Stay on the network where the problem occurred. Open **Home → Network Check** and tap **Run Check**. Connect oixFlow first to test the current proxy.
 2. Compare the direct and proxy results. If direct access works but the proxy times out, select another available node on the same network and tap **Check Again**. If only the router fails to reply, it may ignore ping. Check the direct and proxy results as well.
 3. To compare TCP and UDP, open **Node Diagnostics** on the same screen, tap **Test All**, then search for the node by name. TCP shows the node latency test result. A successful UDP check means the test destination answered a DNS query sent through that node.
 4. Reopen the affected site or app. If it still fails after a successful check, inspect the route taken by that request using the steps below.
@@ -16,8 +16,8 @@ For iPhone / iPad.
 ## Inspect the wrong route
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-requests-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Inspect a request’s routing decision">
-    <img src="/illustrations/oixcloud-requests-en.svg?v=20261030-en1" alt="oixCloud · Inspect a request’s routing decision" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-requests-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Inspect a request’s routing decision">
+    <img src="/illustrations/oixcloud-requests-en.svg?v=20261123-1" alt="oixFlow · Inspect a request’s routing decision" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>

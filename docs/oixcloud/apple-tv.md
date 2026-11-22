@@ -8,9 +8,15 @@ description: "Apple TV 连接与同步的操作步骤、适用范围与常见问
 
 ## 安装与系统要求
 
-Apple TV 需要 tvOS 18.0 或更高版本，在电视的 App Store 搜索并安装 [oixCloud](https://apps.apple.com/us/app/oixcloud/id6782528093)，使用非中国大陆地区的 Apple 账户。用于发布账户与配置的 iPhone / iPad 也需运行 iOS / iPadOS 18.0 或更高版本
+Apple TV 需要 tvOS 18.0 或更高版本，用于发布账户与配置的 iPhone / iPad 也需运行 iOS / iPadOS 18.0 或更高版本。在电视的 App Store 搜索并安装 oixFlow，使用非中国大陆地区的 Apple 账户
 
-安装测试版时，iPhone 或 iPad 与 Apple TV 的 TestFlight 须使用同一 App Store 账户。先在手机或平板上接受 [oixCloud 测试邀请](https://testflight.apple.com/join/qMEsvKD1)，再在电视上打开 TestFlight，选择 oixCloud 并点「安装」或「更新」。首次加入需有名额，构建须在有效期内并支持当前 tvOS 版本
+也可以通过 TestFlight 安装测试版，手机或平板与电视的 TestFlight 须使用同一 App Store 账户：
+
+1. 在 Apple TV 的 App Store 安装 TestFlight
+2. 在 iPhone 或 iPad 上安装 [TestFlight](https://apps.apple.com/app/id899247664)，用同一 App Store 账户接受 [oixFlow 测试邀请](https://testflight.apple.com/join/bThPJNaf)
+3. 在电视上打开 TestFlight，选择 oixFlow 并点「安装」；有新构建时在这里点「更新」
+
+首次加入需有名额，构建须在有效期内并支持当前 tvOS 版本
 
 中国大陆区 Apple ID 无法直接安装或更新。有关手机或平板上的邀请和商店地区选项，见 [TestFlight 安装与更新](/oixcloud/connect#testflight)
 
@@ -18,8 +24,8 @@ Apple TV 需要 tvOS 18.0 或更高版本，在电视的 App Store 搜索并安�
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/apple-tv-sync-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 在电视设置中打开同步">
-    <img src="/illustrations/apple-tv-sync-zh.svg?v=20261102-3" alt="oixCloud · 在电视设置中打开同步" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/apple-tv-sync-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 在电视设置中打开同步">
+    <img src="/illustrations/apple-tv-sync-zh.svg?v=20261123-1" alt="oixFlow · 在电视设置中打开同步" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>

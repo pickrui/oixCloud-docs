@@ -28,7 +28,7 @@ Try signing in to the [User Center](https://oixcloud.com/user) first, then follo
 ## Connected, but websites do not load
 
 1. Pause other VPNs or proxies. Check that a site you normally reach directly opens on the current network.
-2. Connect the client and open the affected site once. On iPhone or iPad, use [oixCloud’s Network Check and request history](/en/oixcloud/diagnostics#network-check). In FlClash for oixCloud, run the [network self-check](/en/flclash/diagnostics) on Windows or macOS, or inspect connections and logs on Android or Linux.
+2. Connect the client and open the affected site once. On iPhone or iPad, use [oixFlow’s Network Check and request history](/en/oixcloud/diagnostics#network-check). In FlClash for oixCloud, run the [network self-check](/en/flclash/diagnostics) on Windows or macOS, or inspect connections and logs on Android or Linux.
 3. If the request is missing, check whether the app uses the system proxy or is excluded from the VPN or TUN. If the request appears, check the matched rule and outbound, then try the same site on another available node.
 
 If you connect directly to Edge or Home ISP from mainland China, check the [node types](/en/account/nodes#node-types). If your plan includes CIA, IXP, Fusion or GIA, try one of those on the same network and client. Note which node worked and which timed out.
@@ -53,7 +53,7 @@ Check the node actually used by the streaming service's policy group, its exit r
 
 Distinguish intentional direct lookups, lookups needed for routing and queries that bypass the client. DNS encryption, proxy DNS and VPN / TUN capture address different stages; Global mode does not guarantee zero leaks.
 
-Follow the client-specific steps and verification guidance: [oixCloud DNS and IPv6](/en/oixcloud/dns#dns-leaks-settings-that-help) or [FlClash for oixCloud DNS and capture](/en/flclash/dns#dns-leaks-check-managed-dns-and-traffic-capture-first).
+Follow the client-specific steps and verification guidance: [oixFlow DNS and IPv6](/en/oixcloud/dns#dns-leaks-settings-that-help) or [FlClash for oixCloud DNS and capture](/en/flclash/dns#dns-leaks-check-managed-dns-and-traffic-capture-first).
 
 ## Client-specific tools
 
@@ -65,5 +65,5 @@ Follow the client-specific steps and verification guidance: [oixCloud DNS and IP
   <figcaption>FlClash for oixCloud desktop example · Follow the relevant guide for other clients</figcaption>
 </figure>
 
-- [oixCloud requests, DNS and network events](/en/oixcloud/diagnostics)
+- [oixFlow requests, DNS and network events](/en/oixcloud/diagnostics)
 - [FlClash for oixCloud network check and connections](/en/flclash/diagnostics)

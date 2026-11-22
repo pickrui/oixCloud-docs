@@ -1,10 +1,10 @@
 ---
-description: "Use HTTPS on the same LAN to inspect oixCloud, select nodes and read recent logs"
+description: "Use HTTPS on the same LAN to inspect oixFlow, select nodes and read recent logs"
 ---
 
 # Local Controller
 
-For iPhone/iPad and Apple TV versions offering this feature. It lets a device on the same Wi-Fi or Ethernet network control oixCloud on this device. It is separate from [serving proxy traffic to other devices](/en/oixcloud/networks).
+For iPhone/iPad and Apple TV versions offering this feature. It lets a device on the same Wi-Fi or Ethernet network control oixFlow on this device. It is separate from [serving proxy traffic to other devices](/en/oixcloud/networks).
 
 | Device | Settings entry |
 | --- | --- |
@@ -12,8 +12,8 @@ For iPhone/iPad and Apple TV versions offering this feature. It lets a device on
 | Apple TV | Settings → Local Control Panel |
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-local-control-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Enable LAN control and find its address">
-    <img src="/illustrations/oixcloud-local-control-en.svg?v=20261102-3" alt="Enable LAN control and find its address" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-local-control-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="Enable LAN control and find its address">
+    <img src="/illustrations/oixcloud-local-control-en.svg?v=20261123-1" alt="Enable LAN control and find its address" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
@@ -22,17 +22,17 @@ For iPhone/iPad and Apple TV versions offering this feature. It lets a device on
 
 These steps apply to iPhone/iPad; see [Apple TV instructions](#apple-tv) for TV.
 
-1. Establish a connection in oixCloud, open **Settings → Local Controller**, and enable **Allow Local Access**.
+1. Establish a connection in oixFlow, open **Settings → Local Controller**, and enable **Allow Local Access**.
 2. The default port is `9091`. To change it, choose an unused port from `1024–65535`, different from the HTTP/SOCKS5 proxy ports, then choose **Apply**.
 3. Confirm **Ready**, copy the displayed HTTPS LAN address, and open it on another device on the same network.
 4. If the browser warns about the certificate, compare its fingerprint with **Certificate Fingerprint** in the app before proceeding. Stop and check the address if they differ.
 5. Select **Copy Access Key** in the app and enter it in the controller. This is the device's local-control key, not an account Access Token or password.
 
-The service is available only while oixCloud is connected. Do not assume cellular or hotspot access works. Copy the current address again after a network change.
+The service is available only while oixFlow is connected. Do not assume cellular or hotspot access works. Copy the current address again after a network change.
 
 ### Enable on Apple TV {#apple-tv}
 
-1. Open **Settings → Local Control Panel** on TV, enable **Allow Local Access**, and keep oixCloud connected.
+1. Open **Settings → Local Control Panel** on TV, enable **Allow Local Access**, and keep oixFlow connected.
 2. Select an HTTPS address under **Local Network Address** to view its QR code. Scan it with a phone on the same network or enter the address on a computer.
 3. View **Certificate Fingerprint** on TV and compare it with the browser certificate.
 4. Open **Access Key** to view its text or scan its QR, then paste it into the browser. The address QR contains no key; the key QR contains only the key text.
@@ -61,4 +61,4 @@ Turn off **Allow Local Access** when no longer needed. The controller uses the k
 | Invalid key | Copy the key from the current device; a reset invalidates the old key |
 | Cannot select a node | A network profile pinning the node or a changed node list |
 
-This controller cannot remotely establish a connection while oixCloud is disconnected and is not a public Internet management endpoint.
+This controller cannot remotely establish a connection while oixFlow is disconnected and is not a public Internet management endpoint.

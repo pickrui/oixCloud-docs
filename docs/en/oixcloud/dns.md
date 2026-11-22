@@ -4,7 +4,7 @@ description: "Strict DNS, split DNS and three independent IPv6 controls"
 
 # DNS and IPv6
 
-For iPhone/iPad versions of oixCloud that expose these controls. See the separate [Apple TV guide](/en/oixcloud/apple-tv). Check your installed version if a setting is missing.
+For iPhone/iPad versions of oixFlow that expose these controls. See the separate [Apple TV guide](/en/oixcloud/apple-tv). Check your installed version if a setting is missing.
 
 ## Check the effective source first
 
@@ -39,8 +39,8 @@ Encryption protects the connection to the resolver; it does not select a proxy o
 ## Add a domain-specific DNS rule
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-dns-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Add a split DNS rule">
-    <img src="/illustrations/oixcloud-dns-en.svg?v=20261030-en1" alt="oixCloud · Add a split DNS rule" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixcloud-dns-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Add a split DNS rule">
+    <img src="/illustrations/oixcloud-dns-en.svg?v=20261123-1" alt="oixFlow · Add a split DNS rule" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>

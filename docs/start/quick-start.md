@@ -24,7 +24,7 @@ description: "第一次使用的操作步骤、适用范围与常见问题"
 
 | 设备 | 教程 |
 | --- | --- |
-| iPhone / iPad | [oixCloud 首次连接](/oixcloud/connect) |
+| iPhone / iPad | [oixFlow 首次连接](/oixcloud/connect) |
 | Apple TV | [Apple TV 连接与同步](/oixcloud/apple-tv) |
 | Windows / macOS / Android / Linux | [FlClash for oixCloud 首次连接](/flclash/connect) |
 | OpenWrt 路由器 | [OpenClash](/other/openclash) |

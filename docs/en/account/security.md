@@ -14,7 +14,7 @@ For the first sign-in to each custom client, use email and password or its **Sig
 
 After signing in, find the client under **Issued by client login** on the [Access Token page](https://oixcloud.com/user/token). The page shows only the last 4 characters by default; use its copy button to get the full token. The same account and client type reuse a token; you do not need to create one per device.
 
-Google sign-in is available in supported oixCloud versions for iPhone/iPad and in supported versions of FlClash for oixCloud. Apple TV continues to [receive the account from an iPhone](/en/oixcloud/apple-tv). Follow the email/password or token instructions for Helper, OpenClash and oixClash; do not assume they have a Google button.
+Google sign-in is available in supported oixFlow versions for iPhone/iPad and in supported versions of FlClash for oixCloud. Apple TV continues to [receive the account from an iPhone](/en/oixcloud/apple-tv). Follow the email/password or token instructions for Helper, OpenClash and oixClash; do not assume they have a Google button.
 
 ## Sign in to a client with Google {#google-client-login}
 

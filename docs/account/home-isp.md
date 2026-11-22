@@ -22,13 +22,13 @@ Home ISP 与 Edge 使用相同套餐权限，在 [节点列表](https://oixcloud
 默认下发由服务方逐节点设置，与静态／动态分类无关。含 CIA、IXP、Fusion 或 GIA 的套餐，智能优选不包含 Home ISP；未默认下发的 ISP 也不会因默认节点为空而被自动补入
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · 同时保留入口线路与 ISP">
-    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261105-3" alt="oixCloud · 同时保留入口线路与 ISP" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 同时保留入口线路与 ISP">
+    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261123-1" alt="oixFlow · 同时保留入口线路与 ISP" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 图中同时保留 Fusion 与 ISP</figcaption>
 </figure>
 
-1. 在 oixCloud 或 FlClash for oixCloud 打开「oixCloud → 节点筛选」，或在网页 [订阅管理](https://oixcloud.com/user/sub_manage) 编辑对应地址
+1. 在 oixFlow 或 FlClash for oixCloud 打开「oixCloud → 节点筛选」，或在网页 [订阅管理](https://oixcloud.com/user/sub_manage) 编辑对应地址
 2. 将 **ISP** 设为「仅保留」。使用客户端代理链时，将入口所属线路也设为「仅保留」，否则入口可能被筛掉
 3. 核对地区、名称条件和节点预览，确认需要的入口与出口都在保留列表中
 4. 保存并等待客户端完成节点更新；各客户端的自动刷新与手动同步入口见 [订阅与筛选](/account/subscriptions)
@@ -75,13 +75,13 @@ ISP 与 Edge 是两条独立线路；只选 Edge，或只按地区、名称筛�
 
 先确认入口与 Home ISP 都已加入当前节点列表。客户端代理链按入口到出口建立连接；链中成员必须可用，并满足该客户端的代理链约束
 
-### oixCloud 客户端代理链 {#oixcloud-chain}
+### oixFlow 客户端代理链 {#oixcloud-chain}
 
 以下编辑步骤适用于 iPhone / iPad；Apple TV 从手机或平板 [同步配置](/oixcloud/apple-tv)，不提供相同的代理链编辑器
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-chains-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 按顺序创建代理链">
-    <img src="/illustrations/oixcloud-chains-zh.svg?v=20261102-3" alt="oixCloud · 按顺序创建代理链" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-chains-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 按顺序创建代理链">
+    <img src="/illustrations/oixcloud-chains-zh.svg?v=20261123-1" alt="oixFlow · 按顺序创建代理链" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>通用代理链编辑器示意 · 本例用实际入口节点和 Home ISP 替换图中成员</figcaption>
 </figure>

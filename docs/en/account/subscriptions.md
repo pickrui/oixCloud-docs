@@ -6,7 +6,7 @@ description: Choose a subscription format, filter nodes, restore defaults and un
 
 ## Choose how to connect
 
-oixCloud, FlClash for oixCloud, the integrated OpenClash build, oixClash on Merlin routers and oixCloud Helper can sign in to retrieve managed profiles. For another compatible client, select its format in [Subscription management](https://oixcloud.com/user/sub_manage) and import that URL.
+oixFlow, FlClash for oixCloud, the integrated OpenClash build, oixClash on Merlin routers and oixCloud Helper can sign in to retrieve managed profiles. For another compatible client, select its format in [Subscription management](https://oixcloud.com/user/sub_manage) and import that URL.
 
 A full profile and a Provider node list serve different purposes. A Provider must be referenced by an existing client configuration; it is not a complete runnable profile. An Access Token is a sign-in credential, not a subscription URL.
 
@@ -14,17 +14,17 @@ A full profile and a Provider node list serve different purposes. A Provider mus
 
 1. Search for the node in your account’s [node list](https://oixcloud.com/user/node). If it is missing there too, check the active plan and the lines it includes.
 2. Open the **subscription this device uses**. If you set a filter, search for the node in the preview and check the line, region and name conditions. For a default smart subscription, check which lines your plan receives by default in the section below.
-3. In oixCloud on iPhone or iPad, select **Refresh Nodes** on the account page. In FlClash for oixCloud, select **Sync** on the oixCloud page to fetch the managed profile. **Refresh** on that page updates account information only. In another subscription client, update the imported URL and select the updated profile.
+3. In oixFlow on iPhone or iPad, select **Refresh Nodes** on the account page. In FlClash for oixCloud, select **Sync** on the oixCloud page to fetch the managed profile. **Refresh** on that page updates account information only. In another subscription client, update the imported URL and select the updated profile.
 4. Search for the same name again in the client. If it is still missing, include the client version, subscription format and whether the node appeared in the preview when contacting support. Keep the full subscription URL private.
 
 ## Configure a filter
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Filter lines, regions and names">
-    <img src="/illustrations/oixcloud-filter-en.svg?v=20261105-3" alt="Filter lines, regions and names" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-filter-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="Filter lines, regions and names">
+    <img src="/illustrations/oixcloud-filter-en.svg?v=20261123-1" alt="Filter lines, regions and names" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>oixCloud iPhone / iPad example · Follow the relevant guide for other clients</figcaption>
+  <figcaption>oixFlow iPhone / iPad example · Follow the relevant guide for other clients</figcaption>
 </figure>
 
 1. Open **oixCloud → Node Filter** in the client, or **Connection → Node filter…** in Helper. You can also edit the corresponding address on the website.
@@ -34,7 +34,7 @@ A full profile and a Provider node list serve different purposes. A Provider mus
 
 | Client | Applying a saved filter |
 | --- | --- |
-| oixCloud | Managed nodes refresh automatically; check the result and selected outbound. |
+| oixFlow | Managed nodes refresh automatically; check the result and selected outbound. |
 | FlClash for oixCloud | Starts an account refresh and managed-profile sync automatically. Wait for completion; if it fails, resolve the error and use **Sync** on the account page. |
 | oixCloud Helper | Fetches nodes and updates mappings. Run **Apply in Surge** again when using Surge. |
 | OpenClash | After saving in the web editor, restart OpenClash to fetch immediately or wait for the core's next subscription update. |
@@ -43,7 +43,7 @@ A full profile and a Provider node list serve different purposes. A Provider mus
 
 Names support case-insensitive regular expressions: `香港|日本` matches either word. Changing the interface language does not translate node names. Search within the preview only locates entries; it does not add a filter. Pending previews, invalid expressions and zero retained nodes prevent saving.
 
-See the illustrations for [oixCloud](/en/oixcloud/proxies#update-and-filter) and [FlClash for oixCloud](/en/flclash/profiles#managed-options).
+See the illustrations for [oixFlow](/en/oixcloud/proxies#update-and-filter) and [FlClash for oixCloud](/en/flclash/profiles#managed-options).
 
 ## Empty filters and restoring defaults
 
@@ -52,7 +52,7 @@ See the illustrations for [oixCloud](/en/oixcloud/proxies#update-and-filter) and
 | Official-client smart subscription | Uses Smart Selection's default lines by plan:<br>• **Plans with Fusion**: permitted Fusion and GIA (without dedicated IPs or Home ISP)<br>• **Plans with CIA / IXP**: CIA + IXP (without dedicated IPs or Home ISP)<br>• **Plans with Edge only**: Edge, Home ISP nodes eligible for default inclusion and the account's dedicated IPs<br>Only if that default set is empty does it fall back to permitted nodes eligible for default inclusion. |
 | Ordinary personal subscription URL | Returns permitted nodes eligible for default inclusion in that subscription format, without an additional custom filter. |
 
-In oixCloud, resetting a saved custom filter asks for confirmation and resets it on the server; an unsaved draft can simply be cleared. FlClash for oixCloud's **Restore default** submits the reset and starts sync. Helper clears the draft first, so you must still click **Save**.
+In oixFlow, resetting a saved custom filter asks for confirmation and resets it on the server; an unsaved draft can simply be cleared. FlClash for oixCloud's **Restore default** submits the reset and starts sync. Helper clears the draft first, so you must still click **Save**.
 
 Resetting does not increase plan permissions or make every node compatible with every subscription format. Visual filters replace the old All Nodes, Overseas Network and Emergency Mode controls.
 
@@ -76,7 +76,7 @@ The first official-client save creates and binds a dedicated client address when
 
 The website's [Custom Rules](https://oixcloud.com/user/rule) are shared by the account. Changes affect subscriptions or clients that use this list. Node filters are saved on subscription addresses and can differ between clients.
 
-oixClash uses this account rule list; supported plugin versions can read and edit it directly. After saving on the website, click **更新节点** (Update Nodes) in the plugin. See [oixClash account rules](/en/other/oixclash#_7-edit-account-custom-rules) for the steps. Local routing rules added inside the oixCloud App continue to be managed separately in that app.
+oixClash uses this account rule list; supported plugin versions can read and edit it directly. After saving on the website, click **更新节点** (Update Nodes) in the plugin. See [oixClash account rules](/en/other/oixclash#_7-edit-account-custom-rules) for the steps. Local routing rules added inside the oixFlow App continue to be managed separately in that app.
 
 Saving an empty list deletes the account rules, so keep anything you need first. After saving, also confirm that the client updated its configuration and check the matched rule on a new connection.
 

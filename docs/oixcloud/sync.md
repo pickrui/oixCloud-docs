@@ -7,14 +7,14 @@ description: "iCloud 同步与最近删除的操作步骤、适用范围与常�
 适用于 iPhone / iPad，电视同步使用独立开关
 
 ::: tip 先统一版本
-参与同步的设备使用 oixCloud 1.34 或更新版本。1.33 及更早版本采用不同同步机制，不应混用来验证同步
+参与同步的设备使用 oixFlow 1.34 或更新版本。1.33 及更早版本采用不同同步机制，不应混用来验证同步
 :::
 
 ## 开启同步
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-sync-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 选择 iCloud 同步内容">
-    <img src="/illustrations/oixcloud-sync-zh.svg?v=20261030-2" alt="oixCloud · 选择 iCloud 同步内容" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-sync-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 选择 iCloud 同步内容">
+    <img src="/illustrations/oixcloud-sync-zh.svg?v=20261123-1" alt="oixFlow · 选择 iCloud 同步内容" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>

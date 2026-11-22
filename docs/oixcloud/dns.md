@@ -4,7 +4,7 @@ description: "严格 DNS、分流解析与三个独立 IPv6 设置的操作和�
 
 # DNS 与 IPv6
 
-适用于提供这些设置的 oixCloud iPhone / iPad 版本；Apple TV 的界面单独见 [电视端教程](/oixcloud/apple-tv)。缺少下述开关时先核对客户端版本
+适用于提供这些设置的 oixFlow iPhone / iPad 版本；Apple TV 的界面单独见 [电视端教程](/oixcloud/apple-tv)。缺少下述开关时先核对客户端版本
 
 ## 先看当前生效来源
 
@@ -39,8 +39,8 @@ description: "严格 DNS、分流解析与三个独立 IPv6 设置的操作和�
 ## 为特定域名添加 DNS 规则
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-dns-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 添加分流 DNS 规则">
-    <img src="/illustrations/oixcloud-dns-zh.svg?v=20261030-2" alt="oixCloud · 添加分流 DNS 规则" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-dns-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 添加分流 DNS 规则">
+    <img src="/illustrations/oixcloud-dns-zh.svg?v=20261123-1" alt="oixFlow · 添加分流 DNS 规则" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>

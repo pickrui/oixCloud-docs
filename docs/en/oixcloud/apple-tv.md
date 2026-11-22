@@ -8,9 +8,15 @@ TV focuses on remote-friendly node selection and connections, not every iPhone/i
 
 ## Installation and system requirements
 
-Apple TV requires tvOS 18.0 or later. Find [oixCloud](https://apps.apple.com/us/app/oixcloud/id6782528093) in the TV's App Store using an Apple Account outside mainland China. The iPhone / iPad publishing the account and configuration must also run iOS / iPadOS 18.0 or later.
+Apple TV requires tvOS 18.0 or later, and the iPhone / iPad publishing the account and configuration must run iOS / iPadOS 18.0 or later. Find oixFlow in the TV's App Store using an Apple Account outside mainland China.
 
-Use the same App Store account in TestFlight on your iPhone or iPad and your Apple TV. Accept the [oixCloud beta invitation](https://testflight.apple.com/join/qMEsvKD1) on the phone or tablet, then open TestFlight on the TV, select oixCloud and choose **Install** or **Update**. Joining requires an open slot, and the build must be unexpired and support your tvOS version.
+You can also install the beta with TestFlight, using the same App Store account in TestFlight on the phone or tablet and the TV:
+
+1. Install TestFlight from the App Store on Apple TV.
+2. On your iPhone or iPad, install [TestFlight](https://apps.apple.com/app/id899247664) and accept the [oixFlow beta invitation](https://testflight.apple.com/join/bThPJNaf) with the same App Store account.
+3. Open TestFlight on the TV, select oixFlow and choose **Install**. Choose **Update** there when a new build is available.
+
+Joining requires an open slot, and the build must be unexpired and support your tvOS version.
 
 A mainland China Apple Account cannot install or update the beta directly. For the invitation and storefront options on your phone or tablet, see [Install or update with TestFlight](/en/oixcloud/connect#testflight).
 
@@ -18,8 +24,8 @@ A mainland China Apple Account cannot install or update the beta directly. For t
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/apple-tv-sync-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Enable sync in TV settings">
-    <img src="/illustrations/apple-tv-sync-en.svg?v=20261102-3" alt="Enable sync in TV settings" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/apple-tv-sync-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="Enable sync in TV settings">
+    <img src="/illustrations/apple-tv-sync-en.svg?v=20261123-1" alt="Enable sync in TV settings" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>

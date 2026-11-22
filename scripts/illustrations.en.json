@@ -4,7 +4,7 @@
       "Cron 定时": "Cron",
       "MITM 证书": "MITM Certificates",
       "iCloud 同步": "iCloud Sync",
-      "oixCloud 已启动": "oixCloud Started",
+      "oixFlow 已启动": "oixFlow Started",
       "上次同步": "Last Synced",
       "主机": "Host",
       "主页": "Home",
@@ -1507,7 +1507,7 @@
       [
         [
           "Enable local access",
-          "Keep oixCloud connected. The other device must be on the same LAN."
+          "Keep oixFlow connected. The other device must be on the same LAN."
         ],
         [
           "Open the listed HTTPS address",

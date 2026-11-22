@@ -9,8 +9,8 @@ description: "策略组、自动选择与代理链的操作步骤、适用范围
 ## 选择策略组
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-policies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 创建策略组">
-    <img src="/illustrations/oixcloud-policies-zh.svg?v=20261030-2" alt="oixCloud · 创建策略组" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-policies-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 创建策略组">
+    <img src="/illustrations/oixcloud-policies-zh.svg?v=20261123-1" alt="oixFlow · 创建策略组" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -46,8 +46,8 @@ description: "策略组、自动选择与代理链的操作步骤、适用范围
 ## 创建代理链
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-chains-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · 按顺序创建代理链">
-    <img src="/illustrations/oixcloud-chains-zh.svg?v=20261102-3" alt="oixCloud · 按顺序创建代理链" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixcloud-chains-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 按顺序创建代理链">
+    <img src="/illustrations/oixcloud-chains-zh.svg?v=20261123-1" alt="oixFlow · 按顺序创建代理链" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>

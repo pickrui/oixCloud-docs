@@ -29,7 +29,7 @@ Separate three questions: does traffic reach the client, which route should it t
 | Global | Uses the selected outbound for most captured traffic | Useful for a brief comparison; local-network handling still depends on client settings |
 | Direct | Accesses destinations without a proxy node | Does not test whether a remote node works |
 
-In oixCloud, the Proxy rule target follows the current proxy selection; a specific node or group uses that outbound. In FlClash for oixCloud, targets must exist in the active profile. `PROXY` may simply be a group name in one profile, not a universal keyword for the current proxy. Do not copy targets across clients without checking.
+In oixFlow, the Proxy rule target follows the current proxy selection; a specific node or group uses that outbound. In FlClash for oixCloud, targets must exist in the active profile. `PROXY` may simply be a group name in one profile, not a universal keyword for the current proxy. Do not copy targets across clients without checking.
 
 ## Credentials
 

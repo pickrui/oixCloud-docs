@@ -1,15 +1,15 @@
 [
   {
     "terms": [
-      "oixCloud 第三方节点",
-      "oixCloud 第三方订阅",
-      "oixCloud third-party nodes",
-      "oixCloud third-party subscription",
-      "oixCloud 更新第三方",
-      "oixCloud mixed group",
-      "oixCloud 混合策略组",
-      "oixCloud update subscription",
-      "oixCloud Import Rule Set"
+      "oixFlow 第三方节点",
+      "oixFlow 第三方订阅",
+      "oixFlow third-party nodes",
+      "oixFlow third-party subscription",
+      "oixFlow 更新第三方",
+      "oixFlow mixed group",
+      "oixFlow 混合策略组",
+      "oixFlow update subscription",
+      "oixFlow Import Rule Set"
     ],
     "targets": [
       "/oixcloud/proxies.html"
@@ -276,7 +276,7 @@
   },
   {
     "terms": [
-      "oixCloud iCloud Sync",
+      "oixFlow iCloud Sync",
       "iCloudSync"
     ],
     "targets": [

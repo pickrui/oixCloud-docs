@@ -24,7 +24,7 @@ function searchableText(section, md, includeContent = false) {
 // Client named in the page title, for a path without the locale prefix
 export function clientName(relative) {
   return relative.startsWith('flclash/') ? 'FlClash for oixCloud'
-    : relative.startsWith('oixcloud/') ? 'oixCloud'
+    : relative.startsWith('oixcloud/') ? 'oixFlow'
     : relative.startsWith('other/helper-') || relative === 'other/surge.md' ? 'oixCloud Helper' : ''
 }
 
@@ -65,6 +65,7 @@ export function tokenizeSearch(text) {
     .replace(/\bweb[\s_-]*dav\b/g, 'webdav')
     .replace(/\bfl[\s_-]*clash\b/g, 'flclash')
     .replace(/\boix[\s_-]*cloud\b/g, 'oixcloud')
+    .replace(/\boix[\s_-]*flow\b/g, 'oixflow')
     .replace(/\boix[\s_-]*clash\b/g, 'oixclash')
     .replace(/账号|帐号|帐户/g, '账户')
   const aliases = [

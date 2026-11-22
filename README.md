@@ -19,7 +19,7 @@ pnpm preview
 - Simplified Chinese: `docs/<category>/<topic>.md`
 - English: `docs/en/<category>/<topic>.md`
 - Main categories: `start`, `clients`, `account`, `help`
-- Client articles retain their existing `oixcloud`, `flclash` and `other` paths
+- Client articles retain their existing `oixcloud`, `flclash` and `other` paths; `oixcloud` holds the oixFlow guides for iPhone, iPad and Apple TV
 - Sidebar: `docs/.vitepress/navigation.json`
 - Theme, search and locales: `docs/.vitepress/config.mjs`
 

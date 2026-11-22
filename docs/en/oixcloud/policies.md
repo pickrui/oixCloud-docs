@@ -9,8 +9,8 @@ For iPhone / iPad. Supported configuration can also sync to Apple TV.
 ## Create and select a group
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-policies-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud · Create a policy group">
-    <img src="/illustrations/oixcloud-policies-en.svg?v=20261030-en1" alt="oixCloud · Create a policy group" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-policies-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Create a policy group">
+    <img src="/illustrations/oixcloud-policies-en.svg?v=20261123-1" alt="oixFlow · Create a policy group" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -44,8 +44,8 @@ After testing finishes, check Best Available's current choice on Home and create
 ## Proxy chains
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-chains-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="oixCloud · Build a proxy chain in order">
-    <img src="/illustrations/oixcloud-chains-en.svg?v=20261102-3" alt="oixCloud · Build a proxy chain in order" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixcloud-chains-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Build a proxy chain in order">
+    <img src="/illustrations/oixcloud-chains-en.svg?v=20261123-1" alt="oixFlow · Build a proxy chain in order" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>

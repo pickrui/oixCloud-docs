@@ -12,7 +12,7 @@ description: Start with the symptom, then contact support with useful evidence.
 | Find out why a payment has not activated a plan | [Check the top-up and plan records](/en/help/support#payment) |
 | Investigate limits despite remaining traffic | [Limits and recovery conditions](/en/account/traffic#limits) |
 | Repair a missing DLL on Windows | [FlClash for oixCloud: missing DLL repair](/en/flclash/windows-dll) |
-| Inspect oixCloud requests and routes | [Requests and diagnostics](/en/oixcloud/diagnostics) |
+| Inspect oixFlow requests and routes | [Requests and diagnostics](/en/oixcloud/diagnostics) |
 | Run FlClash for oixCloud network checks | [Network checks and connections](/en/flclash/diagnostics) |
 | Submit errors, logs and reproduction steps | [Contact support with useful details](/en/help/support) |
 

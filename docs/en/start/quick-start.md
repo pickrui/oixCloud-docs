@@ -24,7 +24,7 @@ Email/password and Google sign-in issue or reuse the client's dedicated token, s
 
 | Device | Guide |
 | --- | --- |
-| iPhone / iPad | [oixCloud setup](/en/oixcloud/connect) |
+| iPhone / iPad | [oixFlow setup](/en/oixcloud/connect) |
 | Apple TV | [Apple TV and sync](/en/oixcloud/apple-tv) |
 | Windows / macOS / Android / Linux | [FlClash for oixCloud setup](/en/flclash/connect) |
 | OpenWrt router | [OpenClash](/en/other/openclash) |

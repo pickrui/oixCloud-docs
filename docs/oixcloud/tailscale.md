@@ -9,8 +9,8 @@ description: "Tailscale、子网与出口节点的操作步骤、适用范围与
 ## 添加并授权网络
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-tailscale-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixCloud · 添加并授权 Tailscale 网络">
-    <img src="/illustrations/oixcloud-tailscale-zh.svg?v=20261030-2" alt="oixCloud · 添加并授权 Tailscale 网络" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixcloud-tailscale-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 添加并授权 Tailscale 网络">
+    <img src="/illustrations/oixcloud-tailscale-zh.svg?v=20261123-1" alt="oixFlow · 添加并授权 Tailscale 网络" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -18,7 +18,7 @@ description: "Tailscale、子网与出口节点的操作步骤、适用范围与
 1. 打开「设置」，在「网络」分区进入「Tailscale」并添加网络
 2. 选择交互式登录，打开授权页面并授权当前设备；或填写属于该 Tailnet 的认证密钥
 3. 返回应用等待完成，若提示等待设备审批，在 Tailnet 管理后台批准
-4. 启动 oixCloud VPN，检查网络状态，再访问已知设备的地址或 MagicDNS 名称
+4. 启动 oixFlow VPN，检查网络状态，再访问已知设备的地址或 MagicDNS 名称
 
 仅登录不会接管流量。认证密钥是设备注册凭据，不是后台管理员 API Key
 
