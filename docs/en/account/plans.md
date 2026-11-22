@@ -410,7 +410,7 @@ A pending plan with less than 6 hours remaining has no manual activation button.
   <figcaption>Interface simulation · Fictional plan and amounts</figcaption>
 </figure>
 
-**A refund ends that plan and returns funds only to account balance, not the original payment provider or a withdrawal; used coupon codes are not returned.** Self-service refunds require an eligible unused pending record with a positive refundable paid amount: annual plans and specific quarterly plans that show the button. Not every quarterly plan qualifies; monthly and semiannual plans do not offer this self-service refund. A previously used plan switched back to Pending is not eligible.
+**A refund ends that plan and returns funds only to account balance, not the original payment provider or a withdrawal; used coupon codes are not returned.** Self-service refunds are available for eligible unused pending records with a positive refundable paid amount, whatever the billing period (monthly, quarterly, semiannual or annual), and return the record's full paid amount. Pay-as-you-go and developer plans do not offer self-service refunds. A previously used plan switched back to Pending is not eligible.
 
 **New-rule orders that received purchase-gift credits do not offer self-service balance refunds, even before gifts are claimed. Historical orders keep the original rule: an eligible refund revokes unclaimed gifts; any claimed gift requires support, and claimed gifts are retained.** Check [gift status and refund rules](/en/account/rewards#refunds) before proceeding.
 
@@ -419,7 +419,7 @@ A pending plan with less than 6 hours remaining has no manual activation button.
 3. Select **Confirm** to proceed or **Cancel** to keep the plan. If the amount or state changed, refresh the record and check again.
 4. Verify account balance and the **Refunded** status. That record can no longer be activated or renewed; refunding it does not end a different plan currently in use.
 
-If the button is missing, check the period, usage history, record state and whether it received gift credits under the new rule; historical orders also check whether a gift was claimed. Do not activate a plan to try to qualify for a refund. If the result is unclear, refresh the balance and records, retain the message and provide details through [payment and plan support](/en/help/support#payment) rather than resubmitting.
+If the button is missing, check the plan type (pay-as-you-go and developer plans have none), usage history, record state and whether it received gift credits under the new rule; historical orders also check whether a gift was claimed. Do not activate a plan to try to qualify for a refund. If the result is unclear, refresh the balance and records, retain the message and provide details through [payment and plan support](/en/help/support#payment) rather than resubmitting.
 
 ## Choose the operation for your goal
 
