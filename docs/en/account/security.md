@@ -72,12 +72,12 @@ Manual tokens stop authenticating at expiry and do not renew automatically throu
 
 ## Telegram binding and daily notifications {#notifications}
 
-1. Open [Account Settings → Notifications and Telegram](https://oixcloud.com/user/edit#settings-telegram). The Telegram card shows **Bound** or **Not bound** next to its title. If unbound, select **Connect Telegram** and follow the bot's instructions; the page reloads once binding is complete. The link is created when you click it, so if it expires, click it again.
-2. **No Telegram username set** on a card marked **Bound** still means the account is bound. You do not need to bind it again just to add a username.
-3. Set email and Telegram independently on the **Daily notifications** card next to it, then wait for the status text to confirm the state. Telegram notifications are unavailable until the account is bound.
+1. Open [Account Settings → Notifications and Telegram](https://oixcloud.com/user/edit#settings-telegram). The Telegram card shows **Connected** or **Not connected** next to its title. If not connected, select **Connect Telegram** and follow the bot's instructions; the page reloads once binding is complete. The link is created when you click it, so if it expires, click it again.
+2. **No Telegram username set** on a card marked **Connected** still means the account is connected. You do not need to connect it again just to add a username.
+3. Set email and Telegram independently on the **Daily notifications** card next to it, then wait for the status text to confirm the state. Telegram notifications are unavailable until the account is connected.
 4. If saving fails or is unconfirmed, reload the page to check the actual state before retrying. Do not click repeatedly while a save is pending.
 
-These switches control daily notifications only; they do not establish whether security, payment or service notices are disabled. Unbinding disables Telegram sign-in, daily notifications, the bot, the user group and the in-Telegram user center—confirm you no longer need the binding before removing it.
+These switches control daily notifications only; they do not establish whether security, payment or service notices are disabled. Disconnecting disables Telegram sign-in, daily notifications, the bot, the user group and the in-Telegram user center—confirm you no longer need the connection before removing it. To disconnect, select **Disconnect** on the Telegram card and confirm with a passkey or your current sign-in password in the dialog.
 
 ## Before changing your password {#change-password}
 
@@ -113,10 +113,10 @@ Once enabled, password sign-in to the website also requires a six-digit code. Fo
 
 1. Open [Account Settings → Sign-in and security](https://oixcloud.com/user/edit#settings-totp); the link opens the setup dialog directly (from the page itself, select **Turn on** on the **Two-step verification** card).
 2. Follow the steps in the dialog: scan the QR code with your authenticator, or enter the displayed secret manually. To use a different secret, select **Regenerate**; the page reloads and returns to the dialog, and you add the new QR code again.
-3. Enter the authenticator's six-digit code, select **Enable two-step verification**, and wait for confirmation that TOTP is enabled.
+3. Enter the authenticator's six-digit code, select **Enable two-step verification**, and wait for confirmation that two-step verification is on.
 4. Keep a secure way to recover your authenticator. The QR code and secret generate login codes; never include them in screenshots, logs or support tickets.
 
-To disable it, select **Turn off** on the **Two-step verification** card; this also requires a valid code. If verification fails, check device time and the selected account, then try a newly generated code. Follow the stated wait period after too many attempts. If you lost the authenticator and cannot verify, explain the situation in a [support ticket](/en/help/support) instead of repeatedly deleting sign-in credentials.
+To disable it, select **Turn off** on the **Two-step verification** card, enter the current six-digit code and select **Continue**, then confirm with a passkey or your current sign-in password in the dialog. If verification fails, check device time and the selected account, then try a newly generated code. Follow the stated wait period after too many attempts. If you lost the authenticator and cannot verify, explain the situation in a [support ticket](/en/help/support) instead of repeatedly deleting sign-in credentials.
 
 ## Change your nickname {#nickname}
 
@@ -129,10 +129,12 @@ You can change your own nickname once a year. The first change is available at a
 You can change your own email once a year. The first change is available at any time; during the year you cannot request a code and the card shows the next available date. A failed attempt, such as a wrong code or password, does not use up the change. If you need to change it sooner, for example because the old mailbox is gone, explain the situation through a [ticket](/en/help/support).
 
 1. Open [Account Settings → Profile](https://oixcloud.com/user/edit#settings-email); the link opens the change form on the **Email** card. Enter the new address and select **Get code**, or press Enter in the address field.
-2. Read the code in the new inbox, enter it and choose **Change email** (or press Enter in the code field), then confirm with a passkey or your current sign-in password in the dialog.
+2. Read the 8-digit code in the new inbox, enter it and choose **Change email** (or press Enter in the code field), then confirm with a passkey or your current sign-in password in the dialog.
 3. Confirm the success message. The change ends your current session, so sign in again with the new address, then check the email shown on your account.
 
-The security notice uses the contact details from before the change; its email goes to the old address. Contact support immediately if you did not make the change. If too many incorrect-password attempts are reported, wait as instructed before trying again. This action is unavailable when email changes are disabled.
+The security notice uses the contact details from before the change; its email goes to the old address. Contact support immediately if you did not make the change. This action is unavailable when email changes are disabled.
+
+Incorrect passwords entered when changing your email or password, adding or deleting a passkey, creating or refreshing an Access Token, disconnecting Telegram, turning off two-step verification or deleting the account all count together. After 5 incorrect attempts within 15 minutes, all of these actions ask you to wait before trying again.
 
 ## What should I keep private?
 
@@ -152,7 +154,7 @@ Website/client sign-ins and authenticated activity can update login activity. Ac
 
 1. Open the token page and identify the intended client or manual token by its note and source.
 2. Distinguish signing out on one device from revoking a server token. Official-client sign-out clears local sign-in state.
-3. Delete the relevant token on the website if it leaked or is no longer needed. Same-client devices on the account may share it and will all be affected.
+3. Delete the relevant token on the website if it leaked or is no longer needed. Same-client devices on the account may share it and will all be affected. Each sign-in token lists the devices that recently used it (matched by client type), and the delete confirmation names the devices that need to sign in again.
 4. Sign in again on devices you still use. Also check the resulting state on devices that sync account information.
 
 Manual tokens have separate expiry dates. Sign-in tokens are not automatically reclaimed merely because of repeated logins. A shared client token does not provide per-device revocation.
