@@ -8,12 +8,12 @@ TV focuses on remote-friendly node selection and connections, not every iPhone/i
 
 ## Installation and system requirements
 
-Apple TV requires tvOS 18.0 or later, and the iPhone / iPad publishing the account and configuration must run iOS / iPadOS 18.0 or later. Find oixFlow in the TV's App Store using an Apple Account outside mainland China.
+Apple TV requires tvOS 18.0 or later, and the iPhone / iPad publishing the account and configuration must run iOS / iPadOS 18.0 or later. Using an Apple Account outside mainland China, search for oixFlow in the TV’s App Store. Check the [App Store listing](https://apps.apple.com/app/id6838819085) for availability in your region.
 
 You can also install the beta with TestFlight, using the same App Store account in TestFlight on the phone or tablet and the TV:
 
 1. Install TestFlight from the App Store on Apple TV.
-2. On your iPhone or iPad, install [TestFlight](https://apps.apple.com/app/id899247664) and accept the [oixFlow beta invitation](https://testflight.apple.com/join/bThPJNaf) with the same App Store account.
+2. On your iPhone or iPad, install [TestFlight](https://apps.apple.com/app/id899247664) and accept the [oixFlow beta invitation](https://testflight.apple.com/join/CfGzSk6M) with the same App Store account.
 3. Open TestFlight on the TV, select oixFlow and choose **Install**. Choose **Update** there when a new build is available.
 
 Joining requires an open slot, and the build must be unexpired and support your tvOS version.
@@ -55,6 +55,8 @@ The phone must be signed in with **Sync to Apple TV** turned on. If the phone ha
 ## Everyday use
 
 Use the remote to choose a node or group and inspect latency and connection status. Perform complex node, chain and rule organization on the phone/tablet before syncing.
+
+Open the proxy picker on Home and select **Test All** to check the listed proxies and chains. Each result appears under its name so you can choose an exit with the remote.
 
 ## Sync or connection failures
 

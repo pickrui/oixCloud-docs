@@ -32,6 +32,8 @@ Download the [public launcher ZIP](https://github.com/pickrui/oixcloud-external-
 3. Open **Account → Sign in…** from the oixCloud menu-bar icon. First sign in with email/password to create the dedicated oixCloud Helper token; you can use that Access Token afterward. See [first sign-in](/en/account/security#first-client-login) for obtaining an oixCloud password after Google registration and restricting client password sign-in.
 4. Wait for plan and node retrieval. The top of the menu shows progress and results; act on the specific error if an operation fails.
 
+If Helper is waiting for approval, open **Approve this device…** in its menu bar and [follow the device approval steps](/en/account/security#device-approval) before loading managed nodes.
+
 ## Choose an integration mode
 
 Use **Connection → Mode…**. Local port mapping is the default.

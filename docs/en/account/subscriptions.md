@@ -76,6 +76,8 @@ The first official-client save creates and binds a dedicated client address when
 
 The website's [Custom Rules](https://oixcloud.com/user/rule) are shared by the account. Changes affect subscriptions or clients that use this list. Node filters are saved on subscription addresses and can differ between clients.
 
+If saving reports an incorrectly capitalized policy group, correct the name on the indicated line. For a custom node or template-specific group, also check the resulting subscription. Clash configurations omit rules whose targets are missing.
+
 oixClash uses this account rule list; supported plugin versions can read and edit it directly. After saving on the website, click **更新节点** (Update Nodes) in the plugin. See [oixClash account rules](/en/other/oixclash#_7-edit-account-custom-rules) for the steps. Local routing rules added inside the oixFlow App continue to be managed separately in that app.
 
 Saving an empty list deletes the account rules, so keep anything you need first. After saving, also confirm that the client updated its configuration and check the matched rule on a new connection.

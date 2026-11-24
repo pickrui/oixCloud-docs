@@ -72,14 +72,14 @@ If you changed IPv4 Only on another page, refresh the open WARP page before chec
 
 ## Find and update multiple nodes {#bulk-settings}
 
-Traffic route categories show their lists without pagination. HTTP/3, WARP and IPv4 Only offer node search, status filters and bulk settings. Streaming unlock is configured separately for each node and service, with search when there are many nodes. Internal and external relay [bulk deletion](/en/account/relay#bulk-delete) has its own scope.
+Traffic route categories show their lists without pagination. HTTP/3, WARP and IPv4 Only offer node search, status filters and bulk settings. Streaming regions are set per node and service. You can also filter nodes and restore their defaults in bulk. Internal and external relay [bulk deletion](/en/account/relay#bulk-delete) has its own scope.
 
 1. Search in the relevant category and optionally filter by **Enabled**, **Disabled** or another status.
 2. Select individual nodes or use the checkbox in the table header for **every available node matching the current search and filter**, including rows below the visible screen. Changing the search or filter clears the selection.
 3. Choose a bulk action, check the count on **Apply (N)**, then apply it. Unavailable nodes and nodes already at the requested value are skipped, so the applied count may be lower than the selected count.
 4. Wait for the save results. Before confirming a WARP relay-cleanup notice, review which relays it affects. WARP smart fallback changes only apply to nodes with WARP enabled; preference changes also skip IPv4 Only nodes.
 
-Nodes are saved one at a time. A later failure does not undo completed changes. If a timeout or similar interruption stops the batch, the page distinguishes confirmed saves, unconfirmed results and unattempted nodes. Refresh to check their state before retrying the nodes that still need changes.
+The panel checks every submitted node before saving the batch. If any node cannot be changed, the entire batch is rejected. If the request times out without a result, refresh the page to check the saved settings before retrying.
 
 <span id="select-regions-by-streaming-service"></span>
 
@@ -94,7 +94,7 @@ This public-beta feature currently supports selected Hong Kong IXP, Fusion-famil
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
-1. Open [Streaming unlock](https://oixcloud.com/user/media-unlock) and find the node you actually use; search is available when there are many nodes. The list has no pagination, and this page has no bulk region-setting action.
+1. Open [Streaming unlock](https://oixcloud.com/user/media-unlock). Search for a node or filter for custom settings, node defaults or unavailable nodes. To clear all custom regions on several nodes, select them and restore their defaults in bulk. To change just one service, follow the steps below.
 2. Find the service under that node and choose a region from its dropdown. Services are independent, so leave others unchanged. The choice applies across the backends of that logical node.
 3. Changes save automatically. Wait for **Saved** below the dropdown; there is no separate save button. After an error or timeout, refresh to check the result rather than treating the displayed dropdown value as proof of a server save.
 4. Wait for node synchronization, close the service's old connections, then reconnect through the modified node and verify the library and actual playback. A region-only change **does not require a subscription refresh**. If you also changed relays or HTTP/3, follow those guides to update the client profile.

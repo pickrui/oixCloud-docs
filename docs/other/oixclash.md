@@ -54,6 +54,8 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 
 登录后显示账号、套餐、到期时间与流量。粘贴其他 oixCloud 客户端的令牌时，插件会换成 oixClash 自己的令牌，节点筛选按 oixClash 单独保存；网站上创建的令牌无法转换，按原样使用
 
+如果登录后提示需要批准，在插件账户行点「登记设备」，按[设备批准步骤](/account/security#device-approval)完成确认，再获取托管节点
+
 ## 4. 开启代理
 
 <figure class="guide-figure">

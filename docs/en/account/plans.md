@@ -27,7 +27,7 @@ Use the fiat methods currently shown in checkout, such as Alipay or WeChat Pay. 
 
 1. Sign in, open [Cashier](https://oixcloud.com/user/v2/counter), choose a payment method and enter the amount.
 2. Check **CNY / USD** beside the field. CNY is the RMB order amount. USD is a reference conversion: review and confirm the CNY amount before placing the order. Use CNY if the exchange rate is unavailable.
-3. Pay using that order's QR code or link. Check the actual amount and fees on the payment order.
+3. On a phone, use the button to open Alipay or WeChat Pay when offered. You can also use the QR code or payment link for that order. Check the actual amount and fees on the payment order.
 4. Return to [Top-up History](https://oixcloud.com/user/code), verify the credit and refresh your balance. For checkout associated with a plan, also verify the resulting purchase in Plan Management.
 
 ::: tip Refresh the page if you encounter any fiat payment issue

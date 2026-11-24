@@ -24,6 +24,8 @@ Google 入口目前适用于支持该功能的 oixFlow iPhone / iPad 版本和 F
 - 账户开启了两步验证，或者设备是用粘贴的 Token、从备份恢复的配置登录的，客户端会显示确认码，需要手动批准
 - Apple TV 由同一 Apple 账户下已批准的 iPhone / iPad 自动批准，见 [Apple TV 批准](/oixflow/apple-tv#approval)
 
+已绑定 Telegram 时，新设备首次等待批准，机器人会私聊发送客户端名称、设备指纹和「批准」「拒绝」按钮。核对指纹后处理；不是本人发起的请求请选择「拒绝」。误拒后，等原确认码的 10 分钟有效期结束，再从自己的设备重新申请
+
 手动批准：
 
 1. 在客户端打开「批准这台设备」，记下确认码和设备指纹
@@ -53,7 +55,7 @@ Google 入口目前适用于支持该功能的 oixFlow iPhone / iPad 版本和 F
 3. 完成验证后允许返回原客户端；若浏览器没有自动返回，点击完成页的「返回 App」
 4. 等待账户信息和托管节点加载，再建立连接。超时或返回验证失败时，从客户端重新发起，不重复打开旧完成页
 
-Google 登录需要客户端和网站同时支持。若当前版本没有入口，继续使用邮箱/密码或 Access Token；不要把 Google 密码填进 oixCloud 的密码框。用 Google 注册时，结果页会显示一次初始密码，同时发到邮箱。需要账户密码时，可在 Gmail（包括垃圾邮件）查找这封邮件；找不到时重置密码：已登录时打开 [账户设置 → 登录密码](https://oixcloud.com/user/edit#settings-password)，在展开的表单里「当前密码」下方点「忘记当前密码」，未登录时在 [网站登录页](https://oixcloud.com/auth/login) 点「忘记密码」。重置后所有客户端需要重新登录，主订阅地址会更换，两步验证会关闭，Passkey 会清除
+Google 登录需要客户端和网站同时支持。若当前版本没有入口，继续使用邮箱/密码或 Access Token；不要把 Google 密码填进 oixCloud 的密码框。用 Google 注册时，结果页会显示一次初始密码，网站也会尝试发到邮箱。需要账户密码时，可在 Gmail（包括垃圾邮件）查找这封邮件；找不到时重置密码：已登录时打开 [账户设置 → 登录密码](https://oixcloud.com/user/edit#settings-password)，在展开的表单里「当前密码」下方点「忘记当前密码」，未登录时在 [网站登录页](https://oixcloud.com/auth/login) 点「忘记密码」。重置后所有客户端需要重新登录，主订阅地址会更换，两步验证会关闭，Passkey 会清除
 
 ### Google 登录排查 {#google-troubleshooting}
 

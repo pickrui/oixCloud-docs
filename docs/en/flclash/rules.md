@@ -43,6 +43,8 @@ Domain fields do not take full page URLs. Old connections can survive a rule cha
 
 <span id="groups-and-scripts"></span>
 
+An added rule can use a named exit such as `Media`. In the profile override, map it to a node or group. The default mapping looks for a group or node of the same name, then falls back to the target of the profile’s last `MATCH` rule. If a previously selected target turns red, choose a current target and test a new connection.
+
 ## Add a policy group
 
 Create named groups with valid members before referencing them. Recheck rule targets after renaming or deleting a group.
@@ -52,6 +54,8 @@ To add another subscription's nodes to the managed profile, add a **Proxy provid
 ## Override scripts
 
 **Tools → Advanced Configuration → Scripts** changes generated configuration; it is not an HTTP-response rewriting interface. Use trusted scripts, preserve a recovery copy and disable the script for comparison if something fails.
+
+A standard profile can use a script together with added rules. The script runs first, then enabled added rules go ahead of the rules it returns. When checking which rule matched, review the added rules enabled for that profile.
 
 Direct edits to a downloaded subscription may disappear on sync. Keep lasting changes in the appropriate override controls.
 

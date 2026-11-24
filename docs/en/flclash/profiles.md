@@ -117,7 +117,7 @@ Reference the subscription as a **Proxy provider** in the provider library to up
 
 The domain and names above are examples; use your actual destination. Creating a group or saving a resource does not send websites through it automatically: a rule must reference the group. New groups are not automatically inserted into existing manual selection groups either. Personal rules precede subscription rules, while existing added rules may still take priority; see [overrides](/en/flclash/rules).
 
-This reference uses only the third-party subscription's nodes. **It does not apply that subscription's groups, rules, DNS or TUN settings.** The proxy provider keeps its remote URL. After applying the profile, open **Providers** from the **Proxies** page menu and use the update button to refresh the relevant proxy provider. **Sync** on the account page updates the managed profile; syncing a separate URL profile does not update this proxy provider either.
+This reference uses only the third-party subscription's nodes. **It does not apply that subscription's groups, rules, DNS or TUN settings.** The proxy provider keeps its remote URL. After applying the profile, open **Providers** from the **Proxies** page menu and use the update button to refresh the relevant proxy provider. **Refresh nodes** on the account page updates the managed profile; syncing a separate URL profile does not update this proxy provider either.
 
 An oixCloud managed profile cannot serve as a proxy provider for another **Custom profile**, and **Import config** does not accept oixCloud managed URLs. Keep the managed profile and reference third-party sources as described above.
 
@@ -148,7 +148,7 @@ Subscription URLs and node links may contain credentials. Do not post them in pu
 
 Use **Sync** in the profile menu. Edit a profile to enable automatic updates and set an interval. Check the result: a failed download does not mean new nodes were applied.
 
-For nodes obtained by signing in to your account, open the **oixCloud** page and choose **Sync** to fetch the managed profile. Search for the node again under **Proxies**. **Refresh** updates account and plan information only.
+For managed nodes, select **Refresh nodes** on the **oixCloud** page. This refreshes the account and then syncs the managed profile. In older builds with separate **Refresh** and **Sync** actions, use **Sync**. When it finishes, search for the node under **Proxies**.
 
 ## Managed options
 
@@ -159,7 +159,7 @@ For nodes obtained by signing in to your account, open the **oixCloud** page and
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
-Open **oixCloud → Node Filter**, select lines, regions and names, check the preview and save. Saving starts an account refresh and managed-profile sync automatically. Wait for completion and check the nodes; if it fails, resolve the reported error and use **Sync** on the account page. Restore Default uses Smart Selection. Devices using this client type on your account share the filter; see [subscriptions and filters](/en/account/subscriptions).
+Open **oixCloud → Node Filter**, select lines, regions and names, check the preview and save. Saving starts an account refresh and managed-profile sync automatically. Wait for completion and check the nodes; if it fails, resolve the reported error and use **Refresh nodes** on the account page. Restore Default uses Smart Selection. Devices using this client type on your account share the filter; see [subscriptions and filters](/en/account/subscriptions).
 
 Profile editing still offers supported options such as **Minimal Configuration** (simplified rules) and TCP Fast Open. Keep their defaults unless needed. Filtering cannot expand plan access, and conditions retaining zero nodes cannot be saved.
 

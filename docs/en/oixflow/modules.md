@@ -36,6 +36,8 @@ Format suggestions are only guidance. A successful import does not guarantee tha
 
 After updates, review warnings and inactive content, especially changed scripts, DNS and hosts. Handle unsupported items according to their specific warnings.
 
+When an update flags a script change, review the differences in the script and the requests it can match. Select **Apply Update** to use the new version. The existing version stays in use while you review.
+
 ## Resolve conflicts
 
 Modules apply in order. The first eligible module owns a conflicting DNS override; scripts matching the same host also respect module order.

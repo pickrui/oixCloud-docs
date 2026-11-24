@@ -32,6 +32,8 @@ Helper 的系统要求与 FlClash for oixCloud 不同，不要混用安装包
 3. 打开菜单栏 oixCloud 的「账户 → 登录…」，首次用邮箱和密码登录，生成 oixCloud Helper 专属 Token；之后可使用对应的 Access Token。Google 登录用户获取账户密码的方法与禁止客户端邮箱/密码登录的设置见 [首次登录说明](/account/security#first-client-login)
 4. 等待套餐和节点获取完成。菜单顶部有操作进度和结果，失败时查看具体原因后再处理
 
+Helper 提示等待批准时，从菜单栏打开「批准这台设备…」，按[设备批准步骤](/account/security#device-approval)完成确认，再获取托管节点
+
 ## 选择接入模式
 
 在「连接设置 → 接入模式…」选择，默认是本地多端口映射

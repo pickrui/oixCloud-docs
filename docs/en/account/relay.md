@@ -80,6 +80,8 @@ After saving, refresh the client subscription or managed profile, use a relay-ca
 
 External relay sends traffic to a specified host and port. Decide which mode you need before filling in the form. **Leaving Protocol keep mode unchecked selects protocol conversion.** Some lines automatically enable and lock protocol-preserving mode.
 
+A Fusion node with its own public entry can be used as an external relay source. A Fusion node that uses its parent’s entry is ineligible. Check the entry list when adding the rule.
+
 | Mode | Client connection details | Destination preparation |
 | --- | --- | --- |
 | Protocol-preserving | The subscription switches to the entry address, personal port and the account's AnyTLS credentials. | Run the form's generated installation command on your own destination server; its listening port must match the destination port. |

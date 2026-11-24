@@ -814,6 +814,9 @@
       "剩余时间": "Time Left",
       "20 天": "20 d",
       "剩余流量": "Data Left"
+    },
+    "flclash-login": {
+      "注册": "Register"
     }
   },
   "scenes": {
@@ -822,16 +825,16 @@
       "oixCloud → Sign In",
       [
         [
-          "Choose a sign-in method",
-          "Use an Access Token, email and password, or Google for an existing account."
+          "Enter email and password",
+          "The form opens in email mode. Existing users can also sign in with Google."
         ],
         [
-          "Enter your credentials",
-          "The example email is fictional; no password is shown."
+          "Select Sign In",
+          "If prompted before loading managed nodes, check the device approval request."
         ],
         [
-          "Wait for managed nodes",
-          "After sign-in, wait for nodes to load before connecting on Home."
+          "Use an Access Token",
+          "Switch to token sign-in at the bottom of the page."
         ]
       ]
     ],
@@ -1110,16 +1113,16 @@
       "Sidebar → oixCloud → Login",
       [
         [
-          "Choose your credentials",
-          "Google, Access Token and email/password sign-in are supported."
+          "Enter email and password",
+          "Start with email sign-in. Use Forgot password if needed."
         ],
         [
-          "Submit with the top-right checkmark",
-          "This confirms the form. No real account or token is shown."
+          "Select Sign in",
+          "Existing users can also choose Google sign-in."
         ],
         [
-          "Wait for profile sync",
-          "Return to the account page and wait for the managed profile to finish syncing."
+          "Use an Access Token",
+          "Select the token link at the bottom of the form."
         ]
       ]
     ],

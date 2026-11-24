@@ -31,6 +31,6 @@ Scripts run inside the VPN extension. Do not expect schedules to keep running wh
 
 ## Shortcuts
 
-Use the app's actions in Apple Shortcuts, verify an action on its own, then add it to your workflow. Available actions depend on the installed version and system interface.
+In Shortcuts, add **Connect** or **Disconnect**. Connect can select a proxy or chain first and waits for the VPN before the next step runs. Refresh one subscription to update just that source, or refresh all subscriptions to include subscribed rule sets, modules and MITM rule sets. A shortcut can also read the expiry date and remaining traffic when a third-party subscription supplies them.
 
 Automation is separate from HTTP request/response rewriting; use [modules](/en/oixflow/modules) or [MITM](/en/oixflow/mitm) for that. Scripts can make network requests, so review their purpose before supplying account data or cookies.

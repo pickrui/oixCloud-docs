@@ -20,8 +20,8 @@ If you have not installed an app, visit the [download center](https://oixcloud.c
 
 | Client and device | Current requirements | Download |
 | --- | --- | --- |
-| oixFlow: iPhone / iPad | iOS / iPadOS 18.0 or later | [TestFlight installation and updates](/en/oixflow/connect#testflight) |
-| oixFlow: Apple TV | tvOS 18.0 or later; account and configuration sync also needs a compatible iPhone / iPad | [Installation and sync](/en/oixflow/apple-tv) |
+| oixFlow: iPhone / iPad | iOS / iPadOS 18.0 or later | [App Store](https://apps.apple.com/app/id6838819085) · [TestFlight installation and updates](/en/oixflow/connect#testflight) |
+| oixFlow: Apple TV | tvOS 18.0 or later; account and configuration sync also needs a compatible iPhone / iPad | [App Store](https://apps.apple.com/app/id6838819085) · [Installation and sync](/en/oixflow/apple-tv) |
 | FlClash for oixCloud: desktop and Android | Windows 10+; macOS 13.0+; Android 7.0+; Linux needs a desktop and compatible runtime libraries | [Packages, architectures and compatibility builds](/en/flclash/connect#downloads) |
 | oixCloud Helper: Mac | Main builds for macOS 14+; Legacy for macOS 12 / 13 | [Downloads and Surge setup](/en/other/surge#downloads) |
 | oixCloud Helper: Linux / NAS | Docker Engine and Compose; amd64 / arm64 | [Container deployment](/en/other/helper-linux) |

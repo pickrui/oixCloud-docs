@@ -18,12 +18,12 @@ Use the [download center](https://oixcloud.com/client), or this fork's [latest G
 | Linux | 64-bit graphical desktop, glibc 2.35 or later, GTK 3 and other runtime libraries | Match `amd64` / `arm64` to `uname -m`, then choose DEB, RPM or AppImage. ARM64 RPM / AppImage packages are also available on GitHub. |
 
 ::: warning macOS 12 compatibility builds
-On macOS 12 Monterey, download the v0.9.4 installer for your Mac: [Apple Silicon](https://github.com/pickrui/FlClash/releases/download/v0.9.4/flclash-v0.9.4-macos12-arm64.dmg) or [Intel](https://github.com/pickrui/FlClash/releases/download/v0.9.4/flclash-v0.9.4-macos12-amd64.dmg). To update a compatibility build, quit FlClash and install the new version manually from the DMG.
+On macOS 12 Monterey, look for a DMG with `macos12` in its name on the [release page](https://github.com/pickrui/FlClash/releases/latest). Choose `arm64` for Apple Silicon or `amd64` for Intel. If that release lists only standard DMGs, the v0.9.2 compatibility installers are available for [Apple Silicon](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-arm64.dmg) and [Intel](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-amd64.dmg). To update a compatibility build, quit FlClash and install the new DMG manually.
 :::
 
 The DEB declares `libayatana-appindicator3-1` and `libsecret-1-0` as dependencies; let the package manager install them. RPM / AppImage packages also need compatible system libraries. AppImage does not bypass the glibc requirement. For SSH-only servers, see [background and server operation](#headless).
 
-Use the release's `SHA256SUMS` to verify a standard package or `SHA256SUMS-macos12` to verify a macOS 12 installer. For missing Windows runtimes, see [DLL repair](/en/flclash/windows-dll).
+Use the release's `SHA256SUMS` to verify a standard package or the matching `SHA256SUMS-macos12` to verify a macOS 12 installer (`SHA256SUMS-macos12-final` for v0.9.2). For missing Windows runtimes, see [DLL repair](/en/flclash/windows-dll).
 
 ## Illustrated steps
 
@@ -37,15 +37,17 @@ Use the release's `SHA256SUMS` to verify a standard package or `SHA256SUMS-macos
 ## Import your account configuration
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-login-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Sign in to your account">
-    <img src="/illustrations/flclash-login-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Sign in to your account" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-login-en.svg?v=20261125-1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Sign in to your account">
+    <img src="/illustrations/flclash-login-en.svg?v=20261125-1" alt="FlClash for oixCloud · Sign in to your account" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
 1. Download FlClash for oixCloud from our download center, choose the package for your operating system and processor architecture, and sign in on the app's oixCloud page.
-2. Choose email/password, an existing Access Token, or **Sign in with Google** when available. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Submit credentials with the login form's top-right checkmark. Wait for the active plan and managed profile and nodes to load before connecting.
-3. Choose a node or policy group on the Proxies page and keep Rule mode for everyday use. On the oixCloud page, Refresh updates account information; Sync fetches the managed configuration again. Use Sync when you need to update nodes.
+2. Choose email/password, an existing Access Token, or **Sign in with Google** when available. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Enter your email and password and select **Sign in**, or use the link at the bottom of the form to switch to an Access Token. Wait for the active plan and managed profile and nodes to load before connecting.
+3. Choose a node or policy group under **Proxies** and keep Rule mode for everyday use. To update managed nodes, select **Refresh nodes** on the oixCloud account page. In older builds with separate **Refresh** and **Sync** actions, select **Sync**.
+
+If **Approve this device** appears on the account page, [check the fingerprint and approve the request](/en/account/security#device-approval) before loading managed nodes.
 
 ## Capture application traffic
 
@@ -55,6 +57,8 @@ Use the release's `SHA256SUMS` to verify a standard package or `SHA256SUMS-macos
 Use the play button in the dashboard **Status** card to start and the same card's pause button to stop. Card arrangements vary with window width; the start control is no longer fixed at the page's bottom right.
 
 Capture settings control whether traffic enters the client. Rule and Global modes control what happens afterward. See [System Proxy and TUN](/en/flclash/capture).
+
+The status button at the top of the dashboard shows the core state. Builds with an in-app updater also show download progress here. Open the status cards and switch between them to see when an update is ready to install.
 
 ## Verify the connection
 

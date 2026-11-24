@@ -73,6 +73,10 @@ Coupon discounts at checkout and independently matching campaigns can still comb
 
 Before support handles a refund, provide the original purchase record, campaign name and related messages. Do not ask a recipient to claim while support is checking the order.
 
+## Benefit draws and commission withdrawals
+
+If a free draw awards another try, the next draw is free. If a paid draw awards another try, the credits spent on that draw are returned. Before confirming a commission withdrawal, check the fee, any deduction for an outstanding balance and the amount you will receive.
+
 ## Troubleshooting {#troubleshooting}
 
 | Symptom | Check first |

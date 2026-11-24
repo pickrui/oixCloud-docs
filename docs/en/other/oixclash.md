@@ -54,6 +54,8 @@ Sign-in methods:
 
 After signing in, the page shows the account, plan, expiry date and traffic. A token from another oixCloud client is swapped for oixClash's own token, so its node filter is kept separately; tokens created on the website cannot be swapped and are used as they are.
 
+If approval is required after sign-in, select **登记设备** (Register device) in the plugin’s account row and [follow the device approval steps](/en/account/security#device-approval) before loading managed nodes.
+
 ## 4. Turn on the proxy
 
 <figure class="guide-figure">

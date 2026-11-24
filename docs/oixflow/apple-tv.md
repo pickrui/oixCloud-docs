@@ -8,12 +8,12 @@ description: "Apple TV 连接与同步的操作步骤、适用范围与常见问
 
 ## 安装与系统要求
 
-Apple TV 需要 tvOS 18.0 或更高版本，用于发布账户与配置的 iPhone / iPad 也需运行 iOS / iPadOS 18.0 或更高版本。在电视的 App Store 搜索并安装 oixFlow，使用非中国大陆地区的 Apple 账户
+Apple TV 需要 tvOS 18.0 或更高版本，用于发布账户与配置的 iPhone / iPad 也需运行 iOS / iPadOS 18.0 或更高版本。使用非中国大陆地区的 Apple 账户，在电视的 App Store 搜索 oixFlow，可用地区以 [App Store 页面](https://apps.apple.com/app/id6838819085) 为准
 
 也可以通过 TestFlight 安装测试版，手机或平板与电视的 TestFlight 须使用同一 App Store 账户：
 
 1. 在 Apple TV 的 App Store 安装 TestFlight
-2. 在 iPhone 或 iPad 上安装 [TestFlight](https://apps.apple.com/app/id899247664)，用同一 App Store 账户接受 [oixFlow 测试邀请](https://testflight.apple.com/join/bThPJNaf)
+2. 在 iPhone 或 iPad 上安装 [TestFlight](https://apps.apple.com/app/id899247664)，用同一 App Store 账户接受 [oixFlow 测试邀请](https://testflight.apple.com/join/CfGzSk6M)
 3. 在电视上打开 TestFlight，选择 oixFlow 并点「安装」；有新构建时在这里点「更新」
 
 首次加入需有名额，构建须在有效期内并支持当前 tvOS 版本
@@ -53,6 +53,8 @@ Apple TV 第一次获取节点前需要批准。同一 Apple 账户下已经批�
 ## 日常使用
 
 使用遥控器切换节点或策略组，检查延迟与连接状态。复杂的节点、链和规则整理优先在手机或平板完成后同步
+
+在主页打开节点选择器，选「全部测试」可同时检查列表中的节点和代理链。结果显示在各名称下方，方便用遥控器选出口
 
 ## 同步或连接失败
 

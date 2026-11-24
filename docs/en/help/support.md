@@ -23,6 +23,8 @@ For a connection issue, note the device, OS and client version, then reproduce t
 2. If the node list will not load, choose **Node not listed / unable to load the node list**. For FlClash for oixCloud, include the build number shown in the app if available. If a third-party client fails, try the same account in the [Software Center client](https://oixcloud.com/client) and report the result.
 3. In the description, include the time and time zone, what you opened, the exact error and what happened after the checks. If **Related guides** appears as you type, you can open a guide in a new tab and return to your draft. If installation or sign-in failed, give the step where you stopped. Confirm you followed the relevant guide and complete verification when prompted.
 
+After checking the troubleshooting confirmation, wait 30 seconds before submitting. You can open the guide or announcements during the wait. The ticket list opens on active tickets. Use the closed tab to find an earlier case.
+
 | Current plan | Self-created tickets per calendar year |
 | --- | --- |
 | Pass Silver, Pass Gold | 3 |
@@ -32,6 +34,8 @@ For a connection issue, note the device, OS and client version, then reproduce t
 The calendar year follows the site's time zone. Check the remaining count shown for your account. Replies and support-created tickets do not consume this allowance. Continue an unresolved ticket before opening another; replies remain available after the new-ticket allowance is exhausted. Titles allow up to 12 characters and bodies up to 10,000 characters.
 
 ## Reply to the AI or ask for a person {#human-support}
+
+Open the ticket and expand the reply box below the latest message. You can add one follow-up after opening a ticket and one more after each public reply from a human agent. AI replies and transfers do not reset this allowance. You can still request human support after using your follow-up.
 
 If the ticket shows **More information needed**, reply in the same ticket with the missing information. For an error screenshot, also type the error message so the AI can use it. If a suggested step fails, say which step you tried and what you saw afterward.
 
@@ -77,6 +81,8 @@ Use the UHD refresh button in the [Benefits Center](https://oixcloud.com/user/be
 - Redeem again only after the page confirms that the credits were returned. If confirmation keeps failing, provide the redemption time, displayed message and credit changes, with the UHD password and other credentials hidden.
 
 This returns benefit credits, not account balance or money to the original payment method.
+
+For an active UHD account, the Emby card in the Benefits Center shows the traffic reset day, simultaneous playback limit and download permission. Refresh the card if any details are missing. Resetting the UHD password signs all players out. Sign in again with the new password.
 
 ## Copy this template
 

@@ -60,7 +60,7 @@ The list has no pagination. Search by name or address and filter by **HTTP/3 on*
 3. Unavailable entries and unchanged settings are skipped, so the applied count may be lower than the selected count. Each dedicated-IP row is handled separately.
 4. Wait for the result, then refresh the client subscription and reconnect.
 
-Entries are saved one at a time; a later failure does not undo successful changes. After a timeout or interruption, check the counts for confirmed saves, unconfirmed results and unattempted entries. Refresh the page before retrying entries that still need changes.
+The panel checks every submitted node before saving the batch. If any node cannot be changed, the entire batch is rejected. If the request times out without a result, refresh the page to check the saved settings before retrying.
 
 ## Using WARP, IPv4 Only and relays {#other-settings}
 

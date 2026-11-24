@@ -95,6 +95,8 @@ To choose automatically between managed and third-party nodes, create your own U
 
 Putting nodes in one group does not forward traffic through each of them in turn. Configure a [proxy chain or underlying proxy](/en/oixflow/policies#underlying-proxy) only when you need multiple hops.
 
+Hollow nodes come from your managed account. The app does not import them from third-party subscriptions or share links, or offer local editing or export for them. To change which managed nodes you receive, adjust the node filter on the account page and refresh.
+
 ## Organize standalone nodes in folders {#folders}
 
 These folder operations apply to iPhone / iPad in 2.1.6 (520) and later supporting builds; availability depends on your release channel. The node-picker illustration on this page does not show folder editing. This does not imply an equivalent management interface on Apple TV.

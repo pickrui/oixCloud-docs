@@ -40,6 +40,8 @@ On Android/Linux, use connections and logs. Filter by the target domain, inspect
 
 Review personal data before copying reports. Include version, time, network type and reproduction steps in a [support ticket](/en/help/support), never full tokens or subscriptions in public issues.
 
+On a phone, tap a log entry to see its time, level and full message. Select the text you need or use the copy button for the whole entry. Remove subscription links and account details before sharing.
+
 ## Open the relevant fix from a result
 
 Current Windows/macOS versions can copy the local proxy address from diagnostic results, open port, DNS or TUN settings, and show manual system-proxy setup guidance. Read the result's explanation, make one change, return to rerun diagnostics, then retest the original application.

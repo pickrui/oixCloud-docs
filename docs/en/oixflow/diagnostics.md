@@ -13,6 +13,8 @@ For iPhone / iPad.
 3. To compare TCP and UDP, open **Node Diagnostics** on the same screen, tap **Test All**, then search for the node by name. TCP shows the node latency test result. A successful UDP check means the test destination answered a DNS query sent through that node.
 4. Reopen the affected site or app. If it still fails after a successful check, inspect the route taken by that request using the steps below.
 
+After disconnecting, check **Last Session** on Home for the previous connection. To narrow down a delay, open **Current Network** and compare the device, gateway, internet and proxy stages. Connect the VPN before checking the proxy stage.
+
 ## Inspect the wrong route
 
 <figure class="guide-figure">
@@ -28,6 +30,8 @@ For iPhone / iPad.
 4. Compare these with the current mode, active network profile, rule priority and policy group.
 
 If the request is absent, check capture, excluded routes and reused connections first.
+
+Route checks show the exit actually used by the request. Compare it with the expected node or policy group. STUN checks distinguish a send timeout from a response timeout. Keep the full message when reporting the result.
 
 ## Choose a tool
 

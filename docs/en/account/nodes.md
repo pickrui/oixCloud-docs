@@ -9,6 +9,8 @@ description: "Nodes and connection options \u2014 setup, practical steps and tro
 
 Start with the region you need and the nodes available to your account, then compare latency and actual access. Low latency does not mean fast downloads or guaranteed streaming access. Nodes in the same region can behave differently because they use different entry points, exits, and routes.
 
+In the [node list](https://oixcloud.com/user/node), choose a line category and filter by region. Search matches original and translated names, external relay labels and destination addresses. On nodes with multiple backends, carrier labels and numbers distinguish entries from the same carrier.
+
 ## Node types {#node-types}
 
 These descriptions follow the [official homepage](https://oixcloud.com/#network). Routes, speeds, traffic and features depend on the plan and node. Check your current plan, [node list](https://oixcloud.com/user/node) and client requirements before choosing.

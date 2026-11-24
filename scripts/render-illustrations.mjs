@@ -83,8 +83,12 @@ const sheetHead=(m,title,saveMark)=>T(m.x+24,m.y+42,'‹',26,'#8a5260')+T(m.x+m.
 function chips(x,y,names,selected=0,fl=false){const selectedSet=new Set(Array.isArray(selected)?selected:[selected]);return names.map((v,i)=>{const active=selectedSet.has(i);return R(x+i*123,y,113,36,active?(fl?'#f0d9df':'#dfebff'):'#f4f5f8',18,active?(fl?'#bd8d9b':'#8db7ff'):'#dbdce2')+T(x+i*123+56,y+24,v,15,active?(fl?'#794c59':'#0068d8'):'#646771',500,'middle')}).join('')}
 
 add('oixflow','login','登录账户','oixCloud → 登录',[
- ['选择登录方式','支持 Access Token、邮箱密码及已有账户的 Google 登录'],['填写凭据','图中邮箱为虚构示例，密码不展示'],['完成登录','登录后等待托管节点载入，再返回主页连接']
-],()=>ios('oixCloud',{large:true,tab:'oixCloud'})+segmented(69,262,402,['Access Token','邮箱密码'],1)+mark(69,262,402,39,1)+group(351,[{label:'reader@example.com'},{label:'••••••••',n:2},{label:'忘记密码？',blue:true}])+group(549,[{label:'登录',blue:true,n:3}])+group(630,[{label:'使用 Google 登录',blue:true}])+group(711,[{label:'创建账号',blue:true}]))
+ ['填写邮箱和密码','默认打开邮箱登录，也可以使用已有账户的 Google 登录'],['点登录','首次获取托管节点时，按提示核对设备'],['用令牌登录','已有 Access Token 时，从页面底部切换登录方式']
+],()=>ios('oixCloud',{large:true,tab:'oixCloud'})
+ +group(288,[{label:'reader@example.com',n:1},{label:'••••••••'},{label:'忘记密码？',blue:true}])
+ +R(68,482,190,53,'#007aff',13)+T(163,516,'登录',18,'#fff',600,'middle')+badge(248,483,2)
+ +R(270,482,201,53,'#fff',13,'#b6c5dc')+T(371,516,'使用 Google 登录',17,'#007aff',500,'middle')
+ +T(153,613,'创建账号',17,'#007aff',500,'middle')+T(370,613,'Access Token',17,'#007aff',500,'middle')+badge(459,586,3))
 
 add('oixflow','connect','主页连接与节点选择','主页 → 当前节点卡片',[
  ['点电源按钮','已有节点时启动 VPN，首次使用允许系统添加 VPN 配置'],['点节点选择卡片','打开节点列表；预设指定出口时先调整网络预设'],['核对模式与新请求','状态、模式、兜底路由是不同设置；连接后验证实际出口']
@@ -143,8 +147,15 @@ add('oixflow','mitm-generate','首次生成 MITM 证书','设置 → MITM → MI
 ],()=>ios('MITM 证书',{back:'MITM'})+group(287,[{label:'生成证书',blue:true,n:2}],{title:'此设备'})+badge(469,268,1)+T(83,377,'此处的更改仅影响此设备',15,'#85858d')+group(454,[{label:'状态',value:'尚未登录'},{label:'创建并用于此设备',disabled:true},{label:'将 PKCS#12 导入账号',disabled:true}],{title:'oixCloud'})+T(83,661,'示例：尚未登录，账户证书操作不可用',15,'#85858d'))
 
 add('flclash','login','登录账户','侧栏 oixCloud → 登录',[
- ['选择凭据方式','支持 Google、Access Token 与邮箱密码'],['填写后点右上角勾号','这是表单确认入口；示例不含真实账户或令牌'],['继续同步配置','关闭表单返回账户页，等待配置同步完成']
-],()=>{let m=modal('',548,482);return material('oixCloud','oixCloud')+m.s+sheetHead(m,'登录',2)+button(m.x+28,m.y+74,492,'使用 Google 登录')+segmented(m.x+28,m.y+151,492,['Access Token','邮箱密码'],1,true)+mark(m.x+28,m.y+151,492,39,1)+field(m.x+28,m.y+225,492,'邮箱','reader@example.com')+field(m.x+28,m.y+308,492,'密码','••••••••')+T(m.x+28,m.y+412,'忘记密码？',17,'#8a5260')})
+ ['填写邮箱和密码','默认使用邮箱登录，忘记密码时可从表单重设'],['点登录','已有账户也可选择 Google 登录'],['用令牌登录','已有 Access Token 时，从表单底部切换']
+],()=>{
+ const m=modal('登录',548,450)
+ return material('oixCloud','oixCloud')+m.s
+  +field(m.x+28,m.y+85,492,'邮箱','reader@example.com',{n:1})+field(m.x+28,m.y+170,492,'密码','••••••••')
+  +T(m.x+28,m.y+266,'忘记密码？',17,'#8a5260')
+  +button(m.x+28,m.y+297,230,'登录',2)+R(m.x+270,m.y+297,250,43,'#fff6f8',22,'#a8959a')+T(m.x+395,m.y+325,'使用 Google 登录',17,'#784f5b',500,'middle')
+  +T(m.x+135,m.y+399,'注册',17,'#8a5260',500,'middle')+T(m.x+392,m.y+399,'Access Token',17,'#8a5260',500,'middle')+badge(m.x+468,m.y+374,3)
+})
 
 add('flclash','connect','仪表盘启动与接管','仪表盘 → 状态卡片',[
  ['确认接管方式','桌面端按需求启用系统代理或虚拟网卡'],['选择规则模式','节点在代理页对应策略组中选择'],['点状态卡片的播放按钮','启动按钮已移入状态卡片，不再固定在页面右下角']

@@ -30,6 +30,8 @@ Open **Services → OpenClash → Plugin Settings → oixCloud**. First use emai
 
 Wait for account information, profile download and core processing. The plugin creates or updates the `oixCloud - smart` subscription. Visible plan and traffic data proves account retrieval, not that the correct profile is active.
 
+If LuCI opens **Approve this device** during sign-in or a subscription update, [check the fingerprint and approve the router](/en/account/security#device-approval) before loading managed nodes.
+
 ## 3. Select the profile and start
 
 

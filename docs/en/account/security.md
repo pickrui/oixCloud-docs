@@ -24,6 +24,8 @@ Every device needs approval before it loads nodes for the first time. Approved d
 - With two-step verification, a pasted token or a restored backup, the client shows a confirmation code and the device must be approved manually.
 - Apple TV is approved automatically by an approved iPhone or iPad signed in to the same Apple Account. See [Approve Apple TV](/en/oixflow/apple-tv#approval).
 
+If Telegram is linked, the bot sends a private message when a new device first needs approval. Compare the client name and fingerprint with your device, then approve or deny the request. Deny unfamiliar requests. If you deny your own by mistake, request approval again after the original code’s 10-minute lifetime ends.
+
 To approve manually:
 
 1. In the client, open **Approve this device** and note the confirmation code and the device fingerprint.
@@ -53,7 +55,7 @@ Revoke a device under **Approved devices** on the device approval page. A revoke
 3. Complete verification and allow the browser to return to the original client. Use **Return to App** on the completion page if it does not return automatically.
 4. Wait for account information and managed nodes before connecting. If the flow expires or return verification fails, start again from the client instead of reopening an old completion page.
 
-Both the client and website must support this flow. If the button is unavailable, use email/password or an Access Token. Never enter your Google password into the oixCloud password field. When you sign up with Google, the result page shows the initial password once and it is also sent by email. To obtain an oixCloud password, check Gmail, including spam, for that email. If you cannot find it, reset the password: when signed in, open [Account Settings → Password](https://oixcloud.com/user/edit#settings-password) and select **Forgot current password** under **Current Password** in the form that opens; when signed out, select **Forgot password** on the [website sign-in page](https://oixcloud.com/auth/login). After a reset, all clients must sign in again, the main subscription URL changes, two-step verification is turned off and passkeys are removed.
+Both the client and website must support this flow. If the button is unavailable, use email/password or an Access Token. Never enter your Google password into the oixCloud password field. When you sign up with Google, the result page shows the initial password once and the site also tries to email it to you. To obtain an oixCloud password, check Gmail, including spam, for that email. If you cannot find it, reset the password: when signed in, open [Account Settings → Password](https://oixcloud.com/user/edit#settings-password) and select **Forgot current password** under **Current Password** in the form that opens; when signed out, select **Forgot password** on the [website sign-in page](https://oixcloud.com/auth/login). After a reset, all clients must sign in again, the main subscription URL changes, two-step verification is turned off and passkeys are removed.
 
 ### Google sign-in troubleshooting {#google-troubleshooting}
 

@@ -10,12 +10,12 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 
 | 设备 | 最低系统 | 安装入口 |
 | --- | --- | --- |
-| iPhone | iOS 18.0 | [TestFlight](#testflight) |
+| iPhone | iOS 18.0 | [App Store](https://apps.apple.com/app/id6838819085) · [TestFlight](#testflight) |
 | iPad | iPadOS 18.0 | 同 iPhone |
 
 ### 通过 TestFlight 安装或更新 {#testflight}
 
-首次安装时，在 iPhone 或 iPad 上安装 [TestFlight](https://apps.apple.com/app/id899247664)，打开 [oixFlow 测试邀请](https://testflight.apple.com/join/bThPJNaf)，点「接受」再点「安装」。已加入测试的用户可直接打开 TestFlight，在 oixFlow 旁点「更新」。首次加入需有测试名额，安装和更新都需要尚未过期且兼容当前系统的构建
+首次安装时，在 iPhone 或 iPad 上安装 [TestFlight](https://apps.apple.com/app/id899247664)，打开 [oixFlow 测试邀请](https://testflight.apple.com/join/CfGzSk6M)，点「接受」再点「安装」。已加入测试的用户可直接打开 TestFlight，在 oixFlow 旁点「更新」。首次加入需有测试名额，安装和更新都需要尚未过期且兼容当前系统的构建
 
 **中国大陆区 Apple ID 无法直接安装或更新**。Apple 已停用 oixFlow 在中国大陆的内部测试、外部测试和公开邀请。以下是用户分享的临时切换商店方法，能否安装或更新以 TestFlight 显示为准
 
@@ -40,14 +40,14 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 ## 登录托管账户
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-login-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 登录账户">
-    <img src="/illustrations/oixflow-login-zh.svg?v=20261123-1" alt="oixFlow · 登录账户" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixflow-login-zh.svg?v=20261125-1" target="_blank" rel="noopener" aria-label="oixFlow · 登录账户">
+    <img src="/illustrations/oixflow-login-zh.svg?v=20261125-1" alt="oixFlow · 登录账户" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
-1. 从软件中心进入 TestFlight 安装 oixFlow，打开应用中的「oixCloud」账户页登录
-2. 选择邮箱/密码、已有 Access Token，或当前版本提供的「使用 Google 登录」。Google 只登录已有账户，并需客户端和网站同时支持，步骤见 [Google 登录说明](/account/security#google-client-login)。确认套餐生效，等待托管节点加载完成再连接
+1. 安装 oixFlow 后打开「oixCloud」账户页。需要购买套餐或充值时，到网站用户中心办理
+2. 默认用邮箱和密码登录；已有 Access Token 时从页面底部切换，也可选择「使用 Google 登录」。Google 只登录已有账户，并需客户端和网站同时支持，步骤见 [Google 登录说明](/account/security#google-client-login)。确认套餐生效，等待托管节点加载完成再连接
 3. 在主页选择节点或策略组，保持「规则」模式并点状态卡片的电源按钮；首次连接时，按系统提示允许添加 VPN 配置
 
 ## 只使用自己的节点

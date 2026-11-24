@@ -10,12 +10,12 @@ For iPhone / iPad. See the separate [Apple TV guide](/en/oixflow/apple-tv).
 
 | Device | Minimum OS | Download |
 | --- | --- | --- |
-| iPhone | iOS 18.0 | [TestFlight](#testflight) |
+| iPhone | iOS 18.0 | [App Store](https://apps.apple.com/app/id6838819085) · [TestFlight](#testflight) |
 | iPad | iPadOS 18.0 | Same as iPhone |
 
 ### Install or update with TestFlight {#testflight}
 
-On your iPhone or iPad, install [TestFlight](https://apps.apple.com/app/id899247664), open the [oixFlow beta invitation](https://testflight.apple.com/join/bThPJNaf), then tap **Accept** and **Install**. If you have already joined, open TestFlight and tap **Update** next to oixFlow. Joining requires an open slot. To install or update, you need an unexpired build that supports your OS version.
+On your iPhone or iPad, install [TestFlight](https://apps.apple.com/app/id899247664), open the [oixFlow beta invitation](https://testflight.apple.com/join/CfGzSk6M), then tap **Accept** and **Install**. If you have already joined, open TestFlight and tap **Update** next to oixFlow. Joining requires an open slot. To install or update, you need an unexpired build that supports your OS version.
 
 **A mainland China Apple Account cannot install or update the beta directly.** Apple has disabled internal testing, external testing and public invitations for oixFlow in mainland China. Some users suggest temporarily switching storefronts. Check TestFlight to see whether a build is available to you.
 
@@ -40,14 +40,14 @@ If you previously enabled any TestFlight MitM modules or rules, turn them off or
 ## Managed account
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-login-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Sign in to your account">
-    <img src="/illustrations/oixflow-login-en.svg?v=20261123-1" alt="oixFlow · Sign in to your account" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixflow-login-en.svg?v=20261125-1" target="_blank" rel="noopener" aria-label="oixFlow · Sign in to your account">
+    <img src="/illustrations/oixflow-login-en.svg?v=20261125-1" alt="oixFlow · Sign in to your account" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
-1. Open the TestFlight link in our download center to install oixFlow, then sign in on the app's oixCloud account page.
-2. Choose email/password, an existing Access Token, or **Sign in with Google** when available. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Wait for the active plan and managed nodes to load before connecting.
+1. Install oixFlow and open its **oixCloud** account page. To buy a plan or add funds, use your account on the website.
+2. Sign in with email and password, switch to an Access Token at the bottom of the form, or choose **Sign in with Google**. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Wait for the active plan and managed nodes to load before connecting.
 3. Select a node or policy group on the home screen, keep Rule mode selected, and tap the power button in the status card. Allow the system to add a VPN configuration when prompted on your first connection.
 
 ## Your own nodes

@@ -8,6 +8,8 @@ Get one normal connection working before enabling advanced features.
 
 ## Before connecting
 
+When registering by email on the website, you can leave the nickname blank to have one generated. Enter an invitation or email verification code if the registration page asks for one.
+
 1. Open your [account](https://oixcloud.com/user) and confirm that it is active and has a valid, activated plan.
 2. Check [downloads and system requirements](/en/clients/#requirements), then get the official client for your system and architecture from the [download center](https://oixcloud.com/client).
 3. Pause other VPNs, keep default settings and choose an available node.

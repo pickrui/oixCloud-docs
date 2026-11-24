@@ -28,6 +28,10 @@ With authentication enabled, the client does not automatically set the system HT
 
 Restrict use to trusted LANs and do not forward the port to the public internet. Network isolation and firewalls can still block connections from other devices.
 
+## Local hostnames in the Windows system proxy
+
+The `<local>` entry in the system proxy bypass list sends single-label names such as `printer` directly. To send those names through the system proxy, remove the entry from the Windows bypass list and reapply your settings. macOS and Linux ignore this entry.
+
 ## Pause on a named Wi-Fi network
 
 Open **Tools → Advanced Configuration → Network → Wi-Fi networks that pause the proxy**.

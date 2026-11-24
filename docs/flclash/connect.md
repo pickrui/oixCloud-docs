@@ -18,12 +18,12 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 | Linux | 64 位图形环境、glibc 2.35 及以上、GTK 3 等运行库 | 按 `uname -m` 选择 `amd64` / `arm64`，再选 `.deb`、`.rpm` 或 AppImage；ARM64 的 RPM / AppImage 可在 GitHub 发行页获取 |
 
 ::: warning macOS 12 兼容版
-使用 macOS 12 Monterey 时，请按芯片下载 v0.9.4 兼容安装包：[Apple Silicon](https://github.com/pickrui/FlClash/releases/download/v0.9.4/flclash-v0.9.4-macos12-arm64.dmg) 或 [Intel](https://github.com/pickrui/FlClash/releases/download/v0.9.4/flclash-v0.9.4-macos12-amd64.dmg)。兼容版需手动更新。先退出 FlClash，再打开对应的 DMG 安装
+使用 macOS 12 Monterey 时，到[发行页](https://github.com/pickrui/FlClash/releases/latest)选择文件名带有 `macos12` 的 DMG，Apple Silicon 选 `arm64`，Intel 选 `amd64`。如果该版只提供普通 DMG，可下载 v0.9.2 兼容包（[Apple Silicon](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-arm64.dmg)、[Intel](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-amd64.dmg)）。兼容版需手动更新，先退出 FlClash 再安装
 :::
 
 Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`，应由包管理器安装依赖；RPM / AppImage 也仍需要兼容的系统运行库。AppImage 不会绕过 glibc 要求，只有 SSH 的服务器请看本页 [后台与服务器运行](#headless)
 
-下载后，普通安装包用发行页的 `SHA256SUMS` 核对，macOS 12 兼容包用 `SHA256SUMS-macos12` 核对。Windows 缺少运行库时见 [DLL 修复](/flclash/windows-dll)
+下载后，普通安装包用发行页的 `SHA256SUMS` 核对，macOS 12 兼容包用同一版本的 `SHA256SUMS-macos12` 核对（v0.9.2 为 `SHA256SUMS-macos12-final`）。Windows 缺少运行库时见 [DLL 修复](/flclash/windows-dll)
 
 ## 操作示意
 
@@ -37,15 +37,17 @@ Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`�
 ## 导入账户配置
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-login-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 登录账户">
-    <img src="/illustrations/flclash-login-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 登录账户" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-login-zh.svg?v=20261125-1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 登录账户">
+    <img src="/illustrations/flclash-login-zh.svg?v=20261125-1" alt="FlClash for oixCloud · 登录账户" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
 1. 从软件中心下载 FlClash for oixCloud，选择适合设备系统与架构的安装包，打开应用中的「oixCloud」页面登录
-2. 选择邮箱/密码、已有 Access Token，或当前版本提供的「使用 Google 登录」。Google 只登录已有账户，并需客户端和网站同时支持，步骤见 [Google 登录说明](/account/security#google-client-login)。填写凭据后点登录表单右上角勾号提交，确认套餐生效，等待托管配置与节点加载完成再连接
-3. 在「代理」页面选择节点或策略组，日常使用保留「规则」模式；oixCloud 页的「刷新」更新账户信息，「同步」重新获取托管配置，需要更新节点时使用「同步」
+2. 选择邮箱/密码、已有 Access Token，或当前版本提供的「使用 Google 登录」。Google 只登录已有账户，并需客户端和网站同时支持，步骤见 [Google 登录说明](/account/security#google-client-login)。填写邮箱和密码后点「登录」；使用已有令牌时，从表单底部切换到 Access Token，确认套餐生效，等待托管配置与节点加载完成再连接
+3. 在「代理」选择节点或策略组，日常使用保持「规则」模式。要更新托管节点，在 oixCloud 账户页点「刷新节点」。旧版分开显示「刷新」和「同步」时，选「同步」
+
+账户页出现「批准这台设备」时，先[核对指纹并批准](/account/security#device-approval)，再获取托管节点
 
 ## 让应用使用代理
 
@@ -55,6 +57,8 @@ Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`�
 在仪表盘的「状态」卡片点击播放按钮启动，停止时使用同一卡片的暂停按钮。桌面布局与窄窗口的卡片排列可能不同，不再按旧图寻找页面右下角的固定启动按钮
 
 这两个设置决定流量是否进入客户端；「规则 / 全局」决定进入以后如何选择出口。详见 [系统代理与虚拟网卡](/flclash/capture)
+
+仪表盘顶部的状态按钮可查看内核状态。支持应用内更新的版本也会在这里显示下载进度；点开状态卡后，可以切换卡片查看更新是否已准备好安装
 
 ## 验证连接
 
