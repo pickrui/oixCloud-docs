@@ -16,6 +16,36 @@ After signing in, find the client under **Issued by client login** on the [Acces
 
 Google sign-in is available in supported oixFlow versions for iPhone/iPad and in supported versions of FlClash for oixCloud. Apple TV continues to [receive the account from an iPhone](/en/oixcloud/apple-tv). Follow the email/password or token instructions for Helper, OpenClash and oixClash; do not assume they have a Google button.
 
+## Approve a new device {#device-approval}
+
+Every device needs approval before it loads nodes for the first time. Approved devices are listed on the website's [device approval](https://oixcloud.com/user/managed-device) page.
+
+- Signing in to a client with email and password or Google approves the device automatically. Your account receives an email and a Telegram message, "New device signed in", with the client, the device fingerprint and the time. Accounts with two-step verification are not approved automatically.
+- With two-step verification, a pasted token or a restored backup, the client shows a confirmation code and the device must be approved manually.
+- Apple TV is approved automatically by an approved iPhone or iPad signed in to the same Apple Account. See [Approve Apple TV](/en/oixcloud/apple-tv#approval).
+
+To approve manually:
+
+1. In the client, open **Approve this device** and note the confirmation code and the device fingerprint.
+2. Approve it in either way:
+   - Select **Open Website to Approve** or scan the code, check the client name and fingerprint on the signed-in website, then select **Approve this device**.
+   - Send `/device` followed by the code (for example `/device A1B2C-3D4E5`) in a private chat with your linked Telegram bot, check the details, then tap the approval button.
+3. The client checks every few seconds and loads nodes on its own once approved. A code is valid for 10 minutes; after that the client shows a new one.
+
+| Client | Where to approve |
+| --- | --- |
+| oixFlow (iPhone / iPad) | The **Approve this device** card on the account page |
+| oixFlow (Apple TV) | Automatic; if the iPhone has not been opened for a while, scan the code under **Approve this device** on the account page |
+| FlClash for oixCloud | **Approve this device** on the account page |
+| oixCloud Helper (macOS) | **Approve this device…** in the menu bar |
+| oixCloud Helper (Linux) | Run `--enroll-device` and follow its output |
+| OpenClash | **Approve this device** opens on its own while signing in or updating the subscription |
+| oixClash (Merlin) | 「登记设备」 (Register device) in the account row of the plugin page |
+
+Approve only a request you started: the fingerprint on the website or in the bot must match the one on your device. Do not approve a link or code someone else sends you.
+
+Revoke a device under **Approved devices** on the device approval page. A revoked device can no longer update nodes, but signing in again with email and password approves it again automatically; if your password may have leaked, [change it](#change-password) so that every device is signed out. Deleting or refreshing an Access Token also revokes the devices that use it. Up to 50 approved devices are kept; beyond that, the device unused for the longest time is removed.
+
 ## Sign in to a client with Google {#google-client-login}
 
 1. Select **Sign in with Google** in the client, then continue in the system authentication window or browser.
@@ -53,7 +83,7 @@ Older pages may label this option **Access Token only**. Its actual scope is ema
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
-Refreshing immediately invalidates the old token. Every same-client device sharing it must switch to the new token. The client identity and subscription binding stay the same.
+Refreshing immediately invalidates the old token. Every same-client device sharing it must switch to the new token and be [approved again](#device-approval) (signing in with email and password or Google approves it automatically). The client identity and subscription binding stay the same.
 
 1. Open the [Access Token page](https://oixcloud.com/user/token) and find the intended client under **Issued by client login**.
 2. Click **Regenerate** on that entry, review the affected devices, and confirm with a passkey or your current sign-in password in the dialog.
@@ -88,6 +118,7 @@ Before changing your password, confirm you can update the affected devices:
 | Access Tokens | Account tokens are revoked; affected clients need to sign in again |
 | Passkeys | Existing records are cleared, can no longer sign in and must be added again |
 | Old main subscription URL | Deleted; clients using it need the new subscription URL |
+| Device approvals | All revoked; each device follows [Approve a new device](#device-approval) when it signs in again |
 
 1. Open [Account Settings → Password](https://oixcloud.com/user/edit#settings-password); the link opens the change form directly (from the page itself, select **Change** on the **Password** card). Enter the current password, new password and confirmation. If you have forgotten the current password, select **Forgot current password** under that field to reset it by email.
 2. Confirm you can update the other devices, submit, and wait for success.

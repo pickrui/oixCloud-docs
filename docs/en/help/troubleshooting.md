@@ -22,6 +22,8 @@ Try signing in to the [User Center](https://oixcloud.com/user) first, then follo
 | What you see | What to do |
 | --- | --- |
 | Website sign-in works, but the client rejects your credentials | Enter your account password in the password field or a valid Access Token in the token field. If you disabled password sign-in for clients, use another [supported sign-in method](/en/account/security#first-client-login). |
+| The client says this device is not approved yet | Approve it on the website or in the Telegram bot as described in [Approve a new device](/en/account/security#device-approval); the client then loads nodes on its own |
+| The client says the device clock is too far from the server | Turn on automatic date and time, or enable NTP time sync on the router, then try again |
 | You paid, but the client shows no active plan | Check both your top-up history and Plan Management for an active plan. If you see only a top-up or a plan pending activation, follow the [payment and activation checks](/en/help/support#payment) before paying again. |
 | Your plan is active, but a node is missing | Search for its name in the website’s [node list](https://oixcloud.com/user/node). If it appears there, [check the subscription and update the client](/en/account/subscriptions#missing-nodes). |
 

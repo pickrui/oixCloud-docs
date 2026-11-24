@@ -61,7 +61,7 @@ A local file imports a copy and has no remote URL for updating the whole file. R
 
 ### One-tap import links {#add-proxy-link}
 
-Supporting versions can open `oixcloud://add-proxy?link=…` or `anywhere://add-proxy?link=…` links. From 2.1.6 (520), the Add Proxy page also accepts the complete wrapper link by paste, scan or text entry. The ellipsis illustrates the format and is not a usable import link.
+Supporting versions can open `oixflow://add-proxy?link=…` or `anywhere://add-proxy?link=…` links. From 2.1.6 (520), the Add Proxy page also accepts the complete wrapper link by paste, scan or text entry. The ellipsis illustrates the format and is not a usable import link.
 
 Check whether the enclosed content is a single node or a subscription, confirm the import, and verify the new list entry. These links may contain node credentials or subscription secrets; do not send them to public conversion services. If the entry is missing or the link is unrecognized, check your installed version or use the provider's original node/subscription link.
 
