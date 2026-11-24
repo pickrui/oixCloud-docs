@@ -17,13 +17,13 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 | Android | Android 7.0（API 24）及以上 | 通常选 `arm64-v8a.apk`；32 位系统选 `armeabi-v7a.apk`，x86_64 设备或模拟器选 `x86_64.apk` |
 | Linux | 64 位图形环境、glibc 2.35 及以上、GTK 3 等运行库 | 按 `uname -m` 选择 `amd64` / `arm64`，再选 `.deb`、`.rpm` 或 AppImage；ARM64 的 RPM / AppImage 可在 GitHub 发行页获取 |
 
-::: warning macOS 12 最终兼容版
-macOS 12 不能运行普通版。仅可使用 v0.9.2 的 [Apple Silicon 最终兼容版](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-arm64.dmg) 或 [Intel 最终兼容版](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-amd64.dmg)。这两个文件名包含 `macos12-final`，已停止维护，应用内更新入口关闭；要继续获取更新需升级至 macOS 13 或更高版本
+::: warning macOS 12 兼容版
+使用 macOS 12 Monterey 时，请按芯片下载 v0.9.4 兼容安装包：[Apple Silicon](https://github.com/pickrui/FlClash/releases/download/v0.9.4/flclash-v0.9.4-macos12-arm64.dmg) 或 [Intel](https://github.com/pickrui/FlClash/releases/download/v0.9.4/flclash-v0.9.4-macos12-amd64.dmg)。兼容版需手动更新。先退出 FlClash，再打开对应的 DMG 安装
 :::
 
 Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`，应由包管理器安装依赖；RPM / AppImage 也仍需要兼容的系统运行库。AppImage 不会绕过 glibc 要求，只有 SSH 的服务器请看本页 [后台与服务器运行](#headless)
 
-下载后可用发行页的 `SHA256SUMS` 核对普通包；macOS 12 最终兼容版对应 `SHA256SUMS-macos12-final`。Windows 缺少运行库时见 [DLL 修复](/flclash/windows-dll)
+下载后，普通安装包用发行页的 `SHA256SUMS` 核对，macOS 12 兼容包用 `SHA256SUMS-macos12` 核对。Windows 缺少运行库时见 [DLL 修复](/flclash/windows-dll)
 
 ## 操作示意
 
