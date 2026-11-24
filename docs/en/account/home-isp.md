@@ -22,8 +22,8 @@ Neither category assigns an IP exclusively to your account or guarantees availab
 The service sets default inclusion per node, independently of its static or dynamic category. Smart Selection excludes Home ISP on plans with CIA, IXP, Fusion or GIA. ISP nodes excluded by default are not added merely because the default selection is empty.
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Retain the entry line and ISP together">
-    <img src="/illustrations/oixcloud-filter-en.svg?v=20261123-1" alt="oixFlow · Retain the entry line and ISP together" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixflow-filter-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Retain the entry line and ISP together">
+    <img src="/illustrations/oixflow-filter-en.svg?v=20261123-1" alt="oixFlow · Retain the entry line and ISP together" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation · Fictional data · Both Fusion and ISP are retained in this example</figcaption>
 </figure>
@@ -77,11 +77,11 @@ Confirm that the entry and Home ISP nodes are both in the current node list. The
 
 ### oixFlow proxy chains {#oixcloud-chain}
 
-These editing steps apply to iPhone / iPad. Apple TV [receives synced configuration](/en/oixcloud/apple-tv) from a phone or tablet and does not offer the same chain editor.
+These editing steps apply to iPhone / iPad. Apple TV [receives synced configuration](/en/oixflow/apple-tv) from a phone or tablet and does not offer the same chain editor.
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-chains-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Create a chain in forwarding order">
-    <img src="/illustrations/oixcloud-chains-en.svg?v=20261123-1" alt="oixFlow · Create a chain in forwarding order" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixflow-chains-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Create a chain in forwarding order">
+    <img src="/illustrations/oixflow-chains-en.svg?v=20261123-1" alt="oixFlow · Create a chain in forwarding order" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>General chain-editor example · Replace its members with your entry and Home ISP nodes</figcaption>
 </figure>
@@ -92,7 +92,7 @@ These editing steps apply to iPhone / iPad. Apple TV [receives synced configurat
 4. For selected websites, add a **Domain Suffix** rule under **Proxies → Policies → Routing Rules**, enter the actual domain and target the chain name.
 5. Make a new connection and inspect the rule and outbound under **Activity → Requests**.
 
-For automatic entry selection, use a personal policy group offered by the chain editor and check its members first. See [policy groups and chains](/en/oixcloud/policies#proxy-chains) for group types, effects of later-hop groups and conflicts.
+For automatic entry selection, use a personal policy group offered by the chain editor and check its members first. See [policy groups and chains](/en/oixflow/policies#proxy-chains) for group types, effects of later-hop groups and conflicts.
 
 ### FlClash for oixCloud proxy chains {#flclash-chain}
 

@@ -21,8 +21,8 @@ A full profile and a Provider node list serve different purposes. A Provider mus
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="Filter lines, regions and names">
-    <img src="/illustrations/oixcloud-filter-en.svg?v=20261123-1" alt="Filter lines, regions and names" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixflow-filter-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="Filter lines, regions and names">
+    <img src="/illustrations/oixflow-filter-en.svg?v=20261123-1" alt="Filter lines, regions and names" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>oixFlow iPhone / iPad example · Follow the relevant guide for other clients</figcaption>
 </figure>
@@ -43,7 +43,7 @@ A full profile and a Provider node list serve different purposes. A Provider mus
 
 Names support case-insensitive regular expressions: `香港|日本` matches either word. Changing the interface language does not translate node names. Search within the preview only locates entries; it does not add a filter. Pending previews, invalid expressions and zero retained nodes prevent saving.
 
-See the illustrations for [oixFlow](/en/oixcloud/proxies#update-and-filter) and [FlClash for oixCloud](/en/flclash/profiles#managed-options).
+See the illustrations for [oixFlow](/en/oixflow/proxies#update-and-filter) and [FlClash for oixCloud](/en/flclash/profiles#managed-options).
 
 ## Empty filters and restoring defaults
 

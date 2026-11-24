@@ -14,7 +14,7 @@ For the first sign-in to each custom client, use email and password or its **Sig
 
 After signing in, find the client under **Issued by client login** on the [Access Token page](https://oixcloud.com/user/token). The page shows only the last 4 characters by default; use its copy button to get the full token. The same account and client type reuse a token; you do not need to create one per device.
 
-Google sign-in is available in supported oixFlow versions for iPhone/iPad and in supported versions of FlClash for oixCloud. Apple TV continues to [receive the account from an iPhone](/en/oixcloud/apple-tv). Follow the email/password or token instructions for Helper, OpenClash and oixClash; do not assume they have a Google button.
+Google sign-in is available in supported oixFlow versions for iPhone/iPad and in supported versions of FlClash for oixCloud. Apple TV continues to [receive the account from an iPhone](/en/oixflow/apple-tv). Follow the email/password or token instructions for Helper, OpenClash and oixClash; do not assume they have a Google button.
 
 ## Approve a new device {#device-approval}
 
@@ -22,7 +22,7 @@ Every device needs approval before it loads nodes for the first time. Approved d
 
 - Signing in to a client with email and password or Google approves the device automatically. Your account receives an email and a Telegram message, "New device signed in", with the client, the device fingerprint and the time. Accounts with two-step verification are not approved automatically.
 - With two-step verification, a pasted token or a restored backup, the client shows a confirmation code and the device must be approved manually.
-- Apple TV is approved automatically by an approved iPhone or iPad signed in to the same Apple Account. See [Approve Apple TV](/en/oixcloud/apple-tv#approval).
+- Apple TV is approved automatically by an approved iPhone or iPad signed in to the same Apple Account. See [Approve Apple TV](/en/oixflow/apple-tv#approval).
 
 To approve manually:
 

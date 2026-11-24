@@ -27,7 +27,7 @@
 | 为同一入口配置多个备选出口，或只转发指定域名/IP | 内部中继的单条规则 |
 | 通过站内入口转发到自己部署的落地服务器 | [外部中继](https://oixcloud.com/user/cusrelay)的协议保持模式 |
 | 转发至已有 SSH、远程桌面或游戏服务 | 外部中继的协议转换模式，按页面允许的端口设置 |
-| 在本机组合已有代理节点 | [oixFlow 代理链](/oixcloud/policies)或 [FlClash for oixCloud 代理链](/flclash/proxies#代理链) |
+| 在本机组合已有代理节点 | [oixFlow 代理链](/oixflow/policies)或 [FlClash for oixCloud 代理链](/flclash/proxies#代理链) |
 
 未默认下发的 Home ISP 可以作为内部中继目标／出口，不能作为入口或中间节点，也不能配置外部中继。手动加入订阅不会解除这些限制，已有配置继续生效并可删除。选择前查看[流量路由限制](/account/nodes#isp-routing)与 [Home ISP 使用指南](/account/home-isp)
 

@@ -22,64 +22,64 @@
       "items": [
         {
           "text": "oixFlow",
-          "link": "/oixcloud/",
+          "link": "/oixflow/",
           "collapsed": true,
           "items": [
             {
               "text": "登录与首次连接",
-              "link": "/oixcloud/connect"
+              "link": "/oixflow/connect"
             },
             {
               "text": "节点与订阅管理",
-              "link": "/oixcloud/proxies"
+              "link": "/oixflow/proxies"
             },
             {
               "text": "策略组、自动选择与代理链",
-              "link": "/oixcloud/policies"
+              "link": "/oixflow/policies"
             },
             {
               "text": "分流规则与匹配顺序",
-              "link": "/oixcloud/routing"
+              "link": "/oixflow/routing"
             },
             {
               "text": "模块导入、参数与排序",
-              "link": "/oixcloud/modules"
+              "link": "/oixflow/modules"
             },
             {
               "text": "MITM 证书与 HTTPS 重写",
-              "link": "/oixcloud/mitm"
+              "link": "/oixflow/mitm"
             },
             {
               "text": "DNS 与 IPv6",
-              "link": "/oixcloud/dns"
+              "link": "/oixflow/dns"
             },
             {
               "text": "Tailscale、子网与出口节点",
-              "link": "/oixcloud/tailscale"
+              "link": "/oixflow/tailscale"
             },
             {
               "text": "iCloud 同步与最近删除",
-              "link": "/oixcloud/sync"
+              "link": "/oixflow/sync"
             },
             {
               "text": "Apple TV 连接与同步",
-              "link": "/oixcloud/apple-tv"
+              "link": "/oixflow/apple-tv"
             },
             {
               "text": "自动化与按需连接",
-              "link": "/oixcloud/automation"
+              "link": "/oixflow/automation"
             },
             {
               "text": "网络预设、直连与局域网代理",
-              "link": "/oixcloud/networks"
+              "link": "/oixflow/networks"
             },
             {
               "text": "请求记录与诊断",
-              "link": "/oixcloud/diagnostics"
+              "link": "/oixflow/diagnostics"
             },
             {
               "text": "局域网控制",
-              "link": "/oixcloud/local-control"
+              "link": "/oixflow/local-control"
             }
           ]
         },
@@ -254,64 +254,64 @@
       "items": [
         {
           "text": "oixFlow",
-          "link": "/en/oixcloud/",
+          "link": "/en/oixflow/",
           "collapsed": true,
           "items": [
             {
               "text": "Sign in and connect",
-              "link": "/en/oixcloud/connect"
+              "link": "/en/oixflow/connect"
             },
             {
               "text": "Nodes and subscriptions",
-              "link": "/en/oixcloud/proxies"
+              "link": "/en/oixflow/proxies"
             },
             {
               "text": "Policy groups and proxy chains",
-              "link": "/en/oixcloud/policies"
+              "link": "/en/oixflow/policies"
             },
             {
               "text": "Routing rules and priority",
-              "link": "/en/oixcloud/routing"
+              "link": "/en/oixflow/routing"
             },
             {
               "text": "Modules, arguments and order",
-              "link": "/en/oixcloud/modules"
+              "link": "/en/oixflow/modules"
             },
             {
               "text": "MITM certificates and HTTPS rewriting",
-              "link": "/en/oixcloud/mitm"
+              "link": "/en/oixflow/mitm"
             },
             {
               "text": "DNS and IPv6",
-              "link": "/en/oixcloud/dns"
+              "link": "/en/oixflow/dns"
             },
             {
               "text": "Tailscale, subnets and exit nodes",
-              "link": "/en/oixcloud/tailscale"
+              "link": "/en/oixflow/tailscale"
             },
             {
               "text": "iCloud sync and recovery",
-              "link": "/en/oixcloud/sync"
+              "link": "/en/oixflow/sync"
             },
             {
               "text": "Apple TV setup and sync",
-              "link": "/en/oixcloud/apple-tv"
+              "link": "/en/oixflow/apple-tv"
             },
             {
               "text": "Automation and on-demand connections",
-              "link": "/en/oixcloud/automation"
+              "link": "/en/oixflow/automation"
             },
             {
               "text": "Network profiles and local access",
-              "link": "/en/oixcloud/networks"
+              "link": "/en/oixflow/networks"
             },
             {
               "text": "Requests and diagnostics",
-              "link": "/en/oixcloud/diagnostics"
+              "link": "/en/oixflow/diagnostics"
             },
             {
               "text": "Local Controller",
-              "link": "/en/oixcloud/local-control"
+              "link": "/en/oixflow/local-control"
             }
           ]
         },

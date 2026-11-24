@@ -24,7 +24,7 @@ function searchableText(section, md, includeContent = false) {
 // Client named in the page title, for a path without the locale prefix
 export function clientName(relative) {
   return relative.startsWith('flclash/') ? 'FlClash for oixCloud'
-    : relative.startsWith('oixcloud/') ? 'oixFlow'
+    : relative.startsWith('oixflow/') ? 'oixFlow'
     : relative.startsWith('other/helper-') || relative === 'other/surge.md' ? 'oixCloud Helper' : ''
 }
 

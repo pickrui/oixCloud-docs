@@ -111,7 +111,7 @@ Pass Alu、Pass Bronze 及更高等级套餐通常包含 IXP，仍以当前账�
 
 - **直连**：在客户端的节点列表中直接选择独享 IP 节点。本地网络到该节点的路由质量不作保证
 - **内部中继**：在用户中心「流量路由 → 转发 → [内部中继](/account/relay#内部中继)」添加路径，选择入口节点，将独享 IP 设为出口。保存后，在客户端选择入口节点
-- **链式代理**：在客户端创建代理链，将入口节点放在第一跳，独享 IP 放在最后一跳。保存后选择该代理链。设置步骤见 [oixFlow](/oixcloud/policies#创建代理链) 或 [FlClash for oixCloud](/flclash/proxies#代理链)
+- **链式代理**：在客户端创建代理链，将入口节点放在第一跳，独享 IP 放在最后一跳。保存后选择该代理链。设置步骤见 [oixFlow](/oixflow/policies#创建代理链) 或 [FlClash for oixCloud](/flclash/proxies#代理链)
 
 ### 有哪些实际好处？ {#ip-benefits}
 

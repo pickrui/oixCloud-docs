@@ -4,13 +4,13 @@ import { useData } from 'vitepress'
 
 // Both clients have articles with the same titles, so each article names its client above the title
 const CLIENTS = {
-  oixcloud: { name: 'oixFlow', icon: 'oixflow' },
+  oixflow: { name: 'oixFlow', icon: 'oixflow' },
   flclash: { name: 'FlClash for oixCloud', icon: 'flclash' }
 }
 
 const { page } = useData()
 const client = computed(() => {
-  const m = page.value.relativePath.match(/^(en\/)?(oixcloud|flclash)\/([a-z0-9-]+)\.md$/)
+  const m = page.value.relativePath.match(/^(en\/)?(oixflow|flclash)\/([a-z0-9-]+)\.md$/)
   if (!m) return null
   return { ...CLIENTS[m[2]], index: m[3] === 'index', link: `/${m[1] ?? ''}${m[2]}/` }
 })

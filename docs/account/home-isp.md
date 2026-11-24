@@ -22,8 +22,8 @@ Home ISP 与 Edge 使用相同套餐权限，在 [节点列表](https://oixcloud
 默认下发由服务方逐节点设置，与静态／动态分类无关。含 CIA、IXP、Fusion 或 GIA 的套餐，智能优选不包含 Home ISP；未默认下发的 ISP 也不会因默认节点为空而被自动补入
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 同时保留入口线路与 ISP">
-    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261123-1" alt="oixFlow · 同时保留入口线路与 ISP" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixflow-filter-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 同时保留入口线路与 ISP">
+    <img src="/illustrations/oixflow-filter-zh.svg?v=20261123-1" alt="oixFlow · 同时保留入口线路与 ISP" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 图中同时保留 Fusion 与 ISP</figcaption>
 </figure>
@@ -77,11 +77,11 @@ ISP 与 Edge 是两条独立线路；只选 Edge，或只按地区、名称筛�
 
 ### oixFlow 客户端代理链 {#oixcloud-chain}
 
-以下编辑步骤适用于 iPhone / iPad；Apple TV 从手机或平板 [同步配置](/oixcloud/apple-tv)，不提供相同的代理链编辑器
+以下编辑步骤适用于 iPhone / iPad；Apple TV 从手机或平板 [同步配置](/oixflow/apple-tv)，不提供相同的代理链编辑器
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-chains-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 按顺序创建代理链">
-    <img src="/illustrations/oixcloud-chains-zh.svg?v=20261123-1" alt="oixFlow · 按顺序创建代理链" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixflow-chains-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 按顺序创建代理链">
+    <img src="/illustrations/oixflow-chains-zh.svg?v=20261123-1" alt="oixFlow · 按顺序创建代理链" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>通用代理链编辑器示意 · 本例用实际入口节点和 Home ISP 替换图中成员</figcaption>
 </figure>
@@ -92,7 +92,7 @@ ISP 与 Edge 是两条独立线路；只选 Edge，或只按地区、名称筛�
 4. 只让指定网站使用该链时，在「代理 → 策略 → 路由规则」中添加「域名尾缀」规则，填入实际域名并将目标设为链名
 5. 建立新连接，在「活动 → 请求」中核对匹配规则和出口
 
-需要自动选择入口时，使用代理链编辑器允许的个人策略组，先检查其成员。组类型、后续跳组的影响及冲突处理见 [策略组与代理链](/oixcloud/policies#创建代理链)
+需要自动选择入口时，使用代理链编辑器允许的个人策略组，先检查其成员。组类型、后续跳组的影响及冲突处理见 [策略组与代理链](/oixflow/policies#创建代理链)
 
 ### FlClash for oixCloud 链式代理 {#flclash-chain}
 

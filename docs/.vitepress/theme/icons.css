@@ -57,7 +57,7 @@
 .VPSidebarItem.level-0 > .item > .link[href$="/clients/"] { --gi: var(--gi-clients); }
 .VPSidebarItem.level-0 > .item > .link[href$="/account/"] { --gi: var(--gi-account); }
 .VPSidebarItem.level-0 > .item > .link[href$="/help/"] { --gi: var(--gi-help); }
-.VPSidebarItem.level-1 > .item > .link[href$="/oixcloud/"] { --gi: var(--gi-oixflow); }
+.VPSidebarItem.level-1 > .item > .link[href$="/oixflow/"] { --gi: var(--gi-oixflow); }
 .VPSidebarItem.level-1 > .item > .link[href$="/flclash/"] { --gi: var(--gi-flclash); }
 .VPSidebarItem.level-1 > .item > .link[href$="/other/openclash.html"] { --gi: var(--gi-openclash); }
 .VPSidebarItem.level-1 > .item > .link[href$="/other/oixclash.html"] { --gi: var(--gi-oixclash); }

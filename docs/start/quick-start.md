@@ -24,8 +24,8 @@ description: "第一次使用的操作步骤、适用范围与常见问题"
 
 | 设备 | 教程 |
 | --- | --- |
-| <span class="platform gi-apple">iPhone / iPad</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow 首次连接](/oixcloud/connect) |
-| <span class="platform gi-apple">Apple TV</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>Apple TV 连接与同步](/oixcloud/apple-tv) |
+| <span class="platform gi-apple">iPhone / iPad</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow 首次连接](/oixflow/connect) |
+| <span class="platform gi-apple">Apple TV</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>Apple TV 连接与同步](/oixflow/apple-tv) |
 | <span class="platform gi-windows">Windows</span> <span class="platform gi-apple">macOS</span> <span class="platform gi-android">Android</span> <span class="platform gi-linux">Linux</span> | [<span class="gi gi-flclash" aria-hidden="true"></span>FlClash for oixCloud 首次连接](/flclash/connect) |
 | <span class="platform gi-openwrt">OpenWrt 路由器</span> | [<span class="gi gi-openclash" aria-hidden="true"></span>OpenClash](/other/openclash) |
 | <span class="platform gi-router">Merlin 路由器</span> | [<span class="gi gi-oixclash" aria-hidden="true"></span>oixClash](/other/oixclash) |

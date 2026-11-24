@@ -6,7 +6,7 @@ import './style.css'
 import './icons.css'
 
 const legacyPages = new Map(Object.entries({
-  start: 'start/quick-start', oixcloud: 'oixcloud/connect', flclash: 'flclash/connect',
+  start: 'start/quick-start', oixflow: 'oixflow/connect', oixcloud: 'oixflow/connect', flclash: 'flclash/connect',
   openclash: 'other/openclash', surge: 'other/surge', plans: 'account/plans',
   traffic: 'account/traffic', nodes: 'account/nodes', subscriptions: 'account/subscriptions',
   'home-isp': 'account/home-isp', relay: 'account/relay', unlock: 'account/unlock', security: 'account/security',

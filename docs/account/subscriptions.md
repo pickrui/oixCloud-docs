@@ -21,8 +21,8 @@ oixFlow、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路由
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixcloud-filter-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 筛选线路、地区与名称">
-    <img src="/illustrations/oixcloud-filter-zh.svg?v=20261123-1" alt="oixFlow · 筛选线路、地区与名称" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixflow-filter-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 筛选线路、地区与名称">
+    <img src="/illustrations/oixflow-filter-zh.svg?v=20261123-1" alt="oixFlow · 筛选线路、地区与名称" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>oixFlow iPhone / iPad 界面示例 · 其他客户端按对应教程操作</figcaption>
 </figure>
@@ -43,7 +43,7 @@ oixFlow、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路由
 
 名称支持不区分大小写的正则表达式，例如 `香港|日本` 表示名称含任一词；节点名不会随界面语言翻译。预览里的搜索只帮助查找，不会改变筛选条件。预览未完成、表达式无效或保留数为零时不能保存
 
-图解见 [oixFlow](/oixcloud/proxies#更新与筛选) 和 [FlClash for oixCloud](/flclash/profiles#托管订阅选项)
+图解见 [oixFlow](/oixflow/proxies#更新与筛选) 和 [FlClash for oixCloud](/flclash/profiles#托管订阅选项)
 
 ## 空筛选与恢复默认
 

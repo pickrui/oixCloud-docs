@@ -1,6 +1,6 @@
 {
   "ui": {
-    "oixcloud": {
+    "oixflow": {
       "Cron 定时": "Cron",
       "MITM 证书": "MITM Certificates",
       "iCloud 同步": "iCloud Sync",
@@ -630,20 +630,20 @@
     }
   },
   "overrides": {
-    "oixcloud-tailscale": {
+    "oixflow-tailscale": {
       "登录": "Login"
     },
-    "oixcloud-sync": {
+    "oixflow-sync": {
       "代理": "Proxies",
       "规则": "Rules"
     },
-    "oixcloud-requests": {
+    "oixflow-requests": {
       "代理": "Proxy"
     },
-    "oixcloud-proxies": {
+    "oixflow-proxies": {
       "请求": "Requests"
     },
-    "oixcloud-automation": {
+    "oixflow-automation": {
       "参数": "Argument"
     },
     "flclash-custom-node": {
@@ -817,7 +817,7 @@
     }
   },
   "scenes": {
-    "oixcloud-login": [
+    "oixflow-login": [
       "Sign in to your account",
       "oixCloud → Sign In",
       [
@@ -835,7 +835,7 @@
         ]
       ]
     ],
-    "oixcloud-connect": [
+    "oixflow-connect": [
       "Connect and choose an outbound",
       "Home → Current node card",
       [
@@ -853,7 +853,7 @@
         ]
       ]
     ],
-    "oixcloud-proxies": [
+    "oixflow-proxies": [
       "Select a node or Best Available",
       "Home → Current node card → Nodes",
       [
@@ -871,7 +871,7 @@
         ]
       ]
     ],
-    "oixcloud-filter": [
+    "oixflow-filter": [
       "Filter lines, regions and names",
       "oixCloud → Node Filter",
       [
@@ -889,7 +889,7 @@
         ]
       ]
     ],
-    "oixcloud-policies": [
+    "oixflow-policies": [
       "Create a policy group",
       "Proxies → Policies → Add Policy Group",
       [
@@ -907,7 +907,7 @@
         ]
       ]
     ],
-    "oixcloud-chains": [
+    "oixflow-chains": [
       "Build a proxy chain in order",
       "Proxies → Chains → Add",
       [
@@ -925,7 +925,7 @@
         ]
       ]
     ],
-    "oixcloud-rules": [
+    "oixflow-rules": [
       "Add a routing rule for a website",
       "Proxies → Policies → Routing Rules",
       [
@@ -943,7 +943,7 @@
         ]
       ]
     ],
-    "oixcloud-dns": [
+    "oixflow-dns": [
       "Add a split DNS rule",
       "Settings → DNS → Add DNS Rule",
       [
@@ -961,7 +961,7 @@
         ]
       ]
     ],
-    "oixcloud-networks": [
+    "oixflow-networks": [
       "Apply settings for one network",
       "Settings → Network Profiles → Network name",
       [
@@ -979,7 +979,7 @@
         ]
       ]
     ],
-    "oixcloud-mitm": [
+    "oixflow-mitm": [
       "Install this device’s MITM certificate",
       "Settings → MITM → MITM Certificates",
       [
@@ -997,7 +997,7 @@
         ]
       ]
     ],
-    "oixcloud-modules": [
+    "oixflow-modules": [
       "Import and manage modules",
       "Proxies → Policies → Modules",
       [
@@ -1015,7 +1015,7 @@
         ]
       ]
     ],
-    "oixcloud-sync": [
+    "oixflow-sync": [
       "Choose what iCloud syncs",
       "Settings → iCloud Sync",
       [
@@ -1033,7 +1033,7 @@
         ]
       ]
     ],
-    "oixcloud-tailscale": [
+    "oixflow-tailscale": [
       "Add and authorize a Tailscale network",
       "Settings → Tailscale → Add Network",
       [
@@ -1051,7 +1051,7 @@
         ]
       ]
     ],
-    "oixcloud-automation": [
+    "oixflow-automation": [
       "Choose script triggers",
       "Settings → Automation → Add Script",
       [
@@ -1069,7 +1069,7 @@
         ]
       ]
     ],
-    "oixcloud-requests": [
+    "oixflow-requests": [
       "Inspect a request’s routing decision",
       "Activity → Requests → A request",
       [
@@ -1087,7 +1087,7 @@
         ]
       ]
     ],
-    "oixcloud-mitm-generate": [
+    "oixflow-mitm-generate": [
       "Generate your first MITM certificate",
       "Settings → MITM → MITM Certificates",
       [
@@ -1483,7 +1483,7 @@
         ]
       ]
     ],
-    "oixcloud-add-node": [
+    "oixflow-add-node": [
       "Add your own node from a link",
       "Proxies → Servers → Add → Link",
       [
@@ -1501,7 +1501,7 @@
         ]
       ]
     ],
-    "oixcloud-local-control": [
+    "oixflow-local-control": [
       "Enable LAN control and find its address",
       "Settings → Local Controller",
       [

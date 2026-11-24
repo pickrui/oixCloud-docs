@@ -1,0 +1,69 @@
+---
+description: "Sign in and connect \u2014 setup, practical steps and troubleshooting"
+---
+
+# Sign in and connect
+
+For iPhone / iPad. See the separate [Apple TV guide](/en/oixflow/apple-tv).
+
+## Installation and system requirements
+
+| Device | Minimum OS | Download |
+| --- | --- | --- |
+| iPhone | iOS 18.0 | [TestFlight](#testflight) |
+| iPad | iPadOS 18.0 | Same as iPhone |
+
+### Install or update with TestFlight {#testflight}
+
+On your iPhone or iPad, install [TestFlight](https://apps.apple.com/app/id899247664), open the [oixFlow beta invitation](https://testflight.apple.com/join/bThPJNaf), then tap **Accept** and **Install**. If you have already joined, open TestFlight and tap **Update** next to oixFlow. Joining requires an open slot. To install or update, you need an unexpired build that supports your OS version.
+
+**A mainland China Apple Account cannot install or update the beta directly.** Apple has disabled internal testing, external testing and public invitations for oixFlow in mainland China. Some users suggest temporarily switching storefronts. Check TestFlight to see whether a build is available to you.
+
+1. On your iPhone or iPad, open the [storefront picker](https://www.liangjianghu.com/searchads-appstore-switch) and select **US 美国 United States**.
+2. Quit TestFlight completely and reopen it. If oixFlow appears, tap **Install** or **Update**. If this is your first time joining, open the beta invitation above.
+
+::: details On a Mac or unable to open the storefront picker?
+Add the [App Store Region shortcut](https://www.icloud.com/shortcuts/cd008a5e6d1440689173d548ce0eac78), run it, choose **United States**, then reopen TestFlight. You can also select the United States in [Store Redirect](https://apps.apple.com/cn/app/store-redirect/id1601434613).
+
+If you previously enabled any TestFlight MitM modules or rules, turn them off or remove them first.
+:::
+
+## Illustrated steps
+
+<figure class="guide-figure">
+  <a href="/illustrations/oixflow-connect-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Connect and choose an outbound">
+    <img src="/illustrations/oixflow-connect-en.svg?v=20261123-1" alt="oixFlow · Connect and choose an outbound" width="1120" height="1120" loading="lazy">
+  </a>
+  <figcaption>English interface simulation · Fictional data</figcaption>
+</figure>
+
+## Managed account
+
+<figure class="guide-figure">
+  <a href="/illustrations/oixflow-login-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Sign in to your account">
+    <img src="/illustrations/oixflow-login-en.svg?v=20261123-1" alt="oixFlow · Sign in to your account" width="1120" height="1120" loading="lazy">
+  </a>
+  <figcaption>English interface simulation · Fictional data</figcaption>
+</figure>
+
+1. Open the TestFlight link in our download center to install oixFlow, then sign in on the app's oixCloud account page.
+2. Choose email/password, an existing Access Token, or **Sign in with Google** when available. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Wait for the active plan and managed nodes to load before connecting.
+3. Select a node or policy group on the home screen, keep Rule mode selected, and tap the power button in the status card. Allow the system to add a VPN configuration when prompted on your first connection.
+
+## Your own nodes
+
+You can also use compatible private nodes or subscriptions without a managed account. Use a link, QR code or manual entry under **Proxies → Servers → Add**; local profile files use a separate import entry. See [nodes and subscriptions](/en/oixflow/proxies#single-node) for the steps and mixed use.
+
+## Refresh and verify
+
+Pull down on the oixCloud account page to refresh account information. Use Refresh Nodes to fetch the managed nodes again after a plan or node change. Policy groups choose the exit, while routing rules decide which requests use it. Keep Rule mode enabled to apply your routing settings.
+
+Open a destination after connecting and check the actual outbound in [requests and diagnostics](/en/oixflow/diagnostics). If sign-in works but the node list is empty, check your plan and node filters.
+
+## Sign out
+
+Signing out removes local sign-in state without revoking the login token shared by the same client type. Revoke tokens on the website when necessary, and account for enabled account sync on other devices.
+
+## Google sign-in troubleshooting
+
+For a missing button, failed browser return, expired flow or unregistered email, follow the shared [Google sign-in checks](/en/account/security#google-troubleshooting).

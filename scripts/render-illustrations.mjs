@@ -25,7 +25,7 @@ const R = (x,y,w,h,c='#fff',r=12,stroke='none') => `<rect x="${x}" y="${y}" widt
 const T = (x,y,s,z=20,c='#202124',weight=400,anchor='start',maxWidth) => {
  const original = String(s), text = ui(original)
  const bilingual = english && drawingUI && currentScene.client === 'oixclash' && hasChinese(original)
- const phone = currentScene?.client === 'oixcloud' || currentScene?.id === 'android'
+ const phone = currentScene?.client === 'oixflow' || currentScene?.id === 'android'
  if (english && drawingUI && !maxWidth) maxWidth = anchor === 'start' ? (phone ? 480 : 1060) - x : undefined
  const size = english && maxWidth ? Math.min(z, z * maxWidth / Math.max(1,textWidth(text,z))) : z
  let result = `<text x="${x}" y="${y-(bilingual?6:0)}" font-size="${size}" fill="${c}" font-weight="${weight}" text-anchor="${anchor}">${E(text)}</text>`
@@ -61,7 +61,7 @@ function group(y,rows,{title='',w=404,x=68}={}){
  let h=rows.reduce((sum,r)=>sum+(r.sub?68:53),0),s=title?T(x+14,y-12,title,15,'#727279'):''
  s+=R(x,y,w,h,'#fff',14)
  let yy=y
- rows.forEach((r,i)=>{let rh=r.sub?68:53;s+=T(x+16,yy+(r.sub?27:33),r.label,r.labelSize||20,r.disabled?'#a5a5ad':r.danger?'#d23d3d':r.blue?'#007aff':'#202124',r.bold?600:400,'start',english ? w-32-(r.on!==undefined?62:r.value?Math.min(190,textWidth(ui(r.value),r.valueSize||18)+28):r.chev?20:0) : undefined);if(r.sub)s+=T(x+16,yy+51,r.sub,14,'#85858d',400,'start',english?w-36:undefined);if(r.value)s+=T(x+w-(r.chev?28:16),yy+33,english&&currentScene.client==='oixcloud'&&r.value==='代理'?'Proxy':r.value,r.valueSize||18,'#85858d',400,'end');if(r.chev)s+=chevron(x+w-18,yy+23);if(r.on!==undefined)s+=toggle(x+w-66,yy+12,r.on);if(i<rows.length-1)s+=L(x+16,yy+rh,x+w,yy+rh);if(r.n)s+=mark(x+4,yy+4,w-8,rh-8,r.n);yy+=rh})
+ rows.forEach((r,i)=>{let rh=r.sub?68:53;s+=T(x+16,yy+(r.sub?27:33),r.label,r.labelSize||20,r.disabled?'#a5a5ad':r.danger?'#d23d3d':r.blue?'#007aff':'#202124',r.bold?600:400,'start',english ? w-32-(r.on!==undefined?62:r.value?Math.min(190,textWidth(ui(r.value),r.valueSize||18)+28):r.chev?20:0) : undefined);if(r.sub)s+=T(x+16,yy+51,r.sub,14,'#85858d',400,'start',english?w-36:undefined);if(r.value)s+=T(x+w-(r.chev?28:16),yy+33,english&&currentScene.client==='oixflow'&&r.value==='代理'?'Proxy':r.value,r.valueSize||18,'#85858d',400,'end');if(r.chev)s+=chevron(x+w-18,yy+23);if(r.on!==undefined)s+=toggle(x+w-66,yy+12,r.on);if(i<rows.length-1)s+=L(x+16,yy+rh,x+w,yy+rh);if(r.n)s+=mark(x+4,yy+4,w-8,rh-8,r.n);yy+=rh})
  return s
 }
 function segmented(x,y,w,labels,sel=0,fl=false){let s=R(x,y,w,39,fl?'#f7edef':'#e4e4e9',fl?20:8,fl?'#a8959a':'none');labels.forEach((l,i)=>{let iw=w/labels.length;if(sel===i)s+=R(x+i*iw+3,y+3,iw-6,33,fl?'#f0d9df':'#fff',fl?17:6);s+=T(x+iw*(i+.5),y+25,l,16,fl?'#593c44':'#222',i===sel?600:400,'middle')});return s}
@@ -82,63 +82,63 @@ const sheetHead=(m,title,saveMark)=>T(m.x+24,m.y+42,'‹',26,'#8a5260')+T(m.x+m.
 
 function chips(x,y,names,selected=0,fl=false){const selectedSet=new Set(Array.isArray(selected)?selected:[selected]);return names.map((v,i)=>{const active=selectedSet.has(i);return R(x+i*123,y,113,36,active?(fl?'#f0d9df':'#dfebff'):'#f4f5f8',18,active?(fl?'#bd8d9b':'#8db7ff'):'#dbdce2')+T(x+i*123+56,y+24,v,15,active?(fl?'#794c59':'#0068d8'):'#646771',500,'middle')}).join('')}
 
-add('oixcloud','login','登录账户','oixCloud → 登录',[
+add('oixflow','login','登录账户','oixCloud → 登录',[
  ['选择登录方式','支持 Access Token、邮箱密码及已有账户的 Google 登录'],['填写凭据','图中邮箱为虚构示例，密码不展示'],['完成登录','登录后等待托管节点载入，再返回主页连接']
 ],()=>ios('oixCloud',{large:true,tab:'oixCloud'})+segmented(69,262,402,['Access Token','邮箱密码'],1)+mark(69,262,402,39,1)+group(351,[{label:'reader@example.com'},{label:'••••••••',n:2},{label:'忘记密码？',blue:true}])+group(549,[{label:'登录',blue:true,n:3}])+group(630,[{label:'使用 Google 登录',blue:true}])+group(711,[{label:'创建账号',blue:true}]))
 
-add('oixcloud','connect','主页连接与节点选择','主页 → 当前节点卡片',[
+add('oixflow','connect','主页连接与节点选择','主页 → 当前节点卡片',[
  ['点电源按钮','已有节点时启动 VPN，首次使用允许系统添加 VPN 配置'],['点节点选择卡片','打开节点列表；预设指定出口时先调整网络预设'],['核对模式与新请求','状态、模式、兜底路由是不同设置；连接后验证实际出口']
 ],()=>ios('主页',{large:true,tab:'主页'})+R(67,264,406,227,'#fff',22)+T(89,297,'状态',17,'#727279',600)+R(149,278,88,27,'#eeeef2',14)+T(193,297,'未连接',14,'#727279',500,'middle')+T(89,342,'已运行',15,'#85858d')+T(89,375,'—',24,'#333',600)+T(221,342,'连接数',15,'#85858d')+T(221,375,'—',24,'#333',600)+power(406,353)+badge(450,279,1)+T(89,433,'↑  —     上传',16,'#85858d')+T(265,433,'↓  —     下载',16,'#85858d')+group(515,[{label:'香港 · 示例 A',sub:'oixCloud',chev:true,n:2}])+segmented(69,618,402,['规则','全局','直连'],0)+badge(467,618,3)+group(704,[{label:'自动优选',value:'延迟优先',chev:true},{label:'兜底路由',value:'代理',chev:true}]))
 
-add('oixcloud','proxies','选择节点与自动优选','主页 → 当前节点卡片 → 节点',[
+add('oixflow','proxies','选择节点与自动优选','主页 → 当前节点卡片 → 节点',[
  ['搜索节点','可以按节点名称查找'],['自动优选或策略组','自动条目直接选择；不是进入一个新的编辑页面'],['选择一个节点','点完成返回，使用新连接验证；延迟仅为示例']
 ],()=>ios('节点',{back:'',action:'完成'})+R(68,243,403,41,'#e5e5ea',11)+T(84,269,'⌕  搜索',18,'#94949c')+badge(466,245,1)+group(310,[{label:'ϟ  自动优选',blue:true,n:2},{label:'工作'}])+group(470,[{label:'香港 · 示例 A',value:'28 ms',n:3},{label:'日本 · 示例 B',value:'42 ms'},{label:'新加坡 · 示例 C',value:'56 ms'}],{title:'oixCloud'})+check(311,494)+group(679,[{label:'＋ 添加',blue:true}]))
 
-add('oixcloud','filter','筛选线路、地区与名称','oixCloud → 节点筛选',[
+add('oixflow','filter','筛选线路、地区与名称','oixCloud → 节点筛选',[
  ['点选筛选条件','线路与地区可切换不筛选、仅保留、排除；标签随账户变化'],['检查节点预览','名称支持正则；预览搜索只查找，不改变条件'],['保存并刷新','示例保留 Fusion 与 ISP；保存后等待托管节点刷新']
 ],()=>ios('节点筛选',{back:'oixCloud',action:'保存'})+badge(477,241,3)+T(82,266,'○ 不筛选  →  ✓ 仅保留  →  ⊖ 排除',14,'#697384')+T(81,312,'线路',15,'#767982')+chips(76,328,['Edge','CIA','IXP'],-1)+chips(76,375,['Fusion','GIA','ISP'],[0,2])+badge(468,327,1)+T(81,440,'地区',15,'#767982')+chips(76,455,['香港','日本','新加坡'],[0,1])+group(517,[{label:'名称包含',value:'香港|日本',valueSize:16},{label:'名称排除',value:'测试|维护',valueSize:16}])+T(83,656,'节点预览',18,'#202124',600)+badge(467,647,2)+group(677,[{label:'⌕  搜索节点',disabled:true},{label:'香港 · 示例 A',value:'✓'},{label:'日本 · 示例 B',value:'✓'}])+T(83,876,'恢复默认',17,'#007aff')+T(468,876,'保留 2 / 12 个节点',15,'#727279',400,'end'))
 
-add('oixcloud','policies','创建策略组','代理 → 策略 → 添加策略组',[
+add('oixflow','policies','创建策略组','代理 → 策略 → 添加策略组',[
  ['填写名称与类型','按用途选择手动、自动测速、故障转移、负载均衡或智能'],['加入成员并核对底层代理','示例使用两个节点；不需要中继时保留未选择'],['保存并选用','健康检查在下方继续；保存后在主页或规则中选用']
 ],()=>ios('工作',{back:'取消',action:'保存'})+badge(476,241,3)+group(266,[{label:'名称',value:'工作'},{label:'类型',value:'自动测速',chev:true,n:1}])+group(425,[{label:'香港 · 示例 A'},{label:'日本 · 示例 B'},{label:'＋ 添加成员',blue:true,n:2}],{title:'成员'})+group(621,[{label:'底层代理',value:'无',chev:true}])+group(735,[{label:'测试 URL',value:'https://example.com',valueSize:13},{label:'预期 HTTP 状态',value:'200',valueSize:16}],{title:'健康检查'}))
 
-add('oixcloud','chains','按顺序创建代理链','代理 → 链式代理 → 添加',[
+add('oixflow','chains','按顺序创建代理链','代理 → 链式代理 → 添加',[
  ['填写链的名称','使用能够辨认用途的名称'],['按转发顺序放置成员','任意跳可用策略组；后续跳组在其他地方也经前置路径'],['保存后选择代理链','路线预览核对方向；在主页或规则中选用保存的链']
 ],()=>ios('新建链式代理',{back:'取消',action:'✓'})+badge(475,241,3)+group(276,[{label:'名称',value:'工作代理链',n:1}])+group(390,[{label:'香港 · 示例 A',sub:'入口',value:'≡',n:2},{label:'工作',sub:'URL Test',value:'≡'},{label:'＋ 添加代理',blue:true}],{title:'代理'})+T(83,625,'任意一跳都可使用策略组',15,'#85858d')+T(83,650,'后续跳组在其他地方也经前置路径',15,'#85858d')+group(707,[{label:'香港 · 示例 A'},{label:'↓  工作'}],{title:'路由预览'}))
 
-add('oixcloud','rules','为网站添加路由规则','代理 → 策略 → 路由规则',[
+add('oixflow','rules','为网站添加路由规则','代理 → 策略 → 路由规则',[
  ['选择域名尾缀','输入 example.com，不带协议或路径'],['选择实际目标','示例选用已有的「工作」策略组'],['点添加','回到规则模式，重新访问目标网站核对命中结果']
 ],()=>ios('路由规则',{back:'策略'})+R(45,234,450,688,'#00000022',20)+R(45,364,450,574,'#f2f2f7',26)+R(238,374,65,5,'#c6c6ce',3)+T(71,416,'取消',18,'#007aff')+T(270,416,'添加规则',21,'#111',600,'middle')+T(467,416,'添加',18,'#007aff',600,'end')+badge(482,438,3)+group(454,[{label:'类型',value:'域名尾缀',chev:true,n:1},{label:'example.com'},{label:'扩展匹配',on:false}])+group(668,[{label:'路由到',value:'工作',chev:true,n:2}])+lines(84,751,'规则自上而下匹配，命中第一条即生效',16,'#85858d',23))
-add('oixcloud','dns','添加分流 DNS 规则','设置 → DNS → 新增 DNS 规则',[
+add('oixflow','dns','添加分流 DNS 规则','设置 → DNS → 新增 DNS 规则',[
  ['选匹配方式','示例使用后缀，匹配一个内部域名'],['选分流 DNS','仅将匹配的域名交给指定服务器解析'],['确认服务器可达','图中 192.0.2.53 是文档示例地址，需换成你可达的 DNS']
 ],()=>ios('DNS 规则',{back:'DNS',action:'保存'})+group(260,[{label:'已启用',on:true}])+T(82,366,'匹配方式',15,'#747780')+segmented(79,383,382,['精确','后缀','通配符'],1)+badge(467,379,1)+group(438,[{label:'corp.example.com'}])+group(544,[{label:'操作',value:'分流 DNS',chev:true,n:2},{label:'192.0.2.53',n:3}])+lines(84,698,'此规则只用于匹配的域名；其他请求继续按原有设置解析',16,'#85858d',22))
-add('oixcloud','networks','为特定网络应用预设','设置 → 网络预设 → 网络名称',[
+add('oixflow','networks','为特定网络应用预设','设置 → 网络预设 → 网络名称',[
  ['核对网络名称','Wi-Fi 按准确 SSID 匹配，蜂窝网络单独设置'],['区分模式与兜底路由','直连模式与只有未匹配流量直连，作用不同'],['保存后验证','DNS 留空表示继承；路由规则与 IPv6 可分别继承']
 ],()=>ios('Home Wi-Fi',{back:'网络预设',action:'保存'})+group(270,[{label:'网络',value:'Home Wi-Fi',n:1}],{title:'网络'})+group(377,[{label:'模式',value:'规则',chev:true,n:2},{label:'兜底路由',value:'继承',chev:true}])+T(83,536,'路由规则',15,'#727279')+segmented(78,552,384,['继承','自定义'],0)+badge(468,552,3)+group(660,[{label:'继承',disabled:true}],{title:'DNS'})+group(770,[{label:'IPv6',value:'继承',chev:true},{label:'自动连接',on:false}]))
 
-add('oixcloud','mitm','安装本机 MITM 证书','设置 → MITM → MITM 证书',[
+add('oixflow','mitm','安装本机 MITM 证书','设置 → MITM → MITM 证书',[
  ['核对此设备的证书','本图展示已生成证书、尚未登录账户的状态'],['安装信任描述文件','安装后到 iOS 设置完成安装与完全信任'],['账户证书另行管理','未登录时账户操作不可用；不要随意替换本机证书']
 ],()=>ios('MITM 证书',{back:'MITM'})+group(281,[{label:'oixFlow CA',sub:'根证书',n:1},{label:'安装信任描述文件',blue:true,n:2},{label:'导出公钥证书',blue:true},{label:'替换此设备上的证书',blue:true},{label:'从此设备删除',danger:true}],{title:'此设备'})+T(83,595,'此处的更改仅影响此设备',15,'#85858d')+group(662,[{label:'状态',value:'尚未登录'},{label:'创建并用于此设备',disabled:true},{label:'将 PKCS#12 导入账号',disabled:true}],{title:'oixCloud'})+badge(468,662,3))
 
-add('oixcloud','modules','导入、更新与排列模块','代理 → 策略 → 模块',[
+add('oixflow','modules','导入、更新与排列模块','代理 → 策略 → 模块',[
  ['选择导入或订阅','新建、文件导入、订阅与可莉插件中心是不同入口'],['核对模块状态','名称与内容均为虚构；按用途启用，长按可查看操作'],['检查生效顺序','多个模块影响相同域名时，在生效顺序中调整']
 ],()=>ios('模块',{back:'策略'})+group(267,[{label:'新建模块',blue:true},{label:'导入模块',blue:true,n:1},{label:'订阅模块',blue:true},{label:'可莉插件中心',blue:true}])+group(528,[{label:'示例规则模块',sub:'订阅 · 上次更新：刚刚',on:true,n:2},{label:'示例脚本模块',sub:'文件 · 已停用',on:false}])+group(717,[{label:'生效顺序',chev:true,n:3}])+group(819,[{label:'模块说明',chev:true}]))
 
-add('oixcloud','sync','选择 iCloud 同步内容','设置 → iCloud 同步',[
+add('oixflow','sync','选择 iCloud 同步内容','设置 → iCloud 同步',[
  ['核对同步状态','设置主页先开启同步；这里查看状态并立即同步'],['按类别选择','MITM 同步规则集；本机证书不随此开关同步'],['电视单独开启','两端使用同一个 Apple 账户，电视端确认接收']
 ],()=>ios('iCloud 同步',{back:'设置'})+group(267,[{label:'上次同步',value:'刚刚'},{label:'立即同步',blue:true,n:1}])+group(416,[{label:'代理',sub:'节点、订阅、链式代理、策略组与文件夹',on:true,n:2},{label:'规则',on:false},{label:'模块',on:false},{label:'MITM',sub:'规则集；每台设备保留自己的证书',on:false},{label:'自动化',on:false},{label:'设置',on:false},{label:'账户',on:true}])+group(864,[{label:'同步到 Apple TV',on:true,n:3}]))
 
-add('oixcloud','tailscale','添加并授权 Tailscale 网络','设置 → Tailscale → 添加网络',[
+add('oixflow','tailscale','添加并授权 Tailscale 网络','设置 → Tailscale → 添加网络',[
  ['设置网络与设备名称','名称用于识别本网络和这台设备'],['保留交互式登录','点保存并登录后，在授权页批准此设备'],['核对自动路由与出口','自动路由处理设备和获批子网；互联网出口需要单独选择']
 ],()=>ios('添加网络',{back:'Tailscale',action:'保存'})+group(269,[{label:'网络名称',value:'Tailnet',n:1},{label:'设备名称',value:'My iPhone'},{label:'登录',value:'交互式登录',chev:true}])+group(470,[{label:'自动路由',on:true,n:3}])+group(570,[{label:'出口节点',value:'none'}])+group(674,[{label:'高级',chev:true}])+group(782,[{label:'保存并登录',blue:true,n:2}]))
-add('oixcloud','automation','设置脚本触发方式','设置 → 自动化 → 新增脚本',[
+add('oixflow','automation','设置脚本触发方式','设置 → 自动化 → 新增脚本',[
  ['核对来源与客户端','选择脚本针对的客户端；名称填写后会显示在页标题'],['按需设置触发器','先选手动验证，再开启定时或网络事件'],['填写代码后再运行','JavaScript 与立即运行在触发器下方，向下滚动查看']
 ],()=>ios('示例任务',{back:'取消',action:'保存'})+group(267,[{label:'示例任务',n:1},{label:'客户端',value:'Surge',chev:true},{label:'参数',value:'可选'},{label:'超时',value:'10 秒'}])+group(534,[{label:'手动',on:true,n:2},{label:'间隔',on:false},{label:'Cron 定时',on:false},{label:'oixFlow 已启动',on:false},{label:'网络已更改',on:false}],{title:'触发器'})+T(83,858,'JavaScript',15,'#727279')+R(68,872,404,32,'#fff',12)+T(84,895,'// 示例脚本代码…',14,'#85858d')+badge(468,872,3))
 
-add('oixcloud','requests','查看请求的路由判定','活动 → 请求 → 一条请求',[
+add('oixflow','requests','查看请求的路由判定','活动 → 请求 → 一条请求',[
  ['先找到目标域名','图中 example.com 为虚构请求'],['核对路由结果','查看该请求使用的路线与判定原因'],['检查匹配规则','修改规则后重新建立连接，再核对规则与出口']
 ],()=>ios('请求',{back:'请求'})+group(270,[{label:'主机',value:'example.com',n:1},{label:'端口',value:'443'},{label:'协议',value:'HTTPS'},{label:'时间',value:'09:41:00'}],{title:'连接'})+group(536,[{label:'结果',value:'代理',n:2},{label:'路由',value:'香港 · 示例 A'},{label:'原因',value:'规则匹配'},{label:'匹配规则',sub:'DOMAIN-SUFFIX,example.com',n:3}],{title:'判定'}))
-add('oixcloud','mitm-generate','首次生成 MITM 证书','设置 → MITM → MITM 证书',[
+add('oixflow','mitm-generate','首次生成 MITM 证书','设置 → MITM → MITM 证书',[
  ['检查此设备','没有本机证书时显示生成入口'],['点生成证书','生成后才出现安装信任描述文件等操作'],['继续安装与信任','安装本机描述文件，再到 iOS 设置完成完全信任']
 ],()=>ios('MITM 证书',{back:'MITM'})+group(287,[{label:'生成证书',blue:true,n:2}],{title:'此设备'})+badge(469,268,1)+T(83,377,'此处的更改仅影响此设备',15,'#85858d')+group(454,[{label:'状态',value:'尚未登录'},{label:'创建并用于此设备',disabled:true},{label:'将 PKCS#12 导入账号',disabled:true}],{title:'oixCloud'})+T(83,661,'示例：尚未登录，账户证书操作不可用',15,'#85858d'))
 
@@ -248,11 +248,11 @@ function website(title) {
 const webButton=(x,y,w,label,n)=>R(x,y,w,40,'#4c74d8',7)+T(x+w/2,y+26,label,16,'#fff',600,'middle',w-20)+(n?mark(x,y,w,40,n):'')
 function webField(x,y,w,label,value,n){return T(x,y,label,16,'#596b85',600)+R(x,y+12,w,45,'#fff',7,'#d5deea')+T(x+13,y+41,value,17,'#445a77',400,'start',w-24)+(n?mark(x,y+12,w,45,n):'')}
 
-add('oixcloud','add-node','从链接添加自己的节点','代理 → 服务器 → 添加 → 链接',[
+add('oixflow','add-node','从链接添加自己的节点','代理 → 服务器 → 添加 → 链接',[
  ['选择添加方式','按现有资料选择链接、二维码或手动'],['粘贴完整节点链接','不要填账户 Access Token；图中地址与凭据均为示例'],['继续并核对参数','保存后在主页或分流规则中选用新节点']
 ],()=>{let s=ios('代理',{large:true,tab:'代理'})+R(45,245,450,693,'#00000022',25)+R(45,319,450,619,'#fff',27)+R(240,329,60,5,'#d5d5dc',3)+T(70,377,'添加代理',23,'#202124',650)+circ(460,367,16,'#f0f0f4')+T(460,373,'×',23,'#727279',500,'middle');['二维码','链接','手动','oixCloud'].forEach((label,i)=>{let y=411+i*43;s+=T(78,y,['▦','↗','✎','☁'][i],25,'#007aff')+T(121,y,label,20,'#202124',600)+circ(457,y-7,12,i===1?'#007aff':'#ededf1');if(i===1)s+=check(450,y-14,'#fff')});return s+mark(67,385,405,174,1)+R(69,584,402,50,'#f3f3f7',12)+T(83,615,'trojan://example@proxy.example.com:443',13,'#202124')+mark(69,584,402,50,2)+lines(83,660,'支持代理链接和 Clash 或 Surge 订阅',14,'#85858d',29)+T(83,713,'Remnawave HWID',18,'#202124')+toggle(407,691,false)+lines(83,753,'通过 HTTPS 向此订阅发送此设备的标识',13,'#85858d',30)+R(69,850,402,46,'#007aff',23)+T(270,880,'继续',20,'#fff',650,'middle')+mark(69,850,402,46,3)})
 
-add('oixcloud','local-control','开启局域网控制并找到地址','设置 → 局域网控制',[
+add('oixflow','local-control','开启局域网控制并找到地址','设置 → 局域网控制',[
  ['开启局域网访问','保持 oixFlow 已连接，另一设备须在同一网络'],['打开列出的 HTTPS 地址','使用当前设备地址；图中仅为示例'],['核对指纹后使用密钥','复制本设备的访问密钥；完成后关闭访问']
 ],()=>ios('局域网控制',{back:'设置',action:'应用'})+group(275,[{label:'允许局域网访问',on:true,n:1},{label:'端口',value:'9091'},{label:'状态',value:'可用'}])+group(488,[{label:'https://192.0.2.10:9091',n:2}],{title:'局域网地址'})+group(612,[{label:'复制访问密钥',blue:true,n:3},{label:'重置访问密钥',danger:true},{label:'证书指纹',sub:'SHA-256 · 示例指纹，不用于连接'}],{title:'安全访问'}))
 
@@ -568,12 +568,12 @@ for(const original of scenes){
  const localized=english?translations.scenes[key]:null
  if(english&&!localized)throw new Error(`Missing English scene: ${key}`)
  const sc=localized?{...original,title:localized[0],route:localized[1],notes:localized[2]}:original
- const phone=sc.client==='oixcloud'||sc.id==='android'
+ const phone=sc.client==='oixflow'||sc.id==='android'
  const h=english?(phone?1120:1100):(phone?982:975)
- const brand=['oixcloud','apple-tv'].includes(sc.client)?'oixFlow':['account','start'].includes(sc.client)?'oixCloud':sc.client==='openclash'?'OpenClash':sc.client==='helper'?'oixCloud Helper':sc.client==='oixclash'?'oixClash':'FlClash for oixCloud'
+ const brand=['oixflow','apple-tv'].includes(sc.client)?'oixFlow':['account','start'].includes(sc.client)?'oixCloud':sc.client==='openclash'?'OpenClash':sc.client==='helper'?'oixCloud Helper':sc.client==='oixclash'?'oixClash':'FlClash for oixCloud'
  const description=english?(sc.client==='oixclash'?'English reference with bilingual labels for the Chinese-only plugin UI; fictional data, not a screenshot.':'English interface simulation based on maintained client labels; fictional data, not a screenshot. Layout varies by OS, platform and theme.'):'按维护版本的菜单与表单绘制，非客户端截图；中文界面与虚构数据；界面细节随系统、平台与主题变化'
  let s=`<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="${h}" viewBox="0 0 1120 ${h}" role="img" aria-labelledby="title desc"><title id="title">${E(brand+' · '+sc.title)}</title><desc id="desc">${E(description)}</desc><g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',Arial,sans-serif">`
- const platform=sc.client==='account'?(english?'oixCloud · Website':'oixCloud · 网站'):sc.client==='apple-tv'?'oixFlow · Apple TV':sc.client==='openclash'?'OpenClash · OpenWrt / LuCI':sc.client==='oixcloud'?'oixFlow · iPhone / iPad':sc.client==='helper'?('oixCloud Helper · '+(sc.id==='linux'?'Linux / Docker':'macOS')):sc.client==='start'?(english?'oixCloud · Architecture & Concepts':'oixCloud · 架构与概念'):sc.client==='oixclash'?('oixClash · '+(english?'Merlin router':'Merlin 路由器')):'FlClash for oixCloud'+(sc.id==='android'?' · Android':english?' · Desktop':' · 桌面端')
+ const platform=sc.client==='account'?(english?'oixCloud · Website':'oixCloud · 网站'):sc.client==='apple-tv'?'oixFlow · Apple TV':sc.client==='openclash'?'OpenClash · OpenWrt / LuCI':sc.client==='oixflow'?'oixFlow · iPhone / iPad':sc.client==='helper'?('oixCloud Helper · '+(sc.id==='linux'?'Linux / Docker':'macOS')):sc.client==='start'?(english?'oixCloud · Architecture & Concepts':'oixCloud · 架构与概念'):sc.client==='oixclash'?('oixClash · '+(english?'Merlin router':'Merlin 路由器')):'FlClash for oixCloud'+(sc.id==='android'?' · Android':english?' · Desktop':' · 桌面端')
  s+=R(0,0,1120,h,'#f3f5f8',0)+T(34,38,platform,18,'#697386',600)+T(1085,38,english?(sc.client==='oixclash'?'English guide · Chinese-only plugin UI':'Illustration · Fictional data'):'操作示意 · 虚构数据',16,'#788392',500,'end')+T(34,87,sc.title,31,'#263245',700)
  drawingUI=true
  s+=sc.draw()

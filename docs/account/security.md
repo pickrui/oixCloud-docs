@@ -14,7 +14,7 @@ description: "账户与令牌安全的操作步骤、适用范围与常见问题
 
 登录后，在 [Access Token 管理](https://oixcloud.com/user/token) 的「客户端登录签发」中找到对应客户端，之后可用复制按钮取得这条 Token 登录同类客户端（页面默认只显示后 4 位）。同账号同类客户端会复用令牌，不需要为每台设备重复创建
 
-Google 入口目前适用于支持该功能的 oixFlow iPhone / iPad 版本和 FlClash for oixCloud。Apple TV 继续通过 [iPhone 同步账户](/oixcloud/apple-tv)；Helper、OpenClash、oixClash 按各自教程选择邮箱/密码或 Token，不假定都有 Google 按钮
+Google 入口目前适用于支持该功能的 oixFlow iPhone / iPad 版本和 FlClash for oixCloud。Apple TV 继续通过 [iPhone 同步账户](/oixflow/apple-tv)；Helper、OpenClash、oixClash 按各自教程选择邮箱/密码或 Token，不假定都有 Google 按钮
 
 ## 批准新设备 {#device-approval}
 
@@ -22,7 +22,7 @@ Google 入口目前适用于支持该功能的 oixFlow iPhone / iPad 版本和 F
 
 - 在客户端用邮箱密码或 Google 登录会自动批准，账户会收到一封邮件和一条 Telegram 消息「新设备已登记」，写明客户端、设备指纹和时间
 - 账户开启了两步验证，或者设备是用粘贴的 Token、从备份恢复的配置登录的，客户端会显示确认码，需要手动批准
-- Apple TV 由同一 Apple 账户下已批准的 iPhone / iPad 自动批准，见 [Apple TV 批准](/oixcloud/apple-tv#approval)
+- Apple TV 由同一 Apple 账户下已批准的 iPhone / iPad 自动批准，见 [Apple TV 批准](/oixflow/apple-tv#approval)
 
 手动批准：
 

@@ -9,8 +9,8 @@ If you have not installed an app, visit the [download center](https://oixcloud.c
 
 | Device | App and guide |
 | --- | --- |
-| <span class="platform gi-apple">iPhone / iPad</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow](/en/oixcloud/) |
-| <span class="platform gi-apple">Apple TV</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow: Apple TV setup and sync](/en/oixcloud/apple-tv) |
+| <span class="platform gi-apple">iPhone / iPad</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow](/en/oixflow/) |
+| <span class="platform gi-apple">Apple TV</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow: Apple TV setup and sync](/en/oixflow/apple-tv) |
 | <span class="platform gi-windows">Windows</span> <span class="platform gi-apple">macOS</span> <span class="platform gi-android">Android</span> <span class="platform gi-linux">Linux</span> | [<span class="gi gi-flclash" aria-hidden="true"></span>FlClash for oixCloud](/en/flclash/) |
 | <span class="platform gi-openwrt">OpenWrt router</span> | [<span class="gi gi-openclash" aria-hidden="true"></span>OpenClash](/en/other/openclash) |
 | <span class="platform gi-router">Merlin router</span> | [<span class="gi gi-oixclash" aria-hidden="true"></span>oixClash](/en/other/oixclash) |
@@ -20,8 +20,8 @@ If you have not installed an app, visit the [download center](https://oixcloud.c
 
 | Client and device | Current requirements | Download |
 | --- | --- | --- |
-| oixFlow: iPhone / iPad | iOS / iPadOS 18.0 or later | [TestFlight installation and updates](/en/oixcloud/connect#testflight) |
-| oixFlow: Apple TV | tvOS 18.0 or later; account and configuration sync also needs a compatible iPhone / iPad | [Installation and sync](/en/oixcloud/apple-tv) |
+| oixFlow: iPhone / iPad | iOS / iPadOS 18.0 or later | [TestFlight installation and updates](/en/oixflow/connect#testflight) |
+| oixFlow: Apple TV | tvOS 18.0 or later; account and configuration sync also needs a compatible iPhone / iPad | [Installation and sync](/en/oixflow/apple-tv) |
 | FlClash for oixCloud: desktop and Android | Windows 10+; macOS 13.0+; Android 7.0+; Linux needs a desktop and compatible runtime libraries | [Packages, architectures and compatibility builds](/en/flclash/connect#downloads) |
 | oixCloud Helper: Mac | Main builds for macOS 14+; Legacy for macOS 12 / 13 | [Downloads and Surge setup](/en/other/surge#downloads) |
 | oixCloud Helper: Linux / NAS | Docker Engine and Compose; amd64 / arm64 | [Container deployment](/en/other/helper-linux) |

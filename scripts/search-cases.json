@@ -12,7 +12,7 @@
       "oixFlow Import Rule Set"
     ],
     "targets": [
-      "/oixcloud/proxies.html"
+      "/oixflow/proxies.html"
     ]
   },
   {
@@ -40,7 +40,7 @@
     ],
     "targets": [
       "/account/subscriptions.html",
-      "/oixcloud/proxies.html",
+      "/oixflow/proxies.html",
       "/other/openclash.html"
     ]
   },
@@ -52,7 +52,7 @@
     ],
     "targets": [
       "/flclash/proxies.html",
-      "/oixcloud/policies.html"
+      "/oixflow/policies.html"
     ]
   },
   {
@@ -62,8 +62,8 @@
       "BestAvailable"
     ],
     "targets": [
-      "/oixcloud/policies.html",
-      "/oixcloud/proxies.html"
+      "/oixflow/policies.html",
+      "/oixflow/proxies.html"
     ]
   },
   {
@@ -114,7 +114,7 @@
     ],
     "targets": [
       "/account/subscriptions.html",
-      "/oixcloud/routing.html"
+      "/oixflow/routing.html"
     ]
   },
   {
@@ -124,7 +124,7 @@
       "StrictDNS"
     ],
     "targets": [
-      "/oixcloud/dns.html"
+      "/oixflow/dns.html"
     ]
   },
   {
@@ -145,7 +145,7 @@
       "LocalController"
     ],
     "targets": [
-      "/oixcloud/local-control.html"
+      "/oixflow/local-control.html"
     ]
   },
   {
@@ -154,7 +154,7 @@
       "Kelee Module Hub"
     ],
     "targets": [
-      "/oixcloud/modules.html"
+      "/oixflow/modules.html"
     ]
   },
   {
@@ -163,7 +163,7 @@
       "Automation"
     ],
     "targets": [
-      "/oixcloud/automation.html"
+      "/oixflow/automation.html"
     ]
   },
   {
@@ -174,7 +174,7 @@
       "生效顺序"
     ],
     "targets": [
-      "/oixcloud/modules.html"
+      "/oixflow/modules.html"
     ]
   },
   {
@@ -213,7 +213,7 @@
     "targets": [
       "/account/subscriptions.html",
       "/flclash/profiles.html",
-      "/oixcloud/proxies.html"
+      "/oixflow/proxies.html"
     ]
   },
   {
@@ -244,7 +244,7 @@
     ],
     "targets": [
       "/flclash/tailscale.html",
-      "/oixcloud/tailscale.html"
+      "/oixflow/tailscale.html"
     ]
   },
   {
@@ -280,7 +280,7 @@
       "iCloudSync"
     ],
     "targets": [
-      "/oixcloud/sync.html"
+      "/oixflow/sync.html"
     ]
   },
   {
@@ -308,7 +308,7 @@
       "tvOS"
     ],
     "targets": [
-      "/oixcloud/apple-tv.html",
+      "/oixflow/apple-tv.html",
       "/clients/"
     ]
   },
@@ -322,7 +322,7 @@
       "/account/security.html",
       "/start/concepts.html",
       "/flclash/connect.html",
-      "/oixcloud/connect.html"
+      "/oixflow/connect.html"
     ]
   },
   {
@@ -332,7 +332,7 @@
       "PKCS"
     ],
     "targets": [
-      "/oixcloud/mitm.html"
+      "/oixflow/mitm.html"
     ]
   },
   {
@@ -467,7 +467,7 @@
     ],
     "targets": [
       "/flclash/networks.html",
-      "/oixcloud/networks.html",
+      "/oixflow/networks.html",
       "/other/helper-mapping.html"
     ]
   },
@@ -486,7 +486,7 @@
       "Requests diagnostics"
     ],
     "targets": [
-      "/oixcloud/diagnostics.html",
+      "/oixflow/diagnostics.html",
       "/flclash/diagnostics.html"
     ]
   },
@@ -496,7 +496,7 @@
       "DOMAIN-SUFFIX"
     ],
     "targets": [
-      "/oixcloud/routing.html",
+      "/oixflow/routing.html",
       "/flclash/rules.html"
     ]
   },
@@ -506,7 +506,7 @@
       "外部资源"
     ],
     "targets": [
-      "/oixcloud/routing.html"
+      "/oixflow/routing.html"
     ]
   },
   {
@@ -546,7 +546,7 @@
       "网络预设"
     ],
     "targets": [
-      "/oixcloud/networks.html"
+      "/oixflow/networks.html"
     ]
   },
   {
@@ -556,7 +556,7 @@
       "按需连接"
     ],
     "targets": [
-      "/oixcloud/automation.html"
+      "/oixflow/automation.html"
     ]
   },
   {
@@ -567,7 +567,7 @@
       "底层代理"
     ],
     "targets": [
-      "/oixcloud/policies.html"
+      "/oixflow/policies.html"
     ]
   },
   {
@@ -576,7 +576,7 @@
       "分流 DNS"
     ],
     "targets": [
-      "/oixcloud/dns.html"
+      "/oixflow/dns.html"
     ]
   },
   {
@@ -585,9 +585,9 @@
       "兜底路由"
     ],
     "targets": [
-      "/oixcloud/routing.html",
-      "/oixcloud/networks.html",
-      "/oixcloud/connect.html"
+      "/oixflow/routing.html",
+      "/oixflow/networks.html",
+      "/oixflow/connect.html"
     ]
   },
   {
@@ -634,7 +634,7 @@
       "URL Test"
     ],
     "targets": [
-      "/oixcloud/policies.html",
+      "/oixflow/policies.html",
       "/flclash/proxies.html"
     ]
   },
@@ -643,7 +643,7 @@
       "talscale"
     ],
     "targets": [
-      "/oixcloud/tailscale.html",
+      "/oixflow/tailscale.html",
       "/flclash/tailscale.html"
     ]
   },

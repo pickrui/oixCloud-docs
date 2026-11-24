@@ -24,8 +24,8 @@ Email/password and Google sign-in issue or reuse the client's dedicated token, s
 
 | Device | Guide |
 | --- | --- |
-| <span class="platform gi-apple">iPhone / iPad</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow setup](/en/oixcloud/connect) |
-| <span class="platform gi-apple">Apple TV</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>Apple TV and sync](/en/oixcloud/apple-tv) |
+| <span class="platform gi-apple">iPhone / iPad</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow setup](/en/oixflow/connect) |
+| <span class="platform gi-apple">Apple TV</span> | [<span class="gi gi-oixflow" aria-hidden="true"></span>Apple TV and sync](/en/oixflow/apple-tv) |
 | <span class="platform gi-windows">Windows</span> <span class="platform gi-apple">macOS</span> <span class="platform gi-android">Android</span> <span class="platform gi-linux">Linux</span> | [<span class="gi gi-flclash" aria-hidden="true"></span>FlClash for oixCloud setup](/en/flclash/connect) |
 | <span class="platform gi-openwrt">OpenWrt router</span> | [<span class="gi gi-openclash" aria-hidden="true"></span>OpenClash](/en/other/openclash) |
 | <span class="platform gi-router">Merlin router</span> | [<span class="gi gi-oixclash" aria-hidden="true"></span>oixClash](/en/other/oixclash) |
