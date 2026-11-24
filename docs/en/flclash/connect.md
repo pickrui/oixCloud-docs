@@ -18,12 +18,12 @@ Use the [download center](https://oixcloud.com/client), or this fork's [latest G
 | Linux | 64-bit graphical desktop, glibc 2.35 or later, GTK 3 and other runtime libraries | Match `amd64` / `arm64` to `uname -m`, then choose DEB, RPM or AppImage. ARM64 RPM / AppImage packages are also available on GitHub. |
 
 ::: warning macOS 12 compatibility builds
-On macOS 12 Monterey, look for a DMG with `macos12` in its name on the [release page](https://github.com/pickrui/FlClash/releases/latest). Choose `arm64` for Apple Silicon or `amd64` for Intel. If that release lists only standard DMGs, the v0.9.2 compatibility installers are available for [Apple Silicon](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-arm64.dmg) and [Intel](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-amd64.dmg). To update a compatibility build, quit FlClash and install the new DMG manually.
+On macOS 12 Monterey, look for a DMG with `macos12` in its name on the [release page](https://github.com/pickrui/FlClash/releases/latest). Choose `arm64` for Apple Silicon or `amd64` for Intel. If that release lists only standard DMGs, the v0.9.4 compatibility installers are available for [Apple Silicon](https://github.com/pickrui/FlClash/releases/download/v0.9.4/flclash-v0.9.4-macos12-arm64.dmg) and [Intel](https://github.com/pickrui/FlClash/releases/download/v0.9.4/flclash-v0.9.4-macos12-amd64.dmg). To update a compatibility build, quit FlClash and install the new DMG manually.
 :::
 
 The DEB declares `libayatana-appindicator3-1` and `libsecret-1-0` as dependencies; let the package manager install them. RPM / AppImage packages also need compatible system libraries. AppImage does not bypass the glibc requirement. For SSH-only servers, see [background and server operation](#headless).
 
-Use the release's `SHA256SUMS` to verify a standard package or the matching `SHA256SUMS-macos12` to verify a macOS 12 installer (`SHA256SUMS-macos12-final` for v0.9.2). For missing Windows runtimes, see [DLL repair](/en/flclash/windows-dll).
+Use the release's `SHA256SUMS` to verify a standard package or the matching `SHA256SUMS-macos12` to verify a macOS 12 installer. For missing Windows runtimes, see [DLL repair](/en/flclash/windows-dll).
 
 ## Illustrated steps
 

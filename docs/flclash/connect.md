@@ -18,12 +18,12 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 | Linux | 64 位图形环境、glibc 2.35 及以上、GTK 3 等运行库 | 按 `uname -m` 选择 `amd64` / `arm64`，再选 `.deb`、`.rpm` 或 AppImage；ARM64 的 RPM / AppImage 可在 GitHub 发行页获取 |
 
 ::: warning macOS 12 兼容版
-使用 macOS 12 Monterey 时，到[发行页](https://github.com/pickrui/FlClash/releases/latest)选择文件名带有 `macos12` 的 DMG，Apple Silicon 选 `arm64`，Intel 选 `amd64`。如果该版只提供普通 DMG，可下载 v0.9.2 兼容包（[Apple Silicon](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-arm64.dmg)、[Intel](https://github.com/pickrui/FlClash/releases/download/v0.9.2/flclash-v0.9.2-macos12-final-amd64.dmg)）。兼容版需手动更新，先退出 FlClash 再安装
+使用 macOS 12 Monterey 时，到[发行页](https://github.com/pickrui/FlClash/releases/latest)选择文件名带有 `macos12` 的 DMG，Apple Silicon 选 `arm64`，Intel 选 `amd64`。如果该版只提供普通 DMG，可下载 v0.9.4 兼容包（[Apple Silicon](https://github.com/pickrui/FlClash/releases/download/v0.9.4/flclash-v0.9.4-macos12-arm64.dmg)、[Intel](https://github.com/pickrui/FlClash/releases/download/v0.9.4/flclash-v0.9.4-macos12-amd64.dmg)）。兼容版需手动更新，先退出 FlClash 再安装
 :::
 
 Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`，应由包管理器安装依赖；RPM / AppImage 也仍需要兼容的系统运行库。AppImage 不会绕过 glibc 要求，只有 SSH 的服务器请看本页 [后台与服务器运行](#headless)
 
-下载后，普通安装包用发行页的 `SHA256SUMS` 核对，macOS 12 兼容包用同一版本的 `SHA256SUMS-macos12` 核对（v0.9.2 为 `SHA256SUMS-macos12-final`）。Windows 缺少运行库时见 [DLL 修复](/flclash/windows-dll)
+下载后，普通安装包用发行页的 `SHA256SUMS` 核对，macOS 12 兼容包用同一版本的 `SHA256SUMS-macos12` 核对。Windows 缺少运行库时见 [DLL 修复](/flclash/windows-dll)
 
 ## 操作示意
 
