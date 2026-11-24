@@ -20,7 +20,7 @@ Google sign-in is available in supported oixFlow versions for iPhone/iPad and in
 
 Every device needs approval before it loads nodes for the first time. Approved devices are listed on the website's [device approval](https://oixcloud.com/user/managed-device) page.
 
-- Signing in to a client with email and password or Google approves the device automatically. Your account receives an email and a Telegram message, "New device signed in", with the client, the device fingerprint and the time. Accounts with two-step verification are not approved automatically.
+- If two-step verification is off, signing in with email and password or Google approves a new device automatically. The panel emails the client name, device fingerprint and sign-in time to your account address. If you have linked Telegram, the bot also sends a notification.
 - With two-step verification, a pasted token or a restored backup, the client shows a confirmation code and the device must be approved manually.
 - Apple TV is approved automatically by an approved iPhone or iPad signed in to the same Apple Account. See [Approve Apple TV](/en/oixflow/apple-tv#approval).
 
@@ -30,7 +30,7 @@ To approve manually:
 2. Approve it in either way:
    - Select **Open Website to Approve** or scan the code, check the client name and fingerprint on the signed-in website, then select **Approve this device**.
    - Send `/device` followed by the code (for example `/device A1B2C-3D4E5`) in a private chat with your linked Telegram bot, check the details, then tap the approval button.
-3. The client checks every few seconds and loads nodes on its own once approved. A code is valid for 10 minutes; after that the client shows a new one.
+3. Return to your client to continue loading nodes. A code is valid for 10 minutes. If it expires, reopen the approval screen or run the enrollment command again to get a new code.
 
 | Client | Where to approve |
 | --- | --- |
@@ -44,7 +44,7 @@ To approve manually:
 
 Approve only a request you started: the fingerprint on the website or in the bot must match the one on your device. Do not approve a link or code someone else sends you.
 
-Revoke a device under **Approved devices** on the device approval page. A revoked device can no longer update nodes, but signing in again with email and password approves it again automatically; if your password may have leaked, [change it](#change-password) so that every device is signed out. Deleting or refreshing an Access Token also revokes the devices that use it. Up to 50 approved devices are kept; beyond that, the device unused for the longest time is removed.
+Revoke a device under **Approved devices** on the device approval page. A revoked device can no longer update nodes, but signing in again with email and password approves it automatically if two-step verification is off. If your password may have leaked, [change it](#change-password) so that every device is signed out. Deleting or refreshing an Access Token also revokes the devices that use it. Up to 50 approved devices are kept; beyond that, the device unused for the longest time is removed.
 
 ## Sign in to a client with Google {#google-client-login}
 
@@ -83,7 +83,7 @@ Older pages may label this option **Access Token only**. Its actual scope is ema
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
-Refreshing immediately invalidates the old token. Every same-client device sharing it must switch to the new token and be [approved again](#device-approval) (signing in with email and password or Google approves it automatically). The client identity and subscription binding stay the same.
+Refreshing immediately invalidates the old token. Every same-client device sharing it must switch to the new token and follow the [device approval steps](#device-approval) again. The client identity and subscription binding stay the same.
 
 1. Open the [Access Token page](https://oixcloud.com/user/token) and find the intended client under **Issued by client login**.
 2. Click **Regenerate** on that entry, review the affected devices, and confirm with a passkey or your current sign-in password in the dialog.

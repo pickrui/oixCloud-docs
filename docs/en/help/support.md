@@ -72,7 +72,7 @@ If your description does not already identify the payment or plan order you want
 
 Use the UHD refresh button in the [Benefits Center](https://oixcloud.com/user/benefits) to check the status. Do not redeem again while it is pending.
 
-- If creation could not be confirmed and credits are on hold, wait at least 10 minutes before refreshing. Credits are returned only after a successful check confirms that no account belonging to you was created.
+- If you see **Confirm my UHD account**, enter the UHD password you chose during redemption. If the account was never created, refresh after at least 10 minutes. The panel returns the credits on hold once it verifies the result.
 - A failed lookup keeps the request pending. If creation was confirmed but account details are still syncing, waiting more than 10 minutes alone does not make it refundable.
 - Redeem again only after the page confirms that the credits were returned. If confirmation keeps failing, provide the redemption time, displayed message and credit changes, with the UHD password and other credentials hidden.
 
