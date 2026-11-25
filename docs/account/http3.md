@@ -6,7 +6,7 @@ description: HTTP/3 的适用范围、智能回退、独享 IP 与批量设置�
 
 HTTP/3 基于 QUIC（UDP），这里用于客户端与节点之间的 Hollow 连接，目标网站无需支持 HTTP/3。默认关闭，建议先在一个常用节点上选择「智能回退」。无论选哪一项，UDP 流量都照常转发
 
-Hollow 和 AnyTLS 是协议页名称；本教程的 HTTP/3 是 Hollow 页中的功能列，[AnyTLS with CDN](#cdn) 则位于 AnyTLS 页的 CDN 列。关闭某个功能不等于关闭整个协议
+Hollow 和 AnyTLS 是协议页名称；本教程的 HTTP/3 是 Hollow 页中的功能列，[AnyTLS with CDN](#cdn) 则位于 AnyTLS 页的「连接方式」列。关闭某个功能不等于关闭整个协议
 
 ## 适用范围 {#scope}
 
@@ -80,15 +80,15 @@ UDP 线路质量、运营商或公司／校园网络的 UDP 限制，以及设�
 
 ## AnyTLS with CDN {#cdn}
 
-打开用户中心「流量路由 → 协议 → [AnyTLS](https://oixcloud.com/user/anytls)」，在节点行的 CDN 列开启或关闭 AnyTLS with CDN，默认关闭。页面标题是协议名 AnyTLS，列名 CDN 表示这项功能；不要把关闭 CDN 理解成停用 AnyTLS 协议
+打开用户中心「流量路由 → 协议 → [AnyTLS](https://oixcloud.com/user/anytls)」，在节点行的「连接方式」列选择「直连」或「CDN」，默认直连。选择「CDN」即启用 AnyTLS with CDN；页面标题是协议名 AnyTLS，选回「直连」不等于停用 AnyTLS 协议
 
-1. 搜索节点，或按「CDN 开启」「CDN 关闭」筛选当前保存的状态
-2. 在目标节点的 CDN 列选择「开启」，等待自动保存成功；批量操作同样在表头勾选节点后执行
+1. 搜索节点，或按「CDN」「直连」筛选当前保存的状态
+2. 在目标节点的「连接方式」列选择「CDN」，等待自动保存成功；批量操作同样在表头勾选节点后执行
 3. 在客户端更新订阅或托管配置，等待完成后建立新连接
 
-官方客户端默认使用 Hollow，启用 AnyTLS with CDN 的节点改走 AnyTLS；关闭后恢复默认连接方式。第三方客户端走 AnyTLS 直连，不受这项设置影响。仅支持此功能的官方客户端会读取设置，其他设备也要各自更新订阅
+官方客户端默认使用 Hollow，选择「CDN」的节点改走 AnyTLS；选回「直连」后恢复默认连接方式。第三方客户端走 AnyTLS 直连，不受这项设置影响。仅支持此功能的官方客户端会读取设置，其他设备也要各自更新订阅
 
-只有 Edge 和 Home ISP 节点可以走 CDN，当前功能列表只列这些节点；未默认下发的 Home ISP 显示暂不支持流量路由。有外部中继的节点即使已开启 CDN 也按外部中继规则连接，CDN 选择保留，页面会在该行提示
+只有 Edge 和 Home ISP 节点可以走 CDN，当前功能列表只列这些节点；未默认下发的 Home ISP 显示暂不支持流量路由。有外部中继的节点即使选择了 CDN 也按外部中继规则连接，CDN 选择保留，页面会在该行提示
 
 ## 常见问题 {#troubleshooting}
 

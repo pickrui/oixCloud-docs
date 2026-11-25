@@ -46,7 +46,7 @@ Tailscale 账户授权是独立功能，不能用来登录 oixCloud 托管账户
 
 ## 批准 Apple TV {#approval}
 
-Apple TV 第一次获取节点前需要批准。同一 Apple 账户下已经批准的 iPhone / iPad 会自动代为批准：电视显示「在 iPhone 上打开 oixFlow 即可自动完成批准」时，在手机上打开 oixFlow，稍等片刻电视会自动获取节点
+Apple TV 通过 iCloud 同步账户后，默认可先获取节点。在要求先批准的情况下，同一 Apple 账户下已经批准的 iPhone / iPad 会自动代为批准：电视显示「在 iPhone 上打开 oixFlow 即可自动完成批准」时，在手机上打开 oixFlow，稍等片刻电视会自动获取节点
 
 手机端需要已登录并开启「同步到 Apple TV」。手机长时间未打开或不在身边时，在电视账户页打开「批准这台设备」，用手机扫码在网页上批准，或私聊已绑定的 Telegram 机器人发送屏幕上的命令；核对指纹一致后再批准。其他客户端的批准方式见 [批准新设备](/account/security#device-approval)
 

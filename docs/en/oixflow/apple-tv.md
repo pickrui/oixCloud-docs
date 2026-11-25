@@ -48,7 +48,7 @@ Tailscale device authorization is separate and cannot sign into the managed oixC
 
 ## Approve Apple TV {#approval}
 
-Apple TV needs approval before it loads nodes for the first time. An approved iPhone or iPad signed in to the same Apple Account approves it for you: when the TV shows "Open oixFlow on your iPhone to approve automatically", open oixFlow on the phone and the TV loads its nodes shortly afterwards.
+By default, Apple TV can load nodes after the account syncs over iCloud. When prior approval is required, an approved iPhone or iPad signed in to the same Apple Account approves it for you: when the TV shows "Open oixFlow on your iPhone to approve automatically", open oixFlow on the phone and the TV loads its nodes shortly afterwards.
 
 The phone must be signed in with **Sync to Apple TV** turned on. If the phone has not been opened for a while or is not at hand, open **Approve this device** on the TV's account page and scan the code with a phone to approve on the website, or send the command shown on screen to your linked Telegram bot; approve only if the fingerprint matches. For other clients, see [Approve a new device](/en/account/security#device-approval).
 

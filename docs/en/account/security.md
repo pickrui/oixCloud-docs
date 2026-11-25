@@ -18,21 +18,19 @@ Google sign-in is available in supported oixFlow versions for iPhone/iPad and in
 
 ## Approve a new device {#device-approval}
 
-Every device needs approval before it loads nodes for the first time. Approved devices are listed on the website's [device approval](https://oixcloud.com/user/managed-device) page.
+By default, a new device can load nodes immediately. The [device approval page](https://oixcloud.com/user/managed-device) lists devices with temporary access alongside approved devices. You can check a fingerprint, see the last node update, or revoke an unfamiliar device.
 
-- If two-step verification is off, signing in with email and password or Google approves a new device automatically. The panel emails the client name, device fingerprint and sign-in time to your account address. If you have linked Telegram, the bot also sends a notification.
-- With two-step verification, a pasted token or a restored backup, the client shows a confirmation code and the device must be approved manually.
-- Apple TV is approved automatically by an approved iPhone or iPad signed in to the same Apple Account. See [Approve Apple TV](/en/oixflow/apple-tv#approval).
+- On a supported client, choose Token Login and enter a valid Access Token. The device is approved automatically, including on accounts with two-step verification.
+- If two-step verification is off, signing in with email and password or Google also approves the new device automatically. You receive an account notification when a new device is approved this way.
+- Devices restored from a backup or synced to Apple TV through iCloud follow the current access policy. With temporary access you can keep using nodes and finish approval later on the device approval page.
+- When approval is required to load nodes, the client prompts you to verify. An approved iPhone or iPad on the same Apple Account can also approve an Apple TV. See [Approve Apple TV](/en/oixflow/apple-tv#approval).
 
-If Telegram is linked, the bot sends a private message when a new device first needs approval. Compare the client name and fingerprint with your device, then approve or deny the request. Deny unfamiliar requests. If you deny your own by mistake, request approval again after the original code’s 10-minute lifetime ends.
+**When your client asks for approval**
 
-To approve manually:
-
-1. In the client, open **Approve this device** and note the confirmation code and the device fingerprint.
-2. Approve it in either way:
-   - Select **Open Website to Approve** or scan the code, check the client name and fingerprint on the signed-in website, then select **Approve this device**.
-   - Send `/device` followed by the code (for example `/device A1B2C-3D4E5`) in a private chat with your linked Telegram bot, check the details, then tap the approval button.
-3. Return to your client to continue loading nodes. A code is valid for 10 minutes. If it expires, reopen the approval screen or run the enrollment command again to get a new code.
+1. Open **Approve this device** and check the fingerprint. If two-step verification is on, enter the six-digit code from your authenticator. Otherwise select **Send Code** and enter the eight-digit code sent to your account email.
+2. If the client offers other methods, scan the QR code, open the website, or send `/device` followed by the confirmation code to your linked Telegram bot. Approve only if the fingerprint matches. Deny unfamiliar requests.
+3. The client loads nodes after verification. Website codes and Telegram buttons expire after ten minutes. You can still manage a device with temporary access on the device approval page after its button expires.
+4. If you denied your own request, select **Request approval again** on that device and verify with your email or authenticator. Older panels may require you to wait for the original code to expire.
 
 | Client | Where to approve |
 | --- | --- |
@@ -46,7 +44,7 @@ To approve manually:
 
 Approve only a request you started: the fingerprint on the website or in the bot must match the one on your device. Do not approve a link or code someone else sends you.
 
-Revoke a device under **Approved devices** on the device approval page. A revoked device can no longer update nodes, but signing in again with email and password approves it automatically if two-step verification is off. If your password may have leaked, [change it](#change-password) so that every device is signed out. Deleting or refreshing an Access Token also revokes the devices that use it. Up to 50 approved devices are kept; beyond that, the device unused for the longest time is removed.
+To stop a device from updating nodes, select **Revoke** next to it on the device approval page. If a token may have leaked, revoke or refresh it on the Access Tokens page. If your password may have leaked, [change it](#change-password). Each account can have up to 50 formally approved devices. At that limit, Token Login keeps existing devices connected. The new device can still load nodes if temporary access is available. To approve it, revoke a device you no longer use and sign in with the token again.
 
 ## Sign in to a client with Google {#google-client-login}
 
