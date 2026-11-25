@@ -27,7 +27,7 @@ These links follow the latest stable release. You can also download the [SHA256 
 
 In-plugin updates choose the architecture automatically, including the first update from an older version. For offline installation, run `uname -m` over SSH on the router. Choose the 32-bit package for `armv7l` or `armv8l` and the 64-bit package for `aarch64`. Both packages include the core. The original `oixclash_hnd.tar.gz` link also works and requires the router to be online to fetch the matching package.
 
-Package size varies by release and platform. Reserve JFFS space for the actual downloaded archive and extracted files. Models with 512 MB of RAM or more can use the defaults; smaller models, including 256 MB routers, can use [memory optimization](#low-memory), available from 0.0.3. In normal mode, extracting the core into RAM consumes memory in addition to the running proxy, GeoIP data and dashboard. The amount depends on the build and architecture.
+In-plugin updates reuse a compatible core. Upgrading from the core bundled with 0.0.14 to 0.0.39 requires a new core and needed about 20 MiB of free JFFS space in testing. If the installer reports insufficient space, it preserves the previous version and settings. Free the amount of space shown in the log and try again. Models with 512 MB of RAM or more can use the defaults; smaller models, including 256 MB routers, can use [memory optimization](#low-memory), available from 0.0.3. In normal mode, extracting the core into RAM consumes memory in addition to the running proxy, GeoIP data and dashboard. The amount depends on the build and architecture.
 
 ## 2. Install offline
 
