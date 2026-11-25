@@ -19,7 +19,7 @@ Only Hollow connections in official clients that support this feature read the s
 | Traffic routing temporarily unavailable | Cannot be changed; adding the node to a subscription manually does not remove the restriction. |
 | Node set to [CDN](#cdn) | Official clients that support CDN use AnyTLS instead, so this setting is not used. The row shows a notice. |
 
-Home ISP nodes excluded from default subscriptions also follow the [traffic routing restrictions](/en/account/nodes#isp-routing). Check the page for configurable entries.
+Choose a node that supports the setting on this page. If a node is marked unavailable for traffic routing, see [traffic routing restrictions](/en/account/nodes#isp-routing).
 
 ## Enable and apply the setting {#enable}
 
@@ -88,7 +88,7 @@ Open **Traffic Routes → Protocols → [AnyTLS](https://oixcloud.com/user/anytl
 
 Official clients use Hollow by default and switch to AnyTLS on nodes set to **CDN**. Switching back to **Direct** restores the default connection behavior. Third-party clients connect directly over AnyTLS and are unaffected. Only official clients that support this feature read the setting, and other devices must refresh their own subscriptions too.
 
-Only Edge and Home ISP nodes can use CDN, so the current feature list contains only those nodes. Home ISP nodes excluded by default show as unavailable for traffic routes. Nodes with external relays follow their external relay rules even when CDN is selected; their CDN selection is retained and the row shows a notice.
+CDN is available for Edge and Home ISP nodes with a supported entry address. If an administrator restricts the node or another backend in its group, the page marks it as unavailable for traffic routing. Your CDN selection is saved, and subscriptions stop using CDN on that node while the restriction is active. Nodes with external relays follow their external relay rules even when CDN is selected. The page keeps the CDN selection and shows a notice for that node.
 
 ## Troubleshooting {#troubleshooting}
 

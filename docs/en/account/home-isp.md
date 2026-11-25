@@ -36,7 +36,7 @@ The service sets default inclusion per node, independently of its static or dyna
 ISP and Edge are separate lines. Selecting only Edge, a region or a name does not add ISP nodes excluded by default.
 
 ::: warning Check node roles first
-Home ISP nodes excluded by default can only be internal relay targets or exits, not entries or intermediate hops. External relay, HTTP/3, CDN, WARP, IPv4 Only and streaming-unlock settings are unavailable on them. Explicit subscription selection does not remove these [traffic routing restrictions](/en/account/nodes#isp-routing).
+Default inclusion determines which Home ISP nodes a subscription includes automatically. When you build a relay, choose from the nodes offered for each hop. See [traffic routing restrictions](/en/account/nodes#isp-routing) for eligibility.
 :::
 
 ## Why use relays or proxy chains? {#why-relay-or-chain}
@@ -115,7 +115,7 @@ For Windows, macOS, Android and Linux versions supporting this feature.
 | Symptom | What to check |
 | --- | --- |
 | Missing entry or Home ISP | Retain both the entry line and ISP; check region/name conditions, plan permissions and sync results |
-| Relay save rejected | Check node roles, WARP/external-relay conflicts and the error; ISP nodes excluded by default can only be final exits |
+| Relay save rejected | Check plan permissions, node roles, routing restrictions and WARP or external relay conflicts. Adjust the path using the error message. |
 | Connection fails or slows down | Compare the entry alone, then check later segments; reduce unnecessary hops and resolve loops or underlying-proxy conflicts |
 | Unexpected exit | Check whether a new connection to that destination matches the intended rule. Client records show the selected client chain or entry, but may not show every server-side internal relay hop |
 | Session lost after a dynamic IP change | Reconnect and complete any verification or sign-in required by the destination; reconnecting does not guarantee session recovery |

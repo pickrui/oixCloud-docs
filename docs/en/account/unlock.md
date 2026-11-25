@@ -9,7 +9,7 @@ Use **Traffic Routes** in the user center to adjust IPv4 Only, WARP and streamin
 | Block STUN connections | All devices using the account on supported nodes | On |
 | YouTube background playback compatibility | All nodes for the account | Off |
 
-Home ISP nodes excluded from default subscriptions cannot be selected for new or modified IPv4 Only, WARP or streaming-unlock settings, even after explicitly adding them to a subscription. Existing settings remain active; see [traffic routing restrictions](/en/account/nodes#isp-routing).
+For IPv4 Only, WARP or streaming unlock, choose an available node on the feature page. An administrator can restrict a node or a backend in its group. See [traffic routing restrictions](/en/account/nodes#isp-routing).
 
 ## Use only IPv4 for website exits {#ipv4-only}
 

@@ -9,7 +9,7 @@
 | 屏蔽 STUN 连接 | 当前账户在支持节点上的所有设备 | 开启 |
 | YouTube 后台播放兼容 | 当前账户的所有节点 | 关闭 |
 
-未默认下发的 Home ISP 不允许新增或修改节点的 IPv4 Only、WARP、流媒体解锁配置，主动加入订阅不会解除限制。已有配置继续生效；详情见 [流量路由限制](/account/nodes#isp-routing)
+配置 IPv4 Only、WARP 或流媒体解锁时，选择对应页面列出的可用节点。节点或同组后端被管理员限制时，页面会标记[流量路由限制](/account/nodes#isp-routing)
 
 ## 只让目标网站看到 IPv4 出口 {#ipv4-only}
 

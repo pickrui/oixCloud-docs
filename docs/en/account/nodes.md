@@ -56,9 +56,9 @@ To use them, edit the current address in [Subscription management](https://oixcl
 
 ### Traffic routing restrictions {#isp-routing}
 
-Home ISP nodes excluded from default subscriptions can be selected as internal relay targets or exits, but not as entries or intermediate hops. External relay, HTTP/3, CDN, WARP, IPv4 Only and streaming-unlock settings remain unavailable. Adding ISP to a subscription manually does not remove these restrictions, and a wildcard source such as **All nodes** cannot bypass them.
+The default inclusion setting on an ISP node only affects subscription delivery. For relays, HTTP/3, CDN or [exit settings such as WARP](/en/account/unlock), choose from the nodes offered on each page for your plan and the role you need.
 
-Nodes manually disabled by an administrator remain unavailable as both relay entries and exits. Backends grouped under the same node name share configuration eligibility. Existing settings remain active and can be deleted. All nodes must still meet plan permissions, feature requirements and the conditions shown on the settings page. For relay and proxy chain setup, see the [Home ISP user guide](/en/account/home-isp).
+An administrator can restrict a node from new routing selections. If one backend in a logical group is restricted, the restriction applies to the whole group, including rules with a wildcard source. You can still delete existing forwarding rules. For relay and proxy chain setup, see the [Home ISP user guide](/en/account/home-isp).
 
 ## IXP Cloud Interconnect nodes {#ixp}
 

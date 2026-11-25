@@ -29,7 +29,7 @@ Choose the intended traffic path first, then open the corresponding feature unde
 | Reach an existing SSH, remote-desktop or game service | External relay's protocol-conversion mode, using an allowed destination port |
 | Combine existing proxies on your device | [oixFlow chains](/en/oixflow/policies) or [FlClash for oixCloud chains](/en/flclash/proxies#proxy-chains) |
 
-Home ISP nodes excluded from default subscriptions can serve as internal relay targets or exits, but not as entries or intermediate hops. External relay configuration remains unavailable. Adding them to a subscription does not lift these restrictions; existing settings remain active and can be deleted. Check [traffic routing restrictions](/en/account/nodes#isp-routing) and the [Home ISP user guide](/en/account/home-isp) before choosing nodes.
+For each hop, choose a Home ISP node offered by the path editor. Eligibility depends on plan permissions, the roles the node supports and [traffic routing restrictions](/en/account/nodes#isp-routing). See the [Home ISP user guide](/en/account/home-isp) for an example with a residential exit.
 
 ::: warning Check WARP and existing relays first
 Enabling WARP removes internal relays using the logical node as source or destination and external relays using it as source. Disabling WARP does not recreate them. Record settings you still need first; relay creation also rejects nodes with a WARP conflict. A source already used for external relay cannot acquire an internal forwarding rule. A source with internal forwarding rules or another external relay cannot acquire a duplicate external relay either.
@@ -145,7 +145,7 @@ Every additional hop adds network round trips, failure points and forwarding ove
 
 ## Troubleshooting order
 
-- Save rejected: check node permissions, Home ISP restrictions, WARP, an occupied source and destination ports. Wait for an unavailable node to recover before saving.
+- If saving fails, check node permissions, traffic routing restrictions, WARP, an occupied source and destination ports. Wait for an unavailable node to recover before saving.
 - Existing relay conflict: open the named rule, adjust or delete it with **Single rule**, then save the path again. Several targets on one source are not a multihop path.
 - Relay disabled for all nodes: delete the rule whose source is **All nodes** and destination is **Relay disabled**.
 - System forwarding conflict: choose other nodes or contact support instead of repeatedly adding the same rule.
