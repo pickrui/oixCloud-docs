@@ -14,7 +14,8 @@ Open **软件中心** (Software Center) in the router admin page, check the plat
 
 | Platform | Package | Common models |
 | --- | --- | --- |
-| hnd | [Download](https://dl.dler.io/oixclash_hnd.tar.gz) | Most models, such as RT-AX86U, RT-AX88U, GT-AX6000 and GT-AX11000 |
+| HND 32-bit (armv7) | [Download](https://dl.dler.io/oixclash_hnd_armv7.tar.gz) | RT-AX58U, TUF-AX5400 |
+| HND 64-bit (arm64) | [Download](https://dl.dler.io/oixclash_hnd_arm64.tar.gz) | RT-AX86U, RT-AX88U, GT-AX6000, GT-AX11000 |
 | mtk | [Download](https://dl.dler.io/oixclash_mtk.tar.gz) | TUF-AX4200Q, TX-AX6000, RT-AX57 Go and similar |
 | qca | [Download](https://dl.dler.io/oixclash_qca.tar.gz) | RT-AX89X |
 | ipq32 | [Download](https://dl.dler.io/oixclash_ipq32.tar.gz) | ZenWiFi BD4 |
@@ -24,7 +25,7 @@ Open **软件中心** (Software Center) in the router admin page, check the plat
 
 These links follow the latest stable release. You can also download the [SHA256 checksums](https://dl.dler.io/oixclash-SHA256SUMS) to verify file integrity. If a direct link is unavailable, use the matching platform file from the [latest GitHub release](https://github.com/pickrui/oixclash-merlin/releases/latest).
 
-From 0.0.15, the hnd package carries both an armv7 and an arm64 core. Models with a 64-bit system, such as RT-AX86U and GT-AX6000, use the arm64 core automatically; it can use the CPU's AES instructions for encryption and is much faster than the armv7 core. 32-bit models such as RT-AX58U and TUF-AX5400 keep the armv7 core. Offline installation and in-plugin updates choose automatically and keep only the chosen core on JFFS; click **自检** (Self-check) to see which core is in use.
+In-plugin updates choose the architecture automatically, including the first update from an older version. For offline installation, run `uname -m` over SSH on the router. Choose the 32-bit package for `armv7l` or `armv8l` and the 64-bit package for `aarch64`. Both packages include the core. The original `oixclash_hnd.tar.gz` link also works and requires the router to be online to fetch the matching package.
 
 Package size varies by release and platform. Reserve JFFS space for the actual downloaded archive and extracted files. Models with 512 MB of RAM or more can use the defaults; smaller models, including 256 MB routers, can use [memory optimization](#low-memory), available from 0.0.3. In normal mode, extracting the core into RAM consumes memory in addition to the running proxy, GeoIP data and dashboard. The amount depends on the build and architecture.
 
@@ -152,6 +153,6 @@ Reading again replaces unsaved edits, so review the confirmation first. Account 
 | UDP forwarding does not take effect | Click **自检** (Self-check) and look at the TPROXY and policy routing items; firmware without support only loses UDP, TCP stays proxied |
 | Conflict with fancyss or MerlinClash | Turn off the other proxy plugin; only one can run |
 | The router runs but a device still misbehaves | Check the device's gateway, DNS and IPv6, then the dashboard's connection list |
-| The same node is slower through the router than on a phone or computer | • **Check the core architecture**: Click **自检** (Self-check) and check the core—64-bit hnd models should show **使用 arm64 内核** (using the arm64 core); if it still shows armv7, update to 0.0.15 or reinstall offline. 32-bit models are limited by the CPU.<br>• **Check port filtering**: Speed tests on uncommon ports go direct, so turn off **仅代理常用端口** (Common ports only) temporarily before comparing |
+| The same node is slower through the router than on a phone or computer | • **Check the core architecture**: Click **自检** (Self-check) and check the core—64-bit hnd models should show **使用 arm64 内核** (using the arm64 core); to switch from armv7, install the HND 64-bit package offline. 32-bit models are limited by the CPU.<br>• **Check port filtering**: Speed tests on uncommon ports go direct, so turn off **仅代理常用端口** (Common ports only) temporarily before comparing |
 
 Before contacting support, click **自检** and send its result together with the plugin log from **查看日志** (View Log), with account details hidden.

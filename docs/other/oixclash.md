@@ -14,7 +14,8 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 
 | 平台 | 安装包 | 常见机型 |
 | --- | --- | --- |
-| hnd | [下载](https://dl.dler.io/oixclash_hnd.tar.gz) | RT-AX86U、RT-AX88U、GT-AX6000、GT-AX11000 等大多数机型 |
+| HND 32 位（armv7） | [下载](https://dl.dler.io/oixclash_hnd_armv7.tar.gz) | RT-AX58U、TUF-AX5400 |
+| HND 64 位（arm64） | [下载](https://dl.dler.io/oixclash_hnd_arm64.tar.gz) | RT-AX86U、RT-AX88U、GT-AX6000、GT-AX11000 |
 | mtk | [下载](https://dl.dler.io/oixclash_mtk.tar.gz) | TUF-AX4200Q、TX-AX6000、RT-AX57 Go 等 |
 | qca | [下载](https://dl.dler.io/oixclash_qca.tar.gz) | RT-AX89X |
 | ipq32 | [下载](https://dl.dler.io/oixclash_ipq32.tar.gz) | ZenWiFi BD4 |
@@ -24,7 +25,7 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 
 下载地址会跟随最新正式版本更新，也可下载 [SHA256 校验文件](https://dl.dler.io/oixclash-SHA256SUMS) 核对文件完整性；直链不可用时，使用 [最新 GitHub 发行页](https://github.com/pickrui/oixclash-merlin/releases/latest) 中相同平台的文件
 
-0.0.15 起，hnd 安装包同时带 armv7 和 arm64 两种内核：RT-AX86U、GT-AX6000 等 64 位系统的机型自动使用 arm64 内核，加解密可使用 CPU 的 AES 指令，代理速度明显高于 armv7 内核；RT-AX58U、TUF-AX5400 等 32 位机型继续使用 armv7 内核。离线安装和插件内更新都会自动选择，JFFS 上只保留选中的一份，点「自检」可查看当前使用的内核
+插件内更新会自动选择架构，旧版用户也可直接点「检查更新」。离线安装时，在路由器 SSH 中运行 `uname -m`，显示 `armv7l` 或 `armv8l` 选 32 位，显示 `aarch64` 选 64 位。两种分架构包都已包含内核。旧的 `oixclash_hnd.tar.gz` 链接仍可用，路由器需要联网才能用它取得对应的分架构包
 
 安装包大小随版本和平台变化，按实际下载文件及解压后的大小预留 JFFS 空间。512MB 及以上内存的机型可按默认设置运行；256MB 等小内存机型可使用 0.0.3 起提供的[内存优化](#low-memory)。普通模式下，内核解压到内存的文件、代理进程、GeoIP 数据和控制面板都会占用内存，具体用量随构建和架构变化
 
@@ -152,6 +153,6 @@ DOMAIN,ads.example.com,REJECT
 | UDP 转发没有生效 | 点「自检」，查看 TPROXY 与策略路由两项；部分固件不支持时只影响 UDP，TCP 照常代理 |
 | 提示与科学上网或 MerlinClash 冲突 | 先关闭另一个代理插件，同时只能开启一个 |
 | 路由器已运行，设备仍异常 | 核对设备的网关、DNS 和 IPv6，再看控制面板的连接记录 |
-| 同一节点在路由器上速度慢于手机、电脑 | • **核对内核架构**：点「自检」查看内核，64 位 hnd 机型应显示「使用 arm64 内核」（仍是 armv7 时更新到 0.0.15 或重新离线安装）；32 位机型的速度受 CPU 限制<br>• **核对端口设置**：测速服务使用非常用端口时会直连，对比前可临时关闭「仅代理常用端口」 |
+| 同一节点在路由器上速度慢于手机、电脑 | • **核对内核架构**：点「自检」查看内核，64 位 hnd 机型应显示「使用 arm64 内核」（需要从 armv7 切换时离线安装 HND 64 位包）；32 位机型的速度受 CPU 限制<br>• **核对端口设置**：测速服务使用非常用端口时会直连，对比前可临时关闭「仅代理常用端口」 |
 
 反馈前点「自检」，把自检结果和「查看日志」中的插件日志一并发送，并隐藏账号信息
