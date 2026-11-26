@@ -47,7 +47,7 @@ Use the release's `SHA256SUMS` to verify a standard package or the matching `SHA
 2. Choose email/password, an existing Access Token, or **Sign in with Google** when available. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Enter your email and password and select **Sign in**, or use the link at the bottom of the form to switch to an Access Token. Wait for the active plan and managed profile and nodes to load before connecting.
 3. Choose a node or policy group under **Proxies** and keep Rule mode for everyday use. To update managed nodes, select **Refresh nodes** on the oixCloud account page. In older builds with separate **Refresh** and **Sync** actions, select **Sync**.
 
-If **Approve this device** appears on the account page, [check the fingerprint and approve the request](/en/account/security#device-approval) before loading managed nodes.
+Once signed in, the client loads managed nodes without device approval. The first sign-in on a new device sends an alert to your account; see [New devices and sign-in alerts](/en/account/security#device-approval). To get an Access Token, [create one](/en/account/security#manual-token) on the website; its full value is shown only once.
 
 ## Capture application traffic
 

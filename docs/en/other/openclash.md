@@ -26,11 +26,11 @@ The LuCI plugin and proxy core update separately. Updating only the core cannot 
 
 ## 2. Sign in to oixCloud
 
-Open **Services → OpenClash → Plugin Settings → oixCloud**. First use email/password to create the dedicated OpenClash token. You can then use **Token Login** with that Access Token itself, not a subscription URL. See [first sign-in](/en/account/security#first-client-login) for obtaining an oixCloud password after Google registration and restricting client password sign-in.
+Open **Services → OpenClash → Plugin Settings → oixCloud** and sign in with email/password. Alternatively, [create an Access Token](/en/account/security#manual-token) on the website, choose **Token Login** and paste the token itself, not a subscription URL. See [client sign-in](/en/account/security#first-client-login) for obtaining an oixCloud password after Google registration and restricting client password sign-in.
 
 Wait for account information, profile download and core processing. The plugin creates or updates the `oixCloud - smart` subscription. Visible plan and traffic data proves account retrieval, not that the correct profile is active.
 
-If LuCI opens **Approve this device** during sign-in or a subscription update, [check the fingerprint and approve the router](/en/account/security#device-approval) before loading managed nodes.
+Once signed in, the router can load managed nodes without device approval. The first sign-in sends a new-device alert to your account; see [New devices and sign-in alerts](/en/account/security#device-approval). Plugin 0.48.014 and earlier cannot tell devices apart, so under **Signed-in clients** on the website it shares one row with other routers on the same old version. Update the plugin and sign in again to list it separately.
 
 ## 3. Select the profile and start
 

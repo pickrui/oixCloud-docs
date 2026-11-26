@@ -68,9 +68,9 @@ Region or name filters alone do not add these nodes. Restoring defaults removes 
 
 ## Which devices share a filter?
 
-Filters belong to subscription addresses. Devices using the same official client and account normally share that client's sign-in token and bound address; they apply the same conditions on their next refresh. Different clients can have different settings.
+Filters belong to subscription addresses. All devices using the same official client on one account share that client's subscription configuration and bound address, so they apply the same conditions on their next refresh. A device that signs in again after being signed out picks it up automatically. Different clients can have different settings.
 
-The first official-client save creates and binds a dedicated client address when necessary without overwriting the main subscription's conditions. If you manually bind a personal address to the token, the client uses that address's filter instead.
+The first official-client save creates and binds a dedicated client address when necessary without overwriting the main subscription's conditions. If you select a personal address in **Subscription Configuration** for the client or Access Token on [Access Token Management](https://oixcloud.com/user/token), the client uses that address's filter instead.
 
 ## Account custom rules {#account-rules}
 
@@ -87,7 +87,7 @@ Saving an empty list deletes the account rules, so keep anything you need first.
 | Symptom | Check |
 | --- | --- |
 | No filter entry | Check the client source/version and plan eligibility (rank 20 or higher). |
-| Preview works but saving is rejected | Read the error. A manually created token may lack a writable personal-address binding; bind it on the website or sign in with the official client account flow. |
+| Preview works but saving is rejected | Read the error. An Access Token sign-in may have no writable subscription address; select a personal address in that token's **Subscription Configuration** on the website, or sign in to the official client with email/password or Google. |
 | Old nodes after saving | Check sync completion, selected profile and whether another device changed the shared filter. |
 | Dedicated IP absent | Confirm it is retained in the preview; an empty official-client filter does not mean every node. |
 | Old region parameters have no effect | Official smart subscriptions use visual filters; ordinary addresses with a filter also ignore legacy region, name and mode parameters. |

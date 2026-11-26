@@ -23,7 +23,8 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
 | --- | --- |
 | 网站能登录，客户端提示凭据错误 | 检查所选登录方式。密码栏填写账户密码，Token 栏填写有效的 Access Token。如果已关闭客户端密码登录，请改用 [客户端支持的登录方式](/account/security#first-client-login) |
 | 已付款，客户端仍提示没有有效套餐 | 分别核对充值记录和套餐管理，确认有一笔「使用中」的套餐。若只有充值记录或显示「待激活」，按 [付款与激活排查](/help/support#payment) 继续，避免重复付款 |
-| 客户端提示这台设备还没有批准 | 按 [批准新设备](/account/security#device-approval) 在网页或 Telegram 机器人中批准，客户端会自动获取节点 |
+| 客户端提示这台设备的登记已失效 | 在客户端退出后重新登录，登录成功后即可获取节点，不需要批准，见 [新设备登录与提醒](/account/security#device-approval) |
+| 客户端突然要求重新登录 | 这台设备可能已在 [已登录的客户端](https://oixcloud.com/user/token#devices) 被下线、180 天未使用而自动下线，或账户密码已修改；用 Access Token 登录的，该 Token 可能已被删除、重新生成或到期。重新登录即可，不是本人操作时 [修改密码](/account/security#change-password) |
 | 客户端提示设备时间与服务器相差过大 | 打开系统的「自动设置日期与时间」，路由器开启 NTP 校时后重试 |
 | 已登录，有效套餐下仍找不到目标节点 | 在网站的 [节点列表](https://oixcloud.com/user/node) 搜索节点名称。网站能看到时，按 [缺少节点的排查步骤](/account/subscriptions#missing-nodes) 核对当前订阅并更新客户端 |
 

@@ -29,10 +29,10 @@ Helper 的系统要求与 FlClash for oixCloud 不同，不要混用安装包
 
 1. 按上表下载启动包，或从 [最新发行页](https://github.com/pickrui/oixcloud-external-proxy-program/releases/latest) 手动选择对应的可执行文件
 2. 使用启动包时双击「启动 oixCloud.command」，首次使用选择「常驻启动」；直接下载发行页可执行文件时，按公开安装说明安装并以 `--tray` 启动
-3. 打开菜单栏 oixCloud 的「账户 → 登录…」，首次用邮箱和密码登录，生成 oixCloud Helper 专属 Token；之后可使用对应的 Access Token。Google 登录用户获取账户密码的方法与禁止客户端邮箱/密码登录的设置见 [首次登录说明](/account/security#first-client-login)
+3. 打开菜单栏 oixCloud 的「账户 → 登录…」，用邮箱和密码登录，或粘贴在网站 [新增的 Access Token](/account/security#manual-token)。Google 登录用户获取账户密码的方法与禁止客户端邮箱/密码登录的设置见 [登录说明](/account/security#first-client-login)
 4. 等待套餐和节点获取完成。菜单顶部有操作进度和结果，失败时查看具体原因后再处理
 
-Helper 提示等待批准时，从菜单栏打开「批准这台设备…」，按[设备批准步骤](/account/security#device-approval)完成确认，再获取托管节点
+登录成功后 Helper 即可获取托管节点，不需要批准设备；首次登录时账户会收到新设备登录提醒，见 [新设备登录与提醒](/account/security#device-approval)
 
 ## 选择接入模式
 

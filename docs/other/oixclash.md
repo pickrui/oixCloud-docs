@@ -40,22 +40,20 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 ## 3. 登录 oixCloud
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-login-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixClash · 登录账号">
-    <img src="/illustrations/oixclash-login-zh.svg?v=20261030-2" alt="oixClash · 登录账号" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/oixclash-login-zh.svg?v=20261126-1" target="_blank" rel="noopener" aria-label="oixClash · 登录账号">
+    <img src="/illustrations/oixclash-login-zh.svg?v=20261126-1" alt="oixClash · 登录账号" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
-首次在「oixCloud 账号」选择邮箱和密码登录，生成 oixClash 专属 Token；之后可使用对应的 Access Token。Google 登录用户获取账户密码的方法与禁止客户端邮箱/密码登录的设置见 [首次登录说明](/account/security#first-client-login)
+在「oixCloud 账号」选择邮箱和密码登录；也可以在网站 [新增 Access Token](/account/security#manual-token) 后选择登录令牌粘贴。Google 登录用户获取账户密码的方法与禁止客户端邮箱/密码登录的设置见 [登录说明](/account/security#first-client-login)
 
 登录方式：
 
-- 登录令牌：粘贴在 oixCloud 网站或 App 中复制的 Access Token，不是订阅地址
+- 登录令牌：粘贴在 oixCloud 网站新增 Access Token 时复制的完整内容，不是订阅地址
 - 邮箱和密码：填写 oixCloud 账户的邮箱与密码，密码只用于本次登录，不保存在路由器上
 
-登录后显示账号、套餐、到期时间与流量。粘贴其他 oixCloud 客户端的令牌时，插件会换成 oixClash 自己的令牌，节点筛选按 oixClash 单独保存；网站上创建的令牌无法转换，按原样使用
-
-如果登录后提示需要批准，在插件账户行点「登记设备」，按[设备批准步骤](/account/security#device-approval)完成确认，再获取托管节点
+登录后显示账号、套餐、到期时间与流量。登录成功后即可获取托管节点，不需要批准设备；首次登录时账户会收到新设备登录提醒，见 [新设备登录与提醒](/account/security#device-approval)
 
 ## 4. 开启代理
 

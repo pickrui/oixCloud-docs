@@ -41,4 +41,4 @@ In oixFlow, the Proxy rule target follows the current proxy selection; a specifi
 
 These credentials are not interchangeable.
 
-Signing out, revoking a token and resetting a subscription have different effects. See [account security](/en/account/security).
+Signing out in a client, signing out a device or deleting a token on the website, and resetting a subscription have different effects. See [account security](/en/account/security).

@@ -6,45 +6,57 @@ description: "Accounts and access tokens \u2014 setup, practical steps and troub
 
 ## Sign-in, sign-out, and Access Tokens
 
-Official clients of the same type on one account reuse the token issued at sign-in. Signing out of a client does not revoke that token on the server. You can revoke it on the website's token page; all devices using it will then need to sign in again. With iCloud account or Apple TV sync enabled, sign-in state may also change through sync. Manually created tokens expire according to the validity period you chose; they differ from the long-lived tokens issued at sign-in.
+Official clients can sign in with email/password, Google or an Access Token. Both kinds of sign-in appear on [Access Token Management](https://oixcloud.com/user/token):
 
-## First sign-in to a custom client {#first-client-login}
+| Section | What it lists | Expiry |
+| --- | --- | --- |
+| Access Tokens | Tokens you create. Paste one into a client to sign in, or use it with third-party clients and scripts. Devices signed in with a token are listed under it | Follows the validity you chose |
+| Signed-in clients | Devices signed in with email/password or Google, one row per device, each of which you can sign out | No expiry; devices unused for 180 days are signed out automatically |
 
-For the first sign-in to each custom client, use email and password or its **Sign in with Google** option, if available, to issue that client's dedicated token. If you already have the corresponding Access Token, paste the token itself, not a subscription URL.
+Signing out in a client only clears its local sign-in state; the website still lists the device as signed in. When you no longer use it, select **Sign out** under **Signed-in clients**. With iCloud account or Apple TV sync enabled, sign-in state may also change through sync.
 
-After signing in, find the client under **Issued by client login** on the [Access Token page](https://oixcloud.com/user/token). The page shows only the last 4 characters by default; use its copy button to get the full token. The same account and client type reuse a token; you do not need to create one per device.
+## Sign in to a custom client {#first-client-login}
+
+Sign in directly in the client on each device, using any of these methods:
+
+- Email and password.
+- **Sign in with Google**, if the client offers it. See [Sign in to a client with Google](#google-client-login).
+- An Access Token: [create one](#manual-token) on the website, then paste it into the client's Access Token field. Enter the token itself, not a subscription URL.
+
+All three methods provide the same features, and the device can load nodes as soon as it signs in. To use the same client on another device, sign in there with email/password or Google, or paste a saved or newly created Access Token. The website never shows client sign-in credentials, so there is no sign-in token to copy.
 
 Google sign-in is available in supported oixFlow versions for iPhone/iPad and in supported versions of FlClash for oixCloud. Apple TV continues to [receive the account from an iPhone](/en/oixflow/apple-tv). Follow the email/password or token instructions for Helper, OpenClash and oixClash; do not assume they have a Google button.
 
-## Approve a new device {#device-approval}
+## New devices and sign-in alerts {#device-approval}
 
-By default, a new device can load nodes immediately. The [device approval page](https://oixcloud.com/user/managed-device) lists devices with temporary access alongside approved devices. You can check a fingerprint, see the last node update, or revoke an unfamiliar device.
+Once a client signs in with email/password, Google or an Access Token, the device can load nodes immediately. There is no confirmation code, email code, authenticator code, website approval or temporary access state. Two-step verification applies only to website sign-in, not to clients.
 
-- On a supported client, choose Token Login and enter a valid Access Token. The device is approved automatically, including on accounts with two-step verification.
-- If two-step verification is off, signing in with email and password or Google also approves the new device automatically. You receive an account notification when a new device is approved this way.
-- Devices restored from a backup or synced to Apple TV through iCloud follow the current access policy. With temporary access you can keep using nodes and finish approval later on the device approval page.
-- When approval is required to load nodes, the client prompts you to verify. An approved iPhone or iPad on the same Apple Account can also approve an Apple TV. See [Approve Apple TV](/en/oixflow/apple-tv#approval).
+The first time a new device signs in, you receive a **New device signed in** alert by email and, if linked, Telegram. It names the client, device fingerprint and time. If you do not recognize the device:
 
-**When your client asks for approval**
+1. Open [Signed-in clients](https://oixcloud.com/user/token#devices), find the device and select **Sign out**. If the alert says it signed in with an Access Token, delete or regenerate that token under **Access Tokens** instead.
+2. [Change your password](#change-password) so it cannot sign in again. Every device and Access Token then stops working, so your own devices must sign in again too.
 
-1. Open **Approve this device** and check the fingerprint. If two-step verification is on, enter the six-digit code from your authenticator. Otherwise select **Send Code** and enter the eight-digit code sent to your account email.
-2. If the client offers other methods, scan the QR code, open the website, or send `/device` followed by the confirmation code to your linked Telegram bot. Approve only if the fingerprint matches. Deny unfamiliar requests.
-3. The client loads nodes after verification. Website codes and Telegram buttons expire after ten minutes. You can still manage a device with temporary access on the device approval page after its button expires.
-4. If you denied your own request, select **Request approval again** on that device and verify with your email or authenticator. Older panels may require you to wait for the original code to expire.
+The former device approval page and the Telegram bot's `/device` command have been removed; old links open **Signed-in clients**. Apple TV still signs in through **Sync to Apple TV** on the iPhone and no longer needs the iPhone to approve it. See [Apple TV sign-in](/en/oixflow/apple-tv#approval).
 
-| Client | Where to approve |
-| --- | --- |
-| oixFlow (iPhone / iPad) | The **Approve this device** card on the account page |
-| oixFlow (Apple TV) | Automatic; if the iPhone has not been opened for a while, scan the code under **Approve this device** on the account page |
-| FlClash for oixCloud | **Approve this device** on the account page |
-| oixCloud Helper (macOS) | **Approve this device…** in the menu bar |
-| oixCloud Helper (Linux) | Run `--enroll-device` and follow its output |
-| OpenClash | **Approve this device** opens on its own while signing in or updating the subscription |
-| oixClash (Merlin) | 「登记设备」 (Register device) in the account row of the plugin page |
+## Signed-in clients {#signed-in-clients}
 
-Approve only a request you started: the fingerprint on the website or in the bot must match the one on your device. Do not approve a link or code someone else sends you.
+Open **Signed-in clients** on [Access Token Management](https://oixcloud.com/user/token#devices):
 
-To stop a device from updating nodes, select **Revoke** next to it on the device approval page. If a token may have leaked, revoke or refresh it on the Access Tokens page. If your password may have leaked, [change it](#change-password). Each account can have up to 50 formally approved devices. At that limit, Token Login keeps existing devices connected. The new device can still load nodes if temporary access is available. To approve it, revoke a device you no longer use and sign in with the token again.
+- Devices are grouped by client, one row each, showing the device, sign-in date and last use. The website never shows the sign-in credentials and cannot copy them.
+- When oixFlow syncs its sign-in over iCloud to other devices on the same Apple Account, such as Apple TV, they appear under the device that signed in.
+- Devices that were signed in before this change share one **Signed in before this update** row. They are listed separately after signing in again with a current client. OpenClash 0.48.014 and earlier cannot tell devices apart, so they stay in this row until the plugin is updated.
+- Devices that signed in with an Access Token are listed under that token instead.
+- Devices unused for 180 days are signed out automatically.
+
+The subscription configuration, including node filters, is set per client with **Subscription Configuration** on the client's card and is shared by all of that client's devices. A device that signs in again after being signed out picks up the same configuration automatically.
+
+**Sign out one device**
+
+1. Find the device under its client and check its name and last use.
+2. Select **Sign out** and confirm. The sign-in stops working immediately, and the device must sign in again in the client to continue. Devices that received this sign-in through sync, such as Apple TV, are signed out with it. Signing out the **Signed in before this update** row signs out every device listed in it.
+3. Sign in again on devices you still use.
+
+To sign out every device at once, [change your password](#change-password).
 
 ## Sign in to a client with Google {#google-client-login}
 
@@ -64,41 +76,45 @@ Both the client and website must support this flow. If the button is unavailable
 | Email not registered | Choose the Google account matching your existing oixCloud email, or register on the website first |
 | Signed in but no nodes | Wait for the managed profile, then check the plan, node filter and sync result |
 
-Do not repeatedly regenerate Access Tokens to diagnose a browser return; this invalidates devices sharing the old token.
+Do not sign out other devices or regenerate Access Tokens to diagnose a browser return. Neither helps Google sign-in; they only make the affected devices sign in again.
 
 ## Disable client email/password sign-in {#token-only}
 
-1. Confirm that the clients you need have a usable token or support Google sign-in.
-2. On the [Access Token page](https://oixcloud.com/user/token), expand **Client sign-in and security tips**, enable **Disable email/password sign-in for clients**, and wait for the saved confirmation.
-3. Client/API email/password sign-in is then rejected. Existing tokens, website sign-in and supported Google sign-in remain available.
+1. Confirm that the clients you need support Google sign-in, or prepare an [Access Token](#manual-token).
+2. On [Access Token Management](https://oixcloud.com/user/token), expand **Client sign-in and security tips**, enable **Disable email/password sign-in for clients**, and wait for the saved confirmation.
+3. Client/API email/password sign-in is then rejected. Signed-in devices, existing Access Tokens, website sign-in and supported Google sign-in remain available.
 
-Older pages may label this option **Access Token only**. Its actual scope is email/password sign-in. If a client has no Google option and needs a new token, temporarily disable the restriction on the website, sign in with email/password, then enable it again.
+While it is on, sign in to new devices with Google or an Access Token; you do not need to turn the option off for a new device. Older pages may label this option **Access Token only**. Its actual scope is email/password sign-in.
 
-## Refresh a client Access Token {#refresh-client-token}
+## Create an Access Token {#manual-token}
+
+An Access Token can sign in to a client or authenticate third-party clients and scripts. Its full value is shown only once, so have a safe place ready to store it.
+
+1. On [Access Token Management](https://oixcloud.com/user/token), select **New Token**. Choose the **Token Validity**, add a recognizable note and check the **Subscription Configuration**. The validity defaults to 30 days. For a token used to sign in to clients, choose **No expiry**: devices signed in with it are signed out when it expires.
+2. Select **Create Token** and confirm with a passkey or your current sign-in password in the dialog.
+3. The dialog shows the full token. Select **Copy**, store it somewhere safe, then select **I have saved it**. This is the only time the full value is shown; afterward the list shows only its last 4 characters.
+4. Paste it into the client's Access Token field to sign in. Devices that sign in with it are then listed under the token.
+
+You receive an alert by email and, if linked, Telegram when a token is created. If you did not create it, delete it right away and [change your password](#change-password). If the outcome is unclear, reload the list to see whether a token was created before submitting again. If it was created but you did not see the full value, [regenerate it](#refresh-client-token).
+
+An account can keep up to 10 valid Access Tokens, including tokens with no expiry. Client sign-ins with email/password or Google do not count toward this limit. A token with an expiry date stops authenticating when it expires and does not renew through use; before then, you can select its expiry and change it to no expiry without changing the token. When you delete a token, the confirmation lists the devices signed in with it that must sign in again. A subscription URL is not a token. Do not publish token screenshots.
+
+## Regenerate an Access Token {#refresh-client-token}
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-tokens-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Find the token for your client">
-    <img src="/illustrations/account-tokens-en.svg?v=20261102-3" alt="Find the token for your client" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/account-tokens-en.svg?v=20261126-1" target="_blank" rel="noopener" aria-label="Regenerate a token or sign out a device">
+    <img src="/illustrations/account-tokens-en.svg?v=20261126-1" alt="Regenerate a token or sign out a device" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
-Refreshing immediately invalidates the old token. Every same-client device sharing it must switch to the new token and follow the [device approval steps](#device-approval) again. The client identity and subscription binding stay the same.
+If a token is lost or may have leaked, regenerate it. The note, expiry and subscription configuration stay the same, and the token gets a new value that is shown once. The old value stops working immediately, so every device and script using it must switch to the new value.
 
-1. Open the [Access Token page](https://oixcloud.com/user/token) and find the intended client under **Issued by client login**.
-2. Click **Regenerate** on that entry, review the affected devices, and confirm with a passkey or your current sign-in password in the dialog.
-3. Wait for the page to reload, copy the new token with the copy button, and update every device using it. If your Apple TV account is synced from an iPhone, sync it again.
+1. Open [Access Token Management](https://oixcloud.com/user/token) and find the token under **Access Tokens** by its note and last 4 characters.
+2. Select **Regenerate**, review the impact and confirm with a passkey or your current sign-in password in the dialog.
+3. Select **Copy** in the dialog to store the new value, select **I have saved it**, then update the devices and scripts that use the token.
 
-You can refresh while client email/password sign-in is disabled; there is no need to allow email/password sign-in temporarily. If the request fails or its result is unclear, reload the token page and check the current token before retrying. Manually created tokens do not have this button; delete and recreate them when a replacement is needed.
-
-## Create a manual token {#manual-token}
-
-1. On [Access Token Management](https://oixcloud.com/user/token), choose **New Token**, select its validity, add a recognizable note and check the subscription binding.
-2. Submit, confirm with a passkey or your current sign-in password in the dialog, and wait for success. After the page reloads, find the new entry under **Tokens you created**.
-3. An account can retain up to 10 manual tokens. Client sign-in tokens are listed separately and do not use this quota.
-4. Read any failure message. If the outcome is unclear, reload the list to see whether a token was created before submitting again.
-
-Manual tokens stop authenticating at expiry and do not renew automatically through use. A subscription URL is not a token. Do not publish token screenshots.
+Regenerating also sends an alert by email and, if linked, Telegram. Expired tokens cannot be regenerated; create a new one instead. If the request fails or the result is unclear, reload the page and check the last 4 characters. If they changed but you did not get the full value, regenerate it again. Devices under **Signed-in clients** have no such button; to replace a device's sign-in, sign it out and sign in again.
 
 ## Telegram binding and daily notifications {#notifications}
 
@@ -115,17 +131,17 @@ Before changing your password, confirm you can update the affected devices:
 
 | Affected credential | What changes |
 | --- | --- |
-| Access Tokens | Account tokens are revoked; affected clients need to sign in again |
+| Signed-in clients | Every device is signed out and must sign in again in its client |
+| Access Tokens | All deleted; devices and scripts using them need a newly created token |
 | Passkeys | Existing records are cleared, can no longer sign in and must be added again |
 | Old main subscription URL | Deleted; clients using it need the new subscription URL |
-| Device approvals | All revoked; each device follows [Approve a new device](#device-approval) when it signs in again |
 
 1. Open [Account Settings → Password](https://oixcloud.com/user/edit#settings-password); the link opens the change form directly (from the page itself, select **Change** on the **Password** card). Enter the current password, new password and confirmation. If you have forgotten the current password, select **Forgot current password** under that field to reset it by email.
 2. Confirm you can update the other devices, submit, and wait for success.
-3. Sign in to the website again if prompted, obtain new client tokens on the token page, and update devices using the old main subscription URL.
+3. Sign in to the website again if prompted and sign in again on the clients you still use. Create new Access Tokens where you need them, and update devices using the old main subscription URL.
 4. Add the Passkeys you still need again. With account sync enabled, check the resulting sign-in state on other devices and Apple TV.
 
-If client email/password sign-in is disabled, follow the [sign-in restriction guidance](#token-only) when obtaining new tokens. Also check each leaked item separately; personal subscription URLs and other items still need the actions in the table below.
+If client email/password sign-in is disabled, sign in to clients with Google or a newly created Access Token; see the [sign-in restriction guidance](#token-only). Also check each leaked item separately; personal subscription URLs and other items still need the actions in the table below.
 
 ## Add and manage Passkeys {#passkey}
 
@@ -140,7 +156,7 @@ After cancellation or timeout, start again from **Add** on the **Passkeys** card
 
 ## Enable TOTP two-step verification {#totp}
 
-Once enabled, password sign-in to the website also requires a six-digit code. Follow verification prompts for sensitive actions that request it. A Passkey is a separate sign-in method, not a one-time password.
+Once enabled, password sign-in to the website also requires a six-digit code. Follow verification prompts for sensitive actions that request it. Client sign-in does not ask for the code. A Passkey is a separate sign-in method, not a one-time password.
 
 1. Open [Account Settings → Sign-in and security](https://oixcloud.com/user/edit#settings-totp); the link opens the setup dialog directly (from the page itself, select **Turn on** on the **Two-step verification** card).
 2. Follow the steps in the dialog: scan the QR code with your authenticator, or enter the displayed secret manually. To use a different secret, select **Regenerate**; the page reloads and returns to the dialog, and you add the new QR code again.
@@ -165,11 +181,11 @@ You can change your own email once a year. The first change is available at any 
 
 The security notice uses the contact details from before the change; its email goes to the old address. Contact support immediately if you did not make the change. This action is unavailable when email changes are disabled.
 
-Incorrect passwords entered when changing your email or password, adding or deleting a passkey, creating or refreshing an Access Token, disconnecting Telegram, turning off two-step verification or deleting the account all count together. After 5 incorrect attempts within 15 minutes, all of these actions ask you to wait before trying again.
+Incorrect passwords entered when changing your email or password, adding or deleting a passkey, creating or regenerating an Access Token, disconnecting Telegram, turning off two-step verification or deleting the account all count together. After 5 incorrect attempts within 15 minutes, all of these actions ask you to wait before trying again.
 
 ## What should I keep private?
 
-Do not share passwords, Access Tokens, full subscription URLs, node passwords, or certificate private keys. Redact them from screenshots and logs. If a subscription URL leaks, use Reset on the subscription page, then update subscriptions and connection details on every device. This does not revoke Access Tokens; refresh or delete a leaked token separately on the token page.
+Do not share passwords, Access Tokens, full subscription URLs, node passwords, or certificate private keys. Redact them from screenshots and logs. If a subscription URL leaks, use Reset on the subscription page, then update subscriptions and connection details on every device. This does not invalidate Access Tokens or signed-in devices; regenerate or delete a leaked token separately on the token page.
 
 ## When are inactive accounts deleted?
 
@@ -179,16 +195,14 @@ Reminders are sent 7 days, 3 days and 1 day before deletion, and accounts with a
 
 Website/client sign-ins and authenticated activity can update login activity. Active or valid queued plans, pending withdrawals, payments and other unsettled items can defer cleanup. Banned accounts are not automatically deleted under this inactivity rule. Check account notices and the current state.
 
-[Open Access Tokens](https://oixcloud.com/user/token)
+[Open Access Token Management](https://oixcloud.com/user/token)
 
-## Manage and revoke tokens
+## Stop a device or token
 
-1. Open the token page and identify the intended client or manual token by its note and source.
-2. Distinguish signing out on one device from revoking a server token. Official-client sign-out clears local sign-in state.
-3. Delete the relevant token on the website if it leaked or is no longer needed. Same-client devices on the account may share it and will all be affected. Each sign-in token lists the devices that recently used it (matched by client type), and the delete confirmation names the devices that need to sign in again.
+1. Open Access Token Management and decide whether you are stopping a client device or an Access Token.
+2. Signing out in a client only clears that device's local sign-in state. To end its sign-in on the server, select **Sign out** next to it under **Signed-in clients**.
+3. If an Access Token leaked or is no longer needed, delete it under **Access Tokens**; the delete confirmation lists the devices signed in with it that must sign in again. If you still need it, select **Regenerate** instead and enter the new value on those devices.
 4. Sign in again on devices you still use. Also check the resulting state on devices that sync account information.
-
-Manual tokens have separate expiry dates. Sign-in tokens are not automatically reclaimed merely because of repeated logins. A shared client token does not provide per-device revocation.
 
 ## Match the response to the leak
 
@@ -196,7 +210,8 @@ Manual tokens have separate expiry dates. Sign-in tokens are not automatically r
 | --- | --- |
 | A personal subscription URL | Delete or replace that address in Subscription Management and update its clients. |
 | Main subscription or connection credentials | Use the page's reset-connection-parameters/main-subscription action, read its impact and update all affected devices. |
-| Access Token | Refresh a client-issued token or delete the corresponding token; resetting a subscription cannot replace this step. |
-| Sign-in password | Follow [password-change guidance](#change-password) to update tokens, the main subscription and Passkeys; changing only a subscription URL is insufficient. |
+| Access Token | Regenerate or delete the corresponding Access Token on the token page; resetting a subscription cannot replace this step. |
+| Unrecognized device sign-in | Sign it out under **Signed-in clients** and [change your password](#change-password). |
+| Sign-in password | Follow [password-change guidance](#change-password) to sign in to clients again and update Access Tokens, the main subscription and Passkeys; changing only a subscription URL is insufficient. |
 
 Retain necessary error and destination information in support material, but hide subscription-path secrets, tokens, node passwords, certificate private keys and full authentication headers.

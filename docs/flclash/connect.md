@@ -47,7 +47,7 @@ Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`�
 2. 选择邮箱/密码、已有 Access Token，或当前版本提供的「使用 Google 登录」。Google 只登录已有账户，并需客户端和网站同时支持，步骤见 [Google 登录说明](/account/security#google-client-login)。填写邮箱和密码后点「登录」；使用已有令牌时，从表单底部切换到 Access Token，确认套餐生效，等待托管配置与节点加载完成再连接
 3. 在「代理」选择节点或策略组，日常使用保持「规则」模式。要更新托管节点，在 oixCloud 账户页点「刷新节点」。旧版分开显示「刷新」和「同步」时，选「同步」
 
-账户页出现「批准这台设备」时，先[核对指纹并批准](/account/security#device-approval)，再获取托管节点
+登录成功后即可获取托管节点，不需要批准设备；新设备第一次登录时账户会收到提醒，见 [新设备登录与提醒](/account/security#device-approval)。没有 Access Token 时，可在网站 [新增 Access Token](/account/security#manual-token)，完整内容只显示一次
 
 ## 让应用使用代理
 

@@ -26,11 +26,11 @@ LuCI 插件和代理内核可单独更新。找不到新菜单时，仅更新内
 
 ## 2. 登录 oixCloud
 
-进入「服务 → OpenClash → 插件设置 → oixCloud」，首次选择邮箱密码登录，生成 OpenClash 专属 Token；之后可选择 Token 登录，填写对应 Access Token 本身，不是订阅网址。Google 登录用户获取账户密码的方法与禁止客户端邮箱/密码登录的设置见 [首次登录说明](/account/security#first-client-login)
+进入「服务 → OpenClash → 插件设置 → oixCloud」，选择邮箱密码登录；也可以在网站 [新增 Access Token](/account/security#manual-token)，选择 Token 登录后粘贴，填写 Token 本身，不是订阅网址。Google 登录用户获取账户密码的方法与禁止客户端邮箱/密码登录的设置见 [登录说明](/account/security#first-client-login)
 
 等待账户信息、配置和内核处理完成。插件会创建或更新 `oixCloud - smart` 订阅；能看到套餐与流量仅表示账户信息获取成功，还需检查正在使用的配置
 
-登录或更新订阅时，如果 LuCI 弹出「批准这台设备」，先[核对指纹并批准路由器](/account/security#device-approval)，再获取托管节点
+登录成功后路由器即可获取托管节点，不需要批准设备；首次登录时账户会收到新设备登录提醒，见 [新设备登录与提醒](/account/security#device-approval)。0.48.014 及更早的插件不区分设备，网站「已登录的客户端」里会和其他同样旧版的路由器合在一行，更新插件后重新登录即可单独列出
 
 ## 3. 选择配置并启动
 

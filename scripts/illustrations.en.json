@@ -566,7 +566,14 @@
       "未开启 2": "Disabled 2",
       "入口端口": "Entry port",
       "未勾选：入口解密后转发 TCP / UDP": "Unchecked: decrypt and forward TCP / UDP",
-      "不可用 0": "Unavailable 0"
+      "不可用 0": "Unavailable 0",
+      "家里路由器": "Home router",
+      "Token 尾号": "Ends in",
+      "用这个 Token 登录的设备：oixClash · 路由器": "Signed in with this token: oixClash · Router",
+      "已登录的客户端": "Signed-in clients",
+      "2 台设备": "2 devices",
+      "2026-11-23 登录 · 最近使用：今天 09:12": "Signed in 2026-11-23 · last used today 09:12",
+      "下线": "Sign out"
     },
     "openclash": {
       "服务": "Services",
@@ -830,7 +837,7 @@
         ],
         [
           "Select Sign In",
-          "If prompted before loading managed nodes, check the device approval request."
+          "Managed nodes load right after sign-in, and your account receives a new-device alert."
         ],
         [
           "Use an Access Token",
@@ -1442,7 +1449,7 @@
         ],
         [
           "Enter account credentials",
-          "Copy the token from the website or app. It is not a subscription URL."
+          "Create the token on the website and paste it. It is not a subscription URL."
         ],
         [
           "Enable after sign-in",
@@ -1631,20 +1638,20 @@
       ]
     ],
     "account-tokens": [
-      "Find the token for your client",
+      "Regenerate a token or sign out a device",
       "Website → Access Token management",
       [
         [
-          "Find the correct client record",
-          "Official clients of the same kind can share this issued sign-in token."
+          "Find the token by note and ending",
+          "The full value appears only when it is created or regenerated."
         ],
         [
-          "Copy the token itself",
-          "Credentials are completely hidden here. A subscription URL is a different input."
+          "Regenerate for a new value",
+          "The note, expiry and subscription stay the same; the old value stops working at once."
         ],
         [
-          "Review before regenerating",
-          "The old token stops working; every device sharing it needs the new token."
+          "Sign out under Signed-in clients",
+          "Each device has its own row and must sign in again in the client afterwards."
         ]
       ]
     ],

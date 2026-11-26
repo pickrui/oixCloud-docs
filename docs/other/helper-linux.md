@@ -28,7 +28,7 @@ docker compose ps
 
 发布的 Compose 默认将端口开放到宿主机所有接口，启动前先配置局域网鉴权并限制防火墙；仅本机使用时将 `ports` 的宿主机地址限制为 `127.0.0.1`。如果配置包含固定 `listeners`，同时核对每项监听地址
 
-容器提示设备待批准时，使用当前配置和同一份持久化设备数据运行 Helper 的 `--enroll-device`，按输出的确认码和指纹完成[设备批准](/account/security#device-approval)，再获取托管节点
+容器启动后直接获取托管节点，不需要批准设备；首次登录时账户会收到新设备登录提醒，见 [新设备登录与提醒](/account/security#device-approval)
 
 ## 核对运行结果
 

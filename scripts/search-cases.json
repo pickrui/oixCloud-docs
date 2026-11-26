@@ -791,5 +791,20 @@
     "targets": [
       "/account/rewards.html"
     ]
+  },
+  {
+    "terms": [
+      "已登录的客户端",
+      "Signed-in clients",
+      "新设备登录",
+      "New device signed in",
+      "设备下线",
+      "Sign out device",
+      "重新生成 Access Token",
+      "Regenerate Access Token"
+    ],
+    "targets": [
+      "/account/security.html"
+    ]
   }
 ]

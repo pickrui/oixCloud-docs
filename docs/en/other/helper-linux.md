@@ -28,7 +28,7 @@ Confirm success before proceeding to each command. Configuration checks return `
 
 The published Compose exposes ports on all host interfaces by default. Configure LAN authentication and restrict the firewall before starting; for local use only, bind the host side of `ports` to `127.0.0.1`. Also review every fixed `listeners` address, if configured.
 
-If the container reports that device approval is required, run Helper with `--enroll-device` using the same configuration and persistent device data. Use the displayed code and fingerprint to [approve the device](/en/account/security#device-approval) before loading managed nodes.
+The container loads managed nodes after it starts, without device approval. The first sign-in sends a new-device alert to your account; see [New devices and sign-in alerts](/en/account/security#device-approval).
 
 ## Read back runtime status
 

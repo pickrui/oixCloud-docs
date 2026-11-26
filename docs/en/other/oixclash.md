@@ -40,22 +40,20 @@ If the platform does not match, the software center says so and stops; install t
 ## 3. Sign in to oixCloud
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-login-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixClash · Sign in to oixClash">
-    <img src="/illustrations/oixclash-login-en.svg?v=20261105-3" alt="oixClash · Sign in to oixClash" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/oixclash-login-en.svg?v=20261126-1" target="_blank" rel="noopener" aria-label="oixClash · Sign in to oixClash">
+    <img src="/illustrations/oixclash-login-en.svg?v=20261126-1" alt="oixClash · Sign in to oixClash" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English reference with Chinese control names · Chinese-only plugin UI</figcaption>
 </figure>
 
-For the first sign-in under **oixCloud 账号**, choose email and password to create the dedicated oixClash token. You can use that Access Token afterward. See [first sign-in](/en/account/security#first-client-login) for obtaining an oixCloud password after Google registration and restricting client password sign-in.
+Under **oixCloud 账号**, sign in with email and password, or [create an Access Token](/en/account/security#manual-token) on the website and paste it as the sign-in token. See [client sign-in](/en/account/security#first-client-login) for obtaining an oixCloud password after Google registration and restricting client password sign-in.
 
 Sign-in methods:
 
-- **登录令牌** (sign-in token): paste the access token copied from the oixCloud website or app, not a subscription URL.
+- **登录令牌** (sign-in token): paste the full Access Token you copied when creating it on the oixCloud website, not a subscription URL.
 - **邮箱和密码** (email and password): the password is only used for this sign-in and is not stored on the router.
 
-After signing in, the page shows the account, plan, expiry date and traffic. A token from another oixCloud client is swapped for oixClash's own token, so its node filter is kept separately; tokens created on the website cannot be swapped and are used as they are.
-
-If approval is required after sign-in, select **登记设备** (Register device) in the plugin’s account row and [follow the device approval steps](/en/account/security#device-approval) before loading managed nodes.
+After signing in, the page shows the account, plan, expiry date and traffic. The router can then load managed nodes without device approval. The first sign-in sends a new-device alert to your account; see [New devices and sign-in alerts](/en/account/security#device-approval).
 
 ## 4. Turn on the proxy
 

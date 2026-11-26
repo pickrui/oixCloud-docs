@@ -44,11 +44,11 @@ Apple TV 需要 tvOS 18.0 或更高版本，用于发布账户与配置的 iPhon
 
 Tailscale 账户授权是独立功能，不能用来登录 oixCloud 托管账户
 
-## 批准 Apple TV {#approval}
+## Apple TV 的登录 {#approval}
 
-Apple TV 通过 iCloud 同步账户后，默认可先获取节点。在要求先批准的情况下，同一 Apple 账户下已经批准的 iPhone / iPad 会自动代为批准：电视显示「在 iPhone 上打开 oixFlow 即可自动完成批准」时，在手机上打开 oixFlow，稍等片刻电视会自动获取节点
+Apple TV 继续通过 iPhone / iPad 的「同步到 Apple TV」登录：手机或平板需要已登录并开启这个开关，电视收到同步后即可获取节点，不需要批准，也不需要再由 iPhone 确认
 
-手机端需要已登录并开启「同步到 Apple TV」。手机长时间未打开或不在身边时，在电视账户页打开「批准这台设备」，用手机扫码在网页上批准，或私聊已绑定的 Telegram 机器人发送屏幕上的命令；核对指纹一致后再批准。其他客户端的批准方式见 [批准新设备](/account/security#device-approval)
+在网站 [已登录的客户端](https://oixcloud.com/user/token#devices) 中，电视写在登录的那台 iPhone / iPad 下面。让那台手机或平板下线时，电视会一起退出；需要恢复时，先在手机或平板重新登录，再确认「同步到 Apple TV」仍然开启。新设备登录提醒和其他客户端的说明见 [新设备登录与提醒](/account/security#device-approval)
 
 ## 日常使用
 

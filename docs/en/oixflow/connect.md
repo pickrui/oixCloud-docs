@@ -40,8 +40,8 @@ If you previously enabled any TestFlight MitM modules or rules, turn them off or
 ## Managed account
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-login-en.svg?v=20261125-1" target="_blank" rel="noopener" aria-label="oixFlow · Sign in to your account">
-    <img src="/illustrations/oixflow-login-en.svg?v=20261125-1" alt="oixFlow · Sign in to your account" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixflow-login-en.svg?v=20261126-1" target="_blank" rel="noopener" aria-label="oixFlow · Sign in to your account">
+    <img src="/illustrations/oixflow-login-en.svg?v=20261126-1" alt="oixFlow · Sign in to your account" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -49,6 +49,8 @@ If you previously enabled any TestFlight MitM modules or rules, turn them off or
 1. Install oixFlow and open its **oixCloud** account page. To buy a plan or add funds, use your account on the website.
 2. Sign in with email and password, switch to an Access Token at the bottom of the form, or choose **Sign in with Google**. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Wait for the active plan and managed nodes to load before connecting.
 3. Select a node or policy group on the home screen, keep Rule mode selected, and tap the power button in the status card. Allow the system to add a VPN configuration when prompted on your first connection.
+
+Once signed in, the app loads managed nodes without device approval. The first sign-in on a new device sends an alert to your account; see [New devices and sign-in alerts](/en/account/security#device-approval). To sign in with an Access Token, first [create one](/en/account/security#manual-token) on the website; its full value is shown only once.
 
 ## Your own nodes
 
@@ -62,7 +64,7 @@ Open a destination after connecting and check the actual outbound in [requests a
 
 ## Sign out
 
-Signing out removes local sign-in state without revoking the login token shared by the same client type. Revoke tokens on the website when necessary, and account for enabled account sync on other devices.
+Signing out removes local sign-in state; the website still lists the device as signed in. To end its sign-in on the server, select **Sign out** under [Signed-in clients](https://oixcloud.com/user/token#devices) on the website. Sign-ins synced over iCloud to devices such as Apple TV are signed out with it. With account sync enabled, also check the sync state on other devices.
 
 ## Google sign-in troubleshooting
 
