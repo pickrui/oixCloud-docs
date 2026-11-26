@@ -6,7 +6,7 @@ description: 选择订阅格式、设置节点筛选、恢复默认并确认多�
 
 ## 先选择接入方式
 
-oixFlow、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路由器的 oixClash 和 oixCloud Helper 可以登录账户获取托管配置。其他兼容客户端在 [订阅管理](https://oixcloud.com/user/sub_manage) 选择对应格式的地址，再导入客户端
+oixFlow、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路由器的 oixClash 和 oixCloud Helper 可以登录账户获取托管配置。其他兼容客户端在[用户中心 → 订阅地址](https://oixcloud.com/user#subscription-details)按客户端格式复制完整的主订阅网址，再[导入客户端](/start/quick-start#import-subscription)。[订阅管理](https://oixcloud.com/user/sub_manage)用于管理各地址与筛选，列表中的「复制 Token」只复制订阅 Token
 
 完整配置与 Provider 节点列表用途不同；Provider 需要客户端已有配置引用，不能把它当作一份完整配置直接启动。Access Token 是登录凭据，也不是订阅网址
 

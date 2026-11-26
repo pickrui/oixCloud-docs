@@ -4,10 +4,8 @@ description: "Plans, renewals and switching \u2014 setup, practical steps and tr
 
 # Plans, renewals and switching
 
-::: warning Plans are limited by both time and traffic
-Each plan has a validity period and a traffic allowance. **The plan is exhausted when either its validity ends or its traffic runs out, whichever happens first.** If you use all the traffic before the expiry date, you need to place a new plan order; remaining time alone does not let you keep using the original plan's high-speed allowance. You can also turn on automatic traffic reset below.
-
-If you have a queued plan, or have enabled automatic renewal (runs only at expiry) or automatic traffic reset, the continuation rules below apply. Check [Plan Management](https://oixcloud.com/user/bought) first, then place an order in the [plan store](https://oixcloud.com/user/shop) if no replacement has taken effect, to avoid duplicate purchases.
+::: tip Check Plan Management when data runs out or a plan expires
+Open [Plan Management](https://oixcloud.com/user/bought) and check the records. In either case, the next eligible prepaid plan takes priority. If none is queued and an ordinary plan runs out of high-speed data before expiry, its [automatic traffic reset](#traffic-reset) settings apply. Without a reset it enters [low-speed mode](/en/account/traffic#low-speed). At expiry, the [renewal queue](#auto-renew) applies.
 :::
 
 ## How to add funds {#top-up}
@@ -107,8 +105,8 @@ New orders that actually receive purchase-gift credits do not support self-servi
 ### Check purchased records
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-plans-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check plan status after purchase">
-    <img src="/illustrations/account-plans-en.svg?v=20261105-3" alt="Check plan status after purchase" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/account-plans-en.svg?v=20261127-2" target="_blank" rel="noopener" aria-label="Check plan status after purchase">
+    <img src="/illustrations/account-plans-en.svg?v=20261127-2" alt="Check plan status after purchase" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
@@ -450,16 +448,16 @@ If the payment provider charged you but the page did not confirm success, check 
 Open the **full [Cashier page](https://oixcloud.com/user/v2/counter)** and scroll below the payment area to **Crypto Order Records**. Find the original order and use **Report missing payment** in its action column. The embedded payment dialog does not show this records section; open the full page if you cannot find it.
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-crypto-feedback-en.svg?v=20261105-4" target="_blank" rel="noopener" aria-label="Report a cryptocurrency payment that was not credited">
-    <img src="/illustrations/account-crypto-feedback-en.svg?v=20261105-4" alt="Report a cryptocurrency payment that was not credited" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/account-crypto-feedback-en.svg?v=20261127-2" target="_blank" rel="noopener" aria-label="Report a cryptocurrency payment that was not credited">
+    <img src="/illustrations/account-crypto-feedback-en.svg?v=20261127-2" alt="Report a cryptocurrency payment that was not credited" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>Interface simulation · Fictional order and hash placeholder</figcaption>
 </figure>
 
 1. Check the original order ID, creation time and amount. Do not pay again or delete an order you have already paid. The list shows uncredited orders from the last 48 hours, plus older feedback still being checked, awaiting your confirmation or under manual review; credited orders are checked in [Top-up History](https://oixcloud.com/user/code).
-2. Before five minutes have passed, the button says **Awaiting auto credit** and reopens the original payment order. After five minutes, eligible records offer **Report missing payment**. Submit a new request within 48 hours of order creation; existing feedback in progress does not disappear simply because that window ends.
-3. In **Missing Credit Feedback**, enter the complete **Transaction Hash**. Use **Issue Description** to add the actual payment time, network and problem if needed, then select **Submit**. TRC20 hashes have 64 hexadecimal characters; Polygon/BSC hashes have 66, including the `0x` prefix. A hash is not an order ID, wallet address or private key. If a hash is already filled in and locked, continue with that request.
-4. Follow the resulting status: **Checking automatically** or **Under manual review** means wait without resubmitting; **Awaiting your confirmation** means reopen that action and review the proposed credit amount before confirming; **Check and resubmit** means check the hash and explanation before trying again. **Retry notification** can appear on orders already linked to a transaction. Follow the message rather than creating another order.
+2. Select **Report missing payment** on the original order to open **Payment verification and support**. You can open it immediately. The submit button counts down until the order is three minutes old. A first request must be submitted within 48 hours of order creation.
+3. Copy the complete **Transaction hash (TxID)** from your wallet or exchange. You can add the payment time and network. Select **Verify payment** when the countdown ends. If the hash is filled in and locked, continue with the original transaction.
+4. Use **View progress** to check the result. Wait during automatic checks or manual review. If you see **Confirm credit amount**, verify the order and expected credit before accepting. If the feedback was returned, check the hash and use **Edit and resubmit**.
 5. Confirm the actual credit in top-up history, then check purchase/activation in **Plan Management**. Submission success, review status or an order disappearing from this list alone does not prove crediting or plan activation.
 
 If the entry is unavailable, the initial feedback window has passed or the result remains unclear, provide the original order details and displayed message in a [payment support ticket](/en/help/support#payment). Never provide wallet private keys, seed phrases or verification codes.

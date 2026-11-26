@@ -8,8 +8,10 @@ description: 先按现象检查，再带上有效信息联系支持
 | 我想要 | 阅读教程 |
 | --- | --- |
 | 无法登录、没有节点或连接后打不开网页 | [连接与速度排查](/help/troubleshooting) |
-| 网站有节点，客户端里找不到 | [核对订阅并更新节点列表](/account/subscriptions#missing-nodes) |
+| 网站有节点，客户端里找不到 | [核对接入方式、筛选和刷新结果](/help/troubleshooting#missing-subscription) |
 | 已经付款，套餐还没生效 | [分别核对充值和套餐记录](/help/support#payment) |
+| 流量用完，或到期没有自动续费 | [检查待激活套餐、重置和续费队列](/help/troubleshooting#plan-continuation) |
+| 订阅地址或 Access Token 泄露 | [按泄露内容撤销凭据](/account/security#泄露后的对应处理) |
 | 有流量但速度受限 | [限速类型与恢复条件](/account/traffic#limits) |
 | Windows 提示缺少 DLL | [FlClash for oixCloud 缺少 DLL 修复](/flclash/windows-dll) |
 | 检查 oixFlow 的请求与出口 | [请求记录与诊断](/oixflow/diagnostics) |

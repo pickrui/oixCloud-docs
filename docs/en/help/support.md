@@ -8,15 +8,15 @@ Open [Support Tickets](https://oixcloud.com/user/ticket). If you have an open ti
 
 ## What to include
 
-For a connection issue, note the device, OS and client version, then reproduce the problem once. Record the time, node, site or app, and the exact error. For a payment issue, keep the order reference and payment time. Redact any screenshot before attaching it.
+For a connection issue, note the device, OS and client version, then reproduce the problem once. Record the time, node, site or app, and the exact error. For missing nodes, include whether you signed in or imported a subscription, the format and whether the same node appears on the website and in the filter preview. For payments, keep the order reference and time. Redact credentials and personal details in screenshots.
 
 ## Before opening a ticket: checks and annual allowance {#ticket-eligibility}
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-ticket-en.svg?v=20261102-4" target="_blank" rel="noopener" aria-label="Fill in reproducible ticket details">
-    <img src="/illustrations/account-ticket-en.svg?v=20261102-4" alt="Fill in reproducible ticket details" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/account-ticket-en.svg?v=20261127-2" target="_blank" rel="noopener" aria-label="Order reference, top-up and plan status in a payment ticket">
+    <img src="/illustrations/account-ticket-en.svg?v=20261127-2" alt="Order reference, top-up and plan status in a payment ticket" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
+  <figcaption>Example payment ticket for a credited top-up with no completed plan purchase</figcaption>
 </figure>
 
 1. Choose the issue type. For a payment issue, use the [payment checklist](#payment). For a connection issue, enter your physical location (including province in mainland China), provider, OS, client name and version, and the node you tested.
@@ -54,7 +54,7 @@ Provide redacted records, not passwords, full subscriptions or access tokens. Au
 
 ## Sold-out plans {#stock}
 
-Read [Sold out and automatic restocking](/en/account/plans#stock). Limited plans are normally not replenished manually and have no fixed restocking time. Disabling automatic renewal releases the slot only after the plan expires and is terminated. Repeated tickets requesting restocking are unnecessary.
+Read [Sold out and automatic restocking](/en/account/plans#stock). Limited plans are normally not replenished manually and have no fixed restocking time. Disabling renewal on an active plan does not release its slot immediately. Normal renewal uses the slot already held. An advance purchase needs new stock. Repeated tickets requesting restocking are unnecessary.
 
 If you have paid but the plan is not active, separately provide the order ID, payment time, funding record and Plan Management state. Credited funds do not mean plan stock was reserved. Do not pay again for the same issue.
 
@@ -64,27 +64,45 @@ If you have paid but the plan is not active, separately provide the order ID, pa
 | --- | --- |
 | The checkout failed before you paid | For a fiat payment, [refresh checkout to select a gateway again](/en/account/plans#fiat-top-up). Before a crypto transfer, check the [asset, network and amount](/en/account/plans#crypto-top-up). |
 | Your card or other fiat payment was charged, but the top-up is missing | Keep the order and receipt. Reply in the same ticket with the order ID, amount, payment time and time zone so support can check before you pay again. |
-| You sent crypto, but the top-up is missing | Use **Report missing payment** under **Crypto Order Records** on the full Cashier page. Follow the [payment feedback steps](/en/account/plans#crypto-payment-feedback) before making another transfer. |
-| The top-up is recorded, but the plan is missing | Check **Plan Management**. A standalone top-up adds funds. Checkout opened from a plan purchase attempts to complete the original purchase. Check the order status before placing another one. |
-| The plan is marked **Pending** | Check which plan is active. Before switching, read the [activation steps and their effect on your current plan](/en/account/plans#manual-activation). |
+| You sent crypto, but the top-up is missing | Use **Report missing payment** under **Crypto Order Records** on the full Cashier page. Enter the original transaction hash. The first request can be submitted from three minutes after order creation until the 48-hour window closes. [Payment feedback steps](/en/account/plans#crypto-payment-feedback). |
+| The top-up is recorded, but the plan is missing | Compare [top-up history](https://oixcloud.com/user/code) with [Plan Management](https://oixcloud.com/user/bought). A standalone top-up adds funds and settles any outstanding debt first. Checkout opened from a plan purchase attempts to complete that order. Wait while it is pending. If you receive **Automatic purchase was not completed** and retries have stopped, check your balance before purchasing or contacting support. |
+| The plan is marked **Pending** | If another plan is **Active**, the new purchase is queued and its allowance is available when it starts. You can wait for it to start in order. To switch early, first [check the effect on your active plan](/en/account/plans#manual-activation). |
+| The plan is active, but the client still shows the old plan or is missing nodes | Refresh account details and managed nodes in the client. For an imported subscription, update the active profile. If the results still differ, [check the missing node](/en/help/troubleshooting#missing-subscription). |
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-plans-en.svg?v=20261127-2" target="_blank" rel="noopener" aria-label="Active and pending plan records and remaining data in Plan Management">
+    <img src="/illustrations/account-plans-en.svg?v=20261127-2" alt="Active and pending plan records and remaining data in Plan Management" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Plan A provides the current allowance. Plan B has already been purchased and is queued.</figcaption>
+</figure>
 
 Provide the original order ID, payment time and time zone, method, actual amount, top-up and plan states and the exact feedback result. For crypto, include the network and transaction hash. Share necessary details only in a private ticket; never send wallet private keys, seed phrases, login passwords or verification codes.
 
 If your description does not already identify the payment or plan order you want checked, add that detail in the same ticket. Keep the original record while a lookup or manual review is pending. If the feedback entry expired or is missing, say so instead of paying again.
 
-## UHD redemption is still being confirmed
+## UHD redemption or extension is still being confirmed {#uhd-redemption-is-still-being-confirmed}
 
 For the steps to redeem, link or extend an account, see [UHD benefits](/en/account/uhd).
 
-Use the UHD refresh button in the [Benefits Center](https://oixcloud.com/user/benefits) to check the status. Do not redeem again while it is pending.
+Open the Emby card in the [Benefits Center](https://oixcloud.com/user/benefits#emby) and refresh. Keep the original request while it is pending. First-time redemption and extension have different checks.
 
 - If you see **Confirm my UHD account**, enter the UHD password you chose during redemption. If the account was never created, refresh after at least 10 minutes. The panel returns the credits on hold once it verifies the result.
 - A failed lookup keeps the request pending. If creation was confirmed but account details are still syncing, waiting more than 10 minutes alone does not make it refundable.
 - Redeem again only after the page confirms that the credits were returned. If confirmation keeps failing, provide the redemption time, displayed message and credit changes, with the UHD password and other credentials hidden.
 
-This returns benefit credits, not account balance or money to the original payment method.
+For a pending **extension**, refresh and check the expiry date. If it reached the expected date, the extension succeeded. After at least 10 minutes, a successful check confirming that the extension did not take effect releases the reserved credits. A failed lookup leaves the request pending. Check that the credits were returned before trying again.
+
+Returned benefit credits appear in the Benefits Center.
 
 For an active UHD account, the Emby card in the Benefits Center shows the traffic reset day, simultaneous playback limit and download permission. Refresh the card if any details are missing. Resetting the UHD password signs all players out. Sign in again with the new password.
+
+## Check an account request with an unclear outcome {#account-requests}
+
+| What happened | What to check before contacting support |
+| --- | --- |
+| You confirmed a reward link but the plan looks unchanged | Check pending plans in Plan Management and the original link’s status before using another gift slot. [Check a claim](/en/account/rewards#claim-self). |
+| A commission withdrawal has not arrived | Under **Withdraw Commission → Withdrawal History**, check the status, network and transaction hash before retrying. [Withdrawal steps](/en/account/commission#withdraw). |
+| You cannot delete the account | Resolve any unsettled items listed on the deletion page. You also need a code sent to the account email when using a passkey. [Deletion steps and consequences](/en/account/security#delete-account). |
 
 ## Copy this template
 

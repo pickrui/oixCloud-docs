@@ -4,10 +4,8 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
 
 # 购买、续费与切换
 
-::: warning 套餐以有效期和流量为准
-套餐同时受有效期与流量额度限制，**有效期结束或流量用尽，以先发生者为准，均代表当前套餐已耗尽**。即使尚未到期，流量用尽后也需要重新下单购买套餐，不能仅凭剩余有效期继续使用原套餐的高速流量；也可开启下面的自动重置流量
-
-若已有待激活套餐、或开启了自动续费（仅到期时执行）与自动重置流量，系统会按下方的接续规则处理；请先到 [套餐管理](https://oixcloud.com/user/bought) 确认结果，未接续时再到 [套餐商店](https://oixcloud.com/user/shop) 下单，避免重复购买
+::: tip 流量用完或套餐到期时，先查套餐管理
+打开[套餐管理](https://oixcloud.com/user/bought)核对记录。两种情况都优先接续已购买且符合条件的待激活套餐。没有可接续套餐时，普通套餐在到期前用完高速流量，按[自动重置](#traffic-reset)设置处理，未重置则进入[低速模式](/account/traffic#low-speed)。到期后按[续费队列](#auto-renew)处理
 :::
 
 ## 如何充值 {#top-up}
@@ -107,8 +105,8 @@ description: "购买、续费与切换的操作步骤、适用范围与常见问
 ### 核对购买记录
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-plans-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="oixCloud · 购买后在这里核对生效状态">
-    <img src="/illustrations/account-plans-zh.svg?v=20261105-3" alt="oixCloud · 购买后在这里核对生效状态" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/account-plans-zh.svg?v=20261127-2" target="_blank" rel="noopener" aria-label="oixCloud · 购买后在这里核对生效状态">
+    <img src="/illustrations/account-plans-zh.svg?v=20261127-2" alt="oixCloud · 购买后在这里核对生效状态" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
@@ -450,16 +448,16 @@ Pass Gold 及以上年付套餐（含按量付费）在自然到期或[提前结
 打开完整的 [收银台页面](https://oixcloud.com/user/v2/counter)，向下找到付款区域下方的「**虚拟币订单记录**」，在原订单的「操作」列点击「**未到账反馈**」。嵌入式付款弹窗不显示这块记录，找不到时请打开完整页面
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-crypto-feedback-zh.svg?v=20261105-4" target="_blank" rel="noopener" aria-label="找到未到账反馈按钮并提交原交易">
-    <img src="/illustrations/account-crypto-feedback-zh.svg?v=20261105-4" alt="找到未到账反馈按钮并提交原交易" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/account-crypto-feedback-zh.svg?v=20261127-2" target="_blank" rel="noopener" aria-label="找到未到账反馈按钮并提交原交易">
+    <img src="/illustrations/account-crypto-feedback-zh.svg?v=20261127-2" alt="找到未到账反馈按钮并提交原交易" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>界面示意 · 虚构订单与哈希占位符</figcaption>
 </figure>
 
 1. 核对原订单号、创建时间和金额；已经付款的不要重复支付或删除。列表显示近 48 小时未入账的订单，以及更早但仍在自动核查、待用户确认或人工审核中的反馈；已到账的到 [充值记录](https://oixcloud.com/user/code) 核对
-2. 创建未满 5 分钟时，按钮显示「等待自动入账」，点击会重新打开原付款订单；满 5 分钟后，符合条件的记录显示「未到账反馈」。首次反馈须在创建后 48 小时内提交；已进入处理中的反馈不会仅因超过该期限而消失
-3. 在「未到账反馈」窗口填写完整的「交易哈希值」，可在「问题描述」补充实际付款时间、转账网络及问题，再点击「提交」。TRC20 哈希为 64 位十六进制；Polygon／BSC 为 `0x` 开头的 66 位十六进制。交易哈希不是订单号、钱包地址或私钥；已自动填入且不能修改时，继续处理这份原反馈
-4. 按返回状态操作：「自动核查中」或「人工审核中」时等待，不反复提交；「等待您确认」时重新点击该操作入口，核对拟入账金额后决定是否确认；「核实后重新提交」时按说明检查哈希与付款资料。已关联交易的订单也可能显示「重试反馈通知」，按提示继续，不要另建订单
+2. 在原订单点「未到账反馈」，可立即打开「充值核查与反馈」。订单创建未满 3 分钟时，提交按钮显示倒计时。首次反馈须在创建后 48 小时内提交
+3. 从钱包或交易所复制完整「交易哈希（TxID）」，可补充付款时间和网络。倒计时结束后点「提交核查」。如果哈希已填入且锁定，继续核对这笔原交易
+4. 点「查看进度」查结果。自动核查或人工审核期间等待即可。显示「确认入账金额」时，核对对应订单和预计金额再确认。若反馈已退回，按说明核对哈希，再点「修改后重新提交」
 5. 返回充值记录确认实际到账，再到「套餐管理」检查购买／激活结果。反馈提交成功、进入审核或订单从这张列表消失，都不能单独证明到账或套餐生效
 
 没有入口、超过首次反馈时限或结果持续不明时，按 [付款问题服务单](/help/support#payment) 提交原订单资料与页面提示。不要提供钱包私钥、助记词或验证码

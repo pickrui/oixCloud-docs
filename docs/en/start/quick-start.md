@@ -8,19 +8,15 @@ Get one normal connection working before enabling advanced features.
 
 ## Before connecting
 
-When registering by email on the website, you can leave the nickname blank to have one generated. Enter an invitation or email verification code if the registration page asks for one.
-
-1. Open your [account](https://oixcloud.com/user) and confirm that it is active and has a valid, activated plan.
-2. Check [downloads and system requirements](/en/clients/#requirements), then get the official client for your system and architecture from the [download center](https://oixcloud.com/client).
-3. Pause other VPNs, keep default settings and choose an available node.
-
-A credited payment does not by itself confirm an active plan. If checkout was opened from a plan purchase, the system attempts to complete that purchase after payment; check funding and plan records before ordering again. After a standalone top-up, buy or activate the plan you need. See [Plans, renewals and switching](/en/account/plans).
+1. Sign in to the [User Center](https://oixcloud.com/user). When registering by email, you can leave the nickname blank. Enter an invitation or email verification code if prompted.
+2. Open [Plan Management](https://oixcloud.com/user/bought). If a plan is **Active**, continue to your client. If you see only **Pending**, follow the [activation steps](/en/account/plans#manual-activation).
+3. For a first purchase or after a standalone top-up, choose a plan and billing period in the [Plan Store](https://oixcloud.com/user/shop) and confirm. If you already paid through a plan’s checkout, the system will try to complete that purchase. [Check the top-up and plan records](/en/help/support#payment) before ordering again.
 
 ## First sign-in to a custom client
 
-Use email/password, an Access Token, or **Sign in with Google** when the client provides it. Google sign-in requires an existing account and support from both the client and website. Apple TV receives the account from your iPhone instead of repeating this flow on the TV.
+Check the [system requirements](/en/clients/#requirements), then download the version for your device from the [Software Center](https://oixcloud.com/client) and follow its guide below. Sign in with your email and account password, an Access Token, or **Sign in with Google** if offered, then choose a node. Google sign-in requires an existing account. On Apple TV, [sync the account](/en/oixflow/apple-tv#approval) from a signed-in iPhone or iPad.
 
-The device can load nodes as soon as it signs in; no separate approval is needed. Devices signed in with email/password or Google are listed under **Signed-in clients** on [Access Token Management](https://oixcloud.com/user/token#devices). To sign in with an Access Token, first select **New Token** on the same page; its full value is shown only once. **Disable email/password sign-in for clients**, under **Client sign-in and security tips** on that page, only blocks the password method; signed-in devices, existing tokens, website sign-in and supported Google sign-in remain available. See [Sign in to a custom client](/en/account/security#first-client-login).
+To use an Access Token, select **New Token** in [Access Token Management](https://oixcloud.com/user/token). Copy and save the full value when it appears. It is shown once. If password sign-in is disabled for clients, use an Access Token or a supported Google sign-in. Nodes can load as soon as you sign in. See [client sign-in](/en/account/security#first-client-login).
 
 ## Choose your device
 
@@ -33,6 +29,19 @@ The device can load nodes as soon as it signs in; no separate approval is needed
 | <span class="platform gi-router">Merlin router</span> | [<span class="gi gi-oixclash" aria-hidden="true"></span>oixClash](/en/other/oixclash) |
 | <span class="platform gi-apple">A Mac using Surge</span> | [<span class="gi gi-helper" aria-hidden="true"></span>Surge helper](/en/other/surge) |
 
+## Import a subscription in another client {#import-subscription}
+
+1. With an active plan, open **Subscription addresses** in the [User Center](https://oixcloud.com/user#subscription-details). Find your client, for example **Clash/Stash**.
+2. Select **Copy** on that row and paste the full URL into a new remote subscription in your client. If the row offers **Import**, you can open the client directly. Use the separate **Provider** list only when an existing configuration needs a node source.
+3. Update and select the imported profile. An ordinary subscription can include Edge, Home ISP and your assigned dedicated IPs, subject to your plan and format. For CIA, IXP, Fusion or GIA included in your plan, sign in to a supported dedicated client.
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-dashboard-subscription-en.svg?v=20261127-2" target="_blank" rel="noopener" aria-label="Copy the Clash/Stash subscription URL in the User Center, above the separate Provider list">
+    <img src="/illustrations/account-dashboard-subscription-en.svg?v=20261127-2" alt="Copy the Clash/Stash subscription URL in the User Center, above the separate Provider list" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Clash/Stash example with the subscription URL hidden</figcaption>
+</figure>
+
 ## Verify
 
 
@@ -43,6 +52,6 @@ The device can load nodes as soon as it signs in; no separate approval is needed
   <figcaption>FlClash for oixCloud desktop example · Follow the relevant guide for other clients</figcaption>
 </figure>
 
-Open the service you intend to use, then check traffic or connection records. A VPN icon or an enabled switch alone does not prove that the destination works.
+Pause other VPNs, keep the default settings, choose an available node and connect. Open the service you intend to use, then check traffic or connection records. A VPN icon or an enabled switch alone does not prove that the destination works.
 
 If it fails, follow [troubleshooting](/en/help/troubleshooting). Avoid changing your node, DNS, routing mode and subscription options all at once.

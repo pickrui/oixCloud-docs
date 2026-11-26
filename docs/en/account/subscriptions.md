@@ -6,7 +6,7 @@ description: Choose a subscription format, filter nodes, restore defaults and un
 
 ## Choose how to connect
 
-oixFlow, FlClash for oixCloud, the integrated OpenClash build, oixClash on Merlin routers and oixCloud Helper can sign in to retrieve managed profiles. For another compatible client, select its format in [Subscription management](https://oixcloud.com/user/sub_manage) and import that URL.
+oixFlow, FlClash for oixCloud, the integrated OpenClash build, oixClash on Merlin routers and oixCloud Helper can sign in to retrieve managed profiles. For another compatible client, open [User Center → Subscription addresses](https://oixcloud.com/user#subscription-details), copy the full main subscription URL for its format and [import it](/en/start/quick-start#import-subscription). Use [Subscription Management](https://oixcloud.com/user/sub_manage) to manage individual URLs and filters. **Copy Token** there copies only the subscription token.
 
 A full profile and a Provider node list serve different purposes. A Provider must be referenced by an existing client configuration; it is not a complete runnable profile. An Access Token is a sign-in credential, not a subscription URL.
 

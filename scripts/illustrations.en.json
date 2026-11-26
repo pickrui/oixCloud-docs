@@ -748,10 +748,11 @@
       "订单号": "Order Number",
       "充值金额": "Top-up Amount",
       "未到账反馈": "Report missing payment",
-      "交易哈希值": "Transaction Hash",
-      "问题描述": "Issue Description",
+      "充值核查与反馈": "Payment verification and support",
+      "交易哈希（TxID）": "Transaction hash (TxID)",
+      "问题描述（选填，最多 1000 字）": "Description (optional, up to 1,000 characters)",
       "付款时间、网络及问题（选填）": "Payment time, network and issue (optional)",
-      "提交": "Submit"
+      "提交核查": "Verify payment"
     },
     "account-upgrade": {
       "套餐管理": "Plan Management",
@@ -890,6 +891,22 @@
       "等待领取": "Awaiting Claim",
       "领取页面": "Claim page",
       "复制链接": "Copy Link"
+    },
+    "account-dashboard-subscription": {
+      "用户中心": "User Center",
+      "订阅地址": "Subscription addresses",
+      "二维码": "QR code",
+      "导入": "Import"
+    },
+    "account-ticket": {
+      "购买／支付问题": "Purchase or payment problem",
+      "未见套餐": "Plan missing",
+      "问题描述": "Issue description",
+      "示例订单 EX-0001，09:10（UTC+8）付款": "Example order EX-0001, paid at 09:10 (UTC+8)",
+      "充值记录显示已到账，套餐管理没有新记录": "Top-up credited. No new record in Plan Management.",
+      "收到付款后自动购买未完成的通知": "Notice received: Automatic purchase was not completed",
+      "我已按「用户指南」完成配置与排查": "I have followed the User Guide to complete setup and troubleshooting.",
+      "提交服务单": "Submit Ticket"
     }
   },
   "scenes": {
@@ -1672,16 +1689,16 @@
       "Website → Plan Management",
       [
         [
-          "Check purchased records",
-          "Buy Plan opens the store; it is not an instant renewal button."
+          "Find the active record",
+          "Its plan sets your current lines, expiry and available data."
         ],
         [
-          "Distinguish Active and Pending",
-          "A pending plan does not immediately add traffic to your active one."
+          "Check pending purchases",
+          "A prepaid plan can start automatically. Review the cost before switching early."
         ],
         [
           "Check time and data left",
-          "Values are fictional. Use the actual account records."
+          "The numbers are examples. Check your own records."
         ]
       ]
     ],
@@ -1776,20 +1793,20 @@
       ]
     ],
     "account-ticket": [
-      "Fill in reproducible ticket details",
-      "Website → Tickets → New ticket",
+      "Report the payment and plan status",
+      "Website → Support Tickets → New Ticket",
       [
         [
-          "Choose the issue type first",
-          "Complete location, node, client and test results. This shows part of the form."
+          "Choose the payment issue",
+          "If the issue already has an open ticket, reply in that ticket."
         ],
         [
-          "Describe steps and exact errors",
-          "Give time, network, destination and comparisons. Redact attachments first."
+          "Include both records",
+          "Give the order reference, payment time, top-up result and plan status."
         ],
         [
-          "Review confirmations and submit",
-          "Continue existing open tickets. Never share passwords or full subscriptions."
+          "Review and submit",
+          "Redact screenshots. Check the confirmation and wait for the countdown."
         ]
       ]
     ],
@@ -2073,7 +2090,7 @@
         ],
         [
           "Enter the original hash",
-          "Submit a first request from 5 minutes to 48 hours after order creation."
+          "The form opens immediately. Submit after 3 minutes and within 48 hours of order creation."
         ],
         [
           "Follow the result",
@@ -2312,6 +2329,24 @@
         [
           "Give it to a friend",
           "Copy the link for the recipient. Each link can be used once."
+        ]
+      ]
+    ],
+    "account-dashboard-subscription": [
+      "Copy the full subscription URL in the User Center",
+      "User Center → Subscription addresses",
+      [
+        [
+          "Open the address list",
+          "It appears with an active plan. Dedicated clients can sign in directly."
+        ],
+        [
+          "Copy the client format",
+          "For Clash/Stash, paste the complete URL into the remote subscription field."
+        ],
+        [
+          "Check the Provider heading",
+          "Use this list when an existing profile needs a node source."
         ]
       ]
     ]

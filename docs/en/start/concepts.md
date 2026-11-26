@@ -19,7 +19,7 @@ Separate three questions: does traffic reach the client, which route should it t
 | Routing rules | Choose an outbound by domain, IP or other conditions | Send company domains direct and other requests through a proxy |
 | Policy group | Selects a node from its members | Manual selection, URL test or fallback |
 | Node | The server that establishes the proxy connection | Choose a node your account is permitted to use |
-| Subscription | Updates nodes and some configuration from a provider | A provider's managed profile |
+| Subscription | Fetches and updates nodes and configuration available to your plan | A dedicated client retrieves its managed profile at sign-in. Other compatible clients can import a URL in their format |
 
 ## Modes
 
@@ -35,10 +35,8 @@ In oixFlow, the Proxy rule target follows the current proxy selection; a specifi
 
 | Credential | Purpose |
 | --- | --- |
-| Access Token | Signs into an account in the client |
-| Subscription URL | Downloads nodes and configuration |
-| Node password | Authenticates a server connection |
+| Access Token | Goes in the client’s token sign-in field. Scripts can also use it for account API calls. The full value appears once when created or regenerated |
+| Subscription URL | Copy the full URL from [User Center → Subscription addresses](/en/start/quick-start#import-subscription) into the client’s subscription field. **Copy Token** in Subscription Management copies only part of the URL |
+| Node password | Use the authentication details from the node’s **Config Info** when adding it manually |
 
-These credentials are not interchangeable.
-
-Signing out in a client, signing out a device or deleting a token on the website, and resetting a subscription have different effects. See [account security](/en/account/security).
+Ending a sign-in on the website signs out every device using that credential. If a subscription URL was exposed, first identify whether it was a personal URL or the main subscription, then follow the [steps for that credential](/en/account/security#match-the-response-to-the-leak).
