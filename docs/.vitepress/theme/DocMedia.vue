@@ -22,10 +22,22 @@ function updateTables() {
   })
 }
 
-function observeTables() {
-  observer?.disconnect()
-  document.querySelectorAll('.table-scroll, .table-scroll table').forEach(el => observer?.observe(el))
+// Steps taller than one line get a connector down to the next number (content.css)
+function updateSteps() {
+  document.querySelectorAll('.vp-doc ol:not(li ol) > li').forEach(li => {
+    li.classList.toggle('is-tall', li.offsetHeight > parseFloat(getComputedStyle(li).lineHeight) * 1.5)
+  })
+}
+
+function updateLayout() {
   updateTables()
+  updateSteps()
+}
+
+function observeLayout() {
+  observer?.disconnect()
+  document.querySelectorAll('.table-scroll, .table-scroll table, .vp-doc ol:not(li ol)').forEach(el => observer?.observe(el))
+  updateLayout()
 }
 
 async function openImage(event) {
@@ -48,13 +60,13 @@ function closeImage() {
 }
 
 onMounted(() => {
-  observer = new ResizeObserver(updateTables)
-  observeTables()
+  observer = new ResizeObserver(updateLayout)
+  observeLayout()
   document.addEventListener('click', openImage)
 })
 onContentUpdated(() => {
   dialog.value?.close()
-  observeTables()
+  observeLayout()
 })
 onUnmounted(() => {
   observer?.disconnect()

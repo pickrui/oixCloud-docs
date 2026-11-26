@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import navigation from './navigation.json' with { type: 'json' }
 import { renderSearch, tokenizeSearch } from './search.mjs'
 import { writeGuideIndex } from './guide-index.mjs'
+import { tableBlocks } from './markdown.mjs'
 
 export default defineConfig({
   title: 'oixCloud',
@@ -9,21 +10,7 @@ export default defineConfig({
   description: '连接、客户端设置、账户与故障排查 · Setup, client configuration, accounts and troubleshooting',
   base: '/',
   cleanUrls: false,
-  markdown: {
-    config(md) {
-      md.renderer.rules.table_open = (tokens, index, options, env) => {
-        let columns = 0
-        for (let i = index + 1; tokens[i].type !== 'thead_close'; i++) {
-          if (tokens[i].type === 'th_open') columns++
-        }
-        const english = env.relativePath.startsWith('en/')
-        const hint = english ? 'Swipe left or right to see all columns' : '左右滑动，查看完整表格'
-        const label = english ? 'Table' : '表格'
-        return `<div class="table-block${columns > 2 ? ' table-wide' : ''}"><p class="table-hint">↔ ${hint}</p><div class="table-scroll" tabindex="0" role="region" aria-label="${label}"><table>\n`
-      }
-      md.renderer.rules.table_close = () => '</table></div></div>\n'
-    }
-  },
+  markdown: { config: tableBlocks },
   sitemap: { hostname: 'https://docs.dler.io' },
   buildEnd: writeGuideIndex,
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
@@ -38,7 +25,10 @@ export default defineConfig({
         docFooter: { prev: '上一篇', next: '下一篇' },
         sidebarMenuLabel: '分类目录', returnToTopLabel: '返回顶部', darkModeSwitchLabel: '外观',
         langMenuLabel: '语言', skipToContentLabel: '跳转到正文',
-        footer: { copyright: 'oixCloud 使用指南' }
+        footer: {
+          message: '<a href="https://oixcloud.com/user">用户中心</a> · <a href="https://oixcloud.com/client">软件中心</a> · <a href="/help/support.html">提交服务单</a>',
+          copyright: 'oixCloud 使用指南'
+        }
       }
     },
     en: {
@@ -48,12 +38,14 @@ export default defineConfig({
         nav: [{ text: 'Start here', link: '/en/start/' }, { text: 'Client guides', link: '/en/clients/' }, { text: 'Account & service', link: '/en/account/' }, { text: 'Troubleshooting', link: '/en/help/' }],
         sidebar: navigation.en,
         outline: { label: 'On this page', level: [2, 3] },
-        footer: { copyright: 'oixCloud User Guide' }
+        footer: {
+          message: '<a href="https://oixcloud.com/user">User center</a> · <a href="https://oixcloud.com/client">Download center</a> · <a href="/en/help/support.html">Contact support</a>',
+          copyright: 'oixCloud User Guide'
+        }
       }
     }
   },
   themeConfig: {
-    logo: '/logo.svg',
     socialLinks: [{ icon: 'github', link: 'https://github.com/pickrui/oixCloud-docs' }],
     search: {
       provider: 'local',

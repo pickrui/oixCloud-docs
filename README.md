@@ -21,9 +21,9 @@ pnpm preview
 - Main categories: `start`, `clients`, `account`, `help`
 - Client articles live under `oixflow`, `flclash` and `other`; `oixflow` holds the oixFlow guides for iPhone, iPad and Apple TV. The former `/oixcloud/` pages are static redirects in `docs/public/oixcloud/` and `docs/public/en/oixcloud/`
 - Sidebar: `docs/.vitepress/navigation.json`
-- Theme, search and locales: `docs/.vitepress/config.mjs`
+- Site, search and locales: `docs/.vitepress/config.mjs`; table rendering: `docs/.vitepress/markdown.mjs`; theme: `docs/.vitepress/theme/` (see [Theme](#theme))
 
-Keep both languages at the same relative paths so the language switch opens the corresponding article. Add new articles to both category indexes and the sidebar. Builds reject broken Markdown links. Search pairs matching sections in both languages, includes illustrated interface labels and keeps result links in the current locale. Keep the heading hierarchy and order aligned across each pair. Common bilingual feature names and spelling variants are normalized in `docs/.vitepress/search.mjs`. Add keyword cases to `scripts/search-cases.json` when documenting a new feature, then run `pnpm build` and `pnpm check:search`; the publishing workflow runs these checks too. No search service is required.
+Keep both languages at the same relative paths so the language switch opens the corresponding article. Add new articles to both category indexes and the sidebar. Builds reject broken Markdown links. Search pairs matching sections in both languages, includes illustrated interface labels and keeps result links in the current locale. Keep the heading hierarchy and order aligned across each pair. Common bilingual feature names and spelling variants are normalized in `docs/.vitepress/search.mjs`. Add keyword cases to `scripts/search-cases.json` when documenting a new feature, then run `pnpm build` and `pnpm check:search`; the publishing workflow runs these checks too. No search service is required. Pages with `search: false` in their frontmatter, currently only the homepage, are left out of search and `/guide-index.json`.
 
 Builds also write `/guide-index.json` with the text of every section in both languages; the panel downloads it hourly to ground AI support suggestions. Generation fails if a section anchor is missing from the built page. The file is public like the pages it summarizes.
 
@@ -33,9 +33,21 @@ Old panel links such as `/guide#subscriptions` redirect to the site root with th
 
 Review findings, source baselines and validation scope are recorded in [REVIEW.md](REVIEW.md).
 
+## Theme
+
+The theme in `docs/.vitepress/theme/` extends the default VitePress theme without web fonts.
+
+- `index.js` places the components below in the layout and keeps the legacy fragment mappings. It also draws the logo in the navigation bar and homepage hero as a mask of `/logo.svg` in the brand color, so the file itself stays the favicon
+- `sections.js` reads the sidebar in `docs/.vitepress/navigation.json`. The homepage directory (`HomeDirectory.vue`) and the trail above each article title (`DocTrail.vue`) are built from it, so a sidebar change updates both. The trail names the section, and the client for app guides; oixFlow and FlClash for oixCloud hub pages show the app mark instead
+- `HomeSearch.vue` is the search box under the homepage title; it opens the same local search as the navigation bar
+- `DocMedia.vue` marks tables that overflow and steps taller than one line (only those get a connector to the next step), and runs the full-screen illustration viewer
+- `styles/`: `tokens.css` holds the brand colors, fonts and the shared radius, focus, hover and shadow values; `layout.css` the logo, navigation bar, sidebar, outline (subheadings open only under the section being read) and pager; `content.css` article text, numbered steps and callouts; `tables.css` tables; `components.css` the article trail, illustrations, plan flowchart, provider links and image viewer; `home.css` the homepage; `icons.css` the icons
+
+`markdown.mjs` wraps every table in a scroll region with a swipe hint for narrow screens. On section indexes (`pageClass: guide-index`), a two-column table whose second column holds exactly one link per row is shown as a grid of cards; write new "I want to → read" tables in that form. Top-level ordered lists in articles are drawn as numbered steps.
+
 ## Icons
 
-Icons are single-color masks bundled with the theme; no icon font or CDN is loaded. `docs/.vitepress/theme/icons.css` maps sidebar sections and client entries by link path, so add a line there when a section or client guide is added or moved. Device tables mark platforms with `<span class="platform gi-apple">iPhone / iPad</span>` and apps with `[<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow](/oixcloud/)`. oixFlow and FlClash for oixCloud articles show their client above the title through `ClientBadge.vue`. Record the source and license of every new icon in `docs/.vitepress/theme/icons/NOTICE.md`.
+Icons are single-color masks bundled with the theme; no icon font or CDN is loaded. `docs/.vitepress/theme/styles/icons.css` maps sidebar sections and client entries by link path, and `sections.js` maps the same links for the homepage directory and article trails, so update both when a section or client guide is added or moved. Device tables mark platforms with `<span class="platform gi-apple">iPhone / iPad</span>` and apps with `[<span class="gi gi-oixflow" aria-hidden="true"></span>oixFlow](/oixcloud/)`. Record the source and license of every new icon in `docs/.vitepress/theme/icons/NOTICE.md`.
 
 ## Publishing
 

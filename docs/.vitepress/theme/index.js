@@ -1,9 +1,16 @@
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import { h, onMounted, onUnmounted } from 'vue'
-import ClientBadge from './ClientBadge.vue'
 import DocMedia from './DocMedia.vue'
-import './style.css'
-import './icons.css'
+import DocTrail from './DocTrail.vue'
+import HomeDirectory from './HomeDirectory.vue'
+import HomeSearch from './HomeSearch.vue'
+import './styles/tokens.css'
+import './styles/layout.css'
+import './styles/content.css'
+import './styles/tables.css'
+import './styles/components.css'
+import './styles/home.css'
+import './styles/icons.css'
 
 const legacyPages = new Map(Object.entries({
   start: 'start/quick-start', oixflow: 'oixflow/connect', oixcloud: 'oixflow/connect', flclash: 'flclash/connect',
@@ -21,7 +28,15 @@ function redirectLegacyPage() {
 
 export default {
   extends: DefaultTheme,
-  Layout: () => h(DefaultTheme.Layout, null, { 'doc-before': () => h(ClientBadge), 'layout-bottom': () => h(DocMedia) }),
+  // The logo is drawn as a mask in the brand color; /logo.svg stays the favicon
+  Layout: () => h(DefaultTheme.Layout, null, {
+    'nav-bar-title-before': () => h('span', { class: 'brand-mark', 'aria-hidden': 'true' }),
+    'home-hero-image': () => h('span', { class: 'brand-mark hero-mark', role: 'img', 'aria-label': 'oixCloud' }),
+    'home-hero-info-after': () => h(HomeSearch),
+    'home-features-before': () => h(HomeDirectory),
+    'doc-before': () => h(DocTrail),
+    'layout-bottom': () => h(DocMedia)
+  }),
   enhanceApp({ app, router }) {
     // Search excerpts use an isolated Vue app, so their images stay lazy.
     app.config.globalProperties.$isGuidePage = true

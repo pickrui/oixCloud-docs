@@ -1,0 +1,39 @@
+/* Brand, type and shared surface values. The other stylesheets use these instead of literals */
+:root {
+  --vp-c-brand-1: #536724;
+  --vp-c-brand-2: #617b21;
+  --vp-c-brand-3: #60772c;
+  --vp-c-brand-soft: rgba(132, 165, 46, .12);
+  --vp-c-bg-soft: #f5f6f2;
+  --vp-c-default-soft: #f0f2eb;
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", "Noto Sans CJK SC", system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --vp-home-hero-name-color: var(--vp-c-brand-1);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, rgba(132, 165, 46, .4) 50%, rgba(216, 255, 99, .5) 50%);
+  --vp-home-hero-image-filter: blur(64px);
+
+  --guide-radius-sm: 8px;
+  --guide-radius: 12px;
+  --guide-radius-lg: 16px;
+  --guide-focus: 2px solid var(--vp-c-brand-1);
+  --guide-hover-border: color-mix(in srgb, var(--vp-c-brand-1) 55%, transparent);
+  --guide-hover-bg: color-mix(in srgb, var(--vp-c-brand-soft) 70%, var(--vp-c-bg));
+  --guide-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  --guide-shadow-raised: 0 8px 28px rgba(0, 0, 0, 0.06);
+}
+.dark {
+  --vp-c-brand-1: #d8ff63;
+  --vp-c-brand-2: #c8ed54;
+  --vp-c-brand-3: #a7c844;
+  --vp-c-brand-soft: rgba(216, 255, 99, .1);
+  --vp-c-bg-soft: #20221d;
+  --vp-c-default-soft: #262922;
+  --vp-button-brand-text: #182009;
+  --vp-button-brand-hover-text: #182009;
+  --vp-button-brand-active-text: #182009;
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, rgba(132, 165, 46, .3) 50%, rgba(216, 255, 99, .2) 50%);
+  --vp-home-hero-image-filter: blur(80px);
+
+  --guide-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  --guide-shadow-raised: 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+::selection { background: color-mix(in srgb, var(--vp-c-brand-1) 24%, transparent); }

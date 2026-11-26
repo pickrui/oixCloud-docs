@@ -42,6 +42,8 @@ for (const locale of ['root', 'en']) {
   const sources = fs.readdirSync(locale === 'en' ? 'docs/en' : 'docs', { recursive: true })
     .map(name => name.split(path.sep).join('/'))
     .filter(name => name.endsWith('.md') && !name.startsWith('en/') && !name.startsWith('.vitepress/'))
+    // Pages that opt out with `search: false` in their frontmatter (the homepage) are not indexed
+    .filter(name => !/^search:\s*false\s*$/m.test(fs.readFileSync(path.join(locale === 'en' ? 'docs/en' : 'docs', name), 'utf8').match(/^---\n([\s\S]*?)\n---/)?.[1] ?? ''))
   const expected = sources.map(name => prefix + '/' + name.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '.html'))
   assert.deepEqual([...pages].sort(), expected.sort(), 'All locale pages must be searchable')
   for (const { terms, targets } of cases) {

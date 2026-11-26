@@ -1,26 +1,26 @@
-/* Single-color icons drawn as masks in the text color; sources, licenses and trademarks are listed in icons/NOTICE.md */
+/* Single-color icons drawn as masks in the text color; sources, licenses and trademarks are listed in ../icons/NOTICE.md */
 :root {
-  --gi-start: url(./icons/rocket.svg);
-  --gi-clients: url(./icons/monitor-smartphone.svg);
-  --gi-account: url(./icons/circle-user-round.svg);
-  --gi-help: url(./icons/life-buoy.svg);
-  --gi-oixflow: url(./icons/oixflow.svg);
-  --gi-flclash: url(./icons/flclash.svg);
-  --gi-openclash: url(./icons/openclash.png);
-  --gi-oixclash: url(./icons/oixcloud.svg);
-  --gi-helper: url(./icons/surge.svg);
-  --gi-apple: url(./icons/apple.svg);
-  --gi-android: url(./icons/android.svg);
-  --gi-linux: url(./icons/linux.svg);
-  --gi-windows: url(./icons/windows.svg);
-  --gi-openwrt: url(./icons/openwrt.svg);
-  --gi-router: url(./icons/router.svg);
-  --gi-info: url(./icons/info.svg);
-  --gi-tip: url(./icons/lightbulb.svg);
-  --gi-warning: url(./icons/triangle-alert.svg);
-  --gi-danger: url(./icons/octagon-alert.svg);
-  --gi-zoom: url(./icons/maximize-2.svg);
-  --gi-external: url(./icons/arrow-up-right.svg);
+  --gi-start: url(../icons/rocket.svg);
+  --gi-clients: url(../icons/monitor-smartphone.svg);
+  --gi-account: url(../icons/circle-user-round.svg);
+  --gi-help: url(../icons/life-buoy.svg);
+  --gi-oixflow: url(../icons/oixflow.svg);
+  --gi-flclash: url(../icons/flclash.svg);
+  --gi-openclash: url(../icons/openclash.png);
+  --gi-oixclash: url(../icons/oixcloud.svg);
+  --gi-helper: url(../icons/surge.svg);
+  --gi-apple: url(../icons/apple.svg);
+  --gi-android: url(../icons/android.svg);
+  --gi-linux: url(../icons/linux.svg);
+  --gi-windows: url(../icons/windows.svg);
+  --gi-openwrt: url(../icons/openwrt.svg);
+  --gi-router: url(../icons/router.svg);
+  --gi-info: url(../icons/info.svg);
+  --gi-tip: url(../icons/lightbulb.svg);
+  --gi-warning: url(../icons/triangle-alert.svg);
+  --gi-danger: url(../icons/octagon-alert.svg);
+  --gi-zoom: url(../icons/maximize-2.svg);
+  --gi-external: url(../icons/arrow-up-right.svg);
 }
 .gi {
   display: inline-block;
@@ -47,10 +47,6 @@
 .gi-windows { --gi: var(--gi-windows); }
 .gi-openwrt { --gi: var(--gi-openwrt); }
 .gi-router { --gi: var(--gi-router); }
-
-/* Homepage entries */
-.VPFeature .icon { color: var(--vp-c-brand-1); }
-.VPFeature .icon .gi { width: 24px; height: 24px; }
 
 /* Sidebar: sections repeat the homepage icons; client entries carry the app mark, Helper topics stay aligned under the first */
 .VPSidebarItem.level-0 > .item > .link[href$="/start/"] { --gi: var(--gi-start); }
@@ -86,37 +82,6 @@
 .vp-doc a:has(> .gi:first-child) { display: inline-flex; align-items: flex-start; column-gap: 0.45em; }
 .vp-doc a > .gi:first-child { margin-top: calc((1lh - 1.125em) / 2); width: 1.125em; height: 1.125em; }
 
-/* Client articles: name the client above the title */
-.client-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 14px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  padding: 2px 12px 2px 9px;
-  color: var(--vp-c-text-2);
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 22px;
-  text-decoration: none;
-  transition: color 0.2s, border-color 0.2s;
-}
-.client-badge:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
-.client-badge:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 3px; }
-.client-badge .gi { width: 16px; height: 16px; }
-.client-mark {
-  display: grid;
-  place-items: center;
-  margin-bottom: 18px;
-  border-radius: 12px;
-  background: var(--vp-c-default-soft);
-  width: 52px;
-  height: 52px;
-  color: var(--vp-c-text-1);
-}
-.client-mark .gi { width: 30px; height: 30px; }
-
 /* Device tables: a platform mark and its name wrap as one unit; marks are sized to look even */
 .platform {
   --pw: 1em;
@@ -142,8 +107,6 @@
 .platform.gi-android { --pw: 1.375em; --ph: 0.8em; }
 .platform:is(.gi-linux, .gi-openwrt) { --pw: 1.04em; --ph: 1.25em; }
 .platform.gi-router { --pw: 1.125em; --ph: 1.125em; }
-/* Device tables size their columns to the content, so the platforms stay on one line whenever both columns fit */
-.vp-doc table:has(.platform) td:first-child { width: auto; }
 
 /* Callouts: the icon repeats the block's tone */
 .vp-doc .custom-block:is(.info, .tip, .warning, .danger) > .custom-block-title { position: relative; padding-left: 24px; }
@@ -176,8 +139,7 @@
   mask: var(--gi-external) center / contain no-repeat;
 }
 
-/* Illustration zoom hint: the box stays in ::after, the glyph is drawn above it */
-.guide-figure a::after { content: ''; }
+/* Illustration zoom hint: components.css draws the box in ::after, the glyph sits above it */
 .guide-figure a::before {
   content: '';
   position: absolute;

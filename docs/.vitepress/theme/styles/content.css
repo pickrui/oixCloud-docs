@@ -1,0 +1,114 @@
+/* Article text: headings, paragraphs, steps, links, code, quotes and callouts */
+.vp-doc { overflow-wrap: break-word; word-break: normal; }
+.vp-doc :is(a, code) { overflow-wrap: anywhere; }
+/* Spacing between Chinese and Latin text where the source has none, in browsers that support it */
+:lang(zh) .vp-doc { text-autospace: normal; }
+
+/* Headings; negative tracking tightens Chinese, so it is reset there */
+.vp-doc h1 { line-height: 1.4; text-wrap: balance; }
+.vp-doc h2 { margin: 48px 0 18px; line-height: 1.45; }
+.vp-doc h3 { margin: 36px 0 14px; line-height: 1.45; }
+.vp-doc :is(h2, h3, h4)[id] { scroll-margin-top: 128px; }
+:lang(zh) .vp-doc :is(h1, h2, h3, h4) { letter-spacing: 0; }
+/* The title already separates the first section; a rule right below it reads as an empty block */
+.vp-doc h1 + h2 { margin-top: 32px; border-top: 0; padding-top: 0; }
+.vp-doc h1 + h2 .header-anchor { top: 0; }
+
+/* The paragraph right after the title introduces the page */
+.vp-doc h1 + p { color: var(--vp-c-text-2); font-size: 17px; }
+.guide-index .vp-doc h1 + p { max-width: 42em; }
+.vp-doc p { margin: 18px 0; line-height: 1.75; }
+.vp-doc strong { color: var(--vp-c-text-1); font-weight: 650; }
+.vp-doc hr { margin: 32px 0; }
+
+/* Lists */
+.vp-doc li { line-height: 1.72; }
+.vp-doc li + li { margin-top: 10px; }
+.vp-doc ol > li { font-variant-numeric: tabular-nums; }
+.vp-doc ol > li + li { margin-top: 12px; }
+.vp-doc li > :is(ul, ol) { margin: 8px 0 4px; }
+.vp-doc li > :is(ul, ol) > li + li { margin-top: 6px; }
+.vp-doc li::marker { color: var(--vp-c-brand-1); font-weight: 600; }
+
+/* Steps: numbered badges; nested lists keep plain markers. A line runs from a step to the next one
+   only when the step is taller than one line (DocMedia.vue adds .is-tall).
+   --step-line carries the item's line height to the badge so it centers on the first line */
+@property --step-line { syntax: '<length>'; inherits: true; initial-value: 28px; }
+.vp-doc ol:not(li ol) { padding-left: 34px; list-style: none; counter-reset: step; }
+.vp-doc ol:not(li ol) > li { position: relative; counter-increment: step; --step-line: 1lh; }
+.vp-doc ol:not(li ol) > li::before {
+  content: counter(step);
+  position: absolute;
+  top: calc((var(--step-line) - 22px) / 2);
+  left: -34px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+.vp-doc ol:not(li ol) > li.is-tall:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: calc((var(--step-line) + 22px) / 2 + 4px);
+  bottom: calc(4px - 12px - (var(--step-line) - 22px) / 2);
+  left: -23.5px;
+  border-left: 1px solid var(--vp-c-divider);
+}
+
+/* Links and code */
+.vp-doc a {
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--vp-c-brand-1) 42%, transparent);
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+.vp-doc a:hover { text-decoration-color: var(--vp-c-brand-2); }
+.vp-doc :not(pre) > code {
+  margin: 0 2px;
+  border: 1px solid color-mix(in srgb, var(--vp-c-divider) 85%, transparent);
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+.vp-doc div[class*='language-'] {
+  margin: 20px 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--guide-radius);
+}
+.vp-doc li > div[class*='language-'] { margin: 10px 0 14px; border-radius: 10px; }
+
+.vp-doc blockquote {
+  margin: 18px 0;
+  border-left: 3px solid var(--vp-c-brand-1);
+  border-radius: 0 var(--guide-radius-sm) var(--guide-radius-sm) 0;
+  background: var(--vp-c-bg-soft);
+  padding: 10px 16px;
+  color: var(--vp-c-text-2);
+}
+
+/* Callouts: a tinted border and title in the block's tone; icons.css adds the title icon */
+.vp-doc .custom-block {
+  --tone: var(--vp-c-text-2);
+  margin: 24px 0;
+  border: 1px solid color-mix(in srgb, var(--tone) 22%, transparent);
+  border-radius: var(--guide-radius);
+  padding: 16px 20px;
+  font-size: 15px;
+  line-height: 1.75;
+}
+.vp-doc .custom-block.tip { --tone: var(--vp-c-brand-1); }
+.vp-doc .custom-block.warning { --tone: var(--vp-c-warning-1); }
+.vp-doc .custom-block.danger { --tone: var(--vp-c-danger-1); }
+.vp-doc .custom-block.details { border-color: var(--vp-c-divider); }
+.vp-doc .custom-block.details:not([open]) > summary { margin-bottom: 0; }
+.vp-doc .custom-block-title { margin-bottom: 6px; font-size: 15px; font-weight: 650; letter-spacing: .02em; }
+.vp-doc .custom-block:is(.tip, .warning, .danger) > .custom-block-title { color: var(--tone); }
+.vp-doc .custom-block p { margin: 10px 0; line-height: 1.75; }
+.vp-doc .custom-block p:last-child { margin-bottom: 0; }
+@media (max-width: 639px) {
+  .vp-doc .custom-block { padding: 14px 16px; }
+}

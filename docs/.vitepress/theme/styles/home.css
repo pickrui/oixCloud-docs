@@ -1,0 +1,138 @@
+/* Homepage: hero, search box (HomeSearch.vue) and section directory (HomeDirectory.vue) */
+.VPHome { padding-bottom: 56px !important; }
+.hero-mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  transform: translate(-50%, -50%);
+}
+/* Phones: a smaller mark keeps the directory near the first screen */
+@media (max-width: 639px) {
+  .VPHero .image-container { width: 220px; height: 220px; }
+  .VPHero .image-bg { width: 132px; height: 132px; }
+  .hero-mark { width: 112px; height: 112px; }
+}
+
+/* Search box: opens the same local search as the navigation bar */
+.home-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 520px;
+  height: 54px;
+  margin-top: 28px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  padding: 0 12px 0 18px;
+  background: var(--vp-c-bg);
+  box-shadow: var(--guide-shadow-raised);
+  color: var(--vp-c-text-3);
+  font-size: 16px;
+  text-align: left;
+  cursor: text;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.dark .home-search { background: var(--vp-c-bg-soft); }
+.home-search:hover { border-color: var(--vp-c-brand-1); box-shadow: 0 8px 28px color-mix(in srgb, var(--vp-c-brand-1) 14%, transparent); }
+.home-search:focus-visible { outline: var(--guide-focus); outline-offset: 3px; }
+.home-search-icon { flex: none; width: 20px; height: 20px; color: var(--vp-c-text-2); }
+.home-search-text { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.home-search-key {
+  flex: none;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  padding: 2px 8px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+  font: 500 12px/18px var(--vp-font-family-base);
+}
+@media (max-width: 959px) { .home-search { margin-right: auto; margin-left: auto; } }
+@media (max-width: 767px) {
+  .home-search { height: 50px; font-size: 15px; }
+  .home-search-key { display: none; }
+}
+
+/* Directory: one card per section; wide screens stack them in two columns, phones keep sidebar order */
+.home-directory { margin: 0 auto; width: 100%; max-width: 1280px; padding: 0 24px; }
+@media (min-width: 640px) { .home-directory { padding: 0 48px; } }
+@media (min-width: 960px) { .home-directory { padding: 0 64px; } }
+.home-directory-grid { display: grid; gap: 16px; }
+.home-directory-column { display: contents; }
+@media (min-width: 768px) {
+  .home-directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 20px; }
+  .home-directory-column { display: flex; flex-direction: column; gap: 20px; }
+}
+.home-section {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--guide-radius-lg);
+  padding: 12px;
+  background: var(--vp-c-bg-soft);
+}
+.home-section { container-type: inline-size; }
+.home-section-title { margin: 0; font-size: 18px; font-weight: 600; line-height: 28px; }
+.home-section-title a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: var(--guide-radius);
+  padding: 8px 10px;
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.home-section-title a::after {
+  content: '→';
+  margin-left: auto;
+  color: var(--vp-c-text-3);
+  font-weight: 400;
+  transition: transform 0.2s, color 0.2s;
+}
+.home-section-title a:hover { color: var(--vp-c-brand-1); }
+.home-section-title a:hover::after { color: var(--vp-c-brand-1); transform: translateX(3px); }
+.home-section-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
+.home-section-icon .gi { width: 22px; height: 22px; }
+.home-section-list {
+  margin: 6px 0 0;
+  border-top: 1px solid var(--vp-c-divider);
+  padding: 8px 0 0;
+  list-style: none;
+}
+.home-section-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: var(--guide-radius-sm);
+  padding: 8px 10px;
+  color: var(--vp-c-text-1);
+  font-size: 15px;
+  line-height: 22px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+.home-section-list a:hover { background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1); }
+:is(.home-section-title, .home-section-list) a:focus-visible { outline: var(--guide-focus); outline-offset: -2px; }
+/* Long sections split into two columns when the card is wide enough; reading order runs down each column */
+@container (min-width: 520px) {
+  .home-section.is-long .home-section-list { column-gap: 8px; columns: 2; }
+  .home-section.is-long .home-section-list li { break-inside: avoid; }
+}
+.home-entry-mark { display: grid; place-items: center; flex: none; width: 18px; height: 18px; color: var(--vp-c-text-2); }
+.home-section-list a:hover .home-entry-mark { color: inherit; }
+.home-entry-mark .gi { width: 18px; height: 18px; }
+.home-entry-text { min-width: 0; }
+.home-entry-count { flex: none; margin-left: auto; color: var(--vp-c-text-3); font-size: 13px; }
+
+/* Notes written below the directory in index.md */
+.VPHome .vp-doc { margin-top: 28px; }

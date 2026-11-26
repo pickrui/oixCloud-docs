@@ -1,0 +1,113 @@
+/* Tables: markdown.mjs wraps each one in .table-block > .table-hint + .table-scroll;
+   DocMedia.vue adds .is-scrollable when the table overflows */
+.vp-doc .table-block { margin: 24px 0; }
+.vp-doc .table-hint { display: none; margin: 0 0 8px; color: var(--vp-c-text-2); font-size: 13px; }
+.vp-doc .is-scrollable .table-hint { display: block; }
+.vp-doc .table-scroll {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--guide-radius);
+  scrollbar-width: thin;
+}
+.vp-doc .table-scroll:focus-visible { outline: var(--guide-focus); outline-offset: 3px; }
+.vp-doc .table-scroll table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  overflow: visible;
+  overflow-wrap: break-word;
+}
+.vp-doc .table-scroll tr { border: 0; background: transparent; }
+.vp-doc .table-scroll thead tr { border-bottom: 2px solid var(--vp-c-divider); }
+.vp-doc .table-scroll tr + tr { border-top: 1px solid var(--vp-c-divider); }
+.vp-doc .table-scroll tbody tr:nth-child(even) { background: color-mix(in srgb, var(--vp-c-bg-soft) 55%, transparent); }
+.vp-doc .table-scroll th, .vp-doc .table-scroll td {
+  min-width: 100px;
+  border: 0;
+  padding: 13px 16px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.7;
+}
+.vp-doc .table-scroll th { background: var(--vp-c-bg-soft); color: var(--vp-c-text-1); font-weight: 650; }
+.vp-doc .table-scroll td:first-child { width: 26%; min-width: 120px; color: var(--vp-c-text-1); font-weight: 600; }
+.vp-doc .table-scroll [id] { scroll-margin-top: 112px; }
+@media (min-width: 768px) { .vp-doc .table-scroll td { font-size: 15px; } }
+
+/* Page-specific columns */
+.vp-doc table:has(.platform) td:first-child { width: auto; }
+.node-guide .vp-doc td:first-child strong { white-space: nowrap; }
+.oixclash-downloads th:nth-child(2),
+.oixclash-downloads td:nth-child(2) { white-space: nowrap; }
+
+@media (max-width: 639px) {
+  .vp-doc .table-scroll th, .vp-doc .table-scroll td { min-width: 92px; padding: 11px 12px; }
+  .vp-doc .table-scroll td:first-child { width: auto; min-width: 96px; }
+  .vp-doc .table-wide table { min-width: 640px; }
+  .vp-doc .table-wide .table-hint { display: block; }
+  .vp-doc .table-wide th, .vp-doc .table-wide td { min-width: 160px; }
+}
+@media print {
+  .vp-doc .table-hint { display: none !important; }
+  .vp-doc .table-scroll { overflow: visible; }
+  .vp-doc .table-wide table { min-width: 0; }
+  .vp-doc .table-scroll th, .vp-doc .table-scroll td { min-width: 0; }
+}
+
+/* Section indexes: "task → article" tables (.table-links) become a grid of cards, each one a single link */
+:is(.guide-index, .VPHome) .vp-doc .table-links .table-scroll { overflow: visible; border: 0; border-radius: 0; }
+:is(.guide-index, .VPHome) .vp-doc .table-links :is(table, tbody) { display: block; }
+:is(.guide-index, .VPHome) .vp-doc .table-links thead {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+:is(.guide-index, .VPHome) .vp-doc .table-links tbody {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  gap: 12px;
+}
+:is(.guide-index, .VPHome) .vp-doc .table-links .table-scroll tr {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--guide-radius);
+  padding: 16px 18px;
+  background: var(--vp-c-bg);
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+:is(.guide-index, .VPHome) .vp-doc .table-links .table-scroll tr:hover {
+  border-color: var(--guide-hover-border);
+  background: var(--guide-hover-bg);
+  box-shadow: var(--guide-shadow);
+}
+:is(.guide-index, .VPHome) .vp-doc .table-links .table-scroll tr:has(a:focus-visible) { outline: var(--guide-focus); outline-offset: 2px; }
+:is(.guide-index, .VPHome) .vp-doc .table-links .table-scroll :is(td, td:first-child) {
+  width: auto;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.65;
+}
+:is(.guide-index, .VPHome) .vp-doc .table-links .table-scroll td:first-child { color: var(--vp-c-text-1); font-weight: 500; }
+:is(.guide-index, .VPHome) .vp-doc .table-links .table-scroll td:last-child { font-size: 14px; }
+:is(.guide-index, .VPHome) .vp-doc .table-links td:last-child > a { font-weight: 600; text-decoration: none; }
+:is(.guide-index, .VPHome) .vp-doc .table-links td:last-child > a:focus-visible { outline: none; }
+/* The link covers the card; its arrow moves when the card is hovered */
+:is(.guide-index, .VPHome) .vp-doc .table-links td:last-child > a::before { content: ''; position: absolute; inset: 0; border-radius: var(--guide-radius); }
+:is(.guide-index, .VPHome) .vp-doc .table-links td:last-child > a::after {
+  content: '→';
+  display: inline-block;
+  margin-left: .35em;
+  transition: transform 0.2s;
+}
+:is(.guide-index, .VPHome) .vp-doc .table-links td:last-child > a:has(> .gi:first-child)::after { margin-left: 0; }
+:is(.guide-index, .VPHome) .vp-doc .table-links tr:hover td:last-child > a::after { transform: translateX(3px); }

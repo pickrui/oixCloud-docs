@@ -1,0 +1,56 @@
+/* Page frame: navigation bar, sidebar, article column, outline and pager */
+
+/* Logo: the mark of /logo.svg in the brand color (index.js places it) */
+.brand-mark {
+  display: inline-block;
+  flex: none;
+  background-color: var(--vp-c-brand-1);
+  -webkit-mask: url(/logo.svg) center / contain no-repeat;
+  mask: url(/logo.svg) center / contain no-repeat;
+}
+.VPNavBarTitle .brand-mark { width: 24px; height: 24px; margin-right: 8px; }
+
+/* Tablets: the full menu does not fit beside the search box, so use the hamburger menu */
+@media (min-width: 768px) and (max-width: 959px) {
+  .VPNavBar .VPNavBarMenu, .VPNavBar .VPNavBarExtra { display: none; }
+  .VPNavBar .VPNavBarHamburger { display: flex; }
+  .VPNav .VPNavScreen { display: block; }
+}
+
+.VPDoc.has-aside .content-container { max-width: 768px; }
+
+/* Sidebar: roomier entries and a soft highlight behind the current page */
+.VPSidebar .VPSidebarItem :is(.level-1, .level-2) .text { padding: 5px 0; line-height: 1.55; }
+.VPSidebar .VPSidebarItem.is-active > .item .link > .text { font-weight: 600; }
+.VPSidebar .VPSidebarItem.is-link.is-active:not(.level-0) > .item { isolation: isolate; }
+.VPSidebar .VPSidebarItem.is-link.is-active:not(.level-0) > .item::before {
+  content: '';
+  position: absolute;
+  inset: 1px -8px;
+  z-index: -1;
+  border-radius: var(--guide-radius-sm);
+  background: var(--vp-c-brand-soft);
+}
+
+/* Outline: long headings wrap instead of being cut off */
+.VPDocAsideOutline .VPDocOutlineItem .outline-link {
+  padding: 6px 0;
+  line-height: 20px;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+.VPDocAsideOutline .VPDocOutlineItem .outline-link.nested { padding-left: 13px; }
+.VPDocAsideOutline .VPDocOutlineItem .outline-link.active { color: var(--vp-c-brand-1); font-weight: 600; }
+/* Long pages: subheadings open only under the section being read; the phone dropdown keeps the full list */
+@supports selector(:has(*)) {
+  .VPDocAsideOutline .VPDocOutlineItem.root > li > .VPDocOutlineItem { display: none; }
+  .VPDocAsideOutline .VPDocOutlineItem.root > li:has(.outline-link.active) > .VPDocOutlineItem { display: block; }
+}
+
+.VPDocFooter .pager-link {
+  border-radius: var(--guide-radius);
+  padding: 14px 18px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.VPDocFooter .pager-link:hover { background-color: var(--vp-c-bg-soft); }
