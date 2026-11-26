@@ -573,6 +573,7 @@
       "已登录的客户端": "Signed-in clients",
       "2 台设备": "2 devices",
       "2026-11-23 登录 · 最近使用：今天 09:12": "Signed in 2026-11-23 · last used today 09:12",
+      "Apple TV 也在使用这个登录": "Also used by Apple TV",
       "下线": "Sign out"
     },
     "openclash": {
@@ -1638,7 +1639,7 @@
       ]
     ],
     "account-tokens": [
-      "Regenerate a token or sign out a device",
+      "Regenerate a token or end a client sign-in",
       "Website → Access Token management",
       [
         [
@@ -1651,7 +1652,7 @@
         ],
         [
           "Sign out under Signed-in clients",
-          "Each device has its own row and must sign in again in the client afterwards."
+          "Every device sharing this sign-in must sign in again."
         ]
       ]
     ],

@@ -14,8 +14,10 @@ A full profile and a Provider node list serve different purposes. A Provider mus
 
 1. Search for the node in your account’s [node list](https://oixcloud.com/user/node). If it is missing there too, check the active plan and the lines it includes.
 2. Open the **subscription this device uses**. If you set a filter, search for the node in the preview and check the line, region and name conditions. For a default smart subscription, check which lines your plan receives by default in the section below.
-3. In oixFlow on iPhone or iPad, select **Refresh Nodes** on the account page. In FlClash for oixCloud, select **Sync** on the oixCloud page to fetch the managed profile. **Refresh** on that page updates account information only. In another subscription client, update the imported URL and select the updated profile.
+3. On the **oixCloud** account page, select **Refresh Nodes** in oixFlow on iPhone or iPad, or **Refresh nodes** in FlClash for oixCloud. In older FlClash for oixCloud builds with separate **Refresh** and **Sync** actions, select **Sync**. In an ordinary subscription client, update the imported URL and select the updated profile.
 4. Search for the same name again in the client. If it is still missing, include the client version, subscription format and whether the node appeared in the preview when contacting support. Keep the full subscription URL private.
+
+**If only IXP is missing**, check the subscription format first. Ordinary third-party subscriptions omit IXP. See [IXP connection options](/en/account/nodes#ixp) for managed or manual access. If your plan includes IXP but the managed client only shows default lines such as Fusion, open **Node Filter** and set IXP and any other lines you want to keep to **Only**. Check the preview and save.
 
 ## Configure a filter
 
@@ -35,7 +37,7 @@ A full profile and a Provider node list serve different purposes. A Provider mus
 | Client | Applying a saved filter |
 | --- | --- |
 | oixFlow | Managed nodes refresh automatically; check the result and selected outbound. |
-| FlClash for oixCloud | Starts an account refresh and managed-profile sync automatically. Wait for completion; if it fails, resolve the error and use **Sync** on the account page. |
+| FlClash for oixCloud | Refreshes the account and syncs the managed profile automatically. If sync fails, resolve the reported error and select **Refresh nodes** on the account page to retry. |
 | oixCloud Helper | Fetches nodes and updates mappings. Run **Apply in Surge** again when using Surge. |
 | OpenClash | After saving in the web editor, restart OpenClash to fetch immediately or wait for the core's next subscription update. |
 | oixClash | **订阅管理** (Subscription Management) in the plugin's account row opens the web editor. After saving, click **更新节点** (Update Nodes) in the plugin to fetch immediately, or wait for the daily update. |

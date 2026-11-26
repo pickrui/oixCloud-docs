@@ -11,9 +11,9 @@ description: "账户与令牌安全的操作步骤、适用范围与常见问题
 | 区块 | 列出的内容 | 有效期 |
 | --- | --- | --- |
 | Access Token | 你自己新增的 Token，可粘贴到客户端登录，也可给第三方客户端或脚本调用接口；用它登录的设备列在这个 Token 下面 | 按新增时选择的有效期到期 |
-| 已登录的客户端 | 用邮箱/密码或 Google 登录的设备，每台设备一行，可以单独下线 | 不会到期；180 天没有使用的设备自动下线 |
+| 已登录的客户端 | 用邮箱/密码或 Google 登录的记录。每行对应一份登录凭据，共用它的设备会一起下线 | 无固定到期日，连续 180 天未使用的登录会自动清理 |
 
-客户端退出只清理本机登录状态，网站上这台设备仍显示为已登录；不再使用时，到「已登录的客户端」点「下线」。开启 iCloud 账户或 Apple TV 同步时，登录状态也可能随同步改变
+在客户端退出会清除本机的登录状态，服务器上的凭据仍然有效。开启 iCloud 账户或 Apple TV 同步时，其他设备的登录状态也可能随同步改变。要撤销凭据，请在网站上找到对应的登录记录或 Access Token
 
 ## 登录定制客户端 {#first-client-login}
 
@@ -27,34 +27,32 @@ description: "账户与令牌安全的操作步骤、适用范围与常见问题
 
 Google 入口目前适用于支持该功能的 oixFlow iPhone / iPad 版本和 FlClash for oixCloud。Apple TV 继续通过 [iPhone 同步账户](/oixflow/apple-tv)；Helper、OpenClash、oixClash 按各自教程选择邮箱/密码或 Token，不假定都有 Google 按钮
 
-## 新设备登录与提醒 {#device-approval}
+## 收到「新设备登录」提醒时怎么办？ {#device-approval}
 
 客户端用邮箱/密码、Google 或 Access Token 登录成功后，这台设备立即可以获取节点，不需要确认码、邮箱验证码、验证器动态码或网页批准，也不再有「临时放行」状态。两步验证只用于登录网站，不影响客户端登录
 
-新设备第一次登录时，你会通过邮件和已绑定的 Telegram 收到「新设备登录」提醒，里面写明客户端、设备指纹和时间。不认识这台设备时：
+「新设备登录」提醒会通过邮件和已绑定的 Telegram 发送，里面写明客户端、设备指纹和时间。若不认识这台设备，点提醒中的链接打开对应记录
 
-1. 打开 [已登录的客户端](https://oixcloud.com/user/token#devices)，找到这台设备并点「下线」。如果提醒写明是用 Access Token 登录的，改为在「Access Token」中删除或重新生成那个 Token
-2. [修改登录密码](#change-password)，防止对方再次登录。改密码后所有设备和 Access Token 都会失效，自己的设备也要重新登录
+- 邮箱/密码或 Google 登录：在「已登录的客户端」点「下线」，核对共用这次登录的设备后确认
+- Access Token 登录：在「Access Token」中删除对应 Token，或[重新生成](#refresh-client-token)后给仍在使用的设备和脚本换上新值
+
+若怀疑账户密码泄露，请[修改登录密码](#change-password)。改密码会让所有客户端下线，并删除全部 Access Token
 
 原来的「设备登记」页面和 Telegram 机器人的 `/device` 指令已经取消，旧链接会跳到「已登录的客户端」。Apple TV 继续通过 iPhone 的「同步到 Apple TV」登录，不需要再由 iPhone 批准，见 [Apple TV 的登录](/oixflow/apple-tv#approval)
 
 ## 已登录的客户端 {#signed-in-clients}
 
-打开 [Access Token 管理](https://oixcloud.com/user/token#devices) 的「已登录的客户端」：
+打开 [Access Token 管理 → 已登录的客户端](https://oixcloud.com/user/token#devices)。登录记录按客户端分组，每行显示设备名称和登录日期，有使用记录时也会显示最近使用时间。独立登录的记录可以分别下线
 
-- 按客户端分组，每台设备单独一行，显示设备、登录日期和最近使用时间。网页上不显示登录凭据，也不能复制
-- oixFlow 通过 iCloud 同步给同一 Apple 账户下其他设备（例如 Apple TV）的登录，写在登录那台设备下面
-- 改版前就登录着的设备先合在一行「改版前的登录」，它们在新版客户端重新登录后会分开列出。OpenClash 0.48.014 及更早的版本不区分设备，更新插件前一直合在这一行
-- 用 Access Token 登录的设备不在这里，列在对应 Token 下面
-- 180 天没有使用的设备会自动下线
+- 例如，oixFlow 把 iPhone 的登录同步给 Apple TV 后，这两台设备共用登录凭据。Apple TV 使用后，iPhone 的记录下方会注明「Apple TV 也在使用这个登录」
+- 同一客户端在改版前共用的凭据显示为「改版前的登录」。这些设备在新版客户端各自重新登录后，会分开列出。OpenClash 0.48.014 及更早版本的设备需要先更新插件
+- 用 Access Token 登录的设备列在「Access Token」中对应的 Token 下面
 
-订阅配置（含节点筛选）按客户端设置，在客户端卡片的「订阅配置」中选择，同一客户端的所有设备共用；设备下线后重新登录，会自动接回原来的配置
+**让一次登录下线**
 
-**让一台设备下线**
-
-1. 在对应客户端下找到这台设备，核对设备名称和最近使用时间
-2. 点「下线」并确认。这个登录立即失效，那台设备要在客户端重新登录才能继续使用。同步给 Apple TV 等设备的登录会一起退出；「改版前的登录」这一行下线时，其中列出的设备都会退出
-3. 在仍需使用的设备上重新登录
+1. 在对应客户端下，按设备名称和最近使用时间找到要撤销的登录记录
+2. 点该行的「下线」，核对确认框里列出的设备。确认后，这份凭据立即失效，所有共用它的设备都会下线
+3. 在仍需使用的设备上重新登录。Apple TV 可从已重新登录的 iPhone 或 iPad [同步账户](/oixflow/apple-tv#approval)。同一客户端的设备会继续共用原来的「订阅配置」和节点筛选
 
 要让所有设备一起退出，[修改登录密码](#change-password)
 
@@ -102,8 +100,8 @@ Access Token 可以粘贴到客户端登录，也可以给第三方客户端或�
 ## 重新生成 Access Token {#refresh-client-token}
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-tokens-zh.svg?v=20261126-1" target="_blank" rel="noopener" aria-label="oixCloud · 重新生成 Token 或让设备下线">
-    <img src="/illustrations/account-tokens-zh.svg?v=20261126-1" alt="oixCloud · 重新生成 Token 或让设备下线" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/account-tokens-zh.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="oixCloud · 重新生成 Token 或让一次登录下线">
+    <img src="/illustrations/account-tokens-zh.svg?v=20261127-1" alt="oixCloud · 重新生成 Token 或让一次登录下线" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
@@ -114,7 +112,7 @@ Token 丢失或怀疑泄露时可以重新生成：备注、有效期和订阅�
 2. 点「重新生成」，核对影响范围，在弹窗里用 Passkey 或当前登录密码确认
 3. 在弹窗中点「复制」保存新值，再点「我已保存，关闭」，然后更新用到它的设备和脚本
 
-重新生成同样会通过邮件和已绑定的 Telegram 发送提醒。已到期的 Token 不能重新生成，请新增一个。请求失败或结果不明确时，先重新加载页面核对末 4 位：已经变化但没有拿到完整内容时，再重新生成一次。「已登录的客户端」中的设备没有这个按钮，要更换登录时让设备下线后重新登录
+重新生成同样会通过邮件和已绑定的 Telegram 发送提醒。已到期的 Token 不能重新生成，请新增一个。请求失败或结果不明确时，先重新加载页面核对末 4 位：已经变化但没有拿到完整内容时，再重新生成一次。要撤销邮箱/密码或 Google 登录，见[已登录的客户端](#signed-in-clients)
 
 ## Telegram 绑定与每日通知 {#notifications}
 
@@ -199,10 +197,8 @@ Passkey 用于网站登录，不是客户端 Access Token，也不是 TOTP 验�
 
 ## 停用设备或 Token
 
-1. 打开 Access Token 管理页，先区分要停用的是客户端设备还是 Access Token
-2. 只是不再使用某台设备时，在客户端退出只会清理本机登录状态；要让它在服务器上失效，在「已登录的客户端」点它的「下线」
-3. Access Token 泄露或不再使用时，在「Access Token」中删除它；删除确认里会列出用它登录、需要重新登录的设备。还要继续使用时改为「重新生成」，再把新值填到这些设备
-4. 在仍需使用的客户端重新登录。若使用同步账户状态的设备，也检查同步后的登录结果
+- 若要撤销邮箱/密码或 Google 登录，按[下线步骤](#signed-in-clients)操作。共用该凭据的设备都需要重新登录
+- 若要停用 Access Token，在「Access Token」中找到它，核对确认框里的设备后删除。若仍有设备或脚本需要使用它，可以[重新生成](#refresh-client-token)，再填入新值
 
 ## 泄露后的对应处理
 
@@ -211,7 +207,7 @@ Passkey 用于网站登录，不是客户端 Access Token，也不是 TOTP 验�
 | 某条个人订阅地址 | 在订阅管理删除或更换该地址，并更新使用它的客户端 |
 | 主订阅地址或连接参数 | 使用页面的「重置连接参数 & 主订阅地址」，阅读影响说明后更新所有相关设备 |
 | Access Token | 在令牌页重新生成或删除对应的 Access Token；重置订阅地址不能代替这一步 |
-| 陌生设备登录 | 在「已登录的客户端」让它下线，并 [修改密码](#change-password) |
+| 陌生设备登录 | 打开[新设备登录提醒](#device-approval)中的链接，撤销对应的登录或 Access Token。若怀疑密码泄露，请[修改密码](#change-password) |
 | 登录密码 | 按 [修改密码说明](#change-password) 重新登录客户端，更新 Access Token、主订阅与 Passkey；不要只换订阅 URL |
 
 提交排查材料时保留错误和域名等必要信息，隐藏订阅路径中的密钥、登录 Token、节点密码、证书私钥及完整请求认证头

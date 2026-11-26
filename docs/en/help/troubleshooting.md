@@ -34,7 +34,7 @@ Try signing in to the [User Center](https://oixcloud.com/user) first, then follo
 2. Connect the client and open the affected site once. On iPhone or iPad, use [oixFlow’s Network Check and request history](/en/oixflow/diagnostics#network-check). In FlClash for oixCloud, run the [network self-check](/en/flclash/diagnostics) on Windows or macOS, or inspect connections and logs on Android or Linux.
 3. If the request is missing, check whether the app uses the system proxy or is excluded from the VPN or TUN. If the request appears, check the matched rule and outbound, then try the same site on another available node.
 
-If you connect directly to Edge or Home ISP from mainland China, check the [node types](/en/account/nodes#node-types). If your plan includes CIA, IXP, Fusion or GIA, try one of those on the same network and client. Note which node worked and which timed out.
+If a direct connection to Edge or Home ISP fails from mainland China, try the same site on the same network and client using a CIA, Fusion, GIA or [managed IXP node](/en/account/nodes#ixp-access) included in your plan. If you use a cloud server to reach the IXP address from the panel, follow [IXP connection troubleshooting](/en/account/nodes#ixp-troubleshooting) to check the path from the device to the forwarder and from the forwarder to IXP.
 
 ## It works, but speed is low or latency is high
 

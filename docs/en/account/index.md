@@ -13,6 +13,7 @@ description: Find help with plans, traffic, nodes, subscriptions and account sec
 | Claim a reward, share a link or check purchase gifts | [Reward links and purchase gifts](/en/account/rewards) |
 | Check traffic charges, low-speed tiers and limits | [Traffic and billing](/en/account/traffic) |
 | Compare node types and connection options | [Nodes and connection options](/en/account/nodes) |
+| Use IXP in a managed client or connect through a cloud server | [IXP connection options](/en/account/nodes#ixp) |
 | Understand dedicated IPs, purchases, renewals and deposits | [Dedicated IPs](/en/account/nodes#dedicated-ip) |
 | Set subscription formats, filters and account rules | [Subscriptions and filters](/en/account/subscriptions) |
 | Use residential broadband IPs via internal relays or proxy chains | [Home ISP user guide](/en/account/home-isp) |

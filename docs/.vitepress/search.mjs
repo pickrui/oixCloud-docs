@@ -83,6 +83,7 @@ export function tokenizeSearch(text) {
     [/恢复默认|restor(?:e|ing)[\s_-]*defaults?\b/g, 'restoredefault'],
     [/备份|back[\s_-]*ups?\b/g, 'backup'],
     [/自动化|automation\b/g, 'automation'],
+    [/新设备登录|\bnew device signed in\b/g, 'newdevicesignin'],
     [/密码|passwords?\b/g, 'password'],
     [/流量|traffic\b/g, 'traffic'],
     [/订阅|subscriptions?\b/g, 'subscription'],

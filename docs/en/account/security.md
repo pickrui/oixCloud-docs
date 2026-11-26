@@ -11,9 +11,9 @@ Official clients can sign in with email/password, Google or an Access Token. Bot
 | Section | What it lists | Expiry |
 | --- | --- | --- |
 | Access Tokens | Tokens you create. Paste one into a client to sign in, or use it with third-party clients and scripts. Devices signed in with a token are listed under it | Follows the validity you chose |
-| Signed-in clients | Devices signed in with email/password or Google, one row per device, each of which you can sign out | No expiry; devices unused for 180 days are signed out automatically |
+| Signed-in clients | Email/password or Google sign-ins. Each row represents one sign-in credential. Ending it signs out every device that uses it | No fixed expiry. Sign-ins unused for 180 days are removed automatically |
 
-Signing out in a client only clears its local sign-in state; the website still lists the device as signed in. When you no longer use it, select **Sign out** under **Signed-in clients**. With iCloud account or Apple TV sync enabled, sign-in state may also change through sync.
+Signing out in a client clears its local sign-in state. The credential stays valid on the server. If iCloud account sync or Apple TV sync is enabled, the sign-in state on other devices may also change. To revoke the credential, find the corresponding sign-in or Access Token on the website.
 
 ## Sign in to a custom client {#first-client-login}
 
@@ -27,34 +27,32 @@ All three methods provide the same features, and the device can load nodes as so
 
 Google sign-in is available in supported oixFlow versions for iPhone/iPad and in supported versions of FlClash for oixCloud. Apple TV continues to [receive the account from an iPhone](/en/oixflow/apple-tv). Follow the email/password or token instructions for Helper, OpenClash and oixClash; do not assume they have a Google button.
 
-## New devices and sign-in alerts {#device-approval}
+## What to do about a “New device signed in” alert {#device-approval}
 
 Once a client signs in with email/password, Google or an Access Token, the device can load nodes immediately. There is no confirmation code, email code, authenticator code, website approval or temporary access state. Two-step verification applies only to website sign-in, not to clients.
 
-The first time a new device signs in, you receive a **New device signed in** alert by email and, if linked, Telegram. It names the client, device fingerprint and time. If you do not recognize the device:
+The **New device signed in** alert arrives by email and, if linked, Telegram. It names the client, device fingerprint and time. If you do not recognize the device, follow the link in the alert to open the matching entry.
 
-1. Open [Signed-in clients](https://oixcloud.com/user/token#devices), find the device and select **Sign out**. If the alert says it signed in with an Access Token, delete or regenerate that token under **Access Tokens** instead.
-2. [Change your password](#change-password) so it cannot sign in again. Every device and Access Token then stops working, so your own devices must sign in again too.
+- For email/password or Google, select **Sign out** under **Signed-in clients**. Check which devices share the sign-in before confirming.
+- For an Access Token, delete the matching token under **Access Tokens**, or [regenerate it](#refresh-client-token) and update the devices and scripts you still use.
+
+If you suspect your account password was exposed, [change your password](#change-password). This signs out all clients and deletes all Access Tokens.
 
 The former device approval page and the Telegram bot's `/device` command have been removed; old links open **Signed-in clients**. Apple TV still signs in through **Sync to Apple TV** on the iPhone and no longer needs the iPhone to approve it. See [Apple TV sign-in](/en/oixflow/apple-tv#approval).
 
 ## Signed-in clients {#signed-in-clients}
 
-Open **Signed-in clients** on [Access Token Management](https://oixcloud.com/user/token#devices):
+Open [Access Token Management → Signed-in clients](https://oixcloud.com/user/token#devices). Sign-ins are grouped by client. Each row shows the device name, sign-in date and, when available, the last use. Devices with separate sign-ins can be signed out individually.
 
-- Devices are grouped by client, one row each, showing the device, sign-in date and last use. The website never shows the sign-in credentials and cannot copy them.
-- When oixFlow syncs its sign-in over iCloud to other devices on the same Apple Account, such as Apple TV, they appear under the device that signed in.
-- Devices that were signed in before this change share one **Signed in before this update** row. They are listed separately after signing in again with a current client. OpenClash 0.48.014 and earlier cannot tell devices apart, so they stay in this row until the plugin is updated.
-- Devices that signed in with an Access Token are listed under that token instead.
-- Devices unused for 180 days are signed out automatically.
+- For example, when oixFlow syncs an iPhone sign-in to Apple TV, the devices share a sign-in credential. Once Apple TV uses it, the iPhone entry shows **Also used by Apple TV**.
+- A credential shared by older versions of the same client appears as **Signed in before this update**. Each device gets its own entry after signing in separately with a current client. Devices running OpenClash 0.48.014 or earlier need a plugin update first.
+- Devices that use an Access Token are listed under that token in **Access Tokens**.
 
-The subscription configuration, including node filters, is set per client with **Subscription Configuration** on the client's card and is shared by all of that client's devices. A device that signs in again after being signed out picks up the same configuration automatically.
+**End a sign-in**
 
-**Sign out one device**
-
-1. Find the device under its client and check its name and last use.
-2. Select **Sign out** and confirm. The sign-in stops working immediately, and the device must sign in again in the client to continue. Devices that received this sign-in through sync, such as Apple TV, are signed out with it. Signing out the **Signed in before this update** row signs out every device listed in it.
-3. Sign in again on devices you still use.
+1. Find the sign-in under its client using the device name and last use.
+2. Select **Sign out** on that row and check the devices listed in the confirmation. Confirming immediately revokes the credential and signs out every device that uses it.
+3. Sign in again on the devices you still use. For Apple TV, sign in on your iPhone or iPad and [sync the account](/en/oixflow/apple-tv#approval). Devices using the same client continue to share its existing **Subscription Configuration** and node filters.
 
 To sign out every device at once, [change your password](#change-password).
 
@@ -102,8 +100,8 @@ An account can keep up to 10 valid Access Tokens, including tokens with no expir
 ## Regenerate an Access Token {#refresh-client-token}
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-tokens-en.svg?v=20261126-1" target="_blank" rel="noopener" aria-label="Regenerate a token or sign out a device">
-    <img src="/illustrations/account-tokens-en.svg?v=20261126-1" alt="Regenerate a token or sign out a device" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/account-tokens-en.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="Regenerate a token or end a client sign-in">
+    <img src="/illustrations/account-tokens-en.svg?v=20261127-1" alt="Regenerate a token or end a client sign-in" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
@@ -114,7 +112,7 @@ If a token is lost or may have leaked, regenerate it. The note, expiry and subsc
 2. Select **Regenerate**, review the impact and confirm with a passkey or your current sign-in password in the dialog.
 3. Select **Copy** in the dialog to store the new value, select **I have saved it**, then update the devices and scripts that use the token.
 
-Regenerating also sends an alert by email and, if linked, Telegram. Expired tokens cannot be regenerated; create a new one instead. If the request fails or the result is unclear, reload the page and check the last 4 characters. If they changed but you did not get the full value, regenerate it again. Devices under **Signed-in clients** have no such button; to replace a device's sign-in, sign it out and sign in again.
+Regenerating also sends an alert by email and, if linked, Telegram. Expired tokens cannot be regenerated; create a new one instead. If the request fails or the result is unclear, reload the page and check the last 4 characters. If they changed but you did not get the full value, regenerate it again. To revoke an email/password or Google sign-in, see [Signed-in clients](#signed-in-clients).
 
 ## Telegram binding and daily notifications {#notifications}
 
@@ -199,10 +197,8 @@ Website/client sign-ins and authenticated activity can update login activity. Ac
 
 ## Stop a device or token
 
-1. Open Access Token Management and decide whether you are stopping a client device or an Access Token.
-2. Signing out in a client only clears that device's local sign-in state. To end its sign-in on the server, select **Sign out** next to it under **Signed-in clients**.
-3. If an Access Token leaked or is no longer needed, delete it under **Access Tokens**; the delete confirmation lists the devices signed in with it that must sign in again. If you still need it, select **Regenerate** instead and enter the new value on those devices.
-4. Sign in again on devices you still use. Also check the resulting state on devices that sync account information.
+- For email/password or Google, follow the [sign-out steps](#signed-in-clients). Every device sharing the credential must sign in again.
+- To disable an Access Token, find it under **Access Tokens**, check the devices listed in the confirmation and delete it. If devices or scripts still need it, [regenerate it](#refresh-client-token) and give them the new value.
 
 ## Match the response to the leak
 
@@ -211,7 +207,7 @@ Website/client sign-ins and authenticated activity can update login activity. Ac
 | A personal subscription URL | Delete or replace that address in Subscription Management and update its clients. |
 | Main subscription or connection credentials | Use the page's reset-connection-parameters/main-subscription action, read its impact and update all affected devices. |
 | Access Token | Regenerate or delete the corresponding Access Token on the token page; resetting a subscription cannot replace this step. |
-| Unrecognized device sign-in | Sign it out under **Signed-in clients** and [change your password](#change-password). |
+| Unrecognized device sign-in | Follow the link in the [new-device alert](#device-approval) and revoke the matching sign-in or Access Token. If you suspect your password was exposed, [change it](#change-password). |
 | Sign-in password | Follow [password-change guidance](#change-password) to sign in to clients again and update Access Tokens, the main subscription and Passkeys; changing only a subscription URL is insufficient. |
 
 Retain necessary error and destination information in support material, but hide subscription-path secrets, tokens, node passwords, certificate private keys and full authentication headers.

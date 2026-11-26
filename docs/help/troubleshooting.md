@@ -34,7 +34,7 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
 2. 连接客户端，打开一次出错的网站，再查看连接记录。iPhone / iPad 用 [oixFlow 的网络检测与请求记录](/oixflow/diagnostics#network-check)；FlClash for oixCloud 在 Windows / macOS 可运行 [工具 → 网络自检](/flclash/diagnostics)，Android / Linux 查看连接与日志
 3. 找不到这次请求时，检查应用是否使用系统代理，或是否被 VPN / TUN 排除。能找到请求时，查看它命中的规则和实际出口，再用同一网站对比另一个可用节点
 
-在中国大陆直连 Edge 或 Home ISP 时，先查看 [节点类型](/account/nodes#node-types)。如果套餐包含 CIA、IXP、Fusion 或 GIA，可保持网络和客户端不变，换用其中一个节点重试；记录哪个能访问、哪个超时
+在中国大陆直连 Edge 或 Home ISP 遇到问题时，可在同一网络和客户端上换用套餐内的 CIA、Fusion、GIA 或[托管 IXP 节点](/account/nodes#ixp-access)，再访问同一个网站。若是从云主机连接面板给出的 IXP 地址，按 [IXP 分段排查](/account/nodes#ixp-troubleshooting) 检查本机到前置机、前置机到 IXP 的连接
 
 ## 能用，但速度慢或延迟高
 

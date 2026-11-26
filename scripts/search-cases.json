@@ -712,6 +712,18 @@
   },
   {
     "terms": [
+      "IXP 前置机",
+      "IXP 云厂 BGP",
+      "GOST 端口转发",
+      "GOST IXP forwarding",
+      "IXP ingress address"
+    ],
+    "targets": [
+      "/account/nodes.html#ixp-connectivity"
+    ]
+  },
+  {
+    "terms": [
       "外部中继 协议保持",
       "external relay protocol conversion",
       "中继 批量删除",
@@ -800,6 +812,8 @@
       "New device signed in",
       "设备下线",
       "Sign out device",
+      "共用登录凭据",
+      "shared sign-in",
       "重新生成 Access Token",
       "Regenerate Access Token"
     ],
