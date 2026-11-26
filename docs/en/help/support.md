@@ -74,6 +74,8 @@ If your description does not already identify the payment or plan order you want
 
 ## UHD redemption is still being confirmed
 
+For the steps to redeem, link or extend an account, see [UHD benefits](/en/account/uhd).
+
 Use the UHD refresh button in the [Benefits Center](https://oixcloud.com/user/benefits) to check the status. Do not redeem again while it is pending.
 
 - If you see **Confirm my UHD account**, enter the UHD password you chose during redemption. If the account was never created, refresh after at least 10 minutes. The panel returns the credits on hold once it verifies the result.

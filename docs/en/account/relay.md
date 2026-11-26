@@ -62,8 +62,27 @@ To give one entry node several destinations, or to forward only some websites, s
 1. Choose the source and priority, then select destinations. You can search or filter by region, and selected destinations are listed alongside. Select up to 10 per submission, all in one region: after the first pick, other regions are unavailable until you remove your picks. Existing destinations are marked **Added** and are not added again. The entry node itself is marked **Entry node** and cannot be selected.
 2. Destinations at the same priority form a load-balancing group; no more than four per group is recommended. Traffic selects an exit from the group rather than passing through every destination in order. Unavailable destinations can give way to other available targets or lower-priority rules; this does not guarantee seamless continuation of an interrupted connection.
 3. To forward selected traffic, fill in **Forward only these domains / IPs** using [domain/IP matching](#domain-rules). Empty means all traffic. A higher-priority catch-all rule can override lower-priority conditional rules.
+4. Before saving, check [what happens when targets are unavailable](#relay-fallback), especially for a dedicated or residential exit.
 
 **All nodes (except Fusion)** is a broad entry scope, not just the node currently connected. In the list, **Edit path** opens the containing path (under **More** on phones) and **Edit individual rule** changes one segment (under **More** on desktop, **Edit** on phones). Editing or deleting a segment affects every path that uses it.
+
+### What happens when relay targets are unavailable? {#relay-fallback}
+
+When adding or editing an individual internal relay rule, find **Allow direct egress from the entry when targets are unavailable**. Available relay targets take priority with either setting.
+
+| Setting | When the matched rule has no available target |
+| --- | --- |
+| Off (default) | New connections are blocked. Leave it off if you require a residential or dedicated exit IP |
+| On | If the targets have a network failure, traffic may leave from the entry node. The website may see a different exit IP |
+
+Save and check the exit with a **new connection**. Established TCP connections do not migrate.
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-relay-fallback-en.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="Direct egress setting on an individual internal relay rule">
+    <img src="/illustrations/account-relay-fallback-en.svg?v=20261127-1" alt="Direct egress setting on an individual internal relay rule" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>The default shown here blocks new connections when no target is available</figcaption>
+</figure>
 
 ### Status and applying changes
 

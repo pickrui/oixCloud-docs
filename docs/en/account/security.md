@@ -29,7 +29,7 @@ Google sign-in is available in supported oixFlow versions for iPhone/iPad and in
 
 ## What to do about a “New device signed in” alert {#device-approval}
 
-Once a client signs in with email/password, Google or an Access Token, the device can load nodes immediately. There is no confirmation code, email code, authenticator code, website approval or temporary access state. Two-step verification applies only to website sign-in, not to clients.
+Once a client signs in with email/password, Google or an Access Token, the device can load nodes immediately without website approval. If two-step verification is enabled, the website asks for an authenticator code at password sign-in and for some account actions.
 
 The **New device signed in** alert arrives by email and, if linked, Telegram. It names the client, device fingerprint and time. If you do not recognize the device, follow the link in the alert to open the matching entry.
 
@@ -183,7 +183,7 @@ Incorrect passwords entered when changing your email or password, adding or dele
 
 ## What should I keep private?
 
-Do not share passwords, Access Tokens, full subscription URLs, node passwords, or certificate private keys. Redact them from screenshots and logs. If a subscription URL leaks, use Reset on the subscription page, then update subscriptions and connection details on every device. This does not invalidate Access Tokens or signed-in devices; regenerate or delete a leaked token separately on the token page.
+Redact passwords, Access Tokens, full subscription URLs, node passwords and certificate private keys from screenshots and logs. If a URL leaks, use the [table below](#match-the-response-to-the-leak) to identify and revoke the affected subscription.
 
 ## When are inactive accounts deleted?
 
@@ -193,9 +193,24 @@ Reminders are sent 7 days, 3 days and 1 day before deletion, and accounts with a
 
 Website/client sign-ins and authenticated activity can update login activity. Active or valid queued plans, pending withdrawals, payments and other unsettled items can defer cleanup. Banned accounts are not automatically deleted under this inactivity rule. Check account notices and the current state.
 
-[Open Access Token Management](https://oixcloud.com/user/token)
+## Delete your account {#delete-account}
+
+**Deletion is permanent.** All devices are signed out, subscription URLs and tokens are revoked, and purchase and top-up records can no longer be retrieved. Remaining plans, balance and commission are forfeited without a refund. To revoke a client sign-in, use [Signed-in clients](#signed-in-clients).
+
+1. Open [Account Settings](https://oixcloud.com/user/edit#settings-delete), select **Go to account deletion** and check the email of the account being deleted. Resolve any pending payment, plan, withdrawal, reward or dedicated IP deposit listed on the page. If the account is restricted and still has an active plan, contact support through a ticket.
+2. Verify with a passkey, or enter your current password and two-step code if enabled. With either method, select **Send code** and enter the code sent to your account email within 10 minutes.
+3. When you are ready to give up the account and its remaining value, acknowledge the consequences and select **Confirm Delete**. Success returns you to the sign-in page.
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-delete-account-en.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="Account, email code and acknowledgement on the deletion page">
+    <img src="/illustrations/account-delete-account-en.svg?v=20261127-1" alt="Account, email code and acknowledgement on the deletion page" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Example using a passkey for identity verification</figcaption>
+</figure>
 
 ## Stop a device or token
+
+Open [Access Token Management](https://oixcloud.com/user/token) and find the sign-in or token you want to revoke.
 
 - For email/password or Google, follow the [sign-out steps](#signed-in-clients). Every device sharing the credential must sign in again.
 - To disable an Access Token, find it under **Access Tokens**, check the devices listed in the confirmation and delete it. If devices or scripts still need it, [regenerate it](#refresh-client-token) and give them the new value.
@@ -204,10 +219,17 @@ Website/client sign-ins and authenticated activity can update login activity. Ac
 
 | Leaked item | Response |
 | --- | --- |
-| A personal subscription URL | Delete or replace that address in Subscription Management and update its clients. |
-| Main subscription or connection credentials | Use the page's reset-connection-parameters/main-subscription action, read its impact and update all affected devices. |
+| A personal subscription URL | Delete the leaked URL in [Subscription Management](https://oixcloud.com/user/sub_manage). Create a replacement if needed and update its clients. If someone may already have downloaded the node configuration, then reset connection credentials and update all affected devices |
+| Main subscription URL or node credentials | In [Subscription Management](https://oixcloud.com/user/sub_manage), find the main subscription, select **Reset** and confirm. Immediately update subscriptions or managed profiles on all devices. The main URL and connection credentials change. Personal URLs can still fetch the new configuration, and signed-in devices and Access Tokens stay valid |
 | Access Token | Regenerate or delete the corresponding Access Token on the token page; resetting a subscription cannot replace this step. |
 | Unrecognized device sign-in | Follow the link in the [new-device alert](#device-approval) and revoke the matching sign-in or Access Token. If you suspect your password was exposed, [change it](#change-password). |
 | Sign-in password | Follow [password-change guidance](#change-password) to sign in to clients again and update Access Tokens, the main subscription and Passkeys; changing only a subscription URL is insufficient. |
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-subscription-reset-en.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="Reset on the main subscription and Delete on a personal subscription">
+    <img src="/illustrations/account-subscription-reset-en.svg?v=20261127-1" alt="Reset on the main subscription and Delete on a personal subscription" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Phone is an example subscription name. Subscription tokens are hidden.</figcaption>
+</figure>
 
 Retain necessary error and destination information in support material, but hide subscription-path secrets, tokens, node passwords, certificate private keys and full authentication headers.

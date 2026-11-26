@@ -50,7 +50,7 @@ Static and dynamic describe the node's exit IP type, not an IP dedicated to your
 
 ### Default subscriptions and explicit selection {#isp-subscription}
 
-Default inclusion is set by the service for each node, independently of its static or dynamic IP category. Home ISP nodes without default inclusion are not added automatically to ordinary subscriptions, Smart Selection or a fallback when the default node set is empty. For plans with CIA, IXP, Fusion or GIA, Smart Selection only includes the plan's default lines and leaves out Home ISP nodes, even those included by default.
+Default inclusion is set per Home ISP node for both static and dynamic IPs. Plans with CIA, IXP, Fusion or GIA normally prefer their own lines. If no default line has an available node, the subscription can fall back to Home ISP nodes enabled for default inclusion. Other eligible Home ISP nodes require explicit selection.
 
 To use them, edit the current address in [Subscription management](https://oixcloud.com/user/sub_manage), or open **Node Filter** in a supported client. Set the **ISP** line to **Only**, check the preview, save and update the subscription. ISP includes permitted static and dynamic home-broadband nodes without selecting Edge. Region or name filters alone do not add ISP nodes excluded by default. See [Subscriptions and filters](/en/account/subscriptions#home-isp) for entry points and eligibility.
 
@@ -168,7 +168,7 @@ All dedicated IPs are Edge nodes intended for international networks. We recomme
 Choose whichever option works best for your local network and how you prefer to connect.
 
 - **Direct connection**. Select the dedicated IP node in your client’s node list. Route quality from your network to that node is not guaranteed.
-- **Internal relay**. In the user center, open **Traffic Routes → Relay → [Internal relay](/en/account/relay#internal-relay)** and add a path. Choose an entry node and set the dedicated IP as the exit. Save the path, then select the entry node in your client.
+- **Internal relay**. In the user center, open **Traffic Routes → Relay → [Internal relay](/en/account/relay#internal-relay)** and add a path. Choose an entry node and set the dedicated IP as the exit. Save the path, then select the entry node in your client. If traffic must leave through that dedicated IP, keep [direct egress from the entry](/en/account/relay#relay-fallback) off.
 - **Proxy chain**. In your client, create a chain with the entry node as the first hop and the dedicated IP as the last hop. Save and select the chain. See the instructions for [oixFlow](/en/oixflow/policies#proxy-chains) or [FlClash for oixCloud](/en/flclash/proxies#proxy-chains).
 
 ### Practical benefits {#ip-benefits}

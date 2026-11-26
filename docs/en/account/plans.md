@@ -173,8 +173,8 @@ New orders with awarded purchase-gift credits cannot apply a coupon after purcha
 ### Recurring coupons and renewals {#recurring-coupon}
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-coupon-recurring-en.svg?v=20261105-6" target="_blank" rel="noopener" aria-label="Check the recurring code and auto-renewal">
-    <img src="/illustrations/account-coupon-recurring-en.svg?v=20261105-6" alt="Check the recurring code and auto-renewal" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/account-coupon-recurring-en.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="Check the recurring code and auto-renewal">
+    <img src="/illustrations/account-coupon-recurring-en.svg?v=20261127-1" alt="Check the recurring code and auto-renewal" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>Interface simulation · Fictional prices and unusable example code</figcaption>
 </figure>
@@ -253,8 +253,8 @@ The flow below applies to accounts eligible for continuation. Blocked accounts a
 </div>
 <p class="plan-flow-no"><span class="plan-flow-label">No</span></p>
 <div class="plan-flow-step">
-<p class="plan-flow-check">Does a plan have automatic renewal on (the current one or one awaiting auto-renewal), and meet renewal eligibility, billing-period and funding requirements?</p>
-<p class="plan-flow-yes"><span class="plan-flow-label">Yes</span>That plan's renewal price is charged and its next period starts</p>
+<p class="plan-flow-check">Is there an eligible plan in the renewal queue, with enough funds to renew the first eligible record?</p>
+<p class="plan-flow-yes"><span class="plan-flow-label">Yes</span>That record renews at its quoted price and keeps its place in the renewal queue</p>
 </div>
 <p class="plan-flow-no"><span class="plan-flow-label">No</span></p>
 <p class="plan-flow-end">The plan ends; buy a new one from the store</p>
@@ -282,39 +282,32 @@ While at low speed, adding an eligible queued plan causes automatic switching fi
 | Operation or stage | Behavior and conditions |
 | --- | --- |
 | Activation queue | You can reorder plans; when the active plan expires or runs out of traffic, queued plans are tried in that order |
-| Automatic renewal | Happens only at expiry when no queued plan is available, and renews the plan that has automatic renewal on; see [Automatic renewal](#auto-renew). Running out of traffic does not trigger an early renewal |
+| Automatic renewal | At expiry, once no pending plan can take over, the first eligible record in the [renewal queue](#auto-renew) is tried |
 | Automatic traffic reset | Clears used traffic at the reset price when it runs out, without changing the expiry; see [Automatic traffic reset](#traffic-reset) |
 | Prepare the next period | Add a plan from the store at the current purchase price, subject to stock. It enters the queue without increasing current traffic. Auto-renewal starts off on the new record; adding it does not change the existing renewal target |
 
 ### Automatic renewal {#auto-renew}
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-renewal-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the renewal target and price">
-    <img src="/illustrations/account-renewal-en.svg?v=20261105-3" alt="Check the renewal target and price" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/account-renewal-en.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="Preferred and backup purchases in the renewal queue">
+    <img src="/illustrations/account-renewal-en.svg?v=20261127-1" alt="Preferred and backup purchases in the renewal queue" width="1120" height="1100" loading="lazy">
   </a>
-  <figcaption>Interface simulation · Fictional data</figcaption>
+  <figcaption>Two purchases of the same plan with example prices</figcaption>
 </figure>
 
-1. Open [Plan Management](https://oixcloud.com/user/bought), find the record you want to renew after expiry, and select its **Auto-renewal** switch.
-2. Check the quoted renewal price and whether another record will have auto-renewal turned off before confirming.
-3. Check the saved switch and **Renewal Price**, and ensure balance plus commission covers it before expiry. Turning the switch on does not buy the next period immediately.
-4. After expiry is processed, verify the new active record, validity and traffic. An enabled switch alone does not prove renewal succeeded.
+1. Open [Plan Management](https://oixcloud.com/user/bought) and turn on **Renewal queue** for the purchase you want to renew. New purchases start with it off. Purchases with the same plan type, tier, node permissions and billing period can share a queue. New entries go last.
+2. In **Renewal queue**, check the **Preferred** record and its price. Drag records, use the up or down arrow key, or select **Sort cheapest first** to sort once at current prices. Select **Remove** to stop renewing one record. Empty the queue to stop all automatic renewals.
+3. Keep enough balance, including commission, to cover the price. Joining normally saves immediately. If service has expired, no pending plan can take over and this record becomes the first eligible purchase, the panel asks you to confirm any nonzero charge. It can be collected at the next scheduled check.
 
-There is currently no separate early-renewal action. To prepare another period in advance, add a plan from the store and compare its current purchase price with your existing renewal price; they may differ.
+**Purchased plans run first.** At expiry, the system skips ineligible records and tries the first eligible renewal. If funds fall short, it does not charge a cheaper backup. A successful renewal keeps its priority and other records wait. Check the new active record for its expiry and data allowance.
 
-Only one plan has automatic renewal on at a time. The system attempts to renew it only when the active plan expires and no eligible queued plan remains; running out of traffic before expiry does not trigger automatic renewal. New purchases start with automatic renewal off; turn it on in your purchase records when you want it. Turning it on for another purchase record turns it off for the plan that had it.
-
-You can turn automatic renewal on or off at any time. Turning it off does not forfeit the renewal price, and you can turn it back on any time before the plan ends. Turning it on requires the product to support automatic renewal and your account to still meet the plan's purchase requirements.
-
-When a plan with automatic renewal on is replaced by a queued plan, it becomes **Awaiting auto-renewal**: it is no longer in use, it is queued after your other plans, and it keeps its stock unit. When the active plan expires and no eligible queued plan remains, the waiting record renews at its recorded renewal price if renewal eligibility, billing-period and funding requirements are met. Insufficient funds or lost renewal eligibility ends it. If you turn its automatic renewal off, it no longer shows this status and ends when the active plan expires with no eligible queued replacement; turning it back on before then allows renewal if the requirements are met.
-
-For example, A is awaiting auto-renewal, B is active, and no other plan is queued. If B runs out of traffic early, the system first attempts a reset according to B's setting; otherwise B stays at low speed. Renewal of A is attempted only when B expires.
+A queued renewal displaced by a pending plan shows **Awaiting auto-renewal**. Removing it leaves active service and purchased plans intact. An eligible record can rejoin until it ends. To buy the next period in advance, add a plan from the store at the current purchase price.
 
 ### Automatic traffic reset {#traffic-reset}
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-traffic-reset-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="Check the cost of each automatic reset">
-    <img src="/illustrations/account-traffic-reset-en.svg?v=20261105-3" alt="Check the cost of each automatic reset" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/account-traffic-reset-en.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="Check the cost of each automatic reset">
+    <img src="/illustrations/account-traffic-reset-en.svg?v=20261127-1" alt="Check the cost of each automatic reset" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>Interface simulation · Fictional data</figcaption>
 </figure>
@@ -332,18 +325,31 @@ The reset price follows the product's current price for resetting that billing p
 
 ## Benefit credits {#benefit-credits}
 
-Annual Pass Gold plans or above, including annual pay-as-you-go plans, earn benefit credits at expiry. Developer accounts are excluded:
+Annual Pass Gold plans and above, including annual pay-as-you-go plans, can earn benefit credits at expiry or when you [end the active plan early](#end-plan). Developer accounts are excluded.
 
-| Plan state at expiry | Credits awarded |
+| Plan state at settlement | Credits awarded |
 | --- | --- |
 | Ordinary plan with more than 0 but less than 50% of traffic remaining | 5 |
 | Ordinary plan with at least 50% of traffic remaining | 10 |
 | Ordinary plan with exhausted traffic | None |
 | Pay-as-you-go plan meeting the eligibility requirements above | Fixed 5 |
 
-**Ordinary plans earn no benefit credits once their traffic runs out, even if low-speed access continues until expiry, and plans whose traffic was reset for a fee during the period earn none either.** After renewal or switching, the new plan is assessed separately under the conditions above. Plans ended early, refunded or not yet activated earn no credits.
+A paid traffic reset during the period, a refunded record or a plan that was never activated earns no credits. An ordinary plan that runs out of data still earns zero if used at low speed until expiry. Check your credits in the [Benefits Center](https://oixcloud.com/user/benefits) or [redeem UHD access](/en/account/uhd).
 
-Check your balance and redemption options in the [Benefits Center](https://oixcloud.com/user/benefits).
+### End an active plan early {#end-plan}
+
+**Confirming permanently forfeits the remaining time and data, gives no refund and removes this record from the renewal queue.** The next pending plan starts immediately if available. Otherwise, proxy service stops.
+
+1. In [Plan Management](https://oixcloud.com/user/bought), find the **Active** record and select **End early**.
+2. Check the credits shown (possibly zero) and which plan starts next, or whether service will stop. To proceed, select **End plan and claim credits**.
+3. Check the active plan in Plan Management and your credit balance in the Benefits Center.
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-end-plan-en.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="Credits and service status in the early termination confirmation">
+    <img src="/illustrations/account-end-plan-en.svg?v=20261127-1" alt="Credits and service status in the early termination confirmation" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Example with no pending plan to activate</figcaption>
+</figure>
 
 ## Upgrade or use your next plan early
 
@@ -362,8 +368,8 @@ The target must also meet purchase, stock and funding requirements. Special conv
 New-rule orders with awarded purchase-gift credits cannot use this self-service action; contact support. Historical orders retain their original eligibility.
 
 <figure class="guide-figure">
-  <a href="/illustrations/account-upgrade-en.svg?v=20261105-5" target="_blank" rel="noopener" aria-label="Check upgrade cost and remaining data">
-    <img src="/illustrations/account-upgrade-en.svg?v=20261105-5" alt="Check upgrade cost and remaining data" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/account-upgrade-en.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="Check upgrade cost and remaining data">
+    <img src="/illustrations/account-upgrade-en.svg?v=20261127-1" alt="Check upgrade cost and remaining data" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>Interface simulation · Fictional plan and amounts</figcaption>
 </figure>
@@ -377,7 +383,7 @@ New-rule orders with awarded purchase-gift credits cannot use this self-service 
 
 **Changing a never-used pending plan** uses the full-period price difference without that active-upgrade fee. A positive difference is charged and a negative difference returns to account balance; the record remains Pending.
 
-The renewal price is recalculated for the target and applicable discount. Auto-renewal stays on only if it was already on and the target supports it; otherwise it is turned off or stays off. Also check whether automatic traffic reset remains available and its per-reset price.
+An upgrade or plan change removes this record from the renewal queue and recalculates its renewal price. To keep renewing it, check the new price and [add the record back](#auto-renew). Also check its automatic traffic reset setting and price.
 
 ## Manual activation and refunds to balance
 
@@ -392,7 +398,7 @@ Both actions start from a purchase record. Activation immediately switches the a
   <figcaption>Interface simulation · Fictional plan and amounts</figcaption>
 </figure>
 
-**Each manual switch deducts 2 hours from the current active plan**, with saved time rounded down to whole minutes and ordinary-plan data to whole GiB. If enough remains, the old plan becomes Pending. If not, it becomes Awaiting auto-renewal when auto-renewal is on, or ends otherwise. Repeated switches incur the loss again; an ended record cannot be recovered by switching back.
+**Each manual switch deducts 2 hours from the current active plan**, with saved time rounded down to whole minutes and ordinary-plan data to whole GiB. If enough remains, the old plan becomes Pending. If not, it becomes Awaiting auto-renewal when auto-renewal is on, or ends otherwise. Repeated switches incur the loss again; an ended record cannot be recovered by switching back. If too little remains to keep the old plan, that period is also assessed for [benefit credits](#benefit-credits).
 
 1. Open [Plan Management](https://oixcloud.com/user/bought) and select **Activate** on the pending record you want to use now. Manual activation requires at least 6 hours remaining and usable data; pay-as-you-go plans do not require a stored data allowance.
 2. Read **Notice** and check whether the old plan will become Pending, await auto-renewal or end. The illustration shows only the retention case. With no active plan, there is no old plan to replace and no switching loss to deduct.
@@ -430,8 +436,8 @@ If the button is missing, check the plan type (pay-as-you-go and developer plans
 | Use the next plan now | Manually activate a queued plan | Read the old plan's deduction/retention preview, then check the newly active record |
 | Automatically restore speed when traffic runs out | Turn on automatic traffic reset | Enable in the purchase record and ensure balance covers the reset price |
 | Raise an active quarterly, semiannual or annual tier | Upgrade when eligible, keeping the billing period | Price difference, fee, remaining validity and resulting allowance |
-| Renew a different plan when the active plan expires with an empty queue | Turn on automatic renewal for that purchase record | The plan that had it is switched off; the confirmation names it |
-| Stop automatic renewal charges | Turn off automatic renewal | The purchase record shows it off; you can turn it back on later at the same renewal price |
+| Prefer a different record at renewal | Add the eligible purchase to the renewal queue and reorder it | Check the Preferred record and its price |
+| Stop all automatic renewal charges | Remove all renewal records | The renewal queue is empty. Purchased pending plans still run in order |
 
 ## Confirm a purchase
 
@@ -462,7 +468,7 @@ If the entry is unavailable, the initial feedback window has passed or the resul
 
 Check the cause of exhaustion to verify the corresponding continuation conditions:
 
-- **At plan expiry**: Check whether an activatable plan exists in the queue first. If there are no queued plans, the plan with automatic renewal on is renewed, which may be the current plan or one awaiting auto-renewal; check that its automatic renewal is on, that balance (including commission) covers its renewal price, and that renewal eligibility and billing-period requirements are met.
+- **At expiry**, check pending plans first. If none can take over, check the preferred renewal record, eligibility, billing period and funds including commission. Insufficient funds for the preferred record do not trigger a backup charge.
 - **When traffic runs out**: Check whether an activatable plan exists in the queue first. If there are no queued plans, check whether automatic traffic reset is enabled on the active purchase record, the period supports reset, the account is allowed to purchase, and balance (including commission) covers the reset price. Automatic renewal runs only at expiry and is never triggered prematurely by running out of traffic.
 
 Manual activation, upgrade and refund options appear based on order eligibility; when an option is not offered, do not attempt to simulate it by creating duplicate orders.

@@ -10,9 +10,11 @@ Uploads and downloads both count toward usage, adjusted by the billing multiplie
 
 ## When does the allowance renew?
 
-Your allowance covers the selected plan period; it does not reset automatically each calendar month. **The plan is exhausted when either its validity ends or its traffic runs out, whichever happens first.** A future expiry date does not mean traffic remains available. Once the traffic runs out, you need to place a new plan order; if [automatic traffic reset](/en/account/plans#traffic-reset) is on, the used traffic is cleared at the reset price instead, and the expiry stays the same.
+Data is allocated for the billing period you selected. If an ordinary plan uses up its high-speed data before expiry, the following happens in order.
 
-When an ordinary plan runs out of traffic, the service first tries already purchased queued plans; without one, it resets the traffic at the reset price if automatic traffic reset is on. Automatic renewal only happens at expiry, never early because traffic ran out. Check the result before buying again. If nothing provides a replacement, the plan enters a low-speed state and remains subject to its expiry date; low-speed access does not mean the original allowance has been restored. To restore high-speed access, follow [Plans, renewals and switching](/en/account/plans) to complete a purchase and confirm that the new plan is active. If automatic traffic reset is on but the balance was short, topping up enough for the reset price triggers the reset; otherwise adding funds alone does not add traffic to an ordinary plan.
+1. The next eligible pending plan starts, if you already have one.
+2. With no pending plan, [automatic traffic reset](/en/account/plans#traffic-reset) restores the current allowance if enabled and funds cover the reset price. The expiry date stays the same.
+3. Otherwise, [low-speed access](#low-speed) applies for the rest of the period. A reset held up only by insufficient funds can proceed after a top-up. Check existing purchases before buying another plan. Automatic renewal runs only at expiry.
 
 Ordinary plans earn no benefit credits once their traffic runs out, even if low-speed access continues until expiry. See [Benefit credits](/en/account/plans#benefit-credits) for eligibility and amounts.
 

@@ -17,7 +17,7 @@ A full profile and a Provider node list serve different purposes. A Provider mus
 3. On the **oixCloud** account page, select **Refresh Nodes** in oixFlow on iPhone or iPad, or **Refresh nodes** in FlClash for oixCloud. In older FlClash for oixCloud builds with separate **Refresh** and **Sync** actions, select **Sync**. In an ordinary subscription client, update the imported URL and select the updated profile.
 4. Search for the same name again in the client. If it is still missing, include the client version, subscription format and whether the node appeared in the preview when contacting support. Keep the full subscription URL private.
 
-**If only IXP is missing**, check the subscription format first. Ordinary third-party subscriptions omit IXP. See [IXP connection options](/en/account/nodes#ixp) for managed or manual access. If your plan includes IXP but the managed client only shows default lines such as Fusion, open **Node Filter** and set IXP and any other lines you want to keep to **Only**. Check the preview and save.
+Ordinary third-party subscriptions can include **Edge, Home ISP and the account’s dedicated IPs**, subject to plan permissions, format and filters. For CIA, IXP, Fusion or GIA, sign in to a dedicated client that supports the line. If your plan includes IXP but Smart Selection only shows Fusion, retain IXP alongside the other lines you want. For your own forwarder, see [IXP connection options](/en/account/nodes#ixp).
 
 ## Configure a filter
 
@@ -43,7 +43,7 @@ A full profile and a Provider node list serve different purposes. A Provider mus
 | oixClash | **订阅管理** (Subscription Management) in the plugin's account row opens the web editor. After saving, click **更新节点** (Update Nodes) in the plugin to fetch immediately, or wait for the daily update. |
 | Other subscription clients | Update the imported address and confirm the updated profile is selected. |
 
-Names support case-insensitive regular expressions: `香港|日本` matches either word. Changing the interface language does not translate node names. Search within the preview only locates entries; it does not add a filter. Pending previews, invalid expressions and zero retained nodes prevent saving.
+Names support case-insensitive regular expressions: `香港|日本` matches either word. Changing the interface language does not translate node names. Search within the preview only locates entries; it does not add a filter. Wait for the preview and correct any invalid expressions. Saving from an official client or editing its dedicated URL requires at least one retained node.
 
 See the illustrations for [oixFlow](/en/oixflow/proxies#update-and-filter) and [FlClash for oixCloud](/en/flclash/profiles#managed-options).
 
@@ -60,7 +60,7 @@ Resetting does not increase plan permissions or make every node compatible with 
 
 ## Include Home ISP nodes {#home-isp}
 
-Home ISP default inclusion is set per node, independently of the static or dynamic IP category. Ordinary subscriptions, Smart Selection and fallback selection do not automatically add ISP nodes excluded by default. For plans with CIA, IXP, Fusion or GIA, Smart Selection contains no Home ISP nodes, even those included by default.
+Default inclusion is set per Home ISP node, whether static or dynamic. Plans with CIA, IXP, Fusion or GIA normally prefer their own lines. If none of the default lines has an available node, the fallback can include eligible Home ISP nodes marked for default inclusion. To include other eligible Home ISP nodes, explicitly retain the ISP line.
 
 1. Find the **ISP** line in the current subscription address's node filter and set it to **Only**. Set any other lines you want to **Only** as well.
 2. Add region or name conditions as needed, wait for the preview and check the intended nodes and retained count.
@@ -70,9 +70,11 @@ Region or name filters alone do not add these nodes. Restoring defaults removes 
 
 ## Which devices share a filter?
 
-Filters belong to subscription addresses. All devices using the same official client on one account share that client's subscription configuration and bound address, so they apply the same conditions on their next refresh. A device that signs in again after being signed out picks it up automatically. Different clients can have different settings.
+Filters are saved on the **subscription URL**. Devices signed in to the same official client with email/password or Google share that client’s binding. A manually created Access Token uses its own binding. Devices using the same URL see filter changes on their next refresh.
 
-The first official-client save creates and binds a dedicated client address when necessary without overwriting the main subscription's conditions. If you select a personal address in **Subscription Configuration** for the client or Access Token on [Access Token Management](https://oixcloud.com/user/token), the client uses that address's filter instead.
+- If a personal subscription URL is already bound, saving or resetting filters edits that URL.
+- Without a personal binding, the first save from a recognized official client creates or reuses its dedicated URL and leaves the main subscription’s filters intact.
+- A third-party tool or script using an unbound Access Token can read and preview filters. To save or reset them, open [Access Token Management](https://oixcloud.com/user/token) and select a personal subscription URL for that token’s subscription configuration.
 
 ## Account custom rules {#account-rules}
 
@@ -88,9 +90,9 @@ Saving an empty list deletes the account rules, so keep anything you need first.
 
 | Symptom | Check |
 | --- | --- |
-| No filter entry | Check the client source/version and plan eligibility (rank 20 or higher). |
-| Preview works but saving is rejected | Read the error. An Access Token sign-in may have no writable subscription address; select a personal address in that token's **Subscription Configuration** on the website, or sign in to the official client with email/password or Google. |
-| Old nodes after saving | Check sync completion, selected profile and whether another device changed the shared filter. |
+| No filter entry | Check that you have a plan and use a client that supports filters. Pass Iron can filter the nodes it has access to |
+| Preview works but saving is rejected | Read the error. If it asks for a separate URL, bind the current token to a personal subscription as described above |
+| The old nodes still appear | Check the URL in use, the sync result and whether another device using the same URL edited the filters |
 | Dedicated IP absent | Confirm it is retained in the preview; an empty official-client filter does not mean every node. |
 | Old region parameters have no effect | Official smart subscriptions use visual filters; ordinary addresses with a filter also ignore legacy region, name and mode parameters. |
 

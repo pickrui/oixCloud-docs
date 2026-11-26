@@ -29,7 +29,7 @@ Google 入口目前适用于支持该功能的 oixFlow iPhone / iPad 版本和 F
 
 ## 收到「新设备登录」提醒时怎么办？ {#device-approval}
 
-客户端用邮箱/密码、Google 或 Access Token 登录成功后，这台设备立即可以获取节点，不需要确认码、邮箱验证码、验证器动态码或网页批准，也不再有「临时放行」状态。两步验证只用于登录网站，不影响客户端登录
+客户端用邮箱/密码、Google 或 Access Token 登录成功后，这台设备立即可以获取节点，无需在网页上批准。启用两步验证后，网站密码登录和部分账户操作会要求输入验证器动态码
 
 「新设备登录」提醒会通过邮件和已绑定的 Telegram 发送，里面写明客户端、设备指纹和时间。若不认识这台设备，点提醒中的链接打开对应记录
 
@@ -183,7 +183,7 @@ Passkey 用于网站登录，不是客户端 Access Token，也不是 TOTP 验�
 
 ## 哪些内容不能公开？
 
-不要分享密码、Access Token、完整订阅地址、节点密码或证书私钥，截图和日志先隐藏这些内容。订阅泄露时在订阅页使用「重置」，然后更新所有设备的订阅与连接参数；该操作不会让 Access Token 或已登录的设备失效，Token 泄露需在令牌页单独重新生成或删除
+密码、Access Token、完整订阅地址、节点密码和证书私钥都应从截图和日志中隐藏。地址泄露时，先按[下表](#泄露后的对应处理)确认是个人订阅还是主订阅，再撤销相应地址
 
 ## 长期未登录的账户会被清理吗？
 
@@ -193,9 +193,24 @@ Passkey 用于网站登录，不是客户端 Access Token，也不是 TOTP 验�
 
 登录网站或客户端，或保持登录后的有效访问，可更新登录活动。仍有生效或有效待激活套餐、待处理提现或付款等未结事项时，会暂缓自动清理；封禁账户不按这套空闲规则自动删除。请以账户通知和当前状态为准
 
-[打开 Access Token 管理](https://oixcloud.com/user/token)
+## 注销账户 {#delete-account}
+
+**注销无法撤销**。所有设备会退出登录，订阅地址和令牌失效，购买及充值记录无法再查询。账户内的套餐、余额和佣金作废，不予退款。若只想撤销一次登录，请使用[已登录客户端](#signed-in-clients)
+
+1. 打开[账户设置](https://oixcloud.com/user/edit#settings-delete)，点「前往注销」，核对要删除的账户邮箱。如果页面提示有待处理的付款、套餐、提现、奖励或独享 IP 保证金，先处理提示的事项。受限且有生效套餐时，可通过服务单联系支持
+2. 用 Passkey 验证，或输入当前密码及已启用的两步验证码。两种方式都要点「发送验证码」，填写账户邮箱收到的验证码（10 分钟内有效）
+3. 确认愿意永久注销后，勾选已了解后果，点「确认删除」。成功后会返回登录页
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-delete-account-zh.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="注销前核对账户、邮箱验证码和确认选项">
+    <img src="/illustrations/account-delete-account-zh.svg?v=20261127-1" alt="注销前核对账户、邮箱验证码和确认选项" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>示例使用 Passkey 验证身份</figcaption>
+</figure>
 
 ## 停用设备或 Token
+
+打开 [Access Token 管理](https://oixcloud.com/user/token)，找到要停用的登录记录或 Token
 
 - 若要撤销邮箱/密码或 Google 登录，按[下线步骤](#signed-in-clients)操作。共用该凭据的设备都需要重新登录
 - 若要停用 Access Token，在「Access Token」中找到它，核对确认框里的设备后删除。若仍有设备或脚本需要使用它，可以[重新生成](#refresh-client-token)，再填入新值
@@ -204,10 +219,17 @@ Passkey 用于网站登录，不是客户端 Access Token，也不是 TOTP 验�
 
 | 泄露内容 | 对应操作 |
 | --- | --- |
-| 某条个人订阅地址 | 在订阅管理删除或更换该地址，并更新使用它的客户端 |
-| 主订阅地址或连接参数 | 使用页面的「重置连接参数 & 主订阅地址」，阅读影响说明后更新所有相关设备 |
+| 某条个人订阅地址 | 到[订阅管理](https://oixcloud.com/user/sub_manage)删除泄露的地址。需要继续使用时新建地址并更新客户端。若对方可能已经下载节点配置，再重置连接参数并更新所有相关设备 |
+| 主订阅地址或节点连接参数 | 在[订阅管理](https://oixcloud.com/user/sub_manage)找到「主订阅」，点「重置」并确认，立即更新所有设备的订阅或托管配置。重置会更换连接参数和主地址，个人订阅地址仍可拉取新配置，已登录设备和 Access Token 继续有效 |
 | Access Token | 在令牌页重新生成或删除对应的 Access Token；重置订阅地址不能代替这一步 |
 | 陌生设备登录 | 打开[新设备登录提醒](#device-approval)中的链接，撤销对应的登录或 Access Token。若怀疑密码泄露，请[修改密码](#change-password) |
 | 登录密码 | 按 [修改密码说明](#change-password) 重新登录客户端，更新 Access Token、主订阅与 Passkey；不要只换订阅 URL |
+
+<figure class="guide-figure">
+  <a href="/illustrations/account-subscription-reset-zh.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="主订阅上的重置与个人订阅上的删除">
+    <img src="/illustrations/account-subscription-reset-zh.svg?v=20261127-1" alt="主订阅上的重置与个人订阅上的删除" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>手机订阅为示例名称，订阅 Token 已隐藏</figcaption>
+</figure>
 
 提交排查材料时保留错误和域名等必要信息，隐藏订阅路径中的密钥、登录 Token、节点密码、证书私钥及完整请求认证头

@@ -174,6 +174,14 @@
           "link": "/account/rewards"
         },
         {
+          "text": "UHD 权益",
+          "link": "/account/uhd"
+        },
+        {
+          "text": "佣金转余额与提现",
+          "link": "/account/commission"
+        },
+        {
           "text": "流量与计费",
           "link": "/account/traffic"
         },
@@ -404,6 +412,14 @@
         {
           "text": "Reward links and purchase gifts",
           "link": "/en/account/rewards"
+        },
+        {
+          "text": "UHD benefits",
+          "link": "/en/account/uhd"
+        },
+        {
+          "text": "Commission transfers and withdrawals",
+          "link": "/en/account/commission"
         },
         {
           "text": "Traffic and billing",

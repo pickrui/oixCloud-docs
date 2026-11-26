@@ -9,8 +9,11 @@ description: 按当前任务查找套餐、流量、节点、订阅与账户安�
 | --- | --- |
 | 在线充值、使用充值码或核对到账 | [充值与到账](/account/plans#top-up) |
 | 购买、续费或切换套餐 | [购买、续费与切换](/account/plans) |
+| 提前结束当前套餐并核对权益额度 | [提前结束并结算](/account/plans#end-plan) |
 | 使用折扣代码、购买后绑定或核对循环折扣 | [折扣代码](/account/plans#coupons) |
 | 自行领取奖励、生成链接送人或核对购买赠礼 | [奖励链接与购买赠礼](/account/rewards) |
+| 兑换、关联或延长 UHD 账户 | [UHD 权益](/account/uhd) |
+| 将邀请佣金转入余额或提取 USDT | [佣金转余额与提现](/account/commission) |
 | 核对流量扣除、低速档位和限速原因 | [流量与计费](/account/traffic) |
 | 比较节点类型与连接方式 | [节点与连接方式](/account/nodes) |
 | 在客户端使用 IXP，或通过云主机接入 | [IXP 节点接入方式](/account/nodes#ixp) |
@@ -22,6 +25,7 @@ description: 按当前任务查找套餐、流量、节点、订阅与账户安�
 | 仅使用 IPv4 出口或调整 WARP | [IPv4 Only 与 WARP](/account/unlock) |
 | 选择流媒体地区、恢复节点默认或排查播放 | [流媒体解锁](/account/unlock#streaming-regions) |
 | 管理登录、令牌、Passkey 和两步验证 | [账户与令牌安全](/account/security) |
+| 永久删除账户 | [注销账户](/account/security#delete-account) |
 | 理解积分、资源限制与恢复条件 | [公平使用](/account/fair-use) |
 
 账户操作在 [用户中心](https://oixcloud.com/user) 完成；遇到问题时，先按 [故障排查](/help/) 核对现象

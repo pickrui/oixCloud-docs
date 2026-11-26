@@ -693,20 +693,15 @@
       "20 天": "20 d"
     },
     "account-renewal": {
-      "使用中": "Active",
-      "季付": "Quarterly",
-      "续费价格": "Renewal Price",
-      "自动续费": "Auto-renewal",
-      "自动重置流量": "Automatic traffic reset",
-      "每次 ¥60.00": "¥60.00 each",
-      "90 天": "90 d",
-      "激活": "Activate",
-      "剩余时间": "Time Left",
-      "剩余流量": "Data Left",
       "套餐管理": "Plan Management",
-      "我的套餐": "My Plans",
-      "购买套餐": "Buy Plan",
-      "20 天": "20 d"
+      "使用中": "Active",
+      "续费队列": "Renewal queue",
+      "低价优先排序": "Sort cheapest first",
+      "季付 · ¥100.00": "Quarterly · ¥100.00",
+      "季付 · ¥80.00": "Quarterly · ¥80.00",
+      "首选": "Preferred",
+      "备选": "Backup",
+      "移出": "Remove"
     },
     "account-traffic-reset": {
       "使用中": "Active",
@@ -722,7 +717,8 @@
       "套餐管理": "Plan Management",
       "我的套餐": "My Plans",
       "购买套餐": "Buy Plan",
-      "20 天": "20 d"
+      "20 天": "20 d",
+      "续费队列": "Renewal queue"
     },
     "account-purchase": {
       "购买套餐": "Buy Plan",
@@ -821,10 +817,79 @@
       "自动续费": "Auto-renewal",
       "剩余时间": "Time Left",
       "20 天": "20 d",
-      "剩余流量": "Data Left"
+      "剩余流量": "Data Left",
+      "续费队列": "Renewal queue"
     },
     "flclash-login": {
       "注册": "Register"
+    },
+    "account-end-plan": {
+      "套餐管理": "Plan Management",
+      "使用中": "Active",
+      "提前结束": "End early",
+      "提前结束并结算": "End plan and claim credits",
+      "本次结算 5 枚权益额度": "5 benefit credits on settlement",
+      "没有待激活套餐，结束后代理服务将停止": "No pending plan. Your proxy service will stop.",
+      "剩余时间和流量作废，不退款": "Remaining time and data are forfeited without a refund",
+      "该记录将移出续费队列": "This record will leave the renewal queue"
+    },
+    "account-delete-account": {
+      "注销账户": "Delete Account",
+      "要注销的账户": "Account to delete",
+      "注销后无法恢复，余额和佣金不予退还": "Deletion is permanent. Balance and commission are forfeited.",
+      "Passkey 已验证": "Passkey verified",
+      "邮箱验证码": "Email code",
+      "发送验证码": "Send code",
+      "我已了解删除账户的后果，确认要删除我的账户": "I understand the consequences and confirm that I want to delete my account",
+      "确认删除": "Confirm Delete"
+    },
+    "account-uhd": {
+      "权益中心": "Benefits Center",
+      "兑换 Emby 权益": "Redeem Emby Access",
+      "5 枚权益额度兑换 365 天 Emby 服务": "Redeem 365 days of Emby access for 5 benefit credits.",
+      "UHD 账号到期后会自动删除": "UHD accounts are deleted automatically after expiry.",
+      "立即兑换": "Redeem Now",
+      "关联已有 UHD 账号": "Link an existing UHD account",
+      "已有 UHD 账号可直接关联，不消耗额度": "Already have a UHD account? Link it at no credit cost."
+    },
+    "account-commission": {
+      "申请提现": "Withdraw Commission",
+      "确定提现 ¥200.00 吗？": "Withdraw ¥200.00?",
+      "通过 TRC-20 提现到收款地址": "To the receiving address over TRC-20",
+      "（地址已省略）": "(Address omitted)",
+      "手续费 ¥20.00，实际到账 ¥180.00": "Fee ¥20.00, you receive ¥180.00",
+      "账户余额欠费，先用佣金抵扣 ¥10.00": "Your negative balance uses ¥10.00 of commission first.",
+      "佣金共减少 ¥210.00": "Total commission used: ¥210.00",
+      "用 Passkey 或当前密码验证": "Verify with a passkey or your current password"
+    },
+    "account-relay-fallback": {
+      "入口节点": "Entry node",
+      "目标节点": "Destination node",
+      "目标不可用时允许入口直接出站": "Allow direct egress from the entry when targets are unavailable",
+      "没有可用目标时阻止连接": "Block connections when no relay target is available.",
+      "开启后可能使用入口 IP": "When enabled, traffic may use the entry IP.",
+      "编辑单条规则": "Edit individual rule",
+      "保存修改": "Save changes"
+    },
+    "account-subscription-reset": {
+      "订阅管理": "Subscription Management",
+      "主订阅": "Main Subscription",
+      "手机订阅": "Phone",
+      "订阅 Token": "Subscription Token",
+      "编辑": "Edit",
+      "重置": "Reset",
+      "删除": "Delete",
+      "个人订阅": "Personal Subscriptions"
+    },
+    "account-reward-link": {
+      "权益中心": "Benefits Center",
+      "奖励链接": "Reward Links",
+      "生成领取链接": "Generate claim link",
+      "我生成的链接": "Your generated links",
+      "链接 1": "Link 1",
+      "等待领取": "Awaiting Claim",
+      "领取页面": "Claim page",
+      "复制链接": "Copy Link"
     }
   },
   "scenes": {
@@ -1945,20 +2010,20 @@
       ]
     ],
     "account-renewal": [
-      "Check the renewal target and price",
-      "Website → Plan Management → Auto-renewal",
+      "Choose the renewal order and preferred record",
+      "Website → Plan Management → Renewal queue",
       [
         [
-          "Choose the renewal target",
-          "Only one record can have auto-renewal on; enabling another turns the old one off."
+          "Add the purchases",
+          "Eligible purchases with matching plan terms can share the queue."
         ],
         [
-          "Check switch and price",
-          "Shown enabled. Enabling alone does not charge the next period."
+          "Set the order",
+          "Drag records or sort once at current renewal prices."
         ],
         [
-          "Renewal waits for expiry",
-          "Queued plans take priority. Running out of data early does not trigger renewal."
+          "Check the first choice",
+          "Pending plans run first. At expiry, the first eligible renewal is tried."
         ]
       ]
     ],
@@ -2029,8 +2094,8 @@
           "Ordinary upgrades keep used data and expiry; they do not grant a fresh full allowance."
         ],
         [
-          "Verify the updated record",
-          "Check the target, balance, renewal price and switch after confirmation."
+          "Review renewal again",
+          "An upgrade or plan change removes this record from the renewal queue. Add it again if needed."
         ]
       ]
     ],
@@ -2119,8 +2184,134 @@
           "First purchase may cost less. Renewal price floors apply."
         ],
         [
-          "Enable renewal separately",
-          "Shown on. Having a code does not mean this switch is on."
+          "Join the renewal queue",
+          "This record is in the queue. A recurring coupon alone does not add it."
+        ]
+      ]
+    ],
+    "account-end-plan": [
+      "Check credits and service before ending a plan",
+      "Website → Plan Management → End early",
+      [
+        [
+          "Choose the active plan",
+          "Select End early on the record you want to end."
+        ],
+        [
+          "Read the outcome",
+          "This example earns 5 credits. With no pending plan, proxy service stops."
+        ],
+        [
+          "Confirm permanent loss",
+          "Remaining time and data are forfeited without a refund."
+        ]
+      ]
+    ],
+    "account-delete-account": [
+      "Review the account before deletion",
+      "Website → Account Settings → Go to account deletion",
+      [
+        [
+          "Check the account",
+          "Check the email. Plans, balance, commission and purchase records will be lost."
+        ],
+        [
+          "Complete both checks",
+          "Verify your identity, then enter the code sent to the account email."
+        ],
+        [
+          "Confirm deletion",
+          "Acknowledge the consequences and confirm only when ready."
+        ]
+      ]
+    ],
+    "account-uhd": [
+      "Redeem or link a UHD account",
+      "Website → Benefits Center → Emby",
+      [
+        [
+          "Check cost and days",
+          "New redemptions need an active plan. Regular accounts spend benefit credits."
+        ],
+        [
+          "New to UHD",
+          "Select Redeem Now and choose your UHD username and password."
+        ],
+        [
+          "Already use UHD",
+          "Link the existing account. Successful linking uses no benefit credits."
+        ]
+      ]
+    ],
+    "account-commission": [
+      "Check the payout and the debt offset",
+      "Website → Withdraw or transfer to balance → Withdraw Commission",
+      [
+        [
+          "Check the destination",
+          "Use the recipient’s network and check the full receiving address."
+        ],
+        [
+          "Check what you receive",
+          "A ¥200 request with a ¥20 fee pays the equivalent of ¥180 in USDT."
+        ],
+        [
+          "Check total commission",
+          "In this example ¥10 also settles debt, so commission falls by ¥210."
+        ]
+      ]
+    ],
+    "account-relay-fallback": [
+      "Choose the exit when relay targets fail",
+      "Website → Internal Relay → Edit individual rule",
+      [
+        [
+          "Check both nodes",
+          "The client connects to the entry. The target provides the intended exit."
+        ],
+        [
+          "Keep a fixed exit",
+          "With this switch off, new connections stop if no matched target is available."
+        ],
+        [
+          "Check before enabling",
+          "Traffic may leave from the entry IP. Test with a new connection after saving."
+        ]
+      ]
+    ],
+    "account-subscription-reset": [
+      "Identify the leaked subscription URL",
+      "Website → Subscription Management → Personal subscriptions",
+      [
+        [
+          "Find the affected URL",
+          "Identify the exact URL. The example personal subscription is named Phone."
+        ],
+        [
+          "Delete a personal URL",
+          "Create a replacement if needed and update the devices that used it."
+        ],
+        [
+          "Reset the main URL",
+          "Reset rotates the main URL and node credentials. Personal URLs stay valid."
+        ]
+      ]
+    ],
+    "account-reward-link": [
+      "Use a reward link yourself or share it",
+      "Website → Benefits Center → Reward Links",
+      [
+        [
+          "Check existing links",
+          "Use a suitable unclaimed link to avoid spending another slot."
+        ],
+        [
+          "Claim it yourself",
+          "Open the claim page and confirm the receiving account and plan."
+        ],
+        [
+          "Give it to a friend",
+          "Copy the link for the recipient. Each link can be used once."
         ]
       ]
     ]

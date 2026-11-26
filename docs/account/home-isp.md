@@ -19,7 +19,7 @@ Home ISP 与 Edge 使用相同套餐权限，在 [节点列表](https://oixcloud
 
 ## 获取与加入订阅 {#subscription}
 
-默认下发由服务方逐节点设置，与静态／动态分类无关。含 CIA、IXP、Fusion 或 GIA 的套餐，智能优选不包含 Home ISP；未默认下发的 ISP 也不会因默认节点为空而被自动补入
+静态和动态 Home ISP 都由节点单独决定是否默认下发。含 CIA、IXP、Fusion 或 GIA 的套餐通常优选自身线路；默认线路没有可用节点时，允许默认下发的 Home ISP 也可能出现。要加入其他有权限的家宽节点，按下方步骤手动选择 ISP
 
 <figure class="guide-figure">
   <a href="/illustrations/oixflow-filter-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 同时保留入口线路与 ISP">
@@ -65,7 +65,7 @@ Home ISP 的默认下发开关只决定订阅是否自动包含节点。配置�
 2. 首个位置选择当前网络可用、页面允许作为入口的节点，例如有权限的 Fusion 或 GIA 节点
 3. 最后一个位置选择目标 Home ISP，先使用「入口 → Home ISP」两跳；路径最多 17 个节点，不能重复同一条目
 4. 核对优先级和预览，点击「保存路径」。若影响共用路段，先检查涉及的其他路径再确认
-5. 更新客户端订阅或托管配置，选择**入口节点**，建立新连接并验证目标服务的实际出口
+5. 更新客户端订阅或托管配置，选择**入口节点**，建立新连接并验证目标服务的实际出口。需要固定家宽出口时，保持单条规则中的[入口直接出站](/account/relay#relay-fallback)关闭
 
 只想让指定网站走家宽时，应改用 [按域名/IP 的单条规则](/account/relay#domain-rules)。不要先保留同一入口的无条件路径，再叠加条件规则并认为其他流量会自动绕过家宽；先核对已有规则、优先级与共用路段
 

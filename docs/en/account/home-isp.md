@@ -19,7 +19,7 @@ Neither category assigns an IP exclusively to your account or guarantees availab
 
 ## Subscriptions and filters {#subscription}
 
-The service sets default inclusion per node, independently of its static or dynamic category. Smart Selection excludes Home ISP on plans with CIA, IXP, Fusion or GIA. ISP nodes excluded by default are not added merely because the default selection is empty.
+Default inclusion is set per Home ISP node for both static and dynamic IPs. Plans with CIA, IXP, Fusion or GIA normally prefer their own lines. If none of those lines has an available node, Home ISP nodes enabled for default inclusion may appear. To add other eligible residential nodes, select ISP as described below.
 
 <figure class="guide-figure">
   <a href="/illustrations/oixflow-filter-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Retain the entry line and ISP together">
@@ -65,7 +65,7 @@ These steps configure a complete path for entry traffic. WARP, external relays a
 2. Select a working node that the page permits as an entry, such as an available Fusion or GIA node.
 3. Select Home ISP last. Start with `Entry → Home ISP`; a path allows up to 17 nodes without repeating the same entry.
 4. Check priority and preview, then choose **Save path**. Review affected paths before confirming a shared-segment change.
-5. Update the client subscription or managed profile, select the **entry node**, and verify the destination's actual exit with a new connection.
+5. Update the client subscription or managed profile, select the **entry node**, and verify the destination's actual exit with a new connection. If the residential exit must stay fixed, keep [direct egress from the entry](/en/account/relay#relay-fallback) off on the individual rule.
 
 For selected websites only, use a [domain/IP-specific individual rule](/en/account/relay#domain-rules) instead. Do not retain an unconditional path from the same source, add a conditional rule, and assume other traffic will bypass Home ISP. Check existing rules, priority and shared segments first.
 
