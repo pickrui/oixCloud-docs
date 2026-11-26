@@ -25,7 +25,7 @@ Sign in directly in the client on each device, using any of these methods:
 
 All three methods provide the same features, and the device can load nodes as soon as it signs in. To use the same client on another device, sign in there with email/password or Google, or paste a saved or newly created Access Token. The website never shows client sign-in credentials, so there is no sign-in token to copy.
 
-Google sign-in is available in supported oixFlow versions for iPhone/iPad and in supported versions of FlClash for oixCloud. Apple TV continues to [receive the account from an iPhone](/en/oixflow/apple-tv). Follow the email/password or token instructions for Helper, OpenClash and oixClash; do not assume they have a Google button.
+Maintained versions of oixFlow for iPhone/iPad, FlClash for oixCloud, macOS Helper, OpenClash with account integration and oixClash for Merlin offer Google sign-in. Apple TV [receives the account from an iPhone or iPad](/en/oixflow/apple-tv#approval). Linux Helper reads credentials from its [configuration file](/en/other/helper-linux).
 
 ## What to do about a “New device signed in” alert {#device-approval}
 
@@ -52,7 +52,7 @@ Open [Access Token Management → Signed-in clients](https://oixcloud.com/user/t
 
 1. Find the sign-in under its client using the device name and last use.
 2. Select **Sign out** on that row and check the devices listed in the confirmation. Confirming immediately revokes the credential and signs out every device that uses it.
-3. Sign in again on the devices you still use. For Apple TV, sign in on your iPhone or iPad and [sync the account](/en/oixflow/apple-tv#approval). Devices using the same client continue to share its existing **Subscription Configuration** and node filters.
+3. Sign in again on the devices you still use. For Apple TV, [sync the account](/en/oixflow/apple-tv#approval) from the iPhone or iPad after signing in again. Email/password or Google sign-in keeps that client’s existing **Subscription Configuration**. A manually created Access Token uses [its bound URL](/en/account/subscriptions).
 
 To sign out every device at once, [change your password](#change-password).
 
@@ -60,7 +60,7 @@ To sign out every device at once, [change your password](#change-password).
 
 1. Select **Sign in with Google** in the client, then continue in the system authentication window or browser.
 2. Choose the Google account matching the email of your existing oixCloud account. This entry signs in existing accounts; it does not register new ones.
-3. Complete verification and allow the browser to return to the original client. Use **Return to App** on the completion page if it does not return automatically.
+3. After verification, return to the client that started sign-in. On a phone, tap **Return to App** if offered. For a router, open the plugin at its LAN address, allow the pop-up and keep the original tab open. For macOS Helper, complete verification in a browser on the same Mac.
 4. Wait for account information and managed nodes before connecting. If the flow expires or return verification fails, start again from the client instead of reopening an old completion page.
 
 Both the client and website must support this flow. If the button is unavailable, use email/password or an Access Token. Never enter your Google password into the oixCloud password field. When you sign up with Google, the result page shows the initial password once and the site also tries to email it to you. To obtain an oixCloud password, check Gmail, including spam, for that email. If you cannot find it, reset the password: when signed in, open [Account Settings → Password](https://oixcloud.com/user/edit#settings-password) and select **Forgot current password** under **Current Password** in the form that opens; when signed out, select **Forgot password** on the [website sign-in page](https://oixcloud.com/auth/login). After a reset, all clients must sign in again, the main subscription URL changes, two-step verification is turned off and passkeys are removed.
@@ -70,7 +70,7 @@ Both the client and website must support this flow. If the button is unavailable
 | Symptom | Next step |
 | --- | --- |
 | No button in the client | Check the installed version and release channel. Both client and website must support the flow; maintained source does not establish availability in your stable build |
-| Browser does not return | Use **Return to App** on the completion page. Start a new client flow after expiry or failed return verification |
+| Browser does not return | On a phone, tap **Return to App** if offered. For a router, allow pop-ups and return to the original plugin tab. For Helper, return to the Mac that started sign-in. Restart an expired flow from the client. |
 | Email not registered | Choose the Google account matching your existing oixCloud email, or register on the website first |
 | Signed in but no nodes | Wait for the managed profile, then check the plan, node filter and sync result |
 

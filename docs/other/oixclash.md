@@ -40,18 +40,17 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 ## 3. 登录 oixCloud
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-login-zh.svg?v=20261126-1" target="_blank" rel="noopener" aria-label="oixClash · 登录账号">
-    <img src="/illustrations/oixclash-login-zh.svg?v=20261126-1" alt="oixClash · 登录账号" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/oixclash-login-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="oixClash · 登录账号">
+    <img src="/illustrations/oixclash-login-zh.svg?v=20261127-3" alt="oixClash · 登录账号" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
-在「oixCloud 账号」选择邮箱和密码登录；也可以在网站 [新增 Access Token](/account/security#manual-token) 后选择登录令牌粘贴。Google 登录用户获取账户密码的方法与禁止客户端邮箱/密码登录的设置见 [登录说明](/account/security#first-client-login)
+在路由器的「oixCloud 账号」选择一种登录方式：
 
-登录方式：
-
-- 登录令牌：粘贴在 oixCloud 网站新增 Access Token 时复制的完整内容，不是订阅地址
-- 邮箱和密码：填写 oixCloud 账户的邮箱与密码，密码只用于本次登录，不保存在路由器上
+- **登录令牌**：粘贴网站[新增 Access Token](/account/security#manual-token)时显示的完整令牌，再点「登录」
+- **邮箱和密码**：填 oixCloud 的邮箱和密码，再点「登录」。密码只用于本次登录
+- **Google 登录**：通过路由器的局域网地址或 `router.asus.com` 打开插件页面，点「Google 登录」，允许弹窗，选择与已有 oixCloud 账号相同的邮箱。保持原页面打开，等它显示账号信息
 
 登录后显示账号、套餐、到期时间与流量。登录成功后即可获取托管节点，不需要批准设备；首次登录时账户会收到新设备登录提醒，见 [新设备登录与提醒](/account/security#device-approval)
 
@@ -100,8 +99,16 @@ oixClash 0.0.3 起提供「内存优化」。首次安装时，检测到总内�
 
 ## 6. 节点、筛选与更新
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixclash-filter-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="oixClash 账号旁的「节点筛选」和页面底部的「更新节点」">
+    <img src="/illustrations/oixclash-filter-zh.svg?v=20261127-3" alt="oixClash 账号旁的「节点筛选」和页面底部的「更新节点」" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
+</figure>
+
 - 切换节点：点「打开控制面板」，在策略组中选择节点；选择会在重启后保留
-- 节点筛选：点账号栏的「订阅管理」打开网站编辑器，保存后在插件点「更新节点」立即获取，或等待每天自动更新。节点筛选对使用同一账户的所有 oixClash 生效，见 [订阅与筛选](/account/subscriptions)
+- **节点筛选**：点账号旁的「节点筛选」，在网站预览并保存。回到插件点「更新节点」，再到控制面板查看。插件运行时也会每天更新，未运行时会在下次开启时获取
+- 账号旁的「刷新」只更新套餐、流量等账号信息。筛选随这台路由器所用的订阅地址生效，见[订阅与筛选](/account/subscriptions)
 - 更新插件：开启插件后每天检查一次新版本，也可以点版本号旁的「检查更新」。出现「更新到 x.y.z」后点击，插件会下载并校验安装包再安装，期间代理会短暂中断
 
 若插件内更新提示无法校验安装包，或旧版自检提示缺少 `sha256sum`，请从本页下载对应平台的安装包，通过「软件中心 → 离线安装」更新。安装包校验不通过时不要继续安装，重新下载并核对 SHA256

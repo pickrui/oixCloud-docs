@@ -16,7 +16,7 @@ FlClash for oixCloud 可以使用兼容的第三方节点和订阅，普通导�
 
 | 配置来源 | 导入入口 | 更新方式 |
 | --- | --- | --- |
-| oixCloud 托管配置 | 登录 oixCloud 后自动导入 | 通过账户与托管配置管理入口刷新、同步 |
+| oixCloud 托管配置 | 登录 oixCloud 后自动导入 | 在「oixCloud」页点「刷新节点」 |
 | 第三方订阅 URL | 「配置 → 添加配置 → 链接」，填写完整 URL | 从远程订阅同步 |
 | 本地文件 | 「配置 → 添加配置 → 文件」，选择文件 | 没有远程 URL 可供刷新 |
 
@@ -78,12 +78,21 @@ HTTP / HTTPS 代理的 `http://`、`https://` 链接请使用前面的「自定�
 
 ## 导入其他订阅或配置文件 {#other-subscription}
 
-1. 从提供方取得 Clash / mihomo 兼容订阅的完整 URL；账户网页、购买页和一条节点分享链接不是同一种内容
-2. 打开「配置 → 添加配置 → 链接」，填写便于区分的名称和完整 URL，确认导入。也可从「二维码」入口读取订阅链接，或选「文件」导入已经下载的 YAML 配置
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-import-link-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud 的「从链接导入」表单和保存按钮">
+    <img src="/illustrations/flclash-import-link-zh.svg?v=20261127-3" alt="FlClash for oixCloud 的「从链接导入」表单和保存按钮" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
+</figure>
+
+1. 复制提供方给出的完整 Clash / mihomo 订阅网址。使用 oixCloud 普通订阅时，到[用户中心 → 订阅地址](https://oixcloud.com/user#subscription-details)复制 Clash/Stash 主订阅那一行。Provider 地址用于给已有配置添加节点
+2. 打开「配置 → 添加配置 → 链接」，粘贴网址并确认。使用二维码时，桌面端选择二维码图片，Android 手机可直接扫码。已有 YAML 文件可选「文件」
 3. 等待下载与校验成功，在配置列表中选中新配置，启动或应用客户端
 4. 打开「代理」，在这份配置对应的策略组中选择节点，使用新连接核对规则与出口。需要用回托管节点时，在「配置」中重新选中 oixCloud 托管配置
 
-URL 订阅在该配置的操作菜单中点「同步」更新，也可在「编辑」中设置自动更新与间隔。本地文件只是导入时的副本，原文件变化不会自动更新客户端，应重新导入或编辑这份配置
+Android TV 上可选「配置 → 添加配置 → 从手机发送」。手机与电视连接同一局域网，用手机相机扫描电视显示的二维码，在打开的页面粘贴完整链接并发送，最后在电视上确认「导入」
+
+URL 订阅可在该配置菜单点「同步」，也可在「编辑」中设置自动更新。文件是导入时的副本，更新时重新导入即可
 
 ::: warning 区分「链接」与「导入配置」
 「添加配置 → 导入配置」是另一种入口：从 URL、文件或文本提取节点、策略组、规则和支持的设置，组建可编辑的「自定义配置」，不会把原 URL 保留为整份订阅的同步来源。需要持续跟随原订阅时，请使用上面的「链接」入口。**将整份配置导入已有自定义配置会替换现有节点、策略组、规则和设置**，操作前应先 [备份](/flclash/backup)，并查看「未导入」提示
@@ -140,28 +149,30 @@ oixCloud 托管配置不能作为另一份「自定义配置」的代理提供�
 <span id="手动与自动更新"></span>
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-profiles-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 更新与管理配置">
-    <img src="/illustrations/flclash-profiles-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 更新与管理配置" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-profiles-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 更新与管理配置">
+    <img src="/illustrations/flclash-profiles-zh.svg?v=20261127-3" alt="FlClash for oixCloud · 更新与管理配置" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
-打开配置操作菜单，使用「同步」更新。编辑配置时可设置自动更新及间隔；更新后检查结果，下载失败不等于已经应用了新节点
+要更新普通网址订阅，在「配置」打开那一项的操作菜单，点「同步」。等下载成功后确认当前选中的配置，再到「代理」查看节点
 
-托管节点在「oixCloud」页点「刷新节点」，这会先刷新账户，再同步托管配置。旧版分开显示「刷新」和「同步」时，选「同步」。完成后回到「代理」搜索节点名称
+要继续使用普通订阅，从该订阅的菜单更新即可。点「oixCloud → 刷新节点」会先刷新账户，成功同步后会选中并应用 oixCloud 托管配置。旧版分开显示「刷新」和「同步」时，选「同步」。完成后回到「代理」搜索节点名称
 
 ## 托管订阅选项
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-filter-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 可视化节点筛选">
-    <img src="/illustrations/flclash-filter-zh.svg?v=20261105-3" alt="FlClash for oixCloud · 可视化节点筛选" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-filter-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 可视化节点筛选">
+    <img src="/illustrations/flclash-filter-zh.svg?v=20261127-3" alt="FlClash for oixCloud · 可视化节点筛选" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
-在「oixCloud → 节点筛选」按线路、地区和名称调整，检查预览并保存。保存后会自动刷新账户并同步托管配置，等待完成后检查节点；失败时按提示处理，再在账户页点「刷新节点」。恢复默认会使用智能优选；同一账户的同款客户端共享筛选，详见 [订阅与筛选](/account/subscriptions)
+1. 打开「oixCloud → 节点筛选」，设置线路、地区或名称，等预览显示要保留的节点。要回到智能优选，点底部「恢复默认」并确认
+2. 点右上角的勾保存。客户端会刷新账户，同步成功后切换到托管配置。若同步失败，处理页面提示后点「刷新节点」重试
+3. 在「代理」核对节点。使用同一条订阅地址的设备会在下次刷新时看到相同筛选，手动 Access Token 以它绑定的地址为准。[订阅与筛选](/account/subscriptions)
 
-配置编辑页仍可调整「最小化配置」（精简规则）、TCP Fast Open 等支持项，没明确需求时保持默认。筛选不会提升套餐权限，不能保存保留节点数为零的条件
+配置编辑页仍可调整「最小化配置」（精简规则）、TCP Fast Open 等支持项，没明确需求时保持默认。筛选不会提升套餐权限，自定义条件至少要保留一个节点
 
 ## 修改配置前
 

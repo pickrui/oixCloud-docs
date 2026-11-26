@@ -44,7 +44,7 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
 
 1. 在网站[节点列表](https://oixcloud.com/user/node)搜索同一名称。网站也没有时，核对「使用中」的套餐和线路权限
 2. 网站有、客户端没有时，先看接入方式。普通第三方订阅可获取有权限且格式支持的 Edge、Home ISP 及账户独享 IP。套餐含 CIA、IXP、Fusion 或 GIA 时，用支持该线路的专用客户端登录
-3. 查看**这台设备实际使用的订阅**。在筛选预览中检查线路、地区和名称，保留要用的节点。oixFlow（iPhone / iPad）和 FlClash for oixCloud 在账户页点「刷新节点」。第三方客户端更新导入的地址，再选中该配置。其他客户端见[分客户端步骤](/account/subscriptions#missing-nodes)
+3. 查看**这台设备实际使用的订阅**。在筛选预览中检查线路、地区和名称，保留要用的节点。oixFlow（iPhone / iPad）和 FlClash for oixCloud 在账户页点「刷新节点」。第三方客户端更新导入的地址，再选中该配置。其他客户端见[分客户端步骤](/account/subscriptions#apply-filter)
 
 若首次导入提示地址无效，按[复制完整订阅地址](/start/quick-start#import-subscription)重试。使用单独创建的个人地址时，先在[订阅管理](https://oixcloud.com/user/sub_manage)核对那条地址及其筛选。曾手动重置主订阅时，使用旧主地址的设备需要换上新地址，使用个人地址或托管配置的设备需要刷新节点参数。发现地址泄露时，按[泄露后的对应处理](/account/security#泄露后的对应处理)操作
 

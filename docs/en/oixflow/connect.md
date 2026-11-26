@@ -54,17 +54,17 @@ Once signed in, the app loads managed nodes without device approval. The first s
 
 ## Your own nodes
 
-You can also use compatible private nodes or subscriptions without a managed account. Use a link, QR code or manual entry under **Proxies → Servers → Add**; local profile files use a separate import entry. See [nodes and subscriptions](/en/oixflow/proxies#single-node) for the steps and mixed use.
+For your own nodes or subscriptions, open **Proxies → Servers → Add**. Choose **Link** for a subscription URL or **File** for a node file. Then choose a node on Home and connect. [Import nodes, subscriptions or a full profile](/en/oixflow/proxies#third-party-subscription).
 
 ## Refresh and verify
 
-Pull down on the oixCloud account page to refresh account information. Use Refresh Nodes to fetch the managed nodes again after a plan or node change. Policy groups choose the exit, while routing rules decide which requests use it. Keep Rule mode enabled to apply your routing settings.
+After a plan or filter change, tap the circular **Refresh Nodes** arrow at the top right of the **oixCloud** account page and wait for the nodes to load. Pulling down refreshes account details. Update third-party subscriptions individually under **Proxies → Servers**.
 
 Open a destination after connecting and check the actual outbound in [requests and diagnostics](/en/oixflow/diagnostics). If sign-in works but the node list is empty, check your plan and node filters.
 
 ## Sign out
 
-Signing out removes local sign-in state; the website still lists the device as signed in. To end its sign-in on the server, select **Sign out** under [Signed-in clients](https://oixcloud.com/user/token#devices) on the website. Sign-ins synced over iCloud to devices such as Apple TV are signed out with it. With account sync enabled, also check the sync state on other devices.
+Confirm **Sign Out** under **oixCloud → Account Management** to clear the sign-in on this device. To revoke an email/password or Google sign-in on the server, use **Sign out** under [Signed-in clients](/en/account/security#signed-in-clients). This also signs out devices using that credential, including a synced Apple TV. Manage a manually created token in the website’s **Access Tokens** list.
 
 ## Google sign-in troubleshooting
 

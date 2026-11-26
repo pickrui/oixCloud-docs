@@ -16,7 +16,7 @@ FlClash for oixCloud supports compatible third-party nodes and subscriptions. Or
 
 | Profile source | Import | Update |
 | --- | --- | --- |
-| oixCloud managed profile | Imported when you sign into oixCloud | Account and managed-profile refresh/sync controls |
+| oixCloud managed profile | Imported when you sign in to oixCloud | Select **Refresh nodes** on the **oixCloud** page |
 | Third-party subscription URL | **Profiles → Add Profile → Link**, enter the complete URL | Sync from the remote subscription |
 | Local file | **Profiles → Add Profile → File**, select a file | No remote URL to refresh |
 
@@ -78,12 +78,21 @@ For an HTTP / HTTPS proxy expressed as an `http://` or `https://` link, use **Cu
 
 ## Import another subscription or profile file {#other-subscription}
 
-1. Obtain the complete URL for a Clash / mihomo compatible subscription. An account page, purchase page and individual node share link are different inputs.
-2. Open **Profiles → Add Profile → Link**, enter a recognizable name and the complete URL, and confirm. You can also use **QR code** to read a subscription link, or **File** to import a downloaded YAML profile.
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-import-link-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="Import from link and the Save checkmark in FlClash for oixCloud">
+    <img src="/illustrations/flclash-import-link-en.svg?v=20261127-3" alt="Import from link and the Save checkmark in FlClash for oixCloud" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>English interface simulation · Fictional data</figcaption>
+</figure>
+
+1. Copy the provider’s complete Clash / mihomo subscription URL. For an ordinary oixCloud subscription, copy the main **Clash/Stash** row under [User Center → Subscription addresses](https://oixcloud.com/user#subscription-details). The Provider URL supplies nodes to an existing profile.
+2. Open **Profiles → Add Profile → Link**, paste the URL and confirm. For a QR code, choose the image on desktop or scan it on an Android phone. Choose **File** for a downloaded YAML file.
 3. Wait for download and validation to succeed, select the new profile in the list, then start or apply the client.
 4. Open **Proxies**, select a node in this profile's groups and verify the rule and outbound with a new connection. To return to managed nodes, select the oixCloud managed profile in **Profiles** again.
 
-Use **Sync** in a URL profile's menu to update it, or set automatic updates and an interval under **Edit**. A local-file import is a copy: changes to the original file do not update the client automatically. Import it again or edit the client's copy.
+On Android TV, choose **Profiles → Add Profile → Send from phone**. Connect the phone and TV to the same network, scan the TV’s QR code with the phone camera, paste the complete link on the page and send it. Confirm **Import** on the TV.
+
+For a URL subscription, choose **Sync** in its profile menu or configure automatic updates under **Edit**. To update an imported file, import the new copy.
 
 ::: warning Distinguish "Link" from "Import config"
 **Add Profile → Import config** is a separate workflow: it extracts nodes, groups, rules and supported settings from a URL, file or text into an editable **Custom profile**, and does not retain the original URL as the sync source for the whole subscription. Use **Link** above to keep following the original subscription. **Importing a whole configuration into an existing custom profile replaces its nodes, groups, rules and settings**; [back up first](/en/flclash/backup) and review any **Not imported** notices.
@@ -140,28 +149,30 @@ Subscription URLs and node links may contain credentials. Do not post them in pu
 <span id="手动与自动更新"></span>
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-profiles-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Update and manage profiles">
-    <img src="/illustrations/flclash-profiles-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Update and manage profiles" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-profiles-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Update and manage profiles">
+    <img src="/illustrations/flclash-profiles-en.svg?v=20261127-3" alt="FlClash for oixCloud · Update and manage profiles" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
-Use **Sync** in the profile menu. Edit a profile to enable automatic updates and set an interval. Check the result: a failed download does not mean new nodes were applied.
+To update an ordinary URL subscription, open its menu under **Profiles** and select **Sync**. After the download succeeds, verify that the intended profile is selected and check its nodes under **Proxies**.
 
-For managed nodes, select **Refresh nodes** on the **oixCloud** page. This refreshes the account and then syncs the managed profile. In older builds with separate **Refresh** and **Sync** actions, use **Sync**. When it finishes, search for the node under **Proxies**.
+To keep using an ordinary subscription, update it from its own menu. **oixCloud → Refresh nodes** refreshes the account first. A successful sync selects and applies the oixCloud managed profile. In older builds with separate **Refresh** and **Sync** actions, use **Sync**. When it finishes, search for the node under **Proxies**.
 
 ## Managed options
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-filter-en.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Filter managed nodes">
-    <img src="/illustrations/flclash-filter-en.svg?v=20261105-3" alt="FlClash for oixCloud · Filter managed nodes" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-filter-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Filter managed nodes">
+    <img src="/illustrations/flclash-filter-en.svg?v=20261127-3" alt="FlClash for oixCloud · Filter managed nodes" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
-Open **oixCloud → Node Filter**, select lines, regions and names, check the preview and save. Saving starts an account refresh and managed-profile sync automatically. Wait for completion and check the nodes; if it fails, resolve the reported error and use **Refresh nodes** on the account page. Restore Default uses Smart Selection. Devices using this client type on your account share the filter; see [subscriptions and filters](/en/account/subscriptions).
+1. Open **oixCloud → Node Filter**, choose lines, regions or names and wait for the preview. To return to Smart Selection, choose **Restore default** at the bottom and confirm.
+2. Select the checkmark at the top right to save. The account refreshes, and a successful sync switches to the managed profile. If sync fails, address the reported error and select **Refresh nodes** to retry.
+3. Check the nodes under **Proxies**. Other devices using the same subscription URL receive the filter on their next refresh. A manually created Access Token uses its bound URL. [Subscriptions and filters](/en/account/subscriptions).
 
-Profile editing still offers supported options such as **Minimal Configuration** (simplified rules) and TCP Fast Open. Keep their defaults unless needed. Filtering cannot expand plan access, and conditions retaining zero nodes cannot be saved.
+Profile editing still offers supported options such as **Minimal Configuration** (simplified rules) and TCP Fast Open. Keep their defaults unless needed. Filtering cannot expand plan access, and custom conditions must keep at least one node.
 
 ## Keep personal changes
 

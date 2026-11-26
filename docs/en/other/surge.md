@@ -7,8 +7,8 @@ description: Install oixCloud Helper on macOS, choose an integration mode and co
 oixCloud Helper runs alongside Surge Mac and also supports local proxy ports and Linux. It is not an iPhone/iPad `.sgmodule` module.
 
 <figure class="guide-figure">
-  <a href="/illustrations/helper-surge-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud Helper · Apply Helper’s profile in Surge">
-    <img src="/illustrations/helper-surge-en.svg?v=20261030-en1" alt="oixCloud Helper · Apply Helper’s profile in Surge" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/helper-surge-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="oixCloud Helper · Apply Helper’s profile in Surge">
+    <img src="/illustrations/helper-surge-en.svg?v=20261127-3" alt="oixCloud Helper · Apply Helper’s profile in Surge" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -29,14 +29,14 @@ Download the [public launcher ZIP](https://github.com/pickrui/oixcloud-external-
 
 1. Download the launcher package above, or manually select the matching executable from the [latest release](https://github.com/pickrui/oixcloud-external-proxy-program/releases/latest).
 2. For the launcher package, double-click `启动 oixCloud.command` and select resident startup on first use. For a directly downloaded executable, follow the public installation guide and start it with `--tray`.
-3. Open **Account → Sign in…** from the oixCloud menu-bar icon. Sign in with email/password, or paste an [Access Token created on the website](/en/account/security#manual-token). See [client sign-in](/en/account/security#first-client-login) for obtaining an oixCloud password after Google registration and restricting client password sign-in.
-4. Wait for plan and node retrieval. The top of the menu shows progress and results; act on the specific error if an operation fails.
+3. Open the oixCloud menu-bar icon and choose **Sign in…**. Use email and password, paste the [full Access Token shown when you create it](/en/account/security#manual-token), or choose **Sign in with Google**. For Google, select the email of your existing oixCloud account in a browser on this Mac.
+4. Return to Helper and wait for nodes to load. If you just activated a plan or the list is empty, choose **Nodes → Refresh nodes**.
 
 Once signed in, Helper can load managed nodes without device approval. The first sign-in sends a new-device alert to your account; see [New devices and sign-in alerts](/en/account/security#device-approval).
 
 ## Choose an integration mode
 
-Use **Connection → Mode…**. Local port mapping is the default.
+Choose **Settings → Mode…**. Local port mapping is the default.
 
 | Mode | Where to select nodes | Intended use |
 | --- | --- | --- |
@@ -48,7 +48,7 @@ In mapping mode, Helper tells you to select nodes in Surge; it does not show the
 ## Apply in Surge and verify
 
 1. Confirm Surge Mac is installed and working.
-2. Use **Connection → Apply in Surge** in Helper and verify Surge actually switches to the generated profile.
+2. In Helper, select **Client Setup → Apply in Surge** and confirm that Surge switches to the generated profile.
 3. Enable System Proxy or Enhanced Mode in Surge as needed; start with Rule mode.
 4. Select nodes in Surge for mapping mode, or in Helper for single-port mode.
 5. Visit a target site and check its matched policy and outbound in Surge's connection records.
@@ -57,9 +57,11 @@ Keep both Helper and Surge running. A successful profile write does not necessar
 
 ## Filters, ports and maintenance
 
-**Connection → Node filter…** previews nodes by line, region and name. **Restore default** clears the draft; click **Save** afterwards. Saving fetches nodes and updates mappings, after which you should run **Apply in Surge** again.
+1. Open **Nodes → Node Filter**, choose lines, regions or names, check the preview and click **Save**. To return to Smart Selection, choose **Restore Default**, confirm and click **Save**.
+2. Helper fetches nodes and updates its mappings after saving. If you edited the filter on the website, choose **Nodes → Refresh nodes** in Helper. Other devices follow the filter for the [subscription URL they use](/en/account/subscriptions).
+3. If Surge still shows old nodes, choose **Client Setup → Reapply in Surge**. After applying manually once, you can enable **Automatically reapply Surge after node updates**. This option is off by default.
 
-Reapply after changing mode, local port, LAN authentication or filtering so Surge does not retain removed nodes or old ports. Simplified rules remain available in connection settings; old `oixParams` / `oixDefaultParams` settings no longer control node filtering.
+After changing the mode, local ports or LAN authentication, follow Helper’s prompt to apply the profile in Surge again. **Lean rules** is under **Client Setup**.
 
 For other apps and devices, see [Local ports and LAN access](/en/other/helper-mapping). For server operation, see [Linux and runtime diagnostics](/en/other/helper-linux).
 

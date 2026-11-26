@@ -22,8 +22,8 @@ Home ISP 与 Edge 使用相同套餐权限，在 [节点列表](https://oixcloud
 静态和动态 Home ISP 都由节点单独决定是否默认下发。含 CIA、IXP、Fusion 或 GIA 的套餐通常优选自身线路；默认线路没有可用节点时，允许默认下发的 Home ISP 也可能出现。要加入其他有权限的家宽节点，按下方步骤手动选择 ISP
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-filter-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 同时保留入口线路与 ISP">
-    <img src="/illustrations/oixflow-filter-zh.svg?v=20261123-1" alt="oixFlow · 同时保留入口线路与 ISP" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixflow-filter-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="oixFlow · 同时保留入口线路与 ISP">
+    <img src="/illustrations/oixflow-filter-zh.svg?v=20261127-3" alt="oixFlow · 同时保留入口线路与 ISP" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据 · 图中同时保留 Fusion 与 ISP</figcaption>
 </figure>

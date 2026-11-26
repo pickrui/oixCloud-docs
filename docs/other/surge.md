@@ -7,8 +7,8 @@ description: 在 macOS 安装 oixCloud Helper，选择接入模式并连接 Surg
 oixCloud Helper 是与 Surge Mac 配合运行的代理助手，也支持本地代理端口和 Linux。它不是 iPhone / iPad 的 `.sgmodule` 模块
 
 <figure class="guide-figure">
-  <a href="/illustrations/helper-surge-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Helper · 从菜单栏接入 Surge">
-    <img src="/illustrations/helper-surge-zh.svg?v=20261030-2" alt="Helper · 从菜单栏接入 Surge" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/helper-surge-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="Helper · 从菜单栏接入 Surge">
+    <img src="/illustrations/helper-surge-zh.svg?v=20261127-3" alt="Helper · 从菜单栏接入 Surge" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -29,14 +29,14 @@ Helper 的系统要求与 FlClash for oixCloud 不同，不要混用安装包
 
 1. 按上表下载启动包，或从 [最新发行页](https://github.com/pickrui/oixcloud-external-proxy-program/releases/latest) 手动选择对应的可执行文件
 2. 使用启动包时双击「启动 oixCloud.command」，首次使用选择「常驻启动」；直接下载发行页可执行文件时，按公开安装说明安装并以 `--tray` 启动
-3. 打开菜单栏 oixCloud 的「账户 → 登录…」，用邮箱和密码登录，或粘贴在网站 [新增的 Access Token](/account/security#manual-token)。Google 登录用户获取账户密码的方法与禁止客户端邮箱/密码登录的设置见 [登录说明](/account/security#first-client-login)
-4. 等待套餐和节点获取完成。菜单顶部有操作进度和结果，失败时查看具体原因后再处理
+3. 点菜单栏的 oixCloud 图标，选「登录…」。用邮箱和密码登录，或粘贴在网站[新增时显示的完整 Access Token](/account/security#manual-token)。已有账户也可点「使用 Google 登录」，在这台 Mac 的浏览器中选择相同邮箱
+4. 回到 Helper 等待节点加载。有套餐后仍看不到节点，可点「节点 → 更新节点」。刚开通套餐时也可直接这样刷新
 
 登录成功后 Helper 即可获取托管节点，不需要批准设备；首次登录时账户会收到新设备登录提醒，见 [新设备登录与提醒](/account/security#device-approval)
 
 ## 选择接入模式
 
-在「连接设置 → 接入模式…」选择，默认是本地多端口映射
+在「设置 → 接入模式…」选择，默认是本地多端口映射
 
 | 模式 | 节点在哪里选择 | 适合的使用方式 |
 | --- | --- | --- |
@@ -48,7 +48,7 @@ Helper 的系统要求与 FlClash for oixCloud 不同，不要混用安装包
 ## 接入 Surge 并验证
 
 1. 确认 Surge Mac 已安装并可运行
-2. 在 Helper「连接设置 → 接入 Surge」写入配置，并确认 Surge 实际切换到了这份配置
+2. 在 Helper 点「客户端接入 → 接入 Surge」，确认 Surge 已切换到这份配置
 3. 在 Surge 开启所需的系统代理或增强模式，首次使用先保留规则模式
 4. 多端口模式在 Surge 策略组选择节点；单端口模式在 Helper 选择节点
 5. 打开目标网站，在 Surge 的连接记录核对命中策略与出口
@@ -57,9 +57,11 @@ Helper 和 Surge 都需要保持运行。写入配置成功不一定表示 Surge
 
 ## 筛选、端口与日常更新
 
-「连接设置 → 节点筛选…」可按线路、地区、名称预览保留的节点；恢复默认先清空草稿，再「保存」。保存后会重新获取节点并更新映射，随后再「接入 Surge」
+1. 打开「节点 → 节点筛选」，按线路、地区或名称选择，等预览显示要保留的节点，再点「保存」。要恢复智能优选，点「恢复默认」并确认，再「保存」
+2. 保存后 Helper 会获取节点并更新映射。在网站改了筛选时，回到 Helper 点「节点 → 更新节点」。其他设备是否一起变化取决于[所用的订阅地址](/account/subscriptions)
+3. Surge 还显示旧节点时，点「客户端接入 → 重新接入 Surge」。想自动更新，可在首次手动接入后开启「节点更新后自动接入 Surge」，此选项默认关闭
 
-更改接入模式、本地端口、局域网鉴权或筛选后，重新接入 Surge，避免旧配置仍引用旧端口或已移除节点。精简规则可在连接设置中调整；旧配置的 `oixParams` / `oixDefaultParams` 不再用于节点筛选
+更改接入模式、本地端口或局域网鉴权后，按 Helper 提示重新接入 Surge。「精简规则」在「客户端接入」中设置
 
 需要供其他应用或设备使用时，见 [本地端口与局域网接入](/other/helper-mapping)；服务器运行见 [Linux 与运行诊断](/other/helper-linux)
 

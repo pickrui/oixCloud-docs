@@ -34,6 +34,8 @@ Checked against public releases on 2026-10-30. Download entries follow current r
 | I want to… | Guide |
 | --- | --- |
 | Get started | [Your first connection](/en/start/quick-start) |
+| Import my own subscription URL | [oixFlow](/en/oixflow/proxies#third-party-subscription) · [FlClash for oixCloud](/en/flclash/profiles#other-subscription) · [OpenClash](/en/other/openclash#import-url) |
+| Filter or refresh managed oixCloud nodes | [Find the controls for each client](/en/account/subscriptions#apply-filter) |
 | Import a subscription into another compatible client | [Subscriptions and filters](/en/account/subscriptions) |
 | Understand nodes, groups and traffic capture | [Core concepts](/en/start/concepts) |
 | Fix browsing after connecting | [Connection and speed troubleshooting](/en/help/troubleshooting) |

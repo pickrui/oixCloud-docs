@@ -44,10 +44,12 @@ Use the release's `SHA256SUMS` to verify a standard package or the matching `SHA
 </figure>
 
 1. Download FlClash for oixCloud from our download center, choose the package for your operating system and processor architecture, and sign in on the app's oixCloud page.
-2. Choose email/password, an existing Access Token, or **Sign in with Google** when available. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Enter your email and password and select **Sign in**, or use the link at the bottom of the form to switch to an Access Token. Wait for the active plan and managed profile and nodes to load before connecting.
-3. Choose a node or policy group under **Proxies** and keep Rule mode for everyday use. To update managed nodes, select **Refresh nodes** on the oixCloud account page. In older builds with separate **Refresh** and **Sync** actions, select **Sync**.
+2. Sign in with email and password, choose **Sign in with Google** for an existing oixCloud account, or switch to **Access Token** at the bottom of the form and paste the full token. [Google sign-in steps](/en/account/security#google-client-login).
+3. Wait for the managed profile to download. Check that **oixCloud** is selected under **Profiles**, then choose a node or group under **Proxies**. Keep **Rule** mode for everyday use.
 
-Once signed in, the client loads managed nodes without device approval. The first sign-in on a new device sends an alert to your account; see [New devices and sign-in alerts](/en/account/security#device-approval). To get an Access Token, [create one](/en/account/security#manual-token) on the website; its full value is shown only once.
+A first sign-in on a new device sends an account alert. A successful sign-in gives access to nodes included in your plan. For token sign-in, [create and save the full Access Token](/en/account/security#manual-token) when it is shown on the website. To use your own subscription, go straight to [Import another subscription](/en/flclash/profiles#other-subscription).
+
+After a plan or filter change, select **Refresh nodes** on the **oixCloud** page. In older builds with separate **Refresh** and **Sync** actions, select **Sync**.
 
 ## Capture application traffic
 

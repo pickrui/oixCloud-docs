@@ -1,5 +1,5 @@
 ---
-description: "添加和更新第三方节点、Clash 或 Surge 订阅，以及与 oixCloud 托管节点混用的操作步骤"
+description: "导入和更新 Clash、Surge 或 sing-box 节点，筛选 oixCloud 托管节点"
 ---
 
 # 节点与订阅管理
@@ -27,8 +27,8 @@ description: "添加和更新第三方节点、Clash 或 Surge 订阅，以及�
 ### 添加单个第三方节点 {#single-node}
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-add-node-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 从链接添加自己的节点">
-    <img src="/illustrations/oixflow-add-node-zh.svg?v=20261123-1" alt="oixFlow · 从链接添加自己的节点" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixflow-add-node-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="oixFlow · 从链接添加自己的节点">
+    <img src="/illustrations/oixflow-add-node-zh.svg?v=20261127-3" alt="oixFlow · 从链接添加自己的节点" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
@@ -44,16 +44,18 @@ HTTP／HTTPS 代理在「手动」中填写最清楚。「链接」入口只有�
 
 ### 添加第三方订阅 {#third-party-subscription}
 
-1. 从提供方取得完整的 Clash／Surge 兼容订阅 URL，确认它返回节点内容，而非账户登录页或购买页
+1. 复制提供方给出的完整 Clash、Surge 或 sing-box 订阅网址。使用 oixCloud 普通订阅时，在[用户中心 → 订阅地址](https://oixcloud.com/user#subscription-details)复制对应格式的主订阅；使用托管节点可直接[登录账户](/oixflow/connect)
 2. 打开「代理 → 服务器 → 添加 → 链接」，粘贴 URL，点「继续」；订阅二维码也可从「二维码」入口读取
 3. 若提供方要求 `Remnawave HWID`，先了解开启后会经 HTTPS 向该订阅发送本机设备标识，再按需开启；普通导入无此要求时保持关闭
 4. 等待下载和解析完成，在「服务器」中展开新增订阅，核对名称与节点数量，再在主页选择其中的节点并验证连接
 
-这个入口保存订阅来源，供后续更新；从 Clash／Surge 内容中提取受支持的节点，**不会同时安装那份配置的全部策略组和分流规则**。部分条目不支持时，可能只导入其余可用节点；在「活动 → 事件」查看跳过条目及原因，不能把“添加成功”理解为完整兼容
+「链接」会保存订阅网址，之后可在该订阅上点「更新」。客户端会提取支持的节点，如有条目跳过，可到「活动 → 事件」查看原因。要连同策略组和规则一起导入，请按下面的完整配置步骤操作
 
 ### 从配置文件导入 {#profile-file}
 
-保持「规则」模式，再打开「代理 → 策略 → 路由规则 → 更多 → 导入规则集」；文件导入不在「添加代理」的方法列表中。此入口可识别受支持的 Clash YAML（`.yaml`／`.yml`）和 Surge 配置（如 `.conf`）中的节点、策略组与规则
+只导入文件里的节点，打开「代理 → 服务器 → 添加 → 文件」，点「继续」选择文件。导入的节点可独立使用，之后要更新内容需重新导入文件
+
+要连同策略组和规则一起导入，保持「规则」模式，打开「代理 → 策略 → 路由规则 → 更多 → 导入规则集」，选择兼容的 Clash YAML 或 Surge 配置文件
 
 **完整配置可能增加影响现有流量的规则、策略组和相关资源**。仅想增加节点时，优先使用上面的节点订阅入口；需要导入完整配置时，先保留当前来源或可恢复副本，再选择文件，查看导入摘要和不支持项后确认。导入后分别在「服务器」「策略」和「路由规则」中核对结果，用新请求检查匹配顺序与出口
 
@@ -63,7 +65,7 @@ HTTP／HTTPS 代理在「手动」中填写最清楚。「链接」入口只有�
 
 支持此功能的版本可打开 `oixflow://add-proxy?link=…` 或 `anywhere://add-proxy?link=…` 链接；2.1.6（520）起也可在添加代理页粘贴、扫描或输入完整的一键导入链接。这里的省略号仅示意格式，不可直接用于导入
 
-按导入页核对其中携带的是单节点还是订阅，再确认保存，回到列表检查新增条目。链接可能包含节点凭据或订阅密钥，不要交给公开转换网站。没有对应入口或无法识别时，确认安装版本，或使用提供方给出的原始节点／订阅链接
+在导入页核对带入的节点链接或订阅网址，点「继续」，回到列表检查新增条目。链接可能包含节点凭据或订阅密钥，不要交给公开转换网站。没有对应入口或无法识别时，确认安装版本，或使用提供方给出的原始节点／订阅链接
 
 ## 与 oixCloud 托管节点一起使用 {#managed-mix}
 
@@ -116,8 +118,8 @@ Hollow 节点由托管账户下发，不能通过第三方订阅或分享链接�
 ## 更新与筛选
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-filter-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 筛选线路、地区与名称">
-    <img src="/illustrations/oixflow-filter-zh.svg?v=20261123-1" alt="oixFlow · 筛选线路、地区与名称" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixflow-filter-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="oixFlow · 筛选线路、地区与名称">
+    <img src="/illustrations/oixflow-filter-zh.svg?v=20261127-3" alt="oixFlow · 筛选线路、地区与名称" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -142,7 +144,9 @@ Hollow 节点由托管账户下发，不能通过第三方订阅或分享链接�
 
 ### 刷新托管节点与筛选 {#update-managed}
 
-在「oixCloud → 节点筛选」按线路、地区和名称设置条件，查看预览后保存，客户端会重新获取托管节点。恢复默认会回到智能优选；筛选不会增加套餐权限，同一账户的同款客户端会共享设置，详见 [订阅与筛选](/account/subscriptions)
+1. 打开「oixCloud → 节点筛选」，按线路、地区或名称选择，等预览显示要保留的节点
+2. 点右上角「保存」，回到账户页等待托管节点刷新。要回到智能优选，点「恢复默认」并确认，再点「保存」
+3. 回到主页选择节点。其他设备使用同一条订阅地址时，会在下次刷新时看到相同筛选。手动 Access Token 以它绑定的地址为准，见[订阅与筛选](/account/subscriptions)
 
 账户页「刷新节点」和托管筛选只管理托管来源，不会替第三方订阅更新。更新第三方节点时也不需要删除托管订阅或退出账户
 

@@ -34,6 +34,8 @@ description: 按设备与应用查找连接和设置教程
 | 我想要 | 阅读教程 |
 | --- | --- |
 | 准备开始使用 | [第一次使用](/start/quick-start) |
+| 导入自己的订阅网址 | [oixFlow](/oixflow/proxies#third-party-subscription) · [FlClash for oixCloud](/flclash/profiles#other-subscription) · [OpenClash](/other/openclash#import-url) |
+| 筛选或刷新 oixCloud 托管节点 | [查看各客户端的入口与保存步骤](/account/subscriptions#apply-filter) |
 | 把订阅导入其他兼容客户端 | [订阅与筛选](/account/subscriptions) |
 | 区分节点、策略组与流量接管 | [基础概念](/start/concepts) |
 | 排查已连接但无法访问 | [连接与速度排查](/help/troubleshooting) |

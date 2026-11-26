@@ -3,8 +3,8 @@
 Complete [installation and sign-in](/en/other/surge) first. The default loopback listener is for Surge or another proxy app on the same Mac.
 
 <figure class="guide-figure">
-  <a href="/illustrations/helper-lan-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixCloud Helper · Set ports and LAN access">
-    <img src="/illustrations/helper-lan-en.svg?v=20261030-en1" alt="oixCloud Helper · Set ports and LAN access" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/helper-lan-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="oixCloud Helper · Set ports and LAN access">
+    <img src="/illustrations/helper-lan-en.svg?v=20261127-3" alt="oixCloud Helper · Set ports and LAN access" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -17,7 +17,7 @@ Complete [installation and sign-in](/en/other/surge) first. The default loopback
 | `7100` | Mixed proxy in menu-bar single-port mode |
 | Starting at `7200` | Per-node listeners in mapping mode |
 
-Check actual values under **Connection → Local port…**. After changing them, update consuming clients and run **Apply in Surge** again.
+Check the ports under **Settings → Local port…**. After changing them, update the clients that use those ports, then choose **Client Setup → Apply in Surge**.
 
 The default configuration service is `http://127.0.0.1:6172`:
 
@@ -31,11 +31,11 @@ The default configuration service is `http://127.0.0.1:6172`:
 | `/health` | HTTP-service liveness check |
 | `/status` | Runtime and mapping status |
 
-Use **Copy local node list URL** for local apps expecting a node list. **Export OpenSurge configuration** produces a different import format, not a universal profile for every client.
+Under **Client Setup**, use **Copy local node list URL** for a local app that expects a node list, or choose **Export OpenSurge config** for import into OpenSurge.
 
 ## Access from trusted LAN devices
 
-1. Set a dedicated username/password under **Connection → LAN authentication…**.
+1. Set a dedicated username and password under **Settings → LAN authentication…**.
 2. Enable **Allow LAN access** and permit the required trusted-LAN traffic through the system firewall.
 3. On the other device, use the Helper computer's LAN IP, not `127.0.0.1`. Choose the configuration or proxy port according to the task.
 4. Supply HTTP Basic credentials when retrieving protected profiles, or HTTP/SOCKS5 proxy credentials for the proxy protocol in use.

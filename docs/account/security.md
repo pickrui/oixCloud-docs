@@ -25,7 +25,7 @@ description: "账户与令牌安全的操作步骤、适用范围与常见问题
 
 三种方式登录后的功能完全一样，登录成功后这台设备立即可以获取节点。同类客户端换到新设备时，同样在新设备上用邮箱/密码或 Google 登录，或粘贴已保存或新增的 Access Token；网站上不显示客户端的登录凭据，也不能从网页复制登录 Token
 
-Google 入口目前适用于支持该功能的 oixFlow iPhone / iPad 版本和 FlClash for oixCloud。Apple TV 继续通过 [iPhone 同步账户](/oixflow/apple-tv)；Helper、OpenClash、oixClash 按各自教程选择邮箱/密码或 Token，不假定都有 Google 按钮
+提供 Google 登录的维护版本包括 oixFlow（iPhone / iPad）、FlClash for oixCloud、macOS Helper、带账户集成的 OpenClash 和 Merlin 的 oixClash。Apple TV 从 [iPhone 或 iPad 同步账户](/oixflow/apple-tv#approval)。Linux Helper 在[配置文件](/other/helper-linux)中填写凭据
 
 ## 收到「新设备登录」提醒时怎么办？ {#device-approval}
 
@@ -52,7 +52,7 @@ Google 入口目前适用于支持该功能的 oixFlow iPhone / iPad 版本和 F
 
 1. 在对应客户端下，按设备名称和最近使用时间找到要撤销的登录记录
 2. 点该行的「下线」，核对确认框里列出的设备。确认后，这份凭据立即失效，所有共用它的设备都会下线
-3. 在仍需使用的设备上重新登录。Apple TV 可从已重新登录的 iPhone 或 iPad [同步账户](/oixflow/apple-tv#approval)。同一客户端的设备会继续共用原来的「订阅配置」和节点筛选
+3. 在仍需使用的设备上重新登录。Apple TV 可从已重新登录的 iPhone 或 iPad [同步账户](/oixflow/apple-tv#approval)。用邮箱/密码或 Google 重新登录同款客户端会沿用原来的「订阅配置」，用手动 Access Token 则以[该令牌绑定的地址](/account/subscriptions)为准
 
 要让所有设备一起退出，[修改登录密码](#change-password)
 
@@ -60,7 +60,7 @@ Google 入口目前适用于支持该功能的 oixFlow iPhone / iPad 版本和 F
 
 1. 在客户端登录页点击「使用 Google 登录」，在系统认证窗口或浏览器中继续
 2. 选择与已有 oixCloud 账户邮箱一致的 Google 账户。此入口只登录已有账户，不会自动注册新账户
-3. 完成验证后允许返回原客户端；若浏览器没有自动返回，点击完成页的「返回 App」
+3. 验证完成后回到发起登录的客户端。手机浏览器若显示「返回 App」，点它返回。路由器请用局域网地址打开插件，允许弹窗并保留原标签页；macOS Helper 请在同一台 Mac 的浏览器完成验证
 4. 等待账户信息和托管节点加载，再建立连接。超时或返回验证失败时，从客户端重新发起，不重复打开旧完成页
 
 Google 登录需要客户端和网站同时支持。若当前版本没有入口，继续使用邮箱/密码或 Access Token；不要把 Google 密码填进 oixCloud 的密码框。用 Google 注册时，结果页会显示一次初始密码，网站也会尝试发到邮箱。需要账户密码时，可在 Gmail（包括垃圾邮件）查找这封邮件；找不到时重置密码：已登录时打开 [账户设置 → 登录密码](https://oixcloud.com/user/edit#settings-password)，在展开的表单里「当前密码」下方点「忘记当前密码」，未登录时在 [网站登录页](https://oixcloud.com/auth/login) 点「忘记密码」。重置后所有客户端需要重新登录，主订阅地址会更换，两步验证会关闭，Passkey 会清除
@@ -70,7 +70,7 @@ Google 登录需要客户端和网站同时支持。若当前版本没有入口�
 | 现象 | 下一步 |
 | --- | --- |
 | 客户端没有按钮 | 核对安装版本和发行渠道；需要客户端与网站同时支持，维护源码中的功能不代表已进入所用稳定版 |
-| 浏览器没有返回客户端 | 使用完成页的「返回 App」；流程超时或返回校验失败时，从客户端重新发起 |
+| 浏览器没有返回客户端 | 手机可点完成页的「返回 App」。路由器请检查弹窗权限并回到原插件页，Helper 请回到发起登录的 Mac。若流程已超时，从客户端重新发起 |
 | 提示邮箱未注册 | 选择与现有 oixCloud 账户邮箱一致的 Google 账户，或先在网站完成注册 |
 | 已登录但没有节点 | 等待托管配置载入，核对套餐、节点筛选和同步结果 |
 

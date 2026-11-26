@@ -6,13 +6,13 @@ For Linux / NAS, use the public container image `ghcr.io/pickrui/oixcloud-extern
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/helper-linux-en.svg?v=20261103-1" target="_blank" rel="noopener" aria-label="oixCloud Helper · Run and diagnose Helper on Linux or Docker">
-    <img src="/illustrations/helper-linux-en.svg?v=20261103-1" alt="oixCloud Helper · Run and diagnose Helper on Linux or Docker" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/helper-linux-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="oixCloud Helper · Run and diagnose Helper on Linux or Docker">
+    <img src="/illustrations/helper-linux-en.svg?v=20261127-3" alt="oixCloud Helper · Run and diagnose Helper on Linux or Docker" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
-Follow the [public Docker guide](https://github.com/pickrui/oixcloud-external-proxy-program/blob/main/docs/docker.md#english) to obtain `compose.yaml`, `config.example.json` and the custom rules file. Copy the example to `config.json` and set your credentials and LAN authentication. Keep real configurations out of Git. Permissions must let container UID/GID `10001` read the file while restricting other users.
+Follow the [public Docker guide](https://github.com/pickrui/oixcloud-external-proxy-program/blob/main/docs/docker.md#english) for `compose.yaml`, `config.example.json` and the custom rules file. Copy the example to `config.json`. Set `accessToken` to the [full Access Token shown when you create it](/en/account/security#manual-token), or use `email` and `password`. Set LAN credentials separately. Allow container UID/GID `10001` to read the file and restrict other users’ access.
 
 In the Compose directory, run:
 
@@ -59,7 +59,9 @@ Configure LAN authentication before non-loopback access. Subscription and proxy 
 
 ## Filters and troubleshooting
 
-Linux has no menu-bar filter editor. Change the filter on the website or in macOS Helper on the same account; it is applied when a client next fetches a configuration or node list, with up to 30 seconds of node caching. Polling `/status` does not cause a refresh.
+1. In [Subscription Management](https://oixcloud.com/user/sub_manage), edit the URL the container actually uses, or change the filter in macOS Helper using **that same URL**. For a manually created Access Token, check its [subscription binding](/en/account/subscriptions).
+2. Save, then fetch the local profile or node list again in the client using Helper. Repeated requests can reuse a successful result for 30 seconds. Mapping mode also refreshes periodically in the background.
+3. Read `lastSuccessAt`, `nodeCount` and `mappingCount` under `/status`, then connect through a retained node. Reading status shows the last result.
 
 | Symptom | Check |
 | --- | --- |

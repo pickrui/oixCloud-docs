@@ -22,8 +22,8 @@ Neither category assigns an IP exclusively to your account or guarantees availab
 Default inclusion is set per Home ISP node for both static and dynamic IPs. Plans with CIA, IXP, Fusion or GIA normally prefer their own lines. If none of those lines has an available node, Home ISP nodes enabled for default inclusion may appear. To add other eligible residential nodes, select ISP as described below.
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-filter-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Retain the entry line and ISP together">
-    <img src="/illustrations/oixflow-filter-en.svg?v=20261123-1" alt="oixFlow · Retain the entry line and ISP together" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixflow-filter-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="oixFlow · Retain the entry line and ISP together">
+    <img src="/illustrations/oixflow-filter-en.svg?v=20261127-3" alt="oixFlow · Retain the entry line and ISP together" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation · Fictional data · Both Fusion and ISP are retained in this example</figcaption>
 </figure>

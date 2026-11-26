@@ -6,13 +6,13 @@ Linux / NAS 使用公开容器镜像 `ghcr.io/pickrui/oixcloud-external-proxy-pr
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/helper-linux-zh.svg?v=20261103-1" target="_blank" rel="noopener" aria-label="oixCloud Helper · Linux / Docker Helper 运行与状态检查">
-    <img src="/illustrations/helper-linux-zh.svg?v=20261103-1" alt="oixCloud Helper · Linux / Docker Helper 运行与状态检查" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/helper-linux-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="oixCloud Helper · Linux / Docker Helper 运行与状态检查">
+    <img src="/illustrations/helper-linux-zh.svg?v=20261127-3" alt="oixCloud Helper · Linux / Docker Helper 运行与状态检查" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
-按 [公开 Docker 教程](https://github.com/pickrui/oixcloud-external-proxy-program/blob/main/docs/docker.md) 获取 `compose.yaml`、`config.example.json` 与自定义规则文件，复制示例为 `config.json` 后填写自己的凭据与局域网鉴权。不要把真实配置提交到仓库；权限需允许容器 UID/GID `10001` 读取，同时限制其他用户访问
+按[公开 Docker 教程](https://github.com/pickrui/oixcloud-external-proxy-program/blob/main/docs/docker.md)取得 `compose.yaml`、`config.example.json` 和自定义规则文件，将示例复制为 `config.json`。在 `accessToken` 填入网站[新增时显示的完整 Access Token](/account/security#manual-token)，也可用 `email` 和 `password` 登录。局域网鉴权另行设置。让容器 UID/GID `10001` 可读，并限制其他用户访问
 
 在 Compose 所在目录执行：
 
@@ -59,7 +59,9 @@ curl --fail http://127.0.0.1:6172/status
 
 ## 更新筛选与定位问题
 
-Linux 没有菜单栏筛选界面；在网站或同账户的 macOS Helper 修改筛选，客户端下次获取配置或节点列表时生效，节点缓存最多 30 秒。轮询 `/status` 不会促使刷新
+1. 在网站[订阅管理](https://oixcloud.com/user/sub_manage)编辑容器实际使用的订阅地址，或在使用**同一条地址**的 macOS Helper 调整筛选。手动 Access Token 可在网站的[订阅配置](/account/subscriptions)核对绑定
+2. 保存后，在使用 Helper 的客户端重新获取本地配置或节点列表。短时间重复请求可能沿用最近 30 秒的成功结果；映射模式也会在后台定期更新
+3. 用 `/status` 查看 `lastSuccessAt`、`nodeCount` 和 `mappingCount`，再连接一个保留的节点。读取状态只显示上次结果
 
 | 现象 | 核对 |
 | --- | --- |

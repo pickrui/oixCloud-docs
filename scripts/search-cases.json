@@ -820,5 +820,14 @@
     "targets": [
       "/account/security.html"
     ]
+  },
+  {
+    "terms": [
+      "FlClash 从手机发送",
+      "FlClash Send from phone"
+    ],
+    "targets": [
+      "/flclash/profiles.html"
+    ]
   }
 ]

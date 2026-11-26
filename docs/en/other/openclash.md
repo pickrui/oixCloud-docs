@@ -26,9 +26,11 @@ The LuCI plugin and proxy core update separately. Updating only the core cannot 
 
 ## 2. Sign in to oixCloud
 
-Open **Services → OpenClash → Plugin Settings → oixCloud** and sign in with email/password. Alternatively, [create an Access Token](/en/account/security#manual-token) on the website, choose **Token Login** and paste the token itself, not a subscription URL. See [client sign-in](/en/account/security#first-client-login) for obtaining an oixCloud password after Google registration and restricting client password sign-in.
+Signing in downloads and selects `oixCloud.yaml` and starts or restarts OpenClash. Switching profiles briefly interrupts any traffic already using the router’s proxy.
 
-Wait for account information, profile download and core processing. The plugin creates or updates the `oixCloud - smart` subscription. Visible plan and traffic data proves account retrieval, not that the correct profile is active.
+1. Open LuCI at the router’s LAN address and go to **Services → OpenClash → Plugin Settings → oixCloud**.
+2. Sign in with email and password, or choose **Sign in with Google**, allow the pop-up and select the email of an existing oixCloud account. For **Token Login**, paste the [full Access Token shown when you create it](/en/account/security#manual-token).
+3. Keep LuCI open while the profile downloads and starts. Check that `oixCloud.yaml` is active on the status page. If the download fails, return to the oixCloud tab and select **Update Config**.
 
 Once signed in, the router can load managed nodes without device approval. The first sign-in sends a new-device alert to your account; see [New devices and sign-in alerts](/en/account/security#device-approval). Plugin 0.48.014 and earlier cannot tell devices apart, so under **Signed-in clients** on the website it shares one row with other routers on the same old version. Update the plugin and sign in again to list it separately.
 
@@ -36,18 +38,24 @@ Once signed in, the router can load managed nodes without device approval. The f
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/openclash-running-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Confirm the managed profile is running">
-    <img src="/illustrations/openclash-running-en.svg?v=20261102-3" alt="Confirm the managed profile is running" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/openclash-running-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="Confirm the managed profile is running">
+    <img src="/illustrations/openclash-running-en.svg?v=20261127-3" alt="Confirm the managed profile is running" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
-1. Find `oixCloud - smart.yaml` in the profile area on **Overview / Running Status**.
+1. Check that `oixCloud.yaml` is selected in the profile area on **Overview / Running Status**. Older plugin versions may show `oixCloud - smart.yaml`.
 2. Select it and use **Switch** if another profile is active. Wait for any resulting restart; enable the start switch if it is still stopped.
 3. Inspect logs for successful configuration loading and core startup. The core version should include `oix`.
 4. Begin with the generated profile and **Rule** mode, then select an available node or group in the dashboard.
 
-While signed in, the integrated build prioritizes the dedicated core; the separate Smart Core switch is not required. Do not pass the dedicated subscription through a third-party converter, which can discard required settings.
+While signed in, the integrated build selects the dedicated core automatically.
+
+### Import an ordinary subscription URL {#import-url}
+
+1. Under [User Center → Subscription addresses](https://oixcloud.com/user#subscription-details), copy the full main **Clash/Stash** URL. It provides a complete profile. The separate Provider URL supplies nodes to an existing profile.
+2. Add an entry under **Config Subscribe**. Fill in **Config Alias** and **Subscribe Address**, save, then update that entry.
+3. Select the downloaded profile on the status page and switch to it. For CIA, IXP, Fusion or GIA included in your plan, use the account sign-in steps above. [Nodes available to ordinary subscriptions](/en/account/subscriptions#missing-nodes).
 
 ### Common-port capture scope {#common-ports}
 
@@ -65,8 +73,16 @@ An account card, latency result or Running status alone does not prove that devi
 
 ## 5. Updates and node filters
 
-- Update the profile from Overview or configure an automatic schedule under **Config Subscribe**; verify the selected profile and nodes afterwards.
-- Open **Node Filter** on the oixCloud tab to edit on the website. Restart OpenClash after saving to fetch immediately, or wait for the core's next subscription update. OpenClash devices on the same account share the filter; see [Subscriptions and filters](/en/account/subscriptions).
+<figure class="guide-figure">
+  <a href="/illustrations/openclash-filter-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="Node Filter and Update Config on the OpenClash account tab">
+    <img src="/illustrations/openclash-filter-en.svg?v=20261127-3" alt="Node Filter and Update Config on the OpenClash account tab" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>English interface simulation · Fictional data</figcaption>
+</figure>
+
+- **Update the managed profile** under **Plugin Settings → oixCloud → Update Config**. If `oixCloud.yaml` is running, the plugin restarts to load the update. If another profile is active or the service is stopped, the plugin saves the file. Switch to it and start the service when needed.
+- **Filter managed nodes** with **Node Filter** on the same tab. Preview and save on the website, then return to the plugin and select **Update Config**. Devices using the same subscription URL receive the changes on their next refresh. [Subscriptions and filters](/en/account/subscriptions).
+- **Update an ordinary subscription** under **Config Subscribe**, where you can also set the entry’s automatic update schedule.
 - Back up before plugin/core upgrades, and use the matching update control. A plugin upgrade and a subscription refresh are separate operations.
 
 ## 6. Replace or update the oix core {#kernel-update}
@@ -127,7 +143,7 @@ After successful verification, remove the uploaded `/tmp/clash_meta.new` if desi
 | --- | --- |
 | No oixCloud tab | Confirm that the maintained build includes account integration; a generic upstream package or a core-only update does not guarantee the tab. |
 | Core download/start fails | Read the current log, then check CPU architecture, time, space and dependencies. The dedicated core has its own download source; GitHub reachability alone is inconclusive. |
-| Signed in but no profile | Check and update `oixCloud - smart` under Config Subscribe, then explicitly switch to it. |
+| Signed in but no profile | Select **Update Config** on the oixCloud tab, check the download or startup message, then look for `oixCloud.yaml` on the status page. |
 | Router running but device fails | Check device gateway, DNS, access controls and IPv6, then inspect connections. |
 
 Before reporting, generate debug logs from **Running Log → Generate Log** and include plugin/core versions, mode and reproduction time, with credentials removed. References: [maintained OpenClash integration](https://github.com/pickrui/OpenClash/tree/dev) and [OpenClash upstream installation guide](https://github.com/vernesong/OpenClash#快速开始).

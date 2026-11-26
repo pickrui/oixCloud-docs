@@ -1,5 +1,5 @@
 ---
-description: "Add and update third-party nodes, Clash or Surge subscriptions, and use them alongside oixCloud managed nodes"
+description: "Import and update Clash, Surge or sing-box nodes and filter managed oixCloud nodes"
 ---
 
 # Nodes and subscriptions
@@ -27,8 +27,8 @@ For iPhone / iPad, using the maintained client's menus. If an option is missing,
 ### Add an individual third-party node {#single-node}
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-add-node-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="Add your own node from a link">
-    <img src="/illustrations/oixflow-add-node-en.svg?v=20261123-1" alt="Add your own node from a link" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixflow-add-node-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="Add your own node from a link">
+    <img src="/illustrations/oixflow-add-node-en.svg?v=20261127-3" alt="Add your own node from a link" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
@@ -44,16 +44,18 @@ For an HTTP / HTTPS proxy, manual entry is the clearest option. **Link** recogni
 
 ### Add a third-party subscription {#third-party-subscription}
 
-1. Obtain the complete URL for a Clash / Surge compatible subscription. It must return node content, rather than an account sign-in or purchase page.
+1. Copy the provider’s complete Clash, Surge or sing-box subscription URL. For an ordinary oixCloud subscription, copy the main URL for that format under [User Center → Subscription addresses](https://oixcloud.com/user#subscription-details). For managed nodes, [sign in to oixCloud](/en/oixflow/connect).
 2. Open **Proxies → Servers → Add → Link**, paste the URL and choose **Continue**. A subscription QR code can also be read through **QR Code**.
 3. If the provider requires **Remnawave HWID**, understand that enabling it sends this device's identifier to that subscription over HTTPS, then enable it as needed. Leave it off when ordinary import does not require it.
 4. Wait for download and parsing to finish. Expand the new subscription under **Servers**, check its name and node count, then select a node on Home and verify the connection.
 
-This workflow saves the subscription source for later updates and extracts supported nodes from Clash / Surge content. **It does not install the profile's complete policy groups and routing rules.** Unsupported items may be skipped while other nodes are imported. Check **Activity → Events** for skipped items and their reasons; successful addition does not establish full compatibility.
+**Link** saves the subscription URL so you can choose **Update** later. It imports supported nodes. Check **Activity → Events** for any skipped entries. To import groups and rules as well, follow the full-profile steps below.
 
 ### Import a profile file {#profile-file}
 
-Keep **Rule** mode, then open **Proxies → Policies → Routing Rules → More → Import Rule Set**. File import is separate from the **Add Proxy** method list. It recognizes supported nodes, groups and rules in Clash YAML (`.yaml` / `.yml`) and Surge profiles such as `.conf`.
+To import just the nodes in a file, open **Proxies → Servers → Add → File**, tap **Continue** and choose the file. This creates standalone nodes. Import the file again when its contents change.
+
+To include groups and rules, use **Rule** mode and open **Proxies → Policies → Routing Rules → More → Import Rule Set**. Choose a compatible Clash YAML or Surge profile.
 
 **A full profile can add rules, groups and related resources that affect existing traffic.** Use the node-subscription workflow above when you only need nodes. For a full-profile import, retain the current sources or a recovery copy first, select the file, review the import summary and unsupported items, then confirm. Check **Servers**, **Policies** and **Routing Rules** separately afterward, and use new requests to verify priority and outbounds.
 
@@ -63,7 +65,7 @@ A local file imports a copy and has no remote URL for updating the whole file. R
 
 Supporting versions can open `oixflow://add-proxy?link=…` or `anywhere://add-proxy?link=…` links. From 2.1.6 (520), the Add Proxy page also accepts the complete wrapper link by paste, scan or text entry. The ellipsis illustrates the format and is not a usable import link.
 
-Check whether the enclosed content is a single node or a subscription, confirm the import, and verify the new list entry. These links may contain node credentials or subscription secrets; do not send them to public conversion services. If the entry is missing or the link is unrecognized, check your installed version or use the provider's original node/subscription link.
+Review the node link or subscription URL in the import form, select **Continue**, then check the new list entry. These links may contain node credentials or subscription secrets; do not send them to public conversion services. If the entry is missing or the link is unrecognized, check your installed version or use the provider's original node/subscription link.
 
 ## Use third-party and oixCloud managed nodes together {#managed-mix}
 
@@ -116,8 +118,8 @@ Folders organize standalone nodes, not nodes inside subscriptions. They are neit
 ## Update and filter
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-filter-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Filter lines, regions and names">
-    <img src="/illustrations/oixflow-filter-en.svg?v=20261123-1" alt="oixFlow · Filter lines, regions and names" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixflow-filter-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="oixFlow · Filter lines, regions and names">
+    <img src="/illustrations/oixflow-filter-en.svg?v=20261127-3" alt="oixFlow · Filter lines, regions and names" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -142,7 +144,9 @@ A subscription offering **Preview Profile Update** is a full-profile source whos
 
 ### Refresh managed nodes and filters {#update-managed}
 
-Open **oixCloud → Node Filter**, choose lines, regions and names, inspect the preview and save to refresh managed nodes. Restore Default returns to Smart Selection. Filters do not expand plan access and are shared by the same client type on your account; see [subscriptions and filters](/en/account/subscriptions).
+1. Open **oixCloud → Node Filter** and choose lines, regions or names. Wait for the preview to show the nodes you want to keep.
+2. Tap **Save** at the top right and wait on the account page for managed nodes to refresh. To return to Smart Selection, choose **Restore Default**, confirm, then tap **Save**.
+3. Choose a node on Home. Other devices using the same subscription URL pick up the filter on their next refresh. A manually created Access Token uses its bound URL. See [Subscriptions and filters](/en/account/subscriptions).
 
 **Refresh Nodes** and managed filters handle the managed source, not third-party subscriptions. Updating third-party nodes does not require deleting the managed subscription or signing out.
 

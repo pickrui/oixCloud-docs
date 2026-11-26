@@ -40,18 +40,17 @@ If the platform does not match, the software center says so and stops; install t
 ## 3. Sign in to oixCloud
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-login-en.svg?v=20261126-1" target="_blank" rel="noopener" aria-label="oixClash · Sign in to oixClash">
-    <img src="/illustrations/oixclash-login-en.svg?v=20261126-1" alt="oixClash · Sign in to oixClash" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/oixclash-login-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="oixClash · Sign in to oixClash">
+    <img src="/illustrations/oixclash-login-en.svg?v=20261127-3" alt="oixClash · Sign in to oixClash" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English reference with Chinese control names · Chinese-only plugin UI</figcaption>
 </figure>
 
-Under **oixCloud 账号**, sign in with email and password, or [create an Access Token](/en/account/security#manual-token) on the website and paste it as the sign-in token. See [client sign-in](/en/account/security#first-client-login) for obtaining an oixCloud password after Google registration and restricting client password sign-in.
+Under **oixCloud 账号** (oixCloud account), choose a sign-in method.
 
-Sign-in methods:
-
-- **登录令牌** (sign-in token): paste the full Access Token you copied when creating it on the oixCloud website, not a subscription URL.
-- **邮箱和密码** (email and password): the password is only used for this sign-in and is not stored on the router.
+- **登录令牌** (sign-in token) — paste the full [Access Token shown when you create it](/en/account/security#manual-token), then click **登录** (Sign in).
+- **邮箱和密码** (email and password) — enter your oixCloud email and password, then click **登录**. The password is used only for this sign-in.
+- **Google 登录** (Google sign-in) — open the plugin at the router’s LAN address or `router.asus.com`. Click **Google 登录**, allow the pop-up and choose the email of your existing oixCloud account. Keep the router page open until your account appears.
 
 After signing in, the page shows the account, plan, expiry date and traffic. The router can then load managed nodes without device approval. The first sign-in sends a new-device alert to your account; see [New devices and sign-in alerts](/en/account/security#device-approval).
 
@@ -100,8 +99,16 @@ Traffic of the router itself and of guest networks does not pass through oixClas
 
 ## 6. Nodes, filters and updates
 
+<figure class="guide-figure">
+  <a href="/illustrations/oixclash-filter-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="Node Filter beside the oixClash account and Update Nodes at the bottom">
+    <img src="/illustrations/oixclash-filter-en.svg?v=20261127-3" alt="Node Filter beside the oixClash account and Update Nodes at the bottom" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>English reference with Chinese control names · Chinese-only plugin UI</figcaption>
+</figure>
+
 - **Switch nodes**: click **打开控制面板** and pick a node in a proxy group; the choice survives restarts.
-- **Node filter**: **订阅管理** (Subscription Management) in the account row opens the website editor. After saving, click **更新节点** (Update Nodes) in the plugin to fetch them now, or wait for the daily update. The filter applies to every oixClash signed in to the same account; see [Subscriptions and filters](/en/account/subscriptions).
+- **Filter nodes** using **节点筛选** (Node Filter) beside the account. Preview and save on the website, then return to the plugin, click **更新节点** (Update Nodes) and check the dashboard. A running plugin also updates daily. A stopped plugin fetches nodes the next time you enable it.
+- **刷新** (Refresh) beside the account updates plan and traffic details. The node filter follows the subscription URL used by the router. [Subscriptions and filters](/en/account/subscriptions).
 - **Update the plugin**: while it is turned on, the plugin checks for a new version daily, or click **检查更新** (Check for Updates) next to the version. When **更新到 x.y.z** (Update to x.y.z) appears, click it; the plugin downloads and verifies the package before installing, and the proxy pauses briefly.
 
 If the in-plugin updater cannot verify a package, or an older self-check reports missing `sha256sum`, download the matching package from this page and update through **软件中心 → 离线安装** (Software Center → Offline Install). Do not install a package with a checksum mismatch; download it again and verify SHA256.

@@ -3,8 +3,8 @@
 先完成 [安装与登录](/other/surge)。默认只监听本机回环地址，适合同一台 Mac 上的 Surge 或其他代理应用
 
 <figure class="guide-figure">
-  <a href="/illustrations/helper-lan-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="Helper · 本地端口与局域网访问">
-    <img src="/illustrations/helper-lan-zh.svg?v=20261030-2" alt="Helper · 本地端口与局域网访问" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/helper-lan-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="Helper · 本地端口与局域网访问">
+    <img src="/illustrations/helper-lan-zh.svg?v=20261127-3" alt="Helper · 本地端口与局域网访问" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -17,7 +17,7 @@
 | `7100` | 菜单栏单端口模式的混合代理 |
 | 从 `7200` 开始 | 多端口模式为节点分配的代理监听 |
 
-在「连接设置 → 本地端口…」查看实际配置；修改后更新引用这些端口的客户端，并重新「接入 Surge」
+在「设置 → 本地端口…」查看实际配置。修改后更新使用这些端口的客户端，再点「客户端接入 → 接入 Surge」
 
 默认配置服务是 `http://127.0.0.1:6172`，不同路径的用途如下：
 
@@ -31,11 +31,11 @@
 | `/health` | HTTP 服务存活检查 |
 | `/status` | 当前运行状态与映射信息 |
 
-「复制本机节点列表 URL」可用于需要节点列表的本机应用；「导出 OpenSurge 配置」对应另一种导入格式，不能当成任意客户端的通用配置
+在「客户端接入」可点「复制本机节点列表 URL」给需要节点列表的本机应用，或点「导出 OpenSurge 配置」供 OpenSurge 导入
 
 ## 让可信局域网设备使用
 
-1. 在「连接设置 → 局域网访问鉴权…」设置专用用户名和密码
+1. 在「设置 → 局域网访问鉴权…」设置专用用户名和密码
 2. 开启「允许局域网访问」，检查系统防火墙是否允许来自可信局域网的访问
 3. 在另一台设备填写 Helper 所在电脑的局域网 IP，而不是 `127.0.0.1`；根据用途使用配置服务端口或代理端口
 4. 配置获取需要时使用 HTTP Basic 鉴权，代理按所用 HTTP / SOCKS5 协议填写鉴权信息

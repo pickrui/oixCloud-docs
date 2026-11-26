@@ -23,27 +23,29 @@ Ordinary third-party subscriptions can include **Edge, Home ISP and the account�
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-filter-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="Filter lines, regions and names">
-    <img src="/illustrations/oixflow-filter-en.svg?v=20261123-1" alt="Filter lines, regions and names" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixflow-filter-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="Filter lines, regions and names">
+    <img src="/illustrations/oixflow-filter-en.svg?v=20261127-3" alt="Filter lines, regions and names" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>oixFlow iPhone / iPad example · Follow the relevant guide for other clients</figcaption>
 </figure>
 
-1. Open **oixCloud → Node Filter** in the client, or **Connection → Node filter…** in Helper. You can also edit the corresponding address on the website.
+1. In oixFlow or FlClash for oixCloud, open **oixCloud → Node Filter**. In macOS Helper, open **Nodes → Node Filter**. The router plugins’ **Node Filter** opens the website editor. You can also edit the device’s actual URL in [Subscription Management](https://oixcloud.com/user/sub_manage).
 2. Click a line or region to cycle through **Any → Only → Exclude**. Line and region conditions apply together.
 3. Optionally enter name-inclusion or exclusion patterns. Wait for the preview and check the retained count and intended nodes.
 4. Save, check the refresh result below, then select an available node and connect.
 
+<span id="apply-filter"></span>
+
 | Client | Applying a saved filter |
 | --- | --- |
 | oixFlow | Managed nodes refresh automatically; check the result and selected outbound. |
-| FlClash for oixCloud | Refreshes the account and syncs the managed profile automatically. If sync fails, resolve the reported error and select **Refresh nodes** on the account page to retry. |
-| oixCloud Helper | Fetches nodes and updates mappings. Run **Apply in Surge** again when using Surge. |
-| OpenClash | After saving in the web editor, restart OpenClash to fetch immediately or wait for the core's next subscription update. |
-| oixClash | **订阅管理** (Subscription Management) in the plugin's account row opens the web editor. After saving, click **更新节点** (Update Nodes) in the plugin to fetch immediately, or wait for the daily update. |
+| FlClash for oixCloud | Refreshes the account, then selects and applies the managed profile when sync succeeds. If sync fails, resolve the reported error and select **Refresh nodes** on the account page to retry. |
+| macOS Helper | Fetches nodes and updates mappings. Reapply in Surge under **Client Setup** when needed, or enable automatic reapplication after the first manual setup. |
+| OpenClash | Open **Node Filter** on the oixCloud tab. After saving on the website, select **Update Config** on that tab and check the active `oixCloud.yaml`. |
+| oixClash | Select **节点筛选** (Node Filter) beside the account. Save on the website, then select **更新节点** (Update Nodes) in the plugin. A stopped plugin fetches the update the next time you enable it. |
 | Other subscription clients | Update the imported address and confirm the updated profile is selected. |
 
-Names support case-insensitive regular expressions: `香港|日本` matches either word. Changing the interface language does not translate node names. Search within the preview only locates entries; it does not add a filter. Wait for the preview and correct any invalid expressions. Saving from an official client or editing its dedicated URL requires at least one retained node.
+Names support case-insensitive regular expressions: `香港|日本` matches either word. Changing the interface language does not translate node names. Search within the preview only locates entries; it does not add a filter. Wait for the preview and correct any invalid expressions. Custom conditions saved in an official client or on its dedicated URL must keep at least one node.
 
 See the illustrations for [oixFlow](/en/oixflow/proxies#update-and-filter) and [FlClash for oixCloud](/en/flclash/profiles#managed-options).
 
@@ -54,7 +56,7 @@ See the illustrations for [oixFlow](/en/oixflow/proxies#update-and-filter) and [
 | Official-client smart subscription | Uses Smart Selection's default lines by plan:<br>• **Plans with Fusion**: permitted Fusion and GIA (without dedicated IPs or Home ISP)<br>• **Plans with CIA / IXP**: CIA + IXP (without dedicated IPs or Home ISP)<br>• **Plans with Edge only**: Edge, Home ISP nodes eligible for default inclusion and the account's dedicated IPs<br>Only if that default set is empty does it fall back to permitted nodes eligible for default inclusion. |
 | Ordinary personal subscription URL | Returns permitted nodes eligible for default inclusion in that subscription format, without an additional custom filter. |
 
-In oixFlow, resetting a saved custom filter asks for confirmation and resets it on the server; an unsaved draft can simply be cleared. FlClash for oixCloud's **Restore default** submits the reset and starts sync. Helper clears the draft first, so you must still click **Save**.
+In oixFlow, FlClash for oixCloud and macOS Helper, confirming **Restore default** clears the draft. To replace a saved custom filter with Smart Selection, select **Save** and wait for the managed nodes to update.
 
 Resetting does not increase plan permissions or make every node compatible with every subscription format. Visual filters replace the old All Nodes, Overseas Network and Emergency Mode controls.
 

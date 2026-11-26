@@ -24,8 +24,8 @@ Apple TV 需要 tvOS 18.0 或更高版本，用于发布账户与配置的 iPhon
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/apple-tv-sync-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 在电视设置中打开同步">
-    <img src="/illustrations/apple-tv-sync-zh.svg?v=20261123-1" alt="oixFlow · 在电视设置中打开同步" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/apple-tv-sync-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="oixFlow · 在电视设置中打开同步">
+    <img src="/illustrations/apple-tv-sync-zh.svg?v=20261127-3" alt="oixFlow · 在电视设置中打开同步" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
@@ -33,14 +33,15 @@ Apple TV 需要 tvOS 18.0 或更高版本，用于发布账户与配置的 iPhon
 1. iPhone / iPad 与 Apple TV 使用同一 Apple 账户，并统一更新客户端版本
 2. 手机或平板先完成登录与节点配置
 3. 手机进入「设置 → iCloud 同步」，开启「同步到 Apple TV」
-4. 电视进入「设置」开启 iCloud 同步，按提示处理已有配置
+4. 电视已有本地节点、订阅或策略组时，开启同步会用手机或平板的配置替换它们。要接收这份配置，在电视「设置」开启「iCloud 同步」并确认
 5. 等待节点出现，选择出口并连接，在电视上的目标应用验证
 
-同步可能涉及替换电视已有配置，确认前先阅读提示。电视保留自己的连接与路由设置，可以调整规则集去向；模块不在电视同步范围内
+电视会保留原来的本地配置供关闭同步时恢复。电视的连接与路由设置可独立调整，模块由手机或平板管理
 
 ## 账户与节点来源
 
-当前电视端的 oixCloud 账户页展示从 iPhone / iPad 同步来的账户。账户登录、退出和托管节点筛选在手机或平板上完成，电视不提供同样的账户管理流程
+- **已开启 iCloud 同步**：在发布配置的 iPhone 或 iPad 登录 oixCloud，进入「oixCloud → 节点筛选」保存条件，或点「刷新节点」。第三方订阅在手机或平板的「代理 → 服务器」中更新。等电视「代理」出现新节点，再选择出口
+- **单独使用电视**：保持电视「设置 → iCloud 同步」关闭，在「代理」点添加，输入节点分享链接或兼容订阅的完整网址，点「继续」。以后在该订阅标题旁点更新按钮即可。登录托管账户仍通过手机或平板同步
 
 Tailscale 账户授权是独立功能，不能用来登录 oixCloud 托管账户
 
@@ -48,7 +49,7 @@ Tailscale 账户授权是独立功能，不能用来登录 oixCloud 托管账户
 
 Apple TV 继续通过 iPhone / iPad 的「同步到 Apple TV」登录：手机或平板需要已登录并开启这个开关，电视收到同步后即可获取节点，不需要批准，也不需要再由 iPhone 确认
 
-在网站 [已登录的客户端](https://oixcloud.com/user/token#devices) 中，电视写在登录的那台 iPhone / iPad 下面。让那台手机或平板下线时，电视会一起退出；需要恢复时，先在手机或平板重新登录，再确认「同步到 Apple TV」仍然开启。新设备登录提醒和其他客户端的说明见 [新设备登录与提醒](/account/security#device-approval)
+手机或平板用邮箱/密码或 Google 登录时，电视使用这次登录后，会列在网站[已登录的客户端](/account/security#signed-in-clients)对应记录下。点该记录的「下线」会让两端一起退出。使用手动 Access Token 时，在该 Token 下查看设备。要恢复，在手机或平板重新登录，再确认「同步到 Apple TV」仍开启
 
 ## 日常使用
 

@@ -24,8 +24,8 @@ A mainland China Apple Account cannot install or update the beta directly. For t
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/apple-tv-sync-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="Enable sync in TV settings">
-    <img src="/illustrations/apple-tv-sync-en.svg?v=20261123-1" alt="Enable sync in TV settings" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/apple-tv-sync-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="Enable sync in TV settings">
+    <img src="/illustrations/apple-tv-sync-en.svg?v=20261127-3" alt="Enable sync in TV settings" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
@@ -33,14 +33,15 @@ A mainland China Apple Account cannot install or update the beta directly. For t
 1. Use the same Apple Account on iPhone/iPad and Apple TV, with compatible updated clients.
 2. Complete account sign-in and node setup on the phone or tablet.
 3. Enable **Settings → iCloud Sync → Sync to Apple TV** there.
-4. Enable iCloud sync in TV Settings and read any replacement prompt.
+4. If the TV has local nodes, subscriptions or groups, enabling sync replaces them with the phone or tablet’s configuration. To receive it, turn on **Settings → iCloud Sync** on the TV and confirm.
 5. Wait for nodes, choose an outbound, connect and test a TV app.
 
-Sync may replace existing TV configuration. TV retains its own connection/routing settings and can change rule-set destinations. Modules are not included.
+The TV keeps its previous local configuration for restoration when you turn sync off. It keeps its own connection and routing settings. Modules stay on the phone or tablet.
 
 ## Account source
 
-The current oixCloud account page on TV displays the account received from iPhone/iPad. Account sign-in, sign-out and managed-node filtering happen there; TV does not provide the same account-management flow.
+- **With iCloud Sync on**, sign in on the publishing iPhone or iPad. Save changes under **oixCloud → Node Filter**, or tap **Refresh Nodes**. Update third-party subscriptions under **Proxies → Servers** on that device. Choose an outbound once the new nodes appear under **Proxies** on the TV.
+- **To use the TV independently**, leave **Settings → iCloud Sync** off. Under **Proxies**, select **Add**, enter a node share link or a complete compatible subscription URL, then select **Continue**. Use the update button beside the subscription heading for later updates. Managed account sign-in still goes through the phone or tablet.
 
 Tailscale device authorization is separate and cannot sign into the managed oixCloud account.
 
@@ -50,7 +51,7 @@ Tailscale device authorization is separate and cannot sign into the managed oixC
 
 Apple TV still signs in through **Sync to Apple TV** on the iPhone or iPad. The phone or tablet must be signed in with that switch on. Once the TV receives the sync, it can load nodes without approval, and the iPhone no longer needs to confirm it.
 
-Under [Signed-in clients](https://oixcloud.com/user/token#devices) on the website, the TV appears under the iPhone or iPad that signed in. Signing out that phone or tablet also signs out the TV. To restore it, sign in again on the phone or tablet and check that **Sync to Apple TV** is still on. For new-device alerts and other clients, see [New devices and sign-in alerts](/en/account/security#device-approval).
+After the TV uses an email/password or Google sign-in synced from an iPhone or iPad, it appears under that device’s entry in [Signed-in clients](/en/account/security#signed-in-clients). Signing out that entry on the website signs out both devices. If you used a manually created Access Token, look under that token instead. To restore access, sign in again on the phone or tablet and check that **Sync to Apple TV** is enabled.
 
 ## Everyday use
 

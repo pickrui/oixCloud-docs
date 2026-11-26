@@ -174,8 +174,9 @@
       "重置访问密钥": "Reset Access Key",
       "证书指纹": "Certificate Fingerprint",
       "SHA-256 · 示例指纹，不用于连接": "SHA-256 · Example only, not for connecting",
-      "支持代理链接和 Clash 或 Surge 订阅": "Supports proxy links and Clash or Surge subscriptions",
-      "通过 HTTPS 向此订阅发送此设备的标识": "Send this device’s identifier to this subscription over HTTPS."
+      "通过 HTTPS 向此订阅发送此设备的标识": "Send this device’s identifier to this subscription over HTTPS.",
+      "文件": "File",
+      "支持代理链接和 Clash、Surge 或 sing-box 订阅": "Supports proxy links and Clash, Surge or sing-box subscriptions"
     },
     "flclash": {
       "DNS 查询": "DNS queries",
@@ -343,7 +344,11 @@
       "安装": "Install",
       "Windows PowerShell (管理员)": "Windows PowerShell (Admin)",
       "正在寻找包... 找到：Microsoft Visual C++ 2015-2022": "Found package: Microsoft Visual C++ 2015-2022",
-      "正在下载与安装... 已成功安装": "Downloading and installing... Successfully installed"
+      "正在下载与安装... 已成功安装": "Downloading and installing... Successfully installed",
+      "恢复默认": "Restore default",
+      "从链接导入": "Import from link",
+      "链接": "Link",
+      "age 私钥": "Age secret key"
     },
     "helper": {
       "●   Finder   文件   编辑   显示   前往   窗口": "●   Finder   File   Edit   View   Go   Window",
@@ -362,7 +367,10 @@
       "节点": "Nodes",
       "节点筛选 · 智能优选": "Node Filter · Smart Selection",
       "账户": "Account",
-      "连接设置": "Connection"
+      "客户端接入": "Client Setup",
+      "设置": "Settings",
+      "节点更新后自动接入 Surge": "Automatically reapply Surge after node updates",
+      "配置有效": "Configuration valid"
     },
     "oixclash": {
       "UDP 转发": "UDP forwarding",
@@ -374,7 +382,6 @@
       "内存优化": "Memory optimization",
       "内部网络": "LAN",
       "向下查看设备、DNS 与自定义规则；在页面底部「保存并应用」": "Scroll for devices, DNS and rules; use Save and Apply at the bottom",
-      "在 oixCloud 网站或 App 中复制": "Copy from the oixCloud website or app",
       "外部网络": "WAN",
       "将符合端口设置的 UDP 流量交给代理": "Proxy UDP traffic within the configured port scope",
       "屏蔽 QUIC": "Block QUIC",
@@ -414,7 +421,18 @@
       "运行中  ·  内核 alpha-oix-示例  ·  UDP 已转发": "Running · Core alpha-oix-example · UDP forwarded",
       "运行状态": "Status",
       "适合小内存设备": "For low-memory devices",
-      "邮箱和密码": "Email and password"
+      "邮箱和密码": "Email and password",
+      "Google 登录": "Google sign-in",
+      "在 oixCloud 网站新增 Access Token 后粘贴": "Paste the Access Token created on the oixCloud website",
+      "账号": "Account",
+      "刷新": "Refresh",
+      "节点筛选": "Node Filter",
+      "套餐": "Plan",
+      "流量": "Traffic",
+      "更新节点": "Update Nodes",
+      "自检": "Self-check",
+      "保存并应用": "Save and apply",
+      "Google 登录仅限已注册的 oixCloud 账号": "Google sign-in is for registered oixCloud accounts."
     },
     "apple-tv": {
       "设置": "Settings",
@@ -597,7 +615,11 @@
       "当前版本：alpha-oix-20261028": "Current: alpha-oix-20261028",
       "更新 oix 内核": "Update oix Core",
       "最新：alpha-oix-latest": "Latest: alpha-oix-latest",
-      "目标路径：/etc/openclash/core/clash_meta (权限 4755)": "Target: /etc/openclash/core/clash_meta (chmod 4755)"
+      "目标路径：/etc/openclash/core/clash_meta (权限 4755)": "Target: /etc/openclash/core/clash_meta (chmod 4755)",
+      "节点筛选": "Node Filter",
+      "更新配置": "Update Config",
+      "试试手气": "Checkin",
+      "官方网站": "oixCloud Website"
     },
     "start": {
       "1. 本机流量接管": "1. Local Traffic Capture",
@@ -977,8 +999,8 @@
           "Names accept regular expressions. Preview search does not change the filter."
         ],
         [
-          "Save and refresh",
-          "This example keeps Fusion and ISP. Wait for managed nodes to refresh after saving."
+          "Save and wait for refresh",
+          "Save after restoring defaults too. Then choose a node on Home."
         ]
       ]
     ],
@@ -1257,16 +1279,16 @@
       "Sidebar → Profiles → URL profile menu",
       [
         [
-          "Check the selected profile",
-          "This is an ordinary URL profile. Managed profiles sync from the account page."
+          "Select the URL profile",
+          "Find the ordinary subscription you want to update and open its menu."
         ],
         [
-          "Use the current menu order",
-          "Edit, Override, Sync, Proxy chains, More and Delete are separate actions."
+          "Choose Sync",
+          "Wait for the download, then check the new nodes under Proxies."
         ],
         [
-          "Distinguish profile types",
-          "More includes runtime-profile actions. Managed profiles do not offer identical exports."
+          "Refresh managed nodes",
+          "For the managed profile, use Refresh nodes on the oixCloud account page."
         ]
       ]
     ],
@@ -1283,8 +1305,8 @@
           "The right-hand preview follows your conditions. Search only locates entries."
         ],
         [
-          "Save with the top-right checkmark",
-          "Restore default is at the top. Wait for account refresh and profile sync."
+          "Save with the checkmark",
+          "Restore default is at the bottom. Confirm, then save and wait for nodes to refresh."
         ]
       ]
     ],
@@ -1488,37 +1510,37 @@
     ],
     "helper-surge": [
       "Apply Helper’s profile in Surge",
-      "oixCloud menu bar → Connection",
+      "oixCloud menu bar → Client Setup",
       [
         [
-          "Sign in first",
-          "Wait for account and node retrieval before opening Connection."
+          "Refresh under Nodes",
+          "Once signed in, use Nodes to filter or refresh managed nodes."
         ],
         [
-          "Check the mode",
-          "Select nodes in Surge for mapping mode, or in Helper for single-port mode."
+          "Apply manually once",
+          "Choose Apply in Surge and check that the generated profile is active in Surge."
         ],
         [
-          "Apply and check the profile",
-          "Use Apply in Surge and confirm Surge selected the generated profile."
+          "Enable automatic updates if needed",
+          "Off by default. Turn it on to reapply when nodes change."
         ]
       ]
     ],
     "helper-lan": [
       "Set ports and LAN access",
-      "oixCloud menu bar → Connection",
+      "oixCloud menu bar → Settings",
       [
         [
-          "Distinguish the ports",
-          "Configuration delivery and proxy traffic use different ports."
+          "Check the ports",
+          "The configuration service and proxy traffic use separate ports."
         ],
         [
           "Set authentication first",
-          "Use dedicated LAN credentials, not the oixCloud account password."
+          "Set a dedicated username and password for LAN access."
         ],
         [
-          "Then allow LAN access",
-          "Other devices use this Mac’s LAN IP. Update their settings after changes."
+          "Allow LAN access",
+          "On the other device, enter this Mac’s LAN IP."
         ]
       ]
     ],
@@ -1527,12 +1549,12 @@
       "Software Center → oixClash → oixCloud account",
       [
         [
-          "Choose a sign-in method",
-          "Use an Access Token, or choose email and password."
+          "Choose how to sign in",
+          "Use an Access Token, email and password, or the Google sign-in button below."
         ],
         [
-          "Enter account credentials",
-          "Create the token on the website and paste it. It is not a subscription URL."
+          "Paste the full token",
+          "Copy the full Access Token when you create it on the website."
         ],
         [
           "Enable after sign-in",
@@ -1582,15 +1604,15 @@
       [
         [
           "Choose an input method",
-          "Choose Link, QR Code or Manual according to the information you have."
+          "Use Link for a subscription URL or File for a node file on this device."
         ],
         [
           "Paste a complete node link",
           "Do not enter an account Access Token. All addresses and credentials shown are fictional."
         ],
         [
-          "Continue and review",
-          "After saving, select the node on Home or target it in a rule."
+          "Continue and choose the node",
+          "Once the link is imported, choose the new node on Home and connect."
         ]
       ]
     ],
@@ -1621,12 +1643,12 @@
           "On iPhone: Settings → iCloud Sync → Sync to Apple TV."
         ],
         [
-          "Enable iCloud Sync on the TV",
-          "Use the same Apple account and review prompts about existing configuration."
+          "Confirm before enabling sync",
+          "Use the same Apple Account. Synced nodes replace the local nodes on the TV."
         ],
         [
-          "Wait for nodes, then connect",
-          "Choose an exit with the remote and test the destination application on TV."
+          "Update on the phone",
+          "Update mirrored subscriptions on the publishing device, then choose an outbound on TV."
         ]
       ]
     ],
@@ -1815,12 +1837,12 @@
       "LuCI → Services → OpenClash → Running status",
       [
         [
-          "Find the managed profile",
-          "oixCloud - smart.yaml comes from the integrated account workflow."
+          "Check the managed profile",
+          "Successful account sign-in downloads and selects oixCloud.yaml."
         ],
         [
-          "Switch and wait for restart",
-          "Wait for the switch to finish; use Start only if still not running."
+          "Wait after switching",
+          "Switch manually when another profile is active."
         ],
         [
           "Check core and an actual device",
@@ -1877,8 +1899,8 @@
           "Run docker compose up -d and verify mapped ports and container status."
         ],
         [
-          "Check health and readiness",
-          "Inspect /status JSON for ready state, then verify connectivity from LAN devices."
+          "Check the last refresh",
+          "Read the node and mapping counts, then connect through a retained node."
         ]
       ]
     ],
@@ -2347,6 +2369,60 @@
         [
           "Check the Provider heading",
           "Use this list when an existing profile needs a node source."
+        ]
+      ]
+    ],
+    "flclash-import-link": [
+      "Import a subscription URL",
+      "Profiles → Add Profile → Link",
+      [
+        [
+          "Copy the full URL",
+          "For oixCloud, copy the main Clash/Stash URL under Subscription addresses."
+        ],
+        [
+          "Paste and save",
+          "Use a name you recognize. Paste the URL under Link and select the checkmark."
+        ],
+        [
+          "Select the imported profile",
+          "Choose a node under Proxies. To update later, choose Sync from this profile’s menu."
+        ]
+      ]
+    ],
+    "oixclash-filter": [
+      "Filter and update router nodes",
+      "Software Center → oixClash → oixCloud account",
+      [
+        [
+          "Open Node Filter",
+          "Open it beside the account, preview the nodes on the website and save."
+        ],
+        [
+          "Update Nodes on the router",
+          "Use the button at the bottom. A stopped plugin fetches nodes when it next starts."
+        ],
+        [
+          "Refresh is for the account",
+          "Refresh beside the account updates plan and traffic details."
+        ]
+      ]
+    ],
+    "openclash-filter": [
+      "Filter and update the managed profile",
+      "Plugin Settings → oixCloud",
+      [
+        [
+          "Filter on the website",
+          "Open Node Filter, preview the nodes, save and return here."
+        ],
+        [
+          "Select Update Config",
+          "When the managed profile is active, the plugin restarts to load it."
+        ],
+        [
+          "Check the active profile",
+          "Look for oixCloud.yaml on the status page. Switch manually if another profile is active."
         ]
       ]
     ]
