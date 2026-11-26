@@ -47,6 +47,11 @@ curl --fail http://127.0.0.1:6172/status
 - **给网站指定出口**：导入 Helper 生成的 Surge 配置时，可在 Compose 挂载到 `/config/custom.conf` 的文件中[添加规则](/other/surge#routing-rules)，保存后让客户端重新获取配置。只导入节点列表时，在接收客户端设置分流规则和策略组
 - **多跳**：需要托管中继时，在网站[设置内部中继](/account/relay#内部中继)，回到接收客户端选入口节点。完成后重新访问目标，在接收客户端查看命中的规则和出口
 
+### 验证使用代理的应用 {#capture-dns}
+
+在使用代理的应用里填入宿主机地址和已发布的代理端口，打开一个网站验证。默认的 `6172` 提供配置和状态。要让整台设备走代理、切换规则模式或更改网站 DNS，在实际接管流量的客户端设置，例如 [FlClash for oixCloud](/flclash/capture) 或 [Surge Mac](/other/surge#capture-mode)，在那里也能核对新请求和出口
+
+
 ## 使用容器时检查这些设置
 
 | 项目 | 要求 |

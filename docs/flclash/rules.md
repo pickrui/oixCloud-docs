@@ -7,8 +7,8 @@ description: "覆写、策略组与附加规则的操作步骤、适用范围与
 ## 操作示意
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-rules-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 添加域名后缀规则">
-    <img src="/illustrations/flclash-rules-zh.svg?v=20261127-4" alt="FlClash for oixCloud · 添加域名后缀规则" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-rules-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 添加域名后缀规则">
+    <img src="/illustrations/flclash-rules-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 添加域名后缀规则" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -16,8 +16,8 @@ description: "覆写、策略组与附加规则的操作步骤、适用范围与
 ## 选择覆写模式
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-override-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 选择配置覆写模式">
-    <img src="/illustrations/flclash-override-zh.svg?v=20261127-4" alt="FlClash for oixCloud · 选择配置覆写模式" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-override-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 选择配置覆写模式">
+    <img src="/illustrations/flclash-override-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 选择配置覆写模式" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -38,7 +38,7 @@ description: "覆写、策略组与附加规则的操作步骤、适用范围与
 
 1. 托管或普通订阅：在「配置 → 当前配置菜单 → 覆写」选「叠加」，打开「规则 → 添加」。自定义配置：进「配置 → 当前配置菜单 → 编辑 → 规则 → 添加」
 2. 选择 `DOMAIN-SUFFIX`，填写 `example.com`，目标选 `DIRECT`、`REJECT`、已有策略组或已启用的链名。要代理这个域名，先确认目标组有可用成员
-3. 保存规则。使用订阅覆写时回到「覆写」，若出现「立即应用」就点一下。确认正在使用这份配置和规则模式，重新访问网站，在「连接」核对命中规则和出口
+3. 保存规则。使用订阅覆写时回到「覆写」，若出现「立即应用」就点一下。确认正在使用这份配置和规则模式，重新访问网站，在「请求」核对命中规则和出口
 
 想在多份订阅中复用一条规则，可进「工具 → 进阶配置 → 附加规则」创建，再在需要的配置的「覆写」中确认已启用。只给一份配置使用的例外，按上面的步骤添加
 

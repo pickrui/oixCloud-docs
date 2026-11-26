@@ -4,23 +4,23 @@ description: "DNS overrides and network settings \u2014 setup, practical steps a
 
 # DNS overrides and network settings
 
+<span id="configure-dns"></span>
+
 ## Begin with default DNS
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-dns-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Add DNS override entries">
-    <img src="/illustrations/flclash-dns-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Add DNS override entries" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-dns-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Add DNS override entries">
+    <img src="/illustrations/flclash-dns-en.svg?v=20261127-5" alt="FlClash for oixCloud · Add DNS override entries" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
-Open **Tools → Advanced Configuration → DNS**. The current interface uses the title-bar **+** (**Add override entry**) to choose individual fields. Added entries replace the corresponding DNS fields across profiles; fields not added inherit each profile's own settings. There is no longer one master switch replacing the whole DNS section.
+1. Open **Tools → Advanced Configuration → DNS**. To change the resolver for ordinary websites, select **+** at the top right and add **Nameserver**. If it is already listed, open that entry. Edit the list, enter a reachable DNS server and confirm.
+2. Keep this profile active. Use a test app to visit a fresh, resolvable domain. Open **DNS queries** in the desktop sidebar, or **Tools → More → DNS queries** on a phone or compact layout.
+3. Open the record for that domain and check **Upstream**. If the answer was cached, try another fresh domain. An app using its own encrypted DNS may send the query outside this view.
+4. To undo the change, restore the previous server list. If you added the override during this test, remove it to inherit the profile’s value again.
 
-A custom profile's own DNS settings take precedence over app-level overrides. Scripts may change the effective configuration further. Check the selected profile and its personal settings before diagnosing.
-
-1. Record the current profile, added override entries and original values.
-2. Use the title-bar **+** for the field being tested, using a reachable resolver.
-3. Reapply the profile and test the same domain.
-4. Restore the original value if it does not help. Remove a newly added entry to restore inheritance for that field, then investigate nodes or rules.
+App-level overrides apply to the selected fields across profiles. A custom profile’s own DNS settings take priority. Scripts and domain-specific policies can also affect the result. For proxy servers’ own hostnames, see the fields table below.
 
 ## Fake-IP and real addresses
 
@@ -30,7 +30,7 @@ DNS mode affects domain identification and routing. Some LAN services or apps ne
 
 Check the mixed port under **Tools → General → Port**; TUN options are under **Tools → Advanced Configuration → Network**. If a port is occupied, choose an unused one and update apps with manually configured proxy ports.
 
-DNS interception, appending system DNS and changing system DNS are different operations. For company domains, confirm resolver reachability and routing; switching to public DNS may not help.
+On macOS, **Auto-set system DNS** adjusts the network service’s DNS while TUN is running. The **Nameserver** field above chooses the core’s upstream resolver. For company domains, confirm resolver reachability and routing; switching to public DNS may not help.
 
 ## Managed-node lookups
 
@@ -65,7 +65,7 @@ The current maintained server implementation generates a FlClash for oixCloud pr
 | --- | --- |
 | macOS | Keep **Tools → Advanced Configuration → Network → Auto Set System DNS** enabled with TUN and verify that the system DNS change succeeded. Queries to a LAN router may bypass TUN; do not test only public resolver addresses. |
 | Windows | Enable TUN and inspect multiple adapters, other VPNs and system DNS. Add the Strict route override in the network settings' TUN section when needed; see below. |
-| Android | Enable **DNS Hijacking** and disable **Allow Bypass** under **Tools → Advanced Configuration → Network**, and include the target app in VPN access control; turn system **Private DNS** off while diagnosing.<br>Always-on VPN and blocking connections without VPN are separate Android settings, subject to OS support. |
+| Android | Enable **DNS hijacking** and disable **Allow apps to bypass VPN** under **Tools → Advanced Configuration → Network**, and include the target app in VPN access control; turn system **Private DNS** off while diagnosing.<br>Always-on VPN and blocking connections without VPN are separate Android settings, subject to OS support. |
 | Linux | Check TUN automatic routes, the system resolver and competing network managers. Confirm queries enter the core, not merely that the local proxy port responds. |
 
 Browser Secure DNS and app-owned DoH / DoT are not intercepted as ordinary port-53 DNS. Record and temporarily disable those separate settings when diagnosing. If you keep them, route their connections through the intended proxy and verify IPv4 and IPv6 separately. Disabling DNS IPv6 resolution only affects AAAA answers; it does not disable system IPv6.

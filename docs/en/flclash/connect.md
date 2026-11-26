@@ -28,8 +28,8 @@ Use the release's `SHA256SUMS` to verify a standard package or the matching `SHA
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-connect-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Start from the dashboard">
-    <img src="/illustrations/flclash-connect-en.svg?v=20261102-3" alt="FlClash for oixCloud · Start from the dashboard" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-connect-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Start from the dashboard">
+    <img src="/illustrations/flclash-connect-en.svg?v=20261127-5" alt="FlClash for oixCloud · Start from the dashboard" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -37,8 +37,8 @@ Use the release's `SHA256SUMS` to verify a standard package or the matching `SHA
 ## Import your account configuration
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-login-en.svg?v=20261125-1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Sign in to your account">
-    <img src="/illustrations/flclash-login-en.svg?v=20261125-1" alt="FlClash for oixCloud · Sign in to your account" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-login-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Sign in to your account">
+    <img src="/illustrations/flclash-login-en.svg?v=20261127-5" alt="FlClash for oixCloud · Sign in to your account" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -53,18 +53,15 @@ After a plan or filter change, select **Refresh nodes** on the **oixCloud** page
 
 ## Capture application traffic
 
-- Desktop: start with **System Proxy** for applications that follow it. Enable **TUN** and complete system authorization when you need broader traffic capture.
-- Android: allow the system VPN request and check that the target app is not excluded.
-
-Use the play button in the dashboard **Status** card to start and the same card's pause button to stop. Card arrangements vary with window width; the start control is no longer fixed at the page's bottom right.
-
-Capture settings control whether traffic enters the client. Rule and Global modes control what happens afterward. See [System Proxy and TUN](/en/flclash/capture).
+1. Press play in **Dashboard → Status** and select **Rule** under **Outbound mode**.
+2. On desktop, enable **System proxy** on the dashboard. For apps that ignore the system proxy, enable **TUN** and complete the permission prompt.
+3. On Android, enable **VPN** under **Tools → Advanced configuration → Network**, approve the system request when starting, and include the target app in access control. [Verify capture on your platform](/en/flclash/capture#mode)
 
 The status button at the top of the dashboard shows the core state. Builds with an in-app updater also show download progress here. Open the status cards and switch between them to see when an update is ready to install.
 
 ## Verify the connection
 
-In **Proxies**, open the site's Select group and choose an available node. Visit the site again and check its matched rule and exit in **Connections**. You can also [set a preferred node in an automatic group](/en/flclash/proxies#choose-outbound). Refresh the managed profile after plan or node changes.
+In **Proxies**, open the site's Select group and choose an available node. Visit the site again and check its matched rule and exit in **Requests**. You can also [set a preferred node in an automatic group](/en/flclash/proxies#choose-outbound). Refresh the managed profile after plan or node changes.
 
 For sign-in failures, retain the exact error and version, then check networking, system time and account status.
 

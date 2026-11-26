@@ -176,7 +176,13 @@
       "SHA-256 · 示例指纹，不用于连接": "SHA-256 · Example only, not for connecting",
       "通过 HTTPS 向此订阅发送此设备的标识": "Send this device’s identifier to this subscription over HTTPS.",
       "文件": "File",
-      "支持代理链接和 Clash、Surge 或 sing-box 订阅": "Supports proxy links and Clash, Surge or sing-box subscriptions"
+      "支持代理链接和 Clash、Surge 或 sing-box 订阅": "Supports proxy links and Clash, Surge or sing-box subscriptions",
+      "测试 DNS": "Test DNS",
+      "查询耗时": "Lookup Time",
+      "详情": "Details",
+      "配置来源": "Configuration Source",
+      "全局设置": "Global Settings",
+      "DNS 出站": "DNS Route"
     },
     "flclash": {
       "DNS 查询": "DNS queries",
@@ -350,7 +356,11 @@
       "链接": "Link",
       "age 私钥": "Age secret key",
       "代理组": "Proxy group",
-      "首选": "Preferred"
+      "首选": "Preferred",
+      "允许应用绕过VPN": "Allow apps to bypass VPN",
+      "DNS劫持": "DNS hijacking",
+      "验证请求": "Verify a request",
+      "工具 → 更多 → 请求": "Tools → More → Requests"
     },
     "helper": {
       "●   Finder   文件   编辑   显示   前往   窗口": "●   Finder   File   Edit   View   Go   Window",
@@ -379,7 +389,13 @@
       "更新节点": "Refresh nodes",
       "节点筛选": "Node filter",
       "本地多端口映射": "Local multi-port mapping",
-      "在 Surge 或 OpenSurge 中选择节点": "Select a node in Surge or OpenSurge"
+      "在 Surge 或 OpenSurge 中选择节点": "Select a node in Surge or OpenSurge",
+      "出站模式": "Outbound Mode",
+      "设置为系统代理": "Set as System Proxy",
+      "增强模式": "Enhanced Mode",
+      "✓  规则判定": "✓  Rule-Based Proxy",
+      "全局代理": "Global Proxy",
+      "直接连接": "Direct Outbound"
     },
     "oixclash": {
       "UDP 转发": "UDP forwarding",
@@ -441,7 +457,12 @@
       "更新节点": "Update Nodes",
       "自检": "Self-check",
       "保存并应用": "Save and apply",
-      "Google 登录仅限已注册的 oixCloud 账号": "Google sign-in is for registered oixCloud accounts."
+      "Google 登录仅限已注册的 oixCloud 账号": "Google sign-in is for registered oixCloud accounts.",
+      "DNS 设置": "DNS settings",
+      "收起 DNS 设置": "Collapse DNS settings",
+      "使用自定义 DNS": "Use custom DNS",
+      "直连 DNS": "Direct DNS",
+      "代理 DNS": "Proxy DNS"
     },
     "apple-tv": {
       "设置": "Settings",
@@ -461,7 +482,12 @@
       "香港 · 示例 A": "Hong Kong · Sample A",
       "为规则集选组": "To assign a group to a rule set",
       "设置 → 路由规则": "Settings → Routing Rules",
-      "自动优选 · URL Test": "Best Available · URL Test"
+      "自动优选 · URL Test": "Best Available · URL Test",
+      "DNS 同步": "DNS Sync",
+      "全局 DNS": "Global DNS",
+      "自定义 DNS": "Custom DNS",
+      "严格 DNS": "Strict DNS",
+      "允许回退系统 DNS": "Allow System DNS Fallback"
     },
     "account": {
       "示例账户": "Example account",
@@ -644,7 +670,17 @@
       "应用配置": "Apply Settings",
       "别名（请勿重名）": "Server Alias",
       "编辑服务器配置": "Edit Server",
-      "保存配置": "Commit Settings"
+      "保存配置": "Commit Settings",
+      "运行模式": "Running Mode",
+      "增强": "Enhance",
+      "混合": "Mix",
+      "代理模式": "Proxy Mode",
+      "规则": "Rule",
+      "全局": "Global",
+      "直连": "Direct",
+      "DNS 设置": "DNS Settings",
+      "☑  自定义上游 DNS 服务器": "☑  Custom DNS Setting",
+      "设置自定义上游 DNS 服务器": "Add Custom DNS Servers"
     },
     "start": {
       "1. 本机流量接管": "1. Local Traffic Capture",
@@ -1294,7 +1330,7 @@
       [
         [
           "Open the Select group",
-          "Find the site's group in Connections and open that group in Proxies."
+          "Find the site's group in Requests and open that group in Proxies."
         ],
         [
           "Select a member",
@@ -1401,16 +1437,16 @@
       "macOS → Tools → Advanced configuration → Network",
       [
         [
-          "Check the System section",
-          "System proxy and Bypass domains affect apps that follow system proxy settings."
+          "Enable System proxy",
+          "Open a new page and find the browser’s record under Requests."
         ],
         [
-          "Find TUN under Options",
-          "After enabling it, verify authorization, routes and actual traffic."
+          "Enable TUN",
+          "Approve the system prompt. Make a new connection from an app that ignores system proxies."
         ],
         [
           "Check macOS system DNS",
-          "This option is macOS-only. Windows has a different set of options."
+          "This can change macOS DNS with TUN running. Set the core upstream on the DNS page."
         ]
       ]
     ],
@@ -1419,16 +1455,16 @@
       "Tools → Advanced configuration → DNS",
       [
         [
-          "Add fields with the top + button",
-          "Unadded fields inherit the profile. Remove an entry using its left-hand control."
+          "Select a field with +",
+          "Choose Nameserver or open it directly if you already added it."
         ],
         [
-          "Change one field at a time",
-          "Values are examples only. Quick edit is also available at the top right."
+          "Enter a reachable server",
+          "This field is for ordinary destinations. Proxy hostnames can use a separate resolver."
         ],
         [
-          "Recheck after applying",
-          "A custom profile’s own settings take precedence. Restore original values if needed."
+          "Open DNS queries",
+          "Visit a fresh domain. Find its DNS record and check Upstream."
         ]
       ]
     ],
@@ -1866,7 +1902,7 @@
     ],
     "openclash-running": [
       "Confirm the managed profile is running",
-      "LuCI → Services → OpenClash → Running status",
+      "LuCI → Services → OpenClash → Overviews",
       [
         [
           "Check the managed profile",
@@ -2482,7 +2518,7 @@
       [
         [
           "Open Proxies",
-          "Use Running Status in OpenClash or Open dashboard on the oixClash Run page."
+          "Use Overviews in OpenClash or Open dashboard on the oixClash Run page."
         ],
         [
           "Pick a group member",
@@ -2532,7 +2568,7 @@
     ],
     "openclash-chain": [
       "Set the entry on the exit node",
-      "Config Manage → ⋮ → Servers Manage → Edit the exit",
+      "Config Manage → ⋯ → Servers Manage → Edit the exit",
       [
         [
           "Edit the exit",
@@ -2545,6 +2581,132 @@
         [
           "Save and apply",
           "Apply in Servers Manage, switch to the file, and select the exit in a Select group."
+        ]
+      ]
+    ],
+    "oixflow-dns-test": [
+      "Test DNS and check the source",
+      "Activity → DNS → Test DNS",
+      [
+        [
+          "Enter a fresh domain",
+          "Connect the VPN, then use a resolvable name you have not tested."
+        ],
+        [
+          "Tap Test DNS",
+          "Check the answer and time. This address is fictional."
+        ],
+        [
+          "Expand Details",
+          "Check Configuration Source, DNS Route and any system fallback message."
+        ]
+      ]
+    ],
+    "apple-tv-dns": [
+      "Set DNS on Apple TV",
+      "Settings → DNS",
+      [
+        [
+          "Check DNS Sync",
+          "With sync on, the TV receives DNS settings from the publishing iPhone or iPad."
+        ],
+        [
+          "Edit this TV only",
+          "Turn off DNS Sync, open Custom DNS and confirm the new address."
+        ],
+        [
+          "Verify the change",
+          "Reopen the page to check the server. Make a fresh query from a TV app."
+        ]
+      ]
+    ],
+    "flclash-android-vpn": [
+      "Enable Android VPN",
+      "Tools → Advanced configuration → Network",
+      [
+        [
+          "Enable VPN",
+          "Start from the dashboard and approve Android’s first VPN prompt."
+        ],
+        [
+          "Check System proxy",
+          "Android 10 and later can advertise an HTTP proxy through the VPN."
+        ],
+        [
+          "Verify an included app",
+          "Make a new request, then check its exit in Tools → More → Requests."
+        ]
+      ]
+    ],
+    "openclash-modes": [
+      "Choose capture and proxy modes",
+      "Services → OpenClash → Overviews",
+      [
+        [
+          "Keep the DNS mode",
+          "Fake-IP and Redir-Host control the kind of DNS answer returned."
+        ],
+        [
+          "Select TUN if needed",
+          "Wait for the service to resume and test from an included LAN device."
+        ],
+        [
+          "Use Rule for sites",
+          "Revisit the site. In Connections, check the exit on its new request."
+        ]
+      ]
+    ],
+    "openclash-dns": [
+      "Change the upstream DNS for websites",
+      "Overwrite Settings → DNS Settings",
+      [
+        [
+          "Enable the override",
+          "Leave this off to keep the managed profile’s DNS settings."
+        ],
+        [
+          "Choose nameserver",
+          "Enable the entry and set the resolver address, protocol and port."
+        ],
+        [
+          "Apply Settings",
+          "Check the running profile, then test DNS from an included LAN device."
+        ]
+      ]
+    ],
+    "oixclash-dns": [
+      "Save DNS settings on this router",
+      "Software Center → oixClash → DNS settings",
+      [
+        [
+          "Expand DNS settings",
+          "Select Use custom DNS to edit the two resolver fields."
+        ],
+        [
+          "Enter each resolver",
+          "Direct DNS accepts IPv4 or HTTPS. Proxy DNS takes HTTPS without #Proxy."
+        ],
+        [
+          "Save and apply",
+          "Wait for the service, run Self-check, then test from an included device."
+        ]
+      ]
+    ],
+    "helper-surge-mode": [
+      "Choose how Surge routes and captures traffic",
+      "macOS menu bar → Surge",
+      [
+        [
+          "Select Outbound Mode",
+          "Rule-Based Proxy applies website rules. Test with a new request."
+        ],
+        [
+          "Set as System Proxy",
+          "Use with apps that follow the macOS proxy settings."
+        ],
+        [
+          "Enable Enhanced Mode",
+          "Approve the system prompt and check the app in Surge’s request list."
         ]
       ]
     ]

@@ -25,8 +25,8 @@ The client applies one profile at a time. Select it, start the client and verify
 ## Add an individual third-party node {#single-node}
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-custom-node-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Add a custom node to this profile">
-    <img src="/illustrations/flclash-custom-node-en.svg?v=20261102-3" alt="Add a custom node to this profile" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-custom-node-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Add a custom node to this profile">
+    <img src="/illustrations/flclash-custom-node-en.svg?v=20261127-5" alt="Add a custom node to this profile" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
@@ -79,8 +79,8 @@ For an HTTP / HTTPS proxy expressed as an `http://` or `https://` link, use **Cu
 ## Import another subscription or profile file {#other-subscription}
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-import-link-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="Import from link and the Save checkmark in FlClash for oixCloud">
-    <img src="/illustrations/flclash-import-link-en.svg?v=20261127-3" alt="Import from link and the Save checkmark in FlClash for oixCloud" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-import-link-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Import from link and the Save checkmark in FlClash for oixCloud">
+    <img src="/illustrations/flclash-import-link-en.svg?v=20261127-5" alt="Import from link and the Save checkmark in FlClash for oixCloud" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -109,8 +109,8 @@ Follow [Add an individual third-party node](#single-node) to save and enable a n
 ### Add a whole third-party subscription {#managed-subscription}
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-provider-members-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Add a third-party provider to your group">
-    <img src="/illustrations/flclash-provider-members-en.svg?v=20261102-3" alt="Add a third-party provider to your group" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-provider-members-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Add a third-party provider to your group">
+    <img src="/illustrations/flclash-provider-members-en.svg?v=20261127-5" alt="Add a third-party provider to your group" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
@@ -149,8 +149,8 @@ Subscription URLs and node links may contain credentials. Do not post them in pu
 <span id="手动与自动更新"></span>
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-profiles-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Update and manage profiles">
-    <img src="/illustrations/flclash-profiles-en.svg?v=20261127-3" alt="FlClash for oixCloud · Update and manage profiles" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-profiles-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Update and manage profiles">
+    <img src="/illustrations/flclash-profiles-en.svg?v=20261127-5" alt="FlClash for oixCloud · Update and manage profiles" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -162,8 +162,8 @@ To keep using an ordinary subscription, update it from its own menu. **oixCloud 
 ## Managed options
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-filter-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Filter managed nodes">
-    <img src="/illustrations/flclash-filter-en.svg?v=20261127-3" alt="FlClash for oixCloud · Filter managed nodes" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-filter-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Filter managed nodes">
+    <img src="/illustrations/flclash-filter-en.svg?v=20261127-5" alt="FlClash for oixCloud · Filter managed nodes" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>

@@ -56,6 +56,14 @@ Once signed in, the app loads managed nodes without device approval. The first s
 
 For your own nodes or subscriptions, open **Proxies → Servers → Add**. Choose **Link** for a subscription URL or **File** for a node file. Then choose a node on Home and connect. [Import nodes, subscriptions or a full profile](/en/oixflow/proxies#third-party-subscription).
 
+## Switch modes on iPhone or iPad {#capture-mode}
+
+1. On **Home**, tap the power button on the status card. Allow the system to add a VPN configuration the first time. **Connected** means the oixFlow VPN is running for apps on the device.
+2. On Home, choose **Rule**, **Global** or **Direct**. Rule matches destinations against routing rules. Global sends ordinary traffic through the current proxy. Direct sends ordinary traffic directly. With accessibility text sizes, open the **Mode** menu.
+3. Revisit a website, open the new request under **Activity → Requests**, and check its domain and outbound. The VPN stays connected when you change modes. If the active [network profile](/en/oixflow/networks) specifies a mode, the Home control updates that profile. If it inherits the mode, the control updates the global setting.
+
+To change resolvers, see [Configure and test DNS](/en/oixflow/dns#configure-dns). To give another device an HTTP or SOCKS port, use [Proxy Service](/en/oixflow/networks). The Home VPN handles apps on this device.
+
 ## Refresh and verify
 
 After a plan or filter change, tap the circular **Refresh Nodes** arrow at the top right of the **oixCloud** account page and wait for the nodes to load. Pulling down refreshes account details. Update third-party subscriptions individually under **Proxies → Servers**.

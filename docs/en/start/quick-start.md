@@ -46,8 +46,8 @@ To use an Access Token, select **New Token** in [Access Token Management](https:
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-connect-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="Start from the dashboard">
-    <img src="/illustrations/flclash-connect-en.svg?v=20261102-3" alt="Start from the dashboard" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-connect-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Start from the dashboard">
+    <img src="/illustrations/flclash-connect-en.svg?v=20261127-5" alt="Start from the dashboard" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>FlClash for oixCloud desktop example · Follow the relevant guide for other clients</figcaption>
 </figure>

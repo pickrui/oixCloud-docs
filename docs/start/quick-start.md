@@ -46,8 +46,8 @@ description: "第一次使用的操作步骤、适用范围与常见问题"
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-connect-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 仪表盘启动与接管">
-    <img src="/illustrations/flclash-connect-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 仪表盘启动与接管" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-connect-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 仪表盘启动与接管">
+    <img src="/illustrations/flclash-connect-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 仪表盘启动与接管" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>FlClash for oixCloud 桌面界面示例 · 其他客户端按对应教程操作</figcaption>
 </figure>

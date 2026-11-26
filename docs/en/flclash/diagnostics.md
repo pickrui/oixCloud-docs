@@ -7,8 +7,8 @@ description: "Network checks and connections \u2014 setup, practical steps and t
 ## Windows / macOS network check
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-diagnostics-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Run a network self-check">
-    <img src="/illustrations/flclash-diagnostics-en.svg?v=20261102-3" alt="FlClash for oixCloud · Run a network self-check" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-diagnostics-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Run a network self-check">
+    <img src="/illustrations/flclash-diagnostics-en.svg?v=20261127-5" alt="FlClash for oixCloud · Run a network self-check" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -36,7 +36,7 @@ The system network path may still use TUN; it is not necessarily a physical dire
 
 <span id="其他平台与规则排查"></span>
 
-On Android/Linux, use connections and logs. Filter by the target domain, inspect the rule/group/outbound, then create a fresh connection after changing settings.
+Open **Requests** in the desktop sidebar, or **Tools → More → Requests** on a phone or compact layout. Close the old connection, revisit the domain and open the new record to check its rule, group and exit. To verify the resolver, open **DNS queries** in the same navigation area and check **Upstream**.
 
 Review personal data before copying reports. Include version, time, network type and reproduction steps in a [support ticket](/en/help/support), never full tokens or subscriptions in public issues.
 

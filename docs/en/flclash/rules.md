@@ -7,8 +7,8 @@ description: "Overrides, groups and added rules \u2014 setup, practical steps an
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-rules-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Add a domain suffix rule">
-    <img src="/illustrations/flclash-rules-en.svg?v=20261127-4" alt="FlClash for oixCloud · Add a domain suffix rule" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-rules-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Add a domain suffix rule">
+    <img src="/illustrations/flclash-rules-en.svg?v=20261127-5" alt="FlClash for oixCloud · Add a domain suffix rule" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -16,8 +16,8 @@ description: "Overrides, groups and added rules \u2014 setup, practical steps an
 ## Choose an override mode
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-override-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Choose a profile override mode">
-    <img src="/illustrations/flclash-override-en.svg?v=20261127-4" alt="FlClash for oixCloud · Choose a profile override mode" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-override-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Choose a profile override mode">
+    <img src="/illustrations/flclash-override-en.svg?v=20261127-5" alt="FlClash for oixCloud · Choose a profile override mode" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -38,7 +38,7 @@ Start with Overlay. Empty custom content does not provide a usable routing confi
 
 1. For a managed or ordinary subscription, open **Profiles → profile menu → Override**, choose **Overlay**, then open **Rule → Add**. For a custom profile, use **Profiles → profile menu → Edit → Rule → Add**.
 2. Select `DOMAIN-SUFFIX`, enter `example.com` and choose `DIRECT`, `REJECT`, an existing group or an enabled chain by name. To proxy this domain, choose a group with usable members.
-3. Save the rule. For a subscription override, return to **Override** and select **Apply now** if shown. With this profile active in Rule mode, revisit the site and check the matched rule and outbound in **Connections**.
+3. Save the rule. For a subscription override, return to **Override** and select **Apply now** if shown. With this profile active in Rule mode, revisit the site and check the matched rule and outbound in **Requests**.
 
 To share a rule across subscriptions, create it in **Tools → Advanced Configuration → Added rules**, then check that it is enabled in each profile's **Override** settings. Use the steps above for an exception that belongs to just one profile.
 

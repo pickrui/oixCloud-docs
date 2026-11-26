@@ -4,7 +4,7 @@ description: "Android 应用访问与后台运行的操作步骤、适用范围�
 
 # Android 应用访问与后台运行
 
-入口：「工具 → 访问控制」，仅 Android 提供这一应用列表
+先在「工具 → 进阶配置 → 网络」开启「VPN」，从仪表盘启动并允许 Android 建立连接，再到「工具 → 访问控制」选择应用。[检查 VPN 是否生效](/flclash/capture#android-vpn)
 
 ## 选择哪些应用进入 VPN
 

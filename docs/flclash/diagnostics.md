@@ -7,8 +7,8 @@ description: "网络自检与连接记录的操作步骤、适用范围与常见
 ## Windows / macOS 网络自检
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-diagnostics-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 运行网络自检">
-    <img src="/illustrations/flclash-diagnostics-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 运行网络自检" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-diagnostics-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 运行网络自检">
+    <img src="/illustrations/flclash-diagnostics-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 运行网络自检" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -36,7 +36,7 @@ description: "网络自检与连接记录的操作步骤、适用范围与常见
 
 <span id="其他平台与规则排查"></span>
 
-Android / Linux 可查看连接与日志。在请求或连接列表中筛选目标域名，核对命中规则、代理组和出口；关闭旧连接后重新发起请求
+桌面侧栏点「请求」；手机或窄屏从「工具 → 更多 → 请求」进入。关闭旧连接，重新访问域名，点新记录核对命中规则、代理组和出口。要核对实际解析器，从同一入口打开「DNS 查询」并查看「上游解析器」
 
 复制诊断报告前检查个人数据，通过 [服务单](/help/support) 提供版本、时间、网络类型和重现步骤。不要把完整订阅或令牌放到公开 Issue
 

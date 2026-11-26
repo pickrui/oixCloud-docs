@@ -28,8 +28,8 @@ Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`�
 ## 操作示意
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-connect-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 仪表盘启动与接管">
-    <img src="/illustrations/flclash-connect-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 仪表盘启动与接管" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-connect-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 仪表盘启动与接管">
+    <img src="/illustrations/flclash-connect-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 仪表盘启动与接管" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -37,8 +37,8 @@ Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`�
 ## 导入账户配置
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-login-zh.svg?v=20261125-1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 登录账户">
-    <img src="/illustrations/flclash-login-zh.svg?v=20261125-1" alt="FlClash for oixCloud · 登录账户" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-login-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 登录账户">
+    <img src="/illustrations/flclash-login-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 登录账户" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -53,18 +53,15 @@ Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`�
 
 ## 让应用使用代理
 
-- 桌面系统：先启用「系统代理」供支持系统代理的应用使用；需要接管更多应用时，再配置「虚拟网卡」并完成系统授权
-- Android：启动时允许系统的 VPN 连接请求；检查是否把目标应用排除在 VPN 之外
-
-在仪表盘的「状态」卡片点击播放按钮启动，停止时使用同一卡片的暂停按钮。桌面布局与窄窗口的卡片排列可能不同，不再按旧图寻找页面右下角的固定启动按钮
-
-这两个设置决定流量是否进入客户端；「规则 / 全局」决定进入以后如何选择出口。详见 [系统代理与虚拟网卡](/flclash/capture)
+1. 在仪表盘的「状态」卡片点播放按钮启动，在「出站模式」选「规则」
+2. 桌面打开仪表盘的「系统代理」。要接管忽略系统代理的应用，开启「虚拟网卡」并按提示授权
+3. Android 在「工具 → 进阶配置 → 网络」开启「VPN」，启动时同意系统请求，并确认目标应用在接管范围内。[按平台验证接管](/flclash/capture#mode)
 
 仪表盘顶部的状态按钮可查看内核状态。支持应用内更新的版本也会在这里显示下载进度；点开状态卡后，可以切换卡片查看更新是否已准备好安装
 
 ## 验证连接
 
-在「代理」打开目标网站使用的手动选择组，点一个可用节点。重新访问网站，在「连接」核对命中规则与出口。[自动组的首选节点](/flclash/proxies#choose-outbound)可在同一页设置。套餐或节点变化后刷新托管配置即可
+在「代理」打开目标网站使用的手动选择组，点一个可用节点。重新访问网站，在「请求」核对命中规则与出口。[自动组的首选节点](/flclash/proxies#choose-outbound)可在同一页设置。套餐或节点变化后刷新托管配置即可
 
 登录失败时保留原始报错与客户端版本，先排查网络、系统时间及账户状态
 

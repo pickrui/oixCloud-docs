@@ -67,6 +67,20 @@ Apple TV 继续通过 iPhone / iPad 的「同步到 Apple TV」登录：手机�
 3. 使用 iCloud 镜像时，在发布配置的 iPhone 或 iPad 上[创建策略组或代理链](/oixflow/policies#create-chain)、添加规则，等电视收到后选择。使用电视本地配置时，也可在「路由规则 → 添加规则」填写域名、选择去向并保存
 4. 重新打开电视上的目标服务，核对新连接的出口
 
+## 在电视切换模式和 DNS {#capture-dns}
+
+<figure class="guide-figure">
+  <a href="/illustrations/apple-tv-dns-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Apple TV 的 DNS 同步与本机自定义 DNS">
+    <img src="/illustrations/apple-tv-dns-zh.svg?v=20261127-5" alt="Apple TV 的 DNS 同步与本机自定义 DNS" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
+</figure>
+
+1. 用遥控器点主页电源按钮，按系统提示允许 VPN，等主页显示已连接。在「设置 → 模式」选「规则」「全局」或「直连」。返回该菜单，勾号表示当前选择
+2. 打开「设置 → DNS」。已开启「DNS 同步」时，电视接收 iPhone 或 iPad 的 DNS 设置，在发布设备上修改，等两端 iCloud 同步后再核对电视显示的服务器
+3. 只想改这台电视时，关闭「DNS 同步」，点「自定义 DNS」，填写可达服务器并确认。这项修改保存在电视上。以后重新开启 DNS 同步时，收到的设置会替换本机 DNS
+4. 回到主页确认 VPN 已连接，在目标应用发起新连接，查看主页流量是否增加。要确认具体 DNS 上游，可用能查看查询记录的解析器，访问一个此前未查询过的域名，再检查该解析器是否收到了查询
+
 ## 同步或连接失败
 
 先确认两端 Apple 账户、客户端版本和同步开关，再检查电视的网络与套餐状态。节点已出现但视频异常时，核对所选出口和平台地区，不要仅反复同步相同配置

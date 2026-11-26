@@ -9,8 +9,8 @@ To add sources first, see [individual third-party nodes](/en/flclash/profiles#si
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-proxies-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Select a node in its group">
-    <img src="/illustrations/flclash-proxies-en.svg?v=20261127-4" alt="FlClash for oixCloud · Select a node in its group" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-proxies-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Select a node in its group">
+    <img src="/illustrations/flclash-proxies-en.svg?v=20261127-5" alt="FlClash for oixCloud · Select a node in its group" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -19,9 +19,9 @@ To add sources first, see [individual third-party nodes](/en/flclash/profiles#si
 
 ## Select a node
 
-1. On desktop or Android, open **Proxies**. Use the group tabs or list to open the group for the site. To find its name, visit the site once and look at the matched rule and group in **Connections**.
+1. On desktop or Android, open **Proxies**. Use the group tabs or list to open the group for the site. To find its name, visit the site once and look at the matched rule and group in **Requests**.
 2. In a Select group, tap the node to use. If you select another group as the member, open that group to choose its member. Opening a group tab displays its members. Selecting a member changes the outbound.
-3. Open a new connection to the site and check its exit in **Connections**. Different sites can match different groups in Rule mode.
+3. Open a new connection to the site and check its exit in **Requests**. Different sites can match different groups in Rule mode.
 
 ## Automatic groups
 
@@ -44,8 +44,8 @@ In **Profiles**, open the subscription's menu and choose **Override → Overlay 
 ## Proxy chains
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-chains-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Edit the chain’s forwarding order">
-    <img src="/illustrations/flclash-chains-en.svg?v=20261127-4" alt="FlClash for oixCloud · Edit the chain’s forwarding order" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-chains-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Edit the chain’s forwarding order">
+    <img src="/illustrations/flclash-chains-en.svg?v=20261127-5" alt="FlClash for oixCloud · Edit the chain’s forwarding order" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>

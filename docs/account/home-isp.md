@@ -99,8 +99,8 @@ Home ISP 的默认下发开关只决定订阅是否自动包含节点。配置�
 适用于支持该功能的 Windows、macOS、Android 和 Linux 版本
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-chains-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
-    <img src="/illustrations/flclash-chains-zh.svg?v=20261127-4" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-chains-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
+    <img src="/illustrations/flclash-chains-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>通用代理链编辑器示意 · 本例用实际入口节点和 Home ISP 替换图中成员</figcaption>
 </figure>

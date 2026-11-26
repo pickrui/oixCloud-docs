@@ -6,11 +6,22 @@ description: "严格 DNS、分流解析与三个独立 IPv6 设置的操作和�
 
 适用于提供这些设置的 oixFlow iPhone / iPad 版本；Apple TV 的界面单独见 [电视端教程](/oixflow/apple-tv)。缺少下述开关时先核对客户端版本
 
+<span id="configure-dns"></span>
+
 ## 先看当前生效来源
 
-进入「设置 → DNS」，先看顶部显示的自动、自定义或严格 DNS，以及当前来源。网络预设或模块可以覆盖全局 DNS；页面提示被覆盖时，修改下方全局地址不一定改变当前网络的实际解析器
+1. 打开「设置 → DNS」，查看顶部的「模式」「DNS 服务器」和「来源」。若显示「覆盖来源」，当前网络预设或模块提供了解析器，需要修改那个来源
+2. 要改全局设置，在「自定义 DNS」填写当前网络可达的服务器，例如 `https://1.1.1.1/dns-query`。多个地址用逗号分隔，完成输入后离开输入框，核对顶部的实际服务器。需要恢复默认时清空输入框并完成编辑
+3. 连接 VPN，打开「活动 → DNS」，输入一个可正常解析的新域名，点「测试 DNS」。查看返回地址，再展开「详情」核对「配置来源」和「DNS 出站」；发生系统 DNS 回退时结果会提示
 
-「自定义 DNS」支持页面列出的普通 IP、DoH、DoH3、DoQ、DoT 和 TCP 格式，多项用逗号分隔。输入无效会提示错误，先修正再离开输入框；留空恢复当前模式的默认选择
+<figure class="guide-figure">
+  <a href="/illustrations/oixflow-dns-test-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="在活动里测试 DNS 并查看查询的配置来源和出站">
+    <img src="/illustrations/oixflow-dns-test-zh.svg?v=20261127-5" alt="在活动里测试 DNS 并查看查询的配置来源和出站" width="1120" height="982" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
+</figure>
+
+可填写普通 IP、DoH、DoH3、DoQ、DoT 或 TCP 地址。要为一个域名单独指定解析器，使用下方的 DNS 规则
 
 <span id="dns-泄漏-哪些设置有帮助"></span>
 
@@ -20,7 +31,7 @@ description: "严格 DNS、分流解析与三个独立 IPv6 设置的操作和�
 
 1. 先连接 VPN，在「设置 → DNS」开启「严格 DNS」
 2. 核对顶部实际服务器和来源。未配置时采用默认 Cloudflare DoH；自定义服务器中只有加密 DNS 可用于公共查询，走代理的查询要求 `https://` DoH
-3. 确认「跳过分流 DNS 解析」已强制开启、「允许回退系统 DNS」已强制关闭；严格模式期间这两项不可单独调整
+3. 严格 DNS 会跳过基于 IP 的分流解析，并关闭系统 DNS 回退。这两个单独的开关在关闭严格 DNS 后才会显示
 4. 重新建立目标连接，在 [请求与 DNS 检查](/oixflow/diagnostics) 查看解析与出口。公共查询失败时先检查有效服务器、代理和规则，不要把超时误认为账户 Token 失效
 
 严格 DNS 会跳过基于 IP 的分流预解析，域名规则和最终路由仍生效，因此可能改变依赖 IP / GeoIP / ASN 判断的路由结果。关闭严格模式后，上述两个开关恢复各自保存的选择

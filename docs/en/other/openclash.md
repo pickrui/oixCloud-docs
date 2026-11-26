@@ -38,13 +38,13 @@ Once signed in, the router can load managed nodes without device approval. The f
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/openclash-running-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="Confirm the managed profile is running">
-    <img src="/illustrations/openclash-running-en.svg?v=20261127-3" alt="Confirm the managed profile is running" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/openclash-running-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Confirm the managed profile is running">
+    <img src="/illustrations/openclash-running-en.svg?v=20261127-5" alt="Confirm the managed profile is running" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
 </figure>
 
-1. Check that `oixCloud.yaml` is selected in the profile area on **Overview / Running Status**. Older plugin versions may show `oixCloud - smart.yaml`.
+1. Check that `oixCloud.yaml` is selected in the profile area on **Overviews (Running Status)**. Older plugin versions may show `oixCloud - smart.yaml`.
 2. Select it and use **Switch** if another profile is active. Wait for any resulting restart; enable the start switch if it is still stopped.
 3. Inspect logs for successful configuration loading and core startup. The core version should include `oix`.
 4. Begin with the generated profile and **Rule** mode, then select an available node or group in the dashboard.
@@ -71,16 +71,43 @@ UDP forwarding remains subject to the port range. Port filtering does not identi
 
 An account card, latency result or Running status alone does not prove that device traffic is captured. Browser secure DNS, other DNS plugins, IPv6 and secondary-router gateways can change the path.
 
+### Switch proxy modes or enable TUN {#capture-mode}
+
+<figure class="guide-figure">
+  <a href="/illustrations/openclash-modes-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Proxy Mode, DNS mode and TUN on the OpenClash status page">
+    <img src="/illustrations/openclash-modes-en.svg?v=20261127-5" alt="Proxy Mode, DNS mode and TUN on the OpenClash status page" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>English interface simulation · Fictional data</figcaption>
+</figure>
+
+1. In LuCI, open **Services → OpenClash → Overviews**. Under **Proxy Mode**, choose **Rule** for per-site routing, **Global** to send ordinary captured connections through the global group, or **Direct** for a direct exit.
+2. To use the router’s virtual interface, select **TUN** under **Running Mode** on the same page. Wait for the service to resume. Fake-IP / Redir-Host controls the kind of DNS answer returned and can keep its current value.
+3. On a device using this router as its gateway and included in access control, revisit a website. In the dashboard’s **Connections**, find the new record by hostname or device IP and check its exit. If it is missing, check the [port scope](#common-ports) and bypass settings.
+
+### Set and verify the router’s DNS {#configure-dns}
+
+<figure class="guide-figure">
+  <a href="/illustrations/openclash-dns-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Set and apply a nameserver for ordinary domains in Overwrite Settings">
+    <img src="/illustrations/openclash-dns-en.svg?v=20261127-5" alt="Set and apply a nameserver for ordinary domains in Overwrite Settings" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>English interface simulation · Fictional data</figcaption>
+</figure>
+
+1. For everyday use you can keep the profile’s DNS. In **Plugin Settings → DNS Settings → Redirect Local DNS Setting**, check how LAN DNS is forwarded to OpenClash. Use Dnsmasq or firewall forwarding as appropriate for your network.
+2. To change resolvers, open **Overwrite Settings → DNS Settings** and enable **Custom DNS Setting**. In the DNS server table below, add or edit a `nameserver` entry, set a reachable address, protocol and port, enable the row, then select **Apply Settings**.
+3. Once running, open the active profile’s **⋯** menu under **Config Manage** and select **Download Running Config** and check `dns.nameserver`. On a LAN client, run `nslookup example.com ROUTER_LAN_IP` with the router’s actual address and check for an answer. To verify a particular upstream received the query, use a resolver whose records you can inspect and query a fresh domain.
+
+
 ### Choose a node or switch a group {#routing}
 
 <figure class="guide-figure">
-  <a href="/illustrations/metacubexd-groups-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="Choose a node in a MetaCubeXD Select group and check the exit in Connections">
-    <img src="/illustrations/metacubexd-groups-en.svg?v=20261127-4" alt="Choose a node in a MetaCubeXD Select group and check the exit in Connections" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/metacubexd-groups-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Choose a node in a MetaCubeXD Select group and check the exit in Connections">
+    <img src="/illustrations/metacubexd-groups-en.svg?v=20261127-5" alt="Choose a node in a MetaCubeXD Select group and check the exit in Connections" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>Illustrated interface · Fictional data</figcaption>
 </figure>
 
-1. In **Services → OpenClash → Running Status**, open MetaCubeXD from the dashboard area and go to **Proxies**. If you need the group name, visit the site once and check its matched rule and group in **Connections**.
+1. In **Services → OpenClash → Overviews**, open MetaCubeXD from the dashboard area and go to **Proxies**. If you need the group name, visit the site once and check its matched rule and group in **Connections**.
 2. Expand the matching Select group and choose a node. If the member is another group, open it to choose its member. Automatic groups such as URLTest and Fallback follow their own strategies.
 3. Keep Rule mode on and revisit the site from a LAN device. Check the exit in **Connections**.
 
@@ -105,14 +132,14 @@ Keep existing entries and a single `rules:` key. To proxy the site, replace `DIR
 ### Chain two nodes {#create-chain}
 
 <figure class="guide-figure">
-  <a href="/illustrations/openclash-chain-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="Set Dialer-proxy on the OpenClash exit node to the name of the entry">
-    <img src="/illustrations/openclash-chain-en.svg?v=20261127-4" alt="Set Dialer-proxy on the OpenClash exit node to the name of the entry" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/openclash-chain-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Set Dialer-proxy on the OpenClash exit node to the name of the entry">
+    <img src="/illustrations/openclash-chain-en.svg?v=20261127-5" alt="Set Dialer-proxy on the OpenClash exit node to the name of the entry" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>Illustrated interface · Fictional data</figcaption>
 </figure>
 
-1. Use a YAML profile you maintain with both an entry and an exit node. To start from an existing file, open its **⋮ → Copy Config** menu in **Config Manage** and edit the copy. Subscription updates regenerate the managed file.
-2. Open **⋮ → Servers Manage** for your file and click **Read Config**. Under **Proxies**, edit the **exit node**, set `Dialer-proxy` to the name of the existing **entry node**, and click **Commit Settings**.
+1. Use a YAML profile you maintain with both an entry and an exit node. To start from an existing file, open its **⋯ → Copy Config** menu in **Config Manage** and edit the copy. Subscription updates regenerate the managed file.
+2. Open **⋯ → Servers Manage** for your file and click **Read Config**. Under **Proxies**, edit the **exit node**, set `Dialer-proxy` to the name of the existing **entry node**, and click **Commit Settings**.
 3. Back in **Servers Manage**, click **Apply Settings** to write the file. Switch to it in **Config Manage** and wait for the core to run. Choose the **exit node** in a dashboard Select group. New connections now go through the entry before reaching the exit.
 
 ## 5. Updates and node filters
@@ -145,7 +172,7 @@ The oix core is a Mihomo build supporting oixCloud managed nodes; an ordinary Mi
 1. Open **Services → OpenClash → Plugin Settings → Version Update**. Export a backup including the core and save it to your computer first.
 2. Check the CPU build architecture, such as `linux-arm64`, `linux-amd64-v1` or `linux-armv7`.
 3. Click the version link in the Core column and wait for the log to confirm download, validation and replacement using the matching dedicated package.
-4. Return to **Overview / Running Status**, start OpenClash if needed, check that the version contains `oix`, and verify a connection from a LAN device.
+4. Return to **Overviews (Running Status)**, start OpenClash if needed, check that the version contains `oix`, and verify a connection from a LAN device.
 
 The usual installation path is `/etc/openclash/core/clash_meta`; small-flash mode uses `/tmp/etc/openclash/core/clash_meta`. The updater selects the path for the active mode and sets executable permissions.
 

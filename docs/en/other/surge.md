@@ -55,6 +55,26 @@ In mapping mode, Helper tells you to select nodes in Surge; it does not show the
 
 Keep both Helper and Surge running. A successful profile write does not necessarily mean automatic profile switching succeeded; select the written profile manually in Surge if prompted.
 
+### Switch modes and capture traffic in Surge Mac {#capture-mode}
+
+<figure class="guide-figure">
+  <a href="/illustrations/helper-surge-mode-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Choose Outbound Mode, System Proxy or Enhanced Mode in the Surge menu">
+    <img src="/illustrations/helper-surge-mode-en.svg?v=20261127-5" alt="Choose Outbound Mode, System Proxy or Enhanced Mode in the Surge menu" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>English interface simulation · Fictional data</figcaption>
+</figure>
+
+1. Keep Helper and Surge running. Open **Surge’s own menu bar icon** and choose **Outbound Mode → Rule-Based Proxy**, **Global Proxy** or **Direct Outbound**. Use Rule-Based Proxy for per-site routing.
+2. Select **Set as System Proxy** for browsers and apps that follow macOS proxy settings. Run `scutil --proxy` in Terminal to check the local HTTP and HTTPS proxies. Visit a site and find the new request and policy in Surge Dashboard.
+3. For an app that ignores system proxy settings or needs UDP, enable **Enhanced Mode** in the Surge menu and approve the requested system component. Make a new connection from that app and check its destination and policy in the request list. [Enhanced Mode](https://manual.nssurge.com/features/enhanced-mode.html)
+
+### Set and test Surge DNS {#configure-dns}
+
+Open the active editable Surge profile and select **Edit in Text Editor**. In the existing `[General]` section, edit `dns-server` for plain DNS or `encrypted-dns-server` for encrypted DNS, for example `encrypted-dns-server = https://1.1.1.1/dns-query`. Save and reload the profile in Surge. With a read-only managed profile, create a Linked Profile that references its proxies and policy groups and keeps an editable `[General]` section. [DNS settings](https://manual.nssurge.com/dns/dns-server.html) · [Managed and linked profiles](https://kb.nssurge.com/surge-knowledge-base/faq/common-faqs)
+
+On versions that support DNS lookup, run `surge-cli dns lookup example.com` with a fresh domain and check the responding server and route. On older versions, use a resolver whose query records you can inspect and check a fresh lookup for a directly routed test domain. Proxied requests can also be resolved remotely. [Surge CLI manual](https://manual.nssurge.com/tools/cli.html)
+
+
 ### Choose a node or policy group {#routing}
 
 <figure class="guide-figure">

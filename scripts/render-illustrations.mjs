@@ -10,6 +10,7 @@ const english = process.argv.includes('--en')
 const translations = JSON.parse(readFileSync(new URL('./illustrations.en.json', import.meta.url), 'utf8'))
 let drawingUI = false
 let currentScene
+const isPhoneScene = scene => scene?.client === 'oixflow' || ['android','android-vpn'].includes(scene?.id)
 const hasChinese = s => /[\u4e00-\u9fff]/.test(s)
 function ui(s) {
  const value = String(s)
@@ -25,7 +26,7 @@ const R = (x,y,w,h,c='#fff',r=12,stroke='none') => `<rect x="${x}" y="${y}" widt
 const T = (x,y,s,z=20,c='#202124',weight=400,anchor='start',maxWidth) => {
  const original = String(s), text = ui(original)
  const bilingual = english && drawingUI && currentScene.client === 'oixclash' && hasChinese(original)
- const phone = currentScene?.client === 'oixflow' || currentScene?.id === 'android'
+ const phone = isPhoneScene(currentScene)
  if (english && drawingUI && !maxWidth) maxWidth = anchor === 'start' ? (phone ? 480 : 1060) - x : undefined
  const size = english && maxWidth ? Math.min(z, z * maxWidth / Math.max(1,textWidth(text,z))) : z
  let result = `<text x="${x}" y="${y-(bilingual?6:0)}" font-size="${size}" fill="${c}" font-weight="${weight}" text-anchor="${anchor}">${E(text)}</text>`
@@ -70,7 +71,7 @@ function material(title,active='工具'){
  let s=R(28,128,1064,657,'#e3dbde',16)+R(30,130,1060,653,'#fffbfc',15)
  s+=R(30,130,1060,35,'#f2eaed',15)+circ(49,148,5,'#df8e94')+circ(66,148,5,'#e7c87c')+circ(83,148,5,'#95bda4')+T(560,152,'FlClash for oixCloud',14,'#68575e',500,'middle')
  s+=R(31,165,90,617,'#f7f0f2',0)
- ;['仪表盘','代理','配置','oixCloud','请求','DNS 查询','连接','工具'].forEach((n,i)=>{let y=191+i*72,c=n===active?'#754651':'#72676b';if(n===active)s+=R(40,y,71,35,'#edd9df',18);s+=icon(76,y+24,['▦','▤','▱','☁','≡','⌕','⇄','⚒'][i],c)+T(76,y+51,n,12,c,500,'middle')})
+ ;['仪表盘','代理','配置','oixCloud','请求','DNS 查询','工具'].forEach((n,i)=>{let y=191+i*72,c=n===active?'#754651':'#72676b';if(n===active)s+=R(40,y,71,35,'#edd9df',18);s+=icon(76,y+24,['▦','▤','▱','☁','≡','⌕','⚒'][i],c)+T(76,y+51,n,12,c,500,'middle')})
  s+=T(153,205,title,27,'#2d2528',500)
  return s
 }
@@ -162,7 +163,7 @@ add('flclash','connect','仪表盘启动与接管','仪表盘 → 状态卡片',
 ],()=>{let s=material('仪表盘','仪表盘');s+=R(151,243,438,202,'#f5e8ee',25)+T(175,277,'状态  ·  未连接',20,'#6e555f')+T(175,334,'—',31,'#493740')+T(175,408,'运行时间  —',16,'#8e7b83')+R(486,292,72,72,'#efd4df',28)+T(522,340,'▶',29,'#6b4150',600,'middle')+badge(558,292,3);s+=R(607,243,445,202,'#f7edf1',24)+T(633,278,'网络速度',20)+T(633,338,'↑  —',29,'#71515d')+T(633,399,'↓  —',29,'#71515d');s+=R(151,465,901,69,'#f7edf1',20)+T(174,507,'出站模式',20)+segmented(451,478,582,['规则','全局','直连'],0,true)+badge(1036,476,2);s+=R(151,554,438,81,'#f7edf1',22)+T(176,603,'系统代理',21)+toggle(510,578,true,true)+R(607,554,445,81,'#f7edf1',22)+T(633,603,'虚拟网卡',21)+toggle(972,578,false,true)+badge(577,566,1);s+=R(151,655,901,91,'#f7edf1',22)+T(175,691,'配置',19)+T(175,724,'oixCloud  ·  示例托管配置',18,'#8a6a78');return s})
 
 add('flclash','proxies','在策略组中选择节点','代理 → 目标策略组',[
- ['展开手动策略组','从连接中找到网站使用的组，再打开该组'],['点选节点卡片','手选组点节点即切换；选到子组时再打开子组选成员'],['自动组的首选','自动测速或故障转移组可点节点设为首选，再点取消']
+ ['展开手动策略组','从请求中找到网站使用的组，再打开该组'],['点选节点卡片','手选组点节点即切换；选到子组时再打开子组选成员'],['自动组的首选','自动测速或故障转移组可点节点设为首选，再点取消']
 ],()=>{let s=material('代理','代理')+R(152,241,899,48,'#f6ebef',14)+T(172,273,'⌕  搜索',18,'#93848b')+T(168,330,'⌄  节点选择',21,'#382b32',600)+T(1030,330,'测速',17,'#8a5260',500,'end')+badge(english?400:325,318,1);['香港 · 示例 A','日本 · 示例 B','新加坡 · 示例 C','台湾 · 示例 D'].forEach((n,i)=>{let x=153+i%2*458,y=362+Math.floor(i/2)*132;s+=R(x,y,438,112,i===0?'#efd7e1':'#f5eff2',18,i===0?'#b6778e':'none')+T(x+23,y+38,n,21)+T(x+23,y+82,['28 ms','42 ms','56 ms','49 ms'][i],17,i===0?'#855062':'#88818a');if(i===0)s+=badge(x+421,y+12,2)+check(x+387,y+36,'#8a5260')})
  return s+T(168,665,'⌄  URLTest',21,'#382b32',600)+R(154,685,897,58,'#f5eff2',14)
   +T(174,722,'日本 · 示例 B',20,'#382b32',500)+R(791,671,247,55,'#fff9fb',12,'#cdbac3')
@@ -199,12 +200,12 @@ add('flclash','rules','添加域名后缀规则','配置 → 覆写 → 叠加 �
 ],()=>{let m=modal('',608,503);return material('规则','配置')+m.s+sheetHead(m,'添加规则',3)+segmented(m.x+24,m.y+73,560,['表单','规则文本'],0,true)+badge(m.x+590,m.y+73,1)+T(m.x+35,m.y+150,'基础信息',16,'#885461')+mrow(m.y+164,'规则类型',{value:'DOMAIN-SUFFIX',x:m.x+25,w:558})+mrow(m.y+230,'内容',{sub:'example.com',n:2,x:m.x+25,w:558})+mrow(m.y+313,'规则目标',{value:'工作',x:m.x+25,w:558})+T(m.x+35,m.y+410,'预览',16,'#885461')+T(m.x+35,m.y+448,'DOMAIN-SUFFIX,example.com,工作',17,'#715564')})
 
 add('flclash','capture','设置桌面接管方式','macOS → 工具 → 进阶配置 → 网络',[
- ['系统代理与排除域名','同属系统分区；只接管遵循系统代理的软件'],['选项中的虚拟网卡','启用后确认授权、路由与实际流量'],['macOS 的系统 DNS','此项仅在 macOS 显示；不要把此图套用于 Windows']
+ ['开启系统代理','打开新网页，在请求列表确认该应用的访问记录'],['开启虚拟网卡','完成授权后，用忽略系统代理的应用新建连接'],['macOS 的系统 DNS','TUN 运行时可调整系统 DNS；内核上游在 DNS 页设置']
 ],()=>material('网络','工具')+mhead(261,'系统')+mrow(277,'系统代理',{on:true,n:1})+mrow(341,'排除域名',{value:'编辑'})+T(171,433,'排除域名仅在系统代理启用时生效',15,'#8e727f')+mhead(493,'选项')+mrow(510,'虚拟网卡',{on:false,n:2})+mrow(574,'自动设置系统DNS',{on:true,n:3})+mrow(638,'栈模式',{value:'mixed'}))
 
 add('flclash','dns','配置 DNS 覆写','工具 → 进阶配置 → DNS',[
- ['顶部加号添加覆写项','未添加的字段沿用配置；每项左侧可移除覆写'],['一次修改一项','图中值仅演示；右上角还提供快速编辑'],['应用后复查请求','自定义配置自己的设置优先；无改善时恢复原值']
-],()=>material('DNS','工具')+T(976,205,'＋',25,'#8a5260')+T(1035,205,'✎',25,'#8a5260')+badge(988,177,1)+mhead(253,'选项')+mrow(278,'⊖  状态',{on:true})+mrow(343,'⊖  遵守规则',{on:false,n:3})+mrow(408,'⊖  DNS模式',{value:'fake-ip',n:2})+mhead(516,'域名服务器')+mrow(537,'⊖  域名服务器',{sub:'https://resolver.example.com/dns-query'})+mrow(622,'⊖  代理域名服务器',{sub:'192.0.2.53'}))
+ ['点加号选择字段','选域名服务器；已有这一项时直接编辑'],['填写可达的服务器','此字段用于普通目标，节点域名可使用单独的解析器'],['查看 DNS 查询','访问一个新域名，打开其 DNS 查询并核对上游解析器']
+],()=>material('DNS','工具')+T(976,205,'＋',25,'#8a5260')+T(1035,205,'✎',25,'#8a5260')+badge(988,177,1)+mhead(253,'选项')+mrow(278,'⊖  状态',{on:true})+mrow(343,'⊖  遵守规则',{on:false})+mrow(408,'⊖  DNS模式',{value:'fake-ip'})+mhead(516,'域名服务器')+mrow(537,'⊖  域名服务器',{sub:'https://resolver.example.com/dns-query',n:2})+mrow(622,'⊖  代理域名服务器',{sub:'192.0.2.53'})+badge(110,565,3))
 
 add('flclash','backup','备份与恢复入口','工具 → 备份与恢复',[
  ['先备份本机数据','重大调整或恢复另一份备份前保留当前状态'],['核对恢复策略','兼容会更新同一记录；覆盖会移除备份中不存在的配置'],['再选择恢复范围','点击恢复后还需选择仅配置或所有数据']
@@ -801,7 +802,7 @@ add('openclash','routing','在路由器添加域名规则','覆写设置 → 规
  +T(114,527,'rules:',20,'#405369')+T(135,569,'- DOMAIN-SUFFIX,example.com,DIRECT',20,'#405369')+badge(1004,490,2)
  +webButton(808,649,216,'应用配置',3))
 
-add('openclash','chain','为出口节点指定入口','配置管理 → ⋮ → 节点管理 → 编辑出口节点',[
+add('openclash','chain','为出口节点指定入口','配置管理 → ⋯ → 节点管理 → 编辑出口节点',[
  ['编辑出口节点','读取自己的配置后，在服务器节点配置中打开出口'],
  ['填写入口名称','Dialer-proxy 填此配置中已有的入口名称'],
  ['保存后应用','回节点管理应用配置，切换到该文件，再在手选组选出口']
@@ -823,18 +824,94 @@ add('helper','nodes','在单端口模式切换节点','菜单栏 oixCloud → �
  +T(92,590,'本地多端口映射',18,'#53677e',600)
  +helperMenu(90,612,855,[{label:'在 Surge 或 OpenSurge 中选择节点',muted:true,n:3}]))
 
+add('oixflow','dns-test','测试 DNS 并核对来源','活动 → DNS → 测试 DNS',[
+ ['输入一个新域名','先连接 VPN，再测试一个还没查过的有效域名'],
+ ['点测试 DNS','查看返回的地址和耗时；本图使用文档示例地址'],
+ ['展开详情','核对配置来源与 DNS 出站，留意系统回退提示']
+],()=>ios('活动',{large:true,tab:'活动'})
+ +T(80,280,'DNS',21,'#007aff',600)+group(306,[{label:'example.com',n:1},{label:'测试 DNS',blue:true,n:2}])
+ +group(492,[{label:'IPv4',value:'192.0.2.17'},{label:'查询耗时',value:'31 ms'},
+ {label:'详情',n:3},{label:'配置来源',value:'全局设置'},{label:'DNS 出站',value:'直连'}],{title:'example.com'}))
+
+add('apple-tv','dns','在电视上设置 DNS','设置 → DNS',[
+ ['核对 DNS 同步','开启后从 iPhone 或 iPad 接收 DNS 设置'],
+ ['只修改电视','关闭 DNS 同步后，选择自定义 DNS 并确认地址'],
+ ['验证设置','回到此页核对服务器，再从电视应用发起新查询']
+],()=>R(30,130,1060,653,'#e9edf4',16)+T(87,204,'DNS',40,'#25354d',650)
+ +R(84,246,952,76,'#fff',13)+T(110,294,'DNS 同步',24,'#344961',600)+T(984,294,'关闭',22,'#526983',500,'end')+badge(1017,255,1)
+ +T(86,386,'全局 DNS',19,'#657a91',600)+R(84,407,952,81,'#fff',13,'#becbdb')
+ +T(110,458,'自定义 DNS',23,'#344961',600)+T(985,458,'192.0.2.53',23,'#526983',500,'end')+badge(358,422,2)
+ +R(84,503,952,68,'#f8faff',11)+T(110,547,'严格 DNS',23,'#344961')+T(984,547,'关闭',22,'#526983',500,'end')
+ +R(84,585,952,68,'#f8faff',11)+T(110,628,'允许回退系统 DNS',23,'#344961')+T(984,628,'开启',22,'#526983',500,'end')
+ +mark(780,428,208,45,3))
+
+add('flclash','android-vpn','开启 Android VPN','工具 → 进阶配置 → 网络',[
+ ['开启 VPN','返回仪表盘启动，首次连接时同意系统 VPN 请求'],
+ ['区分系统代理','Android 10 及以上可在 VPN 内提供 HTTP 代理'],
+ ['检查接管的应用','用已纳入访问控制的应用测试，再从工具 → 更多 → 请求查看出口']
+],()=>R(42,127,454,810,'#fffbfc',32,'#e4d8df')+T(69,164,'9:41',17,'#332b2e',600)
+ +T(75,217,'‹',28,'#875366')+T(114,217,'网络',24)
+ +mrow(274,'VPN',{on:true,n:1,x:68,w:398})+T(82,423,'VPN',16,'#805768',600)
+ +mrow(441,'系统代理',{on:false,n:2,x:68,w:398})+mrow(508,'排除域名',{x:68,w:398})
+ +mrow(576,'允许应用绕过VPN',{on:false,x:68,w:398})+mrow(644,'IPv6',{on:false,x:68,w:398})
+ +mrow(711,'DNS劫持',{on:true,x:68,w:398})
+ +R(68,800,398,77,'#f5eaf0',12)+T(83,827,'验证请求',14,'#735a68')+T(83,858,'工具 → 更多 → 请求',17,'#44343e')+badge(458,805,3)+R(200,907,138,5,'#392e34',3))
+
+add('openclash','modes','选择接管方式和代理模式','服务 → OpenClash → 运行状态',[
+ ['保留现有 DNS 模式','Fake-IP 与 Redir-Host 决定 DNS 返回地址的方式'],
+ ['需要虚拟网卡时选 TUN','切换后等服务恢复，用受接管的局域网设备测试'],
+ ['按网站分流选规则','新建连接，在控制面板核对该网站的出口']
+],()=>R(30,130,1060,653,'#f5f5f5',15)+R(30,130,1060,55,'#283643',15)
+ +T(55,166,'OpenWrt',25,'#fff',600)+T(242,166,'服务',19,'#fff')+T(337,166,'OpenClash',19,'#fff')
+ +T(64,250,'运行状态',32,'#344454',650)+R(65,302,988,253,'#fff',8,'#dce1e4')
+ +T(89,356,'运行模式',22,'#354958',600)+segmented(316,379,649,['Fake-IP','Redir-Host'],0)+badge(978,389,1)
+ +segmented(316,459,649,['增强','TUN','混合'],1)+badge(978,472,2)
+ +R(65,576,988,133,'#fff',8,'#dce1e4')+T(89,634,'代理模式',22,'#354958',600)
+ +segmented(316,623,649,['规则','全局','直连'],0)+badge(978,633,3))
+
+add('openclash','dns','更改普通域名的上游 DNS','覆写设置 → DNS 设置',[
+ ['启用上游覆写','保留托管 DNS 时无需勾选'],
+ ['选 nameserver 分组','填写自己的解析器地址、协议和端口，启用这一项'],
+ ['应用配置','等服务恢复后核对运行配置，再从局域网设备测试']
+],()=>R(30,130,1060,653,'#f5f5f5',15)+R(30,130,1060,55,'#283643',15)
+ +T(55,166,'OpenWrt',25,'#fff',600)+T(242,166,'服务',19,'#fff')+T(337,166,'OpenClash',19,'#fff')
+ +T(64,248,'覆写设置',32,'#344454',650)+T(65,303,'DNS 设置',22,'#376b91',600)
+ +R(65,332,986,313,'#fff',8,'#dae0e5')+T(91,394,'☑  自定义上游 DNS 服务器',21,'#354958',600)+badge(530,370,1)
+ +T(92,466,'设置自定义上游 DNS 服务器',18,'#526879',550)
+ +R(91,493,933,85,'#f6f9fb',7,'#d5dee6')+T(116,545,'☑',22,'#38688c')+T(181,544,'nameserver',21,'#354958',600)
+ +T(449,544,'192.0.2.53',21,'#354958')+T(711,544,'UDP',20,'#354958')+T(864,544,'53',20,'#354958')+badge(1007,500,2)
+ +webButton(830,677,199,'应用配置',3))
+
+add('oixclash','dns','保存路由器自己的 DNS','软件中心 → oixClash → DNS 设置',[
+ ['展开 DNS 设置','勾选使用自定义 DNS 后可编辑下方两栏'],
+ ['分别填写解析器','直连填 IPv4 或 HTTPS；代理填 HTTPS，不加 #Proxy'],
+ ['保存并应用','等服务恢复，点自检，再用接管范围内的设备测试']
+],()=>merlin('DNS 设置')+oxHead(249,'DNS 设置')+oxButton(254,300,257,'收起 DNS 设置')
+ +oxCheck(259,372,true)+T(288,387,'使用自定义 DNS',18,'#fff')+badge(564,363,1)
+ +oxRow(432,'直连 DNS')+T(427,464,'192.0.2.53',19,'#fff')
+ +oxRow(506,'代理 DNS')+T(427,539,'https://resolver.example/dns-query',19,'#fff')+badge(1029,515,2)
+ +oxButton(485,652,215,'保存并应用',3)+oxButton(728,652,128,'自检'))
+
+add('helper','surge-mode','在 Surge 选择出站和接管方式','macOS 菜单栏 → Surge',[
+ ['选出站模式','规则判定按网站分流；切换后用新请求验证'],
+ ['设置为系统代理','供遵循 macOS 系统代理的应用使用'],
+ ['需要时开增强模式','完成系统授权，在 Surge 请求列表核对目标应用']
+],()=>helperDesktop()+helperMenu(90,207,364,[{label:'Surge',muted:true},{label:'出站模式',active:true,sub:true,n:1},
+ {label:'设置为系统代理',n:2},{label:'增强模式',n:3}])
+ +helperMenu(467,252,447,[{label:'✓  规则判定'},{label:'全局代理'},{label:'直接连接'}]))
+
 for(const original of scenes){
  currentScene=original
  const key=`${original.client}-${original.id}`
  const localized=english?translations.scenes[key]:null
  if(english&&!localized)throw new Error(`Missing English scene: ${key}`)
  const sc=localized?{...original,title:localized[0],route:localized[1],notes:localized[2]}:original
- const phone=sc.client==='oixflow'||sc.id==='android'
+ const phone=isPhoneScene(sc)
  const h=english?(phone?1120:1100):(phone?982:975)
  const brand=['oixflow','apple-tv'].includes(sc.client)?'oixFlow':['account','start'].includes(sc.client)?'oixCloud':sc.client==='openclash'?'OpenClash':sc.client==='metacubexd'?'MetaCubeXD':sc.client==='helper'?'oixCloud Helper':sc.client==='oixclash'?'oixClash':'FlClash for oixCloud'
  const description=english?(sc.client==='oixclash'?'English reference with bilingual labels for the Chinese-only plugin UI; fictional data, not a screenshot.':'English interface simulation based on maintained client labels; fictional data, not a screenshot. Layout varies by OS, platform and theme.'):'按维护版本的菜单与表单绘制，非客户端截图；中文界面与虚构数据；界面细节随系统、平台与主题变化'
  let s=`<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="${h}" viewBox="0 0 1120 ${h}" role="img" aria-labelledby="title desc"><title id="title">${E(brand+' · '+sc.title)}</title><desc id="desc">${E(description)}</desc><g font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',Arial,sans-serif">`
- const platform=sc.client==='metacubexd'?'MetaCubeXD · OpenClash / oixClash':sc.client==='account'?(english?'oixCloud · Website':'oixCloud · 网站'):sc.client==='apple-tv'?'oixFlow · Apple TV':sc.client==='openclash'?'OpenClash · OpenWrt / LuCI':sc.client==='oixflow'?'oixFlow · iPhone / iPad':sc.client==='helper'?('oixCloud Helper · '+(sc.id==='linux'?'Linux / Docker':'macOS')):sc.client==='start'?(english?'oixCloud · Architecture & Concepts':'oixCloud · 架构与概念'):sc.client==='oixclash'?('oixClash · '+(english?'Merlin router':'Merlin 路由器')):'FlClash for oixCloud'+(sc.id==='android'?' · Android':english?' · Desktop':' · 桌面端')
+ const platform=sc.client==='metacubexd'?'MetaCubeXD · OpenClash / oixClash':sc.client==='account'?(english?'oixCloud · Website':'oixCloud · 网站'):sc.client==='apple-tv'?'oixFlow · Apple TV':sc.client==='openclash'?'OpenClash · OpenWrt / LuCI':sc.client==='oixflow'?'oixFlow · iPhone / iPad':sc.client==='helper'?('oixCloud Helper · '+(sc.id==='linux'?'Linux / Docker':'macOS')):sc.client==='start'?(english?'oixCloud · Architecture & Concepts':'oixCloud · 架构与概念'):sc.client==='oixclash'?('oixClash · '+(english?'Merlin router':'Merlin 路由器')):'FlClash for oixCloud'+(isPhoneScene(sc)?' · Android':english?' · Desktop':' · 桌面端')
  s+=R(0,0,1120,h,'#f3f5f8',0)+T(34,38,platform,18,'#697386',600)+T(1085,38,english?(sc.client==='oixclash'?'English guide · Chinese-only plugin UI':'Illustration · Fictional data'):'操作示意 · 虚构数据',16,'#788392',500,'end')+T(34,87,sc.title,31,'#263245',700)
  drawingUI=true
  s+=sc.draw()

@@ -6,11 +6,22 @@ description: "Strict DNS, split DNS and three independent IPv6 controls"
 
 For iPhone/iPad versions of oixFlow that expose these controls. See the separate [Apple TV guide](/en/oixflow/apple-tv). Check your installed version if a setting is missing.
 
+<span id="configure-dns"></span>
+
 ## Check the effective source first
 
-Open **Settings → DNS** and read the Automatic, Custom or Strict DNS summary and its source. A network profile or module can override global DNS. When the page reports an override, editing the global address may not change the resolver used on this network.
+1. Open **Settings → DNS**. Check **Mode**, **DNS Servers** and **Source** at the top. If you see **Overridden by**, edit the named network profile or module to change the active resolver.
+2. To change the global setting, enter a reachable server under **Custom DNS**, for example `https://1.1.1.1/dns-query`. Separate multiple entries with commas. Finish editing, leave the field and check the effective server at the top. Clear the field and finish editing to restore the default.
+3. Connect the VPN. In **Activity → DNS**, enter a fresh, resolvable domain and tap **Test DNS**. Check the returned addresses. Expand **Details** for the **Configuration Source** and **DNS Route**. The result flags a fallback to system DNS.
 
-**Custom DNS** accepts the displayed plain-IP, DoH, DoH3, DoQ, DoT and TCP formats. Separate servers with commas. Correct invalid input before leaving the field; an empty field restores the default selection for the current mode.
+<figure class="guide-figure">
+  <a href="/illustrations/oixflow-dns-test-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Test DNS in Activity and check the query’s configuration source and route">
+    <img src="/illustrations/oixflow-dns-test-en.svg?v=20261127-5" alt="Test DNS in Activity and check the query’s configuration source and route" width="1120" height="1120" loading="lazy">
+  </a>
+  <figcaption>English interface simulation · Fictional data</figcaption>
+</figure>
+
+The field accepts plain IP, DoH, DoH3, DoQ, DoT and TCP addresses. For an exception that covers one domain, use a DNS rule below.
 
 <span id="dns-leaks-settings-that-help"></span>
 
@@ -20,7 +31,7 @@ To prevent public DNS queries handled by the VPN from falling back to system DNS
 
 1. Connect the VPN, then enable **Strict DNS** in **Settings → DNS**.
 2. Check the effective servers and source at the top. With no configured servers, the default is Cloudflare DoH. Only encrypted custom servers are eligible for public queries, and proxied queries require `https://` DoH.
-3. **Skip DNS Lookups for Routing** is forced on and **Allow System DNS Fallback** is forced off. These controls cannot be changed independently while Strict DNS is active.
+3. Strict DNS skips DNS lookups for IP-based routing and prevents system fallback. The two individual switches are hidden until you turn Strict DNS off.
 4. Make a new connection and check resolution and outbound in [requests and DNS diagnostics](/en/oixflow/diagnostics). For failures, check the effective resolver, proxy and rules before treating a timeout as an invalid account token.
 
 Strict DNS skips DNS lookups used for IP-based classification. Domain rules and the final route still apply, so routes depending on IP, GeoIP or ASN classification may change. Disabling Strict DNS restores the saved choices for the other two controls.

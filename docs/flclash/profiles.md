@@ -25,8 +25,8 @@ FlClash for oixCloud 可以使用兼容的第三方节点和订阅，普通导�
 ## 添加单个第三方节点 {#single-node}
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-custom-node-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 在当前配置添加自定义节点">
-    <img src="/illustrations/flclash-custom-node-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 在当前配置添加自定义节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-custom-node-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 在当前配置添加自定义节点">
+    <img src="/illustrations/flclash-custom-node-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 在当前配置添加自定义节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
@@ -79,8 +79,8 @@ HTTP / HTTPS 代理的 `http://`、`https://` 链接请使用前面的「自定�
 ## 导入其他订阅或配置文件 {#other-subscription}
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-import-link-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud 的「从链接导入」表单和保存按钮">
-    <img src="/illustrations/flclash-import-link-zh.svg?v=20261127-3" alt="FlClash for oixCloud 的「从链接导入」表单和保存按钮" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-import-link-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud 的「从链接导入」表单和保存按钮">
+    <img src="/illustrations/flclash-import-link-zh.svg?v=20261127-5" alt="FlClash for oixCloud 的「从链接导入」表单和保存按钮" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
@@ -109,8 +109,8 @@ URL 订阅可在该配置菜单点「同步」，也可在「编辑」中设置�
 ### 加入整份第三方订阅 {#managed-subscription}
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-provider-members-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 把第三方提供者加入自己的组">
-    <img src="/illustrations/flclash-provider-members-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 把第三方提供者加入自己的组" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-provider-members-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 把第三方提供者加入自己的组">
+    <img src="/illustrations/flclash-provider-members-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 把第三方提供者加入自己的组" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
@@ -149,8 +149,8 @@ oixCloud 托管配置不能作为另一份「自定义配置」的代理提供�
 <span id="手动与自动更新"></span>
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-profiles-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 更新与管理配置">
-    <img src="/illustrations/flclash-profiles-zh.svg?v=20261127-3" alt="FlClash for oixCloud · 更新与管理配置" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-profiles-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 更新与管理配置">
+    <img src="/illustrations/flclash-profiles-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 更新与管理配置" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -162,8 +162,8 @@ oixCloud 托管配置不能作为另一份「自定义配置」的代理提供�
 ## 托管订阅选项
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-filter-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 可视化节点筛选">
-    <img src="/illustrations/flclash-filter-zh.svg?v=20261127-3" alt="FlClash for oixCloud · 可视化节点筛选" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-filter-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 可视化节点筛选">
+    <img src="/illustrations/flclash-filter-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 可视化节点筛选" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>

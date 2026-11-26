@@ -38,8 +38,8 @@ LuCI 插件和代理内核可单独更新。找不到新菜单时，仅更新内
 
 
 <figure class="guide-figure">
-  <a href="/illustrations/openclash-running-zh.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="OpenClash · 确认正在运行专用配置">
-    <img src="/illustrations/openclash-running-zh.svg?v=20261127-3" alt="OpenClash · 确认正在运行专用配置" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/openclash-running-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="OpenClash · 确认正在运行专用配置">
+    <img src="/illustrations/openclash-running-zh.svg?v=20261127-5" alt="OpenClash · 确认正在运行专用配置" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
@@ -71,11 +71,38 @@ UDP 转发开启后仍受端口范围限制。端口过滤不等于识别所有 
 
 只有账户卡片、正常延迟或「运行中」状态，不能证明测试设备的流量已经接管。浏览器安全 DNS、其他 DNS 插件、IPv6 和旁路由网关都可能影响路径
 
+### 切换代理模式或启用 TUN {#capture-mode}
+
+<figure class="guide-figure">
+  <a href="/illustrations/openclash-modes-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="OpenClash 运行状态里的代理模式、DNS 模式和 TUN">
+    <img src="/illustrations/openclash-modes-zh.svg?v=20261127-5" alt="OpenClash 运行状态里的代理模式、DNS 模式和 TUN" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
+</figure>
+
+1. 在 LuCI 打开「服务 → OpenClash → 运行状态」。要按网站分流，在「代理模式」点「规则」；要把进入内核的普通连接交给全局组，点「全局」；需要临时直连时点「直连」
+2. 需要路由器用虚拟网卡接管时，在同页「运行模式」选择「TUN」，等待服务恢复运行。这里的 Fake-IP / Redir-Host 决定 DNS 返回地址的方式，可以保留原选择
+3. 用以这台路由器为网关、已纳入访问控制的设备重新访问一个网站。在控制面板「连接」按域名或设备 IP 找到这条新连接，核对出口。若看不到，检查[端口范围](#common-ports)和绕过设置
+
+### 设置并验证路由器 DNS {#configure-dns}
+
+<figure class="guide-figure">
+  <a href="/illustrations/openclash-dns-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="在覆写设置为普通域名填写 DNS 上游并应用配置">
+    <img src="/illustrations/openclash-dns-zh.svg?v=20261127-5" alt="在覆写设置为普通域名填写 DNS 上游并应用配置" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>中文模拟界面 · 虚构数据</figcaption>
+</figure>
+
+1. 日常使用可保留配置自带的 DNS。在「插件设置 → DNS 设置 → 本地 DNS 劫持」查看局域网 DNS 如何转给 OpenClash，按当前网络使用 Dnsmasq 转发或防火墙转发
+2. 要更换解析器，打开「覆写设置 → DNS 设置」，勾选「自定义上游 DNS 服务器」。在下方的服务器表添加或编辑 `nameserver` 项，填写可达解析器的地址、协议和端口，启用该行，点「应用配置」
+3. 等服务恢复，在「配置管理」打开当前配置的「⋯」菜单，选择「下载运行配置」，核对 `dns.nameserver`。在局域网设备上运行 `nslookup example.com 路由器的局域网IP`，将最后一项换成实际地址，确认收到应答。要验证上游确实收到某次查询，可使用能查看查询记录的解析器和未缓存的新域名
+
+
 ### 选择节点或切换策略组 {#routing}
 
 <figure class="guide-figure">
-  <a href="/illustrations/metacubexd-groups-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="在 MetaCubeXD 的手动选择组中点节点，再到连接查看出口">
-    <img src="/illustrations/metacubexd-groups-zh.svg?v=20261127-4" alt="在 MetaCubeXD 的手动选择组中点节点，再到连接查看出口" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/metacubexd-groups-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="在 MetaCubeXD 的手动选择组中点节点，再到连接查看出口">
+    <img src="/illustrations/metacubexd-groups-zh.svg?v=20261127-5" alt="在 MetaCubeXD 的手动选择组中点节点，再到连接查看出口" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>操作示意 · 虚构数据</figcaption>
 </figure>
@@ -105,14 +132,14 @@ rules:
 ### 用两个节点建立代理链 {#create-chain}
 
 <figure class="guide-figure">
-  <a href="/illustrations/openclash-chain-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="在 OpenClash 出口节点的 Dialer-proxy 字段填写入口名称">
-    <img src="/illustrations/openclash-chain-zh.svg?v=20261127-4" alt="在 OpenClash 出口节点的 Dialer-proxy 字段填写入口名称" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/openclash-chain-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="在 OpenClash 出口节点的 Dialer-proxy 字段填写入口名称">
+    <img src="/illustrations/openclash-chain-zh.svg?v=20261127-5" alt="在 OpenClash 出口节点的 Dialer-proxy 字段填写入口名称" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>操作示意 · 虚构数据</figcaption>
 </figure>
 
-1. 准备一份自己维护、含入口和出口两个节点的 YAML 配置。需要参考现有配置时，先在「配置管理」中用该文件的「⋮ → 复制配置」，之后编辑副本；订阅更新会重新生成托管文件
-2. 在这份配置的「⋮ → 节点管理」点「读取配置」。在「服务器节点配置」中编辑**出口节点**，把 `Dialer-proxy` 填为已有的**入口节点**名称，点「保存配置」
+1. 准备一份自己维护、含入口和出口两个节点的 YAML 配置。需要参考现有配置时，先在「配置管理」中用该文件的「⋯ → 复制配置」，之后编辑副本；订阅更新会重新生成托管文件
+2. 在这份配置的「⋯ → 节点管理」点「读取配置」。在「服务器节点配置」中编辑**出口节点**，把 `Dialer-proxy` 填为已有的**入口节点**名称，点「保存配置」
 3. 回到「节点管理」点「应用配置」写回。到「配置管理」切换到这份文件，等运行恢复后，在控制面板的手选组选择**出口节点**。新连接会先经过入口，再从出口访问目标
 
 ## 5. 更新与节点筛选

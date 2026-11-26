@@ -99,8 +99,8 @@ For automatic entry selection, use a personal policy group offered by the chain 
 For Windows, macOS, Android and Linux versions supporting this feature.
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-chains-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Edit chain order">
-    <img src="/illustrations/flclash-chains-en.svg?v=20261127-4" alt="FlClash for oixCloud · Edit chain order" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-chains-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Edit chain order">
+    <img src="/illustrations/flclash-chains-en.svg?v=20261127-5" alt="FlClash for oixCloud · Edit chain order" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>General chain-editor example · Replace its members with your entry and Home ISP nodes</figcaption>
 </figure>

@@ -4,7 +4,7 @@ description: "Android apps and background operation \u2014 setup, practical step
 
 # Android apps and background operation
 
-Open **Tools → Access Control**. This application list is Android-specific.
+Enable **VPN** under **Tools → Advanced configuration → Network**. Start from the dashboard, approve Android’s VPN request, then open **Tools → Access Control** to choose apps. [Verify Android VPN capture](/en/flclash/capture#android-vpn)
 
 ## Choose which apps enter VPN
 

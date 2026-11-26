@@ -9,8 +9,8 @@ description: "节点、策略组与代理链的操作步骤、适用范围与常
 ## 操作示意
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-proxies-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 在策略组中选择节点">
-    <img src="/illustrations/flclash-proxies-zh.svg?v=20261127-4" alt="FlClash for oixCloud · 在策略组中选择节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-proxies-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 在策略组中选择节点">
+    <img src="/illustrations/flclash-proxies-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 在策略组中选择节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -19,9 +19,9 @@ description: "节点、策略组与代理链的操作步骤、适用范围与常
 
 ## 手动选择节点
 
-1. 在桌面或 Android 打开「代理」。在分组标签或列表中打开目标网站使用的策略组；拿不准时，先访问一次，在「连接」查看它命中的规则和组名
+1. 在桌面或 Android 打开「代理」。在分组标签或列表中打开目标网站使用的策略组；拿不准时，先访问一次，在「请求」查看它命中的规则和组名
 2. 在手动选择组中点节点。若选的是另一个组，再打开那个组选择成员。切换分组标签只是查看该组，要点成员才会更换出口
-3. 重新访问网站，在「连接」核对实际出口。规则模式下，不同网站可能命中不同的组
+3. 重新访问网站，在「请求」核对实际出口。规则模式下，不同网站可能命中不同的组
 
 ## 自动测速与故障转移
 
@@ -44,8 +44,8 @@ description: "节点、策略组与代理链的操作步骤、适用范围与常
 ## 代理链
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-chains-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
-    <img src="/illustrations/flclash-chains-zh.svg?v=20261127-4" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-chains-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
+    <img src="/illustrations/flclash-chains-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>

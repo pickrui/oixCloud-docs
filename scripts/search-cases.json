@@ -863,5 +863,39 @@
     "targets": [
       "/flclash/proxies.html"
     ]
+  },
+  {
+    "terms": [
+      "FlClash Android VPN"
+    ],
+    "targets": [
+      "/flclash/capture.html",
+      "/flclash/android.html"
+    ]
+  },
+  {
+    "terms": [
+      "FlClash DNS"
+    ],
+    "targets": [
+      "/flclash/dns.html",
+      "/flclash/diagnostics.html"
+    ]
+  },
+  {
+    "terms": [
+      "OpenClash TUN"
+    ],
+    "targets": [
+      "/other/openclash.html"
+    ]
+  },
+  {
+    "terms": [
+      "Surge DNS"
+    ],
+    "targets": [
+      "/other/surge.html"
+    ]
   }
 ]

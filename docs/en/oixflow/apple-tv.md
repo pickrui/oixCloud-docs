@@ -69,6 +69,20 @@ After the TV uses an email/password or Google sign-in synced from an iPhone or i
 3. With iCloud mirroring, [create groups or chains](/en/oixflow/policies#create-chain) and add rules on the publishing iPhone or iPad. Choose them once the TV receives the update. With a local TV configuration, you can also open **Routing Rules → Add Rule**, enter a domain, choose an action and save.
 4. Reopen the service on the TV and check the exit on a new connection.
 
+## Switch modes and DNS on the TV {#capture-dns}
+
+<figure class="guide-figure">
+  <a href="/illustrations/apple-tv-dns-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="DNS Sync and TV-only custom DNS on Apple TV">
+    <img src="/illustrations/apple-tv-dns-en.svg?v=20261127-5" alt="DNS Sync and TV-only custom DNS on Apple TV" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>English interface simulation · Fictional data</figcaption>
+</figure>
+
+1. Press the power button on Home with the remote. Allow the VPN if prompted and wait for the connected state. In **Settings → Mode**, choose **Rule**, **Global** or **Direct**. Reopen the menu to see the checkmark beside the current choice.
+2. Open **Settings → DNS**. With **DNS Sync** on, the TV receives DNS settings from the iPhone or iPad. Make the change on the publishing device and check the servers shown on the TV after both devices sync through iCloud.
+3. For a TV-only change, turn off **DNS Sync**, open **Custom DNS**, enter a reachable server and confirm. The change stays on the TV. If you turn sync back on, incoming DNS settings replace the local ones.
+4. Confirm the VPN is connected on Home. Make a new connection from the target app and check that the traffic counters increase. To verify a specific DNS upstream, use a resolver whose query records you can inspect, request a fresh domain, then check whether the query reached that resolver.
+
 ## Sync or connection failures
 
 Check Apple Accounts, client versions and both sync switches first, then the TV network and plan status. If nodes exist but streaming fails, inspect the chosen exit and service region rather than repeatedly syncing the same data.

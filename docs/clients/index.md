@@ -37,6 +37,8 @@ description: 按设备与应用查找连接和设置教程
 | 导入自己的订阅网址 | [oixFlow](/oixflow/proxies#third-party-subscription) · [FlClash for oixCloud](/flclash/profiles#other-subscription) · [OpenClash](/other/openclash#import-url) |
 | 筛选或刷新 oixCloud 托管节点 | [查看各客户端的入口与保存步骤](/account/subscriptions#apply-filter) |
 | 把订阅导入其他兼容客户端 | [订阅与筛选](/account/subscriptions) |
+| 切换代理模式、开启系统代理或 VPN / TUN | [iPhone / iPad](/oixflow/connect#capture-mode) · [Apple TV](/oixflow/apple-tv#capture-dns) · [FlClash for oixCloud](/flclash/capture#mode) · [OpenClash](/other/openclash#capture-mode) · [oixClash](/other/oixclash#capture-mode) · [Surge Mac](/other/surge#capture-mode) |
+| 更改 DNS 并确认解析器 | [iPhone / iPad](/oixflow/dns#configure-dns) · [Apple TV](/oixflow/apple-tv#capture-dns) · [FlClash for oixCloud](/flclash/dns#configure-dns) · [OpenClash](/other/openclash#configure-dns) · [oixClash](/other/oixclash#configure-dns) · [Surge Mac](/other/surge#configure-dns) |
 | 选择节点或切换策略组 | [iPhone / iPad](/oixflow/policies#choose-outbound) · [Apple TV](/oixflow/apple-tv#routing) · [FlClash for oixCloud](/flclash/proxies#choose-outbound) · [OpenClash](/other/openclash#routing) · [oixClash](/other/oixclash#routing) · [Helper 与 Surge](/other/surge#routing) |
 | 给网站指定出口 | [oixFlow](/oixflow/routing#website-rule) · [FlClash for oixCloud](/flclash/rules#website-rule) · [OpenClash 本机规则](/other/openclash#routing-rules) · [oixClash 账号规则](/other/oixclash#routing-rules) · [Surge 配置](/other/surge#routing-rules) |
 | 设置代理链 | [oixFlow](/oixflow/policies#create-chain) · [FlClash for oixCloud](/flclash/proxies#create-chain) · [OpenClash](/other/openclash#create-chain) · [托管节点内部中继](/account/relay#内部中继) |

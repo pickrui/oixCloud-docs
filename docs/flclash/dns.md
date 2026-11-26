@@ -4,23 +4,23 @@ description: "DNS 覆写与网络设置的操作步骤、适用范围与常见�
 
 # DNS 覆写与网络设置
 
+<span id="configure-dns"></span>
+
 ## DNS 先保留默认
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-dns-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 配置 DNS 覆写">
-    <img src="/illustrations/flclash-dns-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 配置 DNS 覆写" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-dns-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 配置 DNS 覆写">
+    <img src="/illustrations/flclash-dns-zh.svg?v=20261127-5" alt="FlClash for oixCloud · 配置 DNS 覆写" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
-从「工具 → 进阶配置 → DNS」查看设置。当前界面通过标题栏的「＋」（添加覆写项）选择要覆盖的字段：已添加项覆盖所有配置的对应 DNS 设置，未添加项沿用配置自身设置，不再用一个总开关覆盖整组 DNS
+1. 打开「工具 → 进阶配置 → DNS」。要更改一般网站使用的解析器，点右上「＋」，添加「域名服务器」。若已添加，直接点这一项编辑列表，填入能从当前网络访问的 DNS 地址并确认
+2. 保持这份配置启用，用测试应用访问一个之前没有查询过的有效域名。打开桌面侧栏的「DNS 查询」，窄屏或手机从「工具 → 更多 → DNS 查询」进入
+3. 找到该域名并打开记录，核对「上游解析器」。如果命中缓存，换一个新域名再测。应用使用自己的加密 DNS 时，查询可能不会出现在这里
+4. 要撤销这次修改，恢复之前的服务器列表；本次才添加的覆写项可直接移除，恢复继承
 
-自定义配置自己添加的 DNS 设置优先于应用级覆写；脚本仍可能进一步改变生效配置。排查前先核对当前选中的配置及其个人设置
-
-1. 先记录当前配置、已添加的覆写项及原值
-2. 点标题栏「＋」选择需要验证的字段，使用可从当前网络访问的解析器
-3. 重新应用配置，再对同一域名测试
-4. 没有改善时恢复原值；移除新增的覆写项可恢复该字段的继承，再检查节点或规则
+应用级覆写作用于各配置的相应字段。自定义配置自己的 DNS 设置优先，脚本和域名专用策略也会影响实际结果。节点本身需要其他解析器时，见下方字段表
 
 ## Fake-IP 与真实地址
 
@@ -30,7 +30,7 @@ DNS 模式会影响内核如何识别和路由域名。某些局域网或特定�
 
 混合端口在「工具 → 常规 → 端口」中查看；TUN 相关选项位于「工具 → 进阶配置 → 网络」。端口被其他程序占用时更换为未使用的端口，并同步更新手动配置代理的应用
 
-DNS 劫持、追加系统 DNS、自动设置系统 DNS 分属不同环节。公司内网解析失败时，确认公司 DNS 的可达性及域名路由，不能只换一个公共 DNS 服务器
+macOS 的「自动设置系统DNS」在 TUN 运行时调整系统网络服务的 DNS；上方「域名服务器」决定内核选用的上游。公司内网解析失败时，确认公司 DNS 的可达性及域名路由，不能只换一个公共 DNS 服务器
 
 ## 节点域名解析失败
 
@@ -65,7 +65,7 @@ DNS 劫持、追加系统 DNS、自动设置系统 DNS 分属不同环节。公�
 | --- | --- |
 | macOS | 「工具 → 进阶配置 → 网络」中保留「自动设置系统 DNS」开启，并启用 TUN；检查系统 DNS 修改是否成功。发往局域网路由器的 DNS 可能绕过 TUN，不要只检查公共 DNS |
 | Windows | 启用 TUN，并检查多网卡、其他 VPN 和系统 DNS；需要严格路由时在网络设置的「虚拟网卡」中添加对应覆写项，见下方说明 |
-| Android | 在「工具 → 进阶配置 → 网络」开启「DNS 劫持」、关闭「允许绕过」，并确认应用未被排除；排查时将系统「私人 DNS」设为关闭<br>常驻 VPN 与断线阻止连接由 Android 系统另行配置，并受系统版本支持情况限制 |
+| Android | 在「工具 → 进阶配置 → 网络」开启「DNS劫持」、关闭「允许应用绕过VPN」，并确认应用未被排除；排查时将系统「私人 DNS」设为关闭<br>常驻 VPN 与断线阻止连接由 Android 系统另行配置，并受系统版本支持情况限制 |
 | Linux | 检查 TUN 自动路由、系统解析器与其他网络管理服务是否冲突；确认查询真正进入内核，而不只是本地代理端口可用 |
 
 浏览器安全 DNS、应用内置 DoH / DoT 不会被普通端口 53 接管。排查时先记录并停用这些独立设置；如需保留，应让其连接通过预期代理，并单独验证 IPv4 / IPv6。关闭 DNS 的 IPv6 解析只影响 AAAA 回答，不等于关闭系统 IPv6

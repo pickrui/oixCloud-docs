@@ -4,47 +4,58 @@ description: "System Proxy and TUN \u2014 setup, practical steps and troubleshoo
 
 # System Proxy and TUN
 
-## Choose traffic capture
+<span id="choose-traffic-capture"></span>
 
-| Situation | Check first |
-| --- | --- |
-| Desktop browser or app following system settings | System Proxy |
-| Apps ignoring system proxy, some games and UDP | TUN |
-| Android | VPN permission and app access control |
-| App with its own proxy settings | Its protocol, address and port |
+## Choose traffic capture {#mode}
 
-::: info Capture comes before routing
-Rule/Global/Direct modes act after capture; they do not replace the capture switch.
-:::
+1. Press play in **Dashboard → Status**. Under **Outbound mode**, choose **Rule**, **Global** or **Direct**. Use Rule for per-site routing. For Global, choose the global group's exit under **Proxies**. Direct sends ordinary captured requests straight to their destinations.
+2. Enable System Proxy, TUN or Android VPN as described below, then reopen the site. Existing connections can keep their previous exit.
+3. Open **Requests** in the desktop sidebar, or **Tools → More → Requests** on a phone or compact layout. Find the new record by domain and check its rule and exit. A new record confirms the client captured that request.
 
 ## Desktop System Proxy
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-capture-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Choose desktop traffic capture">
-    <img src="/illustrations/flclash-capture-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Choose desktop traffic capture" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-capture-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Enable System Proxy or TUN in network settings">
+    <img src="/illustrations/flclash-capture-en.svg?v=20261127-5" alt="Enable System Proxy or TUN in network settings" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
-Start the client and enable System Proxy. Check that system HTTP/HTTPS settings use its local port. Other proxy software, a PAC script or organization policy may override them.
+On Windows, macOS or Linux, enable **System Proxy** on the dashboard or under **Tools → Advanced Configuration → Network → System Proxy**. Open a site in a browser that follows the system proxy, then find the new request as described above.
 
-Apps with independent settings need separate configuration. If networking breaks after closing the client, check for a stale system proxy pointing to a stopped port.
+| Platform | How to check the system proxy |
+| --- | --- |
+| Windows | In **Settings → Network & internet → Proxy**, check the manual proxy address and port. |
+| macOS | Run `scutil --proxy` in Terminal. Check whether HTTP and HTTPS proxies are enabled and inspect their addresses and ports. |
+| Linux desktop | Open the desktop environment’s network proxy settings. Check the HTTP and HTTPS addresses and ports, then test with an app that uses those settings. |
+
+The address should point to this device and the port should match the mixed port under **Tools → General → Port**. For an app with its own proxy settings, enter that port in the app or enable TUN below.
 
 ## TUN
 
-Enable TUN and complete administrator authorization. A rejected permission request cannot be fixed by repeatedly toggling the switch.
+Enable **TUN** on the desktop dashboard or under **Tools → Advanced Configuration → Network → Options**. Complete any system permission prompt and wait for the dashboard to show TUN is enabled. To verify it, make a new connection from an app that ignores the system proxy and has no HTTP proxy configured. Look for its destination and exit in **Requests**.
 
-After connection, check exclusions, routes, DNS and competing VPNs. Change MTU or stack only with a specific comparison in mind, and restart as required by the interface.
+On Windows and macOS, **Tools → Network self-check** can also check TUN routes. On Linux, if the request is missing, check whether the target is excluded from routing or is handled by another VPN.
 
 <span id="android-and-verification"></span>
+<span id="android-vpn"></span>
 
 ## Android
 
-Allow the system VPN request. If only some apps fail, inspect [app access control](/en/flclash/android), then check whether background battery restrictions interrupted the VPN.
+<figure class="guide-figure">
+  <a href="/illustrations/flclash-android-vpn-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Enable Android VPN in Network, then start from the dashboard">
+    <img src="/illustrations/flclash-android-vpn-en.svg?v=20261127-5" alt="Enable Android VPN in Network, then start from the dashboard" width="1120" height="1120" loading="lazy">
+  </a>
+  <figcaption>English interface simulation · Fictional data</figcaption>
+</figure>
+
+1. Turn on **VPN** in **Tools → Advanced Configuration → Network**, start from the dashboard and accept Android’s VPN connection request on first use.
+2. Confirm FlClash for oixCloud is connected in Android’s VPN settings. Make a new request from an app included by [access control](/en/flclash/android). Check the exit under **Tools → More → Requests**.
+3. On Android 10 and later, the separate **System Proxy** option in Network can advertise an HTTP proxy through the VPN. Enabling **VPN** is enough to capture eligible apps.
 
 ## Verify
 
-Compare the same target's behavior with connection records. Windows/macOS users can run [network checks](/en/flclash/diagnostics) for listeners, system proxy and TUN state.
+If a request appears with the wrong exit, check Outbound Mode, the matched rule and the selected group. If it never appears, check traffic capture, excluded apps and other VPNs. To verify the resolver, [inspect a DNS query](/en/flclash/dns#configure-dns).
 
 ## Proxy conflicts and occupied ports
 
