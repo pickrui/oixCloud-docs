@@ -64,7 +64,7 @@ The status button at the top of the dashboard shows the core state. Builds with 
 
 ## Verify the connection
 
-Select a permitted, available node in Proxies, open the target service and inspect connections. Sync the managed configuration after plan or node changes; repeated sign-out is not a refresh procedure.
+In **Proxies**, open the site's Select group and choose an available node. Visit the site again and check its matched rule and exit in **Connections**. You can also [set a preferred node in an automatic group](/en/flclash/proxies#choose-outbound). Refresh the managed profile after plan or node changes.
 
 For sign-in failures, retain the exact error and version, then check networking, system time and account status.
 

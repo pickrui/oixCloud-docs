@@ -7,8 +7,8 @@ description: "覆写、策略组与附加规则的操作步骤、适用范围与
 ## 操作示意
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-rules-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 添加域名后缀规则">
-    <img src="/illustrations/flclash-rules-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 添加域名后缀规则" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-rules-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 添加域名后缀规则">
+    <img src="/illustrations/flclash-rules-zh.svg?v=20261127-4" alt="FlClash for oixCloud · 添加域名后缀规则" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -16,30 +16,31 @@ description: "覆写、策略组与附加规则的操作步骤、适用范围与
 ## 选择覆写模式
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-override-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 选择配置覆写模式">
-    <img src="/illustrations/flclash-override-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 选择配置覆写模式" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-override-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 选择配置覆写模式">
+    <img src="/illustrations/flclash-override-zh.svg?v=20261127-4" alt="FlClash for oixCloud · 选择配置覆写模式" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
-打开配置操作菜单中的「覆写」
+在「配置」打开托管或普通订阅的菜单，选择「覆写」。要为这份订阅加一条例外，选择「叠加」
 
 | 模式 | 行为 |
 | --- | --- |
+| 标准 | 使用原配置，可选择覆写脚本并启用附加规则 |
 | 叠加 | 保留订阅规则与策略组，加入个人设置；个人规则优先于订阅规则，已有附加规则保持优先 |
 | 自定义 | 自己维护规则与策略组，适合明确知道完整路由结构的用户 |
 
 首次调整建议从叠加开始。自定义内容为空时不能得到一份可用路由，不要为了“清理默认规则”直接切换为空配置
 
+<span id="website-rule"></span>
+
 ## 为网站指定路线
 
-1. 在覆写中添加个人规则，或进入「工具 → 进阶配置 → 附加规则」
-2. 选择域名后缀等规则类型，填写 `example.com` 这样的匹配值
-3. 选择直连、拒绝或已存在的策略组；需要 Tailscale 时选择对应网络
-4. 保存并应用，保持规则模式
-5. 重新发起请求，在连接记录中核对命中规则
+1. 托管或普通订阅：在「配置 → 当前配置菜单 → 覆写」选「叠加」，打开「规则 → 添加」。自定义配置：进「配置 → 当前配置菜单 → 编辑 → 规则 → 添加」
+2. 选择 `DOMAIN-SUFFIX`，填写 `example.com`，目标选 `DIRECT`、`REJECT`、已有策略组或已启用的链名。要代理这个域名，先确认目标组有可用成员
+3. 保存规则。使用订阅覆写时回到「覆写」，若出现「立即应用」就点一下。确认正在使用这份配置和规则模式，重新访问网站，在「连接」核对命中规则和出口
 
-不要把完整网页地址填进域名字段。修改规则后旧连接可能继续存在，应重新打开目标页面再判断
+想在多份订阅中复用一条规则，可进「工具 → 进阶配置 → 附加规则」创建，再在需要的配置的「覆写」中确认已启用。只给一份配置使用的例外，按上面的步骤添加
 
 附加规则可以指向自己命名的出口，例如 `Media`。在配置覆写中为该出口指定节点或策略组；使用默认映射时，先找同名的组或节点，找不到时使用配置最后一条 `MATCH` 规则的目标。如果先前指定的目标变红，重新选择后，用新连接检查实际出口
 

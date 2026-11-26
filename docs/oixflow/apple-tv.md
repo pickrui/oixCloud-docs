@@ -51,11 +51,21 @@ Apple TV 继续通过 iPhone / iPad 的「同步到 Apple TV」登录：手机�
 
 手机或平板用邮箱/密码或 Google 登录时，电视使用这次登录后，会列在网站[已登录的客户端](/account/security#signed-in-clients)对应记录下。点该记录的「下线」会让两端一起退出。使用手动 Access Token 时，在该 Token 下查看设备。要恢复，在手机或平板重新登录，再确认「同步到 Apple TV」仍开启
 
+<span id="routing"></span>
+
 ## 日常使用
 
-使用遥控器切换节点或策略组，检查延迟与连接状态。复杂的节点、链和规则整理优先在手机或平板完成后同步
+<figure class="guide-figure">
+  <a href="/illustrations/apple-tv-routing-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="Apple TV 主页选择器中的自动优选、链式代理和订阅节点">
+    <img src="/illustrations/apple-tv-routing-zh.svg?v=20261127-4" alt="Apple TV 主页选择器中的自动优选、链式代理和订阅节点" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>操作示意 · 虚构数据</figcaption>
+</figure>
 
-在主页打开节点选择器，选「全部测试」可同时检查列表中的节点和代理链。结果显示在各名称下方，方便用遥控器选出口
+1. 用遥控器点主页的当前节点卡片。展开选择器后，点独立节点、订阅中的节点、已有的链，或在有可用成员时点「自动优选」。点「全部测试」可以先比较列表中的节点和链
+2. 要让某个服务走自建策略组，进「设置 → 模式」选「规则」，再进「设置 → 路由规则」。点已启用的规则集，选要使用的组、节点或链。停用的内置规则集第一次点按会启用，再点一次选择去向
+3. 使用 iCloud 镜像时，在发布配置的 iPhone 或 iPad 上[创建策略组或代理链](/oixflow/policies#create-chain)、添加规则，等电视收到后选择。使用电视本地配置时，也可在「路由规则 → 添加规则」填写域名、选择去向并保存
+4. 重新打开电视上的目标服务，核对新连接的出口
 
 ## 同步或连接失败
 

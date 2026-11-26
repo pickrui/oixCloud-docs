@@ -48,7 +48,7 @@ description: "登录与首次连接的操作步骤、适用范围与常见问题
 
 1. 安装 oixFlow 后打开「oixCloud」账户页。需要购买套餐或充值时，到网站用户中心办理
 2. 默认用邮箱和密码登录；已有 Access Token 时从页面底部切换，也可选择「使用 Google 登录」。Google 只登录已有账户，并需客户端和网站同时支持，步骤见 [Google 登录说明](/account/security#google-client-login)。确认套餐生效，等待托管节点加载完成再连接
-3. 在主页选择节点或策略组，保持「规则」模式并点状态卡片的电源按钮；首次连接时，按系统提示允许添加 VPN 配置
+3. 在主页点当前节点卡片，[选一个节点或策略组](/oixflow/policies#choose-outbound)，保持「规则」模式并点状态卡片的电源按钮；首次连接时，按系统提示允许添加 VPN 配置
 
 登录成功后即可获取托管节点，不需要批准设备；新设备第一次登录时账户会收到提醒，见 [新设备登录与提醒](/account/security#device-approval)。要用 Access Token 登录，先在网站 [新增 Access Token](/account/security#manual-token)，完整内容只显示一次
 

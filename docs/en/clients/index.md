@@ -37,6 +37,9 @@ Checked against public releases on 2026-10-30. Download entries follow current r
 | Import my own subscription URL | [oixFlow](/en/oixflow/proxies#third-party-subscription) · [FlClash for oixCloud](/en/flclash/profiles#other-subscription) · [OpenClash](/en/other/openclash#import-url) |
 | Filter or refresh managed oixCloud nodes | [Find the controls for each client](/en/account/subscriptions#apply-filter) |
 | Import a subscription into another compatible client | [Subscriptions and filters](/en/account/subscriptions) |
+| Choose a node or switch groups | [iPhone / iPad](/en/oixflow/policies#choose-outbound) · [Apple TV](/en/oixflow/apple-tv#routing) · [FlClash for oixCloud](/en/flclash/proxies#choose-outbound) · [OpenClash](/en/other/openclash#routing) · [oixClash](/en/other/oixclash#routing) · [Helper with Surge](/en/other/surge#routing) |
+| Route a website | [oixFlow](/en/oixflow/routing#website-rule) · [FlClash for oixCloud](/en/flclash/rules#website-rule) · [OpenClash router rules](/en/other/openclash#routing-rules) · [oixClash account rules](/en/other/oixclash#routing-rules) · [Surge profile](/en/other/surge#routing-rules) |
+| Create a proxy chain | [oixFlow](/en/oixflow/policies#create-chain) · [FlClash for oixCloud](/en/flclash/proxies#create-chain) · [OpenClash](/en/other/openclash#create-chain) · [Internal relays for managed nodes](/en/account/relay#internal-relay) |
 | Understand nodes, groups and traffic capture | [Core concepts](/en/start/concepts) |
 | Fix browsing after connecting | [Connection and speed troubleshooting](/en/help/troubleshooting) |
 | Repair missing DLLs on Windows | [FlClash for oixCloud: missing DLL repair](/en/flclash/windows-dll) |

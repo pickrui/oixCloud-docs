@@ -37,6 +37,9 @@ description: 按设备与应用查找连接和设置教程
 | 导入自己的订阅网址 | [oixFlow](/oixflow/proxies#third-party-subscription) · [FlClash for oixCloud](/flclash/profiles#other-subscription) · [OpenClash](/other/openclash#import-url) |
 | 筛选或刷新 oixCloud 托管节点 | [查看各客户端的入口与保存步骤](/account/subscriptions#apply-filter) |
 | 把订阅导入其他兼容客户端 | [订阅与筛选](/account/subscriptions) |
+| 选择节点或切换策略组 | [iPhone / iPad](/oixflow/policies#choose-outbound) · [Apple TV](/oixflow/apple-tv#routing) · [FlClash for oixCloud](/flclash/proxies#choose-outbound) · [OpenClash](/other/openclash#routing) · [oixClash](/other/oixclash#routing) · [Helper 与 Surge](/other/surge#routing) |
+| 给网站指定出口 | [oixFlow](/oixflow/routing#website-rule) · [FlClash for oixCloud](/flclash/rules#website-rule) · [OpenClash 本机规则](/other/openclash#routing-rules) · [oixClash 账号规则](/other/oixclash#routing-rules) · [Surge 配置](/other/surge#routing-rules) |
+| 设置代理链 | [oixFlow](/oixflow/policies#create-chain) · [FlClash for oixCloud](/flclash/proxies#create-chain) · [OpenClash](/other/openclash#create-chain) · [托管节点内部中继](/account/relay#内部中继) |
 | 区分节点、策略组与流量接管 | [基础概念](/start/concepts) |
 | 排查已连接但无法访问 | [连接与速度排查](/help/troubleshooting) |
 | 修复 Windows 缺少 DLL | [FlClash for oixCloud 缺少 DLL 修复](/flclash/windows-dll) |

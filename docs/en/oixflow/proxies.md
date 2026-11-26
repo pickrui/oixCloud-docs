@@ -16,8 +16,8 @@ For iPhone / iPad, using the maintained client's menus. If an option is missing,
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-proxies-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Select a node or Best Available">
-    <img src="/illustrations/oixflow-proxies-en.svg?v=20261123-1" alt="oixFlow · Select a node or Best Available" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixflow-proxies-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixFlow · Select a node or Best Available">
+    <img src="/illustrations/oixflow-proxies-en.svg?v=20261127-4" alt="oixFlow · Select a node or Best Available" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -55,7 +55,7 @@ For an HTTP / HTTPS proxy, manual entry is the clearest option. **Link** recogni
 
 To import just the nodes in a file, open **Proxies → Servers → Add → File**, tap **Continue** and choose the file. This creates standalone nodes. Import the file again when its contents change.
 
-To include groups and rules, use **Rule** mode and open **Proxies → Policies → Routing Rules → More → Import Rule Set**. Choose a compatible Clash YAML or Surge profile.
+To include groups and rules, use **Rule** mode and open **Proxies → Policies → Routing Rules → + → Import Rule Set**. Choose a compatible Clash YAML or Surge profile.
 
 **A full profile can add rules, groups and related resources that affect existing traffic.** Use the node-subscription workflow above when you only need nodes. For a full-profile import, retain the current sources or a recovery copy first, select the file, review the import summary and unsupported items, then confirm. Check **Servers**, **Policies** and **Routing Rules** separately afterward, and use new requests to verify priority and outbounds.
 
@@ -78,7 +78,7 @@ If you use the built-in **Best Available** group, check **Include All Proxies** 
 ### Use a third-party outbound for selected websites {#route-third-party}
 
 1. On Home, select your usual managed node or a group containing only managed members, and keep **Rule** mode.
-2. Open **Proxies → Policies → Routing Rules → More → Add Rule**, choose **Domain Suffix** and enter the actual destination, such as `example.com`.
+2. Open **Proxies → Policies → Routing Rules → + → Add Rule**, choose **Domain Suffix** and enter the actual destination, such as `example.com`.
 3. Target the imported third-party node directly, or choose a group containing third-party nodes, and save.
 4. Make a new request to the destination. In **Activity → Requests**, confirm the matched rule and third-party outbound. Check that a destination without an exception still follows the original routing.
 

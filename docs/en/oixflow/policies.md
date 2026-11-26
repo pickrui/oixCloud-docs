@@ -6,24 +6,30 @@ description: "Policy groups and proxy chains \u2014 setup, practical steps and t
 
 For iPhone / iPad. Supported configuration can also sync to Apple TV.
 
+<span id="choose-outbound"></span>
+
 ## Create and select a group
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-policies-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Create a policy group">
-    <img src="/illustrations/oixflow-policies-en.svg?v=20261123-1" alt="oixFlow · Create a policy group" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixflow-policies-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixFlow · Create a policy group">
+    <img src="/illustrations/oixflow-policies-en.svg?v=20261127-4" alt="oixFlow · Create a policy group" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
-In **Proxies → Policies**, create a named group, choose its type and add members. Select the saved group on Home or as a rule target; creating it alone does not route traffic through it.
+1. On iPhone or iPad, tap the current node card on **Home**. Expand a subscription or folder to choose one node. To switch to a group, tap its name or **Best Available**. The card shows the new selection.
+2. To create a group, open **Proxies → Policies → Add Policy Group**, enter a name and type, tap **Add Member**, choose the nodes and save. Select the new group on Home or assign it to a [routing rule](/en/oixflow/routing#website-rule).
+3. In Rule mode, requests assigned to **Proxy** follow Home. If a site's rule names an outbound, change that rule's target. If the active [network profile](/en/oixflow/networks) sets the outbound, change it there. Make a new connection to check the result.
 
 | Type | Use |
 | --- | --- |
-| Manual | Select the current member yourself |
+| Manual | Uses the device's saved member selection, or the first available member when that selection is unavailable |
 | URL test | Select using configured connectivity tests |
 | Fallback | Prefer earlier members and switch when unavailable |
 | Load balance | Distribute separate connections among available members |
 | Smart | Learn from real connections and try another member when setup fails |
+
+To use one particular member, choose that node under its subscription or folder on Home. To use it for one website, select the node as the site’s rule target.
 
 **Best Available** (called Auto Select in older versions) is the built-in automatic group. Your own groups appear as separate selectable outbounds. Empty or unusable groups require checking member sources, filters and test results.
 
@@ -41,21 +47,21 @@ To compare nodes immediately, long-press one under **Proxies → Servers** and c
 
 After testing finishes, check Best Available's current choice on Home and create a new request to inspect the outbound. A low manual result does not guarantee automatic selection or service availability. An unchanged number alone is not a connection failure.
 
+<span id="create-chain"></span>
+
 ## Proxy chains
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-chains-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Build a proxy chain in order">
-    <img src="/illustrations/oixflow-chains-en.svg?v=20261123-1" alt="oixFlow · Build a proxy chain in order" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixflow-chains-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixFlow · Build a proxy chain in order">
+    <img src="/illustrations/oixflow-chains-en.svg?v=20261127-4" alt="oixFlow · Build a proxy chain in order" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
-These steps follow the maintained version with groups at any hop. If an older editor lacks an option, check your [installed version and download source](/en/oixflow/connect).
-
-1. Create and name a chain in Proxies with at least two members.
-2. Arrange them from entry to exit. Any hop can be a node or an eligible Manual, URL Test, Fallback, Load Balance or Smart group. Do not repeat a node or group.
-3. Select the chain on Home or in a rule.
-4. Verify the final exit and compare performance.
+1. Have at least two nodes in **Proxies → Servers**. Switch to **Chains** and tap **+** in the toolbar.
+2. Name the chain, tap **Add Proxy**, and add at least two hops in order. The first is the entry and the last is the exit. Drag to reorder. Each hop can be a node or an eligible group from the picker.
+3. Check **Route Preview** and save. Choose the chain on the current node card on Home to use it as your usual outbound. To use it for one website, choose the chain as that site's rule target.
+4. Open a new connection to the site and check the matched rule and exit.
 
 Test every member separately first. Longer chains are not inherently faster, and a failure in any segment can break the chain. Avoid circular dependencies.
 

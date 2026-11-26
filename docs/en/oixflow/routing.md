@@ -9,22 +9,25 @@ For iPhone / iPad. Apple TV mainly consumes synced rules and allows rule-set des
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-rules-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Add a routing rule for a website">
-    <img src="/illustrations/oixflow-rules-en.svg?v=20261123-1" alt="oixFlow · Add a routing rule for a website" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixflow-rules-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixFlow · Add a routing rule for a website">
+    <img src="/illustrations/oixflow-rules-en.svg?v=20261127-4" alt="oixFlow · Add a routing rule for a website" width="1120" height="1120" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
+<span id="website-rule"></span>
+
 ## Route a website
 
-1. Keep **Rule** mode and open **Proxies → Policies → Routing Rules**.
-2. Add a custom rule, such as domain suffix `example.com`.
-3. Choose Direct, Reject, the current proxy, or a particular node, chain or policy group.
-4. Save, create a new request and inspect its matched rule and outbound.
+1. Select **Rule** on Home. Open **Proxies → Policies → Routing Rules** and tap **+ → Add Rule**.
+2. Choose **Domain Suffix** and enter `example.com`. Under **Route To**, select **Direct**, **Reject**, **Proxy**, or a particular node, policy group or chain. **Proxy** follows the current Home selection.
+3. Tap **Add**, open a new connection to the website and check its matched rule and outbound in the request details.
 
 A domain field takes a hostname, not `https://` or a page path. A suffix includes subdomains; an exact domain matches that host only.
 
 To keep managed nodes as your usual outbound and send only selected websites through third-party nodes, follow [Use third-party and managed nodes together](/en/oixflow/proxies#route-third-party). Adding another node subscription does not itself install all of that provider's routing rules.
+
+If the Rules section under **Proxies → Policies** shows **Custom Rules**, the active [network profile](/en/oixflow/networks) supplies its own rules. Open **Custom Rules** to edit routing for that network.
 
 ## Understand priority
 

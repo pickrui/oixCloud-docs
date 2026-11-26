@@ -48,7 +48,7 @@ If you previously enabled any TestFlight MitM modules or rules, turn them off or
 
 1. Install oixFlow and open its **oixCloud** account page. To buy a plan or add funds, use your account on the website.
 2. Sign in with email and password, switch to an Access Token at the bottom of the form, or choose **Sign in with Google**. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Wait for the active plan and managed nodes to load before connecting.
-3. Select a node or policy group on the home screen, keep Rule mode selected, and tap the power button in the status card. Allow the system to add a VPN configuration when prompted on your first connection.
+3. On Home, tap the current node card and [choose a node or policy group](/en/oixflow/policies#choose-outbound). Keep Rule mode selected and tap the power button in the status card. Allow the system to add a VPN configuration when prompted on your first connection.
 
 Once signed in, the app loads managed nodes without device approval. The first sign-in on a new device sends an alert to your account; see [New devices and sign-in alerts](/en/account/security#device-approval). To sign in with an Access Token, first [create one](/en/account/security#manual-token) on the website; its full value is shown only once.
 

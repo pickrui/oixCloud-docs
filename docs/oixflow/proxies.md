@@ -16,8 +16,8 @@ description: "导入和更新 Clash、Surge 或 sing-box 节点，筛选 oixClou
 ## 操作示意
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-proxies-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 选择节点与自动优选">
-    <img src="/illustrations/oixflow-proxies-zh.svg?v=20261123-1" alt="oixFlow · 选择节点与自动优选" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixflow-proxies-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixFlow · 选择节点与自动优选">
+    <img src="/illustrations/oixflow-proxies-zh.svg?v=20261127-4" alt="oixFlow · 选择节点与自动优选" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -55,7 +55,7 @@ HTTP／HTTPS 代理在「手动」中填写最清楚。「链接」入口只有�
 
 只导入文件里的节点，打开「代理 → 服务器 → 添加 → 文件」，点「继续」选择文件。导入的节点可独立使用，之后要更新内容需重新导入文件
 
-要连同策略组和规则一起导入，保持「规则」模式，打开「代理 → 策略 → 路由规则 → 更多 → 导入规则集」，选择兼容的 Clash YAML 或 Surge 配置文件
+要连同策略组和规则一起导入，保持「规则」模式，打开「代理 → 策略 → 路由规则 → ＋ → 导入规则集」，选择兼容的 Clash YAML 或 Surge 配置文件
 
 **完整配置可能增加影响现有流量的规则、策略组和相关资源**。仅想增加节点时，优先使用上面的节点订阅入口；需要导入完整配置时，先保留当前来源或可恢复副本，再选择文件，查看导入摘要和不支持项后确认。导入后分别在「服务器」「策略」和「路由规则」中核对结果，用新请求检查匹配顺序与出口
 
@@ -78,7 +78,7 @@ HTTP／HTTPS 代理在「手动」中填写最清楚。「链接」入口只有�
 ### 只让指定网站走第三方出口 {#route-third-party}
 
 1. 在主页选择日常使用的托管节点或仅含托管成员的策略组，保持「规则」模式
-2. 打开「代理 → 策略 → 路由规则 → 更多 → 添加规则」，选择「域名尾缀」，填写实际目标域名，例如 `example.com`
+2. 打开「代理 → 策略 → 路由规则 → ＋ → 添加规则」，选择「域名尾缀」，填写实际目标域名，例如 `example.com`
 3. 将路由目标直接设为已添加的第三方节点，或设为包含第三方节点的策略组，保存规则
 4. 新建目标请求，在「活动 → 请求」的详情中确认命中该规则、出口为第三方节点；再检查一个未设例外的目标仍按原有分流处理
 

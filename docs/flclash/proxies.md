@@ -9,45 +9,48 @@ description: "节点、策略组与代理链的操作步骤、适用范围与常
 ## 操作示意
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-proxies-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 在策略组中选择节点">
-    <img src="/illustrations/flclash-proxies-zh.svg?v=20261030-2" alt="FlClash for oixCloud · 在策略组中选择节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-proxies-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 在策略组中选择节点">
+    <img src="/illustrations/flclash-proxies-zh.svg?v=20261127-4" alt="FlClash for oixCloud · 在策略组中选择节点" width="1120" height="975" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
+<span id="choose-outbound"></span>
+
 ## 手动选择节点
 
-进入「代理」，打开负责目标流量的策略组，选择节点。规则模式下，不同服务可能由不同组处理；只更改默认组，不一定改变流媒体等专用组的出口
-
-访问目标服务后，在连接记录中核对实际走过的代理链路
+1. 在桌面或 Android 打开「代理」。在分组标签或列表中打开目标网站使用的策略组；拿不准时，先访问一次，在「连接」查看它命中的规则和组名
+2. 在手动选择组中点节点。若选的是另一个组，再打开那个组选择成员。切换分组标签只是查看该组，要点成员才会更换出口
+3. 重新访问网站，在「连接」核对实际出口。规则模式下，不同网站可能命中不同的组
 
 ## 自动测速与故障转移
 
-| 配置中的组 | 如何决定成员 |
+| 组类型 | 点成员后的效果 |
 | --- | --- |
-| 手动选择 | 由你选择成员 |
-| 自动测速、故障转移或负载均衡 | 按该组自身策略决定成员 |
+| 手动选择（Selector） | 以后使用选中的成员 |
+| 自动测速（URLTest）或故障转移（Fallback） | 点节点设为「首选」，再点同一节点可取消首选，恢复自动选择 |
+| 负载均衡等其他组 | 组按自身策略分配连接 |
 
-测速结果不等于下载速度或流媒体解锁能力
+桌面可右键点成员，Android 可长按成员，在菜单里查看当前的「选中」或「首选」状态
 
-先测试少量可见节点，比较同一网络下的结果。全部失败时也要检查测试地址及本机网络，见 [网络自检](/flclash/diagnostics)
+延迟只能用来比较当前网络下的响应时间。所有节点测速都失败时，检查测试地址和本机网络，见[网络自检](/flclash/diagnostics)
 
 ## 新建自己的策略组
 
-在配置的「覆写」中添加策略组、设置类型和成员，再把个人规则指向它。叠加与自定义模式的作用范围不同，先阅读 [覆写](/flclash/rules)
+在「配置」打开当前订阅的菜单，选「覆写 → 叠加 → 代理组」。自定义配置则从「编辑」进入「代理组」。添加组名、类型和成员并保存，再让目标网站的[规则](/flclash/rules#website-rule)使用该组。成员可以是节点或其他组，避免相互引用
 
-不要创建没有成员的组，或让两个组互相引用
+<span id="create-chain"></span>
 
 ## 代理链
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-chains-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
-    <img src="/illustrations/flclash-chains-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-chains-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
+    <img src="/illustrations/flclash-chains-zh.svg?v=20261127-4" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
-1. 打开「配置」，在当前配置的菜单中进入「链式代理」，新增并填写容易辨认的链名
+1. 打开「配置」。托管或普通订阅从该配置的菜单进「链式代理」；自定义配置从菜单进「编辑 → 更多 → 链式代理」。点「添加」并给链命名
 2. 按转发顺序添加至少两个不同成员，第一个为入口，最后一个为出口；拖动手柄调整顺序。每一跳可选节点或编辑器列出的手动选择、自动测速、故障转移、负载均衡组
 3. 保存并确认链已启用，等待配置应用成功。当前维护版本会生成以链名命名的策略组，可在「代理」列表中使用，或在规则目标中直接选择链名；旧版缺少入口时先检查 [安装版本](/flclash/connect#downloads)
 4. 建立新连接，在 [连接记录](/flclash/diagnostics) 中核对入口、各跳与最终出口

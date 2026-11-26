@@ -97,6 +97,19 @@ oixClash 0.0.3 起提供「内存优化」。首次安装时，检测到总内�
 
 路由器自身和访客网络的流量不经过 oixClash。设备通过 IPv6 上网时会绕过代理，运行状态会提示。需要避免该绕过时，在路由器的「IPv6」页面把连接类型设为停用，并用局域网设备验证；网站的 [IPv4 Only](/account/unlock#ipv4-only) 控制远程节点出口，不能解决路由器的 IPv6 绕过
 
+### 选择节点、策略组或中继入口 {#routing}
+
+<figure class="guide-figure">
+  <a href="/illustrations/metacubexd-groups-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="在 oixClash 打开的 MetaCubeXD 面板里选择节点">
+    <img src="/illustrations/metacubexd-groups-zh.svg?v=20261127-4" alt="在 oixClash 打开的 MetaCubeXD 面板里选择节点" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>操作示意 · 虚构数据</figcaption>
+</figure>
+
+1. 在软件中心打开 oixClash，找到「运行 → 节点切换」，点「打开控制面板」。在 MetaCubeXD 的「代理」中展开目标网站使用的手动选择组，点需要的节点。选中子组时，再打开子组选择成员
+2. 想让一个网站走指定组，按下面的[账号自定义规则](#routing-rules)把域名指向该组。用局域网设备重新访问，在控制面板的「连接」查看命中规则和出口
+3. 插件的节点切换页只负责选用已有出口。要让托管流量经过多跳，有相应权限的账户可在网站配置[内部中继](/account/relay#内部中继)，然后在路由器的手动选择组选中这条路径的**入口节点**
+
 ## 6. 节点、筛选与更新
 
 <figure class="guide-figure">
@@ -113,13 +126,15 @@ oixClash 0.0.3 起提供「内存优化」。首次安装时，检测到总内�
 
 若插件内更新提示无法校验安装包，或旧版自检提示缺少 `sha256sum`，请从本页下载对应平台的安装包，通过「软件中心 → 离线安装」更新。安装包校验不通过时不要继续安装，重新下载并核对 SHA256
 
+<span id="routing-rules"></span>
+
 ## 7. 编辑账号自定义规则
 
 oixClash 0.0.2 起可在插件的「自定义规则」中编辑网站上的同一份 [账号规则](https://oixcloud.com/user/rule)，账号规则排在默认规则之前。保存会影响使用这份规则的其他客户端；清空后保存会删除整份账号规则，操作前先保留需要的内容
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-rules-zh.svg?v=20261030-2" target="_blank" rel="noopener" aria-label="oixClash · 账号自定义规则">
-    <img src="/illustrations/oixclash-rules-zh.svg?v=20261030-2" alt="oixClash · 账号自定义规则" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/oixclash-rules-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixClash · 账号自定义规则">
+    <img src="/illustrations/oixclash-rules-zh.svg?v=20261127-4" alt="oixClash · 账号自定义规则" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
@@ -130,9 +145,11 @@ oixClash 0.0.2 起可在插件的「自定义规则」中编辑网站上的同�
 4. 用局域网设备建立新连接，在控制面板核对命中规则和出口
 
 ```text
-DOMAIN-SUFFIX,example.com,DIRECT
 DOMAIN,ads.example.com,REJECT
+DOMAIN-SUFFIX,example.com,DIRECT
 ```
+
+把更具体的域名放在前面。上例先拒绝 `ads.example.com`，其余 `example.com` 子域名直连
 
 路由器编辑器最多处理 8192 个 UTF-8 字节，中文等字符会占多个字节。更长的规则请在网站编辑，再点插件「更新节点」，不要截短原规则来适配编辑器
 

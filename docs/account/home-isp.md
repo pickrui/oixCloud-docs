@@ -80,16 +80,16 @@ Home ISP 的默认下发开关只决定订阅是否自动包含节点。配置�
 以下编辑步骤适用于 iPhone / iPad；Apple TV 从手机或平板 [同步配置](/oixflow/apple-tv)，不提供相同的代理链编辑器
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-chains-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 按顺序创建代理链">
-    <img src="/illustrations/oixflow-chains-zh.svg?v=20261123-1" alt="oixFlow · 按顺序创建代理链" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixflow-chains-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixFlow · 按顺序创建代理链">
+    <img src="/illustrations/oixflow-chains-zh.svg?v=20261127-4" alt="oixFlow · 按顺序创建代理链" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>通用代理链编辑器示意 · 本例用实际入口节点和 Home ISP 替换图中成员</figcaption>
 </figure>
 
-1. 在「代理」中新建代理链，填写易辨认的名称，例如 `Home-ISP-Chain`
+1. 打开「代理 → 链式代理」，点「＋」并给链取名，例如 `Home-ISP-Chain`
 2. 使用「添加代理」依次加入入口节点、Home ISP 出口，核对路由预览并保存
 3. 在主页选中该链。规则模式下，路由目标为「代理」的流量使用主页选择；指定节点、策略组、直连或拒绝的规则仍按原目标处理
-4. 只让指定网站使用该链时，在「代理 → 策略 → 路由规则」中添加「域名尾缀」规则，填入实际域名并将目标设为链名
+4. 只给指定网站使用时，打开「代理 → 策略 → 路由规则 → ＋ → 添加规则」，选「域名尾缀」，填入域名并将「路由到」设为链名
 5. 建立新连接，在「活动 → 请求」中核对匹配规则和出口
 
 需要自动选择入口时，使用代理链编辑器允许的个人策略组，先检查其成员。组类型、后续跳组的影响及冲突处理见 [策略组与代理链](/oixflow/policies#创建代理链)
@@ -99,13 +99,13 @@ Home ISP 的默认下发开关只决定订阅是否自动包含节点。配置�
 适用于支持该功能的 Windows、macOS、Android 和 Linux 版本
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-chains-zh.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
-    <img src="/illustrations/flclash-chains-zh.svg?v=20261102-3" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
+  <a href="/illustrations/flclash-chains-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · 编辑代理链顺序">
+    <img src="/illustrations/flclash-chains-zh.svg?v=20261127-4" alt="FlClash for oixCloud · 编辑代理链顺序" width="1120" height="975" loading="lazy">
   </a>
   <figcaption>通用代理链编辑器示意 · 本例用实际入口节点和 Home ISP 替换图中成员</figcaption>
 </figure>
 
-1. 在「配置」中打开当前配置的菜单，选择「链式代理」，新增并命名
+1. 在「配置」打开订阅菜单，选「链式代理」。自定义配置使用「编辑 → 更多 → 链式代理」。点「添加」并给链命名
 2. 按「入口 → Home ISP」加入两个不同成员，用拖动手柄调整顺序，保存并确认该链已启用
 3. 等待配置应用成功。在「代理」选择生成的链名，或在配置覆写中将个人规则的目标设为该链名；若当前手选组没有包含它，按 [代理链教程](/flclash/proxies#代理链) 调整成员或规则
 4. 使用新连接核对规则和出口。选择原来的 Home ISP 节点不等于选择代理链

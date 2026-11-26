@@ -97,6 +97,19 @@ After disabling memory optimization, a core already stored on JFFS stays there. 
 
 Traffic of the router itself and of guest networks does not pass through oixClash. Devices that use IPv6 bypass the proxy; the status warns about it. To avoid this bypass, set the connection type on the router's **IPv6** page to disabled and verify from a LAN device. The website's [IPv4 Only](/en/account/unlock#ipv4-only) controls remote-node egress and does not fix IPv6 bypass on the router.
 
+### Choose a node, policy group or relay entry {#routing}
+
+<figure class="guide-figure">
+  <a href="/illustrations/metacubexd-groups-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="Choose a node in the MetaCubeXD dashboard opened by oixClash">
+    <img src="/illustrations/metacubexd-groups-en.svg?v=20261127-4" alt="Choose a node in the MetaCubeXD dashboard opened by oixClash" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Illustrated interface · Fictional data</figcaption>
+</figure>
+
+1. In the router's Software Center, open oixClash and find **运行 → 节点切换** (Run → Node switching). Click **打开控制面板** (Open dashboard). In MetaCubeXD, open **Proxies**, expand the site's Select group and choose a node. If you select a subgroup, open it to choose its member.
+2. To send a site through a particular group, point its domain to that group in [account custom rules](#routing-rules). Revisit the site from a LAN device and check the matched rule and exit in the dashboard's **Connections** view.
+3. The plugin's node switcher selects an existing outbound. For multihop routing with managed nodes, eligible accounts can configure an [internal relay](/en/account/relay#internal-relay) on the website. Then select the path's **entry node** in the router's Select group.
+
 ## 6. Nodes, filters and updates
 
 <figure class="guide-figure">
@@ -113,13 +126,15 @@ Traffic of the router itself and of guest networks does not pass through oixClas
 
 If the in-plugin updater cannot verify a package, or an older self-check reports missing `sha256sum`, download the matching package from this page and update through **软件中心 → 离线安装** (Software Center → Offline Install). Do not install a package with a checksum mismatch; download it again and verify SHA256.
 
+<span id="routing-rules"></span>
+
 ## 7. Edit account custom rules
 
 From oixClash 0.0.2, **自定义规则** (Custom Rules) edits the same [account rules](https://oixcloud.com/user/rule) as the website. These rules precede the defaults. Saving affects other clients that use this account rule list. Saving an empty editor deletes the entire account list, so keep a copy of anything you need first.
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixclash-rules-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="oixClash · Read and save shared account rules">
-    <img src="/illustrations/oixclash-rules-en.svg?v=20261030-en1" alt="oixClash · Read and save shared account rules" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/oixclash-rules-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixClash · Read and save shared account rules">
+    <img src="/illustrations/oixclash-rules-en.svg?v=20261127-4" alt="oixClash · Read and save shared account rules" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English reference with Chinese control names · Chinese-only plugin UI</figcaption>
 </figure>
@@ -130,9 +145,11 @@ From oixClash 0.0.2, **自定义规则** (Custom Rules) edits the same [account 
 4. Make a new connection from a LAN device and verify the matched rule and outbound in the dashboard.
 
 ```text
-DOMAIN-SUFFIX,example.com,DIRECT
 DOMAIN,ads.example.com,REJECT
+DOMAIN-SUFFIX,example.com,DIRECT
 ```
+
+Put the specific domain first. This example rejects `ads.example.com` and sends the remaining `example.com` subdomains directly.
 
 The router editor handles up to 8192 UTF-8 bytes. Some characters use multiple bytes. Edit longer lists on the website and then click **更新节点** (Update Nodes); do not truncate the list to fit the editor.
 

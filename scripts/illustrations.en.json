@@ -348,7 +348,9 @@
       "恢复默认": "Restore default",
       "从链接导入": "Import from link",
       "链接": "Link",
-      "age 私钥": "Age secret key"
+      "age 私钥": "Age secret key",
+      "代理组": "Proxy group",
+      "首选": "Preferred"
     },
     "helper": {
       "●   Finder   文件   编辑   显示   前往   窗口": "●   Finder   File   Edit   View   Go   Window",
@@ -370,7 +372,14 @@
       "客户端接入": "Client Setup",
       "设置": "Settings",
       "节点更新后自动接入 Surge": "Automatically reapply Surge after node updates",
-      "配置有效": "Configuration valid"
+      "配置有效": "Configuration valid",
+      "✓  香港 · 示例 A": "✓  Hong Kong · Sample A",
+      "日本 · 示例 B": "Japan · Sample B",
+      "自动选择": "Auto-select",
+      "更新节点": "Refresh nodes",
+      "节点筛选": "Node filter",
+      "本地多端口映射": "Local multi-port mapping",
+      "在 Surge 或 OpenSurge 中选择节点": "Select a node in Surge or OpenSurge"
     },
     "oixclash": {
       "UDP 转发": "UDP forwarding",
@@ -444,7 +453,15 @@
       "允许不安全": "Allow Insecure",
       "iCloud 同步": "iCloud Sync",
       "开启": "On",
-      "接收来自 iPhone / iPad 的配置": "Receive configuration from iPhone / iPad"
+      "接收来自 iPhone / iPad 的配置": "Receive configuration from iPhone / iPad",
+      "选择代理": "Select Proxy",
+      "全部测试": "Test All",
+      "链式代理": "Chains",
+      "工作代理链": "Work Chain",
+      "香港 · 示例 A": "Hong Kong · Sample A",
+      "为规则集选组": "To assign a group to a rule set",
+      "设置 → 路由规则": "Settings → Routing Rules",
+      "自动优选 · URL Test": "Best Available · URL Test"
     },
     "account": {
       "示例账户": "Example account",
@@ -619,7 +636,15 @@
       "节点筛选": "Node Filter",
       "更新配置": "Update Config",
       "试试手气": "Checkin",
-      "官方网站": "oixCloud Website"
+      "官方网站": "oixCloud Website",
+      "覆写设置": "Overwrite Settings",
+      "规则设置": "Rules Setting",
+      "☑  自定义规则": "☑  Custom Clash Rules",
+      "优先匹配": "Priority",
+      "应用配置": "Apply Settings",
+      "别名（请勿重名）": "Server Alias",
+      "编辑服务器配置": "Edit Server",
+      "保存配置": "Commit Settings"
     },
     "start": {
       "1. 本机流量接管": "1. Local Traffic Capture",
@@ -657,6 +682,13 @@
       "Google / YouTube / GitHub": "Google / YouTube / GitHub",
       "海外电商 / 银行支付 / 流媒体": "E-Commerce / Banking / Streaming",
       "经由所选出口 IP 访问目标互联网服务": "Connects to target web services via the chosen exit IP."
+    },
+    "metacubexd": {
+      "代理": "Proxies",
+      "连接": "Connections",
+      "工作": "Work",
+      "香港 · 示例 A": "Hong Kong · Sample A",
+      "日本 · 示例 B": "Japan · Sample B"
     }
   },
   "overrides": {
@@ -970,19 +1002,19 @@
     ],
     "oixflow-proxies": [
       "Select a node or Best Available",
-      "Home → Current node card → Nodes",
+      "Home → Current node card → Search",
       [
         [
-          "Search by node name",
-          "Search the list for the node you need."
+          "Search by name",
+          "Expand the current node card on Home and tap Search."
         ],
         [
-          "Select an automatic entry or group",
-          "These entries select an outbound; they do not open another editor."
+          "Choose a group",
+          "Tap its name to use the group as the Home outbound."
         ],
         [
-          "Select a node and choose Done",
-          "Verify a new connection. The latency values are examples only."
+          "Choose a node",
+          "Selecting a node returns to Home. Check the exit on a new request."
         ]
       ]
     ],
@@ -1017,8 +1049,8 @@
           "The example has two nodes. Leave Underlying Proxy as None if not needed."
         ],
         [
-          "Save and select the group",
-          "More Health Check options are below. Select the saved group on Home or in a rule."
+          "Save and select",
+          "To switch to the group, open the node card on Home and tap its name."
         ]
       ]
     ],
@@ -1028,11 +1060,11 @@
       [
         [
           "Name the chain",
-          "Use a name that describes its purpose."
+          "Prepare two nodes, then tap + under Chains and enter a name."
         ],
         [
-          "Arrange members in forwarding order",
-          "Any hop can be a group. Later groups use preceding hops wherever they are used."
+          "Add the hops in order",
+          "Tap Add Proxy. Pick the entry first and the exit last. Drag to reorder."
         ],
         [
           "Save, then select the chain",
@@ -1042,7 +1074,7 @@
     ],
     "oixflow-rules": [
       "Add a routing rule for a website",
-      "Proxies → Policies → Routing Rules",
+      "Routing Rules → + → Add Rule",
       [
         [
           "Choose Domain Suffix",
@@ -1053,8 +1085,8 @@
           "The example uses an existing group named Work."
         ],
         [
-          "Choose Add",
-          "Use Rule mode and make a new request to verify the matched rule."
+          "Tap Add",
+          "Revisit the site and check the matched rule and exit in the request details."
         ]
       ]
     ],
@@ -1258,19 +1290,19 @@
     ],
     "flclash-proxies": [
       "Select a node in its group",
-      "Sidebar → Proxies",
+      "Proxies → Destination group",
       [
         [
-          "Expand the manual group",
-          "Each group has its own choice. Change the group that handles your traffic."
+          "Open the Select group",
+          "Find the site's group in Connections and open that group in Proxies."
         ],
         [
-          "Select a node card",
-          "The theme color marks the selected node."
+          "Select a member",
+          "Tap the node to use. If you choose a subgroup, open it to pick its member."
         ],
         [
-          "Verify a new connection",
-          "Latency is a test result, not proof that every app or website works."
+          "Set a preference",
+          "In URLTest or Fallback, tap a node to prefer it. Tap again to clear it."
         ]
       ]
     ],
@@ -1312,11 +1344,11 @@
     ],
     "flclash-chains": [
       "Edit the chain’s forwarding order",
-      "Profile menu → Proxy chains → Add or edit",
+      "Profiles → Proxy chains → Add",
       [
         [
-          "Name it, then choose members",
-          "Available nodes and supported groups appear below the chain."
+          "Name the chain",
+          "Use the subscription's menu. For a custom profile, open Edit → More → Proxy chains."
         ],
         [
           "Check entry-to-exit order",
@@ -1333,12 +1365,12 @@
       "Profile menu → Override",
       [
         [
-          "Select the required mode",
-          "Order: Standard, Overlay, Custom, Script. Overlay is selected here."
+          "Choose Overlay",
+          "Keep the subscription and add a personal exception."
         ],
         [
-          "Edit custom routing",
-          "Keep personal rules and groups on top of the subscription."
+          "Open Rule or Proxy group",
+          "These sections on the Overlay page apply to this profile."
         ],
         [
           "Check and apply",
@@ -1348,11 +1380,11 @@
     ],
     "flclash-rules": [
       "Add a domain suffix rule",
-      "Override → Edit custom routing → Rules → Add",
+      "Profiles → Override → Overlay → Rule → Add",
       [
         [
-          "Use the Form editor",
-          "Form and Rule text are separate editing modes."
+          "Use the form",
+          "The form and rule text views both accept domain rules."
         ],
         [
           "Enter the match and target",
@@ -1589,8 +1621,8 @@
           "Reading replaces unsaved edits. Keep anything you need before reloading."
         ],
         [
-          "Enter one rule per line",
-          "Use DIRECT, REJECT or a group already present in the configuration."
+          "One rule per line",
+          "Put the exact host above the suffix. The first match decides the route."
         ],
         [
           "Save and check the result",
@@ -2423,6 +2455,96 @@
         [
           "Check the active profile",
           "Look for oixCloud.yaml on the status page. Switch manually if another profile is active."
+        ]
+      ]
+    ],
+    "apple-tv-routing": [
+      "Choose an outbound with the remote",
+      "Home → Current node card → Select Proxy",
+      [
+        [
+          "Open the node card",
+          "Select a node, a chain or Best Available if it has members."
+        ],
+        [
+          "Select an existing chain",
+          "Create new groups and chains on iPhone or iPad, then sync."
+        ],
+        [
+          "Route a service to a group",
+          "Set Mode to Rule in Settings. Choose the group in Routing Rules."
+        ]
+      ]
+    ],
+    "metacubexd-groups": [
+      "Choose a node in the router dashboard",
+      "Dashboard → MetaCubeXD → Proxies",
+      [
+        [
+          "Open Proxies",
+          "Use Running Status in OpenClash or Open dashboard on the oixClash Run page."
+        ],
+        [
+          "Pick a group member",
+          "Expand the site's Select group and choose a node."
+        ],
+        [
+          "Check a new connection",
+          "Revisit the site. Open Connections to inspect the matched rule and exit."
+        ]
+      ]
+    ],
+    "openclash-routing": [
+      "Add a domain rule on the router",
+      "Overwrite Settings → Rules Setting → Custom Clash Rules",
+      [
+        [
+          "Enable custom rules",
+          "Open Rules Setting under Overwrite Settings."
+        ],
+        [
+          "Use the Priority box",
+          "Under the existing rules: key, add the domain and a target from the active profile."
+        ],
+        [
+          "Apply and verify",
+          "Click Apply Settings. When the core is running, revisit the site from a LAN device."
+        ]
+      ]
+    ],
+    "helper-nodes": [
+      "Switch nodes in single-port mode",
+      "oixCloud menu bar icon → Nodes",
+      [
+        [
+          "Open Nodes",
+          "Single-port mode lets you select the exit in Helper."
+        ],
+        [
+          "Choose a node",
+          "A manual selection turns off Auto-select. Click Auto-select to restore it."
+        ],
+        [
+          "Use Surge for mappings",
+          "In multi-port mode, pick a mapped node in a Surge Select group and start a new connection."
+        ]
+      ]
+    ],
+    "openclash-chain": [
+      "Set the entry on the exit node",
+      "Config Manage → ⋮ → Servers Manage → Edit the exit",
+      [
+        [
+          "Edit the exit",
+          "Read your own profile, then edit its exit under Proxies."
+        ],
+        [
+          "Enter the entry name",
+          "Set Dialer-proxy to the existing entry name in this profile."
+        ],
+        [
+          "Save and apply",
+          "Apply in Servers Manage, switch to the file, and select the exit in a Select group."
         ]
       ]
     ]

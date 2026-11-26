@@ -55,6 +55,30 @@ Helper 的系统要求与 FlClash for oixCloud 不同，不要混用安装包
 
 Helper 和 Surge 都需要保持运行。写入配置成功不一定表示 Surge 自动切换成功；遇到提示时在 Surge 手动选择刚写入的配置
 
+### 选择节点与策略组 {#routing}
+
+<figure class="guide-figure">
+  <a href="/illustrations/helper-nodes-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="在单端口模式的 Helper 节点菜单中选择自动或具体节点">
+    <img src="/illustrations/helper-nodes-zh.svg?v=20261127-4" alt="在单端口模式的 Helper 节点菜单中选择自动或具体节点" width="1120" height="975" loading="lazy">
+  </a>
+  <figcaption>操作示意 · 虚构数据</figcaption>
+</figure>
+
+- **本地多端口映射**：点 macOS 菜单栏的 **Surge** 图标，打开目标网站命中的手动策略组，选择映射节点。若成员又是一个组，打开那个组再选节点
+- **单端口**：点菜单栏的 **oixCloud → 节点**，选择具体节点会关闭自动选择。要恢复自动选择，再点「自动选择」。使用这个端口的应用共用该出口
+
+### 给网站指定出口或使用代理链 {#routing-rules}
+
+1. 要让规则在重新接入 Surge 后保留，使用文本编辑器打开或新建 `~/.config/oixcloud-external-proxy-program/custom.conf`。在已有的 `[Rule]` 下加入规则；空文件可直接填入以下两行
+
+   ```ini
+   [Rule]
+   DOMAIN-SUFFIX,example.com,DIRECT
+   ```
+
+2. 要指定策略组，把 `DIRECT` 换成 Surge 当前配置里显示的组名。保存，在 Helper 打开「客户端接入」，再点「接入 Surge」或「重新接入 Surge」。在 Surge 使用规则模式，重新访问网站并核对请求的规则和策略
+3. 需要把两个**由 Surge 直接连接的远程代理**串成一条链时，在自己维护的 `[Proxy]` 中给出口代理追加 `underlying-proxy=入口策略名`，再让规则或手动组选择出口策略。Helper 的本地映射端口各自连接自己的节点；托管节点多跳可按账户权限设置[内部中继](/account/relay#内部中继)，在 Surge 选它的入口。见 [Surge 代理链参数](https://manual.nssurge.com/policies/parameters.html#underlying-proxy)
+
 ## 筛选、端口与日常更新
 
 1. 打开「节点 → 节点筛选」，按线路、地区或名称选择，等预览显示要保留的节点，再点「保存」。要恢复智能优选，点「恢复默认」并确认，再「保存」

@@ -35,7 +35,7 @@ Use this method to add a self-hosted or third-party node to a working profile, i
 
 Choose a distinct name before adding it: **matching a node name in the original profile replaces that node's definition**, rather than creating a second node with the same name. Avoid existing group names and built-in names such as `DIRECT` and `REJECT`.
 
-1. Open **Profiles**, find the profile you want to use and choose **Proxy chains** from its menu.
+1. Open **Profiles**. For a managed or ordinary subscription, choose **Proxy chains** from its menu and find **Custom nodes**. For a custom profile, use **Edit → Custom nodes**.
 2. Under **Custom nodes**, choose **Add** and select an input method for the information you have.
 3. Check the name, server, port and credentials, save, and make sure the node's switch is on.
 4. Select and apply this profile. In **Proxies**, open a manual selection group and choose the new node. Make a new connection to your destination and verify its outbound in [connection records](/en/flclash/diagnostics).
@@ -58,7 +58,7 @@ sni: proxy.example.com
 udp: true
 ```
 
-Although **Custom nodes** is on the **Proxy chains** page, these nodes also work independently: **you do not need to create or enable a chain**. Ordinary and managed profiles append enabled custom nodes to their existing manual selection groups. Whether URL-test, fallback or personal groups in Overlay include the new node depends on their member selection and options such as **Include all proxies**; check the relevant group.
+Custom nodes can be used on their own. Ordinary and managed profiles append enabled custom nodes to their existing manual selection groups. Whether URL-test, fallback or personal groups in Overlay include the new node depends on their member selection and options such as **Include all proxies**; check the relevant group.
 
 Custom nodes belong to the profile you edited and are reapplied after subscription updates.
 
@@ -70,7 +70,7 @@ A node share link supplies connection parameters, not the provider's full routin
 
 1. Select the imported profile, open **Override** and choose **Overlay**.
 2. Under **Rule**, add a `MATCH` rule targeting the imported node. Leave the domain/content field empty for `MATCH`: it catches all traffic not handled by preceding rules, so place it last among your personal rules.
-3. Save, use **Check configuration** or **Apply now**, keep Rule mode and verify the outbound with a new connection.
+3. Save the rule. With this profile active, use **Check configuration** or **Apply now**. Once it applies, verify the outbound on a new connection in Rule mode.
 
 For complete routing such as direct access to local destinations, prefer the provider's full Clash / mihomo profile, or add more specific rules first using [overrides and added rules](/en/flclash/rules).
 

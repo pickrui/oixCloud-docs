@@ -9,22 +9,25 @@ description: "分流规则与匹配顺序的操作步骤、适用范围与常见
 ## 操作示意
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-rules-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 为网站添加路由规则">
-    <img src="/illustrations/oixflow-rules-zh.svg?v=20261123-1" alt="oixFlow · 为网站添加路由规则" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixflow-rules-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixFlow · 为网站添加路由规则">
+    <img src="/illustrations/oixflow-rules-zh.svg?v=20261127-4" alt="oixFlow · 为网站添加路由规则" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
+<span id="website-rule"></span>
+
 ## 给网站指定出口
 
-1. 保持「规则」模式，进入「代理 → 策略 → 路由规则」
-2. 添加自定义规则，选择域名匹配类型，例如「域名尾缀」并填写 `example.com`
-3. 选择直连、拒绝、当前代理，或指定节点、代理链、策略组
-4. 保存后重新打开目标网站，在请求详情中核对命中的规则和实际出口
+1. 在主页选「规则」模式，打开「代理 → 策略 → 路由规则」，点右上角「＋ → 添加规则」
+2. 类型选「域名尾缀」，填写 `example.com`。在「路由到」选「直连」「拒绝」「代理」，或点选具体节点、策略组或代理链。「代理」跟随主页当前选择
+3. 点「添加」，重新访问网站，在请求详情核对命中规则和出口
 
 只填域名，不要把 `https://` 或网页路径填进域名后缀字段。后缀规则用于网站及其子域名，精确域名只用于该主机名
 
 需要保留托管节点作为日常出口、只让个别网站走第三方节点时，按 [第三方与托管节点混用](/oixflow/proxies#route-third-party) 添加来源并指定规则目标。添加另一份节点订阅本身不会安装它的全部分流规则
+
+如果「代理 → 策略」的规则区显示「自定义规则」，说明当前[网络预设](/oixflow/networks)提供了自己的规则。要改这个网络的规则，点「自定义规则」进入当前预设
 
 ## 规则没有生效时看哪里
 

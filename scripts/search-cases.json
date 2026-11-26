@@ -829,5 +829,39 @@
     "targets": [
       "/flclash/profiles.html"
     ]
+  },
+  {
+    "terms": [
+      "MetaCubeXD"
+    ],
+    "targets": [
+      "/other/openclash.html",
+      "/other/oixclash.html"
+    ]
+  },
+  {
+    "terms": [
+      "OpenClash Dialer-proxy"
+    ],
+    "targets": [
+      "/other/openclash.html"
+    ]
+  },
+  {
+    "terms": [
+      "Helper custom.conf"
+    ],
+    "targets": [
+      "/other/surge.html",
+      "/other/helper-linux.html"
+    ]
+  },
+  {
+    "terms": [
+      "FlClash URLTest Fallback"
+    ],
+    "targets": [
+      "/flclash/proxies.html"
+    ]
   }
 ]

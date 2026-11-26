@@ -55,6 +55,30 @@ In mapping mode, Helper tells you to select nodes in Surge; it does not show the
 
 Keep both Helper and Surge running. A successful profile write does not necessarily mean automatic profile switching succeeded; select the written profile manually in Surge if prompted.
 
+### Choose a node or policy group {#routing}
+
+<figure class="guide-figure">
+  <a href="/illustrations/helper-nodes-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="Select Auto-select or a specific node in the single-port Helper menu">
+    <img src="/illustrations/helper-nodes-en.svg?v=20261127-4" alt="Select Auto-select or a specific node in the single-port Helper menu" width="1120" height="1100" loading="lazy">
+  </a>
+  <figcaption>Illustrated interface · Fictional data</figcaption>
+</figure>
+
+- **Local multi-port mapping**. Open the **Surge** menu bar icon, open the site's Select group, and choose a mapped node. If the selected member is another group, open it to choose its member.
+- **Single port**. Open the **oixCloud → Nodes** menu in the menu bar. Choosing a specific node turns off auto-selection. Click **Auto-select** to turn it back on. Applications using that port share the chosen exit.
+
+### Route a website or use a proxy chain {#routing-rules}
+
+1. To keep a rule across Surge setup and refreshes, open or create `~/.config/oixcloud-external-proxy-program/custom.conf` in a text editor. Add the rule under the existing `[Rule]` section. In an empty file, enter both lines below.
+
+   ```ini
+   [Rule]
+   DOMAIN-SUFFIX,example.com,DIRECT
+   ```
+
+2. To use a group, replace `DIRECT` with its name from the active Surge profile. Save the file, then open **Client Setup** in Helper and choose **Apply in Surge** or **Reapply in Surge**. Use Rule mode in Surge, revisit the site and check the matched rule and policy in its requests.
+3. To chain two **remote proxy servers that Surge connects to itself**, append `underlying-proxy=EntryPolicyName` to the exit proxy in your own `[Proxy]` section. Target the exit policy from a rule or a Select group. Each local Helper mapping makes its own connection to its node. To relay managed nodes, eligible accounts can set up an [internal relay](/en/account/relay#internal-relay) and choose its entry in Surge. See the [Surge proxy chain parameter](https://manual.nssurge.com/policies/parameters.html#underlying-proxy).
+
 ## Filters, ports and maintenance
 
 1. Open **Nodes → Node Filter**, choose lines, regions or names, check the preview and click **Save**. To return to Smart Selection, choose **Restore Default**, confirm and click **Save**.

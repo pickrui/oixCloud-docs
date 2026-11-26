@@ -80,16 +80,16 @@ Confirm that the entry and Home ISP nodes are both in the current node list. The
 These editing steps apply to iPhone / iPad. Apple TV [receives synced configuration](/en/oixflow/apple-tv) from a phone or tablet and does not offer the same chain editor.
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-chains-en.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · Create a chain in forwarding order">
-    <img src="/illustrations/oixflow-chains-en.svg?v=20261123-1" alt="oixFlow · Create a chain in forwarding order" width="1120" height="1120" loading="lazy">
+  <a href="/illustrations/oixflow-chains-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixFlow · Create a chain in forwarding order">
+    <img src="/illustrations/oixflow-chains-en.svg?v=20261127-4" alt="oixFlow · Create a chain in forwarding order" width="1120" height="1120" loading="lazy">
   </a>
   <figcaption>General chain-editor example · Replace its members with your entry and Home ISP nodes</figcaption>
 </figure>
 
-1. Create a chain in **Proxies** and give it a recognizable name, such as `Home-ISP-Chain`.
+1. Open **Proxies → Chains**, tap **+** and give the chain a name such as `Home-ISP-Chain`.
 2. Use **Add Proxy** to add the entry, then the Home ISP exit. Check the route preview and save.
 3. Select the chain on Home. In Rule mode, traffic targeting **Proxy** follows the Home selection; rules targeting a specific node, group, Direct or Reject keep their own destinations.
-4. For selected websites, add a **Domain Suffix** rule under **Proxies → Policies → Routing Rules**, enter the actual domain and target the chain name.
+4. For selected websites, open **Proxies → Policies → Routing Rules → + → Add Rule**, select **Domain Suffix**, enter the domain and set **Route To** to the chain.
 5. Make a new connection and inspect the rule and outbound under **Activity → Requests**.
 
 For automatic entry selection, use a personal policy group offered by the chain editor and check its members first. See [policy groups and chains](/en/oixflow/policies#proxy-chains) for group types, effects of later-hop groups and conflicts.
@@ -99,13 +99,13 @@ For automatic entry selection, use a personal policy group offered by the chain 
 For Windows, macOS, Android and Linux versions supporting this feature.
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-chains-en.svg?v=20261102-3" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Edit chain order">
-    <img src="/illustrations/flclash-chains-en.svg?v=20261102-3" alt="FlClash for oixCloud · Edit chain order" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-chains-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Edit chain order">
+    <img src="/illustrations/flclash-chains-en.svg?v=20261127-4" alt="FlClash for oixCloud · Edit chain order" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>General chain-editor example · Replace its members with your entry and Home ISP nodes</figcaption>
 </figure>
 
-1. Open **Proxy chains** from the current profile's menu in **Profiles**, then add and name a chain.
+1. In **Profiles**, open the subscription's menu and choose **Proxy chains**. For a custom profile use **Edit → More → Proxy chains**. Select **Add** and name the chain.
 2. Add two different members in `Entry → Home ISP` order, use the drag handles if needed, save and confirm the chain is enabled.
 3. Wait for the profile to apply. Select the generated chain name in **Proxies** or target it with a personal override rule. If a manual selector does not list it, adjust its members or rules as described in the [chain guide](/en/flclash/proxies#proxy-chains).
 4. Verify the rule and outbound on a new connection. Selecting the original Home ISP node does not select the chain.

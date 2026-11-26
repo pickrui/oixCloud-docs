@@ -7,8 +7,8 @@ description: "Overrides, groups and added rules \u2014 setup, practical steps an
 ## Illustrated steps
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-rules-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Add a domain suffix rule">
-    <img src="/illustrations/flclash-rules-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Add a domain suffix rule" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/flclash-rules-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Add a domain suffix rule">
+    <img src="/illustrations/flclash-rules-en.svg?v=20261127-4" alt="FlClash for oixCloud · Add a domain suffix rule" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
@@ -16,30 +16,31 @@ description: "Overrides, groups and added rules \u2014 setup, practical steps an
 ## Choose an override mode
 
 <figure class="guide-figure">
-  <a href="/illustrations/flclash-override-en.svg?v=20261030-en1" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Choose a profile override mode">
-    <img src="/illustrations/flclash-override-en.svg?v=20261030-en1" alt="FlClash for oixCloud · Choose a profile override mode" width="1120" height="1100" loading="lazy">
+  <a href="/illustrations/flclash-override-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="FlClash for oixCloud · Choose a profile override mode">
+    <img src="/illustrations/flclash-override-en.svg?v=20261127-4" alt="FlClash for oixCloud · Choose a profile override mode" width="1120" height="1100" loading="lazy">
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
 
-Open **Override** from the profile menu.
+In **Profiles**, open the menu for a managed or ordinary subscription and choose **Override**. Select **Overlay** to add an exception to that subscription.
 
 | Mode | Behavior |
 | --- | --- |
+| Standard | Uses the original profile with an optional override script and added rules. |
 | Overlay | Keeps subscription groups/rules and layers personal settings; personal rules precede subscription rules, while existing added rules retain priority |
 | Custom | You maintain groups and rules yourself; intended for users who understand the full routing structure |
 
 Start with Overlay. Empty custom content does not provide a usable routing configuration; do not switch to an empty Custom configuration just to remove default rules.
 
+<span id="website-rule"></span>
+
 ## Route a website
 
-1. Add a personal rule in Override, or use **Tools → Advanced Configuration → Added Rules**.
-2. Choose a rule type such as domain suffix and enter `example.com`.
-3. Select Direct, Reject, an existing group or a Tailscale network.
-4. Save and apply while using Rule mode.
-5. Make a new connection and inspect its matched rule.
+1. For a managed or ordinary subscription, open **Profiles → profile menu → Override**, choose **Overlay**, then open **Rule → Add**. For a custom profile, use **Profiles → profile menu → Edit → Rule → Add**.
+2. Select `DOMAIN-SUFFIX`, enter `example.com` and choose `DIRECT`, `REJECT`, an existing group or an enabled chain by name. To proxy this domain, choose a group with usable members.
+3. Save the rule. For a subscription override, return to **Override** and select **Apply now** if shown. With this profile active in Rule mode, revisit the site and check the matched rule and outbound in **Connections**.
 
-Domain fields do not take full page URLs. Old connections can survive a rule change, so reopen the destination when testing.
+To share a rule across subscriptions, create it in **Tools → Advanced Configuration → Added rules**, then check that it is enabled in each profile's **Override** settings. Use the steps above for an exception that belongs to just one profile.
 
 <span id="groups-and-scripts"></span>
 

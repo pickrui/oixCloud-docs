@@ -6,24 +6,30 @@ description: "策略组、自动选择与代理链的操作步骤、适用范围
 
 适用于 iPhone / iPad，配置可按同步范围发送到 Apple TV
 
+<span id="choose-outbound"></span>
+
 ## 选择策略组
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-policies-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 创建策略组">
-    <img src="/illustrations/oixflow-policies-zh.svg?v=20261123-1" alt="oixFlow · 创建策略组" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
+  <a href="/illustrations/oixflow-policies-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixFlow · 创建策略组">
+    <img src="/illustrations/oixflow-policies-zh.svg?v=20261127-4" alt="oixFlow · 创建策略组" width="1120" height="982" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
-在「代理 → 策略」中添加策略组，填写名称、选择类型并添加成员。保存后，还要在主页或对应分流规则中选择它，流量才会使用该组
+1. 在 iPhone 或 iPad 的「主页」点当前节点卡片，展开订阅或文件夹可选单个节点。要切换整组，直接点组名或「自动优选」。卡片会显示新的选择
+2. 要新建组，打开「代理 → 策略 → 添加策略组」，填写名称和类型，点「添加成员」，勾选所需节点并保存。回到主页点新组，或把某条[路由规则](/oixflow/routing#website-rule)指向它
+3. 在规则模式下，目标为「代理」的请求跟随主页选择。若网站已有指定出口的规则，去那条规则更换目标。若当前网络预设指定了出口，先在[网络预设](/oixflow/networks)中调整，再用新连接验证
 
 | 类型 | 适合的需求 |
 | --- | --- |
-| 手动 | 由你选择当前成员 |
+| 手动 | 使用此设备已选的成员，尚无有效选择时使用首个可用成员 |
 | 自动测速 | 依据配置的连接测试选择成员 |
 | 故障转移 | 优先使用前面的成员，不可用时切换 |
 | 负载均衡 | 将不同连接分配给可用成员 |
 | 智能 | 根据实际连接表现学习路线，在建立连接失败时尝试其他成员 |
+
+要固定使用某个组员，可直接在主页的订阅或文件夹中选该节点；只给一个网站使用时，在它的规则中选该节点
 
 主页的「自动优选」是内置自动组；你创建的策略组会作为独立出口供选择。没有可用成员时，先检查成员来源、筛选条件与测试结果
 
@@ -43,21 +49,21 @@ description: "策略组、自动选择与代理链的操作步骤、适用范围
 
 确认测试完成后，再在主页核对自动优选当前选择，并新建一次目标请求检查出口。手动测得的低延迟不等于一定成为自动优选结果，也不证明目标服务可用；不要把未刷新的数字直接视为连接故障
 
+<span id="create-chain"></span>
+
 ## 创建代理链
 
 <figure class="guide-figure">
-  <a href="/illustrations/oixflow-chains-zh.svg?v=20261123-1" target="_blank" rel="noopener" aria-label="oixFlow · 按顺序创建代理链">
-    <img src="/illustrations/oixflow-chains-zh.svg?v=20261123-1" alt="oixFlow · 按顺序创建代理链" width="1120" height="982" loading="lazy">
+  <a href="/illustrations/oixflow-chains-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixFlow · 按顺序创建代理链">
+    <img src="/illustrations/oixflow-chains-zh.svg?v=20261127-4" alt="oixFlow · 按顺序创建代理链" width="1120" height="982" loading="lazy">
   </a>
   <figcaption>中文模拟界面 · 虚构数据</figcaption>
 </figure>
 
-以下按支持任意跳策略组的维护版本说明；旧版缺少选项时，先核对 [安装版本与下载入口](/oixflow/connect)
-
-1. 在「代理」切换到代理链区域，新建并命名，添加至少两个成员
-2. 按入口到出口排列，每一跳都可选择节点，或符合条件的手动、URL Test、故障转移、负载均衡、智能策略组；同一节点或组不能重复出现
-3. 保存后在主页或规则的目标中选中这条链
-4. 对目标网站检查最终出口，再比较速度与稳定性
+1. 先在「代理 → 服务器」准备至少两个节点，再切到「链式代理」，点右上角「＋」
+2. 填写链名，点「添加代理」，按顺序加入至少两跳。第一个是入口，最后一个是出口，可以拖动调整。每一跳都可选节点或列表中的合适策略组
+3. 核对「路由预览」并保存。要作为常用出口，在主页点当前节点卡片选链名；只给一个网站用时，在该网站的路由规则中选链名
+4. 重新访问目标网站，核对命中规则和出口
 
 链越长不代表越快。任意一段不可用都会影响整条链；先分别验证每个节点，避免把链自身或相互依赖的策略组接回链中
 
