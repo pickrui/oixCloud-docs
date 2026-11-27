@@ -112,6 +112,8 @@ See [Low-speed traffic](/en/account/traffic#low-speed) for rate tiers and scope 
 
 Sharing, jointly purchasing or reselling a personal account, unauthorized P2P/BitTorrent, sustained abnormal resource use, scanning, attacks and other service-term violations may result in restricted service, suspension or an account ban. **A normal score or a score above the speed-limit threshold does not authorize prohibited activity or guarantee protection from a ban.**
 
+A verified case of Google identifying a dedicated IP as being in mainland China is a minor violation. If the region is still incorrect 14 days after the IP is reclaimed, part of the deposit may be deducted at our discretion. [Check the location and request a correction](/en/account/google-ip-location#verify).
+
 Abuse complaints about a dedicated IP require verification of the activity and responsibility before applying the [deposit and abuse fee rules](/en/account/nodes#ip-deposit). A complaint alone does not justify a charge, and the same incident is not charged twice.
 
 Bans are handled separately from temporary points-based throttling, with no promise of automatic reinstatement. To prevent circumvention, specific ban criteria, detection methods and enforcement details are not public. If you believe a decision is incorrect, submit a [support ticket](/en/help/support#restrictions) describing the actual use and steps already taken to request human review.

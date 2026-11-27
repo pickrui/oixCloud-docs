@@ -5,10 +5,15 @@ description: 先按现象检查，再带上有效信息联系支持
 
 # 故障排查
 
+先找到与您遇到的问题相符的现象，再打开对应教程
+
+## 按现象查找
+
 | 我想要 | 阅读教程 |
 | --- | --- |
 | 无法登录、没有节点或连接后打不开网页 | [连接与速度排查](/help/troubleshooting) |
 | 网站有节点，客户端里找不到 | [核对接入方式、筛选和刷新结果](/help/troubleshooting#missing-subscription) |
+| Google 将境外独享 IP 识别为中国大陆 | [独享 IP 防送中指南](/account/google-ip-location) |
 | 已经付款，套餐还没生效 | [分别核对充值和套餐记录](/help/support#payment) |
 | 流量用完，或到期没有自动续费 | [检查待激活套餐、重置和续费队列](/help/troubleshooting#plan-continuation) |
 | 订阅地址或 Access Token 泄露 | [按泄露内容撤销凭据](/account/security#泄露后的对应处理) |

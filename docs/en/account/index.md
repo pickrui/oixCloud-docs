@@ -18,6 +18,7 @@ description: Find help with plans, traffic, nodes, subscriptions and account sec
 | Compare node types and connection options | [Nodes and connection options](/en/account/nodes) |
 | Use IXP in a managed client or connect through a cloud server | [IXP connection options](/en/account/nodes#ixp) |
 | Understand dedicated IPs, purchases, renewals and deposits | [Dedicated IPs](/en/account/nodes#dedicated-ip) |
+| Check or correct the region Google assigns to a dedicated IP | [Google IP location guide](/en/account/google-ip-location) |
 | Set subscription formats, filters and account rules | [Subscriptions and filters](/en/account/subscriptions) |
 | Use residential broadband IPs via internal relays or proxy chains | [Home ISP user guide](/en/account/home-isp) |
 | Set up internal relays or your own destination | [Relays and your own destinations](/en/account/relay) |

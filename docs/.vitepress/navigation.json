@@ -190,6 +190,10 @@
           "link": "/account/nodes"
         },
         {
+          "text": "独享 IP 防送中指南",
+          "link": "/account/google-ip-location"
+        },
+        {
           "text": "订阅与筛选",
           "link": "/account/subscriptions"
         },
@@ -428,6 +432,10 @@
         {
           "text": "Nodes and connection options",
           "link": "/en/account/nodes"
+        },
+        {
+          "text": "Google IP location guide",
+          "link": "/en/account/google-ip-location"
         },
         {
           "text": "Subscriptions and filters",

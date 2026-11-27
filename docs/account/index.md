@@ -18,6 +18,7 @@ description: 按当前任务查找套餐、流量、节点、订阅与账户安�
 | 比较节点类型与连接方式 | [节点与连接方式](/account/nodes) |
 | 在客户端使用 IXP，或通过云主机接入 | [IXP 节点接入方式](/account/nodes#ixp) |
 | 了解独享 IP、购买续费与保证金 | [独享 IP](/account/nodes#dedicated-ip) |
+| 关闭 Google 定位、防送中或申请纠正 IP 地区 | [独享 IP 防送中指南](/account/google-ip-location) |
 | 设置订阅格式、节点筛选与自定义规则 | [订阅与筛选](/account/subscriptions) |
 | 使用家庭宽带住宅 IP，配置内部中继或链式代理 | [Home ISP 使用指南](/account/home-isp) |
 | 设置站内中继或连接自己的落地服务器 | [中继与自建落地](/account/relay) |
