@@ -22,7 +22,7 @@ If you already use Location Guard, **Use fixed location** changes the coordinate
 
 ## Step 2. Check which exit and location source Google used {#verify}
 
-Sign in and open [Node list → Exclusive IP](https://oixcloud.com/user/node?node_level=Exclusive). If **Google region check** appears under your address, it shows the latest result and when it was checked. **Possibly mainland China** means the node detected a mainland China region signal from that IP. **Awaiting check**, **Inconclusive** and **Result out of date** mean the current region is still unconfirmed. You can check it yourself even before a result appears.
+Sign in and open **Node list → Exclusive IP**. Look for **Google region check** under your address. **Possibly mainland China** means the node detected a mainland China signal, such as an automatic redirect from `google.com` to `google.com.hk`. If you see **Region unconfirmed**, **Inconclusive**, **Awaiting check** or **Result out of date**, use the steps below to check the location yourself. [View my dedicated IPs](https://oixcloud.com/user/node?node_level=Exclusive)
 
 1. Select your dedicated IP in the client. Open a private window signed out of Google, decline location access and run a search. Check the client’s connection records to confirm that the Google request used your dedicated exit.
 2. At the **bottom of the search results**, look for the region and how Google estimated it. The location can come from your device, a home or work address in your account, or past activity. Google may also keep the last device location in a cookie for about six hours.
