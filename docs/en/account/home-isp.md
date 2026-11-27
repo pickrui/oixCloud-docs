@@ -4,6 +4,8 @@ description: "Filter Home ISP nodes, configure internal relays or client proxy c
 
 # Home ISP user guide
 
+<span id="home-isp"></span>
+
 Home ISP provides overseas residential broadband exits. Check the destination node first, then choose an internal relay or client proxy chain if needed. Adding an entry may improve the access path but adds another connection stage; compare the result on your own network.
 
 ## Characteristics and use cases {#characteristics}
@@ -18,6 +20,8 @@ Home ISP uses the same plan permissions as Edge and appears separately in the [n
 Neither category assigns an IP exclusively to your account or guarantees availability, streaming access or a mainland-China access SLA. A residential network does not guarantee that a third-party platform will permit access, reduce verification or preserve sessions. Region and IP classification depend on the destination service.
 
 ## Subscriptions and filters {#subscription}
+
+<span id="isp-subscription"></span>
 
 Default inclusion is set per Home ISP node for both static and dynamic IPs. Plans with CIA, IXP, Fusion or GIA normally prefer their own lines. If none of those lines has an available node, Home ISP nodes enabled for default inclusion may appear. To add other eligible residential nodes, select ISP as described below.
 
@@ -35,9 +39,11 @@ Default inclusion is set per Home ISP node for both static and dynamic IPs. Plan
 
 ISP and Edge are separate lines. Selecting only Edge, a region or a name does not add ISP nodes excluded by default.
 
-::: warning Check node roles first
-Default inclusion determines which Home ISP nodes a subscription includes automatically. When you build a relay, choose from the nodes offered for each hop. See [traffic routing restrictions](/en/account/nodes#isp-routing) for eligibility.
-:::
+### Traffic routing restrictions {#isp-routing}
+
+The default inclusion setting on an ISP node only affects subscription delivery. For relays, HTTP/3, CDN or [exit settings such as WARP](/en/account/unlock), choose from the nodes offered on each page for your plan and the role you need.
+
+An administrator can restrict a node from new routing selections. If one backend in a logical group is restricted, the restriction applies to the whole group, including rules with a wildcard source. You can still delete existing forwarding rules.
 
 ## Why use relays or proxy chains? {#why-relay-or-chain}
 
@@ -92,7 +98,7 @@ These editing steps apply to iPhone / iPad. Apple TV [receives synced configurat
 4. For selected websites, open **Proxies → Policies → Routing Rules → + → Add Rule**, select **Domain Suffix**, enter the domain and set **Route To** to the chain.
 5. Make a new connection and inspect the rule and outbound under **Activity → Requests**.
 
-For automatic entry selection, use a personal policy group offered by the chain editor and check its members first. See [policy groups and chains](/en/oixflow/policies#proxy-chains) for group types, effects of later-hop groups and conflicts.
+For automatic entry selection, use a personal policy group offered by the chain editor and check its members first. See [policy groups and chains](/en/oixflow/proxy-chains) for group types, effects of later-hop groups and conflicts.
 
 ### FlClash for oixCloud proxy chains {#flclash-chain}
 
@@ -107,7 +113,7 @@ For Windows, macOS, Android and Linux versions supporting this feature.
 
 1. In **Profiles**, open the subscription's menu and choose **Proxy chains**. For a custom profile use **Edit → More → Proxy chains**. Select **Add** and name the chain.
 2. Add two different members in `Entry → Home ISP` order, use the drag handles if needed, save and confirm the chain is enabled.
-3. Wait for the profile to apply. Select the generated chain name in **Proxies** or target it with a personal override rule. If a manual selector does not list it, adjust its members or rules as described in the [chain guide](/en/flclash/proxies#proxy-chains).
+3. Wait for the profile to apply. Select the generated chain name in **Proxies** or target it with a personal override rule. If a manual selector does not list it, adjust its members or rules as described in the [chain guide](/en/flclash/proxy-chains).
 4. Verify the rule and outbound on a new connection. Selecting the original Home ISP node does not select the chain.
 
 ## Verification and troubleshooting {#troubleshooting}

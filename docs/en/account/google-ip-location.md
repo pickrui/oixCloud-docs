@@ -32,4 +32,4 @@ Sign in and open [Node list → Exclusive IP](https://oixcloud.com/user/node?nod
 
 Stay connected through the dedicated exit, sign in to [Google’s IP location report form](https://support.google.com/websearch/workflow/9308722), and submit the exit’s actual country or region. Google says updates can take over a month, so report the error as soon as you confirm it.
 
-A verified case of Google identifying a dedicated IP as being in mainland China is a minor violation. **If the region is still incorrect 14 days after the IP is reclaimed, part of the deposit may be deducted at our discretion.** [Dedicated IP deposit rules](/en/account/nodes#ip-deposit)
+A verified case of Google identifying a dedicated IP as being in mainland China is a minor violation. **If the region is still incorrect 14 days after the IP is reclaimed, part of the deposit may be deducted at our discretion.** [Dedicated IP deposit rules](/en/account/dedicated-ip#ip-deposit)

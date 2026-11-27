@@ -29,10 +29,10 @@ LuCI 插件和代理内核可单独更新。找不到新菜单时，仅更新内
 登录成功后，插件会下载 `oixCloud.yaml`，切换到这份配置并启动或重启 OpenClash。路由器正在代理流量时，切换会短暂中断连接
 
 1. 通过路由器的局域网地址打开 LuCI，进入「服务 → OpenClash → 插件设置 → oixCloud」
-2. 用邮箱和密码登录，或选「使用 Google 登录」，允许弹窗并在其中选择已有 oixCloud 账户的邮箱。用令牌时选「Token 登录」，粘贴网站[新增时显示的完整 Access Token](/account/security#manual-token)
+2. 用邮箱和密码登录，或选「使用 Google 登录」，允许弹窗并在其中选择已有 oixCloud 账户的邮箱。用令牌时选「Token 登录」，粘贴网站[新增时显示的完整 Access Token](/account/access-tokens#manual-token)
 3. 保持 LuCI 页面打开，等配置下载和启动完成。在「运行状态」确认当前配置为 `oixCloud.yaml`。若提示配置下载失败，回到 oixCloud 标签点「更新配置」重试
 
-登录成功后路由器即可获取托管节点，不需要批准设备；首次登录时账户会收到新设备登录提醒，见 [新设备登录与提醒](/account/security#device-approval)。0.48.014 及更早的插件不区分设备，网站「已登录的客户端」里会和其他同样旧版的路由器合在一行，更新插件后重新登录即可单独列出
+登录成功后路由器即可获取托管节点，不需要批准设备；首次登录时账户会收到新设备登录提醒，见 [新设备登录与提醒](/account/client-sign-in#device-approval)。0.48.014 及更早的插件不区分设备，网站「已登录的客户端」里会和其他同样旧版的路由器合在一行，更新插件后重新登录即可单独列出
 
 ## 3. 选择配置并启动
 
@@ -71,77 +71,6 @@ UDP 转发开启后仍受端口范围限制。端口过滤不等于识别所有 
 
 只有账户卡片、正常延迟或「运行中」状态，不能证明测试设备的流量已经接管。浏览器安全 DNS、其他 DNS 插件、IPv6 和旁路由网关都可能影响路径
 
-### 切换代理模式或启用 TUN {#capture-mode}
-
-<figure class="guide-figure">
-  <a href="/illustrations/openclash-modes-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="OpenClash 运行状态里的代理模式、DNS 模式和 TUN">
-    <img src="/illustrations/openclash-modes-zh.svg?v=20261127-5" alt="OpenClash 运行状态里的代理模式、DNS 模式和 TUN" width="1120" height="975" loading="lazy">
-  </a>
-  <figcaption>中文模拟界面 · 虚构数据</figcaption>
-</figure>
-
-1. 在 LuCI 打开「服务 → OpenClash → 运行状态」。要按网站分流，在「代理模式」点「规则」；要把进入内核的普通连接交给全局组，点「全局」；需要临时直连时点「直连」
-2. 需要路由器用虚拟网卡接管时，在同页「运行模式」选择「TUN」，等待服务恢复运行。这里的 Fake-IP / Redir-Host 决定 DNS 返回地址的方式，可以保留原选择
-3. 用以这台路由器为网关、已纳入访问控制的设备重新访问一个网站。在控制面板「连接」按域名或设备 IP 找到这条新连接，核对出口。若看不到，检查[端口范围](#common-ports)和绕过设置
-
-### 设置并验证路由器 DNS {#configure-dns}
-
-<figure class="guide-figure">
-  <a href="/illustrations/openclash-dns-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="在覆写设置为普通域名填写 DNS 上游并应用配置">
-    <img src="/illustrations/openclash-dns-zh.svg?v=20261127-5" alt="在覆写设置为普通域名填写 DNS 上游并应用配置" width="1120" height="975" loading="lazy">
-  </a>
-  <figcaption>中文模拟界面 · 虚构数据</figcaption>
-</figure>
-
-1. 日常使用可保留配置自带的 DNS。在「插件设置 → DNS 设置 → 本地 DNS 劫持」查看局域网 DNS 如何转给 OpenClash，按当前网络使用 Dnsmasq 转发或防火墙转发
-2. 要更换解析器，打开「覆写设置 → DNS 设置」，勾选「自定义上游 DNS 服务器」。在下方的服务器表添加或编辑 `nameserver` 项，填写可达解析器的地址、协议和端口，启用该行，点「应用配置」
-3. 等服务恢复，在「配置管理」打开当前配置的「⋯」菜单，选择「下载运行配置」，核对 `dns.nameserver`。在局域网设备上运行 `nslookup example.com 路由器的局域网IP`，将最后一项换成实际地址，确认收到应答。要验证上游确实收到某次查询，可使用能查看查询记录的解析器和未缓存的新域名
-
-
-### 选择节点或切换策略组 {#routing}
-
-<figure class="guide-figure">
-  <a href="/illustrations/metacubexd-groups-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="在 MetaCubeXD 的手动选择组中点节点，再到连接查看出口">
-    <img src="/illustrations/metacubexd-groups-zh.svg?v=20261127-5" alt="在 MetaCubeXD 的手动选择组中点节点，再到连接查看出口" width="1120" height="975" loading="lazy">
-  </a>
-  <figcaption>操作示意 · 虚构数据</figcaption>
-</figure>
-
-1. 在「服务 → OpenClash → 运行状态」的控制面板区域打开 MetaCubeXD，进入「代理」。先在「连接」查看目标网站命中的规则和组名，就能找到要改的组
-2. 展开该手动选择组，点需要的节点。如果选择的是另一个组，再展开它选择成员。自动测速、故障转移等组会按各自策略选路
-3. 保持规则模式，从局域网设备重新访问目标，在「连接」核对实际出口
-
-### 给网站加一条本机规则 {#routing-rules}
-
-<figure class="guide-figure">
-  <a href="/illustrations/openclash-routing-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="OpenClash 自定义规则的优先匹配输入框和应用配置按钮">
-    <img src="/illustrations/openclash-routing-zh.svg?v=20261127-4" alt="OpenClash 自定义规则的优先匹配输入框和应用配置按钮" width="1120" height="975" loading="lazy">
-  </a>
-  <figcaption>操作示意 · 虚构数据</figcaption>
-</figure>
-
-在 LuCI 的「服务 → OpenClash → 覆写设置 → 规则设置」勾选「自定义规则」。在「优先匹配」框已有的 `rules:` 下加一行，例如让测试域名直连
-
-```yaml
-rules:
-  - DOMAIN-SUFFIX,example.com,DIRECT
-```
-
-保留框里已有内容和唯一的 `rules:`。要走代理，把 `DIRECT` 换成当前配置中的组名。点页底「应用配置」，等内核恢复运行，再从局域网设备建立新连接。这项覆写保存在路由器上，切换配置时也要确认组名存在
-
-### 用两个节点建立代理链 {#create-chain}
-
-<figure class="guide-figure">
-  <a href="/illustrations/openclash-chain-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="在 OpenClash 出口节点的 Dialer-proxy 字段填写入口名称">
-    <img src="/illustrations/openclash-chain-zh.svg?v=20261127-5" alt="在 OpenClash 出口节点的 Dialer-proxy 字段填写入口名称" width="1120" height="975" loading="lazy">
-  </a>
-  <figcaption>操作示意 · 虚构数据</figcaption>
-</figure>
-
-1. 准备一份自己维护、含入口和出口两个节点的 YAML 配置。需要参考现有配置时，先在「配置管理」中用该文件的「⋯ → 复制配置」，之后编辑副本；订阅更新会重新生成托管文件
-2. 在这份配置的「⋯ → 节点管理」点「读取配置」。在「服务器节点配置」中编辑**出口节点**，把 `Dialer-proxy` 填为已有的**入口节点**名称，点「保存配置」
-3. 回到「节点管理」点「应用配置」写回。到「配置管理」切换到这份文件，等运行恢复后，在控制面板的手选组选择**出口节点**。新连接会先经过入口，再从出口访问目标
-
 ## 5. 更新与节点筛选
 
 <figure class="guide-figure">
@@ -156,57 +85,11 @@ rules:
 - **更新普通订阅**：在「配置订阅」更新对应的地址，也可为该项设置自动更新时间
 - 升级插件或内核：先备份，在版本更新中分别选择对应下载入口，不要把插件升级和订阅更新混为一件事
 
-## 6. 更换与更新 oix 内核 {#kernel-update}
+## 连接后的设置
 
-<figure class="guide-figure">
-  <a href="/illustrations/openclash-version-zh.svg?v=20261105-3" target="_blank" rel="noopener" aria-label="OpenClash · 在版本更新中升级或更换 oix 内核">
-    <img src="/illustrations/openclash-version-zh.svg?v=20261105-3" alt="OpenClash · 在版本更新中升级或更换 oix 内核" width="1120" height="975" loading="lazy">
-  </a>
-  <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
-</figure>
-
-oix 内核是支持 oixCloud 托管节点的 Mihomo 构建，不能用普通 Mihomo 包替代。维护版本登录账户后会优先使用它；插件更新、内核更新和订阅更新是三个不同操作
-
-### 在线更新内核
-
-1. 打开「服务 → OpenClash → 插件设置 → 版本更新」，先导出包含内核的备份并保存到电脑
-2. 核对 CPU「编译版本」，例如 `linux-arm64`、`linux-amd64-v1` 或 `linux-armv7`
-3. 在内核列点击版本号链接，等待日志确认下载、校验和替换成功；使用与编译版本匹配的专用内核包
-4. 返回「运行状态」，如尚未运行则启动 OpenClash，确认版本包含 `oix`，再用局域网设备验证实际连接
-
-安装路径通常是 `/etc/openclash/core/clash_meta`；启用小闪存模式时是 `/tmp/etc/openclash/core/clash_meta`。更新程序按实际模式选择路径并设置执行权限
-
-### 手动上传与替换内核
-
-在线更新失败时，可从 [mihomo-oix 的 Pre-Alpha 发行页](https://github.com/vernesong/mihomo-oix/releases/tag/Pre-Alpha) 下载与「编译版本」匹配的 `.gz` 文件。不要使用普通 Mihomo、其他 CPU 架构或桌面安装包
-
-::: warning 替换前备份并确认空间
-先导出包含旧内核的备份，记录当前编译版本与安装路径。内核大小随架构和版本变化，以下载文件解压后的实际大小为准；用 `df -h` 检查临时目录及目标分区的可用空间。下面以普通模式、路由器地址 `192.168.1.1` 为例；按实际地址操作，小闪存模式须把目标路径改为 `/tmp/etc/openclash/core/clash_meta`
-:::
-
-1. 在电脑上解压，先将占位文件名替换为实际下载的文件名：
-   ```sh
-   gzip -dc 'mihomo-<arch>-<version>.gz' > clash_meta
-   ```
-2. 在 LuCI「运行状态」停止 OpenClash，再将新文件上传到临时位置：
-   ```sh
-   scp clash_meta root@192.168.1.1:/tmp/clash_meta.new
-   ```
-3. 登录路由器 SSH，核对新文件可以运行且版本包含 `oix`：
-   ```sh
-   chmod 755 /tmp/clash_meta.new
-   /tmp/clash_meta.new -v
-   ```
-   如果不能运行，先检查架构、文件完整性和具体报错，不要继续替换
-4. 核对目标路径后复制新文件，并按插件的方式设置权限：
-   ```sh
-   cp /tmp/clash_meta.new /etc/openclash/core/clash_meta
-   chmod 4755 /etc/openclash/core/clash_meta
-   /etc/openclash/core/clash_meta -v
-   ```
-5. 回到网页启动 OpenClash，检查运行日志，并用局域网设备测试。失败时停止服务，从备份取出旧内核，按同样的上传与校验步骤恢复；不要通过反复更新订阅来解决内核无法启动的问题
-
-确认运行正常后，可以删除本次上传的 `/tmp/clash_meta.new`；保留电脑上的备份用于回退
+- [切换 TUN 或配置路由器 DNS](/other/openclash-network)
+- [选择节点、添加规则或串联代理](/other/openclash-routing)
+- [在线更新或手动替换 oix 内核](/other/openclash-core)
 
 ## 常见问题
 

@@ -44,10 +44,10 @@ Linux 的 DEB 包声明依赖 `libayatana-appindicator3-1` 和 `libsecret-1-0`�
 </figure>
 
 1. 从软件中心下载 FlClash for oixCloud，选择适合设备系统与架构的安装包，打开应用中的「oixCloud」页面登录
-2. 默认用邮箱和密码登录。已有 oixCloud 账户也可选「使用 Google 登录」，或在表单底部切换到 Access Token 后粘贴完整令牌。[Google 登录步骤](/account/security#google-client-login)
+2. 默认用邮箱和密码登录。已有 oixCloud 账户也可选「使用 Google 登录」，或在表单底部切换到 Access Token 后粘贴完整令牌。[Google 登录步骤](/account/client-sign-in#google-client-login)
 3. 等托管配置下载完成，在「配置」确认已选中 oixCloud，再到「代理」选择节点或策略组。日常使用保持「规则」模式
 
-新设备首次登录会收到账户提醒，成功后即可使用套餐内的节点。使用 Access Token 时，在网站[新增并保存完整令牌](/account/security#manual-token)，只显示一次。只想导入自己的订阅，可直接按[普通订阅导入步骤](/flclash/profiles#other-subscription)操作
+新设备首次登录会收到账户提醒，成功后即可使用套餐内的节点。使用 Access Token 时，在网站[新增并保存完整令牌](/account/access-tokens#manual-token)，只显示一次。只想导入自己的订阅，可直接按[普通订阅导入步骤](/flclash/import-nodes#other-subscription)操作
 
 套餐或筛选变动后，在「oixCloud」页点「刷新节点」。旧版若分开显示「刷新」和「同步」，选「同步」
 
@@ -69,7 +69,7 @@ Windows 启动提示找不到 DLL 时，先按 [缺少 DLL 修复](/flclash/wind
 
 ## Google 登录排查
 
-没有按钮、浏览器未返回、流程超时或邮箱未注册时，按统一的 [Google 登录排查](/account/security#google-troubleshooting) 处理
+没有按钮、浏览器未返回、流程超时或邮箱未注册时，按统一的 [Google 登录排查](/account/client-sign-in#google-troubleshooting) 处理
 
 ## 无图形界面与后台运行 {#headless}
 

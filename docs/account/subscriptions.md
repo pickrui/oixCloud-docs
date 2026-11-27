@@ -17,7 +17,7 @@ oixFlow、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路由
 3. 在 oixFlow（iPhone / iPad）或 FlClash for oixCloud 的「oixCloud」账户页点「刷新节点」。旧版 FlClash for oixCloud 分开显示「刷新」和「同步」时，选「同步」。普通订阅客户端则更新已导入的地址，并选中更新后的配置
 4. 回到客户端节点列表搜索同一名称。仍然缺少时，记录客户端版本、订阅格式以及节点是否出现在预览中，提交服务单时隐藏完整订阅地址
 
-普通第三方订阅可下发的线路限于 **Edge、Home ISP 和账户独享 IP**，具体节点取决于套餐权限、订阅格式和筛选。需要 CIA、IXP、Fusion 或 GIA 时，请在支持该线路的专用客户端登录。若有 IXP 权限但智能优选只显示 Fusion，可在筛选中同时保留 IXP 和仍要用的线路。自行转发的步骤见 [IXP 接入方式](/account/nodes#ixp)
+普通第三方订阅可下发的线路限于 **Edge、Home ISP 和账户独享 IP**，具体节点取决于套餐权限、订阅格式和筛选。需要 CIA、IXP、Fusion 或 GIA 时，请在支持该线路的专用客户端登录。若有 IXP 权限但智能优选只显示 Fusion，可在筛选中同时保留 IXP 和仍要用的线路。自行转发的步骤见 [IXP 接入方式](/account/ixp)
 
 ## 设置节点筛选
 
@@ -68,7 +68,7 @@ oixFlow、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路由
 2. 按需结合地区和名称筛选，等待预览完成，确认目标节点及保留数量
 3. 保存并更新客户端订阅，重新选择节点连接；静态与动态家宽均属于 ISP，Edge 是另一条线路
 
-仅按地区或名称筛选不会自动加入这类节点。恢复默认后，未默认下发的 ISP 会再次从结果中移除。中继与代理链配置步骤见 [Home ISP 使用指南](/account/home-isp)，节点的路由资格见[流量路由限制](/account/nodes#isp-routing)
+仅按地区或名称筛选不会自动加入这类节点。恢复默认后，未默认下发的 ISP 会再次从结果中移除。中继与代理链配置步骤见 [Home ISP 使用指南](/account/home-isp)，节点的路由资格见[流量路由限制](/account/home-isp#isp-routing)
 
 ## 哪些设备会一起改变？
 
@@ -84,7 +84,7 @@ oixFlow、FlClash for oixCloud、集成账户入口的 OpenClash、Merlin 路由
 
 如果保存时提示策略组大小写有误，按提示的行号和组名修改。使用自有节点或特定模板的组名时，保存后还要检查目标订阅；生成 Clash 配置时，找不到对应目标的规则会跳过
 
-oixClash 使用这份账号规则，支持的插件版本可直接读取和编辑；网站保存后，在插件点「更新节点」获取，操作步骤见 [oixClash 账号规则](/other/oixclash#_7-编辑账号自定义规则)。oixFlow App 内添加的本地分流规则仍在 App 中单独管理
+oixClash 使用这份账号规则，支持的插件版本可直接读取和编辑；网站保存后，在插件点「更新节点」获取，操作步骤见 [oixClash 账号规则](/other/oixclash-rules)。oixFlow App 内添加的本地分流规则仍在 App 中单独管理
 
 清空并保存会删除账号规则，先保留需要的内容。保存成功后，还需确认客户端配置更新成功，并用新连接核对实际命中结果
 

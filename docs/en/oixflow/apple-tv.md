@@ -51,7 +51,7 @@ Tailscale device authorization is separate and cannot sign into the managed oixC
 
 Apple TV still signs in through **Sync to Apple TV** on the iPhone or iPad. The phone or tablet must be signed in with that switch on. Once the TV receives the sync, it can load nodes without approval, and the iPhone no longer needs to confirm it.
 
-After the TV uses an email/password or Google sign-in synced from an iPhone or iPad, it appears under that device’s entry in [Signed-in clients](/en/account/security#signed-in-clients). Signing out that entry on the website signs out both devices. If you used a manually created Access Token, look under that token instead. To restore access, sign in again on the phone or tablet and check that **Sync to Apple TV** is enabled.
+After the TV uses an email/password or Google sign-in synced from an iPhone or iPad, it appears under that device’s entry in [Signed-in clients](/en/account/client-sign-in#signed-in-clients). Signing out that entry on the website signs out both devices. If you used a manually created Access Token, look under that token instead. To restore access, sign in again on the phone or tablet and check that **Sync to Apple TV** is enabled.
 
 <span id="routing"></span>
 
@@ -66,7 +66,7 @@ After the TV uses an email/password or Google sign-in synced from an iPhone or i
 
 1. Use the remote to open the current node card on Home. Pick a standalone node, a node in a subscription, an existing chain, or **Best Available** when it has eligible members. **Test All** checks the nodes and chains in the list.
 2. To send a service through a personal policy group, set **Settings → Mode** to **Rule**, then open **Settings → Routing Rules**. Select an enabled rule set and choose its group, node or chain. For a disabled built-in set, the first press enables it. Press again to assign the outbound.
-3. With iCloud mirroring, [create groups or chains](/en/oixflow/policies#create-chain) and add rules on the publishing iPhone or iPad. Choose them once the TV receives the update. With a local TV configuration, you can also open **Routing Rules → Add Rule**, enter a domain, choose an action and save.
+3. With iCloud mirroring, [create groups or chains](/en/oixflow/proxy-chains#create-chain) and add rules on the publishing iPhone or iPad. Choose them once the TV receives the update. With a local TV configuration, you can also open **Routing Rules → Add Rule**, enter a domain, choose an action and save.
 4. Reopen the service on the TV and check the exit on a new connection.
 
 ## Switch modes and DNS on the TV {#capture-dns}

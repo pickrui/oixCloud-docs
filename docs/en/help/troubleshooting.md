@@ -24,14 +24,14 @@ Try signing in to the [User Center](https://oixcloud.com/user) first, then follo
 | What you see | What to do |
 | --- | --- |
 | Website password sign-in fails | On the [website sign-in page](https://oixcloud.com/auth/login), use a registered passkey or enter your account password and the two-step code if enabled. If you need a password reset, **Forgot password** sends an email. Resetting revokes all client sign-ins and Access Tokens, changes the main subscription URL, turns off two-step verification and removes passkeys. |
-| Website sign-in works, but the client rejects your credentials | Enter the account password or full Access Token in its respective field. If client password sign-in is disabled, use an Access Token or supported Google sign-in. [Check sign-in methods](/en/account/security#first-client-login). |
+| Website sign-in works, but the client rejects your credentials | Enter the account password or full Access Token in its respective field. If client password sign-in is disabled, use an Access Token or supported Google sign-in. [Check sign-in methods](/en/account/client-sign-in#first-client-login). |
 | A device signed in with email/password or Google suddenly signs out | Check its entry under [Signed-in clients](https://oixcloud.com/user/token#devices). Devices sharing a sign-in are signed out together. Sign-ins unused for 180 days are also removed. Sign in again on the devices you use. For Apple TV, [sync again](/en/oixflow/apple-tv#approval) from a signed-in iPhone or iPad. |
-| A device using an Access Token suddenly signs out | Check whether the token expired, was deleted or was regenerated. Use the new value after regeneration. For an expired or deleted token, [create a new one](/en/account/security#manual-token) and update the devices or scripts that used it. Changing the account password also revokes all client sign-ins and Access Tokens. |
+| A device using an Access Token suddenly signs out | Check whether the token expired, was deleted or was regenerated. Use the new value after regeneration. For an expired or deleted token, [create a new one](/en/account/access-tokens#manual-token) and update the devices or scripts that used it. Changing the account password also revokes all client sign-ins and Access Tokens. |
 | The client reports an invalid device registration | Sign out in the client and sign in again. Nodes can then load without a separate approval. |
 | The client says the device clock is too far from the server | Enable automatic date and time, or NTP on a router, then try again. |
 | You paid, but the client shows no active plan | Follow the [payment and activation checks](/en/help/support#payment) to compare your top-up history with the **Active** record in Plan Management. |
 
-If a new-device alert is unfamiliar, check the sign-in it identifies and follow the [steps for revoking that credential](/en/account/security#device-approval).
+If a new-device alert is unfamiliar, check the sign-in it identifies and follow the [steps for revoking that credential](/en/account/client-sign-in#device-approval).
 
 <figure class="guide-figure">
   <a href="/illustrations/account-tokens-en.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="Signed-in clients sharing one sign-in are listed separately from manually created Access Tokens">
@@ -54,7 +54,7 @@ If a first import rejects the URL, [copy the full subscription URL](/en/start/qu
 2. Connect the client and open the affected site once. On iPhone or iPad, use [oixFlow’s Network Check and request history](/en/oixflow/diagnostics#network-check). In FlClash for oixCloud, run the [network self-check](/en/flclash/diagnostics) on Windows or macOS, or inspect connections and logs on Android or Linux.
 3. If the request is missing, check whether the app uses the system proxy or is excluded from the VPN or TUN. If the request appears, check the matched rule and outbound, then try the same site on another available node.
 
-If a direct connection to Edge or Home ISP fails from mainland China, try the same site on the same network and client using a CIA, Fusion, GIA or [managed IXP node](/en/account/nodes#ixp-access) included in your plan. If you use a cloud server to reach the IXP address from the panel, follow [IXP connection troubleshooting](/en/account/nodes#ixp-troubleshooting) to check the path from the device to the forwarder and from the forwarder to IXP.
+If a direct connection to Edge or Home ISP fails from mainland China, try the same site on the same network and client using a CIA, Fusion, GIA or [managed IXP node](/en/account/ixp#ixp-access) included in your plan. If you use a cloud server to reach the IXP address from the panel, follow [IXP connection troubleshooting](/en/account/ixp#ixp-troubleshooting) to check the path from the device to the forwarder and from the forwarder to IXP.
 
 ## It works, but speed is low or latency is high
 
@@ -66,12 +66,12 @@ Open [Plan Management](https://oixcloud.com/user/bought) and check the active pl
 
 | What you see | What to check if no eligible plan is pending |
 | --- | --- |
-| An ordinary plan ran out of data before expiry | Check the active record’s [automatic traffic reset](/en/account/plans#traffic-reset) and whether balance and commission cover the reset price. If no reset takes place, [low-speed access](/en/account/traffic#low-speed) applies until expiry. |
-| The plan expired | Check the first eligible record in the [renewal queue](/en/account/plans#auto-renew) and its price. If funds are short, the system does not charge a cheaper backup. |
+| An ordinary plan ran out of data before expiry | Check the active record’s [automatic traffic reset](/en/account/renewal#traffic-reset) and whether balance and commission cover the reset price. If no reset takes place, [low-speed access](/en/account/low-speed) applies until expiry. |
+| The plan expired | Check the first eligible record in the [renewal queue](/en/account/renewal#auto-renew) and its price. If funds are short, the system does not charge a cheaper backup. |
 
 ## Why am I limited with traffic still remaining? {#limits}
 
-Traffic allowance, points and plan speed apply separately. Use the [limit comparison](/en/account/traffic#limits), then inspect activity requests and Working nodes in [Account Profile](https://oixcloud.com/user/profile). Few currently open connections do not mean few new requests over a minute; repeated speed tests add activity too.
+Traffic allowance, points and plan speed apply separately. Use the [limit comparison](/en/account/low-speed#limits), then inspect activity requests and Working nodes in [Account Profile](https://oixcloud.com/user/profile). Few currently open connections do not mean few new requests over a minute; repeated speed tests add activity too.
 
 For a points-limit notice, reduce abnormal activity and observe subsequent points using the [fair-use recovery rules](/en/account/fair-use#recovery). Disconnecting completely leaves no activity records and does not guarantee points will rise. Avoid guessing by repeatedly changing nodes, reinstalling the client or buying plans.
 
@@ -85,7 +85,7 @@ Check the node actually used by the streaming service's policy group, its exit r
 
 Distinguish intentional direct lookups, lookups needed for routing and queries that bypass the client. DNS encryption, proxy DNS and VPN / TUN capture address different stages; Global mode does not guarantee zero leaks.
 
-Follow the client-specific steps and verification guidance: [oixFlow DNS and IPv6](/en/oixflow/dns#dns-leaks-settings-that-help) or [FlClash for oixCloud DNS and capture](/en/flclash/dns#dns-leaks-check-managed-dns-and-traffic-capture-first).
+Follow the client-specific steps and verification guidance: [oixFlow DNS and IPv6](/en/oixflow/dns#dns-leaks-settings-that-help) or [FlClash for oixCloud DNS and capture](/en/flclash/dns-leaks).
 
 ## Client-specific tools
 

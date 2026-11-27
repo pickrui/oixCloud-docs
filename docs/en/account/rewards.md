@@ -30,7 +30,7 @@ New orders are restricted as soon as gift credits are actually awarded, before g
 
 1. Open **Reward Links** with the account that should receive the plan. Under **Your generated links**, open the **Claim page** for an unclaimed link. If you need a new link, select **Generate claim link** to create one, then open its claim page.
 2. Check the signed-in account, reward plan and gift duration. Select **Confirm Plan Claim**. The link can be used once.
-3. Check [Plan Management](https://oixcloud.com/user/bought). If you already have an active plan, the reward joins the [activation queue](/en/account/plans#manual-activation). Otherwise, it starts immediately.
+3. Check [Plan Management](https://oixcloud.com/user/bought). If you already have an active plan, the reward joins the [activation queue](/en/account/plan-changes#manual-activation). Otherwise, it starts immediately.
 
 Generating a link uses a slot. If the confirmation result is unclear, check Plan Management and the original link’s status. Retry with the same link if it is still valid and unclaimed.
 
@@ -66,7 +66,7 @@ Before resetting, tell the recipient that the old address will stop working, the
 
 ## Original-order refunds and plan changes {#refunds}
 
-New orders that actually receive gift credits do not support self-service plan changes, upgrades, refunds to account balance or applying a coupon after purchase. This applies before links are generated or claimed. Other orders on the account are unaffected; normal usage, activation and renewal switches remain available. Check [Plan Management](/en/account/plans#refund) and contact [support](/en/help/support#payment) for special cases.
+New orders that actually receive gift credits do not support self-service plan changes, upgrades, refunds to account balance or applying a coupon after purchase. This applies before links are generated or claimed. Other orders on the account are unaffected; normal usage, activation and renewal switches remain available. Check [Plan Management](/en/account/refund) and contact [support](/en/help/support#payment) for special cases.
 
 | Order or gift state | Handling |
 | --- | --- |

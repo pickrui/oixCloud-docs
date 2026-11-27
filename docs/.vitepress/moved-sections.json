@@ -1,0 +1,60 @@
+{
+  "account/plans": {
+    "top-up": ["top-up", "fiat-top-up", "top-up-records"],
+    "crypto-payments": ["crypto-top-up", "crypto-payment-feedback"],
+    "coupons": ["coupons", "coupon-use", "bind-coupon", "recurring-coupon", "验证失败或金额不符", "verification-failures-or-unexpected-amounts"],
+    "renewal": ["续费与自动切换", "auto-renew", "traffic-reset", "自动接续没有发生", "renewal-and-automatic-switching", "if-automatic-continuation-did-not-happen"],
+    "plan-changes": ["升级与提前使用下一份套餐", "upgrade", "手动激活与退款至余额", "manual-activation", "upgrade-or-use-your-next-plan-early", "manual-activation-and-refunds-to-balance"],
+    "refund": ["refund"],
+    "benefit-credits": ["benefit-credits", "end-plan"]
+  },
+  "account/nodes": {
+    "home-isp": ["home-isp", "isp-subscription", "isp-routing"],
+    "ixp": ["ixp", "ixp-access", "ixp-connectivity", "ixp-troubleshooting"],
+    "dedicated-ip": ["dedicated-ip", "ip-connection-methods", "ip-benefits", "ip-reputation", "google-ip-location", "购买与续费独享-ip", "ip-auto-renewal", "ip-deposit", "独享-ip-购买后的检查", "ip-troubleshooting", "buying-and-renewing-dedicated-ips", "verify-a-dedicated-ip-purchase"]
+  },
+  "account/traffic": {
+    "low-speed": ["low-speed", "limits"]
+  },
+  "account/security": {
+    "client-sign-in": ["登录、退出与访问令牌", "first-client-login", "device-approval", "signed-in-clients", "google-client-login", "google-troubleshooting", "sign-in-sign-out-and-access-tokens"],
+    "access-tokens": ["token-only", "manual-token", "refresh-client-token", "停用设备或-token", "stop-a-device-or-token"],
+    "delete-account": ["长期未登录的账户会被清理吗", "delete-account", "when-are-inactive-accounts-deleted"]
+  },
+  "account/unlock": {
+    "streaming": ["streaming-regions", "按流媒体服务选择地区", "streaming-routing", "youtube-playback", "select-regions-by-streaming-service"]
+  },
+  "account/relay": {
+    "external-relay": ["创建外部中继", "create-an-external-relay"],
+    "vps-providers": ["vps-providers"]
+  },
+  "oixflow/proxies": {
+    "import-nodes": ["添加自有节点或订阅", "single-node", "third-party-subscription", "profile-file", "add-proxy-link", "import"],
+    "mixed-nodes": ["managed-mix", "route-third-party", "mixed-group"]
+  },
+  "flclash/profiles": {
+    "import-nodes": ["single-node", "standalone-node", "other-subscription"],
+    "mixed-nodes": ["managed-mix", "managed-single-node", "managed-subscription"]
+  },
+  "oixflow/policies": {
+    "proxy-chains": ["创建代理链", "create-chain", "group-hops", "chain-troubleshooting", "underlying-proxy", "proxy-chains"]
+  },
+  "flclash/proxies": {
+    "proxy-chains": ["代理链", "create-chain", "group-hops", "chain-troubleshooting", "proxy-chains"]
+  },
+  "flclash/dns": {
+    "dns-leaks": ["dns-泄漏-先检查托管配置和接管方式", "按平台补充检查", "windows-严格路由", "自定义-dns-时-必须同时确定出站", "怎样判断是否仍有泄漏", "dns-leaks-check-managed-dns-and-traffic-capture-first", "platform-checks", "strict-routing-on-windows", "custom-dns-also-needs-an-outbound-choice", "check-whether-queries-still-leak"]
+  },
+  "other/openclash": {
+    "openclash-network": ["capture-mode", "configure-dns"],
+    "openclash-routing": ["routing", "routing-rules", "create-chain"],
+    "openclash-core": ["kernel-update", "在线更新内核", "手动上传与替换内核", "online-core-update", "manual-core-replacement-via-ssh"]
+  },
+  "other/oixclash": {
+    "oixclash-network": ["capture-mode", "configure-dns", "routing"],
+    "oixclash-rules": ["_7-编辑账号自定义规则", "routing-rules", "_7-edit-account-custom-rules"]
+  },
+  "other/surge": {
+    "surge-routing": ["capture-mode", "configure-dns", "routing", "routing-rules"]
+  }
+}

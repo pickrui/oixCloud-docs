@@ -7,17 +7,18 @@ import { hrefFor, iconFor, isEnglish, sectionsFor } from './sections.js'
 // Wide screens stack sections in two columns, alternating so their lengths stay close
 const { page } = useData()
 const english = computed(() => isEnglish(page.value.relativePath))
+const articleCount = (items = []) => items.reduce((count, item) => count + 1 + articleCount(item.items), 0)
 const sections = computed(() => sectionsFor(page.value.relativePath).map((section, order) => {
   const entries = (section.items ?? []).map(item => ({
     text: item.text,
     href: hrefFor(item.link),
     icon: iconFor(item.link),
-    count: item.items?.length ?? 0
+    count: articleCount(item.items)
   }))
   return { order, title: section.text, href: hrefFor(section.link), icon: iconFor(section.link), entries, marked: entries.some(e => e.icon) }
 }))
 const columns = computed(() => [0, 1].map(column => sections.value.filter(s => s.order % 2 === column)))
-const countLabel = count => english.value ? `${count} guides` : `${count} 篇`
+const countLabel = count => english.value ? `${count} ${count === 1 ? 'guide' : 'guides'}` : `${count} 篇`
 </script>
 
 <template>

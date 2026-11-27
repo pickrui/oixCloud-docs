@@ -8,9 +8,9 @@ For iPhone / iPad, using the maintained client's menus. If an option is missing,
 
 | I want to… | Method |
 | --- | --- |
-| Add a self-hosted or third-party node | [Share link, QR code or manual entry](#single-node) |
-| Add another provider's subscription | [Import a third-party subscription](#third-party-subscription) |
-| Use third-party and managed nodes together | [Select outbounds, route websites or create a mixed group](#managed-mix) |
+| Add a self-hosted or third-party node | [Share link, QR code or manual entry](/en/oixflow/import-nodes#single-node) |
+| Add another provider's subscription | [Import a third-party subscription](/en/oixflow/import-nodes#third-party-subscription) |
+| Use third-party and managed nodes together | [Select outbounds, route websites or create a mixed group](/en/oixflow/mixed-nodes) |
 | Update nodes and subscriptions | [Update each source separately](#update-third-party) |
 
 ## Illustrated steps
@@ -21,83 +21,6 @@ For iPhone / iPad, using the maintained client's menus. If an option is missing,
   </a>
   <figcaption>English interface simulation · Fictional data</figcaption>
 </figure>
-
-## Import
-
-### Add an individual third-party node {#single-node}
-
-<figure class="guide-figure">
-  <a href="/illustrations/oixflow-add-node-en.svg?v=20261127-3" target="_blank" rel="noopener" aria-label="Add your own node from a link">
-    <img src="/illustrations/oixflow-add-node-en.svg?v=20261127-3" alt="Add your own node from a link" width="1120" height="1120" loading="lazy">
-  </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
-</figure>
-
-1. Open **Proxies → Servers** and use the toolbar's add button to open **Add Proxy**.
-2. Choose **Link**, paste one complete node share link such as `ss://`, `vless://`, `trojan://`, `anytls://` or `hy2://`, then choose **Continue**. For a QR code, choose **QR Code → Continue** and scan it.
-3. Without a share link, choose **Manual → Continue**. In the editor, select the protocol and enter its name, address, port and required password, UUID, TLS, SNI or transport parameters. Check them and **Save**.
-4. Verify the new node under **Servers**, then open the node picker on Home (when a long list has more than one group, each starts folded; your own nodes are under **Other Nodes**), select it and connect. Check the actual outbound in [request details](/en/oixflow/diagnostics).
-
-Use a recognizable name and parameters supplied by the node provider. Supported protocols and options depend on the current protocol picker and import validation. A Clash or Surge format does not imply support for every node it contains.
-
-For an HTTP / HTTPS proxy, manual entry is the clearest option. **Link** recognizes an HTTP(S) URL as an individual proxy only when it contains a username, password and explicit port, with no destination path. Other HTTP(S) URLs are downloaded as subscriptions. Do not repeatedly import a proxy server's address as a subscription.
-
-### Add a third-party subscription {#third-party-subscription}
-
-1. Copy the provider’s complete Clash, Surge or sing-box subscription URL. For an ordinary oixCloud subscription, copy the main URL for that format under [User Center → Subscription addresses](https://oixcloud.com/user#subscription-details). For managed nodes, [sign in to oixCloud](/en/oixflow/connect).
-2. Open **Proxies → Servers → Add → Link**, paste the URL and choose **Continue**. A subscription QR code can also be read through **QR Code**.
-3. If the provider requires **Remnawave HWID**, understand that enabling it sends this device's identifier to that subscription over HTTPS, then enable it as needed. Leave it off when ordinary import does not require it.
-4. Wait for download and parsing to finish. Expand the new subscription under **Servers**, check its name and node count, then select a node on Home and verify the connection.
-
-**Link** saves the subscription URL so you can choose **Update** later. It imports supported nodes. Check **Activity → Events** for any skipped entries. To import groups and rules as well, follow the full-profile steps below.
-
-### Import a profile file {#profile-file}
-
-To import just the nodes in a file, open **Proxies → Servers → Add → File**, tap **Continue** and choose the file. This creates standalone nodes. Import the file again when its contents change.
-
-To include groups and rules, use **Rule** mode and open **Proxies → Policies → Routing Rules → + → Import Rule Set**. Choose a compatible Clash YAML or Surge profile.
-
-**A full profile can add rules, groups and related resources that affect existing traffic.** Use the node-subscription workflow above when you only need nodes. For a full-profile import, retain the current sources or a recovery copy first, select the file, review the import summary and unsupported items, then confirm. Check **Servers**, **Policies** and **Routing Rules** separately afterward, and use new requests to verify priority and outbounds.
-
-A local file imports a copy and has no remote URL for updating the whole file. Remote proxy or rule providers referenced inside it retain their own sources. Successful import does not establish that DNS, modules or every feature from the original client was migrated.
-
-### One-tap import links {#add-proxy-link}
-
-Supporting versions can open `oixflow://add-proxy?link=…` or `anywhere://add-proxy?link=…` links. From 2.1.6 (520), the Add Proxy page also accepts the complete wrapper link by paste, scan or text entry. The ellipsis illustrates the format and is not a usable import link.
-
-Review the node link or subscription URL in the import form, select **Continue**, then check the new list entry. These links may contain node credentials or subscription secrets; do not send them to public conversion services. If the entry is missing or the link is unrecognized, check your installed version or use the provider's original node/subscription link.
-
-## Use third-party and oixCloud managed nodes together {#managed-mix}
-
-Standalone nodes, third-party subscriptions and the oixCloud managed subscription can coexist in the proxy list. You do not need to insert another provider's nodes into the managed subscription. Add the third-party source as described above, keep the managed subscription, and open the group named after the subscription in Home's node picker and select the outbound you want.
-
-In Rule mode, the Home selection handles traffic targeting **Proxy**. Rules explicitly targeting a node, group, Direct or Reject keep their own destinations. Adding a third-party node to the list does not automatically send every website through it.
-
-If you use the built-in **Best Available** group, check **Include All Proxies** and its members under **Proxies → Policies → Best Available**. With include-all enabled, third-party nodes can become candidates too. To keep everyday traffic on managed nodes, turn off include-all and select only the managed members you want before adding website exceptions below.
-
-### Use a third-party outbound for selected websites {#route-third-party}
-
-1. On Home, select your usual managed node or a group containing only managed members, and keep **Rule** mode.
-2. Open **Proxies → Policies → Routing Rules → + → Add Rule**, choose **Domain Suffix** and enter the actual destination, such as `example.com`.
-3. Target the imported third-party node directly, or choose a group containing third-party nodes, and save.
-4. Make a new request to the destination. In **Activity → Requests**, confirm the matched rule and third-party outbound. Check that a destination without an exception still follows the original routing.
-
-Enter a hostname rather than a complete page URL. A simple website exception does not need a proxy chain. Other traffic follows the remaining rules and Final Route; source priority and [network profiles](/en/oixflow/networks) can also affect the result. See [routing rules](/en/oixflow/routing) for diagnosis.
-
-### Combine both sources in a policy group {#mixed-group}
-
-To choose automatically between managed and third-party nodes, create your own URL-test group:
-
-1. Open **Proxies → Policies → Add Policy Group**, enter a distinct name such as `Mixed exit`, and select **URL Test** as its type.
-2. Choose **Add Member**, group by **Subscriptions**, expand oixCloud and the third-party subscription, and select the nodes you want from each. Standalone nodes are available in their own list or folder.
-3. Choose **Done**, check the members and a reachable health-check URL, then **Save**.
-4. Select `Mixed exit` on Home, or target it with a website rule, and use new requests to verify the selected member. To use a fixed outbound, you can instead choose the concrete node directly on Home or in a rule.
-
-**All** in the member picker selects currently available nodes. **It does not mean future nodes added to that subscription automatically join this personal group.** After subscription updates, check added, removed or unusable members. Existing imported groups with dynamic provider sources follow those sources; that does not establish equivalent behavior for manually selected members.
-
-Putting nodes in one group does not forward traffic through each of them in turn. Configure a [proxy chain or underlying proxy](/en/oixflow/policies#underlying-proxy) only when you need multiple hops.
-
-Hollow nodes come from your managed account. The app does not import them from third-party subscriptions or share links, or offer local editing or export for them. To change which managed nodes you receive, adjust the node filter on the account page and refresh.
 
 ## Organize standalone nodes in folders {#folders}
 

@@ -5,14 +5,28 @@
       "oixFlow 第三方订阅",
       "oixFlow third-party nodes",
       "oixFlow third-party subscription",
-      "oixFlow 更新第三方",
-      "oixFlow mixed group",
-      "oixFlow 混合策略组",
-      "oixFlow update subscription",
       "oixFlow Import Rule Set"
     ],
     "targets": [
+      "/oixflow/import-nodes.html"
+    ]
+  },
+  {
+    "terms": [
+      "oixFlow 更新第三方",
+      "oixFlow update subscription"
+    ],
+    "targets": [
       "/oixflow/proxies.html"
+    ]
+  },
+  {
+    "terms": [
+      "oixFlow mixed group",
+      "oixFlow 混合策略组"
+    ],
+    "targets": [
+      "/oixflow/mixed-nodes.html"
     ]
   },
   {
@@ -21,11 +35,25 @@
       "FlClash 单个节点",
       "FlClash third-party nodes",
       "FlClash share link",
-      "FlClash 其他订阅",
+      "FlClash 其他订阅"
+    ],
+    "targets": [
+      "/flclash/import-nodes.html"
+    ]
+  },
+  {
+    "terms": [
       "FlClash 托管节点一起使用",
-      "FlClash managed subscription",
       "FlClash 代理提供者",
       "FlClash proxy provider"
+    ],
+    "targets": [
+      "/flclash/mixed-nodes.html"
+    ]
+  },
+  {
+    "terms": [
+      "FlClash managed subscription"
     ],
     "targets": [
       "/flclash/profiles.html"
@@ -51,8 +79,8 @@
       "ProxyChain"
     ],
     "targets": [
-      "/flclash/proxies.html",
-      "/oixflow/policies.html"
+      "/flclash/proxy-chains.html",
+      "/oixflow/proxy-chains.html"
     ]
   },
   {
@@ -82,7 +110,7 @@
       "DNS leak"
     ],
     "targets": [
-      "/flclash/dns.html",
+      "/flclash/dns-leaks.html",
       "/help/troubleshooting.html"
     ]
   },
@@ -193,7 +221,7 @@
       "Quarterly upgrade"
     ],
     "targets": [
-      "/account/plans.html"
+      "/account/plan-changes.html"
     ]
   },
   {
@@ -299,7 +327,7 @@
       "oixClash 自定义规则"
     ],
     "targets": [
-      "/other/oixclash.html"
+      "/other/oixclash-rules.html"
     ]
   },
   {
@@ -315,14 +343,18 @@
   {
     "terms": [
       "Passkey",
-      "TOTP",
+      "TOTP"
+    ],
+    "targets": [
+      "/account/security.html"
+    ]
+  },
+  {
+    "terms": [
       "AccessToken"
     ],
     "targets": [
-      "/account/security.html",
-      "/start/concepts.html",
-      "/flclash/connect.html",
-      "/oixflow/connect.html"
+      "/account/access-tokens.html"
     ]
   },
   {
@@ -357,13 +389,20 @@
   {
     "terms": [
       "OpenClash smart",
-      "OpenClash 登录",
+      "OpenClash 登录"
+    ],
+    "targets": [
+      "/other/openclash.html"
+    ]
+  },
+  {
+    "terms": [
       "OpenClash 内核",
       "OpenClash oix",
       "OpenClash core"
     ],
     "targets": [
-      "/other/openclash.html"
+      "/other/openclash-core.html"
     ]
   },
   {
@@ -372,7 +411,7 @@
       "low-speed traffic"
     ],
     "targets": [
-      "/account/traffic.html"
+      "/account/low-speed.html"
     ]
   },
   {
@@ -396,7 +435,7 @@
       "dedicated IP benefits"
     ],
     "targets": [
-      "/account/nodes.html"
+      "/account/dedicated-ip.html"
     ]
   },
   {
@@ -409,7 +448,7 @@
       "abuse fee"
     ],
     "targets": [
-      "/account/nodes.html"
+      "/account/dedicated-ip.html"
     ]
   },
   {
@@ -439,7 +478,14 @@
   {
     "terms": [
       "流媒体",
-      "streaming",
+      "streaming"
+    ],
+    "targets": [
+      "/account/streaming.html"
+    ]
+  },
+  {
+    "terms": [
       "WARP",
       "STUN",
       "IPv4 Only",
@@ -562,12 +608,19 @@
   {
     "terms": [
       "Expected HTTP Status",
-      "预期 HTTP 状态",
+      "预期 HTTP 状态"
+    ],
+    "targets": [
+      "/oixflow/policies.html"
+    ]
+  },
+  {
+    "terms": [
       "Underlying Proxy",
       "底层代理"
     ],
     "targets": [
-      "/oixflow/policies.html"
+      "/oixflow/proxy-chains.html"
     ]
   },
   {
@@ -618,12 +671,19 @@
       "Common ports only",
       "仅代理常用端口",
       "Memory optimization",
-      "内存优化",
+      "内存优化"
+    ],
+    "targets": [
+      "/other/oixclash.html"
+    ]
+  },
+  {
+    "terms": [
       "Save to panel and update",
       "保存到面板并更新"
     ],
     "targets": [
-      "/other/oixclash.html"
+      "/other/oixclash-rules.html"
     ]
   },
   {
@@ -680,7 +740,7 @@
       "ISP WARP"
     ],
     "targets": [
-      "/account/nodes.html",
+      "/account/home-isp.html",
       "/account/subscriptions.html",
       "/account/unlock.html"
     ]
@@ -702,7 +762,14 @@
     "terms": [
       "IXP",
       "云网互联",
-      "Cloud Interconnect",
+      "Cloud Interconnect"
+    ],
+    "targets": [
+      "/account/ixp.html"
+    ]
+  },
+  {
+    "terms": [
       "广港专线",
       "沪日专线"
     ],
@@ -719,13 +786,20 @@
       "IXP ingress address"
     ],
     "targets": [
-      "/account/nodes.html#ixp-connectivity"
+      "/account/ixp.html#ixp-connectivity"
     ]
   },
   {
     "terms": [
       "外部中继 协议保持",
-      "external relay protocol conversion",
+      "external relay protocol conversion"
+    ],
+    "targets": [
+      "/account/external-relay.html"
+    ]
+  },
+  {
+    "terms": [
       "中继 批量删除",
       "relay domain matching",
       "中继 优先级"
@@ -742,25 +816,39 @@
       "streaming settings differ"
     ],
     "targets": [
-      "/account/unlock.html"
+      "/account/streaming.html"
     ]
   },
   {
     "terms": [
       "法币充值 刷新",
-      "fiat top-up gateway",
+      "fiat top-up gateway"
+    ],
+    "targets": [
+      "/account/top-up.html"
+    ]
+  },
+  {
+    "terms": [
       "虚拟货币 手续费",
       "cryptocurrency transfer amount",
-      "套餐 自动续费",
-      "plan renewal price",
-      "自动重置流量",
-      "automatic traffic reset",
       "虚拟货币 未到账反馈",
       "Crypto Order Records",
       "Report missing payment"
     ],
     "targets": [
-      "/account/plans.html"
+      "/account/crypto-payments.html"
+    ]
+  },
+  {
+    "terms": [
+      "套餐 自动续费",
+      "plan renewal price",
+      "自动重置流量",
+      "automatic traffic reset"
+    ],
+    "targets": [
+      "/account/renewal.html"
     ]
   },
   {
@@ -768,12 +856,19 @@
       "套餐 升级 剩余流量",
       "plan upgrade used data",
       "手动激活 切换损耗",
-      "manual activation switching loss",
+      "manual activation switching loss"
+    ],
+    "targets": [
+      "/account/plan-changes.html"
+    ]
+  },
+  {
+    "terms": [
       "退款至余额",
       "refund unused plan"
     ],
     "targets": [
-      "/account/plans.html"
+      "/account/refund.html"
     ]
   },
   {
@@ -786,7 +881,7 @@
       "apply coupon after purchase"
     ],
     "targets": [
-      "/account/plans.html"
+      "/account/coupons.html"
     ]
   },
   {
@@ -813,12 +908,19 @@
       "设备下线",
       "Sign out device",
       "共用登录凭据",
-      "shared sign-in",
+      "shared sign-in"
+    ],
+    "targets": [
+      "/account/client-sign-in.html"
+    ]
+  },
+  {
+    "terms": [
       "重新生成 Access Token",
       "Regenerate Access Token"
     ],
     "targets": [
-      "/account/security.html"
+      "/account/access-tokens.html"
     ]
   },
   {
@@ -827,7 +929,7 @@
       "FlClash Send from phone"
     ],
     "targets": [
-      "/flclash/profiles.html"
+      "/flclash/import-nodes.html"
     ]
   },
   {
@@ -835,8 +937,8 @@
       "MetaCubeXD"
     ],
     "targets": [
-      "/other/openclash.html",
-      "/other/oixclash.html"
+      "/other/openclash-routing.html",
+      "/other/oixclash-network.html"
     ]
   },
   {
@@ -844,7 +946,7 @@
       "OpenClash Dialer-proxy"
     ],
     "targets": [
-      "/other/openclash.html"
+      "/other/openclash-routing.html"
     ]
   },
   {
@@ -852,7 +954,7 @@
       "Helper custom.conf"
     ],
     "targets": [
-      "/other/surge.html",
+      "/other/surge-routing.html",
       "/other/helper-linux.html"
     ]
   },
@@ -887,7 +989,7 @@
       "OpenClash TUN"
     ],
     "targets": [
-      "/other/openclash.html"
+      "/other/openclash-network.html"
     ]
   },
   {
@@ -895,7 +997,7 @@
       "Surge DNS"
     ],
     "targets": [
-      "/other/surge.html"
+      "/other/surge-routing.html"
     ]
   }
 ]

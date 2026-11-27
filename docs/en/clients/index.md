@@ -34,18 +34,18 @@ Checked against public releases on 2026-10-30. Download entries follow current r
 | I want to… | Guide |
 | --- | --- |
 | Get started | [Your first connection](/en/start/quick-start) |
-| Import my own subscription URL | [oixFlow](/en/oixflow/proxies#third-party-subscription) · [FlClash for oixCloud](/en/flclash/profiles#other-subscription) · [OpenClash](/en/other/openclash#import-url) |
+| Import my own subscription URL | [oixFlow](/en/oixflow/import-nodes#third-party-subscription) · [FlClash for oixCloud](/en/flclash/import-nodes#other-subscription) · [OpenClash](/en/other/openclash#import-url) |
 | Filter or refresh managed oixCloud nodes | [Find the controls for each client](/en/account/subscriptions#apply-filter) |
 | Import a subscription into another compatible client | [Subscriptions and filters](/en/account/subscriptions) |
-| Switch modes or enable a system proxy, VPN or TUN | [iPhone / iPad](/en/oixflow/connect#capture-mode) · [Apple TV](/en/oixflow/apple-tv#capture-dns) · [FlClash for oixCloud](/en/flclash/capture#mode) · [OpenClash](/en/other/openclash#capture-mode) · [oixClash](/en/other/oixclash#capture-mode) · [Surge Mac](/en/other/surge#capture-mode) |
-| Change DNS and verify the resolver | [iPhone / iPad](/en/oixflow/dns#configure-dns) · [Apple TV](/en/oixflow/apple-tv#capture-dns) · [FlClash for oixCloud](/en/flclash/dns#configure-dns) · [OpenClash](/en/other/openclash#configure-dns) · [oixClash](/en/other/oixclash#configure-dns) · [Surge Mac](/en/other/surge#configure-dns) |
-| Choose a node or switch groups | [iPhone / iPad](/en/oixflow/policies#choose-outbound) · [Apple TV](/en/oixflow/apple-tv#routing) · [FlClash for oixCloud](/en/flclash/proxies#choose-outbound) · [OpenClash](/en/other/openclash#routing) · [oixClash](/en/other/oixclash#routing) · [Helper with Surge](/en/other/surge#routing) |
-| Route a website | [oixFlow](/en/oixflow/routing#website-rule) · [FlClash for oixCloud](/en/flclash/rules#website-rule) · [OpenClash router rules](/en/other/openclash#routing-rules) · [oixClash account rules](/en/other/oixclash#routing-rules) · [Surge profile](/en/other/surge#routing-rules) |
-| Create a proxy chain | [oixFlow](/en/oixflow/policies#create-chain) · [FlClash for oixCloud](/en/flclash/proxies#create-chain) · [OpenClash](/en/other/openclash#create-chain) · [Internal relays for managed nodes](/en/account/relay#internal-relay) |
+| Switch modes or enable a system proxy, VPN or TUN | [iPhone / iPad](/en/oixflow/connect#capture-mode) · [Apple TV](/en/oixflow/apple-tv#capture-dns) · [FlClash for oixCloud](/en/flclash/capture#mode) · [OpenClash](/en/other/openclash-network#capture-mode) · [oixClash](/en/other/oixclash-network#capture-mode) · [Surge Mac](/en/other/surge-routing#capture-mode) |
+| Change DNS and verify the resolver | [iPhone / iPad](/en/oixflow/dns#configure-dns) · [Apple TV](/en/oixflow/apple-tv#capture-dns) · [FlClash for oixCloud](/en/flclash/dns#configure-dns) · [OpenClash](/en/other/openclash-network#configure-dns) · [oixClash](/en/other/oixclash-network#configure-dns) · [Surge Mac](/en/other/surge-routing#configure-dns) |
+| Choose a node or switch groups | [iPhone / iPad](/en/oixflow/policies#choose-outbound) · [Apple TV](/en/oixflow/apple-tv#routing) · [FlClash for oixCloud](/en/flclash/proxies#choose-outbound) · [OpenClash](/en/other/openclash-routing#routing) · [oixClash](/en/other/oixclash-network#routing) · [Helper with Surge](/en/other/surge-routing#routing) |
+| Route a website | [oixFlow](/en/oixflow/routing#website-rule) · [FlClash for oixCloud](/en/flclash/rules#website-rule) · [OpenClash router rules](/en/other/openclash-routing#routing-rules) · [oixClash account rules](/en/other/oixclash-rules#routing-rules) · [Surge profile](/en/other/surge-routing#routing-rules) |
+| Create a proxy chain | [oixFlow](/en/oixflow/proxy-chains#create-chain) · [FlClash for oixCloud](/en/flclash/proxy-chains#create-chain) · [OpenClash](/en/other/openclash-routing#create-chain) · [Internal relays for managed nodes](/en/account/relay#internal-relay) |
 | Understand nodes, groups and traffic capture | [Core concepts](/en/start/concepts) |
 | Fix browsing after connecting | [Connection and speed troubleshooting](/en/help/troubleshooting) |
 | Repair missing DLLs on Windows | [FlClash for oixCloud: missing DLL repair](/en/flclash/windows-dll) |
-| Replace or update the OpenClash oix core | [Replace or update the oix core](/en/other/openclash#kernel-update) |
+| Replace or update the OpenClash oix core | [Replace or update the oix core](/en/other/openclash-core) |
 | Use Home ISP residential exits via relays or chains | [Home ISP user guide](/en/account/home-isp) |
 | Find Helper ports and LAN settings | [Helper local ports and LAN access](/en/other/helper-mapping) |
 | Run Helper on Linux | [Helper on Linux and diagnostics](/en/other/helper-linux) |

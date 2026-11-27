@@ -31,11 +31,29 @@
             },
             {
               "text": "节点与订阅管理",
-              "link": "/oixflow/proxies"
+              "link": "/oixflow/proxies",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "导入第三方节点与订阅",
+                  "link": "/oixflow/import-nodes"
+                },
+                {
+                  "text": "混用托管节点与第三方节点",
+                  "link": "/oixflow/mixed-nodes"
+                }
+              ]
             },
             {
               "text": "策略组、自动选择与代理链",
-              "link": "/oixflow/policies"
+              "link": "/oixflow/policies",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "创建代理链与设置底层代理",
+                  "link": "/oixflow/proxy-chains"
+                }
+              ]
             },
             {
               "text": "分流规则与匹配顺序",
@@ -94,11 +112,29 @@
             },
             {
               "text": "配置、订阅与更新",
-              "link": "/flclash/profiles"
+              "link": "/flclash/profiles",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "导入第三方节点、订阅与配置",
+                  "link": "/flclash/import-nodes"
+                },
+                {
+                  "text": "混用托管节点与第三方提供者",
+                  "link": "/flclash/mixed-nodes"
+                }
+              ]
             },
             {
               "text": "节点、策略组与代理链",
-              "link": "/flclash/proxies"
+              "link": "/flclash/proxies",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "创建与验证代理链",
+                  "link": "/flclash/proxy-chains"
+                }
+              ]
             },
             {
               "text": "系统代理与虚拟网卡",
@@ -110,7 +146,14 @@
             },
             {
               "text": "DNS 覆写与网络设置",
-              "link": "/flclash/dns"
+              "link": "/flclash/dns",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "检查与修复 DNS 泄漏",
+                  "link": "/flclash/dns-leaks"
+                }
+              ]
             },
             {
               "text": "Tailscale、子网与出口节点",
@@ -140,15 +183,48 @@
         },
         {
           "text": "OpenClash 安装与配置指南",
-          "link": "/other/openclash"
+          "link": "/other/openclash",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "OpenClash 流量接管与 DNS",
+              "link": "/other/openclash-network"
+            },
+            {
+              "text": "OpenClash 策略组、规则与代理链",
+              "link": "/other/openclash-routing"
+            },
+            {
+              "text": "更新 OpenClash 的 oix 内核",
+              "link": "/other/openclash-core"
+            }
+          ]
         },
         {
           "text": "oixClash 安装与配置指南",
-          "link": "/other/oixclash"
+          "link": "/other/oixclash",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "oixClash 流量接管、DNS 与节点选择",
+              "link": "/other/oixclash-network"
+            },
+            {
+              "text": "oixClash 账号自定义规则",
+              "link": "/other/oixclash-rules"
+            }
+          ]
         },
         {
           "text": "oixCloud Helper 与 Surge",
-          "link": "/other/surge"
+          "link": "/other/surge",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Surge Mac 流量接管、DNS 与分流",
+              "link": "/other/surge-routing"
+            }
+          ]
         },
         {
           "text": "Helper 本地端口与局域网",
@@ -167,7 +243,38 @@
       "items": [
         {
           "text": "购买、续费与切换",
-          "link": "/account/plans"
+          "link": "/account/plans",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "账户充值与充值码",
+              "link": "/account/top-up"
+            },
+            {
+              "text": "虚拟货币充值与未到账反馈",
+              "link": "/account/crypto-payments"
+            },
+            {
+              "text": "购买与续费折扣代码",
+              "link": "/account/coupons"
+            },
+            {
+              "text": "自动续费、套餐接续与流量重置",
+              "link": "/account/renewal"
+            },
+            {
+              "text": "升级、更换与手动激活套餐",
+              "link": "/account/plan-changes"
+            },
+            {
+              "text": "退款至账户余额",
+              "link": "/account/refund"
+            },
+            {
+              "text": "权益额度与提前结束套餐",
+              "link": "/account/benefit-credits"
+            }
+          ]
         },
         {
           "text": "奖励链接与购买赠礼",
@@ -183,11 +290,29 @@
         },
         {
           "text": "流量与计费",
-          "link": "/account/traffic"
+          "link": "/account/traffic",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "低速流量与限速排查",
+              "link": "/account/low-speed"
+            }
+          ]
         },
         {
           "text": "节点与连接方式",
-          "link": "/account/nodes"
+          "link": "/account/nodes",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "IXP 云网互联接入",
+              "link": "/account/ixp"
+            },
+            {
+              "text": "独享 IP 使用、购买与续费",
+              "link": "/account/dedicated-ip"
+            }
+          ]
         },
         {
           "text": "独享 IP 防送中指南",
@@ -203,7 +328,18 @@
         },
         {
           "text": "中继与自建落地",
-          "link": "/account/relay"
+          "link": "/account/relay",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "创建外部中继",
+              "link": "/account/external-relay"
+            },
+            {
+              "text": "VPS 服务商",
+              "link": "/account/vps-providers"
+            }
+          ]
         },
         {
           "text": "HTTP/3 与智能回退",
@@ -211,11 +347,33 @@
         },
         {
           "text": "IPv4 Only、WARP 与解锁",
-          "link": "/account/unlock"
+          "link": "/account/unlock",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "流媒体地区与 YouTube 后台播放",
+              "link": "/account/streaming"
+            }
+          ]
         },
         {
           "text": "账户与令牌安全",
-          "link": "/account/security"
+          "link": "/account/security",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "客户端登录与设备下线",
+              "link": "/account/client-sign-in"
+            },
+            {
+              "text": "创建、更新与停用 Access Token",
+              "link": "/account/access-tokens"
+            },
+            {
+              "text": "账户注销与长期未登录清理",
+              "link": "/account/delete-account"
+            }
+          ]
         },
         {
           "text": "公平使用",
@@ -275,11 +433,29 @@
             },
             {
               "text": "Nodes and subscriptions",
-              "link": "/en/oixflow/proxies"
+              "link": "/en/oixflow/proxies",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Import third-party nodes and subscriptions",
+                  "link": "/en/oixflow/import-nodes"
+                },
+                {
+                  "text": "Use managed and third-party nodes together",
+                  "link": "/en/oixflow/mixed-nodes"
+                }
+              ]
             },
             {
               "text": "Policy groups and proxy chains",
-              "link": "/en/oixflow/policies"
+              "link": "/en/oixflow/policies",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Create a proxy chain or set an underlying proxy",
+                  "link": "/en/oixflow/proxy-chains"
+                }
+              ]
             },
             {
               "text": "Routing rules and priority",
@@ -338,11 +514,29 @@
             },
             {
               "text": "Profiles, subscriptions and updates",
-              "link": "/en/flclash/profiles"
+              "link": "/en/flclash/profiles",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Import third-party nodes, subscriptions and profiles",
+                  "link": "/en/flclash/import-nodes"
+                },
+                {
+                  "text": "Use managed nodes and third-party providers together",
+                  "link": "/en/flclash/mixed-nodes"
+                }
+              ]
             },
             {
               "text": "Nodes, groups and chains",
-              "link": "/en/flclash/proxies"
+              "link": "/en/flclash/proxies",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Create and verify a proxy chain",
+                  "link": "/en/flclash/proxy-chains"
+                }
+              ]
             },
             {
               "text": "System Proxy and TUN",
@@ -354,7 +548,14 @@
             },
             {
               "text": "DNS overrides and network settings",
-              "link": "/en/flclash/dns"
+              "link": "/en/flclash/dns",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Diagnose and fix DNS leaks",
+                  "link": "/en/flclash/dns-leaks"
+                }
+              ]
             },
             {
               "text": "Tailscale, subnets and exit nodes",
@@ -384,15 +585,48 @@
         },
         {
           "text": "OpenClash installation and setup",
-          "link": "/en/other/openclash"
+          "link": "/en/other/openclash",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "OpenClash traffic capture and DNS",
+              "link": "/en/other/openclash-network"
+            },
+            {
+              "text": "OpenClash groups, rules and proxy chains",
+              "link": "/en/other/openclash-routing"
+            },
+            {
+              "text": "Update the oix core in OpenClash",
+              "link": "/en/other/openclash-core"
+            }
+          ]
         },
         {
           "text": "oixClash installation and setup",
-          "link": "/en/other/oixclash"
+          "link": "/en/other/oixclash",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "oixClash traffic capture, DNS and node selection",
+              "link": "/en/other/oixclash-network"
+            },
+            {
+              "text": "Edit account rules in oixClash",
+              "link": "/en/other/oixclash-rules"
+            }
+          ]
         },
         {
           "text": "oixCloud Helper and Surge",
-          "link": "/en/other/surge"
+          "link": "/en/other/surge",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Surge Mac traffic capture, DNS and routing",
+              "link": "/en/other/surge-routing"
+            }
+          ]
         },
         {
           "text": "Helper local ports and LAN",
@@ -411,7 +645,38 @@
       "items": [
         {
           "text": "Plans, renewals and switching",
-          "link": "/en/account/plans"
+          "link": "/en/account/plans",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Add funds and redeem top-up codes",
+              "link": "/en/account/top-up"
+            },
+            {
+              "text": "Crypto top-ups and missing payments",
+              "link": "/en/account/crypto-payments"
+            },
+            {
+              "text": "Coupon codes for purchases and renewals",
+              "link": "/en/account/coupons"
+            },
+            {
+              "text": "Automatic renewal, plan queues and traffic resets",
+              "link": "/en/account/renewal"
+            },
+            {
+              "text": "Upgrade, change or manually activate a plan",
+              "link": "/en/account/plan-changes"
+            },
+            {
+              "text": "Refund a plan to your balance",
+              "link": "/en/account/refund"
+            },
+            {
+              "text": "Benefit credits and ending a plan early",
+              "link": "/en/account/benefit-credits"
+            }
+          ]
         },
         {
           "text": "Reward links and purchase gifts",
@@ -427,11 +692,29 @@
         },
         {
           "text": "Traffic and billing",
-          "link": "/en/account/traffic"
+          "link": "/en/account/traffic",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Low-speed traffic and speed limits",
+              "link": "/en/account/low-speed"
+            }
+          ]
         },
         {
           "text": "Nodes and connection options",
-          "link": "/en/account/nodes"
+          "link": "/en/account/nodes",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Connect to IXP Cloud Interconnect nodes",
+              "link": "/en/account/ixp"
+            },
+            {
+              "text": "Use, buy and renew a dedicated IP",
+              "link": "/en/account/dedicated-ip"
+            }
+          ]
         },
         {
           "text": "Google IP location guide",
@@ -447,7 +730,18 @@
         },
         {
           "text": "Relays and your own destinations",
-          "link": "/en/account/relay"
+          "link": "/en/account/relay",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Set up an external relay",
+              "link": "/en/account/external-relay"
+            },
+            {
+              "text": "VPS providers",
+              "link": "/en/account/vps-providers"
+            }
+          ]
         },
         {
           "text": "HTTP/3 and smart fallback",
@@ -455,11 +749,33 @@
         },
         {
           "text": "IPv4 Only, WARP & streaming",
-          "link": "/en/account/unlock"
+          "link": "/en/account/unlock",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Streaming regions and YouTube background playback",
+              "link": "/en/account/streaming"
+            }
+          ]
         },
         {
           "text": "Accounts and access tokens",
-          "link": "/en/account/security"
+          "link": "/en/account/security",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Sign in to a client and sign out devices",
+              "link": "/en/account/client-sign-in"
+            },
+            {
+              "text": "Create, rotate and revoke Access Tokens",
+              "link": "/en/account/access-tokens"
+            },
+            {
+              "text": "Account deletion and inactivity",
+              "link": "/en/account/delete-account"
+            }
+          ]
         },
         {
           "text": "Fair use",

@@ -12,10 +12,11 @@ Profiles, traffic capture and network tools for Windows, macOS, Android and Linu
 | I want to… | Guide |
 | --- | --- |
 | Sign in and connect | [Sign in and connect](/en/flclash/connect) |
-| Add an individual third-party node | [Custom nodes and share links](/en/flclash/profiles#single-node) |
-| Use another subscription with oixCloud managed nodes | [Combine nodes and proxy providers](/en/flclash/profiles#managed-mix) |
+| Add an individual third-party node | [Custom nodes and share links](/en/flclash/import-nodes#single-node) |
+| Use another subscription with oixCloud managed nodes | [Combine nodes and proxy providers](/en/flclash/mixed-nodes) |
 | Import profiles, filter nodes and update subscriptions | [Profiles, subscriptions and updates](/en/flclash/profiles) |
-| Select a node, group or proxy chain | [Nodes, groups and chains](/en/flclash/proxies) |
+| Select a node or test group latency | [Select nodes and policy groups](/en/flclash/proxies) |
+| Set an entry and an exit and verify the chain | [Create a proxy chain](/en/flclash/proxy-chains) |
 | Capture app traffic | [System Proxy and TUN](/en/flclash/capture) |
 
 ## Rules and networking {#rules-networking}
@@ -24,6 +25,7 @@ Profiles, traffic capture and network tools for Windows, macOS, Android and Linu
 | --- | --- |
 | Keep personal rules and groups | [Overrides, groups and added rules](/en/flclash/rules) |
 | Adjust DNS and capture settings | [DNS overrides and network settings](/en/flclash/dns) |
+| Investigate a local resolver in a DNS test | [Diagnose DNS leaks](/en/flclash/dns-leaks) |
 | Reach a Tailnet, remote subnet or exit node | [Tailscale, subnets and exit nodes](/en/flclash/tailscale) |
 | Share a LAN proxy or exclude a network | [LAN proxy and network exclusions](/en/flclash/networks) |
 

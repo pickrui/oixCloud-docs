@@ -48,11 +48,11 @@ description: Merlin 路由器安装 oixClash、登录账户、开启代理并验
 
 在路由器的「oixCloud 账号」选择一种登录方式：
 
-- **登录令牌**：粘贴网站[新增 Access Token](/account/security#manual-token)时显示的完整令牌，再点「登录」
+- **登录令牌**：粘贴网站[新增 Access Token](/account/access-tokens#manual-token)时显示的完整令牌，再点「登录」
 - **邮箱和密码**：填 oixCloud 的邮箱和密码，再点「登录」。密码只用于本次登录
 - **Google 登录**：通过路由器的局域网地址或 `router.asus.com` 打开插件页面，点「Google 登录」，允许弹窗，选择与已有 oixCloud 账号相同的邮箱。保持原页面打开，等它显示账号信息
 
-登录后显示账号、套餐、到期时间与流量。登录成功后即可获取托管节点，不需要批准设备；首次登录时账户会收到新设备登录提醒，见 [新设备登录与提醒](/account/security#device-approval)
+登录后显示账号、套餐、到期时间与流量。登录成功后即可获取托管节点，不需要批准设备；首次登录时账户会收到新设备登录提醒，见 [新设备登录与提醒](/account/client-sign-in#device-approval)
 
 ## 4. 开启代理
 
@@ -97,40 +97,6 @@ oixClash 0.0.3 起提供「内存优化」。首次安装时，检测到总内�
 
 路由器自身和访客网络的流量不经过 oixClash。设备通过 IPv6 上网时会绕过代理，运行状态会提示。需要避免该绕过时，在路由器的「IPv6」页面把连接类型设为停用，并用局域网设备验证；网站的 [IPv4 Only](/account/unlock#ipv4-only) 控制远程节点出口，不能解决路由器的 IPv6 绕过
 
-### 切换模式并验证设备接管 {#capture-mode}
-
-在「运行」勾选「开启」并点「保存并应用」，等服务恢复。从「运行 → 节点切换 → 打开控制面板」进入 MetaCubeXD，在「配置 → 核心配置 → 运行模式」选「规则」「全局」或「直连」。要按网站分流就选「规则」，切换后从接管范围内的设备重新访问网站，在「连接」按设备 IP 或域名核对实际出口
-
-这个插件用路由器防火墙接管局域网设备，生成的配置关闭 TUN。日常使用不需要在设备上开启系统代理或在控制面板另开 TUN。若请求没有进入控制面板，检查设备策略、网关、常用端口和大陆 IP 绕过设置
-
-### 在这台路由器设置 DNS {#configure-dns}
-
-<figure class="guide-figure">
-  <a href="/illustrations/oixclash-dns-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Merlin 路由器的自定义直连 DNS、代理 DNS 与保存按钮">
-    <img src="/illustrations/oixclash-dns-zh.svg?v=20261127-5" alt="Merlin 路由器的自定义直连 DNS、代理 DNS 与保存按钮" width="1120" height="975" loading="lazy">
-  </a>
-  <figcaption>中文模拟界面 · 虚构数据</figcaption>
-</figure>
-
-1. 打开 oixClash 的「DNS 设置 → 展开 DNS 设置」。要沿用订阅的解析器，保持「使用自定义 DNS」未勾选；要在本机覆盖，勾选这一项
-2. 「直连 DNS」可填 IPv4 地址（可带端口）或 HTTPS 地址；「代理 DNS」填 HTTPS 地址，由 `Proxy` 组发送，无需手加 `#Proxy`。每栏可填 1 至 4 个地址，用英文逗号分隔
-3. 点「保存并应用」，等状态恢复后点「自检」。选择接管范围内的设备，以路由器为 DNS 解析一个新域名。想验证具体上游时，使用能查看查询记录的解析器核对该域名。「面板下发的 DNS」一直显示订阅原值
-4. 要恢复面板设置，取消勾选「使用自定义 DNS」再保存。原来输入的地址会保留，方便以后再用
-
-
-### 选择节点、策略组或中继入口 {#routing}
-
-<figure class="guide-figure">
-  <a href="/illustrations/metacubexd-groups-zh.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="在 oixClash 打开的 MetaCubeXD 面板里选择节点">
-    <img src="/illustrations/metacubexd-groups-zh.svg?v=20261127-5" alt="在 oixClash 打开的 MetaCubeXD 面板里选择节点" width="1120" height="975" loading="lazy">
-  </a>
-  <figcaption>操作示意 · 虚构数据</figcaption>
-</figure>
-
-1. 在软件中心打开 oixClash，找到「运行 → 节点切换」，点「打开控制面板」。在 MetaCubeXD 的「代理」中展开目标网站使用的手动选择组，点需要的节点。选中子组时，再打开子组选择成员
-2. 想让一个网站走指定组，按下面的[账号自定义规则](#routing-rules)把域名指向该组。用局域网设备重新访问，在控制面板的「连接」查看命中规则和出口
-3. 插件的节点切换页只负责选用已有出口。要让托管流量经过多跳，有相应权限的账户可在网站配置[内部中继](/account/relay#内部中继)，然后在路由器的手动选择组选中这条路径的**入口节点**
-
 ## 6. 节点、筛选与更新
 
 <figure class="guide-figure">
@@ -147,40 +113,10 @@ oixClash 0.0.3 起提供「内存优化」。首次安装时，检测到总内�
 
 若插件内更新提示无法校验安装包，或旧版自检提示缺少 `sha256sum`，请从本页下载对应平台的安装包，通过「软件中心 → 离线安装」更新。安装包校验不通过时不要继续安装，重新下载并核对 SHA256
 
-<span id="routing-rules"></span>
+## 连接后的设置
 
-## 7. 编辑账号自定义规则
-
-oixClash 0.0.2 起可在插件的「自定义规则」中编辑网站上的同一份 [账号规则](https://oixcloud.com/user/rule)，账号规则排在默认规则之前。保存会影响使用这份规则的其他客户端；清空后保存会删除整份账号规则，操作前先保留需要的内容
-
-<figure class="guide-figure">
-  <a href="/illustrations/oixclash-rules-zh.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixClash · 账号自定义规则">
-    <img src="/illustrations/oixclash-rules-zh.svg?v=20261127-4" alt="oixClash · 账号自定义规则" width="1120" height="975" loading="lazy">
-  </a>
-  <figcaption>中文模拟界面 · 虚构数据</figcaption>
-</figure>
-
-1. 登录后点击「读取面板规则」，确认显示「已读取面板规则，可编辑后保存」
-2. 每行写一条标准 Surge 格式的规则，无需 `rules:` 或行首短横线；`#` 或 `//` 开头的行是注释。策略填写 `DIRECT`、`REJECT` 或配置中已有的策略组名称
-3. 点击「保存到面板并更新」，查看日志：插件运行中会更新并检查配置；插件未运行时，在下次开启时获取并检查
-4. 用局域网设备建立新连接，在控制面板核对命中规则和出口
-
-```text
-DOMAIN,ads.example.com,REJECT
-DOMAIN-SUFFIX,example.com,DIRECT
-```
-
-把更具体的域名放在前面。上例先拒绝 `ads.example.com`，其余 `example.com` 子域名直连
-
-路由器编辑器最多处理 8192 个 UTF-8 字节，中文等字符会占多个字节。更长的规则请在网站编辑，再点插件「更新节点」，不要截短原规则来适配编辑器
-
-| 提示或情况 | 处理方式 |
-| --- | --- |
-| 规则已被其他页面修改 | 先另存当前草稿，重新读取最新规则，再合并需要的修改；不要直接覆盖别处的新内容 |
-| 面板保存成功，但路由器尚未应用 | 网站上的规则已经改变，先修正规则或网络问题，再点「更新节点」并验证连接 |
-| 无法读取，或当前版本没有规则入口 | 在网站编辑账号规则，保存后点「更新节点」获取；插件内读取和保存还需要站点支持 |
-
-重新读取会替换未保存的草稿，先确认提示。账号规则与节点筛选的共享范围不同，见 [订阅与筛选](/account/subscriptions#account-rules)
+- [设置路由器 DNS、接管方式或节点](/other/oixclash-network)
+- [编辑账号自定义规则](/other/oixclash-rules)
 
 ## 常见问题
 

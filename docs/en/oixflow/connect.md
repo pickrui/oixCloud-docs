@@ -47,14 +47,14 @@ If you previously enabled any TestFlight MitM modules or rules, turn them off or
 </figure>
 
 1. Install oixFlow and open its **oixCloud** account page. To buy a plan or add funds, use your account on the website.
-2. Sign in with email and password, switch to an Access Token at the bottom of the form, or choose **Sign in with Google**. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/security#google-client-login). Wait for the active plan and managed nodes to load before connecting.
+2. Sign in with email and password, switch to an Access Token at the bottom of the form, or choose **Sign in with Google**. Google sign-in is for existing accounts and needs client and website support; follow the [Google sign-in steps](/en/account/client-sign-in#google-client-login). Wait for the active plan and managed nodes to load before connecting.
 3. On Home, tap the current node card and [choose a node or policy group](/en/oixflow/policies#choose-outbound). Keep Rule mode selected and tap the power button in the status card. Allow the system to add a VPN configuration when prompted on your first connection.
 
-Once signed in, the app loads managed nodes without device approval. The first sign-in on a new device sends an alert to your account; see [New devices and sign-in alerts](/en/account/security#device-approval). To sign in with an Access Token, first [create one](/en/account/security#manual-token) on the website; its full value is shown only once.
+Once signed in, the app loads managed nodes without device approval. The first sign-in on a new device sends an alert to your account; see [New devices and sign-in alerts](/en/account/client-sign-in#device-approval). To sign in with an Access Token, first [create one](/en/account/access-tokens#manual-token) on the website; its full value is shown only once.
 
 ## Your own nodes
 
-For your own nodes or subscriptions, open **Proxies → Servers → Add**. Choose **Link** for a subscription URL or **File** for a node file. Then choose a node on Home and connect. [Import nodes, subscriptions or a full profile](/en/oixflow/proxies#third-party-subscription).
+For your own nodes or subscriptions, open **Proxies → Servers → Add**. Choose **Link** for a subscription URL or **File** for a node file. Then choose a node on Home and connect. [Import nodes, subscriptions or a full profile](/en/oixflow/import-nodes#third-party-subscription).
 
 ## Switch modes on iPhone or iPad {#capture-mode}
 
@@ -72,8 +72,8 @@ Open a destination after connecting and check the actual outbound in [requests a
 
 ## Sign out
 
-Confirm **Sign Out** under **oixCloud → Account Management** to clear the sign-in on this device. To revoke an email/password or Google sign-in on the server, use **Sign out** under [Signed-in clients](/en/account/security#signed-in-clients). This also signs out devices using that credential, including a synced Apple TV. Manage a manually created token in the website’s **Access Tokens** list.
+Confirm **Sign Out** under **oixCloud → Account Management** to clear the sign-in on this device. To revoke an email/password or Google sign-in on the server, use **Sign out** under [Signed-in clients](/en/account/client-sign-in#signed-in-clients). This also signs out devices using that credential, including a synced Apple TV. Manage a manually created token in the website’s **Access Tokens** list.
 
 ## Google sign-in troubleshooting
 
-For a missing button, failed browser return, expired flow or unregistered email, follow the shared [Google sign-in checks](/en/account/security#google-troubleshooting).
+For a missing button, failed browser return, expired flow or unregistered email, follow the shared [Google sign-in checks](/en/account/client-sign-in#google-troubleshooting).

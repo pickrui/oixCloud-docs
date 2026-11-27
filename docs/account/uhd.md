@@ -13,7 +13,7 @@ description: 在权益中心兑换 UHD、关联已有账户或延长有效期
 | 创建新 UHD 账户 | 点「立即兑换」，设置 UHD 用户名和密码，核对消耗额度与天数，再点「确认兑换」。兑换需有有效套餐，普通账户当前用 5 枚权益额度兑换 365 天 |
 | 使用已有 UHD 账户 | 点「关联已有 UHD 账号」，输入 UHD 用户名、密码及已启用的 UHD 动态验证码，再点「验证并关联」。关联免费，账户须在本站团队内、未到期且未关联他人 |
 
-成功后，卡片会显示 UHD 用户名和到期时间，可点「进入 UHD 面板」。可用额度和发放条件见[套餐权益额度](/account/plans#benefit-credits)
+成功后，卡片会显示 UHD 用户名和到期时间，可点「进入 UHD 面板」。可用额度和发放条件见[套餐权益额度](/account/benefit-credits)
 
 <figure class="guide-figure">
   <a href="/illustrations/account-uhd-zh.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="在 Emby 卡片选择立即兑换或关联已有 UHD 账号">

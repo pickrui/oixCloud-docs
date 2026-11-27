@@ -12,11 +12,12 @@ iPhone、iPad 与 Apple TV 的连接、分流、模块和同步教程
 | 我想要 | 阅读教程 |
 | --- | --- |
 | 登录账户并完成首次连接 | [登录与首次连接](/oixflow/connect) |
-| 添加第三方节点或订阅 | [添加节点与订阅](/oixflow/proxies#single-node) |
-| 将第三方与托管节点一起使用 | [网站例外与混合策略组](/oixflow/proxies#managed-mix) |
+| 添加第三方节点或订阅 | [添加节点与订阅](/oixflow/import-nodes#single-node) |
+| 将第三方与托管节点一起使用 | [网站例外与混合策略组](/oixflow/mixed-nodes) |
 | 更新第三方订阅或托管节点 | [按来源分别更新](/oixflow/proxies#update-third-party) |
 | 导入、筛选和整理节点 | [节点与订阅管理](/oixflow/proxies) |
-| 自动选择出口或组合代理链 | [策略组、自动选择与代理链](/oixflow/policies) |
+| 选择节点或自动测速 | [选择节点与策略组](/oixflow/policies) |
+| 指定入口和出口，验证多跳连接 | [创建代理链](/oixflow/proxy-chains) |
 
 ## 规则与网络 {#rules-networking}
 

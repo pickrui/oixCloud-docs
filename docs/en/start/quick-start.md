@@ -9,14 +9,14 @@ Get one normal connection working before enabling advanced features.
 ## Before connecting
 
 1. Sign in to the [User Center](https://oixcloud.com/user). When registering by email, you can leave the nickname blank. Enter an invitation or email verification code if prompted.
-2. Open [Plan Management](https://oixcloud.com/user/bought). If a plan is **Active**, continue to your client. If you see only **Pending**, follow the [activation steps](/en/account/plans#manual-activation).
+2. Open [Plan Management](https://oixcloud.com/user/bought). If a plan is **Active**, continue to your client. If you see only **Pending**, follow the [activation steps](/en/account/plan-changes#manual-activation).
 3. For a first purchase or after a standalone top-up, choose a plan and billing period in the [Plan Store](https://oixcloud.com/user/shop) and confirm. If you already paid through a plan’s checkout, the system will try to complete that purchase. [Check the top-up and plan records](/en/help/support#payment) before ordering again.
 
 ## First sign-in to a custom client
 
 Check the [system requirements](/en/clients/#requirements), then download the version for your device from the [Software Center](https://oixcloud.com/client) and follow its guide below. Sign in with your email and account password, an Access Token, or **Sign in with Google** if offered, then choose a node. Google sign-in requires an existing account. On Apple TV, [sync the account](/en/oixflow/apple-tv#approval) from a signed-in iPhone or iPad.
 
-To use an Access Token, select **New Token** in [Access Token Management](https://oixcloud.com/user/token). Copy and save the full value when it appears. It is shown once. If password sign-in is disabled for clients, use an Access Token or a supported Google sign-in. Nodes can load as soon as you sign in. See [client sign-in](/en/account/security#first-client-login).
+To use an Access Token, select **New Token** in [Access Token Management](https://oixcloud.com/user/token). Copy and save the full value when it appears. It is shown once. If password sign-in is disabled for clients, use an Access Token or a supported Google sign-in. Nodes can load as soon as you sign in. See [client sign-in](/en/account/client-sign-in#first-client-login).
 
 ## Choose your device
 

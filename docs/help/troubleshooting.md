@@ -24,14 +24,14 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
 | 你看到的情况 | 下一步 |
 | --- | --- |
 | 网站密码登录失败 | 在[网站登录页](https://oixcloud.com/auth/login)使用已添加的 Passkey，或输入账户密码及已启用的两步验证码。确需找回密码时，可点「忘记密码」用邮件重置。重置会撤销所有客户端登录和 Access Token、更换主订阅地址、关闭两步验证并清除 Passkey |
-| 网站能登录，客户端提示凭据错误 | 在相应的登录框填账户密码或完整 Access Token。若已禁止客户端邮箱/密码登录，改用 Access Token 或受支持的 Google 登录。[核对登录方式](/account/security#first-client-login) |
+| 网站能登录，客户端提示凭据错误 | 在相应的登录框填账户密码或完整 Access Token。若已禁止客户端邮箱/密码登录，改用 Access Token 或受支持的 Google 登录。[核对登录方式](/account/client-sign-in#first-client-login) |
 | 邮箱/密码或 Google 登录的设备突然下线 | 在[已登录的客户端](https://oixcloud.com/user/token#devices)核对记录。共用一次登录的设备会一起下线，连续 180 天未使用的登录也会被清理。重新登录仍要用的设备，Apple TV 可从已重新登录的 iPhone 或 iPad [再次同步](/oixflow/apple-tv#approval) |
-| 用 Access Token 的设备突然下线 | 检查 Token 是否已到期、删除或重新生成。已重新生成时使用新值，到期或已删除时[新增 Token](/account/security#manual-token)，并更新使用它的设备或脚本。修改账户密码也会撤销所有客户端登录和 Access Token |
+| 用 Access Token 的设备突然下线 | 检查 Token 是否已到期、删除或重新生成。已重新生成时使用新值，到期或已删除时[新增 Token](/account/access-tokens#manual-token)，并更新使用它的设备或脚本。修改账户密码也会撤销所有客户端登录和 Access Token |
 | 客户端提示设备登记已失效 | 退出客户端再登录，成功后即可获取节点，无需另行批准 |
 | 客户端提示设备时间与服务器相差过大 | 打开系统自动校时，路由器开启 NTP 后重试 |
 | 已付款，仍提示没有有效套餐 | 按[付款与激活排查](/help/support#payment)核对充值记录和套餐管理里的「使用中」记录 |
 
-收到陌生设备提醒时，核对提醒中的登录记录，再按[新设备登录与提醒](/account/security#device-approval)撤销相应凭据
+收到陌生设备提醒时，核对提醒中的登录记录，再按[新设备登录与提醒](/account/client-sign-in#device-approval)撤销相应凭据
 
 <figure class="guide-figure">
   <a href="/illustrations/account-tokens-zh.svg?v=20261127-1" target="_blank" rel="noopener" aria-label="已登录的客户端中共用登录的设备与自行创建的 Access Token 分开显示">
@@ -54,7 +54,7 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
 2. 连接客户端，打开一次出错的网站，再查看连接记录。iPhone / iPad 用 [oixFlow 的网络检测与请求记录](/oixflow/diagnostics#network-check)；FlClash for oixCloud 在 Windows / macOS 可运行 [工具 → 网络自检](/flclash/diagnostics)，Android / Linux 查看连接与日志
 3. 找不到这次请求时，检查应用是否使用系统代理，或是否被 VPN / TUN 排除。能找到请求时，查看它命中的规则和实际出口，再用同一网站对比另一个可用节点
 
-在中国大陆直连 Edge 或 Home ISP 遇到问题时，可在同一网络和客户端上换用套餐内的 CIA、Fusion、GIA 或[托管 IXP 节点](/account/nodes#ixp-access)，再访问同一个网站。若是从云主机连接面板给出的 IXP 地址，按 [IXP 分段排查](/account/nodes#ixp-troubleshooting) 检查本机到前置机、前置机到 IXP 的连接
+在中国大陆直连 Edge 或 Home ISP 遇到问题时，可在同一网络和客户端上换用套餐内的 CIA、Fusion、GIA 或[托管 IXP 节点](/account/ixp#ixp-access)，再访问同一个网站。若是从云主机连接面板给出的 IXP 地址，按 [IXP 分段排查](/account/ixp#ixp-troubleshooting) 检查本机到前置机、前置机到 IXP 的连接
 
 ## 能用，但速度慢或延迟高
 
@@ -66,12 +66,12 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
 
 | 页面状态 | 没有可接续套餐时怎么查 |
 | --- | --- |
-| 普通套餐流量用光，还没到期 | 看当前记录是否已开启[自动重置流量](/account/plans#traffic-reset)，以及余额与佣金是否够付重置价。未重置会在有效期内进入[低速模式](/account/traffic#low-speed) |
-| 套餐已到期 | 看[续费队列](/account/plans#auto-renew)第一份符合资格的记录和续费价。资金不足，系统不会改扣更便宜的备选 |
+| 普通套餐流量用光，还没到期 | 看当前记录是否已开启[自动重置流量](/account/renewal#traffic-reset)，以及余额与佣金是否够付重置价。未重置会在有效期内进入[低速模式](/account/low-speed) |
+| 套餐已到期 | 看[续费队列](/account/renewal#auto-renew)第一份符合资格的记录和续费价。资金不足，系统不会改扣更便宜的备选 |
 
 ## 流量还有剩余，为什么仍被限速？ {#limits}
 
-剩余流量、积分和套餐速率分别生效，先按 [限速类型对照表](/account/traffic#limits) 判断原因，再检查 [账户信息](https://oixcloud.com/user/profile) 的活动请求与 Working nodes。长连接数量少不代表一分钟内建立的新请求少，重复测速也会增加用量
+剩余流量、积分和套餐速率分别生效，先按 [限速类型对照表](/account/low-speed#limits) 判断原因，再检查 [账户信息](https://oixcloud.com/user/profile) 的活动请求与 Working nodes。长连接数量少不代表一分钟内建立的新请求少，重复测速也会增加用量
 
 若收到积分限速通知，按 [公平使用算法与恢复条件](/account/fair-use#recovery) 减少异常活动并观察后续积分；完全断开后没有活动记录，不保证积分上涨。不要通过反复更换节点、重装客户端或购买套餐来猜测解决办法
 
@@ -85,7 +85,7 @@ description: "连接与速度排查的操作步骤、适用范围与常见问题
 
 先区分预期直连、路由判断产生的解析与绕过客户端的查询。DNS 加密、DNS 经代理以及 VPN / TUN 接管是不同环节，全局模式也不是零泄漏保证
 
-按客户端查看操作步骤与验证方法：[oixFlow DNS 与 IPv6](/oixflow/dns#dns-泄漏-哪些设置有帮助)、[FlClash for oixCloud DNS 与接管](/flclash/dns#dns-泄漏-先检查托管配置和接管方式)
+按客户端查看操作步骤与验证方法：[oixFlow DNS 与 IPv6](/oixflow/dns#dns-泄漏-哪些设置有帮助)、[FlClash for oixCloud DNS 与接管](/flclash/dns-leaks)
 
 ## 客户端专用诊断
 

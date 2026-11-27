@@ -5,6 +5,7 @@ import { createRequire } from 'node:module'
 import { pathToFileURL } from 'node:url'
 import { gzipSync } from 'node:zlib'
 import config from '../docs/.vitepress/config.mjs'
+import movedSections from '../docs/.vitepress/moved-sections.json' with { type: 'json' }
 import vm from 'node:vm'
 
 const root = process.cwd()
@@ -17,7 +18,7 @@ for (const sample of ['节点筛选 FlClash NodeFilter AuthKey ＴＵＮ', '账�
   assert.deepEqual(Array.from(serialized(sample)), miniSearch.options.tokenize(sample), 'Browser tokenizer must work without build-time dependencies or Intl.Segmenter')
 }
 const cases = JSON.parse(fs.readFileSync(new URL('./search-cases.json', import.meta.url), 'utf8'))
-let queries = 0, anchors = 0
+let queries = 0, anchors = 0, bookmarkTargets = 0
 const failures = []
 for (const locale of ['root', 'en']) {
   const file = fs.readdirSync(chunks).find(name => name.startsWith('@localSearchIndex' + locale + '.'))
@@ -29,6 +30,17 @@ for (const locale of ['root', 'en']) {
     ...miniSearch.options
   })
   const prefix = locale === 'en' ? '/en' : ''
+  // The language switch keeps the fragment, including on visits from old bookmarks.
+  for (const [oldPage, destinations] of Object.entries(movedSections)) {
+    for (const [page, fragments] of Object.entries(destinations)) {
+      const url = prefix + '/' + path.posix.dirname(oldPage) + '/' + page + '.html'
+      const html = fs.readFileSync(path.join('docs/.vitepress/dist', url), 'utf8')
+      for (const fragment of fragments) {
+        assert(html.includes(`id="${fragment}"`), 'Missing bookmark target: ' + url + '#' + fragment)
+        bookmarkTargets++
+      }
+    }
+  }
   const ids = Object.values(JSON.parse(data).documentIds)
   const pages = new Set()
   for (const id of ids) {
@@ -60,4 +72,4 @@ for (const locale of ['root', 'en']) {
   console.log(`${locale}: ${index.documentCount} sections, ${pages.size} pages, ${gzipSync(data).length} gzip bytes`)
 }
 assert.deepEqual(failures, [], 'Keyword results must include the relevant guide in the top five')
-console.log(`Passed ${queries} keyword checks and ${anchors} result-anchor checks`)
+console.log(`Passed ${queries} keyword checks, ${anchors} result-anchor checks and ${bookmarkTargets} bookmark-target checks`)

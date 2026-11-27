@@ -17,7 +17,7 @@ A full profile and a Provider node list serve different purposes. A Provider mus
 3. On the **oixCloud** account page, select **Refresh Nodes** in oixFlow on iPhone or iPad, or **Refresh nodes** in FlClash for oixCloud. In older FlClash for oixCloud builds with separate **Refresh** and **Sync** actions, select **Sync**. In an ordinary subscription client, update the imported URL and select the updated profile.
 4. Search for the same name again in the client. If it is still missing, include the client version, subscription format and whether the node appeared in the preview when contacting support. Keep the full subscription URL private.
 
-Ordinary third-party subscriptions can include **Edge, Home ISP and the account’s dedicated IPs**, subject to plan permissions, format and filters. For CIA, IXP, Fusion or GIA, sign in to a dedicated client that supports the line. If your plan includes IXP but Smart Selection only shows Fusion, retain IXP alongside the other lines you want. For your own forwarder, see [IXP connection options](/en/account/nodes#ixp).
+Ordinary third-party subscriptions can include **Edge, Home ISP and the account’s dedicated IPs**, subject to plan permissions, format and filters. For CIA, IXP, Fusion or GIA, sign in to a dedicated client that supports the line. If your plan includes IXP but Smart Selection only shows Fusion, retain IXP alongside the other lines you want. For your own forwarder, see [IXP connection options](/en/account/ixp).
 
 ## Configure a filter
 
@@ -68,7 +68,7 @@ Default inclusion is set per Home ISP node, whether static or dynamic. Plans wit
 2. Add region or name conditions as needed, wait for the preview and check the intended nodes and retained count.
 3. Save, update the client subscription and select a node again. Static and dynamic home-broadband nodes both belong to ISP; Edge is a separate line.
 
-Region or name filters alone do not add these nodes. Restoring defaults removes ISP nodes excluded by default again. See the [Home ISP user guide](/en/account/home-isp) for relay and proxy chain setup, and [traffic routing restrictions](/en/account/nodes#isp-routing) for node eligibility.
+Region or name filters alone do not add these nodes. Restoring defaults removes ISP nodes excluded by default again. See the [Home ISP user guide](/en/account/home-isp) for relay and proxy chain setup, and [traffic routing restrictions](/en/account/home-isp#isp-routing) for node eligibility.
 
 ## Which devices share a filter?
 
@@ -84,7 +84,7 @@ The website's [Custom Rules](https://oixcloud.com/user/rule) are shared by the a
 
 If saving reports an incorrectly capitalized policy group, correct the name on the indicated line. For a custom node or template-specific group, also check the resulting subscription. Clash configurations omit rules whose targets are missing.
 
-oixClash uses this account rule list; supported plugin versions can read and edit it directly. After saving on the website, click **更新节点** (Update Nodes) in the plugin. See [oixClash account rules](/en/other/oixclash#_7-edit-account-custom-rules) for the steps. Local routing rules added inside the oixFlow App continue to be managed separately in that app.
+oixClash uses this account rule list; supported plugin versions can read and edit it directly. After saving on the website, click **更新节点** (Update Nodes) in the plugin. See [oixClash account rules](/en/other/oixclash-rules) for the steps. Local routing rules added inside the oixFlow App continue to be managed separately in that app.
 
 Saving an empty list deletes the account rules, so keep anything you need first. After saving, also confirm that the client updated its configuration and check the matched rule on a new connection.
 

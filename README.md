@@ -29,7 +29,7 @@ Builds also write `/guide-index.json` with the text of every section in both lan
 
 The guide has 46 topics in each language. Feature-specific implementation baselines are recorded in REVIEW.md; source support does not imply availability in every public binary or a deployed panel. iPhone/iPad, Apple TV and FlClash for oixCloud have different features; document their actual interfaces separately. This is a user guide, not a promise that every release or platform exposes every option.
 
-Old panel links such as `/guide#subscriptions` redirect to the site root with their fragment. The theme maps these legacy fragments to individual articles in the selected language on first load, internal navigation and hash changes; unrelated fragments stay on the current page.
+Old panel links such as `/guide#subscriptions` redirect to the site root with their fragment. The theme maps these legacy fragments to individual articles in the selected language on first load, internal navigation and hash changes; unrelated fragments stay on the current page. When splitting an article, keep each published heading ID in both translations of the new page so bookmarks survive language switching, and list the moved IDs under the original article in `docs/.vitepress/moved-sections.json`.
 
 Review findings, source baselines and validation scope are recorded in [REVIEW.md](REVIEW.md).
 

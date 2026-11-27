@@ -13,10 +13,10 @@ Uploads and downloads both count toward usage, adjusted by the billing multiplie
 Data is allocated for the billing period you selected. If an ordinary plan uses up its high-speed data before expiry, the following happens in order.
 
 1. The next eligible pending plan starts, if you already have one.
-2. With no pending plan, [automatic traffic reset](/en/account/plans#traffic-reset) restores the current allowance if enabled and funds cover the reset price. The expiry date stays the same.
-3. Otherwise, [low-speed access](#low-speed) applies for the rest of the period. A reset held up only by insufficient funds can proceed after a top-up. Check existing purchases before buying another plan. Automatic renewal runs only at expiry.
+2. With no pending plan, [automatic traffic reset](/en/account/renewal#traffic-reset) restores the current allowance if enabled and funds cover the reset price. The expiry date stays the same.
+3. Otherwise, [low-speed access](/en/account/low-speed) applies for the rest of the period. A reset held up only by insufficient funds can proceed after a top-up. Check existing purchases before buying another plan. Automatic renewal runs only at expiry.
 
-Ordinary plans earn no benefit credits once their traffic runs out, even if low-speed access continues until expiry. See [Benefit credits](/en/account/plans#benefit-credits) for eligibility and amounts.
+Ordinary plans earn no benefit credits once their traffic runs out, even if low-speed access continues until expiry. See [Benefit credits](/en/account/benefit-credits) for eligibility and amounts.
 
 ## Pay-as-you-go and low-speed mode
 
@@ -25,39 +25,6 @@ Pay-as-you-go is a separate plan type. You must buy the corresponding plan and m
 Check account records for settled charges and balance changes.
 
 [Open your account](https://oixcloud.com/user)
-
-## Low-speed traffic {#low-speed}
-
-When an ordinary plan exhausts its high-speed allowance without a replacement plan taking effect, these low-speed tiers apply while the plan remains valid. Check your active plan in the [user center](https://oixcloud.com/user) first.
-
-| Active plan | Low-speed rate cap |
-| --- | --- |
-| Pass Iron, Pass Alu, Pass Bronze | 32&nbsp;KiB/s |
-| Pass Silver, Pass Gold | 128&nbsp;KiB/s |
-| Pass Platinum, Pass Diamond, Pass Titanium, Developer Licenses, Team License, Enterprise Licenses | 256&nbsp;KiB/s |
-
-`1 KiB/s = 1024 bytes per second`. These are rate caps, not guaranteed download speeds. Uploads and downloads are both limited, and connections belonging to the same account within the same node service share the rate; each device or connection does not receive a separate allowance. Routes, protocols and any lower applicable caps also affect actual throughput.
-
-| Condition | Effect and action |
-| --- | --- |
-| Abnormal resource use | Severe overuse or sustained abnormal resource consumption may lead to further restrictions. Check the account status and notices. |
-| Gaming nodes | Normal use is unavailable in low-speed mode. Restore high-speed traffic first. |
-| Pay-as-you-go plans | The table does not apply. If restricted, meet the current plan's funding requirements and wait for a system check. |
-| Concurrent use | Low-speed mode is unsuitable for highly concurrent tasks, and connections may be restricted. Close unnecessary parallel tasks. |
-| Validity and permitted use | Unlimited low-speed traffic remains subject to plan expiry and service terms. It does not mean unlimited speed, unlimited connections or permission for sustained abnormal resource use. |
-
-To restore high-speed access, confirm that a new plan is active with available traffic, then allow the system and nodes to synchronize. If an existing connection remains slow, disconnect, reconnect and check again. Unless automatic traffic reset is on, adding funds alone does not restore an ordinary plan's traffic, and points recovery does not remove the exhausted-allowance restriction.
-
-## Distinguish limits and recovery conditions {#limits}
-
-| Situation | What to check | What restores service |
-| --- | --- | --- |
-| Low-speed mode after high-speed allowance runs out | Current allowance, expiry, activation queue and automatic traffic reset | Available traffic on a valid active plan, followed by a system check; with automatic reset on, enough balance for the reset price triggers a reset, otherwise adding funds alone does not add traffic to an ordinary plan |
-| Insufficient funds on pay-as-you-go | Balance, commission and billing conditions | Sufficient funds and current plan conditions, followed by a check; points alone are not enough |
-| Fair-use points cap | Points, activity requests and Working nodes | Normal use raises points above 10, then the system removes this cap |
-| Plan expiry or an account restriction/ban | Expiry, account state and notices | Continue the plan or contact support according to the cause; points recovery alone does not restore service |
-
-More than one restriction can apply. Unlimited low-speed traffic remains subject to expiry, request/node resource limits and service terms. It is not unlimited speed or permission for sustained abnormal use. See [Fair use](/en/account/fair-use) for points rules, automated detection and review requests.
 
 ## A multiplier example
 
@@ -80,4 +47,4 @@ These numbers illustrate the calculation only. Check the node page for its actua
 3. Inspect client connections for background sync, cloud storage, large downloads or repeated speed tests. Traffic can continue without a browser page open.
 4. Pause the identified task and observe new records; one download-speed reading cannot explain billing over an entire period.
 
-Read [plan-switching rules](/en/account/plans) before activating a queued plan merely to see a new allowance. Pay-as-you-go users should also check balance, commission and the product's traffic price.
+Read [plan-switching rules](/en/account/plan-changes#manual-activation) before activating a queued plan merely to see a new allowance. Pay-as-you-go users should also check balance, commission and the product's traffic price.

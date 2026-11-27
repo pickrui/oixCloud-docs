@@ -44,10 +44,10 @@ Use the release's `SHA256SUMS` to verify a standard package or the matching `SHA
 </figure>
 
 1. Download FlClash for oixCloud from our download center, choose the package for your operating system and processor architecture, and sign in on the app's oixCloud page.
-2. Sign in with email and password, choose **Sign in with Google** for an existing oixCloud account, or switch to **Access Token** at the bottom of the form and paste the full token. [Google sign-in steps](/en/account/security#google-client-login).
+2. Sign in with email and password, choose **Sign in with Google** for an existing oixCloud account, or switch to **Access Token** at the bottom of the form and paste the full token. [Google sign-in steps](/en/account/client-sign-in#google-client-login).
 3. Wait for the managed profile to download. Check that **oixCloud** is selected under **Profiles**, then choose a node or group under **Proxies**. Keep **Rule** mode for everyday use.
 
-A first sign-in on a new device sends an account alert. A successful sign-in gives access to nodes included in your plan. For token sign-in, [create and save the full Access Token](/en/account/security#manual-token) when it is shown on the website. To use your own subscription, go straight to [Import another subscription](/en/flclash/profiles#other-subscription).
+A first sign-in on a new device sends an account alert. A successful sign-in gives access to nodes included in your plan. For token sign-in, [create and save the full Access Token](/en/account/access-tokens#manual-token) when it is shown on the website. To use your own subscription, go straight to [Import another subscription](/en/flclash/import-nodes#other-subscription).
 
 After a plan or filter change, select **Refresh nodes** on the **oixCloud** page. In older builds with separate **Refresh** and **Sync** actions, select **Sync**.
 
@@ -69,7 +69,7 @@ For a missing-DLL error at Windows startup, identify the file and runtime using 
 
 ## Google sign-in troubleshooting
 
-For a missing button, failed browser return, expired flow or unregistered email, follow the shared [Google sign-in checks](/en/account/security#google-troubleshooting).
+For a missing button, failed browser return, expired flow or unregistered email, follow the shared [Google sign-in checks](/en/account/client-sign-in#google-troubleshooting).
 
 ## Headless and background operation {#headless}
 

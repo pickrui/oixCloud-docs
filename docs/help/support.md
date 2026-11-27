@@ -43,7 +43,7 @@ description: "提交有效的服务单的操作步骤、适用范围与常见问
 
 ## 限速、积分或账户限制 {#restrictions}
 
-先按 [公平使用](/account/fair-use) 和 [流量限制对照表](/account/traffic#limits) 检查原因。提交服务单时补充：
+先按 [公平使用](/account/fair-use) 和 [流量限制对照表](/account/low-speed#limits) 检查原因。提交服务单时补充：
 
 - 限制提示或通知原文、发生时间与时区
 - 当前套餐、有效期、剩余流量及积分变化；按量套餐同时说明余额状态
@@ -62,11 +62,11 @@ description: "提交有效的服务单的操作步骤、适用范围与常见问
 
 | 你看到的情况 | 下一步 |
 | --- | --- |
-| 尚未付款，收银台报错 | 法币充值可 [刷新收银台，重新选择支付网关](/account/plans#fiat-top-up)；虚拟货币转账前先核对 [币种、网络和金额](/account/plans#crypto-top-up) |
+| 尚未付款，收银台报错 | 法币充值可 [刷新收银台，重新选择支付网关](/account/top-up#fiat-top-up)；虚拟货币转账前先核对 [币种、网络和金额](/account/crypto-payments) |
 | 银行卡等法币已扣款，充值记录里查不到 | 保留原订单和付款凭证，在原服务单补充订单号、扣款金额、付款时间和时区，请客服核对，避免重复付款 |
-| 虚拟货币已转账，充值记录里查不到 | 在完整收银台的「虚拟币订单记录」里点「未到账反馈」，填入原交易哈希。创建满 3 分钟可提交，首次反馈须在创建后 48 小时内完成。[反馈步骤](/account/plans#crypto-payment-feedback) |
+| 虚拟货币已转账，充值记录里查不到 | 在完整收银台的「虚拟币订单记录」里点「未到账反馈」，填入原交易哈希。创建满 3 分钟可提交，首次反馈须在创建后 48 小时内完成。[反馈步骤](/account/crypto-payments#crypto-payment-feedback) |
 | 有充值记录，找不到套餐 | 分别查[充值记录](https://oixcloud.com/user/code)和[套餐管理](https://oixcloud.com/user/bought)。单独充值会增加账户资金，已有欠费时先抵扣。从套餐购买进入收银台时，系统会尝试完成原购买，处理中先等结果。收到「付款后自动购买未完成」且重试已停止的通知后，再核对余额并购买或联系支持 |
-| 套餐显示「待激活」 | 已有「使用中」的套餐时，加购的套餐会排队，当前额度不变。等它按顺序接续即可。想提前切换时，先看[手动激活对原套餐的影响](/account/plans#manual-activation) |
+| 套餐显示「待激活」 | 已有「使用中」的套餐时，加购的套餐会排队，当前额度不变。等它按顺序接续即可。想提前切换时，先看[手动激活对原套餐的影响](/account/plan-changes#manual-activation) |
 | 已经激活，客户端仍显示旧套餐或缺少节点 | 刷新客户端的账户信息和托管节点。导入订阅的客户端更新当前配置。仍有差异时按[缺少节点排查](/help/troubleshooting#missing-subscription)核对 |
 
 <figure class="guide-figure">
@@ -102,7 +102,7 @@ description: "提交有效的服务单的操作步骤、适用范围与常见问
 | --- | --- |
 | 奖励链接点过确认，套餐没变 | 查套餐管理的待激活队列和原链接状态，避免占用另一个赠礼名额。[核对领取结果](/account/rewards#claim-self) |
 | 佣金提现后没看到到账 | 在「申请提现 → 提现记录」核对状态、网络和交易哈希，再决定是否重试。[提现步骤](/account/commission#withdraw) |
-| 无法注销账户 | 按注销页提示处理待结事项。使用 Passkey 也需要账户邮箱验证码。[注销步骤和后果](/account/security#delete-account) |
+| 无法注销账户 | 按注销页提示处理待结事项。使用 Passkey 也需要账户邮箱验证码。[注销步骤和后果](/account/delete-account#delete-account) |
 
 ## 可直接填写的模板
 

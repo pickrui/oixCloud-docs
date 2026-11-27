@@ -106,7 +106,7 @@ Reduce the abnormal requests and unnecessary node use, then observe points durin
 
 ## Other limits {#other-limits}
 
-See [Low-speed traffic](/en/account/traffic#low-speed) for rate tiers and scope after high-speed traffic runs out, and [Traffic and billing](/en/account/traffic#limits) for pay-as-you-go funding and expiry. These conditions are separate from fair-use points; points recovery does not automatically remove other restrictions.
+See [Low-speed traffic](/en/account/low-speed) for rate tiers and scope after high-speed traffic runs out, and [Traffic and billing](/en/account/low-speed#limits) for pay-as-you-go funding and expiry. These conditions are separate from fair-use points; points recovery does not automatically remove other restrictions.
 
 ## Violations and account bans {#restrictions}
 
@@ -114,7 +114,7 @@ Sharing, jointly purchasing or reselling a personal account, unauthorized P2P/Bi
 
 A verified case of Google identifying a dedicated IP as being in mainland China is a minor violation. If the region is still incorrect 14 days after the IP is reclaimed, part of the deposit may be deducted at our discretion. [Check the location and request a correction](/en/account/google-ip-location#verify).
 
-Abuse complaints about a dedicated IP require verification of the activity and responsibility before applying the [deposit and abuse fee rules](/en/account/nodes#ip-deposit). A complaint alone does not justify a charge, and the same incident is not charged twice.
+Abuse complaints about a dedicated IP require verification of the activity and responsibility before applying the [deposit and abuse fee rules](/en/account/dedicated-ip#ip-deposit). A complaint alone does not justify a charge, and the same incident is not charged twice.
 
 Bans are handled separately from temporary points-based throttling, with no promise of automatic reinstatement. To prevent circumvention, specific ban criteria, detection methods and enforcement details are not public. If you believe a decision is incorrect, submit a [support ticket](/en/help/support#restrictions) describing the actual use and steps already taken to request human review.
 

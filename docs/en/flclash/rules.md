@@ -50,7 +50,7 @@ An added rule can use a named exit such as `Media`. In the profile override, map
 
 Create named groups with valid members before referencing them. Recheck rule targets after renaming or deleting a group.
 
-To add another subscription's nodes to the managed profile, add a **Proxy provider** to the provider library, select it in an Overlay **Proxy group** and add a rule targeting that group. Follow [Use with managed nodes](/en/flclash/profiles#managed-subscription). Importing a separate profile does not automatically combine nodes.
+To add another subscription's nodes to the managed profile, add a **Proxy provider** to the provider library, select it in an Overlay **Proxy group** and add a rule targeting that group. Follow [Use with managed nodes](/en/flclash/mixed-nodes#managed-subscription). Importing a separate profile does not automatically combine nodes.
 
 ## Override scripts
 

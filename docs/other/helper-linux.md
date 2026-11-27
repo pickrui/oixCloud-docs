@@ -12,7 +12,7 @@ Linux / NAS 使用公开容器镜像 `ghcr.io/pickrui/oixcloud-external-proxy-pr
   <figcaption>按维护版本绘制的界面示意 · 虚构数据</figcaption>
 </figure>
 
-按[公开 Docker 教程](https://github.com/pickrui/oixcloud-external-proxy-program/blob/main/docs/docker.md)取得 `compose.yaml`、`config.example.json` 和自定义规则文件，将示例复制为 `config.json`。在 `accessToken` 填入网站[新增时显示的完整 Access Token](/account/security#manual-token)，也可用 `email` 和 `password` 登录。局域网鉴权另行设置。让容器 UID/GID `10001` 可读，并限制其他用户访问
+按[公开 Docker 教程](https://github.com/pickrui/oixcloud-external-proxy-program/blob/main/docs/docker.md)取得 `compose.yaml`、`config.example.json` 和自定义规则文件，将示例复制为 `config.json`。在 `accessToken` 填入网站[新增时显示的完整 Access Token](/account/access-tokens#manual-token)，也可用 `email` 和 `password` 登录。局域网鉴权另行设置。让容器 UID/GID `10001` 可读，并限制其他用户访问
 
 在 Compose 所在目录执行：
 
@@ -28,7 +28,7 @@ docker compose ps
 
 发布的 Compose 默认将端口开放到宿主机所有接口，启动前先配置局域网鉴权并限制防火墙；仅本机使用时将 `ports` 的宿主机地址限制为 `127.0.0.1`。如果配置包含固定 `listeners`，同时核对每项监听地址
 
-容器启动后直接获取托管节点，不需要批准设备；首次登录时账户会收到新设备登录提醒，见 [新设备登录与提醒](/account/security#device-approval)
+容器启动后直接获取托管节点，不需要批准设备；首次登录时账户会收到新设备登录提醒，见 [新设备登录与提醒](/account/client-sign-in#device-approval)
 
 ## 核对运行结果
 
@@ -44,12 +44,12 @@ curl --fail http://127.0.0.1:6172/status
 ### 在哪里选择节点和设置规则 {#routing}
 
 - **选择节点**：默认 Compose 使用多端口映射。在使用这些映射的客户端中，打开手动策略组，选择映射节点；只接入固定端口的应用使用该端口对应的节点。使用固定 `listeners` 时，按[监听项与节点的对应关系](/other/helper-mapping)核对端口
-- **给网站指定出口**：导入 Helper 生成的 Surge 配置时，可在 Compose 挂载到 `/config/custom.conf` 的文件中[添加规则](/other/surge#routing-rules)，保存后让客户端重新获取配置。只导入节点列表时，在接收客户端设置分流规则和策略组
+- **给网站指定出口**：导入 Helper 生成的 Surge 配置时，可在 Compose 挂载到 `/config/custom.conf` 的文件中[添加规则](/other/surge-routing#routing-rules)，保存后让客户端重新获取配置。只导入节点列表时，在接收客户端设置分流规则和策略组
 - **多跳**：需要托管中继时，在网站[设置内部中继](/account/relay#内部中继)，回到接收客户端选入口节点。完成后重新访问目标，在接收客户端查看命中的规则和出口
 
 ### 验证使用代理的应用 {#capture-dns}
 
-在使用代理的应用里填入宿主机地址和已发布的代理端口，打开一个网站验证。默认的 `6172` 提供配置和状态。要让整台设备走代理、切换规则模式或更改网站 DNS，在实际接管流量的客户端设置，例如 [FlClash for oixCloud](/flclash/capture) 或 [Surge Mac](/other/surge#capture-mode)，在那里也能核对新请求和出口
+在使用代理的应用里填入宿主机地址和已发布的代理端口，打开一个网站验证。默认的 `6172` 提供配置和状态。要让整台设备走代理、切换规则模式或更改网站 DNS，在实际接管流量的客户端设置，例如 [FlClash for oixCloud](/flclash/capture) 或 [Surge Mac](/other/surge-routing#capture-mode)，在那里也能核对新请求和出口
 
 
 ## 使用容器时检查这些设置

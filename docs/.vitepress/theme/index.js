@@ -1,5 +1,6 @@
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import { h, onMounted, onUnmounted } from 'vue'
+import movedSections from '../moved-sections.json'
 import DocMedia from './DocMedia.vue'
 import DocTrail from './DocTrail.vue'
 import HomeDirectory from './HomeDirectory.vue'
@@ -21,9 +22,29 @@ const legacyPages = new Map(Object.entries({
 }))
 
 function redirectLegacyPage() {
-  if (!/^\/(?:en\/)?(?:index\.html)?$/.test(window.location.pathname)) return
-  const page = legacyPages.get(window.location.hash.slice(1))
-  if (page) window.location.replace((window.location.pathname.startsWith('/en/') ? '/en/' : '/') + page + '.html')
+  const { pathname, search, hash } = window.location
+  if (!hash) return
+  const locale = pathname.startsWith('/en/') ? '/en/' : '/'
+  const path = pathname.slice(locale.length).replace(/\.html$/, '')
+  if (!path || path === 'index') {
+    const page = legacyPages.get(hash.slice(1))
+    if (page) window.location.replace(locale + page + '.html' + search)
+    return
+  }
+  const sections = movedSections[path]
+  if (!sections) return
+  let id
+  try {
+    id = decodeURIComponent(hash.slice(1))
+  } catch {
+    return
+  }
+  for (const [page, anchors] of Object.entries(sections)) {
+    if (anchors.includes(id)) {
+      window.location.replace(pathname.slice(0, pathname.lastIndexOf('/') + 1) + page + '.html' + search + hash)
+      return
+    }
+  }
 }
 
 export default {

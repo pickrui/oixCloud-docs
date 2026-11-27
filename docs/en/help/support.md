@@ -43,7 +43,7 @@ To have a person check a payment, review an account restriction or investigate a
 
 ## Speed limits, points or account restrictions {#restrictions}
 
-First check [Fair use](/en/account/fair-use) and the [limit comparison](/en/account/traffic#limits). Include:
+First check [Fair use](/en/account/fair-use) and the [limit comparison](/en/account/low-speed#limits). Include:
 
 - The exact restriction message or notice, time and time zone
 - Current plan, expiry, remaining traffic and changes in points; also funding status for pay-as-you-go
@@ -62,11 +62,11 @@ If you have paid but the plan is not active, separately provide the order ID, pa
 
 | What you see | What to do |
 | --- | --- |
-| The checkout failed before you paid | For a fiat payment, [refresh checkout to select a gateway again](/en/account/plans#fiat-top-up). Before a crypto transfer, check the [asset, network and amount](/en/account/plans#crypto-top-up). |
+| The checkout failed before you paid | For a fiat payment, [refresh checkout to select a gateway again](/en/account/top-up#fiat-top-up). Before a crypto transfer, check the [asset, network and amount](/en/account/crypto-payments). |
 | Your card or other fiat payment was charged, but the top-up is missing | Keep the order and receipt. Reply in the same ticket with the order ID, amount, payment time and time zone so support can check before you pay again. |
-| You sent crypto, but the top-up is missing | Use **Report missing payment** under **Crypto Order Records** on the full Cashier page. Enter the original transaction hash. The first request can be submitted from three minutes after order creation until the 48-hour window closes. [Payment feedback steps](/en/account/plans#crypto-payment-feedback). |
+| You sent crypto, but the top-up is missing | Use **Report missing payment** under **Crypto Order Records** on the full Cashier page. Enter the original transaction hash. The first request can be submitted from three minutes after order creation until the 48-hour window closes. [Payment feedback steps](/en/account/crypto-payments#crypto-payment-feedback). |
 | The top-up is recorded, but the plan is missing | Compare [top-up history](https://oixcloud.com/user/code) with [Plan Management](https://oixcloud.com/user/bought). A standalone top-up adds funds and settles any outstanding debt first. Checkout opened from a plan purchase attempts to complete that order. Wait while it is pending. If you receive **Automatic purchase was not completed** and retries have stopped, check your balance before purchasing or contacting support. |
-| The plan is marked **Pending** | If another plan is **Active**, the new purchase is queued and its allowance is available when it starts. You can wait for it to start in order. To switch early, first [check the effect on your active plan](/en/account/plans#manual-activation). |
+| The plan is marked **Pending** | If another plan is **Active**, the new purchase is queued and its allowance is available when it starts. You can wait for it to start in order. To switch early, first [check the effect on your active plan](/en/account/plan-changes#manual-activation). |
 | The plan is active, but the client still shows the old plan or is missing nodes | Refresh account details and managed nodes in the client. For an imported subscription, update the active profile. If the results still differ, [check the missing node](/en/help/troubleshooting#missing-subscription). |
 
 <figure class="guide-figure">
@@ -102,7 +102,7 @@ For an active UHD account, the Emby card in the Benefits Center shows the traffi
 | --- | --- |
 | You confirmed a reward link but the plan looks unchanged | Check pending plans in Plan Management and the original link’s status before using another gift slot. [Check a claim](/en/account/rewards#claim-self). |
 | A commission withdrawal has not arrived | Under **Withdraw Commission → Withdrawal History**, check the status, network and transaction hash before retrying. [Withdrawal steps](/en/account/commission#withdraw). |
-| You cannot delete the account | Resolve any unsettled items listed on the deletion page. You also need a code sent to the account email when using a passkey. [Deletion steps and consequences](/en/account/security#delete-account). |
+| You cannot delete the account | Resolve any unsettled items listed on the deletion page. You also need a code sent to the account email when using a passkey. [Deletion steps and consequences](/en/account/delete-account#delete-account). |
 
 ## Copy this template
 

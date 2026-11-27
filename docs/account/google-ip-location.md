@@ -32,4 +32,4 @@ description: 如何减少 Google 误判独享 IP 地区的风险，在电脑和�
 
 保持连接该独享出口，登录 [Google IP 地区纠正表单](https://support.google.com/websearch/workflow/9308722)，如实填写出口的实际国家或地区并提交。Google 表示更新可能超过一个月，建议发现误判时尽早反馈
 
-经核实，Google 将独享 IP 判定为中国大陆，视为轻度违规。**自 IP 回收之日起满 14 天、地区仍未恢复正确时，可能酌情扣除部分保证金**。[独享 IP 保证金规则](/account/nodes#ip-deposit)
+经核实，Google 将独享 IP 判定为中国大陆，视为轻度违规。**自 IP 回收之日起满 14 天、地区仍未恢复正确时，可能酌情扣除部分保证金**。[独享 IP 保证金规则](/account/dedicated-ip#ip-deposit)

@@ -8,9 +8,9 @@ FlClash for oixCloud supports compatible third-party nodes and subscriptions. Or
 
 | I want to… | Method |
 | --- | --- |
-| Add one node to an existing profile | [Add a custom node](#single-node) |
-| Use another provider's subscription separately | [Import and switch profiles](#other-subscription) |
-| Use third-party and managed nodes together | [Keep the managed profile and add nodes or a proxy provider](#managed-mix) |
+| Add one node to an existing profile | [Add a custom node](/en/flclash/import-nodes#single-node) |
+| Use another provider's subscription separately | [Import and switch profiles](/en/flclash/import-nodes#other-subscription) |
+| Use third-party and managed nodes together | [Keep the managed profile and add nodes or a proxy provider](/en/flclash/mixed-nodes) |
 
 ## Managed and ordinary profiles
 
@@ -21,116 +21,6 @@ FlClash for oixCloud supports compatible third-party nodes and subscriptions. Or
 | Local file | **Profiles → Add Profile → File**, select a file | No remote URL to refresh |
 
 The client applies one profile at a time. Select it, start the client and verify the node list. Keeping several profiles in the list does not automatically combine their nodes or rules.
-
-## Add an individual third-party node {#single-node}
-
-<figure class="guide-figure">
-  <a href="/illustrations/flclash-custom-node-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Add a custom node to this profile">
-    <img src="/illustrations/flclash-custom-node-en.svg?v=20261127-5" alt="Add a custom node to this profile" width="1120" height="1100" :loading="$isGuidePage ? 'eager' : 'lazy'" :fetchpriority="$isGuidePage ? 'high' : 'auto'">
-  </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
-</figure>
-
-Use this method to add a self-hosted or third-party node to a working profile, including the oixCloud managed profile.
-
-Choose a distinct name before adding it: **matching a node name in the original profile replaces that node's definition**, rather than creating a second node with the same name. Avoid existing group names and built-in names such as `DIRECT` and `REJECT`.
-
-1. Open **Profiles**. For a managed or ordinary subscription, choose **Proxy chains** from its menu and find **Custom nodes**. For a custom profile, use **Edit → Custom nodes**.
-2. Under **Custom nodes**, choose **Add** and select an input method for the information you have.
-3. Check the name, server, port and credentials, save, and make sure the node's switch is on.
-4. Select and apply this profile. In **Proxies**, open a manual selection group and choose the new node. Make a new connection to your destination and verify its outbound in [connection records](/en/flclash/diagnostics).
-
-| Input | What to enter |
-| --- | --- |
-| URI | One complete node share link, such as `ss://`, `vmess://`, `vless://`, `trojan://` or `hy2://`; consult the input hint and validation result for other formats |
-| Quick edit | Choose the proxy type and enter its name, server, port and required password, UUID, TLS, transport or other protocol settings |
-| YAML | One complete node definition, or a `proxies:` list containing exactly one node; do not paste a whole multi-node subscription |
-
-This example only demonstrates the single-node YAML structure. Replace the server and password with your provider's actual parameters; it cannot connect as written:
-
-```yaml
-name: My-Third-Party
-type: trojan
-server: proxy.example.com
-port: 443
-password: replace-with-your-password
-sni: proxy.example.com
-udp: true
-```
-
-Custom nodes can be used on their own. Ordinary and managed profiles append enabled custom nodes to their existing manual selection groups. Whether URL-test, fallback or personal groups in Overlay include the new node depends on their member selection and options such as **Include all proxies**; check the relevant group.
-
-Custom nodes belong to the profile you edited and are reapplied after subscription updates.
-
-### Import a share link as a separate profile {#standalone-node}
-
-To use a share link separately, paste a supported link such as `ss://` or `vless://` into **Profiles → Add Profile → Link**. The client saves a local profile. It is not merged into the managed profile and has no remote subscription to sync.
-
-A node share link supplies connection parameters, not the provider's full routing rules. To route remaining traffic through this node:
-
-1. Select the imported profile, open **Override** and choose **Overlay**.
-2. Under **Rule**, add a `MATCH` rule targeting the imported node. Leave the domain/content field empty for `MATCH`: it catches all traffic not handled by preceding rules, so place it last among your personal rules.
-3. Save the rule. With this profile active, use **Check configuration** or **Apply now**. Once it applies, verify the outbound on a new connection in Rule mode.
-
-For complete routing such as direct access to local destinations, prefer the provider's full Clash / mihomo profile, or add more specific rules first using [overrides and added rules](/en/flclash/rules).
-
-For an HTTP / HTTPS proxy expressed as an `http://` or `https://` link, use **Custom nodes → URI** above. **Add Profile → Link** treats HTTP / HTTPS URLs as remote subscription downloads.
-
-## Import another subscription or profile file {#other-subscription}
-
-<figure class="guide-figure">
-  <a href="/illustrations/flclash-import-link-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Import from link and the Save checkmark in FlClash for oixCloud">
-    <img src="/illustrations/flclash-import-link-en.svg?v=20261127-5" alt="Import from link and the Save checkmark in FlClash for oixCloud" width="1120" height="1100" loading="lazy">
-  </a>
-  <figcaption>English interface simulation · Fictional data</figcaption>
-</figure>
-
-1. Copy the provider’s complete Clash / mihomo subscription URL. For an ordinary oixCloud subscription, copy the main **Clash/Stash** row under [User Center → Subscription addresses](https://oixcloud.com/user#subscription-details). The Provider URL supplies nodes to an existing profile.
-2. Open **Profiles → Add Profile → Link**, paste the URL and confirm. For a QR code, choose the image on desktop or scan it on an Android phone. Choose **File** for a downloaded YAML file.
-3. Wait for download and validation to succeed, select the new profile in the list, then start or apply the client.
-4. Open **Proxies**, select a node in this profile's groups and verify the rule and outbound with a new connection. To return to managed nodes, select the oixCloud managed profile in **Profiles** again.
-
-On Android TV, choose **Profiles → Add Profile → Send from phone**. Connect the phone and TV to the same network, scan the TV’s QR code with the phone camera, paste the complete link on the page and send it. Confirm **Import** on the TV.
-
-For a URL subscription, choose **Sync** in its profile menu or configure automatic updates under **Edit**. To update an imported file, import the new copy.
-
-::: warning Distinguish "Link" from "Import config"
-**Add Profile → Import config** is a separate workflow: it extracts nodes, groups, rules and supported settings from a URL, file or text into an editable **Custom profile**, and does not retain the original URL as the sync source for the whole subscription. Use **Link** above to keep following the original subscription. **Importing a whole configuration into an existing custom profile replaces its nodes, groups, rules and settings**; [back up first](/en/flclash/backup) and review any **Not imported** notices.
-:::
-
-## Use third-party and oixCloud managed nodes together {#managed-mix}
-
-To keep managed routing while sending some traffic through third-party nodes, keep the **oixCloud managed profile selected** and add a source as described below. Combining node sources does not create a forwarding chain. Configure [proxy chains](/en/flclash/proxies#proxy-chains) only when you specifically need multiple entry/exit hops.
-
-### Add one or a few nodes {#managed-single-node}
-
-Follow [Add an individual third-party node](#single-node) to save and enable a node in the managed profile, then select it in an existing manual selection group. To use it only for a website, add a domain-suffix rule under the managed profile's **Override → Overlay → Rule** targeting that node. Other traffic continues through managed rules.
-
-### Add a whole third-party subscription {#managed-subscription}
-
-<figure class="guide-figure">
-  <a href="/illustrations/flclash-provider-members-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Add a third-party provider to your group">
-    <img src="/illustrations/flclash-provider-members-en.svg?v=20261127-5" alt="Add a third-party provider to your group" width="1120" height="1100" loading="lazy">
-  </a>
-  <figcaption>Interface simulation based on the maintained version · Fictional data</figcaption>
-</figure>
-
-Reference the subscription as a **Proxy provider** in the provider library to update its nodes while keeping managed routing.
-
-1. Open **Tools → Custom profile resources → Provider library** and select **Proxy providers**.
-2. Choose the add button, then **Import from URL**. Enter a distinct name such as `ThirdParty` and the complete third-party subscription URL, check that its source is **Remote URL**, and save. Prefer Clash / mihomo YAML containing a `proxies:` node list. For a local file, use **Import from file**; it has no remote automatic updates.
-3. Return to **Profiles**, open **Override** for the **oixCloud managed profile** and choose **Overlay** to preserve the managed groups and rules.
-4. Under **Proxy group**, add a manual selection group (`select`) with a distinct name such as `Third-party exit`. In the member picker, select `ThirdParty` under **Proxy providers** and save. To switch between managed and third-party outbounds in this group, you can also add an available managed node or existing managed group as a member.
-5. Under **Rule** in the same override, add the suffix `example.com` and target `Third-party exit`. Save and use **Check configuration** or **Apply now**. Keep Rule mode and select an actual node under **Proxies → Third-party exit**.
-6. Reconnect to the website covered by your rule. In connection records, verify the personal rule and selected third-party outbound, then check that a destination without a personal rule still follows managed routing.
-
-The domain and names above are examples; use your actual destination. Creating a group or saving a resource does not send websites through it automatically: a rule must reference the group. New groups are not automatically inserted into existing manual selection groups either. Personal rules precede subscription rules, while existing added rules may still take priority; see [overrides](/en/flclash/rules).
-
-This reference uses only the third-party subscription's nodes. **It does not apply that subscription's groups, rules, DNS or TUN settings.** The proxy provider keeps its remote URL. After applying the profile, open **Providers** from the **Proxies** page menu and use the update button to refresh the relevant proxy provider. **Refresh nodes** on the account page updates the managed profile; syncing a separate URL profile does not update this proxy provider either.
-
-An oixCloud managed profile cannot serve as a proxy provider for another **Custom profile**, and **Import config** does not accept oixCloud managed URLs. Keep the managed profile and reference third-party sources as described above.
-
-For proxy-provider formats and fields, see the [official mihomo proxy-provider reference](https://wiki.metacubex.one/en/config/proxy-providers/).
 
 ## Troubleshoot additions and imports {#import-troubleshooting}
 

@@ -12,11 +12,12 @@ Connection, routing, modules and sync for iPhone, iPad and Apple TV.
 | I want to… | Guide |
 | --- | --- |
 | Sign in and make a first connection | [Sign in and connect](/en/oixflow/connect) |
-| Add third-party nodes or subscriptions | [Add nodes and subscriptions](/en/oixflow/proxies#single-node) |
-| Use third-party and managed nodes together | [Website exceptions and mixed groups](/en/oixflow/proxies#managed-mix) |
+| Add third-party nodes or subscriptions | [Add nodes and subscriptions](/en/oixflow/import-nodes#single-node) |
+| Use third-party and managed nodes together | [Website exceptions and mixed groups](/en/oixflow/mixed-nodes) |
 | Update third-party subscriptions or managed nodes | [Update each source separately](/en/oixflow/proxies#update-third-party) |
 | Import, filter and organize nodes | [Nodes and subscriptions](/en/oixflow/proxies) |
-| Select routes automatically or build a proxy chain | [Policy groups and proxy chains](/en/oixflow/policies) |
+| Select a node or test group latency | [Select nodes and policy groups](/en/oixflow/policies) |
+| Set an entry and an exit and verify the chain | [Create a proxy chain](/en/oixflow/proxy-chains) |
 
 ## Rules and networking {#rules-networking}
 

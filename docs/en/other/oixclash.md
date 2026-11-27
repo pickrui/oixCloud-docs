@@ -48,11 +48,11 @@ If the platform does not match, the software center says so and stops; install t
 
 Under **oixCloud 账号** (oixCloud account), choose a sign-in method.
 
-- **登录令牌** (sign-in token) — paste the full [Access Token shown when you create it](/en/account/security#manual-token), then click **登录** (Sign in).
+- **登录令牌** (sign-in token) — paste the full [Access Token shown when you create it](/en/account/access-tokens#manual-token), then click **登录** (Sign in).
 - **邮箱和密码** (email and password) — enter your oixCloud email and password, then click **登录**. The password is used only for this sign-in.
 - **Google 登录** (Google sign-in) — open the plugin at the router’s LAN address or `router.asus.com`. Click **Google 登录**, allow the pop-up and choose the email of your existing oixCloud account. Keep the router page open until your account appears.
 
-After signing in, the page shows the account, plan, expiry date and traffic. The router can then load managed nodes without device approval. The first sign-in sends a new-device alert to your account; see [New devices and sign-in alerts](/en/account/security#device-approval).
+After signing in, the page shows the account, plan, expiry date and traffic. The router can then load managed nodes without device approval. The first sign-in sends a new-device alert to your account; see [New devices and sign-in alerts](/en/account/client-sign-in#device-approval).
 
 ## 4. Turn on the proxy
 
@@ -97,40 +97,6 @@ After disabling memory optimization, a core already stored on JFFS stays there. 
 
 Traffic of the router itself and of guest networks does not pass through oixClash. Devices that use IPv6 bypass the proxy; the status warns about it. To avoid this bypass, set the connection type on the router's **IPv6** page to disabled and verify from a LAN device. The website's [IPv4 Only](/en/account/unlock#ipv4-only) controls remote-node egress and does not fix IPv6 bypass on the router.
 
-### Switch modes and verify LAN capture {#capture-mode}
-
-Under **运行** (Run), select **开启** (Enable), then **保存并应用** (Save and apply). Wait for the service to resume. Open **运行 → 节点切换 → 打开控制面板** (Run → Node switching → Open dashboard). In MetaCubeXD go to **Config → Core Config → Running Mode** and choose **Rule**, **Global** or **Direct**. Use Rule for per-site routing. Revisit a site from an included device and find its new record by device IP or hostname in **Connections** to check the exit.
-
-This plugin uses the router firewall to capture LAN traffic and generates a profile with TUN off. Devices can use it through their gateway without setting a system proxy or enabling TUN in the dashboard. If a request is missing, check device policies, the gateway, common ports and the mainland IP bypass option.
-
-### Set DNS on this router {#configure-dns}
-
-<figure class="guide-figure">
-  <a href="/illustrations/oixclash-dns-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Custom direct and proxy DNS fields and the Merlin save button">
-    <img src="/illustrations/oixclash-dns-en.svg?v=20261127-5" alt="Custom direct and proxy DNS fields and the Merlin save button" width="1120" height="1100" loading="lazy">
-  </a>
-  <figcaption>English guide to the Chinese plugin interface · Fictional data</figcaption>
-</figure>
-
-1. Open **DNS 设置 → 展开 DNS 设置** (DNS settings → Expand DNS settings). Leave **使用自定义 DNS** (Use custom DNS) unchecked to follow the subscription. Select it for a local override.
-2. Under **直连 DNS** (Direct DNS), enter an IPv4 address with an optional port, or an HTTPS URL. **代理 DNS** (Proxy DNS) accepts HTTPS URLs and sends queries through the `Proxy` group. Omit the `#Proxy` suffix. Each field takes one to four addresses separated by commas.
-3. Select **保存并应用** (Save and apply). Once running, select **自检** (Self-check). On an included device, query a fresh domain using the router as its DNS server. To confirm a particular upstream, check that domain in the resolver’s own query records. **面板下发的 DNS** always shows the subscription’s original values.
-4. To restore the subscription’s DNS, clear **使用自定义 DNS** and save. The router retains your entries for later use.
-
-
-### Choose a node, policy group or relay entry {#routing}
-
-<figure class="guide-figure">
-  <a href="/illustrations/metacubexd-groups-en.svg?v=20261127-5" target="_blank" rel="noopener" aria-label="Choose a node in the MetaCubeXD dashboard opened by oixClash">
-    <img src="/illustrations/metacubexd-groups-en.svg?v=20261127-5" alt="Choose a node in the MetaCubeXD dashboard opened by oixClash" width="1120" height="1100" loading="lazy">
-  </a>
-  <figcaption>Illustrated interface · Fictional data</figcaption>
-</figure>
-
-1. In the router's Software Center, open oixClash and find **运行 → 节点切换** (Run → Node switching). Click **打开控制面板** (Open dashboard). In MetaCubeXD, open **Proxies**, expand the site's Select group and choose a node. If you select a subgroup, open it to choose its member.
-2. To send a site through a particular group, point its domain to that group in [account custom rules](#routing-rules). Revisit the site from a LAN device and check the matched rule and exit in the dashboard's **Connections** view.
-3. The plugin's node switcher selects an existing outbound. For multihop routing with managed nodes, eligible accounts can configure an [internal relay](/en/account/relay#internal-relay) on the website. Then select the path's **entry node** in the router's Select group.
-
 ## 6. Nodes, filters and updates
 
 <figure class="guide-figure">
@@ -147,40 +113,10 @@ This plugin uses the router firewall to capture LAN traffic and generates a prof
 
 If the in-plugin updater cannot verify a package, or an older self-check reports missing `sha256sum`, download the matching package from this page and update through **软件中心 → 离线安装** (Software Center → Offline Install). Do not install a package with a checksum mismatch; download it again and verify SHA256.
 
-<span id="routing-rules"></span>
+## After the first connection
 
-## 7. Edit account custom rules
-
-From oixClash 0.0.2, **自定义规则** (Custom Rules) edits the same [account rules](https://oixcloud.com/user/rule) as the website. These rules precede the defaults. Saving affects other clients that use this account rule list. Saving an empty editor deletes the entire account list, so keep a copy of anything you need first.
-
-<figure class="guide-figure">
-  <a href="/illustrations/oixclash-rules-en.svg?v=20261127-4" target="_blank" rel="noopener" aria-label="oixClash · Read and save shared account rules">
-    <img src="/illustrations/oixclash-rules-en.svg?v=20261127-4" alt="oixClash · Read and save shared account rules" width="1120" height="1100" loading="lazy">
-  </a>
-  <figcaption>English reference with Chinese control names · Chinese-only plugin UI</figcaption>
-</figure>
-
-1. Sign in and click **读取面板规则** (Read Panel Rules). Wait until the status confirms that the rules are ready to edit.
-2. Enter one standard Surge-format rule per line, without `rules:` or a leading dash. Lines starting with `#` or `//` are comments. Use `DIRECT`, `REJECT`, or a policy group that exists in the configuration.
-3. Click **保存到面板并更新** (Save to Panel and Update), then read the log. A running plugin updates and checks the configuration; a stopped plugin fetches and checks it when next enabled.
-4. Make a new connection from a LAN device and verify the matched rule and outbound in the dashboard.
-
-```text
-DOMAIN,ads.example.com,REJECT
-DOMAIN-SUFFIX,example.com,DIRECT
-```
-
-Put the specific domain first. This example rejects `ads.example.com` and sends the remaining `example.com` subdomains directly.
-
-The router editor handles up to 8192 UTF-8 bytes. Some characters use multiple bytes. Edit longer lists on the website and then click **更新节点** (Update Nodes); do not truncate the list to fit the editor.
-
-| Message or situation | What to do |
-| --- | --- |
-| Another page changed the rules | Keep a separate copy of your draft, read the latest rules, then merge your changes instead of overwriting the newer content. |
-| Saved to the panel, but not applied on the router | The website list has changed. Fix the rule or network problem, then click **更新节点** and verify a connection. |
-| Reading fails, or this version has no editor | Edit account rules on the website, then click **更新节点**. Reading and saving within the plugin also require support from the website. |
-
-Reading again replaces unsaved edits, so review the confirmation first. Account rules and node filters have different sharing scopes; see [Subscriptions and filters](/en/account/subscriptions#account-rules).
+- [Set router DNS, capture mode or active node](/en/other/oixclash-network)
+- [Edit account rules](/en/other/oixclash-rules)
 
 ## Troubleshooting
 

@@ -9,14 +9,14 @@ description: "第一次使用的操作步骤、适用范围与常见问题"
 ## 连接前确认
 
 1. 登录[用户中心](https://oixcloud.com/user)。首次用邮箱注册时，昵称可留空，邀请码和邮箱验证码按注册页提示填写
-2. 打开[套餐管理](https://oixcloud.com/user/bought)。有「使用中」的套餐就可以继续。只有「待激活」时，按[激活说明](/account/plans#manual-activation)核对能否启用
+2. 打开[套餐管理](https://oixcloud.com/user/bought)。有「使用中」的套餐就可以继续。只有「待激活」时，按[激活说明](/account/plan-changes#manual-activation)核对能否启用
 3. 首次开通或只做过单独充值时，到[套餐商店](https://oixcloud.com/user/shop)选择套餐和周期，确认购买。如果已在套餐购买流程中付款，系统会尝试完成原购买，先[查充值记录和套餐结果](/help/support#payment)，避免重复下单
 
 ## 首次登录定制客户端
 
 先核对[系统要求](/clients/#requirements)，从[软件中心](https://oixcloud.com/client)下载适合设备的版本，按下表打开设备教程。用邮箱和账户密码、Access Token，或客户端提供的「使用 Google 登录」登录，随后选择节点。Google 登录需要已有账户。Apple TV 从已登录的 iPhone 或 iPad [同步账户](/oixflow/apple-tv#approval)
 
-选择 Access Token 时，到 [Access Token 管理](https://oixcloud.com/user/token)点「新增 Token」，复制并保存只显示一次的完整值。若已禁止客户端邮箱/密码登录，可用 Access Token 或受支持的 Google 登录。登录成功即可获取节点，详见[客户端登录说明](/account/security#first-client-login)
+选择 Access Token 时，到 [Access Token 管理](https://oixcloud.com/user/token)点「新增 Token」，复制并保存只显示一次的完整值。若已禁止客户端邮箱/密码登录，可用 Access Token 或受支持的 Google 登录。登录成功即可获取节点，详见[客户端登录说明](/account/client-sign-in#first-client-login)
 
 ## 选择你的设备
 

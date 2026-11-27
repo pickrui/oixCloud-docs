@@ -12,10 +12,11 @@ Windows、macOS、Android 与 Linux 的配置、流量接管与网络工具
 | 我想要 | 阅读教程 |
 | --- | --- |
 | 登录账户并连接 | [登录与首次连接](/flclash/connect) |
-| 添加单个第三方节点 | [自定义节点与分享链接](/flclash/profiles#single-node) |
-| 将其他订阅与 oixCloud 托管节点一起使用 | [混用节点与代理提供者](/flclash/profiles#managed-mix) |
+| 添加单个第三方节点 | [自定义节点与分享链接](/flclash/import-nodes#single-node) |
+| 将其他订阅与 oixCloud 托管节点一起使用 | [混用节点与代理提供者](/flclash/mixed-nodes) |
 | 导入配置、筛选节点和更新订阅 | [配置、订阅与更新](/flclash/profiles) |
-| 选择节点、策略组或代理链 | [节点、策略组与代理链](/flclash/proxies) |
+| 选择节点或自动测速 | [选择节点与策略组](/flclash/proxies) |
+| 指定入口和出口，验证多跳连接 | [创建代理链](/flclash/proxy-chains) |
 | 让应用流量进入客户端 | [系统代理与虚拟网卡](/flclash/capture) |
 
 ## 规则与网络 {#rules-networking}
@@ -24,6 +25,7 @@ Windows、macOS、Android 与 Linux 的配置、流量接管与网络工具
 | --- | --- |
 | 保留个人规则与策略组 | [覆写、策略组与附加规则](/flclash/rules) |
 | 调整 DNS 与接管设置 | [DNS 覆写与网络设置](/flclash/dns) |
+| DNS 测试出现本地解析器 | [DNS 泄漏排查](/flclash/dns-leaks) |
 | 访问 Tailnet、远程子网或出口 | [Tailscale、子网与出口节点](/flclash/tailscale) |
 | 分享本地代理或排除指定网络 | [局域网代理与网络排除](/flclash/networks) |
 

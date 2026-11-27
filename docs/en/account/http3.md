@@ -19,7 +19,7 @@ Only Hollow connections in official clients that support this feature read the s
 | Traffic routing temporarily unavailable | Cannot be changed; adding the node to a subscription manually does not remove the restriction. |
 | Node set to [CDN](#cdn) | Official clients that support CDN use AnyTLS instead, so this setting is not used. The row shows a notice. |
 
-Choose a node that supports the setting on this page. If a node is marked unavailable for traffic routing, see [traffic routing restrictions](/en/account/nodes#isp-routing).
+Choose a node that supports the setting on this page. If a node is marked unavailable for traffic routing, see [traffic routing restrictions](/en/account/home-isp#isp-routing).
 
 ## Enable and apply the setting {#enable}
 

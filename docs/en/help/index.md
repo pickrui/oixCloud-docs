@@ -17,7 +17,7 @@ Start with the symptom you see, then open the matching guide.
 | Find out why a payment has not activated a plan | [Check the top-up and plan records](/en/help/support#payment) |
 | Check why data ran out or an expired plan did not renew | [Check pending plans, traffic reset and the renewal queue](/en/help/troubleshooting#plan-continuation) |
 | Deal with a leaked subscription URL or Access Token | [Revoke the affected credential](/en/account/security#match-the-response-to-the-leak) |
-| Investigate limits despite remaining traffic | [Limits and recovery conditions](/en/account/traffic#limits) |
+| Investigate limits despite remaining traffic | [Limits and recovery conditions](/en/account/low-speed#limits) |
 | Repair a missing DLL on Windows | [FlClash for oixCloud: missing DLL repair](/en/flclash/windows-dll) |
 | Inspect oixFlow requests and routes | [Requests and diagnostics](/en/oixflow/diagnostics) |
 | Run FlClash for oixCloud network checks | [Network checks and connections](/en/flclash/diagnostics) |
